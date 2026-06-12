@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stackofy - Evidence-Based Supplement Stacks</title>
+  <meta name="description" content="Evidence-based supplement stacks for longevity, energy and performance. Independent research. No pharma ties. No fluff." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Stackofy - Evidence-Based Supplement Stacks" />
+  <meta property="og:description" content="Independent research on longevity supplements, dosing protocols, and what actually works. No pharma ties. No fluff." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stackofy.com" />
+  <meta property="og:image" content="https://stackofy.com/images/og-image.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332;
+      --green-mid: #2D6A4F;
+      --green-light: #95D5B2;
+      --gold: #D4A853;
+      --gold-light: #FDF3E0;
+      --bg: #FAF8F4;
+      --surface: #ffffff;
+      --text: #1A1A1A;
+      --text-muted: #666666;
+      --text-faint: #999999;
+      --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0F1A14;
+      --surface: #1A2B20;
+      --text: #F0EDE8;
+      --text-muted: #9DB8AA;
+      --text-faint: #6B8A78;
+      --border: #2A3D30;
+      --gold-light: #2A220D;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* HEADER */
+    header {
+      background: var(--gradient);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #FAF8F4;
+      font-size: 19px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+
+    .logo-icon {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .capsule { height: 7px; border-radius: 4px; }
+    .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
+    .capsule:nth-child(2) { width: 22px; background: var(--green-light); }
+    .capsule:nth-child(3) { width: 26px; margin-left: 2px; background: var(--gold); }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #FAF8F4; }
+
+    .nav-search {
+      background: rgba(255,255,255,0.15);
+      border: 0.5px solid rgba(255,255,255,0.2);
+      border-radius: var(--radius-sm);
+      padding: 6px 12px;
+      color: #FAF8F4;
+      font-size: 13px;
+      width: 160px;
+    }
+    .nav-search::placeholder { color: var(--green-light); }
+
+    .dark-toggle {
+      background: rgba(255,255,255,0.15);
+      border: 0.5px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 5px 10px;
+      cursor: pointer;
+      color: #FAF8F4;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* HERO */
+    .hero {
+      background: var(--gradient);
+      padding: 3.5rem 2rem 2.5rem;
+      text-align: center;
+    }
+
+    .hero h1 {
+      color: #FAF8F4;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.5px;
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero p {
+      color: var(--green-light);
+      font-size: 15px;
+      margin-bottom: 1.8rem;
+    }
+
+    .search-bar {
+      max-width: 560px;
+      margin: 0 auto 2rem;
+      display: flex;
+      gap: 8px;
+    }
+
+    .search-bar input {
+      flex: 1;
+      padding: 12px 18px;
+      border-radius: var(--radius-sm);
+      border: none;
+      font-size: 15px;
+      background: #FAF8F4;
+      color: var(--text);
+    }
+
+    .search-bar input:focus { outline: none; }
+
+    .search-bar button {
+      padding: 12px 24px;
+      background: var(--gold);
+      color: #1A1A1A;
+      border: none;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    .search-bar button:hover { opacity: 0.9; }
+
+    /* CATEGORIES */
+    .categories {
+      display: flex;
+      gap: 0.6rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cat-pill {
+      background: rgba(255,255,255,0.1);
+      border: 0.5px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 6px 14px;
+      color: #FAF8F4;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .cat-pill:hover { background: rgba(255,255,255,0.2); }
+    .cat-pill span { color: var(--gold); margin-right: 5px; }
+
+    /* MAIN */
+    .main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+
+    /* QUIZ BANNER */
+    .quiz-banner {
+      background: var(--gradient);
+      border-radius: var(--radius);
+      padding: 1.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .quiz-banner h3 { color: #FAF8F4; font-size: 17px; font-weight: 600; margin-bottom: 4px; }
+    .quiz-banner p { color: var(--green-light); font-size: 13px; }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #1A1A1A;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 11px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity 0.2s;
+    }
+    .btn-gold:hover { opacity: 0.9; }
+
+    /* ARTICLE CARDS */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    .article-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 0.5px solid var(--border);
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .article-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+
+    .card-img {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 40px;
+    }
+
+    .card-img.c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .card-img.c-omega { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
+    .card-img.c-vitd { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .card-img.c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+
+    .card-body { padding: 1rem; }
+
+    .article-tag {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      background: #EAF5F0;
+      color: var(--green-dark);
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    .article-card h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.4rem;
+      line-height: 1.45;
+    }
+
+    .article-card p {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* TRUST BAR */
+    .trust-bar {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 0.5px solid var(--border);
+      padding: 1.5rem 2rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .trust-num {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--green-dark);
+    }
+
+    .trust-label {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 3px;
+    }
+
+    /* TWO COLUMN */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      margin-bottom: 3rem;
+    }
+
+    /* STACK CARDS */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .stack-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 0.5px solid var(--border);
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .stack-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+
+    .stack-img {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+
+    .s1 { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .s2 { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .s3 { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
+    .s4 { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+
+    .stack-body { padding: 0.75rem; }
+
+    .stack-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 3px;
+    }
+
+    .stack-card h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .stack-card p {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* REC CARDS */
+    .rec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .rec-card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 0.5px solid var(--border);
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .rec-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+
+    .rec-img {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+    }
+
+    .r1 { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .r2 { background: linear-gradient(135deg, #7A5C10, #B8860B); }
+    .r3 { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
+    .r4 { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+
+    .rec-body { padding: 0.75rem; }
+
+    .rec-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 3px;
+    }
+
+    .rec-card h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 3px;
+    }
+
+    .rec-card p {
+      font-size: 11px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ARI BLOCK */
+    .ari-block {
+      background: var(--surface);
+      border-radius: var(--radius);
+      border: 0.5px solid var(--border);
+      padding: 1.75rem;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .ari-logo {
+      width: 60px;
+      height: 60px;
+      border-radius: var(--radius-sm);
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 28px;
+    }
+
+    .ari-block h3 {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .ari-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    /* DISCLAIMER */
+    .disclaimer {
+      background: var(--gold-light);
+      border-radius: var(--radius-sm);
+      border: 0.5px solid var(--gold);
+      padding: 1rem 1.25rem;
+      margin-bottom: 3rem;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .disclaimer strong { color: var(--text); }
+
+    /* FOOTER */
+    footer {
+      background: var(--gradient);
+      color: var(--green-light);
+      text-align: center;
+      padding: 2rem;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    footer a { color: var(--gold); }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a { color: var(--green-light); font-size: 13px; }
+    .footer-links a:hover { color: #FAF8F4; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="/">
+      <div class="logo-icon">
+        <div class="capsule"></div>
+        <div class="capsule"></div>
+        <div class="capsule"></div>
+      </div>
+      Stackofy
+    </a>
+    <div class="header-right">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/articles">Articles</a>
+        <a href="/quiz">Stack Builder</a>
+        <a href="/about">About</a>
+      </nav>
+      <input class="nav-search" type="text" placeholder="Search..." />
+      <button class="dark-toggle" onclick="toggleDark()">🌙 Dark</button>
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Evidence-Based Supplement Stacks. No Pharma. No Fluff.</h1>
+    <p>Independent research on longevity, dosing protocols, and what actually works.</p>
+    <div class="search-bar">
+      <input type="text" placeholder="Search supplements, protocols, ingredients..." />
+      <button>Search</button>
+    </div>
+    <div class="categories">
+      <span class="cat-pill"><span>⏳</span> Longevity</span>
+      <span class="cat-pill"><span>🌙</span> Sleep</span>
+      <span class="cat-pill"><span>🧠</span> Brain</span>
+      <span class="cat-pill"><span>🛡️</span> Immune</span>
+      <span class="cat-pill"><span>🏃</span> Performance</span>
+      <span class="cat-pill"><span>😊</span> Mood</span>
+      <span class="cat-pill"><span>🔥</span> Metabolism</span>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="quiz-banner">
+      <div>
+        <h3>Find your perfect supplement stack</h3>
+        <p>Answer a few questions about your lifestyle and goals. Get a personalized protocol in 2 minutes.</p>
+      </div>
+      <button class="btn-gold" onclick="window.location.href='/quiz'">Start Stack Builder →</button>
+    </div>
+
+    <div class="section-label">What's new</div>
+    <div class="section-title">Latest Articles</div>
+    <div class="articles-grid">
+      <a href="/articles/nmn-supplements-guide" class="article-card">
+        <div class="card-img c-nmn">🧬</div>
+        <div class="card-body">
+          <span class="article-tag">NMN</span>
+          <h3>Why 64% of NMN Supplements Contain Zero Active Ingredient</h3>
+          <p>Independent lab tests exposed the market. Here is how to spot the real ones.</p>
+        </div>
+      </a>
+      <a href="/articles/omega-3-complete-guide" class="article-card">
+        <div class="card-img c-omega">🐟</div>
+        <div class="card-body">
+          <span class="article-tag">Omega-3</span>
+          <h3>Omega-3: The One Supplement Almost Everyone Is Taking Wrong</h3>
+          <p>Form matters more than dose. Most cheap fish oil fails before it reaches you.</p>
+        </div>
+      </a>
+      <a href="/articles/vitamin-d3-k2-guide" class="article-card">
+        <div class="card-img c-vitd">☀️</div>
+        <div class="card-body">
+          <span class="article-tag">Vitamin D3</span>
+          <h3>Vitamin D3 + K2: The Cheapest Longevity Insurance You Are Not Taking Correctly</h3>
+          <p>Most adults are chronically deficient. Here is what the research says.</p>
+        </div>
+      </a>
+      <div class="article-card">
+        <div class="card-img c-mag">💊</div>
+        <div class="card-body">
+          <span class="article-tag">Coming Soon</span>
+          <h3>Magnesium: Why the Form You Take Determines Everything</h3>
+          <p>Glycinate vs Oxide vs Citrate - most people buy the wrong one.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="trust-bar">
+      <div>
+        <div class="trust-num">12,400+</div>
+        <div class="trust-label">Monthly Readers</div>
+      </div>
+      <div>
+        <div class="trust-num">100%</div>
+        <div class="trust-label">Independent Research</div>
+      </div>
+      <div>
+        <div class="trust-num">0</div>
+        <div class="trust-label">Pharma Sponsors</div>
+      </div>
+      <div>
+        <div class="trust-num">30+</div>
+        <div class="trust-label">Supplements Reviewed</div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div>
+        <div class="section-label">Curated</div>
+        <div class="section-title">Popular Stacks</div>
+        <div class="stack-grid">
+          <div class="stack-card">
+            <div class="stack-img s1">🛡️</div>
+            <div class="stack-body">
+              <div class="stack-label">Most Popular</div>
+              <h4>The Foundation Stack</h4>
+              <p>D3 + K2, Magnesium, Omega-3 - what everyone needs first</p>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="stack-img s2">⏳</div>
+            <div class="stack-body">
+              <div class="stack-label">Longevity</div>
+              <h4>The Anti-Aging Stack</h4>
+              <p>NMN, Resveratrol, TMG - for serious anti-aging protocols</p>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="stack-img s3">🌙</div>
+            <div class="stack-body">
+              <div class="stack-label">Sleep</div>
+              <h4>The Sleep Stack</h4>
+              <p>Magnesium Glycinate, Ashwagandha, L-Theanine</p>
+            </div>
+          </div>
+          <div class="stack-card">
+            <div class="stack-img s4">🧠</div>
+            <div class="stack-body">
+              <div class="stack-label">Cognitive</div>
+              <h4>The Brain Stack</h4>
+              <p>Omega-3, Lions Mane, Bacopa, CDP-Choline</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="section-label">From ARI</div>
+        <div class="section-title">Recommended</div>
+        <div class="rec-grid">
+          <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="rec-card">
+            <div class="rec-img r1">📋</div>
+            <div class="rec-body">
+              <div class="rec-label">Guide - $47</div>
+              <h4>NMN Buyer's Protocol</h4>
+              <p>How to choose, dose and stack NMN without wasting money</p>
+            </div>
+          </a>
+          <a href="https://www.amazon.com/dp/B0FVL882KJ" class="rec-card">
+            <div class="rec-img r2">📖</div>
+            <div class="rec-body">
+              <div class="rec-label">Book - Amazon</div>
+              <h4>The $1,000 Longevity Plan</h4>
+              <p>Add 15 healthy years with smart supplements and habits</p>
+            </div>
+          </a>
+          <a href="https://alethiaresearch.gumroad.com" class="rec-card">
+            <div class="rec-img r3">✅</div>
+            <div class="rec-body">
+              <div class="rec-label">Free Download</div>
+              <h4>NMN Quick-Start Checklist</h4>
+              <p>5 questions before buying any NMN supplement</p>
+            </div>
+          </a>
+          <a href="/quiz" class="rec-card">
+            <div class="rec-img r4">⚙️</div>
+            <div class="rec-body">
+              <div class="rec-label">Free Tool</div>
+              <h4>Stack Builder</h4>
+              <p>Get your personalized supplement protocol in 2 minutes</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="ari-block">
+      <div class="ari-logo">🔬</div>
+      <div>
+        <h3>About Alethia Research Institute</h3>
+        <p>An anonymous collective of scientists, physicians and independent researchers. No pharma ties. No conflicts of interest to declare. ARI exists because someone has to ask the questions the industry won't - and publish what the data actually says.</p>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> The content on Stackofy is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer or pharmaceutical company.
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/articles">Articles</a>
+      <a href="/quiz">Stack Builder</a>
+      <a href="/about">About</a>
+      <a href="https://alethiaresearch.gumroad.com">Shop</a>
+    </div>
+    <div>Stackofy &nbsp;|&nbsp; Alethia Research Institute &nbsp;|&nbsp; © 2026</div>
+    <div style="margin-top: 4px; font-size: 12px; color: #6B8A78;">Evidence-based. No pharma ties. No fluff.</div>
+  </footer>
+
+  <script>
+    function toggleDark() {
+      const body = document.body;
+      const btn = document.querySelector('.dark-toggle');
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.removeAttribute('data-theme');
+        btn.textContent = '🌙 Dark';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        btn.textContent = '☀️ Light';
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      document.querySelector('.dark-toggle').textContent = '☀️ Light';
+    }
+  </script>
+
+</body>
+</html>
