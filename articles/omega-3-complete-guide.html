@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omega-3: The One Supplement Almost Everyone Is Taking Wrong - Stackofy</title>
+  <meta name="description" content="Omega-3 is one of the most researched supplements on the planet. But most people buy the wrong form, take the wrong dose, and never feel a difference. Here is what actually works." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Omega-3: The One Supplement Almost Everyone Is Taking Wrong" />
+  <meta property="og:description" content="Most people buy the wrong form, take the wrong dose, and never feel a difference. Here is what actually works." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/omega-3-complete-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/omega-3-fish-oil-capsules.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332;
+      --green-mid: #2D6A4F;
+      --green-light: #95D5B2;
+      --gold: #D4A853;
+      --gold-light: #FDF3E0;
+      --bg: #FAF8F4;
+      --surface: #ffffff;
+      --text: #1A1A1A;
+      --text-muted: #666666;
+      --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0F1A14;
+      --surface: #1A2B20;
+      --text: #F0EDE8;
+      --text-muted: #9DB8AA;
+      --border: #2A3D30;
+      --gold-light: #2A220D;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      background: var(--gold);
+      width: 0%;
+      z-index: 200;
+      transition: width 0.1s;
+    }
+
+    header {
+      background: var(--gradient);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
+    .logo-icon { display: flex; flex-direction: column; gap: 3px; }
+    .capsule { height: 7px; border-radius: 4px; }
+    .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
+    .capsule:nth-child(2) { width: 22px; background: var(--green-light); }
+    .capsule:nth-child(3) { width: 26px; margin-left: 2px; background: var(--gold); }
+
+    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #FAF8F4; }
+
+    .dark-toggle {
+      background: rgba(255,255,255,0.15);
+      border: 0.5px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 5px 12px;
+      cursor: pointer;
+      color: #FAF8F4;
+      font-size: 13px;
+    }
+
+    .article-hero {
+      position: relative;
+      height: 380px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #0a3d6b, #185FA5, #1B4332);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 100px;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.55;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(10,61,107,0.95) 0%, rgba(10,61,107,0.4) 60%, transparent 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 2rem 3rem;
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .article-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: #1A1A1A;
+      padding: 4px 10px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-content h1 {
+      color: #FAF8F4;
+      font-size: 1.9rem;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.3px;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-meta {
+      color: #95D5B2;
+      font-size: 13px;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .article-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem;
+    }
+
+    .tldr-box {
+      background: var(--gold-light);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .tldr-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+
+    .article-content h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+
+    .article-content h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content ul, .article-content ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+    .article-content a:hover { border-color: var(--green-dark); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; }
+
+    .checklist-box {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .checklist-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 0.75rem;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .aaf-badge {
+      background: var(--gradient);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+    .sources a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .cta-block {
+      background: var(--gradient);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #1A1A1A;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 11px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #FAF8F4;
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: var(--radius-sm);
+      padding: 11px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .disclaimer {
+      background: var(--gold-light);
+      border-radius: var(--radius-sm);
+      border: 0.5px solid var(--gold);
+      padding: 1rem 1.25rem;
+      margin: 2rem 0;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .disclaimer strong { color: var(--text); }
+
+    footer {
+      background: var(--gradient);
+      color: var(--green-light);
+      text-align: center;
+      padding: 2rem;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 0.5rem; }
+    .footer-links a { color: var(--green-light); font-size: 13px; }
+    .footer-links a:hover { color: #FAF8F4; }
+  </style>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <header>
+    <a class="logo" href="/">
+      <div class="logo-icon">
+        <div class="capsule"></div>
+        <div class="capsule"></div>
+        <div class="capsule"></div>
+      </div>
+      Stackofy
+    </a>
+    <div class="header-right">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/articles">Articles</a>
+        <a href="/quiz">Stack Builder</a>
+        <a href="/about">About</a>
+      </nav>
+      <button class="dark-toggle" onclick="toggleDark()">🌙 Dark</button>
+    </div>
+  </header>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/omega-3-fish-oil-capsules.jpg" alt="Omega-3 fish oil capsules" onerror="this.style.display='none'" />
+      🐟
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Omega-3</span>
+      <h1>Omega-3: The One Supplement Almost Everyone Is Taking Wrong</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>8 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <p>Omega-3 has decades of solid research behind it. But form, quality and timing matter enormously. Key points:</p>
+      <ul>
+        <li>Choose triglyceride form - not ethyl ester, which most cheap products use</li>
+        <li>Look for IFOS certified products with a TOTOX value below 10</li>
+        <li>Target 1,000-2,000mg combined EPA + DHA daily - not total fish oil</li>
+        <li>Always take with a fat-containing meal - it is fat-soluble</li>
+        <li>Algae oil is the superior vegan alternative - and the original source</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Omega-3 is one of the most researched supplements on the planet. Decades of studies, thousands of papers, broad scientific consensus. And yet most people who take it either buy a product that barely works, take the wrong dose, or have no idea what it is actually doing in their body.</p>
+
+      <p>This is the no-fluff guide to getting it right.</p>
+
+      <div class="article-img">
+        <img src="/images/omega-3-fish-oil-capsules.jpg" alt="Omega-3 fish oil capsules" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What Omega-3 Actually Does</h2>
+
+      <p>Omega-3 fatty acids - specifically EPA and DHA - are not just "heart healthy fats." They are structural components of every cell membrane in your body and active signaling molecules that regulate inflammation at the cellular level.</p>
+
+      <p><strong>Inflammation control.</strong> EPA and DHA form the raw material for resolvins, protectins and maresins - specialized molecules that actively resolve inflammation rather than just suppressing it. This is a fundamentally different mechanism than anti-inflammatory drugs, and it works with your biology rather than against it.</p>
+
+      <p><strong>Cardiovascular protection.</strong> Omega-3s regulate triglyceride levels, support healthy blood vessel function, and modulate the activity of immune cells. The evidence here is among the strongest in all of supplement research.</p>
+
+      <p><strong>Brain and cognitive function.</strong> DHA is a primary structural component of brain cell membranes. Low DHA levels are consistently associated with cognitive decline, mood disorders, and depression.</p>
+
+      <p><strong>Longevity and biological aging.</strong> A 2025 analysis found that 1g of omega-3 per day measurably slowed multiple epigenetic aging markers over three years - with stronger effects when combined with Vitamin D and regular physical activity. Separately, higher blood omega-3 levels are inversely associated with early-onset dementia risk.</p>
+
+      <h2>The Form Problem - Why Most Products Underdeliver</h2>
+
+      <p>Not all omega-3 supplements are equal. The form matters enormously - and this is where most people get silently ripped off.</p>
+
+      <p><strong>Triglyceride form vs ethyl ester form.</strong> Most cheap fish oil supplements use ethyl esters - a synthetic form created during the concentration process. Triglyceride-form omega-3 is significantly more bioavailable. If the label does not specify, it is almost certainly ethyl ester.</p>
+
+      <p>How to spot triglyceride form: look for "natural triglyceride form" or "re-esterified triglycerides" on the label. Krill oil is naturally in phospholipid form, which is also highly bioavailable.</p>
+
+      <p><strong>Oxidation.</strong> Fish oil oxidizes quickly when exposed to heat, light or air. Oxidized omega-3 is not just ineffective - some research suggests it may be actively harmful. Check for a rancid or strong fishy smell when you open the bottle. Fresh, quality fish oil should smell mild.</p>
+
+      <p><strong>The vegan option.</strong> Algae oil is the original source of EPA and DHA - fish get their omega-3 by eating algae. Algae oil is the cleanest vegan alternative, typically high in DHA, and avoids the contamination and oxidation risks of fish oil entirely. It is not a compromise - it is actually the superior choice.</p>
+
+      <h2>Dosage - What the Research Actually Shows</h2>
+
+      <p><strong>Maintenance dose:</strong> 1,000-2,000mg combined EPA and DHA per day. Important: this is EPA plus DHA combined, not total fish oil. A 1,000mg fish oil capsule often contains only 300mg of actual EPA and DHA. Read the label carefully - this is one of the most common mistakes.</p>
+
+      <p><strong>For active inflammation or cardiovascular focus:</strong> Up to 3,000mg EPA and DHA daily. At this level it is worth discussing with a doctor if you take anticoagulants, as omega-3 has a mild blood-thinning effect at higher doses.</p>
+
+      <p><strong>EPA vs DHA ratio:</strong> EPA is the primary anti-inflammatory fatty acid. DHA is the primary structural brain fatty acid. For inflammation and cardiovascular health, lean toward higher EPA. For cognitive support and brain health, prioritize DHA. A 2:1 EPA to DHA ratio is a reasonable starting point for most people.</p>
+
+      <h2>Quality Checklist - What to Look For</h2>
+
+      <div class="checklist-box">
+        <h4>Before You Buy Any Omega-3</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Triglyceride or phospholipid form</strong> - not ethyl ester. If it does not say, assume the worst.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Third-party tested</strong> for heavy metals and oxidation. TOTOX value ideally below 10.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>IFOS certified</strong> - International Fish Oil Standards is the gold standard for purity testing.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Wild-caught fish</strong> or algae oil - not farmed. Farmed fish have lower omega-3 content.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Strong fishy smell</strong> - a sign of oxidation. Fresh quality omega-3 should smell mild and clean.</span>
+        </div>
+      </div>
+
+      <h2>How to Take It</h2>
+
+      <p>Take omega-3 with a meal containing fat. It is fat-soluble and absorbs significantly better this way. This is one of the most consistently ignored recommendations and one of the most important.</p>
+
+      <p>Store it in a cool dark place. Refrigerating fish oil after opening slows oxidation considerably. Some people freeze their capsules and take them frozen - they digest more slowly and the fishy aftertaste disappears entirely.</p>
+
+      <h2>What This Means for Your Stack</h2>
+
+      <p>Omega-3 does not work in isolation. The 2025 longevity research specifically noted stronger anti-aging effects when omega-3 was combined with Vitamin D3 - which makes biochemical sense since both operate through overlapping inflammatory and immune pathways.</p>
+
+      <p>If you are building a serious longevity stack, omega-3 and Vitamin D3 belong together. They are two of the three non-negotiable foundation supplements alongside magnesium.</p>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">9/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Broad systemic effects, excellent safety profile, decades of human data. One of the strongest evidence bases in all of supplement research.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Calder, P.C. (2017). Omega-3 fatty acids and inflammatory processes: from molecules to man. <em>Biochemical Society Transactions</em>, 45(5), 1105-1115.</li>
+        <li>Simopoulos, A.P. (2002). Omega-3 fatty acids in inflammation and autoimmune diseases. <em>Journal of the American College of Nutrition</em>, 21(6), 495-505.</li>
+        <li>Serhan, C.N. et al. (2008). Resolvins, docosatrienes, and neuroprotectins: novel omega-3-derived mediators. <em>Annual Review of Pathology</em>, 3, 279-312.</li>
+        <li>Freeman, M.P. et al. (2006). Omega-3 fatty acids: evidence basis for treatment and future research in psychiatry. <em>Journal of Clinical Psychiatry</em>, 67(12), 1954-1967.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>Omega-3 is the foundation. Get the full protocol with NMN, D3, Magnesium, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/articles">Articles</a>
+      <a href="/quiz">Stack Builder</a>
+      <a href="/about">About</a>
+      <a href="https://alethiaresearch.gumroad.com">Shop</a>
+    </div>
+    <div>Stackofy &nbsp;|&nbsp; Alethia Research Institute &nbsp;|&nbsp; © 2026</div>
+    <div style="margin-top: 4px; font-size: 12px; color: #6B8A78;">Evidence-based. No pharma ties. No fluff.</div>
+  </footer>
+
+  <script>
+    function toggleDark() {
+      const body = document.body;
+      const btn = document.querySelector('.dark-toggle');
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.removeAttribute('data-theme');
+        btn.textContent = '🌙 Dark';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        btn.textContent = '☀️ Light';
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      document.querySelector('.dark-toggle').textContent = '☀️ Light';
+    }
+
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
