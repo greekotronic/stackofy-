@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magnesium: The Master Mineral That Everyone's Missing - Stackofy</title>
+  <meta name="description" content="Magnesium is involved in over 300 enzyme reactions. Nearly everyone is deficient. Here is why the form you choose determines everything - and which forms actually work." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Magnesium: The Master Mineral That Everyone's Missing" />
+  <meta property="og:description" content="Involved in over 300 enzyme reactions. Nearly everyone is deficient. Here is why the form you choose determines everything." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/magnesium-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/white-powder-capsules-on-moss.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332;
+      --green-mid: #2D6A4F;
+      --green-light: #95D5B2;
+      --gold: #D4A853;
+      --gold-light: #FDF3E0;
+      --bg: #FAF8F4;
+      --surface: #ffffff;
+      --text: #1A1A1A;
+      --text-muted: #666666;
+      --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0F1A14;
+      --surface: #1A2B20;
+      --text: #F0EDE8;
+      --text-muted: #9DB8AA;
+      --border: #2A3D30;
+      --gold-light: #2A220D;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      background: var(--gold);
+      width: 0%;
+      z-index: 200;
+      transition: width 0.1s;
+    }
+
+    header {
+      background: var(--gradient);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
+    .logo-icon { display: flex; flex-direction: column; gap: 3px; }
+    .capsule { height: 7px; border-radius: 4px; }
+    .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
+    .capsule:nth-child(2) { width: 22px; background: var(--green-light); }
+    .capsule:nth-child(3) { width: 26px; margin-left: 2px; background: var(--gold); }
+
+    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #FAF8F4; }
+
+    .dark-toggle {
+      background: rgba(255,255,255,0.15);
+      border: 0.5px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 5px 12px;
+      cursor: pointer;
+      color: #FAF8F4;
+      font-size: 13px;
+    }
+
+    .article-hero {
+      position: relative;
+      height: 380px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #1B4332, #3d1b6b, #2D6A4F);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 100px;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.6;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.4) 60%, transparent 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 2rem 3rem;
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .article-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: #1A1A1A;
+      padding: 4px 10px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-content h1 {
+      color: #FAF8F4;
+      font-size: 1.9rem;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.3px;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-meta {
+      color: var(--green-light);
+      font-size: 13px;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .article-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem;
+    }
+
+    .tldr-box {
+      background: var(--gold-light);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .tldr-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+
+    .article-content h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+
+    .article-content h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content ul, .article-content ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+    .article-content a:hover { border-color: var(--green-dark); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; }
+
+    .forms-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .form-card {
+      background: var(--surface);
+      border-radius: var(--radius-sm);
+      border: 0.5px solid var(--border);
+      padding: 1rem;
+    }
+
+    .form-card.recommended { border-color: var(--green-dark); }
+    .form-card.avoid { border-color: #C0392B; opacity: 0.8; }
+
+    .form-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .form-label.rec { color: var(--green-dark); }
+    .form-label.bad { color: #C0392B; }
+
+    .form-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .form-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .dosing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 14px;
+    }
+
+    .dosing-table th {
+      background: var(--green-dark);
+      color: #FAF8F4;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .dosing-table td {
+      padding: 10px 14px;
+      border-bottom: 0.5px solid var(--border);
+      color: var(--text);
+    }
+
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .synergy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .synergy-card {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.875rem;
+      text-align: center;
+    }
+
+    .synergy-card .icon { font-size: 22px; margin-bottom: 6px; }
+    .synergy-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .synergy-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .aaf-badge {
+      background: var(--gradient);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+    .sources a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .cta-block {
+      background: var(--gradient);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #1A1A1A;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 11px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #FAF8F4;
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: var(--radius-sm);
+      padding: 11px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .disclaimer {
+      background: var(--gold-light);
+      border-radius: var(--radius-sm);
+      border: 0.5px solid var(--gold);
+      padding: 1rem 1.25rem;
+      margin: 2rem 0;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .disclaimer strong { color: var(--text); }
+
+    footer {
+      background: var(--gradient);
+      color: var(--green-light);
+      text-align: center;
+      padding: 2rem;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 0.5rem; }
+    .footer-links a { color: var(--green-light); font-size: 13px; }
+    .footer-links a:hover { color: #FAF8F4; }
+  </style>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <header>
+    <a class="logo" href="/">
+      <div class="logo-icon">
+        <div class="capsule"></div>
+        <div class="capsule"></div>
+        <div class="capsule"></div>
+      </div>
+      Stackofy
+    </a>
+    <div class="header-right">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/articles">Articles</a>
+        <a href="/quiz">Stack Builder</a>
+        <a href="/about">About</a>
+      </nav>
+      <button class="dark-toggle" onclick="toggleDark()">🌙 Dark</button>
+    </div>
+  </header>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/white-powder-capsules-on-moss.jpg" alt="Magnesium supplement capsules on moss" onerror="this.style.display='none'" />
+      💊
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Magnesium</span>
+      <h1>Magnesium: The Master Mineral That Everyone's Missing</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>9 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <p>Magnesium is involved in over 300 enzyme reactions and nearly everyone is deficient. Key points:</p>
+      <ul>
+        <li>Most drugstore magnesium is oxide - poorly absorbed and mostly a laxative. Avoid it.</li>
+        <li>Choose glycinate for sleep and calm, threonate for brain health, malate for energy</li>
+        <li>Adults need 300-600mg elemental magnesium daily - split into two doses</li>
+        <li>Take with food, not at the same time as calcium, iron or zinc</li>
+        <li>D3 supplementation increases your magnesium demand - they go together</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>If Vitamin D is the hormone disguised as a vitamin, magnesium is the mineral quietly doing a thousand things while getting zero credit.</p>
+
+      <p>This stuff is involved in over 300 enzyme reactions. It helps your muscles contract, your nerves fire, your mitochondria breathe, your DNA repair, your blood sugar stabilize, and your brain stay sane. In short: <strong>magnesium is the behind-the-scenes legend of your entire operating system.</strong></p>
+
+      <p>And yet nearly everyone is deficient. Not mildly low - deficient. Even people who eat well, supplement casually, and think they're doing everything right often turn out to be running on fumes.</p>
+
+      <div class="article-img">
+        <img src="/images/white-powder-capsules-on-moss.jpg" alt="Magnesium supplement capsules" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Why You Are Probably Low - And Why It Matters</h2>
+
+      <p>Start with the soil. Thanks to industrial farming, the magnesium content of produce has dropped dramatically over the past 50 years. Add in processed food, filtered water which removes minerals, chronic stress which burns through magnesium fast, alcohol, caffeine, and common medications like PPIs and diuretics - and you have a widespread deficiency disguised as normal life.</p>
+
+      <p>The symptoms? Fatigue. Muscle cramps. Anxiety. Poor sleep. Irregular heartbeat. Brain fog. Insulin resistance. And the thing is, you might not connect any of them to magnesium - because nobody talks about it. You just feel off.</p>
+
+      <p>For longevity, magnesium matters even more. Low levels are consistently linked to higher rates of cardiovascular disease, type 2 diabetes, cognitive decline, osteoporosis, and chronic inflammation - basically a who's who of aging's greatest hits.</p>
+
+      <h2>The Forms - This Is Where Most People Go Wrong</h2>
+
+      <p>Not all magnesium supplements are created equal. In fact, most of the ones on drugstore shelves are borderline useless for anything beyond relieving constipation.</p>
+
+      <div class="forms-grid">
+        <div class="form-card recommended">
+          <div class="form-label rec">✓ Recommended</div>
+          <h4>Magnesium Glycinate</h4>
+          <p>Gentle, calming, great for the nervous system and sleep. Highly bioavailable. The go-to for most people.</p>
+        </div>
+        <div class="form-card recommended">
+          <div class="form-label rec">✓ Recommended</div>
+          <h4>Magnesium Threonate</h4>
+          <p>The brainy one. Crosses the blood-brain barrier. Shown to support memory and cognitive aging. Lower elemental dose needed.</p>
+        </div>
+        <div class="form-card recommended">
+          <div class="form-label rec">✓ Recommended</div>
+          <h4>Magnesium Malate</h4>
+          <p>Great for energy and muscle support. Often used for fibromyalgia or chronic fatigue. Good daytime option.</p>
+        </div>
+        <div class="form-card recommended">
+          <div class="form-label rec">✓ Acceptable</div>
+          <h4>Magnesium Citrate</h4>
+          <p>Better absorbed than oxide. Slightly laxative in higher doses. A reasonable budget option.</p>
+        </div>
+        <div class="form-card avoid">
+          <div class="form-label bad">✗ Avoid</div>
+          <h4>Magnesium Oxide</h4>
+          <p>Cheap, poorly absorbed, mostly acts as a laxative. Good if you're constipated. Bad if you want cellular benefits.</p>
+        </div>
+        <div class="form-card">
+          <div class="form-label" style="color: var(--text-muted);">Topical / IV</div>
+          <h4>Magnesium Chloride / Sulfate</h4>
+          <p>Typically used in transdermal applications or clinical IV settings. Limited evidence for oral use.</p>
+        </div>
+      </div>
+
+      <p>For serious longevity benefits: glycinate, threonate, or malate - or a quality blend that contains at least one of them. Check the label for the specific form, not just "magnesium."</p>
+
+      <h2>How Much You Actually Need</h2>
+
+      <p>The RDA for magnesium is around 300-400mg for adults - but that is what you need to avoid deficiency, not what you need to thrive. For optimal function, especially with stress, aging, or poor sleep, 400-600mg per day of elemental magnesium is a more realistic target.</p>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Group</th>
+          <th>Daily Dose (elemental)</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Adults (general)</td>
+          <td>300 - 600mg</td>
+          <td>Split into 2 doses</td>
+        </tr>
+        <tr>
+          <td>Older adults</td>
+          <td>400 - 800mg</td>
+          <td>Monitor bowel tolerance</td>
+        </tr>
+        <tr>
+          <td>For brain health (threonate)</td>
+          <td>~144mg elemental</td>
+          <td>Stack with glycinate for full-body needs</td>
+        </tr>
+        <tr>
+          <td>Teenagers</td>
+          <td>200 - 350mg</td>
+          <td>With food</td>
+        </tr>
+        <tr>
+          <td>Children under 12</td>
+          <td>100 - 200mg</td>
+          <td>Pediatrician supervision only</td>
+        </tr>
+      </table>
+
+      <p>Start low and build up. Too much too fast and your bathroom will notice - that is your body's way of setting a limit. Loose stools are the main side effect and a clear signal to reduce the dose.</p>
+
+      <h2>When and How to Take It</h2>
+
+      <p>Take magnesium with food. Split your dose - morning and evening, or midday and evening - to keep levels more stable throughout the day.</p>
+
+      <p>Evening dosing is preferred by many for its calming effect, especially with glycinate. It stacks beautifully with taurine, L-theanine, or glycine for a sleep-enhancing combination.</p>
+
+      <p><strong>Important:</strong> Do not take magnesium at the exact same time as high-dose calcium, iron, or zinc. They compete for absorption. Give it an hour or two if you are stacking minerals.</p>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="synergy-grid">
+        <div class="synergy-card">
+          <div class="icon">☀️</div>
+          <h4>Vitamin D3</h4>
+          <p>D3 supplementation increases your magnesium demand. They go together - always.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🧠</div>
+          <h4>L-Theanine + Glycine</h4>
+          <p>Powerful calm and sleep stack. Take together in the evening.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🌿</div>
+          <h4>Ashwagandha / Rhodiola</h4>
+          <p>Keeps the nervous system resilient under chronic stress.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🩸</div>
+          <h4>Berberine + Chromium</h4>
+          <p>Supports blood sugar control and metabolic health.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">⚡</div>
+          <h4>B Vitamins</h4>
+          <p>Especially B6 and B1. Co-factors in many of the same enzymatic pathways.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🔋</div>
+          <h4>CoQ10</h4>
+          <p>Both support mitochondrial health - a core pillar of healthy aging.</p>
+        </div>
+      </div>
+
+      <h2>Safety and What to Watch Out For</h2>
+
+      <p>Magnesium is remarkably well tolerated. The main risk at higher doses is loose stools - which is your signal to back off, not a serious health concern.</p>
+
+      <p>One important exception: <strong>if you have kidney disease, talk to your doctor before supplementing.</strong> Impaired kidney function affects how your body handles magnesium, and you do not want to mess with electrolyte balance blindly.</p>
+
+      <p>Watch out for supplements that list "magnesium" without specifying the form, or those using proprietary blends that make it impossible to know how much elemental magnesium you are actually getting. You want to know exactly what form and how much - that information should be on the label.</p>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">9/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Essential for hundreds of enzymatic reactions, deeply implicated in cardiovascular health, cognitive aging, sleep and metabolic function. One of the most impactful and underappreciated supplements available.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Schwalfenberg, G.K. & Genuis, S.J. (2017). The Importance of Magnesium in Clinical Healthcare. <em>Scientifica</em>, 2017, 4179326.</li>
+        <li>Uysal, N. et al. (2019). Timeline (Bioavailability) of Magnesium Compounds in Hours: Which Magnesium Compound Works Best? <em>Biological Trace Element Research</em>, 187(1), 128-136.</li>
+        <li>Liu, M. et al. (2020). Magnesium l-Threonate improves and prevents memory deficits. <em>Neuropharmacology</em>, 165, 107903.</li>
+        <li>DiNicolantonio, J.J. et al. (2018). Magnesium for the prevention and treatment of cardiovascular disease. <em>Open Heart</em>, 5(2), e000775.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>Magnesium is the foundation. Get the full protocol - NMN, D3, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/articles">Articles</a>
+      <a href="/quiz">Stack Builder</a>
+      <a href="/about">About</a>
+      <a href="https://alethiaresearch.gumroad.com">Shop</a>
+    </div>
+    <div>Stackofy &nbsp;|&nbsp; Alethia Research Institute &nbsp;|&nbsp; © 2026</div>
+    <div style="margin-top: 4px; font-size: 12px; color: #6B8A78;">Evidence-based. No pharma ties. No fluff.</div>
+  </footer>
+
+  <script>
+    function toggleDark() {
+      const body = document.body;
+      const btn = document.querySelector('.dark-toggle');
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.removeAttribute('data-theme');
+        btn.textContent = '🌙 Dark';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        btn.textContent = '☀️ Light';
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      document.querySelector('.dark-toggle').textContent = '☀️ Light';
+    }
+
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
