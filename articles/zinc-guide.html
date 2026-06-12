@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zinc: The Quiet Mineral That Keeps Everything Running - Stackofy</title>
+  <meta name="description" content="Zinc is involved in over 300 enzymatic reactions and many people are subtly deficient. Here is why it matters for aging, which forms actually work, and how to take it correctly." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Zinc: The Quiet Mineral That Keeps Everything Running" />
+  <meta property="og:description" content="Involved in over 300 enzymatic reactions. Subtle deficiency quietly erodes immunity, testosterone, and cognitive function. Here is what you need to know." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/zinc-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/oysters-lemon.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332;
+      --green-mid: #2D6A4F;
+      --green-light: #95D5B2;
+      --gold: #D4A853;
+      --gold-light: #FDF3E0;
+      --bg: #FAF8F4;
+      --surface: #ffffff;
+      --text: #1A1A1A;
+      --text-muted: #666666;
+      --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0F1A14;
+      --surface: #1A2B20;
+      --text: #F0EDE8;
+      --text-muted: #9DB8AA;
+      --border: #2A3D30;
+      --gold-light: #2A220D;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      background: var(--gold);
+      width: 0%;
+      z-index: 200;
+      transition: width 0.1s;
+    }
+
+    header {
+      background: var(--gradient);
+      padding: 0 2rem;
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
+    .logo-icon { display: flex; flex-direction: column; gap: 3px; }
+    .capsule { height: 7px; border-radius: 4px; }
+    .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
+    .capsule:nth-child(2) { width: 22px; background: var(--green-light); }
+    .capsule:nth-child(3) { width: 26px; margin-left: 2px; background: var(--gold); }
+
+    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #FAF8F4; }
+
+    .dark-toggle {
+      background: rgba(255,255,255,0.15);
+      border: 0.5px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
+      padding: 5px 12px;
+      cursor: pointer;
+      color: #FAF8F4;
+      font-size: 13px;
+    }
+
+    .article-hero {
+      position: relative;
+      height: 380px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #1a3a2a, #2D6A4F, #1B4332);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 100px;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.65;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 2rem 3rem;
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .article-tag {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: #1A1A1A;
+      padding: 4px 10px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-content h1 {
+      color: #FAF8F4;
+      font-size: 1.9rem;
+      font-weight: 700;
+      line-height: 1.3;
+      letter-spacing: -0.3px;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-meta {
+      color: var(--green-light);
+      font-size: 13px;
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .article-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem;
+    }
+
+    .tldr-box {
+      background: var(--gold-light);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .tldr-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+
+    .article-content h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--green-dark);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+
+    .article-content h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content ul, .article-content ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+    .article-content a:hover { border-color: var(--green-dark); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; }
+
+    .forms-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .form-card {
+      background: var(--surface);
+      border-radius: var(--radius-sm);
+      border: 0.5px solid var(--border);
+      padding: 1rem;
+    }
+
+    .form-card.recommended { border-color: var(--green-dark); }
+    .form-card.avoid { border-color: #C0392B; opacity: 0.8; }
+
+    .form-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .form-label.rec { color: var(--green-dark); }
+    .form-label.bad { color: #C0392B; }
+    .form-label.ok { color: var(--text-muted); }
+
+    .form-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .form-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .dosing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 14px;
+    }
+
+    .dosing-table th {
+      background: var(--green-dark);
+      color: #FAF8F4;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .dosing-table td {
+      padding: 10px 14px;
+      border-bottom: 0.5px solid var(--border);
+      color: var(--text);
+    }
+
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .warning-box {
+      background: #fff8f0;
+      border-left: 4px solid #E67E22;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .warning-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #E67E22;
+      margin-bottom: 0.5rem;
+    }
+
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+    .synergy-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin: 1.5rem 0;
+    }
+
+    .synergy-card {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.875rem;
+      text-align: center;
+    }
+
+    .synergy-card .icon { font-size: 22px; margin-bottom: 6px; }
+    .synergy-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .synergy-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .aaf-badge {
+      background: var(--gradient);
+      border-radius: var(--radius);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources {
+      background: var(--surface);
+      border: 0.5px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+    }
+
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+    .sources a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .cta-block {
+      background: var(--gradient);
+      border-radius: var(--radius);
+      padding: 2rem;
+      margin: 2.5rem 0;
+      text-align: center;
+    }
+
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #1A1A1A;
+      border: none;
+      border-radius: var(--radius-sm);
+      padding: 11px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #FAF8F4;
+      border: 1px solid rgba(255,255,255,0.4);
+      border-radius: var(--radius-sm);
+      padding: 11px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .disclaimer {
+      background: var(--gold-light);
+      border-radius: var(--radius-sm);
+      border: 0.5px solid var(--gold);
+      padding: 1rem 1.25rem;
+      margin: 2rem 0;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
+
+    .disclaimer strong { color: var(--text); }
+
+    footer {
+      background: var(--gradient);
+      color: var(--green-light);
+      text-align: center;
+      padding: 2rem;
+      font-size: 13px;
+      line-height: 2;
+    }
+
+    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 0.5rem; }
+    .footer-links a { color: var(--green-light); font-size: 13px; }
+    .footer-links a:hover { color: #FAF8F4; }
+  </style>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <header>
+    <a class="logo" href="/">
+      <div class="logo-icon">
+        <div class="capsule"></div>
+        <div class="capsule"></div>
+        <div class="capsule"></div>
+      </div>
+      Stackofy
+    </a>
+    <div class="header-right">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/articles">Articles</a>
+        <a href="/quiz">Stack Builder</a>
+        <a href="/about">About</a>
+      </nav>
+      <button class="dark-toggle" onclick="toggleDark()">🌙 Dark</button>
+    </div>
+  </header>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/oysters-lemon.jpg" alt="Fresh oysters with lemon - richest natural source of zinc" onerror="this.style.display='none'" />
+      🦪
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Zinc</span>
+      <h1>Zinc: The Quiet Mineral That Keeps Everything Running</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>8 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <p>Zinc is involved in over 300 enzymatic reactions and subtle deficiency is more common than most people realize. Key points:</p>
+      <ul>
+        <li>Choose picolinate or bisglycinate - avoid zinc oxide which absorbs poorly</li>
+        <li>Adults need 15-30mg daily - more is not better and can cause copper deficiency</li>
+        <li>Take on an empty stomach if tolerated, or with a light meal - not with calcium, iron or magnesium</li>
+        <li>If supplementing over 30mg long-term, add 2-3mg copper to maintain balance</li>
+        <li>Stack with quercetin - it acts as a zinc ionophore, helping zinc enter cells</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Zinc does not get the headlines that vitamin D or omega-3 gets. It is not the subject of bestselling longevity books. Nobody is building a brand around it. And yet this trace mineral plays a surprisingly central role in how you age.</p>
+
+      <p>It is involved in over 300 enzymatic reactions, many of which deal with immunity, cellular repair, DNA replication, antioxidant defense, and hormone regulation. If your body were a factory, zinc would be the person who keeps the machines oiled, the blueprints clean, and quality control running smoothly.</p>
+
+      <p>And yet many people are walking around subtly deficient. Not enough to trigger an emergency, but just enough to quietly wear down immunity, testosterone levels, wound healing, skin integrity, and mental sharpness. <strong>Over time, that kind of slow erosion adds up.</strong></p>
+
+      <div class="article-img">
+        <img src="/images/oysters-lemon.jpg" alt="Oysters - the richest natural source of zinc" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Why Zinc Matters for Aging</h2>
+
+      <p>Zinc is a major player in controlling oxidative stress. It supports the function of superoxide dismutase (SOD), one of the body's key antioxidant enzymes. It also helps stabilize the structure of DNA and RNA and is essential for proper cell division and growth.</p>
+
+      <p>Your immune system depends on it heavily. Zinc supports T-cell development, enhances natural killer cell activity, and helps your body mount quick, effective responses to pathogens - without tipping into chronic inflammation mode. That balance matters enormously as you age.</p>
+
+      <p>For men specifically: zinc levels correlate strongly with testosterone. Low zinc often means low libido, lower energy, and slower recovery. It is a co-factor in the production of sex hormones and its deficiency in this area tends to be underappreciated.</p>
+
+      <p>Zinc is also vital for maintaining the health of your skin, your eyes, your sense of taste and smell, and cognition. Subtle deficiencies often show up first as frequent colds, poor wound healing, loss of appetite, or brain fog that does not lift - symptoms that are easy to attribute to everything else before considering zinc.</p>
+
+      <div class="article-img">
+        <img src="/images/double-helix-glowing-blue-gold.jpg" alt="DNA double helix - zinc supports DNA repair and replication" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Why Deficiency Is More Common Than You Think</h2>
+
+      <p>Despite being found in meat, shellfish, nuts, seeds, and legumes, many people do not get enough absorbable zinc from diet. The key word is absorbable.</p>
+
+      <p>Phytates - compounds found in whole grains and legumes - bind to zinc and block its absorption significantly. So does heavy alcohol intake, chronic stress, certain medications including diuretics and PPIs, and aging itself which reduces absorption efficiency.</p>
+
+      <p>Vegetarians and vegans are particularly at risk unless they are supplementing carefully. A diet built around grains and legumes can paradoxically provide zinc while blocking its absorption at the same time.</p>
+
+      <h2>Choosing the Right Form</h2>
+
+      <div class="forms-grid">
+        <div class="form-card recommended">
+          <div class="form-label rec">✓ Best Choice</div>
+          <h4>Zinc Picolinate</h4>
+          <p>Highly bioavailable and well tolerated. One of the most studied and reliably absorbed forms.</p>
+        </div>
+        <div class="form-card recommended">
+          <div class="form-label rec">✓ Best Choice</div>
+          <h4>Zinc Bisglycinate</h4>
+          <p>Chelated form with excellent absorption and gentle on the stomach. Good option for sensitive individuals.</p>
+        </div>
+        <div class="form-card">
+          <div class="form-label ok">✓ Acceptable</div>
+          <h4>Zinc Citrate</h4>
+          <p>Decent absorption, mild on the stomach, and widely available. A solid budget option.</p>
+        </div>
+        <div class="form-card">
+          <div class="form-label ok">Short-term only</div>
+          <h4>Zinc Gluconate</h4>
+          <p>Common in cold lozenges. Okay for short-term immune support. Not ideal for daily supplementation.</p>
+        </div>
+        <div class="form-card avoid">
+          <div class="form-label bad">✗ Avoid</div>
+          <h4>Zinc Oxide</h4>
+          <p>Poorly absorbed. Unless it is in sunscreen, there is no good reason to take this form orally.</p>
+        </div>
+      </div>
+
+      <h2>How Much and When</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Group</th>
+          <th>Daily Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Adults (maintenance)</td>
+          <td>15 - 30mg</td>
+          <td>Daily, long-term safe</td>
+        </tr>
+        <tr>
+          <td>Higher needs (stress, infection)</td>
+          <td>Up to 40mg</td>
+          <td>Short-term only, 1-2 months</td>
+        </tr>
+        <tr>
+          <td>Long-term over 30mg</td>
+          <td>30mg zinc + 2-3mg copper</td>
+          <td>Copper balance essential</td>
+        </tr>
+        <tr>
+          <td>Teenagers</td>
+          <td>10 - 20mg</td>
+          <td>With food</td>
+        </tr>
+        <tr>
+          <td>Children under 12</td>
+          <td>5 - 10mg</td>
+          <td>Pediatrician supervision only</td>
+        </tr>
+      </table>
+
+      <p>Zinc is best taken on an empty stomach - but that is also when it is most likely to cause nausea. Most people do well taking it with a small light snack that does not contain dairy, calcium, or whole grains which can interfere with absorption.</p>
+
+      <p>Morning or lunchtime works well. <strong>Avoid combining zinc with magnesium, iron, or calcium at the same time</strong> - they compete for absorption. Space them by at least an hour or two.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">⚠️ Important</div>
+        <p>Too much zinc can cause nausea, metallic taste, headaches, and copper deficiency. Chronically overdosing can suppress immune function - ironically the very thing people often take zinc to support. If supplementing over 30mg daily long-term, include 2-3mg copper to maintain the correct mineral balance.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="synergy-grid">
+        <div class="synergy-card">
+          <div class="icon">🍊</div>
+          <h4>Vitamin C</h4>
+          <p>Classic immune stack. Complementary mechanisms, strong combined effect.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🌿</div>
+          <h4>Quercetin</h4>
+          <p>Acts as a zinc ionophore - helps zinc enter cells where it actually does its work.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🔬</div>
+          <h4>Selenium</h4>
+          <p>Thyroid support and antioxidant protection. Strong synergy for immune resilience.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">⚖️</div>
+          <h4>Copper</h4>
+          <p>Essential for long-term mineral balance when supplementing zinc above 30mg.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">💪</div>
+          <h4>Magnesium + Boron</h4>
+          <p>For men: supports hormone levels naturally. The ZMB stack has solid research behind it.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🧬</div>
+          <h4>NMN + D3</h4>
+          <p>Zinc supports the immune and cellular repair functions that NAD+ and D3 also enhance.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">7.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Essential trace mineral with broad systemic effects on immunity, hormone balance, DNA repair and oxidative stress. Highly impactful at correcting deficiency - less dramatic when already sufficient.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Prasad, A.S. (2014). Zinc is an Antioxidant and Anti-Inflammatory Agent. <em>Frontiers in Nutrition</em>, 1, 14.</li>
+        <li>Rink, L. & Haase, H. (2007). Zinc homeostasis and immunity. <em>Trends in Immunology</em>, 28(1), 1-4.</li>
+        <li>Fallah, A. et al. (2018). Zinc is an Essential Element for Male Fertility. <em>Journal of Reproduction & Infertility</em>, 19(2), 69-81.</li>
+        <li>Roohani, N. et al. (2013). Zinc and its importance for human health. <em>Journal of Research in Medical Sciences</em>, 18(2), 144-157.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>Zinc is one piece of the puzzle. Get the full protocol - NMN, D3, Magnesium, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/articles">Articles</a>
+      <a href="/quiz">Stack Builder</a>
+      <a href="/about">About</a>
+      <a href="https://alethiaresearch.gumroad.com">Shop</a>
+    </div>
+    <div>Stackofy &nbsp;|&nbsp; Alethia Research Institute &nbsp;|&nbsp; © 2026</div>
+    <div style="margin-top: 4px; font-size: 12px; color: #6B8A78;">Evidence-based. No pharma ties. No fluff.</div>
+  </footer>
+
+  <script>
+    function toggleDark() {
+      const body = document.body;
+      const btn = document.querySelector('.dark-toggle');
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.removeAttribute('data-theme');
+        btn.textContent = '🌙 Dark';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        btn.textContent = '☀️ Light';
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      document.querySelector('.dark-toggle').textContent = '☀️ Light';
+    }
+
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
