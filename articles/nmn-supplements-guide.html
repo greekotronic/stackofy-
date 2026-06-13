@@ -115,13 +115,6 @@
       font-size: 100px;
     }
 
-    .hero-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.7;
-    }
-
     .hero-overlay {
       position: absolute;
       inset: 0;
@@ -351,8 +344,6 @@
       line-height: 2;
     }
 
-    .article-img { width: 100%; border-radius: 12px; margin: 1.5rem 0; overflow: hidden; }
-    .article-img img { width: 100%; height: auto; display: block; max-height: 400px; object-fit: cover; }
     .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 0.5rem; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
     .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
@@ -377,6 +368,25 @@
       .hero-content h1 { font-size: 1.4rem !important; }
       .article-wrapper { padding: 1.5rem 1rem !important; }
     }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; cursor: pointer; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+    @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr !important; } }
+    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .c-omega { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
+    .c-vitd { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+    .c-zinc { background: linear-gradient(135deg, #1a3a2a, #2D6A4F); }
+    .c-sel { background: linear-gradient(135deg, #2C1A0E, #5C3A1E); }
+    .c-coq { background: linear-gradient(135deg, #1a0a00, #5C3A00); }
   </style>
 </head>
 <body>
@@ -605,6 +615,39 @@
       </div>
     </div>
 
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/coq10-guide.html" class="related-card">
+          <div class="related-img c-coq">
+            <img src="/images/hero-coq10.jpg" alt="CoQ10" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">CoQ10</span>
+            <h4>CoQ10: The Spark Plug for Every Cell in Your Body</h4>
+          </div>
+        </a>
+        <a href="/articles/magnesium-guide.html" class="related-card">
+          <div class="related-img c-mag">
+            <img src="/images/white-powder-capsules-on-moss.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Magnesium</span>
+            <h4>Magnesium: The Master Mineral That Everyone's Missing</h4>
+          </div>
+        </a>
+        <a href="/articles/vitamin-d3-k2-guide.html" class="related-card">
+          <div class="related-img c-vitd">
+            <img src="/images/old-hand-young-hand.jpg" alt="Vitamin D3" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin D3</span>
+            <h4>Vitamin D3 + K2: The Cheapest Longevity Insurance</h4>
+          </div>
+        </a>
+      </div>
+    </div>
     <div class="disclaimer">
       <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
     </div>
