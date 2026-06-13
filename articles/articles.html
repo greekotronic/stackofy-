@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Articles - Stackofy | Evidence-Based Supplement Research</title>
+  <meta name="description" content="Independent research on longevity supplements, dosing protocols, and what actually works. No pharma ties. No fluff." />
+  <meta property="og:title" content="Articles - Stackofy" />
+  <meta property="og:description" content="Evidence-based supplement research. No pharma ties. No fluff." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stackofy.com/articles" />
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+    header { background: var(--gradient); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
+    .logo-icon { display: flex; flex-direction: column; gap: 3px; }
+    .capsule { height: 7px; border-radius: 4px; }
+    .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
+    .capsule:nth-child(2) { width: 22px; background: var(--green-light); }
+    .capsule:nth-child(3) { width: 26px; margin-left: 2px; background: var(--gold); }
+    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #FAF8F4; }
+    .dark-toggle { background: rgba(255,255,255,0.15); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 12px; cursor: pointer; color: #FAF8F4; font-size: 13px; }
+    .articles-hero { position: relative; height: 280px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .hero-bg { position: absolute; inset: 0; background: var(--gradient); }
+    .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.3; }
+    .hero-overlay { position: absolute; inset: 0; background: rgba(27,67,50,0.6); }
+    .hero-text { position: relative; z-index: 2; text-align: center; padding: 2rem; }
+    .hero-text h1 { color: #FAF8F4; font-size: 2.2rem; font-weight: 700; margin-bottom: 0.5rem; letter-spacing: -0.3px; }
+    .hero-text p { color: var(--green-light); font-size: 15px; margin-bottom: 1.5rem; }
+    .hero-search { display: flex; gap: 8px; max-width: 480px; margin: 0 auto; }
+    .hero-search input { flex: 1; padding: 10px 16px; border-radius: var(--radius-sm); border: none; font-size: 14px; background: #FAF8F4; color: var(--text); }
+    .hero-search input:focus { outline: none; }
+    .hero-search button { padding: 10px 20px; background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; cursor: pointer; }
+    .main { max-width: 1040px; margin: 0 auto; padding: 2.5rem 2rem; }
+    .filter-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
+    .filter-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .pill { padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; cursor: pointer; border: 0.5px solid var(--border); background: var(--surface); color: var(--text-muted); transition: all 0.2s; }
+    .pill:hover { border-color: var(--green-dark); color: var(--green-dark); }
+    .pill.active { background: var(--green-dark); color: #FAF8F4; border-color: var(--green-dark); }
+    .articles-count { font-size: 13px; color: var(--text-muted); }
+    .articles-count span { font-weight: 700; color: var(--text); }
+    .featured-article { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: grid; grid-template-columns: 1fr 1.2fr; margin-bottom: 2.5rem; cursor: pointer; transition: border-color 0.2s, transform 0.2s; }
+    .featured-article:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .featured-img { height: 260px; background: linear-gradient(135deg, #1B4332, #2D6A4F, #7A5C10); display: flex; align-items: center; justify-content: center; font-size: 80px; overflow: hidden; }
+    .featured-img img { width: 100%; height: 100%; object-fit: cover; }
+    .featured-body { padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+    .featured-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .article-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .featured-body h2 { font-size: 1.3rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem; line-height: 1.4; }
+    .featured-body p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; }
+    .read-link { font-size: 13px; font-weight: 600; color: var(--green-dark); }
+    .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2.5rem; }
+    .article-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; cursor: pointer; transition: border-color 0.2s, transform 0.2s; }
+    .article-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .card-img { height: 140px; display: flex; align-items: center; justify-content: center; font-size: 44px; overflow: hidden; }
+    .card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .c-omega { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
+    .c-vitd { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+    .c-zinc { background: linear-gradient(135deg, #1a3a2a, #2D6A4F); }
+    .c-sel { background: linear-gradient(135deg, #2C1A0E, #5C3A1E); }
+    .c-coq { background: linear-gradient(135deg, #1a0a00, #5C3A00); }
+    .card-body { padding: 1rem; }
+    .card-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
+    .read-time { font-size: 11px; color: var(--text-muted); }
+    .article-card h3 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; line-height: 1.4; }
+    .article-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+    .coming-soon-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 2.5rem; }
+    .coming-card { background: var(--surface); border-radius: var(--radius); border: 0.5px dashed var(--border); padding: 1.25rem; opacity: 0.7; }
+    .coming-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .coming-card h4 { font-size: 13px; font-weight: 600; color: var(--text-muted); }
+    footer { background: var(--gradient); color: var(--green-light); text-align: center; padding: 2rem; font-size: 13px; line-height: 2; }
+    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 0.5rem; }
+    .footer-links a { color: var(--green-light); font-size: 13px; }
+    .footer-links a:hover { color: #FAF8F4; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 56px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; gap: 0; }
+    .mobile-menu.open { display: flex !important; }
+    .mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
+    .mobile-menu a:last-child { border-bottom: none; }
+    .article-card.hidden, .featured-article.hidden { display: none; }
+
+    @media (max-width: 900px) {
+      .articles-grid { grid-template-columns: 1fr 1fr !important; }
+      .coming-soon-grid { grid-template-columns: 1fr 1fr !important; }
+      .featured-article { grid-template-columns: 1fr !important; }
+      .featured-img { height: 200px !important; }
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem !important; height: 56px !important; }
+      nav { display: none !important; }
+      .dark-toggle { padding: 4px 8px !important; font-size: 12px !important; }
+      .hamburger { display: flex !important; }
+      .articles-hero { height: 220px !important; }
+      .hero-text h1 { font-size: 1.4rem !important; }
+      .hero-text p { font-size: 13px !important; }
+      .hero-search { flex-direction: column !important; }
+      .hero-search input, .hero-search button { width: 100% !important; }
+      .main { padding: 1.25rem 1rem !important; }
+      .filter-bar { flex-direction: column !important; align-items: flex-start !important; }
+      .pill { font-size: 12px !important; padding: 5px 10px !important; }
+      .featured-article { grid-template-columns: 1fr !important; }
+      .featured-img { height: 160px !important; }
+      .featured-body { padding: 1.25rem !important; }
+      .featured-body h2 { font-size: 1.1rem !important; }
+      .articles-grid { grid-template-columns: 1fr !important; }
+      .card-img { height: 160px !important; }
+      .coming-soon-grid { grid-template-columns: 1fr 1fr !important; }
+      .footer-links { gap: 0.75rem !important; flex-wrap: wrap !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="logo" href="/">
+      <div class="logo-icon">
+        <div class="capsule"></div>
+        <div class="capsule"></div>
+        <div class="capsule"></div>
+      </div>
+      Stackofy
+    </a>
+    <div class="header-right">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/articles.html">Articles</a>
+        <a href="/your-stack.html">Stack Builder</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="dark-toggle" onclick="toggleDark()">🌙 Dark</button>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/" onclick="toggleMenu()">Home</a>
+    <a href="/articles.html" onclick="toggleMenu()">Articles</a>
+    <a href="/your-stack.html" onclick="toggleMenu()">Stack Builder</a>
+    <a href="/about.html" onclick="toggleMenu()">About</a>
+  </div>
+
+  <div class="articles-hero">
+    <div class="hero-bg">
+      <img src="/images/scientist-desk-research-papers.jpg" alt="Research desk" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-text">
+      <h1>The Research Library</h1>
+      <p>Evidence-based. Independent. No pharma ties. No fluff.</p>
+      <div class="hero-search">
+        <input type="text" id="search-input" placeholder="Search supplements, protocols, ingredients..." oninput="filterArticles()" />
+        <button>Search</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="filter-bar">
+      <div class="filter-pills">
+        <span class="pill active" onclick="filterBy('all', this)">All</span>
+        <span class="pill" onclick="filterBy('longevity', this)">Longevity</span>
+        <span class="pill" onclick="filterBy('immune', this)">Immune</span>
+        <span class="pill" onclick="filterBy('brain', this)">Brain</span>
+        <span class="pill" onclick="filterBy('sleep', this)">Sleep</span>
+        <span class="pill" onclick="filterBy('performance', this)">Performance</span>
+        <span class="pill" onclick="filterBy('metabolism', this)">Metabolism</span>
+      </div>
+      <div class="articles-count"><span id="article-count">7</span> Articles</div>
+    </div>
+
+    <a href="/articles/nmn-supplements-guide.html" class="featured-article" data-tags="longevity">
+      <div class="featured-img c-nmn">
+        <img src="/images/thumb-nmn.jpg" alt="NMN" onerror="this.style.display='none'" />
+      </div>
+      <div class="featured-body">
+        <div class="featured-label">Featured Article</div>
+        <span class="article-tag">NMN - Longevity</span>
+        <h2>Why 64% of NMN Supplements Contain Zero Active Ingredient</h2>
+        <p>Independent lab tests exposed the NMN market. Most people who tried NMN and felt nothing were let down by the product - not their biology. Here is how to spot the real ones in 90 seconds.</p>
+        <span class="read-link">Read article →</span>
+      </div>
+    </a>
+
+    <div class="articles-grid" id="articles-grid">
+
+      <a href="/articles/omega-3-complete-guide.html" class="article-card" data-tags="longevity immune brain" data-title="Omega-3 The One Supplement Almost Everyone Is Taking Wrong">
+        <div class="card-img c-omega">
+          <img src="/images/omega-3-capsules-moss.jpg" alt="Omega-3" onerror="this.style.display='none'" />
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="article-tag">Omega-3</span><span class="read-time">8 min</span></div>
+          <h3>Omega-3: The One Supplement Almost Everyone Is Taking Wrong</h3>
+          <p>Form matters more than dose. Most cheap fish oil fails before it reaches you.</p>
+        </div>
+      </a>
+
+      <a href="/articles/vitamin-d3-k2-guide.html" class="article-card" data-tags="longevity immune" data-title="Vitamin D3 K2 Cheapest Longevity Insurance">
+        <div class="card-img c-vitd">
+          <img src="/images/old-hand-young-hand.jpg" alt="Vitamin D3" onerror="this.style.display='none'" />
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="article-tag">Vitamin D3</span><span class="read-time">9 min</span></div>
+          <h3>Vitamin D3 + K2: The Cheapest Longevity Insurance You Are Not Taking Correctly</h3>
+          <p>Most adults are chronically deficient. Here is what the research actually says.</p>
+        </div>
+      </a>
+
+      <a href="/articles/magnesium-guide.html" class="article-card" data-tags="longevity sleep brain performance" data-title="Magnesium Master Mineral Everyone Missing">
+        <div class="card-img c-mag">
+          <img src="/images/white-powder-capsules-on-moss.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="article-tag">Magnesium</span><span class="read-time">9 min</span></div>
+          <h3>Magnesium: The Master Mineral That Everyone's Missing</h3>
+          <p>Involved in 300+ enzyme reactions. Most people are deficient and don't know it.</p>
+        </div>
+      </a>
+
+      <a href="/articles/zinc-guide.html" class="article-card" data-tags="immune longevity performance" data-title="Zinc Quiet Mineral Keeps Everything Running">
+        <div class="card-img c-zinc">
+          <img src="/images/oysters-lemon.jpg" alt="Zinc" onerror="this.style.display='none'" />
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="article-tag">Zinc</span><span class="read-time">8 min</span></div>
+          <h3>Zinc: The Quiet Mineral That Keeps Everything Running</h3>
+          <p>Subtle deficiency quietly erodes immunity, testosterone and mental sharpness.</p>
+        </div>
+      </a>
+
+      <a href="/articles/selenium-guide.html" class="article-card" data-tags="longevity immune" data-title="Selenium Tiny Mineral Giant Anti-Aging Powers">
+        <div class="card-img c-sel">
+          <img src="/images/thumb-selenium.jpg" alt="Selenium" onerror="this.style.display='none'" />
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="article-tag">Selenium</span><span class="read-time">8 min</span></div>
+          <h3>Selenium: The Tiny Mineral with Giant Anti-Aging Powers</h3>
+          <p>Cofactor in your master antioxidant enzyme. Supports thyroid, immune function and DNA repair.</p>
+        </div>
+      </a>
+
+      <a href="/articles/coq10-guide.html" class="article-card" data-tags="longevity energy performance" data-title="CoQ10 Spark Plug Every Cell Body">
+        <div class="card-img c-coq">
+          <img src="/images/hero-coq10.jpg" alt="CoQ10" onerror="this.style.display='none'" />
+        </div>
+        <div class="card-body">
+          <div class="card-meta"><span class="article-tag">CoQ10</span><span class="read-time">8 min</span></div>
+          <h3>CoQ10: The Spark Plug for Every Cell in Your Body</h3>
+          <p>Mitochondrial energy declines after 40. Essential if you take statins. Ubiquinol is the active form.</p>
+        </div>
+      </a>
+
+    </div>
+
+    <div style="margin-bottom: 1rem;">
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem;">Coming Soon</div>
+    </div>
+    <div class="coming-soon-grid">
+      <div class="coming-card"><div class="coming-label">Longevity</div><h4>Resveratrol + Pterostilbene</h4></div>
+      <div class="coming-card"><div class="coming-label">Brain</div><h4>Lion's Mane Mushroom</h4></div>
+      <div class="coming-card"><div class="coming-label">Sleep</div><h4>Ashwagandha + L-Theanine</h4></div>
+      <div class="coming-card"><div class="coming-label">Metabolism</div><h4>Berberine</h4></div>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/your-stack.html">Stack Builder</a>
+      <a href="/about.html">About</a>
+      <a href="https://alethiaresearch.gumroad.com">Shop</a>
+    </div>
+    <div>Stackofy &nbsp;|&nbsp; Alethia Research Institute &nbsp;|&nbsp; © 2026</div>
+    <div style="margin-top: 4px; font-size: 12px; color: #6B8A78;">Evidence-based. No pharma ties. No fluff.</div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('mobile-menu').classList.toggle('open');
+    }
+
+    function toggleDark() {
+      const body = document.body;
+      const btn = document.querySelector('.dark-toggle');
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.removeAttribute('data-theme');
+        btn.textContent = '🌙 Dark';
+        localStorage.setItem('theme', 'light');
+      } else {
+        body.setAttribute('data-theme', 'dark');
+        btn.textContent = '☀️ Light';
+        localStorage.setItem('theme', 'dark');
+      }
+    }
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      document.querySelector('.dark-toggle').textContent = '☀️ Light';
+    }
+
+    function filterBy(tag, el) {
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+      el.classList.add('active');
+      const cards = document.querySelectorAll('.article-card');
+      const featured = document.querySelector('.featured-article');
+      let count = 0;
+      if (tag === 'all') {
+        cards.forEach(c => { c.classList.remove('hidden'); count++; });
+        if (featured) { featured.classList.remove('hidden'); count++; }
+      } else {
+        if (featured) {
+          const ftags = featured.getAttribute('data-tags') || '';
+          if (ftags.includes(tag)) { featured.classList.remove('hidden'); count++; }
+          else { featured.classList.add('hidden'); }
+        }
+        cards.forEach(c => {
+          const tags = c.getAttribute('data-tags') || '';
+          if (tags.includes(tag)) { c.classList.remove('hidden'); count++; }
+          else { c.classList.add('hidden'); }
+        });
+      }
+      document.getElementById('article-count').textContent = count;
+    }
+
+    function filterArticles() {
+      const query = document.getElementById('search-input').value.toLowerCase();
+      const cards = document.querySelectorAll('.article-card');
+      let count = 0;
+      cards.forEach(c => {
+        const title = c.getAttribute('data-title') || '';
+        if (title.toLowerCase().includes(query)) { c.classList.remove('hidden'); count++; }
+        else { c.classList.add('hidden'); }
+      });
+      document.getElementById('article-count').textContent = count;
+    }
+  </script>
+
+</body>
+</html>
