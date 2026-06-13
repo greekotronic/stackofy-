@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Build YOUR Stack - Stackofy</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #FAF8F4; color: #1A1A1A; }
+.wrap { max-width: 680px; margin: 0 auto; padding: 2rem 1.5rem; }
+.hero { background: #1B4332; border-radius: 12px; padding: 2rem; margin-bottom: 2rem; text-align: center; }
+.hero h1 { color: #FAF8F4; font-size: 24px; font-weight: 700; margin-bottom: 0.5rem; }
+.hero p { color: #95D5B2; font-size: 14px; }
+.progress-wrap { margin-bottom: 1.5rem; }
+.progress-label { display: flex; justify-content: space-between; font-size: 13px; color: #666; margin-bottom: 6px; }
+.progress-bar { height: 4px; background: #E0DDD8; border-radius: 2px; overflow: hidden; }
+.progress-fill { height: 100%; background: #D4A853; border-radius: 2px; transition: width 0.3s; }
+.block { background: #fff; border: 1px solid #E0DDD8; border-radius: 12px; padding: 1.75rem; margin-bottom: 1rem; display: none; }
+.block.active { display: block; }
+.block-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #D4A853; margin-bottom: 0.5rem; }
+.block-title { font-size: 18px; font-weight: 700; color: #1A1A1A; margin-bottom: 0.4rem; line-height: 1.4; }
+.block-sub { font-size: 13px; color: #888; margin-bottom: 1.25rem; }
+.options { display: flex; flex-direction: column; gap: 8px; }
+.opt { padding: 12px 16px; border: 2px solid #E0DDD8; border-radius: 8px; cursor: pointer; font-size: 14px; color: #1A1A1A; background: #fff; text-align: left; transition: all 0.15s; width: 100%; font-family: inherit; }
+.opt:hover { border-color: #2D6A4F; background: #F0FAF5; }
+.opt.sel { border-color: #1B4332; background: #D6EDE3; color: #0D2B1E; font-weight: 600; }
+.slider-row { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.slider-lbl { font-size: 14px; color: #1A1A1A; flex: 1; }
+.slider-num { font-size: 14px; font-weight: 700; color: #FAF8F4; background: #1B4332; border-radius: 6px; min-width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; }
+input[type=range] { width: 120px; flex-shrink: 0; accent-color: #1B4332; cursor: pointer; }
+.nav { display: flex; gap: 8px; margin-top: 1.5rem; }
+.btn-back { padding: 10px 20px; border-radius: 8px; font-size: 14px; cursor: pointer; background: #fff; border: 1px solid #E0DDD8; color: #666; font-family: inherit; }
+.btn-back:hover { border-color: #999; color: #333; }
+.btn-next { padding: 10px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; background: #1B4332; border: none; color: #FAF8F4; flex: 1; font-family: inherit; transition: background 0.15s; }
+.btn-next:hover { background: #2D6A4F; }
+.btn-next:disabled { background: #E0DDD8; color: #999; cursor: not-allowed; }
+.result { display: none; }
+.result.active { display: block; }
+.result-hero { background: #1B4332; border-radius: 12px; padding: 1.75rem; margin-bottom: 1.75rem; text-align: center; }
+.result-hero h2 { color: #FAF8F4; font-size: 22px; font-weight: 700; margin-bottom: 0.4rem; }
+.result-hero p { color: #95D5B2; font-size: 14px; }
+.multi-warn { background: #FFF8E8; border: 1px solid #D4A853; border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; font-size: 13px; color: #7A5C10; line-height: 1.6; }
+.multi-warn strong { color: #5C4000; }
+.tier { margin-bottom: 2rem; }
+.tier-lbl { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; padding: 5px 12px; border-radius: 6px; display: inline-block; margin-bottom: 0.875rem; }
+.t-ess .tier-lbl { background: #1B4332; color: #95D5B2; }
+.t-rec .tier-lbl { background: #7A5C10; color: #FDF3E0; }
+.t-opt .tier-lbl { background: #F0F0EE; color: #666; border: 1px solid #E0DDD8; }
+.scard { background: #fff; border: 1px solid #E0DDD8; border-radius: 12px; padding: 1.25rem; margin-bottom: 0.875rem; }
+.scard.already { border-color: #D4A853; background: #FFFDF5; }
+.scard-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 8px; margin-bottom: 0.6rem; }
+.scard-name { font-size: 16px; font-weight: 700; color: #1A1A1A; }
+.scard-dose { font-size: 12px; font-weight: 600; color: #7A5C10; background: #FDF3E0; padding: 3px 10px; border-radius: 4px; white-space: nowrap; }
+.scard-already-badge { font-size: 11px; font-weight: 600; color: #7A5C10; background: #FDF3E0; border: 1px solid #D4A853; padding: 3px 8px; border-radius: 4px; white-space: nowrap; }
+.scard-reason { font-size: 13px; color: #555; line-height: 1.6; margin-bottom: 0.5rem; }
+.scard-timing { font-size: 12px; color: #888; }
+.scard-timing b { color: #1A1A1A; }
+.cta { background: #1B4332; border-radius: 12px; padding: 1.75rem; text-align: center; margin-top: 1.75rem; }
+.cta h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+.cta p { color: #95D5B2; font-size: 13px; margin-bottom: 1.25rem; }
+.cta-btns { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.btn-gold { background: #D4A853; color: #1A1A1A; border: none; border-radius: 8px; padding: 10px 20px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; }
+.btn-wht { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: 8px; padding: 10px 20px; font-size: 14px; cursor: pointer; font-family: inherit; }
+.download-bar { display: flex; gap: 8px; justify-content: center; margin-top: 1.5rem; flex-wrap: wrap; }
+.btn-download { background: #fff; border: 1.5px solid #1B4332; color: #1B4332; border-radius: 8px; padding: 10px 22px; font-size: 14px; font-weight: 600; cursor: pointer; font-family: inherit; display: flex; align-items: center; gap: 8px; transition: all 0.15s; }
+.btn-download:hover { background: #1B4332; color: #FAF8F4; }
+.btn-download svg { width: 16px; height: 16px; }
+.restart-btn { display: block; margin: 1rem auto 0; background: none; border: none; color: #999; font-size: 13px; cursor: pointer; text-decoration: underline; font-family: inherit; }
+
+@media print {
+  body { background: #fff; }
+  .wrap { padding: 0; max-width: 100%; }
+  .result-hero { background: #1B4332 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .t-ess .tier-lbl { background: #1B4332 !important; color: #95D5B2 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .t-rec .tier-lbl { background: #7A5C10 !important; color: #FDF3E0 !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .cta, .download-bar, .restart-btn, .no-print { display: none !important; }
+  .scard { break-inside: avoid; }
+  .tier { break-inside: avoid; }
+  .print-header { display: block !important; }
+}
+
+.print-header {
+  display: none;
+  text-align: center;
+  padding: 1rem 0 1.5rem;
+  border-bottom: 2px solid #1B4332;
+  margin-bottom: 1.5rem;
+}
+.print-header h1 { font-size: 20px; font-weight: 700; color: #1B4332; margin-bottom: 4px; }
+.print-header p { font-size: 12px; color: #888; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hero no-print">
+  <h1>Build YOUR Stack</h1>
+  <p>Answer 7 questions. Get your personalized supplement protocol.</p>
+</div>
+
+<div id="quiz" class="no-print">
+  <div class="progress-wrap">
+    <div class="progress-label">
+      <span id="step-txt">Step 1 of 7</span>
+      <span id="pct-txt">14%</span>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" id="prog" style="width:14%"></div></div>
+  </div>
+
+  <div class="block active" id="b0">
+    <div class="block-label">About you</div>
+    <div class="block-title">How old are you?</div>
+    <div class="options">
+      <button class="opt" data-block="0" data-val="18-30">18 - 30</button>
+      <button class="opt" data-block="0" data-val="31-40">31 - 40</button>
+      <button class="opt" data-block="0" data-val="41-50">41 - 50</button>
+      <button class="opt" data-block="0" data-val="51-60">51 - 60</button>
+      <button class="opt" data-block="0" data-val="60+">60+</button>
+    </div>
+    <div class="nav"><button class="btn-next" id="n0" disabled onclick="go(1)">Continue</button></div>
+  </div>
+
+  <div class="block" id="b1">
+    <div class="block-label">Your goals</div>
+    <div class="block-title">What are your main health goals?</div>
+    <div class="block-sub">Select all that apply - tap again to deselect</div>
+    <div class="options">
+      <button class="opt" data-block="1" data-val="longevity">Anti-aging and longevity</button>
+      <button class="opt" data-block="1" data-val="energy">More energy and vitality</button>
+      <button class="opt" data-block="1" data-val="sleep">Better sleep</button>
+      <button class="opt" data-block="1" data-val="brain">Mental clarity and focus</button>
+      <button class="opt" data-block="1" data-val="immune">Stronger immune system</button>
+      <button class="opt" data-block="1" data-val="heart">Heart and cardiovascular health</button>
+      <button class="opt" data-block="1" data-val="mood">Mood and emotional balance</button>
+      <button class="opt" data-block="1" data-val="hormones">Hormonal balance</button>
+      <button class="opt" data-block="1" data-val="performance">Athletic performance and recovery</button>
+      <button class="opt" data-block="1" data-val="metabolism">Weight and metabolism</button>
+    </div>
+    <div class="nav">
+      <button class="btn-back" onclick="go(0)">Back</button>
+      <button class="btn-next" id="n1" disabled onclick="go(2)">Continue</button>
+    </div>
+  </div>
+
+  <div class="block" id="b2">
+    <div class="block-label">Your lifestyle</div>
+    <div class="block-title">Rate your lifestyle factors</div>
+    <div class="block-sub">1 = very poor / very low &nbsp; 5 = excellent / very high</div>
+    <div class="slider-row"><span class="slider-lbl">Sleep quality</span><input type="range" min="1" max="5" step="1" value="3" oninput="upd('sleep',this.value)" /><span class="slider-num" id="v-sleep">3</span></div>
+    <div class="slider-row"><span class="slider-lbl">Stress level</span><input type="range" min="1" max="5" step="1" value="3" oninput="upd('stress',this.value)" /><span class="slider-num" id="v-stress">3</span></div>
+    <div class="slider-row"><span class="slider-lbl">Physical activity</span><input type="range" min="1" max="5" step="1" value="3" oninput="upd('activity',this.value)" /><span class="slider-num" id="v-activity">3</span></div>
+    <div class="slider-row"><span class="slider-lbl">Sun exposure (yearly)</span><input type="range" min="1" max="5" step="1" value="2" oninput="upd('sun',this.value)" /><span class="slider-num" id="v-sun">2</span></div>
+    <div class="nav"><button class="btn-back" onclick="go(1)">Back</button><button class="btn-next" onclick="go(3)">Continue</button></div>
+  </div>
+
+  <div class="block" id="b3">
+    <div class="block-label">Your diet</div>
+    <div class="block-title">Rate your typical diet</div>
+    <div class="block-sub">1 = rarely &nbsp; 5 = daily / lots</div>
+    <div class="slider-row"><span class="slider-lbl">Vegetables and fruit</span><input type="range" min="1" max="5" step="1" value="3" oninput="upd('veg',this.value)" /><span class="slider-num" id="v-veg">3</span></div>
+    <div class="slider-row"><span class="slider-lbl">Fatty fish (weekly)</span><input type="range" min="1" max="5" step="1" value="2" oninput="upd('fish',this.value)" /><span class="slider-num" id="v-fish">2</span></div>
+    <div class="slider-row"><span class="slider-lbl">Meat and animal protein</span><input type="range" min="1" max="5" step="1" value="3" oninput="upd('meat',this.value)" /><span class="slider-num" id="v-meat">3</span></div>
+    <div class="slider-row"><span class="slider-lbl">Processed food and sugar</span><input type="range" min="1" max="5" step="1" value="2" oninput="upd('sugar',this.value)" /><span class="slider-num" id="v-sugar">2</span></div>
+    <div class="slider-row"><span class="slider-lbl">Coffee / tea daily</span><input type="range" min="1" max="5" step="1" value="2" oninput="upd('coffee',this.value)" /><span class="slider-num" id="v-coffee">2</span></div>
+    <div class="nav"><button class="btn-back" onclick="go(2)">Back</button><button class="btn-next" onclick="go(4)">Continue</button></div>
+  </div>
+
+  <div class="block" id="b4">
+    <div class="block-label">Health factors</div>
+    <div class="block-title">Any of these apply to you?</div>
+    <div class="block-sub">Select all that apply - tap again to deselect</div>
+    <div class="options">
+      <button class="opt" data-block="4" data-val="alcohol">Regular alcohol consumption</button>
+      <button class="opt" data-block="4" data-val="smoking">Smoking or vaping</button>
+      <button class="opt" data-block="4" data-val="cannabis">Regular cannabis use</button>
+      <button class="opt" data-block="4" data-val="vegan">Vegan or vegetarian diet</button>
+      <button class="opt" data-block="4" data-val="thyroid">Thyroid issues or medication</button>
+      <button class="opt" data-block="4" data-val="diabetes">Diabetes or blood sugar issues</button>
+      <button class="opt" data-block="4" data-val="cardio">Cardiovascular condition</button>
+      <button class="opt" data-block="4" data-val="meds">Taking blood thinners or antidepressants</button>
+      <button class="opt" data-block="4" data-val="none">None of the above</button>
+    </div>
+    <div class="nav"><button class="btn-back" onclick="go(3)">Back</button><button class="btn-next" id="n4" disabled onclick="go(5)">Continue</button></div>
+  </div>
+
+  <div class="block" id="b5">
+    <div class="block-label">Already taking</div>
+    <div class="block-title">Which supplements do you already take?</div>
+    <div class="block-sub">Select all that apply - we will show optimized dosing notes</div>
+    <div class="options">
+      <button class="opt" data-block="5" data-val="vitd">Vitamin D3</button>
+      <button class="opt" data-block="5" data-val="mag">Magnesium</button>
+      <button class="opt" data-block="5" data-val="omega">Omega-3</button>
+      <button class="opt" data-block="5" data-val="zinc">Zinc</button>
+      <button class="opt" data-block="5" data-val="selenium">Selenium</button>
+      <button class="opt" data-block="5" data-val="nmn">NMN or NR</button>
+      <button class="opt" data-block="5" data-val="coq10">CoQ10</button>
+      <button class="opt" data-block="5" data-val="multi">Multivitamin only</button>
+      <button class="opt" data-block="5" data-val="none2">None</button>
+    </div>
+    <div class="nav"><button class="btn-back" onclick="go(4)">Back</button><button class="btn-next" id="n5" disabled onclick="go(6)">Continue</button></div>
+  </div>
+
+  <div class="block" id="b6">
+    <div class="block-label">Almost done</div>
+    <div class="block-title">How old do you feel compared to your actual age?</div>
+    <div class="options">
+      <button class="opt" data-block="6" data-val="younger">Younger than my age - I feel pretty good</button>
+      <button class="opt" data-block="6" data-val="same">About the same as my age</button>
+      <button class="opt" data-block="6" data-val="older">Older than my age - low energy, slower recovery</button>
+    </div>
+    <div class="nav"><button class="btn-back" onclick="go(5)">Back</button><button class="btn-next" id="n6" disabled onclick="buildResult()">Build MY Stack</button></div>
+  </div>
+</div>
+
+<div class="result" id="result">
+
+  <div class="print-header">
+    <h1>YOUR Stack - Personalized Protocol</h1>
+    <p>Generated by Stackofy &amp; Alethia Research Institute &nbsp;|&nbsp; stackofy.com</p>
+  </div>
+
+  <div class="result-hero">
+    <h2>YOUR Stack is ready</h2>
+    <p id="r-sub">Personalized by Alethia Research Institute</p>
+  </div>
+
+  <div id="multi-note"></div>
+  <div id="tiers"></div>
+
+  <div class="cta">
+    <h3>Want the complete protocol?</h3>
+    <p>Exact dosing schedules, quality checklists, biomarker tracking and a 30-day starter plan.</p>
+    <div class="cta-btns">
+      <button class="btn-gold" onclick="window.open('https://alethiaresearch.gumroad.com/l/nmn-buyers-guide','_blank')">NMN Buyer's Protocol - $47</button>
+      <button class="btn-wht" onclick="window.open('https://www.amazon.com/dp/B0FVL882KJ','_blank')">The $1,000 Longevity Plan</button>
+    </div>
+  </div>
+
+  <div class="download-bar">
+    <button class="btn-download" onclick="window.print()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 16l-4-4h3V4h2v8h3l-4 4z"/><path d="M4 18h16v2H4z"/></svg>
+      Download as PDF
+    </button>
+    <button class="btn-download" onclick="downloadTxt()">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+      Download as Text
+    </button>
+  </div>
+
+  <button class="restart-btn" onclick="location.reload()">Start over</button>
+</div>
+
+</div>
+<script>
+var S={age:null,goals:[],sleep:3,stress:3,activity:3,sun:2,veg:3,fish:2,meat:3,sugar:2,coffee:2,flags:[],taking:[],feel:null};
+var SINGLE=[0,6],MULTI=[1,4,5],NONE_VALS=['none','none2'],MKEYS={1:'goals',4:'flags',5:'taking'};
+var RESULT_DATA={essential:[],recommended:[],optional:[]};
+
+document.querySelectorAll('.opt').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var block=parseInt(this.getAttribute('data-block')),val=this.getAttribute('data-val');
+    if(SINGLE.includes(block)){
+      document.querySelectorAll('#b'+block+' .opt').forEach(function(o){o.classList.remove('sel');});
+      this.classList.add('sel');
+      if(block===0)S.age=val;
+      if(block===6)S.feel=val;
+      var nb=document.getElementById('n'+block);if(nb)nb.disabled=false;
+    }else if(MULTI.includes(block)){
+      var key=MKEYS[block];
+      if(NONE_VALS.includes(val)){
+        document.querySelectorAll('#b'+block+' .opt').forEach(function(o){o.classList.remove('sel');});
+        this.classList.add('sel');S[key]=[val];
+      }else{
+        var nb2=document.querySelector('#b'+block+' .opt[data-val="none"],#b'+block+' .opt[data-val="none2"]');
+        if(nb2)nb2.classList.remove('sel');
+        S[key]=S[key].filter(function(v){return!NONE_VALS.includes(v);});
+        if(this.classList.contains('sel')){this.classList.remove('sel');S[key]=S[key].filter(function(v){return v!==val;});}
+        else{this.classList.add('sel');S[key].push(val);}
+      }
+      var nb3=document.getElementById('n'+block);if(nb3)nb3.disabled=S[key].length===0;
+    }
+  });
+});
+
+function upd(k,v){S[k]=parseInt(v);document.getElementById('v-'+k).textContent=v;}
+
+function go(next){
+  document.querySelectorAll('.block').forEach(function(b){b.classList.remove('active');});
+  document.getElementById('b'+next).classList.add('active');
+  var pct=Math.round(((next+1)/7)*100);
+  document.getElementById('prog').style.width=pct+'%';
+  document.getElementById('step-txt').textContent='Step '+(next+1)+' of 7';
+  document.getElementById('pct-txt').textContent=pct+'%';
+  window.scrollTo(0,0);
+}
+
+function has(arr,val){return arr.includes(val);}
+function taking(k){return has(S.taking,k);}
+function hasMeta(){return has(S.taking,'multi');}
+
+function buildResult(){
+  document.getElementById('quiz').style.display='none';
+  document.getElementById('result').classList.add('active');
+  window.scrollTo(0,0);
+
+  var ageNum=S.age==='18-30'?25:S.age==='31-40'?35:S.age==='41-50'?45:S.age==='51-60'?55:65;
+  var lowSun=S.sun<=2,lowFish=S.fish<=2,vegan=has(S.flags,'vegan');
+  var highStress=S.stress>=4,poorSleep=S.sleep<=2;
+  var thyroid=has(S.flags,'thyroid'),cardio=has(S.flags,'cardio'),diabetes=has(S.flags,'diabetes');
+  var alcohol=has(S.flags,'alcohol'),smoking=has(S.flags,'smoking');
+  var longevity=has(S.goals,'longevity'),brain=has(S.goals,'brain'),sleepGoal=has(S.goals,'sleep');
+  var immune=has(S.goals,'immune'),heart=has(S.goals,'heart'),mood=has(S.goals,'mood');
+  var performance=has(S.goals,'performance'),metabolism=has(S.goals,'metabolism'),energy=has(S.goals,'energy');
+
+  var essential=[],recommended=[],optional=[];
+
+  function ess(name,dose,reason,timing,akey){
+    var al=akey&&taking(akey);
+    var mn=akey&&hasMeta()?' Note: multivitamins are typically underdosed for '+name+'.':'';
+    essential.push({name:name,dose:dose,reason:reason+mn,timing:timing,already:al});
+  }
+  function rec(name,dose,reason,timing,akey){
+    recommended.push({name:name,dose:dose,reason:reason,timing:timing,already:akey&&taking(akey)});
+  }
+  function opt(name,dose,reason,timing){
+    optional.push({name:name,dose:dose,reason:reason,timing:timing,already:false});
+  }
+
+  ess('Vitamin D3 + K2',lowSun?'4,000 IU D3 + 200mcg K2 MK-7':'2,000 IU D3 + 100mcg K2 MK-7',
+    lowSun?'Your low sun exposure makes D3 deficiency very likely. Linked to immune dysfunction, fatigue, cardiovascular risk and accelerated aging.':'The most cost-effective longevity supplement available. Most adults are chronically deficient. K2 directs calcium to your bones, not your arteries.',
+    'Morning with a fat-containing meal','vitd');
+
+  ess('Magnesium Glycinate',(highStress||poorSleep)?'400mg elemental':'300mg elemental',
+    (highStress||poorSleep)?'Stress and poor sleep both deplete magnesium rapidly. Over 300 enzyme reactions depend on it. Glycinate is calming and highly bioavailable.':'Over 300 enzyme reactions depend on it. Modern diets are consistently low. The foundation mineral for cellular function.',
+    'Evening before bed','mag');
+
+  ess('Omega-3 EPA + DHA',lowFish?'2,000mg EPA+DHA daily':'1,000mg EPA+DHA daily',
+    lowFish?'Your low fatty fish intake means you are almost certainly deficient. EPA and DHA are structural components of every cell membrane. Algae oil is the superior vegan option.':'Core anti-inflammatory and cardiovascular support with decades of human research. Choose triglyceride form, not ethyl ester.',
+    'With any fat-containing meal','omega');
+
+  ess('Zinc Picolinate',vegan?'20-25mg daily':'15-20mg daily',
+    vegan?'Plant-based diets have significantly lower zinc bioavailability. Zinc is critical for immune function, testosterone production, DNA repair and wound healing.':'Essential for immune defense, hormone production, antioxidant function and DNA repair. Picolinate is the most bioavailable form.',
+    'With a light meal - not with calcium or iron','zinc');
+
+  ess('Selenium (L-Selenomethionine)','100-150mcg daily',
+    thyroid?'Selenium is essential for converting thyroid hormone T4 to active T3. Also your master antioxidant cofactor.':'Cofactor in glutathione peroxidase - your master antioxidant enzyme. Supports thyroid function, immune modulation and DNA repair.',
+    'Morning with a protein-rich meal','selenium');
+
+  if(alcohol||smoking||highStress||ageNum>=40){
+    ess('Vitamin C',alcohol?'1,000-2,000mg daily':'500-1,000mg daily',
+      alcohol||smoking?'Alcohol and smoking dramatically deplete Vitamin C and increase oxidative stress. Essential for immune function and antioxidant defense.':'Powerful antioxidant supporting immune function, collagen synthesis and iron absorption.',
+      'Morning with food - split into 2 doses if over 1,000mg',null);
+  }
+
+  if(ageNum>=40||longevity||energy){
+    rec('CoQ10 (Ubiquinol)',ageNum>=50?'200mg':'100mg',
+      ageNum>=50?'CoQ10 production declines significantly after 40. Ubiquinol is the active reduced form - far more bioavailable than ubiquinone. Essential for mitochondrial energy and cardiovascular health.':'Supports mitochondrial energy production and cardiovascular health. Especially important if you take statins, which deplete CoQ10.',
+      'Morning with a fat-containing meal','coq10');
+  }
+
+  if(longevity&&ageNum>=35){
+    rec('NMN (Nicotinamide Mononucleotide)',ageNum>=50?'500mg':ageNum>=40?'375mg':'250mg',
+      'NAD+ levels decline by roughly 50% between age 20 and 40. NMN raises NAD+ to support cellular energy, DNA repair and mitochondrial function. Only buy from brands with third-party COA.',
+      'Morning with breakfast - never at night','nmn');
+  }
+
+  if(recommended.some(function(r){return r.name.includes('NMN');})||taking('nmn')){
+    rec('TMG (Trimethylglycine)','500-1,000mg daily',
+      'Essential companion to NMN. Neutralizes homocysteine produced during NAD+ synthesis. Do not take NMN without TMG.',
+      'Morning alongside NMN',null);
+  }
+
+  if(longevity&&ageNum>=35){
+    rec('Resveratrol or Pterostilbene','150-500mg resveratrol or 50-150mg pterostilbene',
+      'Activates sirtuins - cellular repair proteins that NAD+ fuels. Pairs synergistically with NMN. Take with a fat source for absorption.',
+      'Morning with NMN and a fat source',null);
+  }
+
+  if(heart||cardio||ageNum>=50){
+    rec('Berberine','500mg x 2-3 daily',
+      'One of the most studied natural compounds for cardiovascular and metabolic health. Activates AMPK, improves insulin sensitivity, lowers LDL and supports healthy blood sugar.',
+      'With meals - split into 2-3 doses',null);
+  }
+
+  if(brain||ageNum>=45){
+    opt("Lion's Mane Mushroom",'500-1,000mg daily',
+      'Stimulates nerve growth factor and BDNF. Best evidence for long-term cognitive health and neuroprotection. Effects build over weeks.',
+      'Morning or midday with food');
+  }
+
+  if(sleepGoal||poorSleep){
+    opt('L-Theanine','200-400mg',
+      'Promotes calm focus without sedation. Pairs perfectly with Magnesium Glycinate for sleep. Also reduces caffeine jitteriness.',
+      'Evening 30-60 min before sleep');
+  }
+
+  if(highStress||mood){
+    opt('Ashwagandha KSM-66','300-600mg daily',
+      'The most clinically studied adaptogen. Reduces cortisol, supports stress resilience and sleep quality.',
+      'Evening with food - effects build over 4-8 weeks');
+  }
+
+  if(immune||alcohol||smoking){
+    opt('Quercetin + Bromelain','500-1,000mg quercetin with bromelain',
+      'Potent antioxidant and zinc ionophore - helps zinc enter cells. Anti-inflammatory, supports immune function.',
+      'With meals 1-2 times daily');
+  }
+
+  if(performance||ageNum>=40){
+    opt('Creatine Monohydrate','3-5g daily',
+      'One of the most evidence-backed supplements in existence. Supports muscle energy, recovery and cognitive function. Underrated for longevity.',
+      'Any time - consistency matters more than timing');
+  }
+
+  if(metabolism||diabetes){
+    opt('Alpha Lipoic Acid (ALA)','300-600mg daily',
+      'Powerful antioxidant that works in both fat and water-soluble environments. Supports insulin sensitivity and mitochondrial function.',
+      'Before meals on an empty stomach');
+  }
+
+  RESULT_DATA={essential:essential,recommended:recommended,optional:optional};
+
+  var total=essential.length+recommended.length+optional.length;
+  document.getElementById('r-sub').textContent=total+' supplements selected for your profile';
+
+  if(hasMeta()){
+    document.getElementById('multi-note').innerHTML='<div class="multi-warn"><strong>Note about your multivitamin:</strong> Multivitamins typically contain the right ingredients - but at doses too low to have meaningful clinical effect. We include all supplements regardless, with dosing notes. Targeted individual supplementation is almost always superior.</div>';
+  }
+
+  var tiersEl=document.getElementById('tiers');
+  tiersEl.innerHTML='';
+
+  function renderTier(label,items,cls){
+    if(!items.length)return;
+    var div=document.createElement('div');
+    div.className='tier '+cls;
+    div.innerHTML='<span class="tier-lbl">'+label+'</span>';
+    items.forEach(function(s){
+      var cc=s.already?'scard already':'scard';
+      var badge=s.already?'<span class="scard-already-badge">Already taking - check dose</span>':'<span class="scard-dose">'+s.dose+'</span>';
+      var doseNote=s.already?'<div style="font-size:12px;color:#7A5C10;margin-bottom:0.5rem;font-weight:500">Recommended dose: '+s.dose+'</div>':'';
+      div.innerHTML+='<div class="'+cc+'"><div class="scard-top"><span class="scard-name">'+s.name+'</span>'+badge+'</div>'+doseNote+'<div class="scard-reason">'+s.reason+'</div><div class="scard-timing"><b>When:</b> '+s.timing+'</div></div>';
+    });
+    tiersEl.appendChild(div);
+  }
+
+  renderTier('Essential - everyone needs these',essential,'t-ess');
+  renderTier('Highly recommended for your profile',recommended,'t-rec');
+  renderTier('Worthwhile additions',optional,'t-opt');
+}
+
+function downloadTxt(){
+  var d=RESULT_DATA;
+  var lines=['YOUR STACK - Personalized Protocol','Generated by Stackofy | Alethia Research Institute | stackofy.com','',''];
+
+  function addTier(label,items){
+    if(!items.length)return;
+    lines.push('=== '+label.toUpperCase()+' ===','');
+    items.forEach(function(s){
+      lines.push(s.name);
+      lines.push('Dose: '+s.dose);
+      lines.push('Why: '+s.reason);
+      lines.push('When: '+s.timing);
+      lines.push('');
+    });
+  }
+
+  addTier('Essential - everyone needs these',d.essential);
+  addTier('Highly recommended for your profile',d.recommended);
+  addTier('Worthwhile additions',d.optional);
+  lines.push('---');
+  lines.push('For the complete protocol with quality checklists and a 30-day starter plan:');
+  lines.push('NMN Buyer\'s Protocol: https://alethiaresearch.gumroad.com/l/nmn-buyers-guide');
+  lines.push('The $1,000 Longevity Plan: https://www.amazon.com/dp/B0FVL882KJ');
+
+  var blob=new Blob([lines.join('\n')],{type:'text/plain'});
+  var a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);
+  a.download='YOUR-Stack-Protocol.txt';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+</script>
+</body>
+</html>
