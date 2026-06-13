@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitamin C: The Buffered Backbone of Antioxidant Defense - Stackofy</title>
+  <meta name="description" content="Vitamin C is one of the most essential supplements for longevity. Here is what the research says about dosing, forms, and why buffered and liposomal versions outperform standard ascorbic acid." />
+
+  <meta property="og:title" content="Vitamin C: The Buffered Backbone of Antioxidant Defense" />
+  <meta property="og:description" content="A multitasking powerhouse that touches nearly every system involved in aging. Here is what you need to know." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/vitamin-c-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-vitaminc.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    header { background: var(--gradient); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
+    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #FAF8F4; }
+    .dark-toggle { background: rgba(255,255,255,0.15); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 12px; cursor: pointer; color: #FAF8F4; font-size: 13px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; }
+    .mobile-menu.open { display: flex !important; }
+    .mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
+    .mobile-menu a:last-child { border-bottom: none; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #7A1A00, #C0392B, #1B4332); display: flex; align-items: center; justify-content: center; font-size: 100px; }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content ul, .article-content ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; max-height: 420px; object-fit: cover; display: block; }
+
+    .forms-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .form-card { background: var(--surface); border-radius: var(--radius-sm); border: 0.5px solid var(--border); padding: 1rem; }
+    .form-card.recommended { border-color: var(--green-dark); }
+    .form-card.ok { border-color: var(--gold); }
+    .form-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+    .form-label.rec { color: var(--green-dark); }
+    .form-label.good { color: var(--gold); }
+    .form-label.basic { color: var(--text-muted); }
+    .form-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .form-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .warning-box { background: #fff8f0; border-left: 4px solid #E67E22; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #E67E22; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+    .synergy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .synergy-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.875rem; text-align: center; }
+    .synergy-card .icon { font-size: 22px; margin-bottom: 6px; }
+    .synergy-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .synergy-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .c-zinc { background: linear-gradient(135deg, #1a3a2a, #2D6A4F); }
+    .c-sel { background: linear-gradient(135deg, #2C1A0E, #5C3A1E); }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+    .sources a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    footer { background: var(--gradient); color: var(--green-light); text-align: center; padding: 2rem; font-size: 13px; line-height: 2; }
+    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 0.5rem; }
+    .footer-links a { color: var(--green-light); font-size: 13px; }
+    .footer-links a:hover { color: #FAF8F4; }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem !important; }
+      nav { display: none !important; }
+      .hamburger { display: flex !important; }
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .forms-grid { grid-template-columns: 1fr !important; }
+      .synergy-grid { grid-template-columns: 1fr 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <header>
+    <a class="logo" href="/">
+      <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(1.5,0)">
+          <path d="M21,8.5 h11 v11 h-11 a5.5,5.5 0 0 1 0,-11 z" fill="#D4A853"/>
+          <path d="M32,9.5 h9 a4.5,4.5 0 0 1 0,9 h-9 z" fill="#D4A853"/>
+          <g transform="rotate(37 32 33.6)">
+            <path d="M21,28.1 h11 v11 h-11 a5.5,5.5 0 0 1 0,-11 z" fill="#95D5B2"/>
+            <path d="M32,29.1 h9 a4.5,4.5 0 0 1 0,9 h-9 z" fill="#95D5B2"/>
+          </g>
+          <path d="M21,44.5 h11 v11 h-11 a5.5,5.5 0 0 1 0,-11 z" fill="#D4A853"/>
+          <path d="M32,45.5 h9 a4.5,4.5 0 0 1 0,9 h-9 z" fill="#D4A853"/>
+        </g>
+      </svg>
+      Stackofy
+    </a>
+    <div class="header-right">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/articles.html">Articles</a>
+        <a href="/your-stack.html">Stack Builder</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="dark-toggle" onclick="toggleDark()">🌙 Dark</button>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/" onclick="toggleMenu()">Home</a>
+    <a href="/articles.html" onclick="toggleMenu()">Articles</a>
+    <a href="/your-stack.html" onclick="toggleMenu()">Stack Builder</a>
+    <a href="/about.html" onclick="toggleMenu()">About</a>
+  </div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-vitaminc.jpg" alt="Vitamin C citrus fruits" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Vitamin C</span>
+      <h1>Vitamin C: The Buffered Backbone of Antioxidant Defense</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>9 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <p>Vitamin C is one of the most essential and most misunderstood supplements. Key points:</p>
+      <ul>
+        <li>Choose buffered forms (sodium or calcium ascorbate) or liposomal - not plain ascorbic acid at high doses</li>
+        <li>Split into 2-3 doses daily for steady blood levels - it clears quickly</li>
+        <li>500-1,000mg daily for maintenance, up to 3,000mg for immune and antioxidant optimization</li>
+        <li>Regenerates Vitamin E and glutathione - one of the most important antioxidant recyclers in the body</li>
+        <li>Pairs powerfully with Zinc and Quercetin for immune resilience</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Vitamin C might not be the flashiest supplement in the anti-aging world. It does not have the mystique of NMN or the cult following of resveratrol. But strip away the marketing noise and look at what the research actually shows - and Vitamin C emerges as one of the most essential, most versatile, and most consistently underutilized tools in the longevity toolkit.</p>
+
+      <p>Ascorbic acid is a cornerstone of antioxidant defense, collagen production, immune function, neurotransmitter synthesis, and iron absorption. In short: <strong>it touches nearly every system involved in aging</strong> - and most people are not getting nearly enough of it, in the right form, at the right dose.</p>
+
+      <div class="article-img">
+        <img src="/images/hero-vitaminc.jpg" alt="Citrus fruits rich in Vitamin C" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What Makes Vitamin C Unique in the Longevity Space</h2>
+
+      <p>Most antioxidants work once and are done. Vitamin C is different. It actively regenerates other antioxidants - particularly Vitamin E and glutathione - after they have neutralized free radicals. This makes it a force multiplier for your entire antioxidant defense network, not just a single-use molecule.</p>
+
+      <p>Beyond antioxidant recycling, Vitamin C plays several other roles that directly intersect with aging:</p>
+
+      <ul>
+        <li><strong>Collagen synthesis.</strong> Vitamin C is an essential cofactor for the enzymes that build and stabilize collagen - the structural protein that keeps skin, joints, blood vessels and connective tissue intact. Without adequate Vitamin C, collagen production slows and tissue integrity declines.</li>
+        <li><strong>Endothelial function.</strong> The endothelium is the thin layer of cells lining your blood vessels. Vitamin C helps maintain its function, supports nitric oxide production, and reduces oxidative stress in the cardiovascular system - three things that matter enormously as you age.</li>
+        <li><strong>Glycation reduction.</strong> Glycation is the process by which excess blood sugar attaches to proteins and damages them. Vitamin C has been shown to competitively inhibit glycation - essentially competing with glucose for binding sites and slowing down one of the core mechanisms of tissue aging.</li>
+        <li><strong>Immune modulation.</strong> Vitamin C accumulates in immune cells at concentrations 50-100 times higher than in plasma. It supports the production and function of white blood cells, and is rapidly depleted during infection or high physiological stress.</li>
+        <li><strong>Neurotransmitter synthesis.</strong> Vitamin C is required for the synthesis of norepinephrine, dopamine precursors, and other neurochemicals. The brain is one of the highest-priority destinations for Vitamin C in the body.</li>
+      </ul>
+
+      <div class="article-img">
+        <img src="/images/vitaminc-skin-collagen.jpg" alt="Healthy skin and collagen - Vitamin C benefits" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Form Problem - Why What You Take Matters</h2>
+
+      <p>Not all Vitamin C supplements are equally effective - and at higher doses, the form you choose can determine whether you actually benefit or just experience GI distress.</p>
+
+      <div class="forms-grid">
+        <div class="form-card recommended">
+          <div class="form-label rec">✓ Best Choice</div>
+          <h4>Liposomal Vitamin C</h4>
+          <p>Encapsulated in fat-soluble liposomes for dramatically enhanced absorption. Bypasses digestive limitations. Can be taken once daily on an empty stomach. Most bioavailable oral form available.</p>
+        </div>
+        <div class="form-card recommended">
+          <div class="form-label rec">✓ Recommended</div>
+          <h4>Buffered Vitamin C</h4>
+          <p>Sodium ascorbate or calcium ascorbate. pH-neutral, gentle on the stomach, well tolerated at higher doses. The practical choice for daily supplementation at 1,000mg or above.</p>
+        </div>
+        <div class="form-card ok">
+          <div class="form-label good">✓ Acceptable</div>
+          <h4>Ester-C</h4>
+          <p>Branded pH-neutral form with added mineral cofactors. Better tolerated than plain ascorbic acid. Good option for those with sensitive stomachs who want a standardized product.</p>
+        </div>
+        <div class="form-card">
+          <div class="form-label basic">Basic</div>
+          <h4>Ascorbic Acid</h4>
+          <p>The standard form. Cost-effective and widely available. Works fine at lower doses. Can cause GI upset at higher doses due to its acidity. Best used as powder for flexible dosing.</p>
+        </div>
+      </div>
+
+      <h2>Dosing - What the Research Actually Supports</h2>
+
+      <p>The official RDA for Vitamin C sits at 75-90mg per day - barely enough to prevent scurvy, designed for a population that mostly does not smoke, does not experience significant stress, and eats plenty of fresh produce. For anyone in the real world, that number is essentially a floor, not a target.</p>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Group</th>
+          <th>Daily Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Adults - baseline support</td>
+          <td>500 - 1,000mg</td>
+          <td>Split into 2 doses</td>
+        </tr>
+        <tr>
+          <td>Adults - immune and antioxidant optimization</td>
+          <td>1,000 - 3,000mg</td>
+          <td>Split into 2-3 doses, buffered form preferred</td>
+        </tr>
+        <tr>
+          <td>During illness or high stress</td>
+          <td>3,000 - 6,000mg</td>
+          <td>Short-term, reduce if GI upset occurs</td>
+        </tr>
+        <tr>
+          <td>High-dose protocols</td>
+          <td>Up to 10,000mg</td>
+          <td>Only under clinical supervision</td>
+        </tr>
+        <tr>
+          <td>Elderly</td>
+          <td>1,000 - 2,000mg</td>
+          <td>May need more due to reduced absorption</td>
+        </tr>
+        <tr>
+          <td>Children</td>
+          <td>100 - 500mg</td>
+          <td>Age-dependent, pediatrician guidance</td>
+        </tr>
+      </table>
+
+      <p>The key principle with Vitamin C dosing: <strong>split your doses</strong>. Unlike fat-soluble vitamins, Vitamin C is water-soluble and clears the body relatively quickly. Taking your full daily dose in one go means your tissues are saturated for a few hours and then depleted. Two or three smaller doses spread through the day maintain more consistent blood and tissue levels.</p>
+
+      <h2>The Bowel Tolerance Principle</h2>
+
+      <p>One of the most reliable ways to find your optimal Vitamin C dose is called bowel tolerance - the dose at which loose stools begin to occur. This threshold rises dramatically during illness, stress, or oxidative challenge, because your body is consuming Vitamin C faster.</p>
+
+      <p>A healthy person at rest might reach bowel tolerance at 2-3g per day. The same person fighting an infection might tolerate 10-15g before any GI effects appear - because the body is using it that fast. This is not a precise clinical measure, but it is a useful practical guide for optimizing your personal dose.</p>
+
+      <div class="article-img">
+        <img src="/images/vitaminc-antioxidant.jpg" alt="Antioxidant defense - Vitamin C molecular action" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Cycling and Timing</h2>
+
+      <p>Vitamin C is safe for continuous daily use at normal doses. Some practitioners recommend optional microcycling - 5 days on, 2 days off - to prevent the body from downregulating its own ascorbic acid transporter expression. The evidence here is not conclusive, but the practice is harmless.</p>
+
+      <p>Liposomal forms can be taken once daily on an empty stomach for maximum absorption. Standard forms are best taken with food. Avoid combining high-dose Vitamin C with iron supplements if you do not need additional iron - Vitamin C significantly enhances non-heme iron absorption, which can be counterproductive in people with normal iron stores.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">⚠️ Important</div>
+        <p>If you have hemochromatosis or any condition involving iron overload, be cautious with high-dose Vitamin C - it substantially increases iron absorption and could worsen your condition. Similarly, high-dose ascorbic acid (not buffered forms) can increase oxalate production and raise kidney stone risk in susceptible individuals. Buffered or liposomal forms significantly reduce this risk.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="synergy-grid">
+        <div class="synergy-card">
+          <div class="icon">🌿</div>
+          <h4>Vitamin E</h4>
+          <p>Vitamin C regenerates oxidized Vitamin E. The antioxidant recycling partnership - take together for synergistic protection.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🦪</div>
+          <h4>Zinc</h4>
+          <p>Classic immune stack. Both support white blood cell function through complementary mechanisms. Strong combined effect against infection.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🌱</div>
+          <h4>Quercetin</h4>
+          <p>Quercetin acts as a zinc ionophore and has antiviral properties. Together with Vitamin C, forms a powerful immune and anti-inflammatory trio.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🔬</div>
+          <h4>Glutathione / NAC</h4>
+          <p>Vitamin C and glutathione mutually regenerate each other. NAC boosts glutathione production. The detox and redox triad.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🩸</div>
+          <h4>Iron (non-heme)</h4>
+          <p>Take Vitamin C with plant-based iron sources to dramatically improve absorption. Critical for vegetarians and vegans.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🧬</div>
+          <h4>Collagen Peptides</h4>
+          <p>Vitamin C is required for collagen synthesis. Taking them together maximizes the structural benefit for skin, joints and connective tissue.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">8/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Broad systemic antioxidant, collagen builder, immune modulator and antioxidant recycler. Underused at effective doses. One of the highest evidence-to-cost ratios in the entire supplement space.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Carr, A.C. & Maggini, S. (2017). Vitamin C and Immune Function. <em>Nutrients</em>, 9(11), 1211.</li>
+        <li>Padayatty, S.J. et al. (2004). Vitamin C as an Antioxidant: Evaluation of Its Role in Disease Prevention. <em>Journal of the American College of Nutrition</em>, 22(1), 18-35.</li>
+        <li>Pullar, J.M. et al. (2017). The Roles of Vitamin C in Skin Health. <em>Nutrients</em>, 9(8), 866.</li>
+        <li>Traber, M.G. & Stevens, J.F. (2011). Vitamins C and E: Beneficial effects from a mechanistic perspective. <em>Free Radical Biology and Medicine</em>, 51(5), 1000-1013.</li>
+      </ol>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/zinc-guide.html" class="related-card">
+          <div class="related-img c-zinc"><img src="/images/oysters-lemon.jpg" alt="Zinc" onerror="this.style.display='none'" /></div>
+          <div class="related-body"><span class="related-tag">Zinc</span><h4>Zinc: The Quiet Mineral That Keeps Everything Running</h4></div>
+        </a>
+        <a href="/articles/selenium-guide.html" class="related-card">
+          <div class="related-img c-sel"><img src="/images/thumb-selenium.jpg" alt="Selenium" onerror="this.style.display='none'" /></div>
+          <div class="related-body"><span class="related-tag">Selenium</span><h4>Selenium: The Tiny Mineral with Giant Anti-Aging Powers</h4></div>
+        </a>
+        <a href="/articles/nmn-supplements-guide.html" class="related-card">
+          <div class="related-img c-nmn"><img src="/images/thumb-nmn.jpg" alt="NMN" onerror="this.style.display='none'" /></div>
+          <div class="related-body"><span class="related-tag">NMN</span><h4>Why 64% of NMN Supplements Contain Zero Active Ingredient</h4></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>Vitamin C is part of the foundation. Get the full protocol with NMN, D3, Magnesium, Omega-3, dosing schedules and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/your-stack.html">Stack Builder</a>
+      <a href="/about.html">About</a>
+      <a href="https://alethiaresearch.gumroad.com">Shop</a>
+    </div>
+    <div>Stackofy &nbsp;|&nbsp; Alethia Research Institute &nbsp;|&nbsp; © 2026</div>
+    <div style="margin-top: 4px; font-size: 12px; color: #6B8A78;">Evidence-based. No pharma ties. No fluff.</div>
+  </footer>
+
+  <script>
+    function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+    function toggleDark() {
+      const body = document.body;
+      const btn = document.querySelector('.dark-toggle');
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.removeAttribute('data-theme'); btn.textContent = '🌙 Dark'; localStorage.setItem('theme', 'light');
+      } else {
+        body.setAttribute('data-theme', 'dark'); btn.textContent = '☀️ Light'; localStorage.setItem('theme', 'dark');
+      }
+    }
+    if (localStorage.getItem('theme') === 'dark') { document.body.setAttribute('data-theme', 'dark'); document.querySelector('.dark-toggle').textContent = '☀️ Light'; }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
