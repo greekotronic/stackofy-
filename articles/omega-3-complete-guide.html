@@ -355,8 +355,16 @@
         <a href="/about">About</a>
       </nav>
       <button class="dark-toggle" onclick="toggleDark()">🌙 Dark</button>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
   </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/" onclick="toggleMenu()">Home</a>
+    <a href="/articles.html" onclick="toggleMenu()">Articles</a>
+    <a href="/your-stack.html" onclick="toggleMenu()">Stack Builder</a>
+    <a href="/about.html" onclick="toggleMenu()">About</a>
+  </div>
 
   <div class="article-hero">
     <div class="hero-img">
