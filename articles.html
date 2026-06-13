@@ -403,6 +403,46 @@
 
     /* HIDDEN STATE */
     .article-card.hidden, .featured-article.hidden { display: none; }
+
+    /* MOBILE */
+    @media (max-width: 900px) {
+      .articles-grid { grid-template-columns: 1fr 1fr !important; }
+      .coming-soon-grid { grid-template-columns: 1fr 1fr !important; }
+      .featured-article { grid-template-columns: 1fr !important; }
+      .featured-img { height: 200px !important; }
+    }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem !important; height: 56px !important; }
+      nav { display: none !important; }
+      .nav-search { display: none !important; }
+      .dark-toggle { padding: 4px 8px !important; font-size: 12px !important; }
+
+      .articles-hero { height: 200px !important; }
+      .hero-text h1 { font-size: 1.4rem !important; }
+      .hero-text p { font-size: 13px !important; }
+      .hero-search { flex-direction: column !important; }
+      .hero-search input, .hero-search button { width: 100% !important; }
+
+      .main { padding: 1.25rem 1rem !important; }
+
+      .filter-bar { flex-direction: column !important; align-items: flex-start !important; }
+      .filter-pills { gap: 0.4rem !important; }
+      .pill { font-size: 12px !important; padding: 5px 10px !important; }
+
+      .featured-article { grid-template-columns: 1fr !important; }
+      .featured-img { height: 180px !important; font-size: 50px !important; }
+      .featured-body { padding: 1.25rem !important; }
+      .featured-body h2 { font-size: 1.1rem !important; }
+
+      .articles-grid { grid-template-columns: 1fr !important; }
+      .card-img { height: 160px !important; }
+      .article-card h3 { font-size: 14px !important; }
+
+      .coming-soon-grid { grid-template-columns: 1fr 1fr !important; }
+
+      .footer-links { gap: 0.75rem !important; flex-wrap: wrap !important; font-size: 12px !important; }
+    }
   </style>
 </head>
 <body>
@@ -527,33 +567,7 @@
           <p>Subtle deficiency quietly erodes immunity, testosterone and mental sharpness.</p>
         </div>
       </a>
-<a href="/articles/selenium-guide.html" class="article-card" data-tags="longevity immune" data-title="Selenium Tiny Mineral Giant Anti-Aging Powers">
-        <div class="card-img c-zinc">
-          <img src="/images/hero-selenium.jpg" alt="Selenium" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'" />
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="article-tag">Selenium</span>
-            <span class="read-time">8 min</span>
-          </div>
-          <h3>Selenium: The Tiny Mineral with Giant Anti-Aging Powers</h3>
-          <p>Cofactor in your master antioxidant enzyme. Supports thyroid, immune function and DNA repair.</p>
-        </div>
-      </a>
 
-      <a href="/articles/coq10-guide.html" class="article-card" data-tags="longevity energy performance" data-title="CoQ10 Spark Plug Every Cell Body">
-        <div class="card-img c-nmn">
-          <img src="/images/hero-coq10.jpg" alt="CoQ10" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'" />
-        </div>
-        <div class="card-body">
-          <div class="card-meta">
-            <span class="article-tag">CoQ10</span>
-            <span class="read-time">8 min</span>
-          </div>
-          <h3>CoQ10: The Spark Plug for Every Cell in Your Body</h3>
-          <p>Mitochondrial energy declines after 40. Essential if you take statins. Ubiquinol is the active form.</p>
-        </div>
-      </a>
     </div>
 
     <!-- COMING SOON -->
