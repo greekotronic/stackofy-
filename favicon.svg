@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#1B4332"/>
+
+  <g transform="translate(1.5,0)">
+    <!-- CAPSULE 1 - top - gold -->
+    <path d="M21,8.5 h11 v11 h-11 a5.5,5.5 0 0 1 0,-11 z" fill="#D4A853"/>
+    <path d="M32,9.5 h9 a4.5,4.5 0 0 1 0,9 h-9 z" fill="#D4A853"/>
+
+    <!-- CAPSULE 2 - middle - mint - rotated 37deg -->
+    <g transform="rotate(37 32 33.6)">
+      <path d="M21,28.1 h11 v11 h-11 a5.5,5.5 0 0 1 0,-11 z" fill="#95D5B2"/>
+      <path d="M32,29.1 h9 a4.5,4.5 0 0 1 0,9 h-9 z" fill="#95D5B2"/>
+    </g>
+
+    <!-- CAPSULE 3 - bottom - gold -->
+    <path d="M21,44.5 h11 v11 h-11 a5.5,5.5 0 0 1 0,-11 z" fill="#D4A853"/>
+    <path d="M32,45.5 h9 a4.5,4.5 0 0 1 0,9 h-9 z" fill="#D4A853"/>
+  </g>
+</svg>
