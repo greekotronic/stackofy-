@@ -6,10 +6,9 @@
   <title>Stackofy - Evidence-Based Supplement Stacks</title>
   <meta name="description" content="Evidence-based supplement stacks for longevity, energy and performance. Independent research. No pharma ties. No fluff." />
   <meta property="og:title" content="Stackofy - Evidence-Based Supplement Stacks" />
-  <meta property="og:description" content="Independent research on longevity supplements, dosing protocols, and what actually works. No pharma ties. No fluff." />
+  <meta property="og:description" content="Independent research on longevity supplements, dosing protocols, and what actually works." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://stackofy.com" />
-  <meta property="og:image" content="https://stackofy.com/images/og-image.jpg" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <style>
     :root {
@@ -23,9 +22,11 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; transition: background 0.3s, color 0.3s; }
     a { text-decoration: none; color: inherit; }
+    img { display: block; }
 
+    /* HEADER */
     header { background: var(--gradient); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
-    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; letter-spacing: -0.3px; }
+    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
     .logo-icon { display: flex; flex-direction: column; gap: 3px; }
     .capsule { height: 7px; border-radius: 4px; }
     .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
@@ -40,11 +41,11 @@
     .dark-toggle { background: rgba(255,255,255,0.15); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 12px; cursor: pointer; color: #FAF8F4; font-size: 13px; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
     .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
-    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; gap: 0; }
+    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; }
     .mobile-menu.open { display: flex !important; }
     .mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
-    .mobile-menu a:last-child { border-bottom: none; }
 
+    /* HERO */
     .hero { background: var(--gradient); padding: 3.5rem 2rem 2.5rem; text-align: center; }
     .hero h1 { color: #FAF8F4; font-size: 2rem; font-weight: 700; margin-bottom: 0.6rem; letter-spacing: -0.5px; max-width: 640px; margin-left: auto; margin-right: auto; }
     .hero p { color: var(--green-light); font-size: 15px; margin-bottom: 1.8rem; }
@@ -56,70 +57,82 @@
     .cat-pill { background: rgba(255,255,255,0.1); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 6px 14px; color: #FAF8F4; font-size: 13px; cursor: pointer; transition: background 0.2s; }
     .cat-pill:hover { background: rgba(255,255,255,0.2); }
 
+    /* LAYOUT */
     .main { max-width: 1040px; margin: 0 auto; padding: 2.5rem 2rem; }
-
     .section-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
-    .section-title { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 1.25rem; }
     .section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 1.25rem; }
-    .section-header .section-title { margin-bottom: 0; }
+    .section-title { font-size: 20px; font-weight: 700; color: var(--text); }
     .see-all { font-size: 13px; color: var(--green-dark); font-weight: 600; }
     .see-all:hover { color: var(--gold); }
+    .divider { height: 1px; background: var(--border); margin: 3rem 0; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; cursor: pointer; display: inline-block; }
 
-    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; cursor: pointer; display: inline-block; transition: opacity 0.2s; }
-    .btn-gold:hover { opacity: 0.9; }
-
+    /* QUIZ BANNER TOP */
     .quiz-banner { background: var(--gradient); border-radius: var(--radius); padding: 1.75rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 3rem; }
     .quiz-banner h3 { color: #FAF8F4; font-size: 17px; font-weight: 600; margin-bottom: 4px; }
     .quiz-banner p { color: var(--green-light); font-size: 13px; }
 
-    .featured-article { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: grid; grid-template-columns: 1fr 1.3fr; margin-bottom: 3rem; transition: border-color 0.2s, transform 0.2s; }
-    .featured-article:hover { border-color: var(--green-dark); transform: translateY(-2px); }
-    .featured-img { height: 280px; overflow: hidden; }
-    .featured-img img { width: 100%; height: 100%; object-fit: cover; }
-    .featured-img-bg { width: 100%; height: 100%; background: linear-gradient(135deg, #1B4332, #2D6A4F); }
-    .featured-body { padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
-    .featured-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.6rem; }
-    .article-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
-    .featured-body h2 { font-size: 1.4rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem; line-height: 1.4; }
-    .featured-body p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; }
-    .read-link { font-size: 13px; font-weight: 600; color: var(--green-dark); }
-    .read-link:hover { color: var(--gold); }
+    /* FEATURED ARTICLE - LARGE */
+    .featured-xl { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: grid; grid-template-columns: 1.1fr 1fr; margin-bottom: 1rem; transition: border-color 0.2s, transform 0.2s; }
+    .featured-xl:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .featured-xl-img { height: 340px; overflow: hidden; }
+    .featured-xl-img img { width: 100%; height: 100%; object-fit: cover; }
+    .featured-xl-body { padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; }
+    .featured-xl-body .article-tag { margin-bottom: 0.75rem; }
+    .featured-xl-body h2 { font-size: 1.6rem; font-weight: 700; color: var(--text); margin-bottom: 1rem; line-height: 1.35; }
+    .featured-xl-body p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+    .featured-xl-body .read-link { font-size: 14px; font-weight: 600; color: var(--green-dark); }
+    .featured-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
 
-    .articles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 3rem; }
-    .article-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; cursor: pointer; transition: border-color 0.2s, transform 0.2s; }
+    /* ARTICLE TAG */
+    .article-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 3px 8px; border-radius: 4px; display: inline-block; }
+
+    /* 4-GRID CARDS */
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .article-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
     .article-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
-    .card-img { height: 120px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .card-img { height: 120px; overflow: hidden; }
     .card-img img { width: 100%; height: 100%; object-fit: cover; }
-    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
-    .c-omega { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
-    .c-vitd { background: linear-gradient(135deg, #7A5C10, #D4A853); }
-    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
-    .c-zinc { background: linear-gradient(135deg, #1a3a2a, #2D6A4F); }
-    .c-sel { background: linear-gradient(135deg, #2C1A0E, #5C3A1E); }
-    .c-coq { background: linear-gradient(135deg, #1a0a00, #5C3A00); }
+    .card-img-bg { width: 100%; height: 100%; }
     .card-body { padding: 1rem; }
-    .article-card h3 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; line-height: 1.4; }
-    .article-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+    .card-body h3 { font-size: 13px; font-weight: 600; color: var(--text); margin: 0.4rem 0; line-height: 1.4; }
+    .card-body p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
 
-    .cat-section { margin-bottom: 3rem; }
-    .cat-articles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .cat-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: flex; gap: 1rem; padding: 1rem; align-items: center; transition: border-color 0.2s; }
-    .cat-card:hover { border-color: var(--green-dark); }
-    .cat-card-img { width: 72px; height: 72px; border-radius: var(--radius-sm); flex-shrink: 0; overflow: hidden; }
-    .cat-card-img img { width: 100%; height: 100%; object-fit: cover; }
-    .cat-card-img-bg { width: 100%; height: 100%; }
-    .cat-card h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 3px; line-height: 1.4; }
-    .cat-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+    /* HORIZONTAL ARTICLE CARDS */
+    .h-article { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: flex; gap: 0; transition: border-color 0.2s, transform 0.2s; }
+    .h-article:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .h-article-img { width: 160px; flex-shrink: 0; overflow: hidden; }
+    .h-article-img img { width: 100%; height: 100%; object-fit: cover; }
+    .h-article-img-bg { width: 100%; height: 100%; }
+    .h-article-body { padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; }
+    .h-article-body h3 { font-size: 14px; font-weight: 600; color: var(--text); margin: 0.4rem 0; line-height: 1.4; }
+    .h-article-body p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-top: 0.4rem; }
+    .h-article-body .read-time { font-size: 11px; color: var(--text-muted); margin-top: 0.5rem; }
 
-    .trust-bar { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.5rem 2rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 3rem; text-align: center; }
+    /* SPOTLIGHT BANNER */
+    .spotlight { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: grid; grid-template-columns: 1fr 1.6fr; margin-bottom: 1rem; transition: border-color 0.2s; }
+    .spotlight:hover { border-color: var(--green-dark); }
+    .spotlight-img { overflow: hidden; min-height: 240px; }
+    .spotlight-img img { width: 100%; height: 100%; object-fit: cover; }
+    .spotlight-body { padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+    .spotlight-quote { font-size: 1.1rem; font-style: italic; color: var(--text); line-height: 1.6; margin: 0.75rem 0 1.25rem; padding-left: 1rem; border-left: 3px solid var(--gold); }
+    .spotlight-body h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+    .spotlight-body p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem; }
+
+    /* TRUST BAR */
+    .trust-bar { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.5rem 2rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; }
     .trust-num { font-size: 26px; font-weight: 700; color: var(--green-dark); }
     .trust-label { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
 
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-bottom: 3rem; }
+    /* STACKS + REC */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
     .stack-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    .stack-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; cursor: pointer; transition: border-color 0.2s, transform 0.2s; }
+    .stack-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
     .stack-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
-    .stack-img { height: 80px; display: flex; align-items: center; justify-content: center; }
+    .stack-img { height: 80px; }
     .s1 { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
     .s2 { background: linear-gradient(135deg, #7A5C10, #D4A853); }
     .s3 { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
@@ -128,11 +141,10 @@
     .stack-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
     .stack-card h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
     .stack-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
-
     .rec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
-    .rec-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; cursor: pointer; transition: border-color 0.2s, transform 0.2s; }
+    .rec-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
     .rec-card:hover { border-color: var(--gold); transform: translateY(-2px); }
-    .rec-img { height: 80px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .rec-img { height: 80px; overflow: hidden; }
     .rec-img img { width: 100%; height: 100%; object-fit: cover; }
     .r1 { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
     .r2 { background: linear-gradient(135deg, #7A5C10, #B8860B); }
@@ -143,29 +155,50 @@
     .rec-card h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
     .rec-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
 
-    .ari-block { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; display: flex; gap: 1.5rem; align-items: center; margin-bottom: 3rem; }
+    /* ARI */
+    .ari-block { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; display: flex; gap: 1.5rem; align-items: center; }
     .ari-logo { width: 60px; height: 60px; border-radius: var(--radius-sm); background: var(--gradient); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 28px; }
     .ari-block h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
     .ari-block p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
-    .quiz-bottom { background: var(--gradient); border-radius: var(--radius); padding: 3rem 2rem; text-align: center; margin-bottom: 3rem; }
-    .quiz-bottom h2 { color: #FAF8F4; font-size: 1.6rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: -0.3px; }
+    /* QUIZ BOTTOM */
+    .quiz-bottom { background: var(--gradient); border-radius: var(--radius); padding: 3.5rem 2rem; text-align: center; }
+    .quiz-bottom h2 { color: #FAF8F4; font-size: 1.8rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: -0.3px; }
     .quiz-bottom p { color: var(--green-light); font-size: 15px; max-width: 520px; margin: 0 auto 1.75rem; line-height: 1.7; }
 
-    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin-bottom: 3rem; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    /* DISCLAIMER */
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
     .disclaimer strong { color: var(--text); }
 
-    footer { background: var(--gradient); color: var(--green-light); text-align: center; padding: 2rem; font-size: 13px; line-height: 2; }
+    /* COLOR CLASSES */
+    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .c-omega { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
+    .c-vitd { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+    .c-zinc { background: linear-gradient(135deg, #1a3a2a, #2D6A4F); }
+    .c-sel { background: linear-gradient(135deg, #2C1A0E, #5C3A1E); }
+    .c-coq { background: linear-gradient(135deg, #1a0a00, #5C3A00); }
+
+    /* FOOTER */
+    footer { background: var(--gradient); color: var(--green-light); text-align: center; padding: 2rem; font-size: 13px; line-height: 2; margin-top: 3rem; }
     .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 0.5rem; }
     .footer-links a { color: var(--green-light); font-size: 13px; }
     .footer-links a:hover { color: #FAF8F4; }
 
+    /* SPACING */
+    .mb3 { margin-bottom: 3rem; }
+    .mb15 { margin-bottom: 1.5rem; }
+    .mt3 { margin-top: 3rem; }
+
+    /* MOBILE */
     @media (max-width: 900px) {
-      .articles-grid { grid-template-columns: 1fr 1fr !important; }
-      .cat-articles { grid-template-columns: 1fr 1fr !important; }
+      .grid-4 { grid-template-columns: 1fr 1fr !important; }
+      .grid-3 { grid-template-columns: 1fr 1fr !important; }
+      .featured-xl { grid-template-columns: 1fr !important; }
+      .featured-xl-img { height: 220px !important; }
+      .spotlight { grid-template-columns: 1fr !important; }
+      .spotlight-img { min-height: 180px !important; }
       .two-col { grid-template-columns: 1fr !important; }
-      .featured-article { grid-template-columns: 1fr !important; }
-      .featured-img { height: 200px !important; }
     }
     @media (max-width: 600px) {
       header { padding: 0 1rem !important; height: 56px !important; }
@@ -177,13 +210,12 @@
       .hero h1 { font-size: 1.3rem !important; }
       .search-bar { flex-direction: column !important; }
       .search-bar input, .search-bar button { width: 100% !important; }
-      .categories { gap: 0.4rem !important; }
-      .cat-pill { font-size: 11px !important; padding: 4px 9px !important; }
       .main { padding: 1.25rem 1rem !important; }
       .quiz-banner { flex-direction: column !important; text-align: center !important; gap: 1rem !important; }
       .btn-gold { width: 100% !important; }
-      .articles-grid { grid-template-columns: 1fr !important; }
-      .cat-articles { grid-template-columns: 1fr !important; }
+      .grid-4, .grid-3 { grid-template-columns: 1fr !important; }
+      .grid-2 { grid-template-columns: 1fr !important; }
+      .h-article-img { width: 100px !important; }
       .trust-bar { grid-template-columns: 1fr 1fr !important; padding: 1rem !important; }
       .stack-grid { grid-template-columns: 1fr !important; }
       .rec-grid { grid-template-columns: 1fr !important; }
@@ -198,9 +230,7 @@
   <header>
     <a class="logo" href="/">
       <div class="logo-icon">
-        <div class="capsule"></div>
-        <div class="capsule"></div>
-        <div class="capsule"></div>
+        <div class="capsule"></div><div class="capsule"></div><div class="capsule"></div>
       </div>
       Stackofy
     </a>
@@ -247,7 +277,7 @@
   <div class="main">
 
     <!-- QUIZ BANNER TOP -->
-    <div class="quiz-banner">
+    <div class="quiz-banner mb3">
       <div>
         <h3>Find your perfect supplement stack</h3>
         <p>Answer a few questions about your lifestyle and goals. Get a personalized protocol in 2 minutes.</p>
@@ -255,171 +285,158 @@
       <a href="/your-stack.html" class="btn-gold">Start Stack Builder →</a>
     </div>
 
-    <!-- FEATURED ARTICLE -->
+    <!-- FEATURED ARTICLE XL -->
     <div class="section-label">Editor's Pick</div>
-    <div class="section-header">
+    <div class="section-header mb15">
       <div class="section-title">Featured Article</div>
       <a href="/articles.html" class="see-all">See all articles →</a>
     </div>
-    <a href="/articles/nmn-supplements-guide.html" class="featured-article">
-      <div class="featured-img">
-        <img src="/images/thumb-nmn.jpg" alt="NMN Supplements" onerror="this.parentElement.innerHTML='<div class=\'featured-img-bg\'></div>'" />
+    <a href="/articles/nmn-supplements-guide.html" class="featured-xl mb3">
+      <div class="featured-xl-img">
+        <img src="/images/thumb-nmn.jpg" alt="NMN Supplements" onerror="this.parentElement.className+=' c-nmn'" />
       </div>
-      <div class="featured-body">
-        <div class="featured-label">Most Read</div>
+      <div class="featured-xl-body">
+        <div class="featured-label">Most Read - 10 min</div>
         <span class="article-tag">NMN - Longevity</span>
         <h2>Why 64% of NMN Supplements Contain Zero Active Ingredient</h2>
-        <p>Independent lab tests exposed the NMN market. Most people who tried NMN and felt nothing were let down by the product - not their biology. Here is how to spot the real ones in 90 seconds.</p>
-        <span class="read-link">Read article →</span>
+        <p>Independent lab tests exposed the NMN market. Most people who tried NMN and felt nothing were let down by the product - not their biology. Here is how to spot the real ones in 90 seconds - and what to look for in a COA, a GMP certificate, and a price tag that makes sense.</p>
+        <span class="read-link">Read the full investigation →</span>
       </div>
     </a>
 
-    <!-- LATEST ARTICLES -->
+    <!-- LATEST 4 CARDS -->
     <div class="section-label">What's New</div>
-    <div class="section-header">
+    <div class="section-header mb15">
       <div class="section-title">Latest Articles</div>
       <a href="/articles.html" class="see-all">See all →</a>
     </div>
-    <div class="articles-grid" style="margin-bottom:3rem;">
-      <a href="/articles/omega-3-complete-guide.html" class="article-card">
-        <div class="card-img c-omega"><img src="/images/omega-3-capsules-moss.jpg" alt="Omega-3" onerror="this.style.display='none'" /></div>
-        <div class="card-body">
-          <span class="article-tag">Omega-3</span>
-          <h3>Omega-3: The One Supplement Almost Everyone Is Taking Wrong</h3>
-          <p>Form matters more than dose. Most cheap fish oil fails before it reaches you.</p>
-        </div>
-      </a>
-      <a href="/articles/vitamin-d3-k2-guide.html" class="article-card">
-        <div class="card-img c-vitd"><img src="/images/old-hand-young-hand.jpg" alt="Vitamin D3" onerror="this.style.display='none'" /></div>
-        <div class="card-body">
-          <span class="article-tag">Vitamin D3</span>
-          <h3>Vitamin D3 + K2: The Cheapest Longevity Insurance</h3>
-          <p>Most adults are chronically deficient. Here is what the research says.</p>
-        </div>
+    <div class="grid-4 mb3">
+      <a href="/articles/coq10-guide.html" class="article-card">
+        <div class="card-img"><img src="/images/hero-coq10.jpg" alt="CoQ10" onerror="this.parentElement.className+=' c-coq'" /></div>
+        <div class="card-body"><span class="article-tag">CoQ10</span><h3>CoQ10: The Spark Plug for Every Cell in Your Body</h3><p>Mitochondrial energy declines after 40. Essential if you take statins.</p></div>
       </a>
       <a href="/articles/selenium-guide.html" class="article-card">
-        <div class="card-img c-sel"><img src="/images/thumb-selenium.jpg" alt="Selenium" onerror="this.style.display='none'" /></div>
-        <div class="card-body">
-          <span class="article-tag">Selenium</span>
-          <h3>Selenium: The Tiny Mineral with Giant Anti-Aging Powers</h3>
-          <p>Cofactor in your master antioxidant enzyme. Supports thyroid and DNA repair.</p>
-        </div>
+        <div class="card-img"><img src="/images/thumb-selenium.jpg" alt="Selenium" onerror="this.parentElement.className+=' c-sel'" /></div>
+        <div class="card-body"><span class="article-tag">Selenium</span><h3>Selenium: The Tiny Mineral with Giant Anti-Aging Powers</h3><p>Cofactor in your master antioxidant enzyme. Supports thyroid and DNA repair.</p></div>
       </a>
-      <a href="/articles/coq10-guide.html" class="article-card">
-        <div class="card-img c-coq"><img src="/images/hero-coq10.jpg" alt="CoQ10" onerror="this.style.display='none'" /></div>
-        <div class="card-body">
-          <span class="article-tag">CoQ10</span>
-          <h3>CoQ10: The Spark Plug for Every Cell in Your Body</h3>
-          <p>Mitochondrial energy declines after 40. Essential if you take statins.</p>
-        </div>
+      <a href="/articles/zinc-guide.html" class="article-card">
+        <div class="card-img"><img src="/images/oysters-lemon.jpg" alt="Zinc" onerror="this.parentElement.className+=' c-zinc'" /></div>
+        <div class="card-body"><span class="article-tag">Zinc</span><h3>Zinc: The Quiet Mineral That Keeps Everything Running</h3><p>Subtle deficiency quietly erodes immunity, testosterone and mental sharpness.</p></div>
+      </a>
+      <a href="/articles/magnesium-guide.html" class="article-card">
+        <div class="card-img"><img src="/images/white-powder-capsules-on-moss.jpg" alt="Magnesium" onerror="this.parentElement.className+=' c-mag'" /></div>
+        <div class="card-body"><span class="article-tag">Magnesium</span><h3>Magnesium: The Master Mineral That Everyone's Missing</h3><p>Involved in 300+ enzyme reactions. Most people are deficient.</p></div>
       </a>
     </div>
 
+    <div class="divider"></div>
+
     <!-- TRUST BAR -->
-    <div class="trust-bar">
+    <div class="trust-bar mb3">
       <div><div class="trust-num">12,400+</div><div class="trust-label">Monthly Readers</div></div>
       <div><div class="trust-num">100%</div><div class="trust-label">Independent Research</div></div>
       <div><div class="trust-num">0</div><div class="trust-label">Pharma Sponsors</div></div>
       <div><div class="trust-num">7</div><div class="trust-label">In-Depth Guides</div></div>
     </div>
 
-    <!-- LONGEVITY SECTION -->
-    <div class="cat-section">
-      <div class="section-label">Deep Dive</div>
-      <div class="section-header">
-        <div class="section-title">Longevity Essentials</div>
-        <a href="/articles.html" class="see-all">See all →</a>
-      </div>
-      <div class="cat-articles">
-        <a href="/articles/nmn-supplements-guide.html" class="cat-card">
-          <div class="cat-card-img"><img src="/images/thumb-nmn.jpg" alt="NMN" onerror="this.parentElement.innerHTML='<div class=\'cat-card-img-bg c-nmn\'></div>'" /></div>
-          <div>
-            <span class="article-tag">NMN</span>
-            <h4>Why 64% of NMN Supplements Contain Zero Active Ingredient</h4>
-            <p>10 min read</p>
-          </div>
-        </a>
-        <a href="/articles/coq10-guide.html" class="cat-card">
-          <div class="cat-card-img"><img src="/images/hero-coq10.jpg" alt="CoQ10" onerror="this.parentElement.innerHTML='<div class=\'cat-card-img-bg c-coq\'></div>'" /></div>
-          <div>
-            <span class="article-tag">CoQ10</span>
-            <h4>CoQ10: The Spark Plug for Every Cell in Your Body</h4>
-            <p>8 min read</p>
-          </div>
-        </a>
-        <a href="/articles/vitamin-d3-k2-guide.html" class="cat-card">
-          <div class="cat-card-img"><img src="/images/old-hand-young-hand.jpg" alt="D3" onerror="this.parentElement.innerHTML='<div class=\'cat-card-img-bg c-vitd\'></div>'" /></div>
-          <div>
-            <span class="article-tag">Vitamin D3</span>
-            <h4>Vitamin D3 + K2: The Cheapest Longevity Insurance</h4>
-            <p>9 min read</p>
-          </div>
-        </a>
-      </div>
+    <div class="divider"></div>
+
+    <!-- LONGEVITY SECTION - 3 HORIZONTAL -->
+    <div class="section-label">Deep Dive</div>
+    <div class="section-header mb15">
+      <div class="section-title">Longevity Essentials</div>
+      <a href="/articles.html" class="see-all">See all →</a>
+    </div>
+    <div class="grid-3 mb3">
+      <a href="/articles/nmn-supplements-guide.html" class="h-article">
+        <div class="h-article-img"><img src="/images/thumb-nmn.jpg" alt="NMN" onerror="this.parentElement.className+=' c-nmn'" /></div>
+        <div class="h-article-body"><span class="article-tag">NMN</span><h3>Why 64% of NMN Supplements Contain Zero Active Ingredient</h3><p>How to spot real NMN in 90 seconds.</p><span class="read-time">10 min read</span></div>
+      </a>
+      <a href="/articles/coq10-guide.html" class="h-article">
+        <div class="h-article-img"><img src="/images/hero-coq10.jpg" alt="CoQ10" onerror="this.parentElement.className+=' c-coq'" /></div>
+        <div class="h-article-body"><span class="article-tag">CoQ10</span><h3>CoQ10: The Spark Plug for Every Cell in Your Body</h3><p>Why ubiquinol matters after 40.</p><span class="read-time">8 min read</span></div>
+      </a>
+      <a href="/articles/vitamin-d3-k2-guide.html" class="h-article">
+        <div class="h-article-img"><img src="/images/old-hand-young-hand.jpg" alt="D3" onerror="this.parentElement.className+=' c-vitd'" /></div>
+        <div class="h-article-body"><span class="article-tag">Vitamin D3</span><h3>Vitamin D3 + K2: The Cheapest Longevity Insurance</h3><p>Most adults are chronically deficient.</p><span class="read-time">9 min read</span></div>
+      </a>
     </div>
 
-    <!-- FOUNDATION SECTION -->
-    <div class="cat-section">
-      <div class="section-label">Start Here</div>
-      <div class="section-header">
-        <div class="section-title">The Foundation Stack</div>
-        <a href="/articles.html" class="see-all">See all →</a>
-      </div>
-      <div class="cat-articles">
-        <a href="/articles/magnesium-guide.html" class="cat-card">
-          <div class="cat-card-img"><img src="/images/white-powder-capsules-on-moss.jpg" alt="Magnesium" onerror="this.parentElement.innerHTML='<div class=\'cat-card-img-bg c-mag\'></div>'" /></div>
-          <div>
-            <span class="article-tag">Magnesium</span>
-            <h4>Magnesium: The Master Mineral That Everyone's Missing</h4>
-            <p>9 min read</p>
-          </div>
-        </a>
-        <a href="/articles/omega-3-complete-guide.html" class="cat-card">
-          <div class="cat-card-img"><img src="/images/omega-3-capsules-moss.jpg" alt="Omega-3" onerror="this.parentElement.innerHTML='<div class=\'cat-card-img-bg c-omega\'></div>'" /></div>
-          <div>
-            <span class="article-tag">Omega-3</span>
-            <h4>Omega-3: The One Supplement Almost Everyone Is Taking Wrong</h4>
-            <p>8 min read</p>
-          </div>
-        </a>
-        <a href="/articles/zinc-guide.html" class="cat-card">
-          <div class="cat-card-img"><img src="/images/oysters-lemon.jpg" alt="Zinc" onerror="this.parentElement.innerHTML='<div class=\'cat-card-img-bg c-zinc\'></div>'" /></div>
-          <div>
-            <span class="article-tag">Zinc</span>
-            <h4>Zinc: The Quiet Mineral That Keeps Everything Running</h4>
-            <p>8 min read</p>
-          </div>
-        </a>
-      </div>
+    <!-- SPOTLIGHT: OMEGA-3 -->
+    <div class="section-label">Spotlight</div>
+    <div class="section-header mb15">
+      <div class="section-title">This Week's Deep Read</div>
     </div>
+    <a href="/articles/omega-3-complete-guide.html" class="spotlight mb3">
+      <div class="spotlight-img">
+        <img src="/images/omega-3-capsules-moss.jpg" alt="Omega-3" onerror="this.parentElement.className+=' c-omega'" />
+      </div>
+      <div class="spotlight-body">
+        <span class="article-tag">Omega-3 - Foundation</span>
+        <blockquote class="spotlight-quote">"Form matters more than dose. Most cheap fish oil fails before it reaches you."</blockquote>
+        <h3>Omega-3: The One Supplement Almost Everyone Is Taking Wrong</h3>
+        <p>Ethyl ester vs triglyceride form. IFOS certification. Algae oil vs fish oil. Why the capsule you've been taking for years might be delivering a fraction of what's on the label - and how to fix it in one decision.</p>
+        <span class="read-link" style="color:var(--green-dark);font-weight:600;font-size:13px;">Read the full guide →</span>
+      </div>
+    </a>
+
+    <div class="divider"></div>
+
+    <!-- FOUNDATION STACK - 3 HORIZONTAL -->
+    <div class="section-label">Start Here</div>
+    <div class="section-header mb15">
+      <div class="section-title">The Foundation Stack</div>
+      <a href="/articles.html" class="see-all">See all →</a>
+    </div>
+    <div class="grid-3 mb3">
+      <a href="/articles/magnesium-guide.html" class="h-article">
+        <div class="h-article-img"><img src="/images/white-powder-capsules-on-moss.jpg" alt="Magnesium" onerror="this.parentElement.className+=' c-mag'" /></div>
+        <div class="h-article-body"><span class="article-tag">Magnesium</span><h3>Magnesium: The Master Mineral That Everyone's Missing</h3><p>300+ enzyme reactions depend on it.</p><span class="read-time">9 min read</span></div>
+      </a>
+      <a href="/articles/omega-3-complete-guide.html" class="h-article">
+        <div class="h-article-img"><img src="/images/omega-3-capsules-moss.jpg" alt="Omega-3" onerror="this.parentElement.className+=' c-omega'" /></div>
+        <div class="h-article-body"><span class="article-tag">Omega-3</span><h3>Omega-3: The One Supplement Almost Everyone Is Taking Wrong</h3><p>Triglyceride form only. Here's why.</p><span class="read-time">8 min read</span></div>
+      </a>
+      <a href="/articles/vitamin-d3-k2-guide.html" class="h-article">
+        <div class="h-article-img"><img src="/images/old-hand-young-hand.jpg" alt="D3" onerror="this.parentElement.className+=' c-vitd'" /></div>
+        <div class="h-article-body"><span class="article-tag">Vitamin D3</span><h3>Vitamin D3 + K2: The Cheapest Longevity Insurance</h3><p>Why they always go together.</p><span class="read-time">9 min read</span></div>
+      </a>
+    </div>
+
+    <!-- IMMUNE & DEFENSE - 2 HORIZONTAL -->
+    <div class="section-label">Immunity</div>
+    <div class="section-header mb15">
+      <div class="section-title">Immune & Defense</div>
+      <a href="/articles.html" class="see-all">See all →</a>
+    </div>
+    <div class="grid-2 mb3">
+      <a href="/articles/zinc-guide.html" class="h-article">
+        <div class="h-article-img" style="width:180px;"><img src="/images/oysters-lemon.jpg" alt="Zinc" onerror="this.parentElement.className+=' c-zinc'" /></div>
+        <div class="h-article-body"><span class="article-tag">Zinc</span><h3>Zinc: The Quiet Mineral That Keeps Everything Running</h3><p>Immunity, testosterone, DNA repair - and why the form you choose matters.</p><span class="read-time">8 min read</span></div>
+      </a>
+      <a href="/articles/selenium-guide.html" class="h-article">
+        <div class="h-article-img" style="width:180px;"><img src="/images/thumb-selenium.jpg" alt="Selenium" onerror="this.parentElement.className+=' c-sel'" /></div>
+        <div class="h-article-body"><span class="article-tag">Selenium</span><h3>Selenium: The Tiny Mineral with Giant Anti-Aging Powers</h3><p>The Goldilocks nutrient - too little and too much are both problems.</p><span class="read-time">8 min read</span></div>
+      </a>
+    </div>
+
+    <div class="divider"></div>
 
     <!-- POPULAR STACKS + RECOMMENDED -->
-    <div class="two-col">
+    <div class="two-col mb3">
       <div>
         <div class="section-label">Curated</div>
-        <div class="section-title">Popular Stacks</div>
+        <div class="section-header mb15"><div class="section-title">Popular Stacks</div></div>
         <div class="stack-grid">
-          <div class="stack-card">
-            <div class="stack-img s1"></div>
-            <div class="stack-body"><div class="stack-label">Most Popular</div><h4>The Foundation Stack</h4><p>D3 + K2, Magnesium, Omega-3</p></div>
-          </div>
-          <div class="stack-card">
-            <div class="stack-img s2"></div>
-            <div class="stack-body"><div class="stack-label">Longevity</div><h4>The Anti-Aging Stack</h4><p>NMN, Resveratrol, TMG, CoQ10</p></div>
-          </div>
-          <div class="stack-card">
-            <div class="stack-img s3"></div>
-            <div class="stack-body"><div class="stack-label">Sleep</div><h4>The Sleep Stack</h4><p>Magnesium Glycinate, Ashwagandha, L-Theanine</p></div>
-          </div>
-          <div class="stack-card">
-            <div class="stack-img s4"></div>
-            <div class="stack-body"><div class="stack-label">Cognitive</div><h4>The Brain Stack</h4><p>Omega-3, Lions Mane, CDP-Choline</p></div>
-          </div>
+          <div class="stack-card"><div class="stack-img s1"></div><div class="stack-body"><div class="stack-label">Most Popular</div><h4>The Foundation Stack</h4><p>D3 + K2, Magnesium, Omega-3</p></div></div>
+          <div class="stack-card"><div class="stack-img s2"></div><div class="stack-body"><div class="stack-label">Longevity</div><h4>The Anti-Aging Stack</h4><p>NMN, Resveratrol, TMG, CoQ10</p></div></div>
+          <div class="stack-card"><div class="stack-img s3"></div><div class="stack-body"><div class="stack-label">Sleep</div><h4>The Sleep Stack</h4><p>Magnesium Glycinate, Ashwagandha, L-Theanine</p></div></div>
+          <div class="stack-card"><div class="stack-img s4"></div><div class="stack-body"><div class="stack-label">Cognitive</div><h4>The Brain Stack</h4><p>Omega-3, Lions Mane, CDP-Choline</p></div></div>
         </div>
       </div>
       <div>
         <div class="section-label">From ARI</div>
-        <div class="section-title">Recommended</div>
+        <div class="section-header mb15"><div class="section-title">Recommended</div></div>
         <div class="rec-grid">
           <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="rec-card">
             <div class="rec-img r1"><img src="/images/nmn-guide-cover.jpg" alt="NMN Guide" onerror="this.style.display='none'" /></div>
@@ -441,8 +458,10 @@
       </div>
     </div>
 
+    <div class="divider"></div>
+
     <!-- ARI BLOCK -->
-    <div class="ari-block">
+    <div class="ari-block mb3">
       <div class="ari-logo">🔬</div>
       <div>
         <h3>About Alethia Research Institute</h3>
@@ -451,9 +470,9 @@
     </div>
 
     <!-- QUIZ BOTTOM -->
-    <div class="quiz-bottom">
+    <div class="quiz-bottom mb3">
       <h2>Still not sure where to start?</h2>
-      <p>Most people are overwhelmed by supplements. Hundreds of products. Conflicting advice. YOUR Stack cuts through the noise in 2 minutes - based on your age, goals, diet and lifestyle.</p>
+      <p>Most people are overwhelmed by supplements. Hundreds of products. Conflicting advice. YOUR Stack cuts through the noise in 2 minutes - based on your age, goals, diet and lifestyle. No email required. No upsell. Just your protocol.</p>
       <a href="/your-stack.html" class="btn-gold">Build YOUR Stack - Free →</a>
     </div>
 
@@ -480,7 +499,6 @@
     function toggleMenu() {
       document.getElementById('mobile-menu').classList.toggle('open');
     }
-
     function toggleDark() {
       const body = document.body;
       const btn = document.querySelector('.dark-toggle');
@@ -494,7 +512,6 @@
         localStorage.setItem('theme', 'dark');
       }
     }
-
     if (localStorage.getItem('theme') === 'dark') {
       document.body.setAttribute('data-theme', 'dark');
       document.querySelector('.dark-toggle').textContent = '☀️ Light';
