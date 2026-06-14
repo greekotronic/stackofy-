@@ -352,37 +352,11 @@
     .c-sel { background: linear-gradient(135deg, #2C1A0E, #5C3A1E); }
     .c-coq { background: linear-gradient(135deg, #1a0a00, #5C3A00); }
   </style>
+  <script src="/header.js"></script>
 </head>
 <body>
 
   <div id="progress-bar"></div>
-
-  <header>
-    <a class="logo" href="/">
-      <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-        <g transform="translate(1.5,0)">
-          <path d="M21,8.5 h11 v11 h-11 a5.5,5.5 0 0 1 0,-11 z" fill="#D4A853"/>
-          <path d="M32,9.5 h9 a4.5,4.5 0 0 1 0,9 h-9 z" fill="#D4A853"/>
-          <g transform="rotate(37 32 33.6)">
-            <path d="M21,28.1 h11 v11 h-11 a5.5,5.5 0 0 1 0,-11 z" fill="#95D5B2"/>
-            <path d="M32,29.1 h9 a4.5,4.5 0 0 1 0,9 h-9 z" fill="#95D5B2"/>
-          </g>
-          <path d="M21,44.5 h11 v11 h-11 a5.5,5.5 0 0 1 0,-11 z" fill="#D4A853"/>
-          <path d="M32,45.5 h9 a4.5,4.5 0 0 1 0,9 h-9 z" fill="#D4A853"/>
-        </g>
-      </svg>
-      Stackofy
-    </a>
-    <div class="header-right">
-      <nav>
-        <a href="/">Home</a>
-        <a href="/articles">Articles</a>
-        <a href="/quiz">Stack Builder</a>
-        <a href="/about">About</a>
-      </nav>
-      <button class="dark-toggle" onclick="toggleDark()">🌙 Dark</button>
-    </div>
-  </header>
 
   <div class="article-hero">
     <div class="hero-img">
@@ -565,35 +539,7 @@
 
   </div>
 
-  <footer>
-    <div class="footer-links">
-      <a href="/">Home</a>
-      <a href="/articles">Articles</a>
-      <a href="/quiz">Stack Builder</a>
-      <a href="/about">About</a>
-      <a href="https://alethiaresearch.gumroad.com">Shop</a>
-    </div>
-    <div>Stackofy &nbsp;|&nbsp; Alethia Research Institute &nbsp;|&nbsp; © 2026</div>
-    <div style="margin-top: 4px; font-size: 12px; color: #6B8A78;">Evidence-based. No pharma ties. No fluff.</div>
-  </footer>
-
   <script>
-    function toggleMenu() {
-      document.getElementById("mobile-menu").classList.toggle("open");
-    }
-
-    function toggleDark() {
-      const body = document.body;
-      const btn = document.querySelector('.dark-toggle');
-      if (body.getAttribute('data-theme') === 'dark') {
-        body.removeAttribute('data-theme');
-        btn.textContent = '🌙 Dark';
-        localStorage.setItem('theme', 'light');
-      } else {
-        body.setAttribute('data-theme', 'dark');
-        btn.textContent = '☀️ Light';
-        localStorage.setItem('theme', 'dark');
-      }
     }
 
     if (localStorage.getItem('theme') === 'dark') {
