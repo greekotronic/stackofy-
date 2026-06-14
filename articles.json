@@ -89,5 +89,15 @@
     "tags": "longevity energy brain",
     "readTime": "8 min",
     "description": "Most supplements improve what you have. PQQ helps you grow new mitochondria."
-  }
+  },
+  {
+  "title": "Resveratrol: The Red Wine Molecule That Still Has Real Potential",
+  "tag": "Resveratrol",
+  "url": "/articles/resveratrol-guide.html",
+  "image": "/images/hero-resveratrol.jpg",
+  "color": "c-resv",
+  "tags": "longevity",
+  "readTime": "9 min",
+  "description": "Activates your longevity genes. Mimics caloric restriction. But only works in the right stack - here is what the science actually says."
+}
 ]
