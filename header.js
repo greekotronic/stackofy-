@@ -89,10 +89,28 @@
     <div style="margin-top: 4px; font-size: 12px; color: #6B8A78;">Evidence-based. No pharma ties. No fluff.</div>
   `;
 
-  // Insert into page
-  document.body.insertBefore(mobileMenu, document.body.firstChild);
-  document.body.insertBefore(header, document.body.firstChild);
-  document.body.appendChild(footer);
+  function init() {
+    if (!document.body) return;
+
+    // Insert into page
+    document.body.insertBefore(mobileMenu, document.body.firstChild);
+    document.body.insertBefore(header, document.body.firstChild);
+    document.body.appendChild(footer);
+
+    // Apply saved theme
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      const btn = document.querySelector('.s-dark');
+      if (btn) btn.textContent = '☀️ Light';
+    }
+  }
+
+  // Wait for DOM
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 
   // Global functions
   window.stackofyToggleMenu = function() {
@@ -112,12 +130,5 @@
       localStorage.setItem('theme', 'dark');
     }
   };
-
-  // Apply saved theme
-  if (localStorage.getItem('theme') === 'dark') {
-    document.body.setAttribute('data-theme', 'dark');
-    const btn = document.querySelector('.s-dark');
-    if (btn) btn.textContent = '☀️ Light';
-  }
 
 })();
