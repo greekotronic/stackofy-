@@ -92,7 +92,7 @@ async function loadArticles() {
     // LATEST 4 CARDS (homepage)
     const latestEl = document.getElementById('latest-articles');
     if (latestEl) {
-      const latest = articles.filter(a => !a.featured).slice(0, 4);
+      const latest = articles.filter(a => !a.featured).slice(0, 8);
       latestEl.innerHTML = latest.map(a => makeCard(a, 'small')).join('');
     }
 
