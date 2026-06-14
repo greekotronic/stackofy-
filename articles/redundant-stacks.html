@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stack Audit: The Supplement Combinations You Can Stop Buying - Stackofy</title>
+  <meta name="description" content="Most people are doubling up on supplements that hit the same targets. Here is which combinations are redundant - and where to spend your budget instead." />
+
+  <meta property="og:title" content="Stack Audit: The Supplement Combinations You Can Stop Buying" />
+  <meta property="og:description" content="ARI breaks down the most common redundant supplement pairings. Save money, simplify your stack, and get better results." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/redundant-stacks" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-redundant-stacks.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332;
+      --green-mid: #2D6A4F;
+      --green-light: #95D5B2;
+      --gold: #D4A853;
+      --gold-light: #FDF3E0;
+      --bg: #FAF8F4;
+      --surface: #ffffff;
+      --text: #1A1A1A;
+      --text-muted: #666666;
+      --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --red: #C0392B;
+      --red-light: #FFF0F0;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0F1A14;
+      --surface: #1A2B20;
+      --text: #F0EDE8;
+      --text-muted: #9DB8AA;
+      --border: #2A3D30;
+      --gold-light: #2A220D;
+      --red-light: #2A0A0A;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    header { background: var(--gradient); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
+    .logo-icon { display: flex; flex-direction: column; gap: 3px; }
+    .capsule { height: 7px; border-radius: 4px; }
+    .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
+    .capsule:nth-child(2) { width: 22px; background: var(--green-light); }
+    .capsule:nth-child(3) { width: 26px; margin-left: 2px; background: var(--gold); }
+    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #FAF8F4; }
+    .dark-toggle { background: rgba(255,255,255,0.15); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 12px; cursor: pointer; color: #FAF8F4; font-size: 13px; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a1a1a, #2D3A2A, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content ul { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    /* REDUNDANCY CARDS */
+    .redundancy-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; margin: 2rem 0; }
+    .redundancy-header { background: var(--red-light); border-bottom: 0.5px solid #F5C6C6; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
+    [data-theme="dark"] .redundancy-header { border-bottom-color: #3A1A1A; }
+    .redundancy-verdict { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--red); flex-shrink: 0; }
+    .redundancy-pair { font-size: 17px; font-weight: 700; color: var(--text); }
+    .redundancy-pair span { color: var(--red); margin: 0 0.4rem; }
+    .redundancy-body { padding: 1.5rem; }
+    .redundancy-body p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
+    .redundancy-body p:last-child { margin-bottom: 0; }
+    .verdict-box { background: var(--bg); border-radius: var(--radius-sm); border: 0.5px solid var(--border); padding: 1rem 1.25rem; margin-top: 1rem; }
+    .verdict-title { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 4px; }
+    .verdict-box p { font-size: 13px; color: var(--text); line-height: 1.5; margin: 0; }
+
+    /* EXCEPTION CARDS - nuanced cases */
+    .exception-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; margin: 2rem 0; }
+    .exception-header { background: #F0F7F4; border-bottom: 0.5px solid #C8E6D8; padding: 1.25rem 1.5rem; display: flex; align-items: center; gap: 1rem; }
+    [data-theme="dark"] .exception-header { background: #1A2B20; border-bottom-color: #2A3D30; }
+    .exception-verdict { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); flex-shrink: 0; }
+    .exception-pair { font-size: 17px; font-weight: 700; color: var(--text); }
+    .exception-pair span { color: var(--green-dark); margin: 0 0.4rem; }
+    .exception-body { padding: 1.5rem; }
+    .exception-body p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
+    .exception-body p:last-child { margin-bottom: 0; }
+
+    /* SUMMARY TABLE */
+    .summary-table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 14px; }
+    .summary-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .summary-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); vertical-align: top; }
+    .summary-table tr:nth-child(even) td { background: var(--bg); }
+    .tag-skip { display: inline-block; background: var(--red-light); color: var(--red); font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+    .tag-keep { display: inline-block; background: #EAF5F0; color: var(--green-dark); font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+    .tag-nuanced { display: inline-block; background: var(--gold-light); color: #7A5C10; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .c-resv { background: linear-gradient(135deg, #3d0a0a, #7A1A1A); }
+    .c-nr { background: linear-gradient(135deg, #1B3A2A, #2D6A4F); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; gap: 0; }
+    .mobile-menu.open { display: flex !important; }
+    .mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem !important; }
+      nav { display: none !important; }
+      .hamburger { display: flex !important; }
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+      .redundancy-header { flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-redundant-stacks.jpg" alt="Too many supplements - stack audit" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Stack Audit</span>
+      <h1>The Supplement Combinations You Can Stop Buying</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>10 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <p>Most people are unknowingly doubling up on supplements that hit the same biological targets. Here is what to cut:</p>
+      <ul>
+        <li>NR + NMN together - two roads to the same destination; pick one</li>
+        <li>Resveratrol + Pterostilbene at full dose of both - overlapping mechanisms; use lower combined dose</li>
+        <li>Multiple magnesium forms without a reason - except Taurat + Bisglycinat, which is a smart combo</li>
+        <li>Vitamin C megadosing alongside Quercetin - significant antioxidant overlap at high doses</li>
+        <li>CoQ10 + PQQ is NOT redundant - they do different things and belong together</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>The supplement industry has a simple growth strategy: convince you that more is always better. Add another product. Stack another layer. Cover every angle.</p>
+
+      <p>The result is that many people are spending $200-400 per month on stacks where half the products are quietly hitting the same biological targets as the other half. Not dangerous - just wasteful. And in some cases, the redundancy actually crowds out more important gaps in the protocol.</p>
+
+      <p><strong>ARI's position is straightforward: a small, well-chosen stack beats a sprawling one every time. Here is where most people are doubling up without realizing it.</strong></p>
+
+      <div class="article-img">
+        <img src="/images/stack-audit-table.jpg" alt="Supplement stack audit - what to keep and what to cut" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Redundant Pairs</h2>
+
+      <!-- CASE 1 -->
+      <div class="redundancy-card">
+        <div class="redundancy-header">
+          <div class="redundancy-verdict">Redundant</div>
+          <div class="redundancy-pair">NR <span>+</span> NMN (at full dose of both)</div>
+        </div>
+        <div class="redundancy-body">
+          <p>NR and NMN are both NAD+ precursors. NR converts to NMN in the body, which then converts to NAD+. They are two routes to the same destination. Taking both simultaneously does not double your NAD+ output - your cells have a ceiling for how much NAD+ they can produce and use, and you hit it with either compound alone at adequate doses.</p>
+          <p>A 2026 head-to-head clinical trial found NR raised blood NAD+ by 161% versus 67% for NMN at the same gram dose. A 2025 Nature Metabolism study confirmed both compounds approximately double circulating NAD+ after 14 days. Running both at once adds cost but not meaningful benefit beyond what either achieves alone.</p>
+          <div class="verdict-box">
+            <div class="verdict-title">What to do instead</div>
+            <p>Choose one. If you value the longer human evidence base and CD38 inhibition effect, choose <a href="/articles/nr-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">NR</a>. If you prefer the more direct pathway and the rapidly expanding 2024-2026 clinical data, choose <a href="/articles/nmn-supplements-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">NMN</a>. Try each for 8 weeks and compare how you feel. Budget for one quality product rather than two mediocre ones.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 2 -->
+      <div class="redundancy-card">
+        <div class="redundancy-header">
+          <div class="redundancy-verdict">Redundant at full dose</div>
+          <div class="redundancy-pair">Resveratrol <span>+</span> Pterostilbene (500mg each)</div>
+        </div>
+        <div class="redundancy-body">
+          <p>Resveratrol and pterostilbene are structural cousins that activate the same core longevity pathways: SIRT1 sirtuin activation, AMPK signaling, Nrf2 antioxidant response and mTOR modulation. At full therapeutic doses of both simultaneously, you are paying twice to activate the same switches.</p>
+          <p>Pterostilbene has roughly 80% bioavailability vs 20% for standard resveratrol, and a half-life 7 times longer. This means a 100mg dose of pterostilbene delivers more active compound to your cells than 500mg of standard resveratrol capsules. Running both at full dose adds expense without proportional benefit.</p>
+          <div class="verdict-box">
+            <div class="verdict-title">What to do instead</div>
+            <p>Use a lower combined dose: 50-100mg <a href="/articles/pterostilbene-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">pterostilbene</a> + 100-250mg <a href="/articles/resveratrol-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">resveratrol</a>. This combination is actually synergistic at these ratios - the resveratrol contributes its broader cardiovascular evidence base while the pterostilbene handles sustained sirtuin activation. Bonus: this pairing also attenuates pterostilbene's potential LDL-raising effect.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 3 -->
+      <div class="redundancy-card">
+        <div class="redundancy-header">
+          <div class="redundancy-verdict">Usually redundant</div>
+          <div class="redundancy-pair">Multiple magnesium forms <span>+</span> without a clear reason</div>
+        </div>
+        <div class="redundancy-body">
+          <p>The magnesium market has fragmented into a confusing array of forms - glycinate, malate, taurate, threonate, citrate, oxide - and many people end up taking two or three simultaneously without understanding why. Most of the time, this is redundant: one well-chosen form at an adequate dose covers the bases.</p>
+          <p>Magnesium oxide has poor bioavailability and is mainly useful as a laxative. Magnesium citrate is decent but mild. The premium forms - glycinate, taurate, threonate - each have distinct advantages, but that does not mean you need all of them.</p>
+          <div class="verdict-box">
+            <div class="verdict-title">The one exception: Taurate + Bisglycinat is actually a smart combo</div>
+            <p>Magnesium Bisglycinat (glycinate) is the superior form for sleep, nervous system support and general absorption. Magnesium Taurate is formulated with taurine and has specific cardiovascular and neurological targeting - and importantly, it contains less elemental magnesium per capsule, so it does not compete for the same dosing ceiling. Together they cover different tissue targets without overlap. This is the one magnesium combination worth keeping. Read the full <a href="/articles/magnesium-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">Magnesium guide</a> for the complete breakdown.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 4 -->
+      <div class="redundancy-card">
+        <div class="redundancy-header">
+          <div class="redundancy-verdict">Overlapping at high dose</div>
+          <div class="redundancy-pair">Vitamin C (2,000mg+) <span>+</span> Quercetin (500mg+)</div>
+        </div>
+        <div class="redundancy-body">
+          <p>Both vitamin C and quercetin are powerful antioxidants that operate through overlapping pathways - both scavenge free radicals, both modulate inflammation, and both support immune function. At moderate doses of both, this is complementary. At megadoses of both simultaneously, the antioxidant overlap becomes significant and you are likely not getting proportional additional benefit from the second compound.</p>
+          <p>There is also a practical interaction: vitamin C modestly improves quercetin bioavailability, which is useful. But taking 2,000mg of vitamin C alongside 1,000mg of quercetin is likely covering the same antioxidant ground twice over at significant expense.</p>
+          <div class="verdict-box">
+            <div class="verdict-title">What to do instead</div>
+            <p>Keep both - but at sensible doses. 500-1,000mg <a href="/articles/vitamin-c-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">Vitamin C</a> + 250-500mg <a href="/articles/quercetin-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">Quercetin</a> is a well-designed antioxidant pair. At these doses they complement each other beautifully - vitamin C regenerates quercetin after it neutralizes free radicals. Megadosing both is where the redundancy kicks in.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE 5 -->
+      <div class="redundancy-card">
+        <div class="redundancy-header">
+          <div class="redundancy-verdict">Redundant</div>
+          <div class="redundancy-pair">Resveratrol <span>+</span> Quercetin (without NMN or NR)</div>
+        </div>
+        <div class="redundancy-body">
+          <p>Resveratrol activates sirtuins. Quercetin inhibits CD38, which protects NAD+ from degradation - preserving the fuel sirtuins need. Together with an NAD+ precursor, this is a beautifully coordinated system. Without NMN or NR in the picture, however, you are activating and protecting a pathway that may not have enough NAD+ substrate to run at meaningful capacity.</p>
+          <p>Quercetin's CD38 inhibition makes most sense when there is NAD+ worth protecting. Taking resveratrol + quercetin without an NAD+ precursor is like tuning a car engine that has almost no fuel in the tank.</p>
+          <div class="verdict-box">
+            <div class="verdict-title">What to do instead</div>
+            <p>Add <a href="/articles/nr-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">NR</a> or <a href="/articles/nmn-supplements-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">NMN</a> to the stack. The trio of NAD+ precursor + sirtuin activator + CD38 inhibitor is one of the most well-designed longevity combinations available. Without the NAD+ precursor, you are missing the foundation the other two depend on.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/smart-stack-simple.jpg" alt="Simple effective supplement stack - less is more" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Combinations That Look Redundant But Are Not</h2>
+
+      <!-- NOT REDUNDANT 1 -->
+      <div class="exception-card">
+        <div class="exception-header">
+          <div class="exception-verdict">Not Redundant</div>
+          <div class="exception-pair">CoQ10 <span>+</span> PQQ</div>
+        </div>
+        <div class="exception-body">
+          <p>These two often get lumped together as "mitochondria supplements" and dismissed as redundant. They are not. <a href="/articles/coq10-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">CoQ10</a> fuels existing mitochondria - it is essential for the electron transport chain that generates ATP. <a href="/articles/pqq-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">PQQ</a> stimulates mitochondrial biogenesis - the growth of entirely new mitochondria. One optimizes what you have; the other increases how many you have. This is one of the most synergistic pairings in the longevity toolkit and both belong in a serious energy and anti-aging stack.</p>
+        </div>
+      </div>
+
+      <!-- NOT REDUNDANT 2 -->
+      <div class="exception-card">
+        <div class="exception-header">
+          <div class="exception-verdict">Not Redundant</div>
+          <div class="exception-pair">Zinc <span>+</span> Quercetin</div>
+        </div>
+        <div class="exception-body">
+          <p>Quercetin acts as a zinc ionophore - it transports zinc into cells where zinc exerts its most powerful immune and antiviral effects. These two do not overlap; they cooperate. <a href="/articles/quercetin-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">Quercetin</a> is the delivery mechanism; <a href="/articles/zinc-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">zinc</a> is the active agent. Neither works as well without the other in this context. This is a genuine synergy, not a redundancy.</p>
+        </div>
+      </div>
+
+      <!-- NOT REDUNDANT 3 -->
+      <div class="exception-card">
+        <div class="exception-header">
+          <div class="exception-verdict">Not Redundant</div>
+          <div class="exception-pair">NMN or NR <span>+</span> Resveratrol or Pterostilbene</div>
+        </div>
+        <div class="exception-body">
+          <p>NAD+ precursors and sirtuin activators are often sold as competing products, but they are actually complementary by design. <a href="/articles/nr-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">NR</a> or <a href="/articles/nmn-supplements-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">NMN</a> raises your NAD+ levels. <a href="/articles/resveratrol-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">Resveratrol</a> or <a href="/articles/pterostilbene-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">pterostilbene</a> activates the sirtuins that run on NAD+. One provides the fuel; the other fires the engine. This is arguably the most important combination in the entire longevity supplement space.</p>
+        </div>
+      </div>
+
+      <!-- NOT REDUNDANT 4 -->
+      <div class="exception-card">
+        <div class="exception-header">
+          <div class="exception-verdict">Not Redundant</div>
+          <div class="exception-pair">Vitamin D3 <span>+</span> K2</div>
+        </div>
+        <div class="exception-body">
+          <p>These two are almost always sold together and always should be. <a href="/articles/vitamin-d3-k2-guide.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">Vitamin D3</a> increases calcium absorption significantly. Vitamin K2 (as MK-7) directs that calcium to bones and teeth, and away from arteries and soft tissue where it causes harm. D3 without K2 at higher doses is not just less effective - it is potentially counterproductive. This is a genuine biochemical partnership, not a marketing bundle.</p>
+        </div>
+      </div>
+
+      <h2>The Quick Reference Table</h2>
+
+      <table class="summary-table">
+        <tr>
+          <th>Combination</th>
+          <th>Verdict</th>
+          <th>Reason</th>
+        </tr>
+        <tr>
+          <td>NR + NMN (full dose)</td>
+          <td><span class="tag-skip">Skip one</span></td>
+          <td>Same destination; pick the one that fits your goals</td>
+        </tr>
+        <tr>
+          <td>Resveratrol + Pterostilbene (full dose each)</td>
+          <td><span class="tag-nuanced">Lower combined dose</span></td>
+          <td>Same pathways; synergistic at reduced ratio</td>
+        </tr>
+        <tr>
+          <td>Multiple magnesium forms</td>
+          <td><span class="tag-nuanced">Usually redundant</span></td>
+          <td>Exception: Taurate + Bisglycinat covers distinct targets</td>
+        </tr>
+        <tr>
+          <td>Vitamin C (2g+) + Quercetin (1g+)</td>
+          <td><span class="tag-nuanced">Reduce doses</span></td>
+          <td>Overlapping antioxidant coverage at megadose</td>
+        </tr>
+        <tr>
+          <td>Resveratrol + Quercetin without NAD+ precursor</td>
+          <td><span class="tag-skip">Add NR or NMN</span></td>
+          <td>Missing the foundation both depend on</td>
+        </tr>
+        <tr>
+          <td>CoQ10 + PQQ</td>
+          <td><span class="tag-keep">Keep both</span></td>
+          <td>Optimize existing vs. grow new mitochondria</td>
+        </tr>
+        <tr>
+          <td>Zinc + Quercetin</td>
+          <td><span class="tag-keep">Keep both</span></td>
+          <td>Quercetin delivers zinc into cells - genuine synergy</td>
+        </tr>
+        <tr>
+          <td>NMN/NR + Resveratrol/Pterostilbene</td>
+          <td><span class="tag-keep">Keep both</span></td>
+          <td>Fuel + engine; the most important longevity pairing</td>
+        </tr>
+        <tr>
+          <td>Vitamin D3 + K2</td>
+          <td><span class="tag-keep">Always together</span></td>
+          <td>D3 absorbs calcium; K2 directs it safely</td>
+        </tr>
+      </table>
+
+      <div class="highlight-box">
+        <div class="highlight-label">The ARI Principle</div>
+        <p>Every supplement you add should either fill a gap in your protocol or amplify something already there through a distinct mechanism. If it does neither - if it simply doubles a pathway you are already covering - that money is better spent on a higher quality version of what you already take, or on closing a genuine nutritional gap. The best stacks are not the longest ones. They are the most intentional ones.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">💡</div>
+        <div class="aaf-label">
+          <strong>ARI Stack Audit Summary</strong>
+          Most people can cut 1-2 supplements from their current stack without losing any measurable benefit - and redirect that budget toward better quality products, higher doses of what actually matters, or closing nutritional gaps that are genuinely limiting their results.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta-block">
+      <h3>Want a Stack Built Around Your Goals?</h3>
+      <p>Use the free Stack Builder to get a personalized protocol in 2 minutes - based on your age, goals and what you are already taking.</p>
+      <div class="cta-buttons">
+        <a href="/your-stack.html" class="btn-gold">Build YOUR Stack - Free →</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Dive Deeper</div>
+      <div class="related-grid">
+        <a href="/articles/nmn-supplements-guide.html" class="related-card">
+          <div class="related-img c-nmn">
+            <img src="/images/thumb-nmn.jpg" alt="NMN" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">NMN</span>
+            <h4>Why 64% of NMN Supplements Contain Zero Active Ingredient</h4>
+          </div>
+        </a>
+        <a href="/articles/nr-guide.html" class="related-card">
+          <div class="related-img c-nr">
+            <img src="/images/hero-nr.jpg" alt="NR" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">NR</span>
+            <h4>NR: The NAD+ Precursor With the Longest Track Record</h4>
+          </div>
+        </a>
+        <a href="/articles/resveratrol-guide.html" class="related-card">
+          <div class="related-img c-resv">
+            <img src="/images/hero-resveratrol.jpg" alt="Resveratrol" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Resveratrol</span>
+            <h4>Resveratrol: The Red Wine Molecule That Still Has Real Potential</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting or modifying any supplement protocol. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      document.querySelector('.dark-toggle') && (document.querySelector('.dark-toggle').textContent = '☀️ Light');
+    }
+
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

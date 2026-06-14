@@ -26,7 +26,6 @@
     a { text-decoration: none; color: inherit; }
     img { display: block; }
 
-    /* HERO */
     .hero { background: linear-gradient(rgba(27,67,50,0.75), rgba(27,67,50,0.85)), url('/images/hero-homepage.jpg') center/cover no-repeat; padding: 3.5rem 2rem 2.5rem; text-align: center; }
     .hero h1 { color: #FAF8F4; font-size: 2rem; font-weight: 700; margin-bottom: 0.6rem; letter-spacing: -0.5px; max-width: 640px; margin-left: auto; margin-right: auto; }
     .hero p { color: var(--green-light); font-size: 15px; margin-bottom: 1.8rem; }
@@ -38,7 +37,6 @@
     .cat-pill { background: rgba(255,255,255,0.1); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 6px 14px; color: #FAF8F4; font-size: 13px; cursor: pointer; transition: background 0.2s; }
     .cat-pill:hover { background: rgba(255,255,255,0.2); }
 
-    /* LAYOUT */
     .main { max-width: 1040px; margin: 0 auto; padding: 2.5rem 2rem; }
     .section-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
     .section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 1.25rem; }
@@ -51,12 +49,10 @@
     .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; cursor: pointer; display: inline-block; }
     .btn-gold:hover { opacity: 0.9; }
 
-    /* QUIZ BANNER */
     .quiz-banner { background: var(--gradient); border-radius: var(--radius); padding: 1.75rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 3rem; }
     .quiz-banner h3 { color: #FAF8F4; font-size: 17px; font-weight: 600; margin-bottom: 4px; }
     .quiz-banner p { color: var(--green-light); font-size: 13px; }
 
-    /* FEATURED XL */
     .featured-xl { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: grid; grid-template-columns: 1.1fr 1fr; transition: border-color 0.2s, transform 0.2s; }
     .featured-xl:hover { border-color: var(--green-dark); transform: translateY(-2px); }
     .featured-xl-img { height: 340px; overflow: hidden; }
@@ -68,12 +64,10 @@
     .featured-xl-body .read-link { font-size: 14px; font-weight: 600; color: var(--green-dark); }
     .article-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 3px 8px; border-radius: 4px; display: inline-block; }
 
-    /* GRIDS */
     .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
-    /* SMALL CARDS */
     .article-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
     .article-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
     .card-img { height: 120px; overflow: hidden; }
@@ -82,7 +76,6 @@
     .card-body h3 { font-size: 13px; font-weight: 600; color: var(--text); margin: 0.4rem 0; line-height: 1.4; }
     .card-body p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
 
-    /* HORIZONTAL CARDS */
     .h-article { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: flex; transition: border-color 0.2s, transform 0.2s; }
     .h-article:hover { border-color: var(--green-dark); transform: translateY(-2px); }
     .h-article-img { width: 160px; flex-shrink: 0; overflow: hidden; }
@@ -92,7 +85,6 @@
     .h-article-body p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-top: 0.4rem; }
     .read-time { font-size: 11px; color: var(--text-muted); margin-top: 0.5rem; display: block; }
 
-    /* SPOTLIGHT */
     .spotlight { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: grid; grid-template-columns: 1fr 1.6fr; transition: border-color 0.2s; }
     .spotlight:hover { border-color: var(--green-dark); }
     .spotlight-img { overflow: hidden; min-height: 240px; }
@@ -103,12 +95,23 @@
     .spotlight-body p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem; }
     .spotlight-body .read-link { font-size: 13px; font-weight: 600; color: var(--green-dark); }
 
-    /* TRUST BAR */
     .trust-bar { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.5rem 2rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; }
     .trust-num { font-size: 26px; font-weight: 700; color: var(--green-dark); }
     .trust-label { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
 
-    /* DID YOU KNOW BOX */
+    /* STACK AUDIT FEATURE */
+    .stack-audit-feature { background: var(--surface); border-radius: var(--radius); border: 1.5px solid var(--green-dark); padding: 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; position: relative; overflow: hidden; }
+    .stack-audit-feature::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--gradient); }
+    .audit-badge { position: absolute; top: 1rem; right: 1rem; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; background: var(--gradient); color: var(--gold); padding: 4px 10px; border-radius: 4px; }
+    .audit-content { grid-column: 1; }
+    .audit-content h2 { font-size: 1.3rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem; line-height: 1.35; max-width: 480px; }
+    .audit-content p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.25rem; max-width: 520px; }
+    .audit-link { font-size: 14px; font-weight: 700; color: var(--green-dark); border-bottom: 2px solid var(--gold); padding-bottom: 1px; }
+    .audit-link:hover { color: var(--gold); }
+    .audit-stat-col { display: flex; flex-direction: column; gap: 1rem; justify-content: center; border-left: 1px solid var(--border); padding-left: 2rem; min-width: 140px; }
+    .audit-stat-num { font-size: 2.5rem; font-weight: 700; color: var(--green-dark); line-height: 1; }
+    .audit-stat-label { font-size: 11px; color: var(--text-muted); line-height: 1.4; margin-top: 4px; }
+
     .didyouknow { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 2rem; margin-bottom: 3rem; }
     .didyouknow-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
     .facts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
@@ -117,12 +120,10 @@
     .fact-item h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
     .fact-item p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
 
-    /* STAT BANNER */
     .stat-banner { background: var(--gradient); border-radius: var(--radius); padding: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; margin-bottom: 3rem; }
     .stat-banner-num { font-size: 2rem; font-weight: 700; color: var(--gold); }
     .stat-banner-label { font-size: 13px; color: var(--green-light); margin-top: 4px; }
 
-    /* STACKS + REC */
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
     .stack-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
     .stack-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
@@ -137,7 +138,6 @@
     .stack-card h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
     .stack-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
 
-    /* RECOMMENDED */
     .rec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
     .rec-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
     .rec-card:hover { border-color: var(--gold); transform: translateY(-2px); }
@@ -152,25 +152,21 @@
     .rec-card h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
     .rec-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
 
-    /* QUOTE BANNER */
     .quote-banner { background: var(--gold-light); border-radius: var(--radius); border: 0.5px solid var(--gold); padding: 2rem 2.5rem; text-align: center; margin-bottom: 3rem; }
     .quote-banner blockquote { font-size: 1.15rem; font-style: italic; color: var(--text); line-height: 1.7; max-width: 680px; margin: 0 auto 0.75rem; }
     .quote-banner cite { font-size: 12px; color: var(--text-muted); font-style: normal; font-weight: 600; letter-spacing: 0.5px; }
 
-    /* ARI */
     .ari-block { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; display: flex; gap: 1.5rem; align-items: center; }
     .ari-logo { width: 60px; height: 60px; border-radius: var(--radius-sm); background: var(--gradient); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 28px; }
     .ari-block h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
     .ari-block p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
 
-    /* NEWSLETTER / LEAD MAGNET */
     .lead-block { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-bottom: 3rem; }
     .lead-block-text h3 { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
     .lead-block-text p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
     .lead-block-cta { flex-shrink: 0; }
     .lead-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
 
-    /* QUIZ BOTTOM */
     .quiz-bottom { background: var(--gradient); border-radius: var(--radius); padding: 3.5rem 2rem; text-align: center; }
     .quiz-bottom h2 { color: #FAF8F4; font-size: 1.8rem; font-weight: 700; margin-bottom: 0.75rem; letter-spacing: -0.3px; }
     .quiz-bottom p { color: var(--green-light); font-size: 15px; max-width: 520px; margin: 0 auto 1.75rem; line-height: 1.7; }
@@ -178,7 +174,6 @@
     .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
     .disclaimer strong { color: var(--text); }
 
-    /* RESPONSIVE */
     @media (max-width: 900px) {
       .grid-4 { grid-template-columns: 1fr 1fr !important; }
       .grid-3 { grid-template-columns: 1fr 1fr !important; }
@@ -189,6 +184,8 @@
       .facts-grid { grid-template-columns: 1fr 1fr !important; }
       .stat-banner { grid-template-columns: 1fr 1fr !important; }
       .lead-block { flex-direction: column !important; align-items: flex-start !important; }
+      .stack-audit-feature { grid-template-columns: 1fr !important; }
+      .audit-stat-col { border-left: none !important; border-top: 1px solid var(--border); padding-left: 0 !important; padding-top: 1rem; flex-direction: row !important; }
     }
     @media (max-width: 600px) {
       .hero { padding: 1.75rem 1rem 1.5rem !important; }
@@ -250,7 +247,7 @@
     </div>
     <div id="featured-article" class="mb3"></div>
 
-    <!-- LATEST ARTICLES - all 8 -->
+    <!-- LATEST ARTICLES -->
     <div class="section-label">What's New</div>
     <div class="section-header mb15">
       <div class="section-title">Latest Articles</div>
@@ -266,6 +263,26 @@
       <div><div class="trust-num">100%</div><div class="trust-label">Independent Research</div></div>
       <div><div class="trust-num">0</div><div class="trust-label">Pharma Sponsors</div></div>
       <div><div class="trust-num" id="article-count-home">9</div><div class="trust-label">In-Depth Guides</div></div>
+    </div>
+
+    <!-- STACK AUDIT FEATURE -->
+    <div class="stack-audit-feature mb3">
+      <div class="audit-badge">ARI Special Report</div>
+      <div class="audit-content">
+        <h2>Are You Wasting Money on Your Supplement Stack?</h2>
+        <p>Most people are doubling up on supplements that hit the same biological targets. NR and NMN together. Resveratrol and pterostilbene at full dose. Multiple magnesium forms without a reason. ARI breaks down the most common redundant combinations - and what to do instead.</p>
+        <a href="/articles/redundant-stacks.html" class="audit-link">Read the Stack Audit →</a>
+      </div>
+      <div class="audit-stat-col">
+        <div class="audit-stat">
+          <div class="audit-stat-num">5</div>
+          <div class="audit-stat-label">Redundant combinations most people are running</div>
+        </div>
+        <div class="audit-stat">
+          <div class="audit-stat-num">4</div>
+          <div class="audit-stat-label">Combinations that look redundant but are not</div>
+        </div>
+      </div>
     </div>
 
     <div class="divider"></div>
