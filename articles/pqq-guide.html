@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PQQ: The Mitochondrial Spark That Keeps You Young and Sharp - Stackofy</title>
+  <meta name="description" content="PQQ helps you grow new mitochondria - not just improve existing ones. Here is what the science says about dosing, forms, and why it stacks so powerfully with CoQ10." />
+
+  <meta property="og:title" content="PQQ: The Mitochondrial Spark That Keeps You Young and Sharp" />
+  <meta property="og:description" content="Most supplements improve what you have. PQQ helps you make more mitochondria. Here is what the science says." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/pqq-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/tree-rings.jpg" />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    header { background: var(--gradient); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
+    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #FAF8F4; }
+    .dark-toggle { background: rgba(255,255,255,0.15); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 12px; cursor: pointer; color: #FAF8F4; font-size: 13px; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; }
+    .mobile-menu.open { display: flex !important; }
+    .mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
+    .mobile-menu a:last-child { border-bottom: none; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #2C1A0E, #5C3A00, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.65; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content ul { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; max-height: 420px; object-fit: cover; display: block; }
+
+    .highlight-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; border-left: 4px solid var(--green-dark); }
+    .highlight-box h4 { font-size: 15px; font-weight: 700; color: var(--green-dark); margin-bottom: 0.75rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin-bottom: 0; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .forms-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .form-card { background: var(--surface); border-radius: var(--radius-sm); border: 0.5px solid var(--border); padding: 1rem; }
+    .form-card.recommended { border-color: var(--green-dark); }
+    .form-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+    .form-label.rec { color: var(--green-dark); }
+    .form-label.ok { color: var(--text-muted); }
+    .form-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .form-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .synergy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .synergy-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.875rem; text-align: center; }
+    .synergy-card .icon { font-size: 22px; margin-bottom: 6px; }
+    .synergy-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .synergy-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+    .c-coq { background: linear-gradient(135deg, #1a0a00, #5C3A00); }
+    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+    .sources a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    footer { background: var(--gradient); color: var(--green-light); text-align: center; padding: 2rem; font-size: 13px; line-height: 2; }
+    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 0.5rem; }
+    .footer-links a { color: var(--green-light); font-size: 13px; }
+    .footer-links a:hover { color: #FAF8F4; }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem !important; }
+      nav { display: none !important; }
+      .hamburger { display: flex !important; }
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .forms-grid { grid-template-columns: 1fr !important; }
+      .synergy-grid { grid-template-columns: 1fr 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <header>
+    <a class="logo" href="/">
+      <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(1.5,0)">
+          <path d="M21,8.5 h11 v11 h-11 a5.5,5.5 0 0 1 0,-11 z" fill="#D4A853"/>
+          <path d="M32,9.5 h9 a4.5,4.5 0 0 1 0,9 h-9 z" fill="#D4A853"/>
+          <g transform="rotate(37 32 33.6)">
+            <path d="M21,28.1 h11 v11 h-11 a5.5,5.5 0 0 1 0,-11 z" fill="#95D5B2"/>
+            <path d="M32,29.1 h9 a4.5,4.5 0 0 1 0,9 h-9 z" fill="#95D5B2"/>
+          </g>
+          <path d="M21,44.5 h11 v11 h-11 a5.5,5.5 0 0 1 0,-11 z" fill="#D4A853"/>
+          <path d="M32,45.5 h9 a4.5,4.5 0 0 1 0,9 h-9 z" fill="#D4A853"/>
+        </g>
+      </svg>
+      Stackofy
+    </a>
+    <div class="header-right">
+      <nav>
+        <a href="/">Home</a>
+        <a href="/articles.html">Articles</a>
+        <a href="/your-stack.html">Stack Builder</a>
+        <a href="/about.html">About</a>
+      </nav>
+      <button class="dark-toggle" onclick="toggleDark()">🌙 Dark</button>
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="/" onclick="toggleMenu()">Home</a>
+    <a href="/articles.html" onclick="toggleMenu()">Articles</a>
+    <a href="/your-stack.html" onclick="toggleMenu()">Stack Builder</a>
+    <a href="/about.html" onclick="toggleMenu()">About</a>
+  </div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/tree-rings.jpg" alt="Tree rings - growth and renewal, like mitochondrial biogenesis" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">PQQ</span>
+      <h1>PQQ: The Mitochondrial Spark That Keeps You Young and Sharp</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>8 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <p>PQQ is one of the few compounds shown to stimulate mitochondrial biogenesis - the creation of new mitochondria. Key points:</p>
+      <ul>
+        <li>10-20mg daily is the well-studied range - more is not necessarily better</li>
+        <li>Take in the morning with a fat-containing meal - it is fat-soluble and can affect sleep if taken late</li>
+        <li>Pairs exceptionally well with CoQ10 - one of the most synergistic combinations in mitochondrial health</li>
+        <li>Look for BioPQQ or PQQ disodium salt - the most studied and reliable forms</li>
+        <li>Not recommended for children or during pregnancy due to limited safety data</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>PQQ might sound like a typo, but this compound could be one of the most underrated tools in your longevity stack. Short for Pyrroloquinoline Quinone, it lacks the brand recognition of CoQ10 or NMN - but it punches well above its weight when it comes to cellular energy, brain health, and what scientists call mitochondrial biogenesis.</p>
+
+      <p>In plain language: <strong>PQQ helps you grow new mitochondria.</strong> That is a big deal. Most supplements aim to improve what is already there. PQQ helps you build more of the infrastructure itself - like upgrading from a flickering lightbulb to a freshly wired power grid.</p>
+
+      <div class="article-img">
+        <img src="/images/tree-rings.jpg" alt="Tree rings symbolizing cellular growth and renewal" onerror="this.style.display='none'" />
+      </div>
+
+      <p>The tree ring analogy is apt. Each ring represents a year of growth - new structure added to existing structure. PQQ does something similar at the cellular level: it signals the body to add new mitochondrial capacity rather than just optimizing what already exists.</p>
+
+      <h2>What PQQ Actually Is</h2>
+
+      <p>PQQ is a redox cofactor - a molecule that influences how cells produce energy and handle oxidative stress. It is found in trace amounts in certain plants, fermented foods, and even breast milk, but nowhere near the concentrations that appear to have therapeutic effect in humans.</p>
+
+      <p>Its primary mechanism of action involves stimulating PGC-1alpha, a master regulator of mitochondrial biogenesis. That is the molecular switch that tells your body to create more mitochondria - particularly in high-demand tissues like the heart and brain, where energy requirements are highest and mitochondrial decline with age is most consequential.</p>
+
+      <p>PQQ also scavenges free radicals directly in the mitochondria - where most cellular oxidative damage originates - protects existing mitochondria from damage, and helps modulate chronic inflammation. Three of the most important targets in anti-aging biology, addressed by a single molecule at therapeutic doses of just 10-20mg per day.</p>
+
+      <div class="article-img">
+        <img src="/images/pqq-mitochondria.jpg" alt="Mitochondria network - PQQ supports biogenesis" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What the Research Shows</h2>
+
+      <p>Animal studies are compelling. PQQ has been shown to increase mitochondrial number and efficiency, improve memory and learning, protect neurons from oxidative stress and toxin exposure, reduce damage in models of heart attack, and support liver metabolic function.</p>
+
+      <p>In humans, the research is still early but consistently positive. One study found that three weeks of PQQ supplementation led to improvements in energy levels, sleep quality, mood, and biomarkers of oxidative stress. Another showed enhanced cognitive performance and cerebral blood flow when PQQ was combined with CoQ10.</p>
+
+      <div class="highlight-box">
+        <h4>The CoQ10 Partnership</h4>
+        <p>PQQ and CoQ10 are one of the most synergistic combinations in mitochondrial health. PQQ builds new mitochondrial infrastructure - CoQ10 fuels the energy production within it. Think of PQQ as the architect and CoQ10 as the power supply. Used together, they address mitochondrial health from complementary angles that neither can fully cover alone.</p>
+      </div>
+
+      <h2>Forms and Quality</h2>
+
+      <div class="forms-grid">
+        <div class="form-card recommended">
+          <div class="form-label rec">✓ Best Choice</div>
+          <h4>BioPQQ®</h4>
+          <p>The most studied branded form. Produced by Mitsubishi Gas Chemical via fermentation. Used in the majority of human clinical trials. Look for this name on the label for quality assurance.</p>
+        </div>
+        <div class="form-card recommended">
+          <div class="form-label rec">✓ Recommended</div>
+          <h4>PQQ Disodium Salt</h4>
+          <p>The most commonly available form. Stable, well-absorbed, and used in most research. Ensure it comes from a manufacturer with third-party testing.</p>
+        </div>
+        <div class="form-card">
+          <div class="form-label ok">✓ Convenient</div>
+          <h4>PQQ + CoQ10 Combo</h4>
+          <p>Many quality supplements combine both in a single softgel. Convenient and cost-effective if you plan to take both - which you should.</p>
+        </div>
+        <div class="form-card">
+          <div class="form-label ok">Note</div>
+          <h4>Generic PQQ</h4>
+          <p>Quality varies significantly. If not using BioPQQ, verify the source and look for third-party COA confirming purity and form.</p>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Daily Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>General mitochondrial support</td>
+          <td>10 - 20mg</td>
+          <td>Continuous daily use</td>
+        </tr>
+        <tr>
+          <td>Cognitive recovery or burnout</td>
+          <td>20 - 40mg</td>
+          <td>2-4 week cycles only</td>
+        </tr>
+        <tr>
+          <td>Stacked with CoQ10</td>
+          <td>10 - 20mg PQQ + 100-200mg CoQ10</td>
+          <td>Most effective combination</td>
+        </tr>
+        <tr>
+          <td>Children</td>
+          <td colspan="2">Not recommended - insufficient safety data</td>
+        </tr>
+      </table>
+
+      <p>Take PQQ in the morning or early afternoon with a fat-containing meal. It is fat-soluble and absorbs poorly without dietary fat. Avoid taking it late in the day - it can increase mental alertness and energy in ways that interfere with sleep in sensitive individuals.</p>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="synergy-grid">
+        <div class="synergy-card">
+          <div class="icon">⚡</div>
+          <h4>CoQ10 / Ubiquinol</h4>
+          <p>The primary synergy. PQQ builds new mitochondria, CoQ10 fuels them. Stack these two together always.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🧬</div>
+          <h4>NMN or NR</h4>
+          <p>NAD+ boosters support the same mitochondrial energy pathways. Together they create a comprehensive mitochondrial protocol.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">💊</div>
+          <h4>Magnesium</h4>
+          <p>Cofactor in hundreds of enzyme reactions including those involved in mitochondrial energy metabolism.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🌿</div>
+          <h4>Alpha-Lipoic Acid</h4>
+          <p>Complementary antioxidant protection in both fat and water-soluble cellular compartments.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🏃</div>
+          <h4>Acetyl-L-Carnitine</h4>
+          <p>Transports fatty acids into mitochondria for energy production. Natural partner to PQQ for physical performance and brain support.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🧠</div>
+          <h4>Lion's Mane</h4>
+          <p>Complementary neuroprotective effects. PQQ protects mitochondria in neurons, Lion's Mane stimulates nerve growth factor.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">7.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Unique mechanism - mitochondrial biogenesis - not replicated by other supplements. Strong animal data, promising early human research. Most powerful when combined with CoQ10. An underrated addition to any serious longevity protocol.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Rucker, R. et al. (2009). Biochemical and physiological effects of pyrroloquinoline quinone on mouse brain and liver mitochondria. <em>Journal of Nutrition</em>, 139(10), 1870-1877.</li>
+        <li>Nakano, M. et al. (2012). Effects of pyrroloquinoline quinone disodium salt intake on cognitive function. <em>Food & Function</em>, 3(7), 738-745.</li>
+        <li>Harris, C.B. et al. (2013). Dietary pyrroloquinoline quinone alters indicators of inflammation and mitochondrial-related metabolism. <em>Journal of Nutritional Biochemistry</em>, 24(12), 2076-2084.</li>
+        <li>Stites, T. et al. (2006). Pyrroloquinoline quinone modulates mitochondrial quantity and function. <em>Journal of Nutritional Biochemistry</em>, 17(9), 596-604.</li>
+      </ol>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/coq10-guide.html" class="related-card">
+          <div class="related-img c-coq"><img src="/images/hero-coq10.jpg" alt="CoQ10" onerror="this.style.display='none'" /></div>
+          <div class="related-body"><span class="related-tag">CoQ10</span><h4>CoQ10: The Spark Plug for Every Cell in Your Body</h4></div>
+        </a>
+        <a href="/articles/nmn-supplements-guide.html" class="related-card">
+          <div class="related-img c-nmn"><img src="/images/thumb-nmn.jpg" alt="NMN" onerror="this.style.display='none'" /></div>
+          <div class="related-body"><span class="related-tag">NMN</span><h4>Why 64% of NMN Supplements Contain Zero Active Ingredient</h4></div>
+        </a>
+        <a href="/articles/magnesium-guide.html" class="related-card">
+          <div class="related-img c-mag"><img src="/images/white-powder-capsules-on-moss.jpg" alt="Magnesium" onerror="this.style.display='none'" /></div>
+          <div class="related-body"><span class="related-tag">Magnesium</span><h4>Magnesium: The Master Mineral That Everyone's Missing</h4></div>
+        </a>
+      </div>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>PQQ is one piece of the puzzle. Get the full mitochondrial protocol with NMN, CoQ10, Magnesium, dosing schedules and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/articles.html">Articles</a>
+      <a href="/your-stack.html">Stack Builder</a>
+      <a href="/about.html">About</a>
+      <a href="https://alethiaresearch.gumroad.com">Shop</a>
+    </div>
+    <div>Stackofy &nbsp;|&nbsp; Alethia Research Institute &nbsp;|&nbsp; © 2026</div>
+    <div style="margin-top: 4px; font-size: 12px; color: #6B8A78;">Evidence-based. No pharma ties. No fluff.</div>
+  </footer>
+
+  <script>
+    function toggleMenu() { document.getElementById('mobile-menu').classList.toggle('open'); }
+    function toggleDark() {
+      const body = document.body;
+      const btn = document.querySelector('.dark-toggle');
+      if (body.getAttribute('data-theme') === 'dark') {
+        body.removeAttribute('data-theme'); btn.textContent = '🌙 Dark'; localStorage.setItem('theme', 'light');
+      } else {
+        body.setAttribute('data-theme', 'dark'); btn.textContent = '☀️ Light'; localStorage.setItem('theme', 'dark');
+      }
+    }
+    if (localStorage.getItem('theme') === 'dark') { document.body.setAttribute('data-theme', 'dark'); document.querySelector('.dark-toggle').textContent = '☀️ Light'; }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
