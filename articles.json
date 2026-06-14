@@ -1,0 +1,93 @@
+[
+  {
+    "title": "Why 64% of NMN Supplements Contain Zero Active Ingredient",
+    "tag": "NMN",
+    "url": "/articles/nmn-supplements-guide.html",
+    "image": "/images/thumb-nmn.jpg",
+    "color": "c-nmn",
+    "tags": "longevity",
+    "readTime": "10 min",
+    "description": "Independent lab tests exposed the NMN market. Here is how to spot the real ones in 90 seconds.",
+    "featured": true
+  },
+  {
+    "title": "Omega-3: The One Supplement Almost Everyone Is Taking Wrong",
+    "tag": "Omega-3",
+    "url": "/articles/omega-3-complete-guide.html",
+    "image": "/images/omega-3-capsules-moss.jpg",
+    "color": "c-omega",
+    "tags": "longevity immune brain",
+    "readTime": "8 min",
+    "description": "Form matters more than dose. Most cheap fish oil fails before it reaches you."
+  },
+  {
+    "title": "Vitamin D3 + K2: The Cheapest Longevity Insurance You Are Not Taking Correctly",
+    "tag": "Vitamin D3",
+    "url": "/articles/vitamin-d3-k2-guide.html",
+    "image": "/images/old-hand-young-hand.jpg",
+    "color": "c-vitd",
+    "tags": "longevity immune",
+    "readTime": "9 min",
+    "description": "Most adults are chronically deficient. Here is what the research actually says."
+  },
+  {
+    "title": "Magnesium: The Master Mineral That Everyone's Missing",
+    "tag": "Magnesium",
+    "url": "/articles/magnesium-guide.html",
+    "image": "/images/hero-magnesium.jpg",
+    "color": "c-mag",
+    "tags": "longevity sleep brain performance",
+    "readTime": "9 min",
+    "description": "Involved in 300+ enzyme reactions. Most people are deficient and don't know it."
+  },
+  {
+    "title": "Zinc: The Quiet Mineral That Keeps Everything Running",
+    "tag": "Zinc",
+    "url": "/articles/zinc-guide.html",
+    "image": "/images/oysters-lemon.jpg",
+    "color": "c-zinc",
+    "tags": "immune longevity performance",
+    "readTime": "8 min",
+    "description": "Subtle deficiency quietly erodes immunity, testosterone and mental sharpness."
+  },
+  {
+    "title": "Selenium: The Tiny Mineral with Giant Anti-Aging Powers",
+    "tag": "Selenium",
+    "url": "/articles/selenium-guide.html",
+    "image": "/images/thumb-selenium.jpg",
+    "color": "c-sel",
+    "tags": "longevity immune",
+    "readTime": "8 min",
+    "description": "Cofactor in your master antioxidant enzyme. Supports thyroid, immune function and DNA repair."
+  },
+  {
+    "title": "CoQ10: The Spark Plug for Every Cell in Your Body",
+    "tag": "CoQ10",
+    "url": "/articles/coq10-guide.html",
+    "image": "/images/hero-coq10.jpg",
+    "color": "c-coq",
+    "tags": "longevity energy performance",
+    "readTime": "8 min",
+    "description": "Mitochondrial energy declines after 40. Essential if you take statins. Ubiquinol is the active form."
+  },
+  {
+    "title": "Vitamin C: The Buffered Backbone of Antioxidant Defense",
+    "tag": "Vitamin C",
+    "url": "/articles/vitamin-c-guide.html",
+    "image": "/images/hero-vitaminc.jpg",
+    "color": "c-vitc",
+    "tags": "immune longevity",
+    "readTime": "9 min",
+    "description": "Regenerates Vitamin E and glutathione. One of the highest evidence-to-cost ratios in supplements."
+  },
+  {
+    "title": "PQQ: The Mitochondrial Spark That Keeps You Young and Sharp",
+    "tag": "PQQ",
+    "url": "/articles/pqq-guide.html",
+    "image": "/images/tree-rings.jpg",
+    "color": "c-pqq",
+    "tags": "longevity energy brain",
+    "readTime": "8 min",
+    "description": "Most supplements improve what you have. PQQ helps you grow new mitochondria."
+  }
+]
