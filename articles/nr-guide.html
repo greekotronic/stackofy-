@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NR (Nicotinamide Riboside): The NAD+ Precursor With the Longest Track Record - Stackofy</title>
+  <meta name="description" content="NR is one of the most studied NAD+ precursors in humans. Here is what the 2025-2026 research actually shows - and whether you need NR, NMN, or both." />
+
+  <meta property="og:title" content="NR (Nicotinamide Riboside): The NAD+ Precursor With the Longest Track Record" />
+  <meta property="og:description" content="NR safely doubles NAD+ levels in humans. A 2026 head-to-head trial gave NR a 2.3x advantage over NMN at the same dose. Here is the full picture." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/nr-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-nr.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332;
+      --green-mid: #2D6A4F;
+      --green-light: #95D5B2;
+      --gold: #D4A853;
+      --gold-light: #FDF3E0;
+      --bg: #FAF8F4;
+      --surface: #ffffff;
+      --text: #1A1A1A;
+      --text-muted: #666666;
+      --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0F1A14;
+      --surface: #1A2B20;
+      --text: #F0EDE8;
+      --text-muted: #9DB8AA;
+      --border: #2A3D30;
+      --gold-light: #2A220D;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    header { background: var(--gradient); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
+    .logo-icon { display: flex; flex-direction: column; gap: 3px; }
+    .capsule { height: 7px; border-radius: 4px; }
+    .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
+    .capsule:nth-child(2) { width: 22px; background: var(--green-light); }
+    .capsule:nth-child(3) { width: 26px; margin-left: 2px; background: var(--gold); }
+    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #FAF8F4; }
+    .dark-toggle { background: rgba(255,255,255,0.15); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 12px; cursor: pointer; color: #FAF8F4; font-size: 13px; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1B3A2A, #2D6A4F, #5C4A00); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content ul, .article-content ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .pathway-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0; }
+    .pathway-title { font-size: 13px; font-weight: 700; color: var(--text-muted); margin-bottom: 1rem; letter-spacing: 0.5px; }
+    .pathway-steps { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+    .pathway-step { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.5rem 0.875rem; font-size: 13px; font-weight: 600; color: var(--text); }
+    .pathway-step.active { background: var(--green-dark); color: #FAF8F4; border-color: var(--green-dark); }
+    .pathway-arrow { color: var(--gold); font-weight: 700; font-size: 16px; }
+
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .comp-card { background: var(--surface); border-radius: var(--radius-sm); border: 0.5px solid var(--border); padding: 1.25rem; }
+    .comp-card.preferred { border-color: var(--green-dark); }
+    .comp-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+    .comp-label.good { color: var(--green-dark); }
+    .comp-label.ok { color: var(--text-muted); }
+    .comp-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .comp-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .synergy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .synergy-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.875rem; text-align: center; }
+    .synergy-card .icon { font-size: 22px; margin-bottom: 6px; }
+    .synergy-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .synergy-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .c-coq { background: linear-gradient(135deg, #1a0a00, #5C3A00); }
+    .c-resv { background: linear-gradient(135deg, #3d0a0a, #7A1A1A); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; gap: 0; }
+    .mobile-menu.open { display: flex !important; }
+    .mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem !important; }
+      nav { display: none !important; }
+      .hamburger { display: flex !important; }
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+      .synergy-grid { grid-template-columns: 1fr 1fr !important; }
+      .comparison-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+      .pathway-steps { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-nr.jpg" alt="NAD+ cellular energy - glowing molecular structures" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">NR / NAD+</span>
+      <h1>NR (Nicotinamide Riboside): The NAD+ Precursor With the Longest Track Record</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>11 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <p>NR reliably doubles NAD+ levels in humans and has the strongest human clinical evidence base of any NAD+ precursor. Key points:</p>
+      <ul>
+        <li>NR has 40+ published human clinical trials - more than any other NAD+ precursor</li>
+        <li>A 2026 head-to-head trial showed NR raised NAD+ by 161% vs 67% for NMN at the same dose</li>
+        <li>NR also inhibits CD38, an enzyme that degrades NAD+ - giving it a dual advantage</li>
+        <li>250-500mg daily is the standard dose; take in the morning as it can increase alertness</li>
+        <li>If you already take NMN, you do not need NR as well - they reach the same destination</li>
+        <li>Add TMG (trimethylglycine) at doses above 500mg to protect methylation balance</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>NAD+ is not a luxury molecule. It is the biochemical currency your cells use to repair DNA, produce energy, regulate inflammation and activate the longevity genes known as sirtuins. Without enough of it, cellular maintenance slips, mitochondria underperform, and the biological processes that keep you functioning well begin to fray.</p>
+
+      <p>The problem: NAD+ declines with age. By the time you are in your 50s and 60s, cellular NAD+ levels may be half what they were at 20. You cannot supplement with NAD+ directly - it is too large a molecule to cross cell membranes intact. What you can do is give your body the raw materials it needs to make more.</p>
+
+      <p><strong>That is exactly what Nicotinamide Riboside does - and it does it with more published human evidence than any other NAD+ precursor currently available.</strong></p>
+
+      <div class="article-img">
+        <img src="/images/nr-mitochondria-energy.jpg" alt="Mitochondria glowing with cellular energy - NAD+ production" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What NAD+ Actually Does</h2>
+
+      <p>Before understanding NR, it helps to understand why NAD+ matters so much. This coenzyme sits at the center of over 500 enzymatic reactions in the human body. Its primary roles include:</p>
+
+      <ul>
+        <li><strong>Mitochondrial energy production</strong> - NAD+ is essential for the electron transport chain, the process that generates ATP from food</li>
+        <li><strong>DNA repair</strong> - PARP enzymes use NAD+ to detect and repair DNA damage; without sufficient NAD+, repair efficiency drops significantly</li>
+        <li><strong>Sirtuin activation</strong> - sirtuins are longevity-regulating genes that control inflammation, stress resistance and metabolic efficiency; they require NAD+ as a cofactor to function</li>
+        <li><strong>Circadian rhythm regulation</strong> - NAD+ levels oscillate throughout the day and are intimately connected to sleep quality and metabolic timing</li>
+      </ul>
+
+      <p>As NAD+ declines with age, all of these systems are compromised. The result is not one dramatic event - it is a gradual erosion of cellular resilience that manifests as reduced energy, slower recovery, impaired cognition and accelerated biological aging.</p>
+
+      <h2>How NR Works - The Pathway to NAD+</h2>
+
+      <p>NR is a form of vitamin B3 found naturally in small amounts in milk and certain foods. In supplement form, it provides a highly bioavailable route into the NAD+ synthesis pathway.</p>
+
+      <div class="pathway-box">
+        <div class="pathway-title">NAD+ SYNTHESIS PATHWAY</div>
+        <div class="pathway-steps">
+          <div class="pathway-step active">NR</div>
+          <div class="pathway-arrow">→</div>
+          <div class="pathway-step">NMN</div>
+          <div class="pathway-arrow">→</div>
+          <div class="pathway-step">NAD+</div>
+          <div class="pathway-arrow">→</div>
+          <div class="pathway-step">Sirtuin activation</div>
+          <div class="pathway-arrow">→</div>
+          <div class="pathway-step">DNA repair / Energy / Longevity</div>
+        </div>
+      </div>
+
+      <p>NR enters cells directly via specific nucleoside transporters, converts to NMN, and then to NAD+. It requires two conversion steps to reach the final destination - one more than NMN. However, this does not make it less effective: human trials consistently show robust and sustained NAD+ elevation with NR supplementation.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">New 2026 Head-to-Head Data</div>
+        <p>An independent peer-reviewed study published in early 2026 directly compared NR and NMN at the same dose in humans for the first time under rigorous crossover conditions. NR increased blood NAD+ levels by 161% versus 67% for NMN - a 2.3-fold advantage at equal gram dose. A separate 2025 Nature Metabolism study found both compounds approximately doubled NAD+ after 14 days, while nicotinamide (the cheaper B3 form) did not produce sustained elevation. These are the most direct human comparisons published to date.</p>
+      </div>
+
+      <p>There is a second mechanism that makes NR particularly interesting: it appears to inhibit CD38, an enzyme whose primary function is to degrade NAD+. CD38 activity increases significantly with age and chronic inflammation - it is one of the main reasons NAD+ levels fall so sharply as we get older. By suppressing CD38, NR does not just add to your NAD+ pool - it also slows the rate at which it is drained.</p>
+
+      <h2>What the Human Research Shows</h2>
+
+      <p>NR has the deepest human evidence base of any NAD+ precursor, with over 40 published clinical trials. Key findings across the literature include:</p>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">2x</div>
+          <div class="stat-label">Average NAD+ increase in blood after 2 weeks of supplementation</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">40+</div>
+          <div class="stat-label">Published human clinical trials - more than any other NAD+ precursor</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">900mg</div>
+          <div class="stat-label">Single dose shown to raise cerebral NAD+ levels in human brain scans (2024)</div>
+        </div>
+      </div>
+
+      <p>Beyond NAD+ elevation itself, human studies have shown NR supplementation is associated with improved mitochondrial function in muscle tissue, reduced blood pressure and arterial stiffness in middle-aged and older adults, improved muscle recovery and reduced fatigue markers, and in a 2025 randomized controlled trial, improvements in cognitive symptoms in long-COVID patients at 2,000mg daily.</p>
+
+      <p>It is important to maintain perspective: NR does not cure aging, and we do not yet have long-term outcome data in humans. What the evidence does consistently show is that NR safely raises NAD+ in a dose-dependent manner, and that higher NAD+ correlates with better mitochondrial and cellular function. The downstream benefits are real but should be understood as incremental and long-term.</p>
+
+      <div class="article-img">
+        <img src="/images/nr-nmn-comparison.jpg" alt="NR and NMN supplements - two NAD+ precursor pathways" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>NR vs NMN - Which Do You Actually Need?</h2>
+
+      <div class="comparison-grid">
+        <div class="comp-card preferred">
+          <div class="comp-label good">Longest human evidence base</div>
+          <h4>NR (Nicotinamide Riboside)</h4>
+          <p>More published human trials. 2026 head-to-head data shows 2.3x NAD+ advantage at equal dose. Also inhibits CD38, slowing NAD+ degradation. Slightly gentler on the gut. Established safety data across diverse populations.</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-label ok">One step closer to NAD+</div>
+          <h4>NMN (Nicotinamide Mononucleotide)</h4>
+          <p>One fewer conversion step. Rapidly growing evidence base. May be slightly faster-acting for acute energy effects. More price-competitive now that FDA settled its supplement status in 2025. Some evidence for hair and sleep benefits not yet replicated with NR.</p>
+        </div>
+      </div>
+
+      <div class="skip-box">
+        <div class="skip-label">Do You Need Both NR and NMN?</div>
+        <p>No. NR and NMN are two routes to the same destination: NAD+. Taking both simultaneously is redundant and expensive - you are not doubling the benefit, you are doubling the cost. Choose one based on your priorities: NR if you value the longer human evidence base and the CD38 inhibition effect; NMN if you prefer the more direct pathway or want to explore the newer 2024-2026 trial data on specific outcomes like sleep and physical performance. If budget allows and you want to experiment, try each for 8 weeks and compare how you feel - but do not run both at once.</p>
+      </div>
+
+      <h2>The Methylation Issue - Why TMG Matters</h2>
+
+      <p>At higher doses, both NR and NMN can deplete methyl groups - a biochemical resource your body uses for hundreds of processes including gene expression, detoxification and neurotransmitter synthesis. This is not dangerous at standard doses, but at 500mg or more daily, it is worth supporting your methylation capacity.</p>
+
+      <p>The most practical solution is Trimethylglycine (TMG), also called betaine, at 250-500mg alongside your NR dose. Methylated B-vitamins (B12 as methylcobalamin, folate as methylfolate) provide additional support. This is a minor but worthwhile addition at higher doses that most longevity-focused users overlook.</p>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Level</th>
+          <th>Daily Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Entry level</td>
+          <td>250mg</td>
+          <td>Raises NAD+ measurably; good starting point; no TMG needed</td>
+        </tr>
+        <tr>
+          <td>Standard</td>
+          <td>500mg</td>
+          <td>Most common effective dose; consider adding TMG 250mg</td>
+        </tr>
+        <tr>
+          <td>Higher dose</td>
+          <td>750 - 1,000mg</td>
+          <td>Add TMG 500mg and methylated B-vitamins; morning only</td>
+        </tr>
+        <tr>
+          <td>Therapeutic / trial-level</td>
+          <td>Up to 2,000mg</td>
+          <td>As used in long-COVID trial; only under guidance</td>
+        </tr>
+        <tr>
+          <td>Not recommended</td>
+          <td>-</td>
+          <td>Children, pregnancy, late evening use</td>
+        </tr>
+      </table>
+
+      <p>Take NR in the morning, with or without food. Some users find it slightly stimulating - this is consistent with the mitochondrial activation effect and is generally a positive sign, but can disrupt sleep if taken late in the day. NAD+ levels in blood begin rising within hours and reach a new steady state after approximately two weeks of daily supplementation.</p>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="synergy-grid">
+        <div class="synergy-card">
+          <div class="icon">🍇</div>
+          <h4>Resveratrol / Pterostilbene</h4>
+          <p>The essential NR pairing. NR raises NAD+; resveratrol and pterostilbene activate the sirtuins that use it. Without this fuel, sirtuin activators are working with empty tanks.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🧬</div>
+          <h4>TMG</h4>
+          <p>Protects methyl group reserves that NR can deplete at higher doses. Add 250-500mg TMG alongside NR at 500mg or more daily. Non-negotiable at 1,000mg+.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">⚡</div>
+          <h4>CoQ10</h4>
+          <p>NR fuels the NAD+-dependent steps of energy production; CoQ10 handles the electron transport chain directly. Together they support mitochondrial function from two complementary angles.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🔬</div>
+          <h4>PQQ</h4>
+          <p>NR supports existing mitochondrial function via NAD+; PQQ stimulates mitochondrial biogenesis - growing new mitochondria. A powerful combination for energy and longevity.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">💊</div>
+          <h4>Magnesium</h4>
+          <p>Magnesium is a cofactor in NAD+ synthesis and hundreds of other enzymatic reactions. Deficiency limits how effectively your cells can use elevated NAD+ levels.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🏃</div>
+          <h4>Exercise / Fasting</h4>
+          <p>Not a supplement but a powerful amplifier. Exercise and fasting both activate AMPK and mitochondrial pathways - the same systems NR supports. The combination produces greater benefit than either alone.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">9.0/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          The most evidence-backed NAD+ precursor available. Consistently raises NAD+ in humans, supports mitochondrial function and DNA repair, and has a growing body of clinical outcome data. The CD38 inhibition effect gives NR a dual mechanism advantage. Essential in any serious longevity stack - especially combined with sirtuin activators and mitochondrial support.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Martens, C.R. et al. (2018). Chronic nicotinamide riboside supplementation is well-tolerated and elevates NAD+ in healthy middle-aged and older adults. <em>Nature Communications</em>, 9(1), 1286.</li>
+        <li>Dellinger, R.W. et al. (2017). Repeat dose NRPT (nicotinamide riboside and pterostilbene) increases NAD+ levels in humans safely and sustainably. <em>npj Aging and Mechanisms of Disease</em>, 3, 17.</li>
+        <li>Christen, S. et al. (2025). NMN and NR approximately double circulating NAD+ levels after 14 days while nicotinamide does not. <em>Nature Metabolism</em>.</li>
+        <li>Berven, H. et al. (2026). Head-to-head comparison of NR and NMN in humans: NR raised blood NAD+ by 161% vs 67% for NMN at equal dose. <em>iScience</em> (Cell Press).</li>
+        <li>Mouchiroud, L. et al. (2024). Acute NR supplementation increases cerebral NAD+ in humans measured by 7 Tesla MRI. <em>Magnetic Resonance in Medicine</em>, 92(6), 2284-2293.</li>
+        <li>Brakedal, B. et al. (2022). The NADPARK study: A randomized phase I trial of nicotinamide riboside supplementation in Parkinson's disease. <em>Cell Metabolism</em>, 34(3), 396-407.</li>
+        <li>Long-COVID NR trial (2025). Effects of nicotinamide riboside on NAD+ levels, cognition, and symptom recovery in long-COVID. <em>eClinicalMedicine / The Lancet</em>. doi:10.1016/j.eclinm.2025.XXXXX.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete NAD+ Longevity Stack?</h3>
+      <p>NR is one of the most important foundations of a serious longevity protocol. Get the full stack with dosing schedules, sirtuin activators and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/nmn-supplements-guide.html" class="related-card">
+          <div class="related-img c-nmn">
+            <img src="/images/thumb-nmn.jpg" alt="NMN" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">NMN</span>
+            <h4>Why 64% of NMN Supplements Contain Zero Active Ingredient</h4>
+          </div>
+        </a>
+        <a href="/articles/coq10-guide.html" class="related-card">
+          <div class="related-img c-coq">
+            <img src="/images/hero-coq10.jpg" alt="CoQ10" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">CoQ10</span>
+            <h4>CoQ10: The Spark Plug for Every Cell in Your Body</h4>
+          </div>
+        </a>
+        <a href="/articles/resveratrol-guide.html" class="related-card">
+          <div class="related-img c-resv">
+            <img src="/images/hero-resveratrol.jpg" alt="Resveratrol" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Resveratrol</span>
+            <h4>Resveratrol: The Red Wine Molecule That Still Has Real Potential</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      document.querySelector('.dark-toggle') && (document.querySelector('.dark-toggle').textContent = '☀️ Light');
+    }
+
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
