@@ -139,5 +139,6 @@ async function loadArticles() {
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', loadArticles);
 } else {
-  loadArticles();
+  // DOM already ready but wait for header.js to finish inserting elements
+  setTimeout(loadArticles, 50);
 }
