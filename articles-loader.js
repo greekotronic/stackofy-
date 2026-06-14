@@ -1,6 +1,5 @@
 // Stackofy - Articles Loader
 // Reads articles.json and populates article cards on any page
-// Add <div id="articles-grid"></div> or <div id="featured-article"></div> to use
 
 const COLORS = {
   'c-nmn':   'background:linear-gradient(135deg,#1B4332,#2D6A4F)',
@@ -16,6 +15,7 @@ const COLORS = {
 
 function makeCard(article, size) {
   const bg = COLORS[article.color] || 'background:#1B4332';
+
   if (size === 'featured') {
     return `
       <a href="${article.url}" class="featured-xl mb3">
@@ -31,6 +31,7 @@ function makeCard(article, size) {
         </div>
       </a>`;
   }
+
   if (size === 'horizontal') {
     return `
       <a href="${article.url}" class="h-article">
@@ -45,6 +46,7 @@ function makeCard(article, size) {
         </div>
       </a>`;
   }
+
   if (size === 'articles-page') {
     return `
       <a href="${article.url}" class="article-card"
@@ -63,6 +65,7 @@ function makeCard(article, size) {
         </div>
       </a>`;
   }
+
   // Default small card
   return `
     <a href="${article.url}" class="article-card">
@@ -82,42 +85,51 @@ async function loadArticles() {
     const res = await fetch('/articles.json');
     const articles = await res.json();
 
-    // FEATURED ARTICLE (homepage)
+    // FEATURED ARTICLE (homepage) - the one marked featured:true
     const featuredEl = document.getElementById('featured-article');
     if (featuredEl) {
       const featured = articles.find(a => a.featured) || articles[0];
       featuredEl.innerHTML = makeCard(featured, 'featured');
     }
 
-    // LATEST 4 CARDS (homepage)
+    // LATEST ARTICLES (homepage) - all non-featured articles
     const latestEl = document.getElementById('latest-articles');
     if (latestEl) {
-      const latest = articles.filter(a => !a.featured).slice(0, 8);
+      const latest = articles.filter(a => !a.featured);
       latestEl.innerHTML = latest.map(a => makeCard(a, 'small')).join('');
     }
 
-    // LONGEVITY SECTION (homepage)
+    // LONGEVITY SECTION (homepage) - top 3 longevity articles
     const longevityEl = document.getElementById('longevity-articles');
     if (longevityEl) {
       const longevity = articles.filter(a => a.tags.includes('longevity')).slice(0, 3);
       longevityEl.innerHTML = longevity.map(a => makeCard(a, 'horizontal')).join('');
     }
 
-    // FOUNDATION SECTION (homepage)
+    // ENERGY & PERFORMANCE (homepage) - CoQ10 and PQQ
+    const energyEl = document.getElementById('energy-articles');
+    if (energyEl) {
+      const energy = articles.filter(a =>
+        ['CoQ10', 'PQQ'].includes(a.tag)
+      );
+      energyEl.innerHTML = energy.map(a => makeCard(a, 'horizontal')).join('');
+    }
+
+    // FOUNDATION SECTION (homepage) - D3, Magnesium, Omega-3
     const foundationEl = document.getElementById('foundation-articles');
     if (foundationEl) {
       const foundation = articles.filter(a =>
-        ['Magnesium','Omega-3','Vitamin D3'].includes(a.tag)
+        ['Magnesium', 'Omega-3', 'Vitamin D3'].includes(a.tag)
       );
       foundationEl.innerHTML = foundation.map(a => makeCard(a, 'horizontal')).join('');
     }
 
-    // IMMUNE SECTION (homepage)
+    // IMMUNE SECTION (homepage) - Vitamin C and Selenium
     const immuneEl = document.getElementById('immune-articles');
     if (immuneEl) {
       const immune = articles.filter(a =>
-        a.tags.includes('immune') && !['Magnesium','Omega-3','Vitamin D3'].includes(a.tag)
-      ).slice(0, 2);
+        ['Vitamin C', 'Selenium'].includes(a.tag)
+      );
       immuneEl.innerHTML = immune.map(a => makeCard(a, 'horizontal')).join('');
     }
 
@@ -125,7 +137,6 @@ async function loadArticles() {
     const articlesGridEl = document.getElementById('articles-grid');
     if (articlesGridEl) {
       articlesGridEl.innerHTML = articles.map(a => makeCard(a, 'articles-page')).join('');
-      // Update count
       const countEl = document.getElementById('article-count');
       if (countEl) countEl.textContent = articles.length;
     }
@@ -139,6 +150,5 @@ async function loadArticles() {
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', loadArticles);
 } else {
-  // DOM already ready but wait for header.js to finish inserting elements
   setTimeout(loadArticles, 50);
 }

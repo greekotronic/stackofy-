@@ -11,7 +11,7 @@
   <meta property="og:url" content="https://stackofy.com" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <script src="/header.js"></script>
-  
+
   <style>
     :root {
       --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
@@ -26,6 +26,7 @@
     a { text-decoration: none; color: inherit; }
     img { display: block; }
 
+    /* HERO */
     .hero { background: linear-gradient(rgba(27,67,50,0.75), rgba(27,67,50,0.85)), url('/images/hero-homepage.jpg') center/cover no-repeat; padding: 3.5rem 2rem 2.5rem; text-align: center; }
     .hero h1 { color: #FAF8F4; font-size: 2rem; font-weight: 700; margin-bottom: 0.6rem; letter-spacing: -0.5px; max-width: 640px; margin-left: auto; margin-right: auto; }
     .hero p { color: var(--green-light); font-size: 15px; margin-bottom: 1.8rem; }
@@ -37,6 +38,7 @@
     .cat-pill { background: rgba(255,255,255,0.1); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 6px 14px; color: #FAF8F4; font-size: 13px; cursor: pointer; transition: background 0.2s; }
     .cat-pill:hover { background: rgba(255,255,255,0.2); }
 
+    /* LAYOUT */
     .main { max-width: 1040px; margin: 0 auto; padding: 2.5rem 2rem; }
     .section-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
     .section-header { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 1.25rem; }
@@ -47,7 +49,9 @@
     .mb3 { margin-bottom: 3rem; }
     .mb15 { margin-bottom: 1.5rem; }
     .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; cursor: pointer; display: inline-block; }
+    .btn-gold:hover { opacity: 0.9; }
 
+    /* QUIZ BANNER */
     .quiz-banner { background: var(--gradient); border-radius: var(--radius); padding: 1.75rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 3rem; }
     .quiz-banner h3 { color: #FAF8F4; font-size: 17px; font-weight: 600; margin-bottom: 4px; }
     .quiz-banner p { color: var(--green-light); font-size: 13px; }
@@ -104,6 +108,20 @@
     .trust-num { font-size: 26px; font-weight: 700; color: var(--green-dark); }
     .trust-label { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
 
+    /* DID YOU KNOW BOX */
+    .didyouknow { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 2rem; margin-bottom: 3rem; }
+    .didyouknow-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.25rem; }
+    .facts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .fact-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .fact-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+    .fact-item h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .fact-item p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    /* STAT BANNER */
+    .stat-banner { background: var(--gradient); border-radius: var(--radius); padding: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: center; margin-bottom: 3rem; }
+    .stat-banner-num { font-size: 2rem; font-weight: 700; color: var(--gold); }
+    .stat-banner-label { font-size: 13px; color: var(--green-light); margin-top: 4px; }
+
     /* STACKS + REC */
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
     .stack-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
@@ -118,6 +136,8 @@
     .stack-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
     .stack-card h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
     .stack-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    /* RECOMMENDED */
     .rec-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
     .rec-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
     .rec-card:hover { border-color: var(--gold); transform: translateY(-2px); }
@@ -132,11 +152,23 @@
     .rec-card h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 3px; }
     .rec-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
 
+    /* QUOTE BANNER */
+    .quote-banner { background: var(--gold-light); border-radius: var(--radius); border: 0.5px solid var(--gold); padding: 2rem 2.5rem; text-align: center; margin-bottom: 3rem; }
+    .quote-banner blockquote { font-size: 1.15rem; font-style: italic; color: var(--text); line-height: 1.7; max-width: 680px; margin: 0 auto 0.75rem; }
+    .quote-banner cite { font-size: 12px; color: var(--text-muted); font-style: normal; font-weight: 600; letter-spacing: 0.5px; }
+
     /* ARI */
     .ari-block { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; display: flex; gap: 1.5rem; align-items: center; }
     .ari-logo { width: 60px; height: 60px; border-radius: var(--radius-sm); background: var(--gradient); display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 28px; }
     .ari-block h3 { font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 6px; }
     .ari-block p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+
+    /* NEWSLETTER / LEAD MAGNET */
+    .lead-block { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; margin-bottom: 3rem; }
+    .lead-block-text h3 { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .lead-block-text p { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+    .lead-block-cta { flex-shrink: 0; }
+    .lead-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
 
     /* QUIZ BOTTOM */
     .quiz-bottom { background: var(--gradient); border-radius: var(--radius); padding: 3.5rem 2rem; text-align: center; }
@@ -146,6 +178,7 @@
     .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
     .disclaimer strong { color: var(--text); }
 
+    /* RESPONSIVE */
     @media (max-width: 900px) {
       .grid-4 { grid-template-columns: 1fr 1fr !important; }
       .grid-3 { grid-template-columns: 1fr 1fr !important; }
@@ -153,6 +186,9 @@
       .featured-xl-img { height: 220px !important; }
       .spotlight { grid-template-columns: 1fr !important; }
       .two-col { grid-template-columns: 1fr !important; }
+      .facts-grid { grid-template-columns: 1fr 1fr !important; }
+      .stat-banner { grid-template-columns: 1fr 1fr !important; }
+      .lead-block { flex-direction: column !important; align-items: flex-start !important; }
     }
     @media (max-width: 600px) {
       .hero { padding: 1.75rem 1rem 1.5rem !important; }
@@ -161,7 +197,7 @@
       .search-bar input, .search-bar button { width: 100% !important; }
       .main { padding: 1.25rem 1rem !important; }
       .quiz-banner { flex-direction: column !important; text-align: center !important; gap: 1rem !important; }
-      .btn-gold { width: 100% !important; }
+      .btn-gold { width: 100% !important; text-align: center !important; }
       .grid-4, .grid-3 { grid-template-columns: 1fr !important; }
       .grid-2 { grid-template-columns: 1fr !important; }
       .h-article-img { width: 100px !important; }
@@ -170,6 +206,8 @@
       .rec-grid { grid-template-columns: 1fr !important; }
       .ari-block { flex-direction: column !important; }
       .quiz-bottom h2 { font-size: 1.2rem !important; }
+      .facts-grid { grid-template-columns: 1fr !important; }
+      .stat-banner { grid-template-columns: 1fr !important; }
     }
   </style>
 </head>
@@ -204,7 +242,7 @@
       <a href="/your-stack.html" class="btn-gold">Start Stack Builder →</a>
     </div>
 
-    <!-- FEATURED ARTICLE - auto-loaded -->
+    <!-- FEATURED ARTICLE -->
     <div class="section-label">Editor's Pick</div>
     <div class="section-header mb15">
       <div class="section-title">Featured Article</div>
@@ -212,7 +250,7 @@
     </div>
     <div id="featured-article" class="mb3"></div>
 
-    <!-- LATEST 4 CARDS - auto-loaded -->
+    <!-- LATEST ARTICLES - all 8 -->
     <div class="section-label">What's New</div>
     <div class="section-header mb15">
       <div class="section-title">Latest Articles</div>
@@ -232,7 +270,7 @@
 
     <div class="divider"></div>
 
-    <!-- LONGEVITY SECTION - auto-loaded -->
+    <!-- LONGEVITY SECTION -->
     <div class="section-label">Deep Dive</div>
     <div class="section-header mb15">
       <div class="section-title">Longevity Essentials</div>
@@ -260,7 +298,59 @@
 
     <div class="divider"></div>
 
-    <!-- FOUNDATION SECTION - auto-loaded -->
+    <!-- DID YOU KNOW -->
+    <div class="didyouknow mb3">
+      <div class="didyouknow-title">Did You Know</div>
+      <div class="facts-grid">
+        <div class="fact-item">
+          <div class="fact-icon">🧬</div>
+          <div>
+            <h4>Over 40? Your CoQ10 drops fast.</h4>
+            <p>Mitochondrial CoQ10 levels decline by up to 50% between ages 40 and 70 - affecting every cell that needs energy.</p>
+          </div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon">☀️</div>
+          <div>
+            <h4>80% of adults are Vitamin D deficient.</h4>
+            <p>Most people with "normal" levels are still operating well below the threshold linked to immune and longevity benefits.</p>
+          </div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon">🐟</div>
+          <div>
+            <h4>Most fish oil is already rancid.</h4>
+            <p>Independent testing shows the majority of retail omega-3 products exceed safe oxidation limits before they reach the shelf.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENERGY & PERFORMANCE -->
+    <div class="section-label">Energy</div>
+    <div class="section-header mb15">
+      <div class="section-title">Energy & Performance</div>
+      <a href="/articles.html" class="see-all">See all →</a>
+    </div>
+    <div id="energy-articles" class="grid-2 mb3"></div>
+
+    <!-- STAT BANNER -->
+    <div class="stat-banner mb3">
+      <div>
+        <div class="stat-banner-num">300+</div>
+        <div class="stat-banner-label">Enzyme reactions require Magnesium</div>
+      </div>
+      <div>
+        <div class="stat-banner-num">90%</div>
+        <div class="stat-banner-label">of NMN products fail independent lab tests</div>
+      </div>
+      <div>
+        <div class="stat-banner-num">40x</div>
+        <div class="stat-banner-label">more bioavailable: Ubiquinol vs standard CoQ10</div>
+      </div>
+    </div>
+
+    <!-- FOUNDATION STACK -->
     <div class="section-label">Start Here</div>
     <div class="section-header mb15">
       <div class="section-title">The Foundation Stack</div>
@@ -268,7 +358,9 @@
     </div>
     <div id="foundation-articles" class="grid-3 mb3"></div>
 
-    <!-- IMMUNE SECTION - auto-loaded -->
+    <div class="divider"></div>
+
+    <!-- IMMUNE & DEFENSE -->
     <div class="section-label">Immunity</div>
     <div class="section-header mb15">
       <div class="section-title">Immune & Defense</div>
@@ -276,7 +368,23 @@
     </div>
     <div id="immune-articles" class="grid-2 mb3"></div>
 
-    <div class="divider"></div>
+    <!-- QUOTE BANNER -->
+    <div class="quote-banner">
+      <blockquote>"The difference between a supplement that works and one that doesn't is rarely the ingredient - it's the form, the dose, and whether it was handled correctly before it reached you."</blockquote>
+      <cite>- Alethia Research Institute</cite>
+    </div>
+
+    <!-- FREE LEAD MAGNET -->
+    <div class="lead-block">
+      <div class="lead-block-text">
+        <div class="lead-tag">Free Download</div>
+        <h3>NMN Quick-Start Checklist</h3>
+        <p>5 questions you must ask before buying any NMN supplement. Most brands fail at least 3 of them. Takes 90 seconds to read - could save you from wasting $80 on a product with zero active ingredient.</p>
+      </div>
+      <div class="lead-block-cta">
+        <a href="https://alethiaresearch.gumroad.com" class="btn-gold">Download Free →</a>
+      </div>
+    </div>
 
     <!-- POPULAR STACKS + RECOMMENDED -->
     <div class="two-col mb3">
@@ -338,6 +446,6 @@
     </div>
 
   </div>
-<script src="/articles-loader.js"></script>
+  <script src="/articles-loader.js"></script>
 </body>
 </html>
