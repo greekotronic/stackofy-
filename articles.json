@@ -120,4 +120,14 @@
   "readTime": "9 min",
   "description": "80% bioavailability vs 20% for resveratrol. 7x longer half-life. Better brain penetration. But there is a catch with LDL - here is the full picture."
 }
+,{
+  "title": "NR (Nicotinamide Riboside): The NAD+ Precursor With the Longest Track Record",
+  "tag": "NR",
+  "url": "/articles/nr-guide.html",
+  "image": "/images/hero-nr.jpg",
+  "color": "c-nr",
+  "tags": "longevity energy brain",
+  "readTime": "11 min",
+  "description": "NR has 40+ human clinical trials and a 2026 head-to-head study showing 2.3x more NAD+ than NMN at the same dose. The most evidence-backed NAD+ precursor available."
+}
 ]
