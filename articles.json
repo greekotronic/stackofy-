@@ -150,4 +150,14 @@
   "readTime": "10 min",
   "description": "Spermidine triggers the same cellular cleanup as fasting. A 2024 Nature study confirmed it is the essential mediator of fasting's longevity effects."
 }
+,{
+  "title": "Alpha-Lipoic Acid: The Dual-Soluble Antioxidant with Mitochondrial Muscle",
+  "tag": "ALA",
+  "url": "/articles/ala-guide.html",
+  "image": "/images/hero-ala.jpg",
+  "color": "c-ala",
+  "tags": "longevity energy",
+  "readTime": "10 min",
+  "description": "ALA works in water AND fat - reaching mitochondria and the brain where other antioxidants cannot. A 2025 meta-analysis of 63 RCTs confirms its metabolic benefits."
+}
 ]

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alpha-Lipoic Acid (ALA): The Dual-Soluble Antioxidant with Mitochondrial Muscle - Stackofy</title>
+  <meta name="description" content="ALA crosses barriers other antioxidants cannot. It recycles vitamin C and E, protects mitochondrial membranes, chelates toxic metals and improves insulin sensitivity. Here is the full science." />
+
+  <meta property="og:title" content="Alpha-Lipoic Acid: The Dual-Soluble Antioxidant with Mitochondrial Muscle" />
+  <meta property="og:description" content="ALA works in water AND fat. A 2025 meta-analysis of 63 RCTs confirms it reduces BMI, blood sugar, insulin resistance and inflammation. Here is when it actually makes sense." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/ala-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-ala.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    header { background: var(--gradient); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
+    .logo-icon { display: flex; flex-direction: column; gap: 3px; }
+    .capsule { height: 7px; border-radius: 4px; }
+    .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
+    .capsule:nth-child(2) { width: 22px; background: var(--green-light); }
+    .capsule:nth-child(3) { width: 26px; margin-left: 2px; background: var(--gold); }
+    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #FAF8F4; }
+    .dark-toggle { background: rgba(255,255,255,0.15); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 12px; cursor: pointer; color: #FAF8F4; font-size: 13px; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a1a00, #3A3A10, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content ul, .article-content ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .comp-card { background: var(--surface); border-radius: var(--radius-sm); border: 0.5px solid var(--border); padding: 1.25rem; }
+    .comp-card.preferred { border-color: var(--green-dark); }
+    .comp-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+    .comp-label.good { color: var(--green-dark); }
+    .comp-label.ok { color: var(--text-muted); }
+    .comp-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .comp-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .synergy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .synergy-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.875rem; text-align: center; }
+    .synergy-card .icon { font-size: 22px; margin-bottom: 6px; }
+    .synergy-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .synergy-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .c-coq { background: linear-gradient(135deg, #1a0a00, #5C3A00); }
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+    .c-pqq { background: linear-gradient(135deg, #2C1A0E, #5C3A00); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; gap: 0; }
+    .mobile-menu.open { display: flex !important; }
+    .mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem !important; }
+      nav { display: none !important; }
+      .hamburger { display: flex !important; }
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+      .synergy-grid { grid-template-columns: 1fr 1fr !important; }
+      .comparison-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-ala.jpg" alt="Alpha-Lipoic Acid - glowing mitochondrial energy structures" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Alpha-Lipoic Acid</span>
+      <h1>The Dual-Soluble Antioxidant with Mitochondrial Muscle</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>10 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <p>ALA is one of the few antioxidants that works in both water and fat environments, giving it access to virtually every cell compartment including mitochondria and the brain. Key points:</p>
+      <ul>
+        <li>Choose R-ALA over standard racemic ALA - it is the biologically active form and works at half the dose</li>
+        <li>Take on an empty stomach - fat significantly reduces absorption</li>
+        <li>Strong evidence for blood sugar and insulin resistance; 63-RCT meta-analysis confirms reductions in BMI, fasting glucose and HbA1c</li>
+        <li>Cochrane review found mixed evidence for diabetic neuropathy at 6 months - benefit may require longer protocols</li>
+        <li>Add biotin if using high doses long-term - ALA can deplete it over time</li>
+        <li>If you already take glutathione or NAC: ALA recycles glutathione and amplifies it - this is a genuine synergy, not redundancy</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Most antioxidants have a limitation: they work either in water or in fat, but not both. Vitamin C is water-soluble - it works in blood and cytoplasm but cannot penetrate cell membranes. Vitamin E is fat-soluble - it integrates into membranes but cannot reach the aqueous environments where many free radicals form. Neither can get into the mitochondria effectively.</p>
+
+      <p>Alpha-lipoic acid does not have this problem. It is genuinely dual-soluble - equally at home in water and fat, able to cross cell membranes, penetrate mitochondrial membranes and even cross the blood-brain barrier. This gives it access to cellular compartments that most antioxidants simply cannot reach.</p>
+
+      <p><strong>ALA has been in clinical use since the late 1950s. With nearly 6,500 published studies, it is one of the most extensively researched supplements in existence - and the evidence base keeps growing.</strong></p>
+
+      <div class="article-img">
+        <img src="/images/ala-metabolic-support.jpg" alt="ALA food sources - spinach, broccoli, red meat on dark slate" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What ALA Actually Does</h2>
+
+      <p>ALA wears several hats, which is part of what makes it unusual. It is simultaneously an antioxidant, a metabolic cofactor, a metal chelator and an insulin sensitizer. Understanding each role helps clarify when it genuinely earns its place in a stack.</p>
+
+      <p><strong>As an antioxidant:</strong> ALA neutralizes free radicals directly and - crucially - recycles other antioxidants. It regenerates oxidized vitamin C and vitamin E, restoring their activity after they have neutralized free radicals. It also raises glutathione levels, the body's master antioxidant, by providing cysteine and supporting glutathione synthesis. This network effect makes ALA a force multiplier for the entire antioxidant system.</p>
+
+      <p><strong>As a metabolic cofactor:</strong> ALA is an essential component of several mitochondrial enzyme complexes, particularly in the Krebs cycle - the process that converts food into ATP energy. Without adequate ALA, these enzyme complexes cannot function properly, and energy production efficiency drops.</p>
+
+      <p><strong>As a metal chelator:</strong> ALA binds to toxic heavy metals including mercury, arsenic, cadmium and lead, facilitating their removal from tissues. This is a relatively underappreciated function that makes ALA useful in low-level detox protocols, particularly for people with known metal exposure.</p>
+
+      <p><strong>As an insulin sensitizer:</strong> ALA activates AMPK and enhances glucose transporter activity, improving cellular uptake of glucose. This translates into measurable improvements in insulin sensitivity and blood sugar regulation in clinical populations.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">2025 Meta-Analysis - 63 Randomized Controlled Trials</div>
+        <p>A comprehensive dose-response meta-analysis published in 2025 synthesized 63 RCTs on ALA and cardiometabolic risk factors. ALA supplementation significantly reduced BMI, insulin resistance (HOMA-IR), waist circumference, body weight, fat mass, fasting blood glucose, fasting insulin, HbA1c and triglycerides. The relationship between ALA dose and BMI reduction was linear - more ALA, more effect. Blood pressure and LDL cholesterol were not significantly affected. This is one of the strongest evidence syntheses for any metabolic supplement to date.</p>
+      </div>
+
+      <h2>R-ALA vs Standard ALA - The Form Matters Significantly</h2>
+
+      <div class="comparison-grid">
+        <div class="comp-card preferred">
+          <div class="comp-label good">✓ Recommended</div>
+          <h4>R-ALA (Stabilized)</h4>
+          <p>The biologically active form - the only enantiomer your body synthesizes naturally. More potent at lower doses (50-200mg effective vs 300-600mg for racemic). Better tolerated. Less likely to cause blood sugar fluctuations. More expensive but worth it for consistent use.</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-label ok">Acceptable</div>
+          <h4>Racemic ALA (R+S mix)</h4>
+          <p>The standard supplement form - a 50/50 mix of active R-form and inactive S-form. Effective and well-studied, but requires higher doses to deliver equivalent R-ALA activity. S-ALA is not harmful but contributes nothing therapeutically and may compete with R-ALA for absorption.</p>
+        </div>
+      </div>
+
+      <p>One important note: standard R-ALA without stabilization degrades rapidly at room temperature. Look for "stabilized R-ALA" or R-ALA bonded to sodium or potassium - these forms maintain potency significantly better than unstabilized R-ALA powder.</p>
+
+      <div class="article-img">
+        <img src="/images/ala-mitochondria-membrane.jpg" alt="Mitochondrial membrane repair - ALA's unique cellular access" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Neuropathy Question - What the Evidence Actually Shows</h2>
+
+      <p>ALA is widely used for diabetic peripheral neuropathy, particularly in Germany where it has been prescribed for decades. The clinical intuition makes sense: oxidative stress damages peripheral nerves, ALA is a powerful antioxidant, therefore ALA should help neuropathy.</p>
+
+      <p>The evidence is more nuanced. A 2025 JAMA Network review covering nearly 90 years of ALA research confirms its strong antioxidant and metabolic effects. However, a 2024 Cochrane systematic review of randomized controlled trials specifically for diabetic neuropathy found that ALA probably has little or no effect on neuropathy symptoms at six months compared to placebo. The Cochrane authors noted that most studies were at high risk of bias and that longer protocols may be needed to see structural nerve benefit.</p>
+
+      <p>A separate 2025 study did demonstrate for the first time in humans that ALA reduces Advanced Glycation End Products (AGEs) - protein modifications caused by chronic high blood sugar that damage nerves and blood vessels. This suggests ALA's benefit in neuropathy may operate over longer timeframes through AGE reduction rather than acute symptom relief.</p>
+
+      <p>The practical takeaway: ALA for neuropathy is a long-term commitment, not a short-term fix. Its metabolic and antioxidant benefits are robust and well-supported. Expecting rapid neuropathy symptom relief is setting an unrealistic expectation based on the current trial data.</p>
+
+      <h2>Who Benefits Most from ALA</h2>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">63</div>
+          <div class="stat-label">RCTs included in the 2025 meta-analysis confirming metabolic benefits</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">90</div>
+          <div class="stat-label">Years of clinical use - one of the most historically established supplements available</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">600mg</div>
+          <div class="stat-label">Daily dose used in most neuropathy and blood sugar clinical trials</div>
+        </div>
+      </div>
+
+      <p>ALA earns its strongest case in specific contexts. People with elevated blood sugar, insulin resistance, metabolic syndrome or pre-diabetes will see the most measurable benefit from the glucose and HOMA-IR improvements confirmed in meta-analysis. Those with suspected heavy metal exposure benefit from the chelation function. People seeking broad antioxidant network support - particularly to amplify glutathione and recycle vitamins C and E - also have a strong rationale.</p>
+
+      <p>For healthy people with no metabolic issues and already-adequate antioxidant intake, the incremental benefit is real but more modest. In this context, ALA works best as part of a mitochondrial support stack rather than as a standalone priority.</p>
+
+      <div class="skip-box">
+        <div class="skip-label">Do You Need ALA If You Already Take Vitamin C, Vitamin E or Glutathione?</div>
+        <p>ALA is not redundant with these - it amplifies them. Vitamin C and E are consumed when they neutralize free radicals. ALA regenerates both, restoring their activity. Glutathione is similarly recycled by ALA. If you take NAC or glutathione, adding ALA does not double up - it ensures those compounds keep working instead of being depleted. This is a genuine antioxidant network synergy. The one area of genuine overlap: if you already take berberine for blood sugar, adding ALA provides complementary but partially overlapping insulin-sensitizing effects - useful in moderate to severe insulin resistance, but potentially redundant for mild cases.</p>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Daily Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>General antioxidant / mitochondrial support</td>
+          <td>100 - 300mg racemic ALA / 50-150mg R-ALA</td>
+          <td>Empty stomach; morning or pre-workout</td>
+        </tr>
+        <tr>
+          <td>Blood sugar / insulin sensitivity</td>
+          <td>300 - 600mg racemic ALA / 150-300mg R-ALA</td>
+          <td>Split dose with meals; monitor blood glucose</td>
+        </tr>
+        <tr>
+          <td>Neuropathy / detox protocols</td>
+          <td>600 - 900mg racemic ALA (split dose)</td>
+          <td>Add biotin 1-2mg; longer protocol needed (3+ months)</td>
+        </tr>
+        <tr>
+          <td>Biotin supplementation</td>
+          <td>1 - 2mg biotin daily</td>
+          <td>Required for long-term use above 300mg ALA; ALA depletes biotin over time</td>
+        </tr>
+        <tr>
+          <td>Not recommended</td>
+          <td>-</td>
+          <td>Evening/bedtime (stimulating); with fatty meals (reduces absorption); diabetics on medication without monitoring</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Blood Sugar Warning - Important</div>
+        <p>ALA can lower blood glucose meaningfully, particularly at doses above 300mg. If you take insulin, metformin or other glucose-lowering medications, ALA supplementation requires medical supervision and regular blood glucose monitoring. The combination can cause hypoglycemia. This applies especially to the higher therapeutic doses used for neuropathy protocols.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="synergy-grid">
+        <div class="synergy-card">
+          <div class="icon">🔬</div>
+          <h4>Acetyl-L-Carnitine</h4>
+          <p>The classic mitochondrial pairing. ALCAR transports fatty acids into mitochondria for fuel; ALA optimizes the enzyme complexes that burn them. Together they support energy production and cognitive function more effectively than either alone.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">⚡</div>
+          <h4>CoQ10 + PQQ</h4>
+          <p>All three support mitochondrial function through different mechanisms. CoQ10 fuels the electron transport chain, PQQ stimulates new mitochondria, ALA protects mitochondrial membranes and enzyme complexes. A comprehensive mitochondrial stack.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🛡️</div>
+          <h4>Glutathione / NAC</h4>
+          <p>ALA raises glutathione levels and recycles it after use. NAC provides cysteine for glutathione synthesis. Together they create a self-sustaining antioxidant cycle with significantly more capacity than either alone.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🌿</div>
+          <h4>Biotin</h4>
+          <p>Not optional at higher doses - it is protective. Long-term ALA use above 300mg can deplete biotin. Add 1-2mg biotin daily to prevent deficiency symptoms like hair loss and fatigue from developing gradually.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🍊</div>
+          <h4>Vitamin C + E</h4>
+          <p>ALA recycles both vitamins after they neutralize free radicals, restoring their antioxidant capacity. This network effect means your vitamin C and E investments work harder and last longer when ALA is present.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">💊</div>
+          <h4>Magnesium</h4>
+          <p>Magnesium is a cofactor in ALA-dependent enzyme reactions. Adequate magnesium ensures the metabolic pathways ALA supports can actually run efficiently. Most people are mildly deficient - pair them.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">8.0/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          One of the most extensively researched supplements with nearly 90 years of clinical history. Uniquely dual-soluble with genuine access to mitochondria and the brain. Strong metabolic evidence confirmed in 2025 meta-analysis. Neuropathy benefit is real but requires longer protocols. Scores highest for people with metabolic concerns, toxic metal exposure or as an antioxidant network amplifier.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Ziegler, D. et al. (2025). Alpha-lipoic acid in diabetic peripheral neuropathy: addressing the challenges and complexities surrounding a 70-year-old compound. <em>Current Issues in Molecular Biology</em>, 47(6), 402.</li>
+        <li>Baicus, C. et al. (2024). Alpha-lipoic acid for diabetic peripheral neuropathy. <em>Cochrane Database of Systematic Reviews</em>. doi:10.1002/14651858.CD012967.pub2.</li>
+        <li>Dose-response meta-analysis (2025). Effects of alpha-lipoic acid supplementation on cardiometabolic risk factors: 63 RCTs. <em>Nutrition, Metabolism and Cardiovascular Diseases</em>.</li>
+        <li>Farkas, E. et al. (2025). Alpha-lipoic acid treatment reduces advanced glycation end products in type 2 diabetes patients with neuropathy. <em>Biomedicines</em>, 13(2), 438.</li>
+        <li>Genazzani, A.D. et al. (2024). Alpha lipoic acid administration improved insulin sensitivity and liver clearance in overweight PCOS patients. <em>Gynecological Endocrinology</em>, 40(1), 2341701.</li>
+        <li>Akbari, M. et al. (2018). Effects of alpha-lipoic acid supplementation on glucose control and lipid profiles in metabolic diseases: systematic review and meta-analysis of 24 RCTs. <em>Metabolism</em>.</li>
+        <li>Shay, K.P. et al. (2009). Alpha-lipoic acid as a dietary supplement: molecular mechanisms and therapeutic potential. <em>Biochimica et Biophysica Acta</em>, 1790(10), 1149-1160.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Mitochondrial Stack?</h3>
+      <p>ALA works best as part of a coordinated protocol. Get the full stack with CoQ10, PQQ, dosing schedules and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/coq10-guide.html" class="related-card">
+          <div class="related-img c-coq">
+            <img src="/images/hero-coq10.jpg" alt="CoQ10" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">CoQ10</span>
+            <h4>CoQ10: The Spark Plug for Every Cell in Your Body</h4>
+          </div>
+        </a>
+        <a href="/articles/magnesium-guide.html" class="related-card">
+          <div class="related-img c-mag">
+            <img src="/images/hero-magnesium.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Magnesium</span>
+            <h4>Magnesium: The Master Mineral That Everyone's Missing</h4>
+          </div>
+        </a>
+        <a href="/articles/pqq-guide.html" class="related-card">
+          <div class="related-img c-pqq">
+            <img src="/images/tree-rings.jpg" alt="PQQ" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">PQQ</span>
+            <h4>PQQ: The Mitochondrial Spark That Keeps You Young and Sharp</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      document.querySelector('.dark-toggle') && (document.querySelector('.dark-toggle').textContent = '☀️ Light');
+    }
+
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

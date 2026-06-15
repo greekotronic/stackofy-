@@ -18,6 +18,7 @@
   const HEADER_CSS = `
     #site-header { background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
     #site-header .s-logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; text-decoration: none; }
+    #site-header .s-right { display: flex; align-items: center; gap: 1.5rem; }
     #site-header .s-nav { display: flex; gap: 1.5rem; align-items: center; }
     #site-header .s-nav a { color: #95D5B2; font-size: 14px; text-decoration: none; transition: color 0.2s; }
     #site-header .s-nav a:hover { color: #FAF8F4; }
@@ -35,7 +36,9 @@
     @media (max-width: 600px) {
       #site-header { padding: 0 1rem !important; height: 56px !important; }
       #site-header .s-nav { display: none !important; }
+      #site-header .s-dark { display: none !important; }
       #site-header .s-burger { display: flex !important; }
+      #site-mobile-menu { top: 56px !important; }
     }
   `;
 
@@ -44,7 +47,7 @@
   style.textContent = HEADER_CSS;
   document.head.appendChild(style);
 
-  // Build header HTML
+  // Build header HTML - burger is now OUTSIDE s-nav
   const header = document.createElement('header');
   header.id = 'site-header';
   header.innerHTML = `
@@ -52,12 +55,14 @@
       ${SVG_LOGO}
       Stackofy
     </a>
-    <div class="s-nav">
-      <a href="/">Home</a>
-      <a href="/articles.html">Articles</a>
-      <a href="/your-stack.html">Stack Builder</a>
-      <a href="/about.html">About</a>
-      <button class="s-dark" onclick="stackofyToggleDark()">🌙 Dark</button>
+    <div class="s-right">
+      <nav class="s-nav">
+        <a href="/">Home</a>
+        <a href="/articles.html">Articles</a>
+        <a href="/your-stack.html">Stack Builder</a>
+        <a href="/about.html">About</a>
+        <button class="s-dark" onclick="stackofyToggleDark()">🌙 Dark</button>
+      </nav>
       <button class="s-burger" onclick="stackofyToggleMenu()" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -91,6 +96,13 @@
 
   function init() {
     if (!document.body) return;
+
+    // DUPLICATE PREVENTION: skip if header already exists
+    if (document.getElementById('site-header')) return;
+
+    // Remove any hardcoded headers already in the page
+    const existingHeaders = document.querySelectorAll('header:not(#site-header)');
+    existingHeaders.forEach(h => h.remove());
 
     // Insert into page
     document.body.insertBefore(mobileMenu, document.body.firstChild);
