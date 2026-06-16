@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collagen: Rebuilding You from the Inside Out - Stackofy</title>
+  <meta name="description" content="Collagen production drops 1% per year from age 25. Hydrolyzed peptides can stimulate your body's own synthesis - but the type, dose and cofactors matter enormously. Here is the complete guide." />
+
+  <meta property="og:title" content="Collagen: Rebuilding You from the Inside Out" />
+  <meta property="og:description" content="A 2024 RCT with 112 participants confirmed 10g hydrolyzed collagen improved skin elasticity, hydration and roughness in 8 weeks. But which type do you need - and does it actually reach your joints?" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/collagen-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-collagen.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    header { background: var(--gradient); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
+    .logo-icon { display: flex; flex-direction: column; gap: 3px; }
+    .capsule { height: 7px; border-radius: 4px; }
+    .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
+    .capsule:nth-child(2) { width: 22px; background: var(--green-light); }
+    .capsule:nth-child(3) { width: 26px; margin-left: 2px; background: var(--gold); }
+    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #FAF8F4; }
+    .dark-toggle { background: rgba(255,255,255,0.15); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 12px; cursor: pointer; color: #FAF8F4; font-size: 13px; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #2D5A1B, #3A3A00); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content ul, .article-content ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .type-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .type-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .type-card.featured { border-color: var(--green-dark); }
+    .type-num { font-size: 28px; font-weight: 700; color: var(--gold); margin-bottom: 4px; }
+    .type-card h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .type-card p { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+    .type-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 6px; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .synergy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .synergy-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.875rem; text-align: center; }
+    .synergy-card .icon { font-size: 22px; margin-bottom: 6px; }
+    .synergy-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .synergy-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .c-vitc { background: linear-gradient(135deg, #7A1A00, #C0392B); }
+    .c-zinc { background: linear-gradient(135deg, #1a3a2a, #2D6A4F); }
+    .c-gly { background: linear-gradient(135deg, #1a2a1a, #2D6A4F); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; gap: 0; }
+    .mobile-menu.open { display: flex !important; }
+    .mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem !important; }
+      nav { display: none !important; }
+      .hamburger { display: flex !important; }
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+      .synergy-grid { grid-template-columns: 1fr 1fr !important; }
+      .type-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-collagen.jpg" alt="Collagen fiber structure - the scaffolding of the body" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Collagen</span>
+      <h1>Rebuilding You from the Inside Out</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>11 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <p>Collagen is the most abundant protein in the human body - and it starts declining at age 25. Supplementing with hydrolyzed peptides can stimulate your body's own synthesis. Key points:</p>
+      <ul>
+        <li>Always take collagen with vitamin C - it is essential for collagen synthesis and meaningfully boosts clinical outcomes</li>
+        <li>Type I + III (hydrolyzed peptides, 10g/day) for skin, hair, nails and connective tissue</li>
+        <li>Type II (UC-II undenatured, just 40mg/day) for joints - works through a completely different immune mechanism</li>
+        <li>A 2024 RCT with 112 women confirmed significant improvements in skin elasticity, hydration and roughness after 8 weeks</li>
+        <li>Results are gradual - expect 8-12 weeks before meaningful changes; consistency is everything</li>
+        <li>Marine collagen has slightly better absorption; bovine covers skin + joints; choose based on source preference and goals</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Collagen is the most abundant protein in the human body by mass - accounting for roughly 30% of total protein content. It is the structural scaffold that holds everything together: skin, bones, joints, tendons, ligaments, blood vessels, corneas, gut lining. Without collagen, the body loses its structural integrity from the inside out.</p>
+
+      <p>The problem is time. Collagen production begins declining around age 25 at approximately 1% per year. By the time most people are thinking seriously about longevity, they may have already lost 20-30% of their peak collagen density. The consequences are visible - wrinkles, sagging skin - but also functional: stiffer joints, slower tendon repair, reduced bone density, and weaker connective tissue throughout the body.</p>
+
+      <p><strong>Supplementation cannot reverse this entirely - but the evidence now shows it can meaningfully slow the decline and stimulate the body's own collagen synthesis. The key is knowing which type to take, how much, and what to take it with.</strong></p>
+
+      <div class="article-img">
+        <img src="/images/collagen-foods-sources.jpg" alt="Natural collagen food sources - bone broth, salmon, egg whites, chicken skin" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>How Collagen Supplementation Actually Works</h2>
+
+      <p>The long-standing skepticism about oral collagen was reasonable: proteins are broken down into amino acids during digestion, so how does consuming collagen translate into more collagen in your skin or joints? The answer is more nuanced than a simple yes or no.</p>
+
+      <p>Hydrolyzed collagen peptides - the form used in supplements - are pre-digested into short amino acid chains (typically 2-10 amino acids) that survive the digestive tract partly intact. Research using isotopic labeling has shown that specific dipeptides from hydrolyzed collagen (particularly hydroxyproline-proline and hydroxyproline-glycine) reach circulation and accumulate in skin tissue within hours of consumption.</p>
+
+      <p>Once in the bloodstream, these peptides appear to act as signaling molecules - stimulating fibroblasts (the cells that produce collagen) to increase their own collagen synthesis. This is the key mechanism: collagen peptides do not become collagen directly. They signal the body to make more of its own.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">2024 RCT - 112 Participants, 8 Weeks</div>
+        <p>A 2024 randomized, double-blind, placebo-controlled trial published in the Journal of Clinical Medicine enrolled 112 women and tested 10g of hydrolyzed collagen peptides daily against placebo for 8 weeks. Results showed statistically significant improvements in skin elasticity (p=0.009), skin hydration across multiple measurement points (p ranging from 0.003 to less than 0.001), and skin roughness (p ranging from 0.002 to less than 0.001). Facial soft tissue sagging also showed improvement. Safety was excellent with no significant adverse events. This is one of the cleanest recent collagen trials - double-blind, placebo-controlled, with objective skin measurements rather than just self-reporting.</p>
+      </div>
+
+      <h2>The Three Types - Which Do You Actually Need</h2>
+
+      <div class="type-grid">
+        <div class="type-card featured">
+          <div class="type-num">I</div>
+          <div class="type-tag">Skin, Hair, Bone</div>
+          <h4>Type I Collagen</h4>
+          <p>The most abundant type in the body. Found in skin, tendons, bone, cornea and blood vessels. Forms the primary structural framework. Declines most visibly with age in terms of skin appearance. Found in bovine hide, marine (fish skin) and eggshell collagen. 5-15g hydrolyzed peptides daily.</p>
+        </div>
+        <div class="type-card">
+          <div class="type-num">II</div>
+          <div class="type-tag">Joints, Cartilage</div>
+          <h4>Type II Collagen</h4>
+          <p>The dominant collagen in cartilage. For joint support, undenatured Type II (UC-II) at just 40mg daily has the strongest clinical evidence - it works through immune tolerance (oral tolerization) rather than supplying amino acids. A 2016 trial in 191 adults with OA showed measurable pain reduction after 6 months. Chicken cartilage is the primary source.</p>
+        </div>
+        <div class="type-card">
+          <div class="type-num">III</div>
+          <div class="type-tag">Skin Elasticity</div>
+          <h4>Type III Collagen</h4>
+          <p>Often called "baby collagen" - most abundant in young, elastic skin and developing tissues. Declines faster than Type I with age. Responsible for skin suppleness and elasticity. Usually found alongside Type I in bovine collagen supplements. Type III diminishes more rapidly than Type I, making it a key target for skin anti-aging protocols.</p>
+        </div>
+      </div>
+
+      <p>The practical takeaway: for skin, hair, nails and general connective tissue, use hydrolyzed Type I + III collagen peptides (bovine or marine) at 10g daily. For joints specifically, add UC-II undenatured Type II at 40mg daily - this is a fundamentally different mechanism (immune modulation rather than amino acid supply) and works at dramatically lower doses. Many people use both simultaneously without issue.</p>
+
+      <div class="article-img">
+        <img src="/images/collagen-joint-skin.jpg" alt="Collagen fiber structure in skin layers and cartilage" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Vitamin C - The Non-Negotiable Cofactor</h2>
+
+      <p>This is the most important practical point about collagen supplementation: without adequate vitamin C, collagen synthesis cannot proceed efficiently. Vitamin C is required for the hydroxylation of proline and lysine - the chemical modifications that allow individual collagen chains to cross-link into stable triple-helix structures. Without this step, collagen fibers cannot form properly regardless of how many peptides you consume.</p>
+
+      <p>A 2025 meta-analysis published in the American Journal of Medicine confirmed that participants combining vitamin C with collagen supplements showed meaningfully higher blood markers of collagen synthesis than those taking collagen alone. The effect is not subtle - vitamin C effectively acts as a force multiplier for collagen supplementation.</p>
+
+      <p>The practical protocol: take 75-150mg vitamin C with your collagen peptides. This does not need to be a megadose - the collagen-specific benefit plateaus at relatively modest vitamin C levels. Vitamin C from food (a kiwi, some bell pepper) taken alongside your collagen is sufficient if your diet is varied.</p>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">1%</div>
+          <div class="stat-label">Annual decline in collagen production starting at age 25</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">8-12</div>
+          <div class="stat-label">Weeks of consistent use before significant results are typically measurable</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">40mg</div>
+          <div class="stat-label">Effective daily dose of UC-II for joint support - vs 10,000mg for hydrolyzed Type II</div>
+        </div>
+      </div>
+
+      <h2>Marine vs Bovine vs Vegan - Which Source</h2>
+
+      <p>Marine collagen (from fish skin and scales) is primarily Type I and has a smaller peptide size, which may improve absorption compared to bovine. It is the preferred option for people avoiding red meat or concerned about BSE, and is better suited to those with shellfish sensitivities than one might assume - fish collagen is not derived from shellfish.</p>
+
+      <p>Bovine collagen (from cattle hide) provides both Type I and Type III in a single product, making it more practical for skin and connective tissue goals. It is typically cheaper per gram than marine and is the most widely studied form in clinical trials.</p>
+
+      <p>Vegan collagen does not exist yet in supplementable form - all true collagen comes from animal tissue. What are sold as "vegan collagen boosters" are combinations of vitamin C, zinc, copper, lysine and proline - the cofactors and amino acids that support the body's own collagen synthesis. These have a smaller and less direct effect than hydrolyzed collagen peptides, but for strict vegans they represent a reasonable support strategy.</p>
+
+      <div class="skip-box">
+        <div class="skip-label">Do You Need Collagen If You Already Eat Glycine-Rich Foods or Take Glycine?</div>
+        <p>Glycine is collagen's primary amino acid (~33% of collagen by composition). Glycine supplements and collagen peptides both provide glycine, so there is some overlap. However, hydrolyzed collagen peptides provide more than just glycine - they deliver specific dipeptides (hydroxyproline-glycine, hydroxyproline-proline) that act as direct signaling molecules for fibroblast activation. These peptides are unique to collagen hydrolysate and are not replicated by taking free glycine alone. If you already take glycine for sleep, consider adding collagen peptides separately for structural support rather than doubling your glycine dose - they serve overlapping but distinct functions.</p>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Goal</th>
+          <th>Type</th>
+          <th>Daily Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Skin, hair, nails</td>
+          <td>Type I + III hydrolyzed peptides</td>
+          <td>10g</td>
+          <td>Always with vitamin C; bovine or marine; morning or post-workout</td>
+        </tr>
+        <tr>
+          <td>Joint pain / cartilage</td>
+          <td>UC-II (undenatured Type II)</td>
+          <td>40mg</td>
+          <td>Take on empty stomach; works via immune mechanism, not amino acids</td>
+        </tr>
+        <tr>
+          <td>Joints + general connective tissue</td>
+          <td>Type I/III + UC-II combined</td>
+          <td>10g + 40mg</td>
+          <td>No negative interaction; complementary mechanisms</td>
+        </tr>
+        <tr>
+          <td>Injury recovery / high physical stress</td>
+          <td>Type I + III hydrolyzed</td>
+          <td>15g</td>
+          <td>Take 30-60 min before exercise for enhanced tendon/ligament delivery</td>
+        </tr>
+        <tr>
+          <td>Vitamin C cofactor</td>
+          <td>Any form of vitamin C</td>
+          <td>75-150mg alongside collagen</td>
+          <td>Food sources adequate; megadosing does not add proportional benefit</td>
+        </tr>
+      </table>
+
+      <p>Timing matters modestly for joint-specific protocols: some research suggests taking collagen peptides 30-60 minutes before exercise may improve delivery to tendons and ligaments, which have relatively poor blood supply. For skin benefits, timing is less critical - consistency over months matters far more than the exact time of day. Mix powder into coffee, smoothies or water - heat does not significantly degrade the peptides.</p>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="synergy-grid">
+        <div class="synergy-card">
+          <div class="icon">🍊</div>
+          <h4>Vitamin C</h4>
+          <p>Non-negotiable cofactor for collagen synthesis. A 2025 meta-analysis confirmed combining vitamin C with collagen significantly boosts synthesis markers vs collagen alone. Take 75-150mg alongside your collagen dose.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">⚡</div>
+          <h4>Zinc</h4>
+          <p>Zinc is essential for collagen cross-linking enzymes. Deficiency directly impairs the final structural assembly of collagen fibers. Most people are mildly deficient - ensure adequate zinc alongside any collagen protocol.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🌿</div>
+          <h4>Silica / Horsetail Extract</h4>
+          <p>Silica supports connective tissue integrity and may enhance collagen fiber formation. Often included in beauty-focused collagen formulas alongside biotin. Complementary rather than essential.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🧬</div>
+          <h4>Glycine</h4>
+          <p>Glycine is collagen's primary amino acid. Adding standalone glycine ensures the body is never rate-limited in the raw material for collagen synthesis. Particularly relevant for people not eating glycine-rich foods like bone broth.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">💊</div>
+          <h4>MSM + Glucosamine</h4>
+          <p>For joint-specific protocols, MSM provides sulfur for cartilage matrix and glucosamine supports proteoglycan synthesis. Together with collagen they cover different aspects of joint tissue maintenance.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">💛</div>
+          <h4>Biotin</h4>
+          <p>Biotin supports keratin synthesis in skin, hair and nails - the structural protein that works alongside collagen. Often bundled in beauty collagen formulas. Most people get sufficient biotin from food, but it is a logical addition for hair and nail protocols.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">7.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Strong evidence for skin improvements and emerging evidence for joint and connective tissue support. The mechanism - hydrolyzed peptides signaling fibroblasts to produce more collagen - is well-established. Results require patience (8-12 weeks minimum) and consistency. Vitamin C is essential and often missing from people's protocols. Most cost-effective as a daily powder rather than capsules. Scores higher in the context of a complete skin and structural longevity protocol than as a standalone.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Demir-Dora, D. et al. (2024). Efficacy and safety of CollaSel Pro® hydrolyzed collagen peptide supplementation in improving skin health: double-blind RCT in 112 females, 8 weeks. <em>Journal of Clinical Medicine</em>, 13(18), 5370.</li>
+        <li>Effects of Collagen Supplements on Skin Aging: A Systematic Review and Meta-Analysis of Randomized Controlled Trials. (2025). <em>American Journal of Medicine</em>. PMID: 40324552.</li>
+        <li>Simental-Mendía, M. et al. (2025). Effects of type I collagen hydrolysate supplementation on bones, muscles, and joints: a systematic review. <em>Orthopedic Reviews</em>. doi:10.52965/001c.129086.</li>
+        <li>Lugo, J.P., Saiyed, Z.M. & Lane, N.E. (2016). Efficacy and tolerability of an undenatured type II collagen supplement in modulating knee osteoarthritis symptoms: a multicenter randomized, double-blind, placebo-controlled study. <em>Nutrition Journal</em>, 15, 14.</li>
+        <li>de Miranda, R.B., Weimer, P. & Rossi, R.C. (2021). Effects of hydrolyzed collagen supplementation on skin aging: a systematic review and meta-analysis. <em>International Journal of Dermatology</em>, 60(12), 1449-1461.</li>
+        <li>Wu, M., Cronin, K. & Crane, J.S. (2024). Biochemistry, Collagen Synthesis. In StatPearls. StatPearls Publishing. Available from: ncbi.nlm.nih.gov/books/NBK507709/</li>
+        <li>Geesin, J.C. et al. (1988). Ascorbic acid specifically increases type I and type III procollagen mRNA levels in human skin fibroblasts. <em>Journal of Investigative Dermatology</em>, 90(3), 420-424.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Skin and Structural Longevity Stack?</h3>
+      <p>Collagen works best as part of a coordinated protocol. Get the full stack with dosing schedules and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/vitamin-c-guide.html" class="related-card">
+          <div class="related-img c-vitc">
+            <img src="/images/hero-vitaminc.jpg" alt="Vitamin C" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin C</span>
+            <h4>Vitamin C: The Buffered Backbone of Antioxidant Defense</h4>
+          </div>
+        </a>
+        <a href="/articles/zinc-guide.html" class="related-card">
+          <div class="related-img c-zinc">
+            <img src="/images/oysters-lemon.jpg" alt="Zinc" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Zinc</span>
+            <h4>Zinc: The Quiet Mineral That Keeps Everything Running</h4>
+          </div>
+        </a>
+        <a href="/articles/glycine-guide.html" class="related-card">
+          <div class="related-img c-gly">
+            <img src="/images/hero-glycine.jpg" alt="Glycine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Glycine</span>
+            <h4>Glycine: The Sweet Amino Acid That Calms, Repairs, and Rebuilds</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      document.querySelector('.dark-toggle') && (document.querySelector('.dark-toggle').textContent = '☀️ Light');
+    }
+
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
