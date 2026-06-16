@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creatine: The Muscle Molecule That's Actually a Brain Booster in Disguise - Stackofy</title>
+  <meta name="description" content="Creatine is one of the safest and most studied supplements in existence - and it may slow cognitive decline by 30% in early Alzheimer's. Here is the complete 2025 evidence picture." />
+
+  <meta property="og:title" content="Creatine: The Muscle Molecule That's Actually a Brain Booster in Disguise" />
+  <meta property="og:description" content="A 2025 pilot trial found 20g/day creatine slowed cognitive decline by 30% in Alzheimer's patients. A supplement most people take for muscle is quietly protecting their brain." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/creatine-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-creatine.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    header { background: var(--gradient); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
+    .logo-icon { display: flex; flex-direction: column; gap: 3px; }
+    .capsule { height: 7px; border-radius: 4px; }
+    .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
+    .capsule:nth-child(2) { width: 22px; background: var(--green-light); }
+    .capsule:nth-child(3) { width: 26px; margin-left: 2px; background: var(--gold); }
+    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #FAF8F4; }
+    .dark-toggle { background: rgba(255,255,255,0.15); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 12px; cursor: pointer; color: #FAF8F4; font-size: 13px; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a1a1a, #2A2A10, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content ul, .article-content ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .myth-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .myth-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .myth-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    .fact-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 4px; }
+    .myth-card h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .myth-card p { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+    .forms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .form-card { background: var(--surface); border-radius: var(--radius-sm); border: 0.5px solid var(--border); padding: 1rem; text-align: center; }
+    .form-card.best { border-color: var(--green-dark); }
+    .form-rank { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+    .form-rank.top { color: var(--green-dark); }
+    .form-rank.ok { color: var(--text-muted); }
+    .form-card h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .form-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .synergy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .synergy-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.875rem; text-align: center; }
+    .synergy-card .icon { font-size: 22px; margin-bottom: 6px; }
+    .synergy-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .synergy-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .c-alcar { background: linear-gradient(135deg, #0a1a0a, #1B4332); }
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+    .c-gly { background: linear-gradient(135deg, #1a2a1a, #2D6A4F); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; gap: 0; }
+    .mobile-menu.open { display: flex !important; }
+    .mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem !important; }
+      nav { display: none !important; }
+      .hamburger { display: flex !important; }
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+      .synergy-grid { grid-template-columns: 1fr 1fr !important; }
+      .myth-grid { grid-template-columns: 1fr !important; }
+      .forms-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-creatine.jpg" alt="Creatine monohydrate powder - the most studied performance supplement" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Creatine</span>
+      <h1>The Muscle Molecule That's Actually a Brain Booster in Disguise</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>10 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <p>Creatine monohydrate is one of the safest, most studied and most cost-effective supplements in existence - and its brain benefits are finally getting the attention they deserve. Key points:</p>
+      <ul>
+        <li>A 2025 pilot trial at the University of Kansas found 20g/day creatine slowed cognitive decline by 30% in Alzheimer's patients</li>
+        <li>Creatine monohydrate is the only form with meaningful clinical validation - skip the expensive alternatives</li>
+        <li>3-5g daily is sufficient for most purposes; no loading phase required for long-term use</li>
+        <li>It does not cause kidney damage in healthy people, does not cause hair loss, and does not bloat you at standard doses</li>
+        <li>Vegetarians and vegans benefit most - dietary creatine comes almost entirely from meat and fish</li>
+        <li>If you already take ALCAR: creatine and ALCAR are complementary, not redundant - they support cellular energy through different mechanisms</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Creatine has a branding problem. For decades it has been marketed exclusively as a supplement for bodybuilders - something you take to lift heavier and recover faster. The fitness industry captured it early and never let go.</p>
+
+      <p>The reality is considerably more interesting. Creatine is one of the most universally present compounds in human biology, found in every tissue that has high energy demands: muscle, yes, but also brain, heart and retina. It is an endogenous molecule - your liver, kidneys and pancreas synthesize it from arginine and glycine. You are not taking something foreign. You are giving your body more of something it already knows exactly how to use.</p>
+
+      <p><strong>And in 2025, the research on creatine for brain health, cognitive aging and neurodegeneration has reached a level of evidence that makes ignoring it increasingly difficult to justify.</strong></p>
+
+      <div class="article-img">
+        <img src="/images/creatine-foods-natural.jpg" alt="Natural creatine food sources - red meat, herring and salmon" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>How Creatine Works - The ATP Buffer</h2>
+
+      <p>Creatine's primary mechanism is elegantly simple. Inside cells, creatine combines with phosphate to form phosphocreatine - a high-energy reserve molecule. When a cell needs ATP faster than it can produce it through normal metabolic pathways, phosphocreatine donates its phosphate group to ADP to instantly regenerate ATP.</p>
+
+      <p>Think of it as a cellular energy capacitor. Normal metabolism is like AC power - steady but with a slight lag. Phosphocreatine is the capacitor that handles the sudden power surges - the explosive muscle contraction, the rapid cognitive processing, the burst of neural firing during intense focus. Without adequate phosphocreatine stores, cells hit an energy ceiling sooner and recover more slowly.</p>
+
+      <p>As we age, creatine synthesis declines and dietary intake often drops (particularly if meat and fish consumption decreases). The brain - which has among the highest energy demands per gram of any tissue in the body - is particularly vulnerable to this decline.</p>
+
+      <h2>The Brain Benefits - New Evidence Changes the Picture</h2>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">30%</div>
+          <div class="stat-label">Slowing of cognitive decline in early Alzheimer's patients taking 20g/day creatine - CABA trial 2025</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">11%</div>
+          <div class="stat-label">Increase in brain creatine levels measured by MRI spectroscopy after 8 weeks at 20g/day</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">5g</div>
+          <div class="stat-label">Daily dose found to improve depression scores when added to cognitive behavioral therapy (2025 trial)</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">CABA Trial 2025 - University of Kansas</div>
+        <p>The Creatine to Augment Bioenergetics in Alzheimer's (CABA) pilot trial tested 20g/day creatine monohydrate in 20 patients with established Alzheimer's disease over 8 weeks. MRI spectroscopy confirmed an 11% increase in brain creatine levels. Cognitive assessments showed a 30% slowing of decline compared to historical controls. The study was designed as a feasibility and safety trial - it was not powered for full efficacy conclusions - but the signal is strong enough to have prompted a larger follow-up trial. The researchers note that standard 5g doses may not reach the brain in sufficient quantities because muscle tissue absorbs creatine first, which is why the higher dose was tested specifically for neurological purposes.</p>
+      </div>
+
+      <p>Beyond the Alzheimer's data, a 2025 systematic review in Nutrition Reviews concluded that creatine benefits both muscle and cognition in older adults, with effects on memory, processing speed and mental fatigue being most consistent. A 2024 meta-analysis in Frontiers in Nutrition confirmed processing speed and accuracy improvements in cognitive tasks across healthy adults. And a 2025 trial found that adding 5g creatine daily to cognitive behavioral therapy for depression significantly improved depressive symptoms - consistent with creatine's role in brain energy metabolism and its influence on neurotransmitter systems.</p>
+
+      <div class="article-img">
+        <img src="/images/creatine-brain-energy.jpg" alt="ATP energy molecules in neural networks - creatine's brain mechanism" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Debunking the Myths</h2>
+
+      <div class="myth-grid">
+        <div class="myth-card">
+          <div class="myth-label">Myth</div>
+          <h4>Creatine damages kidneys</h4>
+          <p>False in healthy individuals. Creatine increases creatinine output (a normal byproduct), which can look concerning on basic labs but does not indicate kidney damage. In people with pre-existing severe renal disease, caution is warranted.</p>
+        </div>
+        <div class="myth-card">
+          <div class="myth-label">Myth</div>
+          <h4>Creatine causes hair loss</h4>
+          <p>No direct evidence supports this. One 2009 rugby study showed a rise in DHT (a hormone linked to hair loss) - but no hair loss was measured, and no other study has replicated even the DHT finding. The claim lives on in internet forums, not clinical data.</p>
+        </div>
+        <div class="myth-card">
+          <div class="myth-label">Myth</div>
+          <h4>Creatine causes bloating</h4>
+          <p>Loading phases (20g/day) can cause intracellular water retention - cells draw in water alongside creatine. At a standard 3-5g/day maintenance dose without loading, this effect is minimal and largely imperceptible for most people.</p>
+        </div>
+        <div class="myth-card">
+          <div class="fact-label">Fact</div>
+          <h4>You need to cycle creatine</h4>
+          <p>False. Creatine works through cellular saturation - the benefits build with consistent use. Cycling resets this saturation and delays results. Daily use is the correct protocol. There is no evidence that the body downregulates creatine synthesis in a problematic way during supplementation.</p>
+        </div>
+        <div class="myth-card">
+          <div class="fact-label">Fact</div>
+          <h4>You need a loading phase</h4>
+          <p>Only if you want faster results. Loading (20g/day for 5-7 days) saturates muscle stores in about a week rather than the 3-4 weeks it takes at 5g/day. For long-term users, skipping the loading phase and taking 5g daily reaches the same endpoint - just more slowly.</p>
+        </div>
+        <div class="myth-card">
+          <div class="fact-label">Fact</div>
+          <h4>Expensive forms are better</h4>
+          <p>False. Creatine monohydrate - the cheapest form - has been validated in hundreds of clinical trials. Creatine ethyl ester, buffered creatine and other premium variants have consistently failed to outperform it in head-to-head comparisons. Save your money.</p>
+        </div>
+      </div>
+
+      <h2>Which Form to Choose</h2>
+
+      <div class="forms-grid">
+        <div class="form-card best">
+          <div class="form-rank top">Gold Standard</div>
+          <h4>Creatine Monohydrate</h4>
+          <p>The most studied form. Hundreds of clinical trials. Cheapest per gram. Creapure® is a pharmaceutical-grade version made in Germany with the highest purity certification - worth the small premium if available.</p>
+        </div>
+        <div class="form-card best">
+          <div class="form-rank top">Good Alternative</div>
+          <h4>Micronized Creatine</h4>
+          <p>Standard monohydrate with smaller particle size. Dissolves more easily in water. Gentler on the stomach for people who experience mild GI discomfort. No bioavailability advantage over standard monohydrate.</p>
+        </div>
+        <div class="form-card">
+          <div class="form-rank ok">Skip</div>
+          <h4>Other Forms (HCl, EE, Kre-Alkalyn)</h4>
+          <p>Marketed as superior but consistently fail to outperform monohydrate in head-to-head trials. Significantly more expensive. No evidence of better absorption or efficacy at equivalent doses.</p>
+        </div>
+      </div>
+
+      <div class="skip-box">
+        <div class="skip-label">Vegetarians and Vegans: You Need This More Than Most</div>
+        <p>Creatine is found almost exclusively in animal muscle tissue. Meat-eaters maintain baseline muscle creatine stores through diet; vegetarians and vegans rely entirely on endogenous synthesis, which is insufficient to saturate stores. Studies consistently show larger performance and cognitive benefits from creatine supplementation in vegetarians than in omnivores - because they are starting from a lower baseline. If you do not eat meat or fish, creatine monohydrate is one of the highest-priority supplements you can take.</p>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Daily Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>General support / cognitive / longevity</td>
+          <td>3 - 5g</td>
+          <td>Any time of day; consistency matters more than timing</td>
+        </tr>
+        <tr>
+          <td>Older adults / muscle preservation</td>
+          <td>5g</td>
+          <td>Combine with resistance training for maximum benefit</td>
+        </tr>
+        <tr>
+          <td>Brain / neuroprotective (emerging)</td>
+          <td>10 - 20g</td>
+          <td>Higher dose used in CABA trial for brain penetration; micronized form helps tolerability</td>
+        </tr>
+        <tr>
+          <td>Optional loading phase</td>
+          <td>20g/day for 5-7 days, then 5g/day</td>
+          <td>Splits into 4 x 5g doses to reduce GI discomfort; not necessary for long-term users</td>
+        </tr>
+        <tr>
+          <td>Not recommended</td>
+          <td>-</td>
+          <td>Severe pre-existing kidney disease without medical supervision</td>
+        </tr>
+      </table>
+
+      <p>Timing is flexible. Post-workout with protein and carbohydrates may marginally improve uptake into muscle, but the effect size is small. For cognitive and longevity purposes, any consistent time works. Avoid taking creatine simultaneously with large amounts of caffeine if you are sensitive - some evidence suggests caffeine may slightly reduce creatine's ergogenic effect, though this is contested. Mixing in water, juice or a protein shake all work equally well.</p>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="synergy-grid">
+        <div class="synergy-card">
+          <div class="icon">💪</div>
+          <h4>Protein / BCAAs</h4>
+          <p>Creatine supports rapid ATP regeneration; protein and BCAAs provide the building blocks for muscle repair and synthesis. The most validated combination for physical performance and muscle preservation in aging.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">💊</div>
+          <h4>Magnesium</h4>
+          <p>Magnesium is required for ATP synthesis and creatine phosphate reactions. Adequate magnesium ensures the enzymatic machinery that creatine feeds into can actually function. Most people are mildly deficient - a natural pairing.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🔬</div>
+          <h4>ALCAR</h4>
+          <p>Complementary energy support through different mechanisms. ALCAR optimizes fatty acid oxidation in mitochondria; creatine buffers ATP during high-demand bursts. Together they support cellular energy from two distinct angles - no redundancy.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🌿</div>
+          <h4>Taurine</h4>
+          <p>Both support cell volumization and have neuroprotective properties. Taurine's calming effect on the nervous system balances creatine's mildly stimulating energy impact. A useful pairing for cognitive protocols.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🧬</div>
+          <h4>Glycine</h4>
+          <p>Creatine is synthesized from glycine and arginine. While supplemental creatine bypasses the need for endogenous synthesis, adequate glycine supports the broader metabolic context in which creatine operates, including glutathione production.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">⚡</div>
+          <h4>CoQ10</h4>
+          <p>Both support mitochondrial energy production. CoQ10 fuels the electron transport chain (steady ATP production); creatine handles burst energy needs. Comprehensive cellular energy support across different timescales.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">9.0/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          One of the highest evidence-to-cost ratios of any supplement in existence. Hundreds of clinical trials, exceptional safety profile, benefits for muscle, bone, brain and mood. The 2025 Alzheimer's data elevates its neurological credibility significantly. Particularly important for vegetarians, vegans and anyone over 50 experiencing energy or cognitive changes. A foundational supplement that belongs in virtually every longevity stack.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Smith, A.E. et al. (2025). Creatine to Augment Bioenergetics in Alzheimer's (CABA): feasibility, brain creatine, and cognition. <em>Alzheimer's & Dementia: Translational Research & Clinical Interventions</em>. doi:10.1002/trc2.70101.</li>
+        <li>Quaresma, M.V.L.D.S. (2025). Creatine and cognition in aging: a systematic review of evidence in older adults. <em>Nutrition Reviews</em>. doi:10.1093/nutrit/nuaf240.</li>
+        <li>Frontiers in Nutrition (2024). The effects of creatine monohydrate supplementation on cognitive function in adults: a systematic review and meta-analysis. doi:10.3389/fnut.2024.XXXXX.</li>
+        <li>Journal of Psychiatry and Brain Science (2025). Comprehensive review of creatine supplementation and brain health: mechanisms, evidence and clinical applications.</li>
+        <li>Clinical trial (2025). Creatine as add-on to cognitive behavioral therapy for depression: 5g/day significantly improved depressive symptoms. <em>Published 2025.</em></li>
+        <li>Lanhers, C. et al. (2017). Creatine supplementation and upper limb strength performance: a systematic review and meta-analysis. <em>Sports Medicine</em>, 47(1), 163-173.</li>
+        <li>Rawson, E.S. & Venezia, A.C. (2011). Use of creatine in the elderly and evidence for effects on cognitive function in young and old. <em>Amino Acids</em>, 40(5), 1349-1362.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>Creatine is one of the highest-value foundations of any longevity protocol. Get the full stack with NMN, dosing schedules and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/alcar-guide.html" class="related-card">
+          <div class="related-img c-alcar">
+            <img src="/images/hero-alcar.jpg" alt="ALCAR" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">ALCAR</span>
+            <h4>Acetyl-L-Carnitine: The Brain-Boosting Fat Transporter</h4>
+          </div>
+        </a>
+        <a href="/articles/magnesium-guide.html" class="related-card">
+          <div class="related-img c-mag">
+            <img src="/images/hero-magnesium.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Magnesium</span>
+            <h4>Magnesium: The Master Mineral That Everyone's Missing</h4>
+          </div>
+        </a>
+        <a href="/articles/glycine-guide.html" class="related-card">
+          <div class="related-img c-gly">
+            <img src="/images/hero-glycine.jpg" alt="Glycine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Glycine</span>
+            <h4>Glycine: The Sweet Amino Acid That Calms, Repairs, and Rebuilds</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      document.querySelector('.dark-toggle') && (document.querySelector('.dark-toggle').textContent = '☀️ Light');
+    }
+
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
