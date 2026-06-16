@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glycine: The Sweet Amino Acid That Calms, Repairs, and Rebuilds - Stackofy</title>
+  <meta name="description" content="Glycine improves sleep quality, builds glutathione, supports collagen and reverses 7 out of 9 hallmarks of aging when combined with NAC. Here is the full science." />
+
+  <meta property="og:title" content="Glycine: The Sweet Amino Acid That Calms, Repairs, and Rebuilds" />
+  <meta property="og:description" content="Dirt cheap. Exceptionally safe. A clinical trial at Baylor College of Medicine found GlyNAC improved 7 of 9 hallmarks of aging in 16 weeks. Here is the full picture." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/glycine-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-glycine.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    header { background: var(--gradient); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
+    .logo-icon { display: flex; flex-direction: column; gap: 3px; }
+    .capsule { height: 7px; border-radius: 4px; }
+    .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
+    .capsule:nth-child(2) { width: 22px; background: var(--green-light); }
+    .capsule:nth-child(3) { width: 26px; margin-left: 2px; background: var(--gold); }
+    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #FAF8F4; }
+    .dark-toggle { background: rgba(255,255,255,0.15); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 12px; cursor: pointer; color: #FAF8F4; font-size: 13px; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a1a, #2D6A4F, #3A3A10); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content ul, .article-content ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .roles-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .role-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .role-icon { font-size: 22px; margin-bottom: 6px; }
+    .role-card h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 4px; }
+    .role-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .synergy-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .synergy-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.875rem; text-align: center; }
+    .synergy-card .icon { font-size: 22px; margin-bottom: 6px; }
+    .synergy-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .synergy-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .c-sperm { background: linear-gradient(135deg, #2A3A10, #4A6A20); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
+    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; gap: 0; }
+    .mobile-menu.open { display: flex !important; }
+    .mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem !important; }
+      nav { display: none !important; }
+      .hamburger { display: flex !important; }
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+      .synergy-grid { grid-template-columns: 1fr 1fr !important; }
+      .roles-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-glycine.jpg" alt="Glycine crystals dissolving in water - the simplest amino acid" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Glycine</span>
+      <h1>The Sweet Amino Acid That Calms, Repairs, and Rebuilds</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>10 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <p>Glycine is one of the cheapest, safest and most underrated longevity supplements available. A Baylor College of Medicine trial found GlyNAC (Glycine + NAC) improved 7 of 9 hallmarks of aging in 16 weeks. Key points:</p>
+      <ul>
+        <li>3g before bed reliably improves sleep quality and shortens sleep onset - confirmed in polysomnographic trials</li>
+        <li>Glycine levels decline with age - supplementing restores them to youthful levels in older adults</li>
+        <li>Combined with NAC (GlyNAC), it reduced oxidative stress by 80%, inflammation by 83% and insulin resistance by 68% in a clinical trial</li>
+        <li>Essential for glutathione synthesis - without enough glycine, your master antioxidant system is rate-limited</li>
+        <li>Also the primary amino acid in collagen - supports skin, joints, tendons and connective tissue integrity</li>
+        <li>Exceptionally safe at high doses; sweet-tasting and easily dissolved in water or tea</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Glycine is the simplest amino acid in structure - just a hydrogen side chain attached to the central carbon. But simple does not mean unimportant. Glycine is the most abundant amino acid in the human body by weight, and it plays a role in more biological processes than almost any other single compound.</p>
+
+      <p>It is technically non-essential - meaning your body can synthesize it. But the evidence is increasingly clear that endogenous production is not sufficient for optimal health, particularly as we age. Glycine levels decline with aging, and this decline has measurable consequences for glutathione levels, collagen production, sleep quality and cellular repair capacity.</p>
+
+      <p><strong>Glycine is also dirt cheap, sweet-tasting, exceptionally safe and works on the very first night for sleep. In a landscape full of expensive, overhyped compounds, it is one of the most compelling quiet achievers in the longevity toolkit.</strong></p>
+
+      <div class="article-img">
+        <img src="/images/glycine-collagen-foods.jpg" alt="Collagen-rich foods - bone broth, tendons, gelatin - natural glycine sources" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What Glycine Does - Four Key Roles</h2>
+
+      <div class="roles-grid">
+        <div class="role-card">
+          <div class="role-icon">🛡️</div>
+          <h4>Glutathione Precursor</h4>
+          <p>Glycine is one of three amino acids required to synthesize glutathione - your body's master intracellular antioxidant. Without sufficient glycine, glutathione production becomes rate-limited regardless of how much NAC or cysteine you supply. As glycine levels decline with age, glutathione deficiency follows.</p>
+        </div>
+        <div class="role-card">
+          <div class="role-icon">🦴</div>
+          <h4>Collagen Foundation</h4>
+          <p>Approximately one third of all amino acids in collagen are glycine. It is the structural backbone of every collagen fiber in your skin, tendons, ligaments, bones and blood vessel walls. As collagen synthesis slows with age, glycine availability becomes a limiting factor for structural repair.</p>
+        </div>
+        <div class="role-card">
+          <div class="role-icon">🧠</div>
+          <h4>Inhibitory Neurotransmitter</h4>
+          <p>Glycine acts as an inhibitory neurotransmitter in the brainstem and spinal cord, modulating neuronal excitability and supporting the central nervous system's ability to calm down. This is the mechanism behind its sleep and mood-stabilizing effects - distinct from GABA but complementary to it.</p>
+        </div>
+        <div class="role-card">
+          <div class="role-icon">⚡</div>
+          <h4>Metabolic Support</h4>
+          <p>Glycine supports phase II liver detoxification (glucuronidation and glycine conjugation), helps regulate blood glucose, and contributes to creatine synthesis. It also has mild anti-inflammatory effects and has extended lifespan in multiple animal models when supplemented consistently.</p>
+        </div>
+      </div>
+
+      <h2>The GlyNAC Discovery - Reversing Aging Hallmarks in Humans</h2>
+
+      <p>The most significant recent development in glycine research is the GlyNAC protocol - the combination of glycine and N-acetylcysteine (NAC). Both compounds are precursors to glutathione: glycine provides one building block, NAC provides cysteine (another). Together they address the two main rate-limiting factors in glutathione synthesis simultaneously.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Baylor College of Medicine RCT - Key Results</div>
+        <p>A randomized, double-blind, placebo-controlled trial at Baylor College of Medicine tested GlyNAC supplementation in older adults for 16 weeks. The results were remarkable: 7 out of 9 recognized hallmarks of aging improved significantly. Oxidative stress fell by 80%. Inflammatory markers IL-6 dropped by 83% and TNF-alpha by 58%. Insulin resistance improved by 68%. Walking speed increased by 19% - reaching the level of young adults. Muscle strength and exercise capacity also improved. Glutathione levels, which had been deficient, were restored. The researchers described glycine and NAC - together with the glutathione they produce - as the "Power of 3."</p>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">80%</div>
+          <div class="stat-label">Reduction in oxidative stress after 16 weeks of GlyNAC in older adults</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">7/9</div>
+          <div class="stat-label">Recognized hallmarks of aging improved in the Baylor College RCT</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">19%</div>
+          <div class="stat-label">Increase in walking speed - restored to the level of young adults</div>
+        </div>
+      </div>
+
+      <p>An important nuance: a separate Nestlé Institute trial in 114 healthy volunteers found that GlyNAC did not raise glutathione levels in the overall group. However, in the subgroup with high oxidative stress and low baseline glutathione - the people who needed it most - glutathione generation increased significantly at medium and high doses. This suggests GlyNAC's benefits are most pronounced in individuals with existing glutathione deficiency, which becomes more common with age and chronic stress.</p>
+
+      <h2>Glycine for Sleep - The Evidence Is Unusually Strong</h2>
+
+      <p>Most sleep supplements work by sedation - they slow down the nervous system broadly. Glycine works differently. It lowers core body temperature (a key signal for sleep onset), modulates neurotransmitter activity in sleep-promoting brain regions, and supports the natural architecture of sleep stages without forcing sedation.</p>
+
+      <p>A 2025 polysomnographic trial confirmed what earlier Japanese studies had suggested: 3 grams of glycine taken 30 minutes before bedtime significantly improved sleep onset time, sleep efficiency and time spent in deeper sleep stages. Participants reported feeling more refreshed on waking. Crucially, sleep architecture - the normal sequence of sleep cycles - was not disrupted, which is a problem with many sleep medications.</p>
+
+      <p>A follow-up study found that even after only 5 hours of sleep, glycine significantly improved next-day alertness, attention and working memory compared to placebo. This suggests glycine improves the restorative quality of sleep, not just its duration.</p>
+
+      <div class="article-img">
+        <img src="/images/glycine-sleep-calm.jpg" alt="Glycine dissolved in water before bedtime - sleep quality protocol" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Glycine Deficit in Aging</h2>
+
+      <p>A critical finding from GlyNAC research is that glycine levels in blood and tissues decline with age - and this decline is a consistent feature of aging across species. Older adults show significantly lower fasting glycine levels than young adults, and supplementation raises them back to youthful levels.</p>
+
+      <p>This matters because glycine is conditionally essential - meaning there are conditions (aging, high protein intake, metabolic stress, low collagen food consumption) under which the body cannot produce enough to meet demand. Modern diets, which tend to favour muscle meat over collagen-rich cuts like skin, bone broth and organ meats, are particularly glycine-poor.</p>
+
+      <p>The practical implication: most adults over 40 who do not eat significant amounts of collagen-rich foods are likely mildly glycine-deficient. Supplementation is cheap, safe and addresses a genuine nutritional gap - not a marginal optimization.</p>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Daily Dose</th>
+          <th>Timing</th>
+        </tr>
+        <tr>
+          <td>Sleep quality</td>
+          <td>3g</td>
+          <td>30 minutes before bed; dissolve in warm water or tea</td>
+        </tr>
+        <tr>
+          <td>General longevity / glutathione support</td>
+          <td>3 - 5g</td>
+          <td>Morning or split; with or without food</td>
+        </tr>
+        <tr>
+          <td>GlyNAC protocol (with NAC)</td>
+          <td>3 - 6g glycine + equal NAC</td>
+          <td>Morning; start low and build up over 2 weeks</td>
+        </tr>
+        <tr>
+          <td>Collagen support (with collagen peptides)</td>
+          <td>3g glycine + 10g collagen peptides</td>
+          <td>Post-exercise or morning</td>
+        </tr>
+        <tr>
+          <td>Upper range (clinical trials)</td>
+          <td>Up to 15g/day</td>
+          <td>Well-tolerated; mild GI discomfort possible at very high doses</td>
+        </tr>
+      </table>
+
+      <p>Glycine is one of the few supplements with a naturally pleasant taste - slightly sweet, easily dissolved. This makes it practical to take as a powder in water rather than capsules, which is both cheaper and allows more flexible dosing. There is no established toxicity ceiling at typical supplement doses, and it has been safely administered in clinical trials at very high doses for extended periods.</p>
+
+      <div class="skip-box">
+        <div class="skip-label">Do You Need Glycine If You Already Take Collagen Peptides or Glutathione?</div>
+        <p><strong>Collagen peptides:</strong> Collagen is high in glycine, so a quality collagen peptide supplement provides meaningful glycine. But the dose is typically 10g collagen delivering roughly 3g glycine - enough for collagen support, but potentially not enough for the GlyNAC longevity protocol which uses 3-6g glycine directly. Both can be used together. <strong>Glutathione supplements:</strong> Supplemental glutathione has poor oral bioavailability - it is largely broken down in the gut. Glycine addresses the root cause by supporting your body's own glutathione synthesis. These are not redundant - they address the same goal through completely different routes, and glycine's route is more evidence-supported.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="synergy-grid">
+        <div class="synergy-card">
+          <div class="icon">🛡️</div>
+          <h4>NAC (GlyNAC)</h4>
+          <p>The most important glycine pairing. Glycine + NAC together provide both glutathione building blocks simultaneously. The Baylor trial showed this combination reverses 7 aging hallmarks in 16 weeks. Use equal doses of each.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">💊</div>
+          <h4>Magnesium Bisglycinat</h4>
+          <p>Magnesium bound to glycine delivers both compounds simultaneously. The glycinate form has superior absorption and the glycine contributes additional calming and sleep support. A natural and elegant pairing for sleep protocols.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🍵</div>
+          <h4>L-Theanine</h4>
+          <p>Both are inhibitory neurotransmitter modulators with calming effects. Glycine works primarily in the brainstem and spinal cord; L-Theanine works in the cortex via alpha wave promotion. Together they provide broader sleep and relaxation coverage.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🦴</div>
+          <h4>Collagen Peptides</h4>
+          <p>Glycine is collagen's primary structural amino acid. Adding extra glycine alongside collagen peptides ensures the raw material is never rate-limiting for collagen synthesis. Particularly useful for skin, joint and tendon support protocols.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🌿</div>
+          <h4>Taurine</h4>
+          <p>Both are inhibitory amino acids with overlapping roles in nervous system calming and sleep regulation. Taurine also supports GABA activity. A mild, well-tolerated nighttime stack alongside magnesium.</p>
+        </div>
+        <div class="synergy-card">
+          <div class="icon">🔬</div>
+          <h4>ALA (Alpha-Lipoic Acid)</h4>
+          <p>ALA recycles glutathione after it neutralizes free radicals. Glycine supports new glutathione synthesis. Together they maintain both the production and the recycling arms of the glutathione antioxidant cycle.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">8.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Exceptional value-to-evidence ratio. One of the cheapest longevity supplements available with unusually strong clinical data - particularly the GlyNAC trial showing improvements across 7 aging hallmarks. Sleep benefits are confirmed in polysomnographic trials and work from the first night. Addresses a genuine age-related deficit. Should be in virtually every longevity stack.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Kumar, P. et al. (2023). Supplementing GlyNAC in older adults improves glutathione deficiency, oxidative stress, mitochondrial dysfunction, inflammation, physical function, and aging hallmarks. <em>Journals of Gerontology: Series A</em>, 78(1), 75-89.</li>
+        <li>Lizzo, G. et al. (2022). GlyNAC supplementation in 114 healthy volunteers: dose-response effects on glutathione and oxidative stress. <em>Frontiers in Aging</em>, 3, 852569.</li>
+        <li>Inagawa, K. et al. (2006). Subjective effects of glycine ingestion before bedtime on sleep quality. <em>Sleep and Biological Rhythms</em>, 4(1), 75-77.</li>
+        <li>Bannai, M. et al. (2012). New therapeutic strategy for amino acid medicine: glycine improves the quality of sleep. <em>Journal of Pharmacological Sciences</em>, 118(2), 145-148.</li>
+        <li>Bannai, M. & Kawai, N. (2012). Glycine ingestion improves subjective sleep quality in human volunteers, correlating with polysomnographic changes. <em>Sleep and Biological Rhythms</em>, 10(1), 38-44.</li>
+        <li>Clinical trial (2025). Glycine supplementation significantly improves subjective sleep quality and reduces sleep onset time. Polysomnographic evidence. Published October 2025.</li>
+        <li>Grandner, M. et al. (2025). Dietary protocols to promote and improve restful sleep. <em>Nutrition Reviews</em>, nuaf062.</li>
+        <li>Razak, M.A. et al. (2017). Multifarious beneficial effect of nonessential amino acid, glycine: a review. <em>Oxidative Medicine and Cellular Longevity</em>, 2017, 1716701.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>Glycine is one of the best-value compounds in any serious longevity protocol. Get the full stack with NMN, GlyNAC protocols, dosing schedules and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/magnesium-guide.html" class="related-card">
+          <div class="related-img c-mag">
+            <img src="/images/hero-magnesium.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Magnesium</span>
+            <h4>Magnesium: The Master Mineral That Everyone's Missing</h4>
+          </div>
+        </a>
+        <a href="/articles/nmn-supplements-guide.html" class="related-card">
+          <div class="related-img c-nmn">
+            <img src="/images/thumb-nmn.jpg" alt="NMN" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">NMN</span>
+            <h4>Why 64% of NMN Supplements Contain Zero Active Ingredient</h4>
+          </div>
+        </a>
+        <a href="/articles/spermidine-guide.html" class="related-card">
+          <div class="related-img c-sperm">
+            <img src="/images/hero-spermidine.jpg" alt="Spermidine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Spermidine</span>
+            <h4>Spermidine: The Autophagy Activator That Mimics Fasting</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+      document.querySelector('.dark-toggle') && (document.querySelector('.dark-toggle').textContent = '☀️ Light');
+    }
+
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
