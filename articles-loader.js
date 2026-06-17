@@ -25,6 +25,8 @@ const COLORS = {
   'c-sulfo':  'background:linear-gradient(135deg,#0a1a0a,#1B4332)',
   'c-coffee': 'background:linear-gradient(135deg,#1a0a00,#3E1F00)',
   'c-sleep': 'background:linear-gradient(135deg,#0a0a1a,#1a2a4a)',
+  'c-brain': 'background:linear-gradient(135deg,#0a1a0a,#2D4A6B)',
+'c-antiaging': 'background:linear-gradient(135deg,#1a0a00,#3E1F00)',
 };
 
 function makeCard(article, size) {

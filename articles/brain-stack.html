@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Brain Stack: Omega-3, Lion's Mane, PQQ and CDP-Choline - Stackofy</title>
+  <meta name="description" content="Four compounds targeting neuroplasticity, acetylcholine synthesis, cerebral blood flow and mitochondrial energy in brain tissue. Here is the evidence and how to build the stack." />
+
+  <meta property="og:title" content="The Brain Stack: Omega-3, Lion's Mane, PQQ and CDP-Choline" />
+  <meta property="og:description" content="CDP-choline at 500mg improved memory in a 100-person RCT of healthy older adults. Lion's Mane stimulates NGF. Omega-3 increases cerebral blood flow. PQQ builds new mitochondria in neurons. Four different targets, one protocol." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/brain-stack" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-brain-stack.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1a0a, #1B4332, #2D4A6B); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,26,10,0.95) 0%, rgba(10,26,10,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .stack-overview { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .stack-member { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .stack-member:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .stack-member-img { height: 60px; }
+    .sm-omega { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
+    .sm-lions { background: linear-gradient(135deg, #1a2a1a, #2D6A4F); }
+    .sm-pqq { background: linear-gradient(135deg, #2C1A0E, #5C3A00); }
+    .sm-cdp { background: linear-gradient(135deg, #1a2a4a, #2D4A6B); }
+    .stack-member-body { padding: 0.875rem; }
+    .stack-member-num { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+    .stack-member h3 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+    .stack-member p { font-size: 11px; color: var(--text-muted); line-height: 1.4; margin-bottom: 0.5rem; }
+    .stack-member-link { font-size: 11px; font-weight: 600; color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .target-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .target-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; display: flex; gap: 0.875rem; align-items: flex-start; }
+    .target-icon { font-size: 26px; flex-shrink: 0; }
+    .target-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .target-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .tip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .tip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-omega { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
+    .c-pqq { background: linear-gradient(135deg, #2C1A0E, #5C3A00); }
+    .c-alcar { background: linear-gradient(135deg, #0a1a0a, #1B4332); }
+
+    @media (max-width: 700px) {
+      .stack-overview { grid-template-columns: 1fr 1fr !important; }
+      .target-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-brain-stack.jpg" alt="The Brain Stack - Omega-3, Lion's Mane, PQQ, CDP-Choline" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">★ Brain Protocol</span>
+      <h1>The Brain Stack: Omega-3, Lion's Mane, PQQ and CDP-Choline</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>12 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>CDP-choline at 500mg/day improved memory significantly in a 100-person RCT of healthy older adults over 12 weeks - one of the cleanest brain supplement trials available</li>
+        <li>Lion's Mane stimulates NGF (nerve growth factor) - the protein responsible for neuron maintenance and growth. Evidence is most consistent in older adults and people with MCI; less clear in healthy young adults</li>
+        <li>Omega-3 DHA is a structural component of neuronal membranes - without it, cell signaling degrades. It also increases cerebral blood flow measured by fMRI</li>
+        <li>PQQ is the only compound in this stack that stimulates the growth of entirely new mitochondria in neurons - critical because brain cells have the highest energy demands of any tissue</li>
+        <li>All four target different aspects of brain health: structure, neuroplasticity, neurotransmitter synthesis and energy supply</li>
+        <li>Lion's Mane should be cycled - 6-8 weeks on, 1-2 weeks off. The other three are safe for daily long-term use</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>The brain is the most metabolically demanding organ in the body, consuming roughly 20% of total energy despite representing only 2% of body weight. It is also the organ where age-related decline is most personally consequential - slower processing, memory gaps, reduced focus and eventually the neurodegenerative conditions that define cognitive aging.</p>
+
+      <p>The Brain Stack addresses four distinct vulnerabilities in aging brain function: the structural integrity of neuronal membranes, the capacity for neuroplasticity and nerve regeneration, the efficiency of neurotransmitter synthesis and the energy supply to neurons. No single compound covers all four - which is why the combination is more powerful than any individual element.</p>
+
+      <div class="stack-overview">
+        <a href="/articles/omega-3-complete-guide.html" class="stack-member">
+          <div class="stack-member-img sm-omega"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">01</div>
+            <h3>Omega-3 DHA/EPA</h3>
+            <p>Structural integrity of neuronal membranes. Cerebral blood flow. Anti-neuroinflammatory.</p>
+            <span class="stack-member-link">Full guide →</span>
+          </div>
+        </a>
+        <div class="stack-member">
+          <div class="stack-member-img sm-lions"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">02</div>
+            <h3>Lion's Mane</h3>
+            <p>NGF stimulation. Neuroplasticity. Neuroprotection. Cycle 6-8 weeks on, 1-2 off.</p>
+          </div>
+        </div>
+        <a href="/articles/pqq-guide.html" class="stack-member">
+          <div class="stack-member-img sm-pqq"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">03</div>
+            <h3>PQQ</h3>
+            <p>Mitochondrial biogenesis in neurons. Brain energy supply. Neuroprotective antioxidant.</p>
+            <span class="stack-member-link">Full guide →</span>
+          </div>
+        </a>
+        <div class="stack-member">
+          <div class="stack-member-img sm-cdp"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">04</div>
+            <h3>CDP-Choline</h3>
+            <p>Acetylcholine precursor. Memory and attention. Phospholipid synthesis for neuronal membranes.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>What Each Compound Targets</h2>
+
+      <div class="target-grid">
+        <div class="target-card">
+          <div class="target-icon">🏗️</div>
+          <div>
+            <h4>Structure - Omega-3 DHA</h4>
+            <p>DHA (docosahexaenoic acid) makes up approximately 30% of the fatty acids in the brain's grey matter. It is incorporated into neuronal cell membranes where it maintains fluidity and receptor function. Without adequate DHA, cell membranes become stiffer, signal transduction degrades and neuroinflammation increases. The brain cannot synthesize sufficient DHA on its own - it must come from diet or supplementation.</p>
+          </div>
+        </div>
+        <div class="target-card">
+          <div class="target-icon">🌱</div>
+          <div>
+            <h4>Neuroplasticity - Lion's Mane</h4>
+            <p>Lion's Mane contains hericenones and erinacines that cross the blood-brain barrier and stimulate NGF synthesis. NGF (nerve growth factor) is the protein that regulates the survival, maintenance and growth of neurons. Declining NGF is associated with age-related cognitive impairment. Lion's Mane is one of the very few dietary compounds with direct evidence for NGF upregulation.</p>
+          </div>
+        </div>
+        <div class="target-card">
+          <div class="target-icon">⚡</div>
+          <div>
+            <h4>Energy - PQQ</h4>
+            <p>Neurons have the highest mitochondrial density of any cell type and the least capacity for anaerobic energy production. Mitochondrial decline directly impairs cognition. PQQ stimulates PGC-1alpha - the master regulator of mitochondrial biogenesis - causing neurons to grow more mitochondria. More mitochondria means more sustained energy for neural activity.</p>
+          </div>
+        </div>
+        <div class="target-card">
+          <div class="target-icon">💬</div>
+          <div>
+            <h4>Neurotransmission - CDP-Choline</h4>
+            <p>CDP-choline (citicoline) provides choline for acetylcholine synthesis - the neurotransmitter most associated with learning, memory and attention. It also provides cytidine, which converts to uridine and supports synaptic membrane formation. Unlike regular choline supplements, CDP-choline is the most brain-bioavailable choline source and has the strongest clinical evidence for cognitive outcomes.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/brain-stack-focus.jpg" alt="Brain health foods - lion's mane mushroom, omega-3, walnuts" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Clinical Evidence</h2>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">100</div>
+          <div class="stat-label">Healthy older adults in CDP-choline memory RCT - significant improvement at 500mg/day over 12 weeks</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">30%</div>
+          <div class="stat-label">of brain grey matter fatty acids is DHA - making omega-3 a structural rather than supplementary component</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">2025</div>
+          <div class="stat-label">Double-blind RCT confirmed Lion's Mane improves cognition and mood in healthy adults - Frontiers in Nutrition</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">CDP-Choline RCT - 100 Healthy Older Adults</div>
+        <p>A randomized, double-blind, placebo-controlled trial published in the Journal of Nutrition enrolled 100 healthy men and women aged 50-85 with age-associated memory impairment. Participants received 500mg Cognizin citicoline daily or placebo for 12 weeks. The citicoline group showed statistically significant improvements in memory function measured by computerized cognitive tests. This is one of the cleaner trials in the nootropic space - healthy older subjects, adequate duration, objective measurements and a validated form of CDP-choline.</p>
+      </div>
+
+      <h2>Lion's Mane - The Evidence and Its Limits</h2>
+
+      <p>Lion's Mane is one of the most promising compounds in cognitive longevity research - and also one of the most over-marketed. Understanding both the strength and the limits of the evidence helps set realistic expectations.</p>
+
+      <p><strong>What is well-established:</strong> The hericenones and erinacines in Lion's Mane cross the blood-brain barrier and stimulate NGF synthesis in vitro and in animal models. A 2025 double-blind RCT published in Frontiers in Nutrition confirmed acute improvements in cognition and mood in healthy younger adults. Earlier Japanese RCTs showed significant cognitive improvements in older adults with mild cognitive impairment. Anti-neuroinflammatory and neuroprotective effects are consistently observed across multiple study designs.</p>
+
+      <p><strong>What is still developing:</strong> Human studies measuring NGF levels directly in the brain are technically difficult and limited. Most human trials are small and short. The cognitive evidence is most consistent in older adults and people with existing deficits - effects in cognitively healthy younger adults are more modest. The Alzheimer's Drug Discovery Foundation rates Lion's Mane as "mixed" based on current human evidence - an honest assessment.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">Lion's Mane - Form Matters</div>
+        <p>Most Lion's Mane supplements use fruiting body powder, which contains primarily hericenones. Erinacines are found predominantly in the mycelium. For maximum NGF-stimulating potential, look for products that specify both hericenones and erinacines content, or use a full-spectrum extract. Avoid products that simply list "Lion's Mane mushroom powder" without specifying bioactive compound content or extraction method - the variation in potency is enormous.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/brain-stack-neurons.jpg" alt="Lion's Mane mushroom - the NGF stimulator with neural-like tendrils" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>CDP-Choline vs Alpha-GPC - Which Form of Choline</h2>
+
+      <p>Both CDP-choline and Alpha-GPC are well-absorbed choline forms with human clinical evidence. They differ in their secondary benefits: CDP-choline also provides cytidine/uridine for synaptic membrane support and has neuroprotective properties beyond choline supply. Alpha-GPC has slightly higher choline content per gram and some evidence for growth hormone release in athletes.</p>
+
+      <p>For a longevity and cognitive aging protocol, CDP-choline is the more complete option. For pure performance and acetylcholine maximization, Alpha-GPC is competitive. Either works significantly better than standard choline sources like lecithin or choline bitartrate, which have poor brain bioavailability.</p>
+
+      <div class="tip-box">
+        <div class="tip-label">Choline and the Methylation Connection</div>
+        <p>If you are already taking TMG as part of the Anti-Aging Stack, you are already supporting the methylation pathway that choline also feeds into. CDP-choline and TMG are complementary - they support the same downstream pathway from different angles. No redundancy, no need to choose between them.</p>
+      </div>
+
+      <h2>How to Take the Brain Stack</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Supplement</th>
+          <th>Daily Dose</th>
+          <th>Timing</th>
+          <th>Cycle</th>
+        </tr>
+        <tr>
+          <td>Omega-3 DHA/EPA</td>
+          <td>1-2g combined DHA+EPA</td>
+          <td>With largest meal - fat-soluble</td>
+          <td>Daily - no cycling</td>
+        </tr>
+        <tr>
+          <td>Lion's Mane</td>
+          <td>500 - 1,000mg extract</td>
+          <td>Morning - with or without food</td>
+          <td>6-8 weeks on, 1-2 weeks off</td>
+        </tr>
+        <tr>
+          <td>PQQ</td>
+          <td>10 - 20mg</td>
+          <td>Morning with CoQ10 if combined</td>
+          <td>4-8 weeks on, 1-2 weeks off</td>
+        </tr>
+        <tr>
+          <td>CDP-Choline</td>
+          <td>250 - 500mg</td>
+          <td>Morning - supports focus and alertness</td>
+          <td>Daily - safe long-term</td>
+        </tr>
+      </table>
+
+      <div class="tip-box">
+        <div class="tip-label">Stacking with the Anti-Aging Stack</div>
+        <p>PQQ appears in both the Anti-Aging Stack and the Brain Stack - this is intentional. PQQ's mitochondrial biogenesis benefits apply both systemically and specifically in brain tissue. If you run both stacks, you do not need to double the PQQ dose - a single 10-20mg daily dose covers both targets. The same applies to Omega-3, which belongs in both the Foundation Stack and the Brain Stack for different but complementary reasons.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">8.0/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Strong evidence for CDP-choline and omega-3. Lion's Mane has compelling mechanistic evidence and growing clinical support - with appropriate caveats about study size. PQQ's mitochondrial biogenesis mechanism is uniquely relevant to neurons. Together they cover structural, neuroplastic, energetic and neurotransmitter dimensions of cognitive aging that no single compound can address. The most important stack for anyone prioritizing mental clarity and cognitive longevity into later decades.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Nakazaki, E. et al. (2021). Citicoline and memory function in healthy older adults: a randomized, double-blind, placebo-controlled clinical trial. <em>Journal of Nutrition</em>, 151(8), 2153-2160.</li>
+        <li>Surendran, S. et al. (2025). Acute effects of a standardised extract of Hericium erinaceus on cognition and mood in healthy younger adults: double-blind RCT. <em>Frontiers in Nutrition</em>. doi:10.3389/fnut.2025.1405796.</li>
+        <li>Mori, K. et al. (2009). Improving effects of the mushroom Yamabushitake on mild cognitive impairment: a double-blind placebo-controlled clinical trial. <em>Phytotherapy Research</em>, 23(3), 367-372.</li>
+        <li>Swiatkowicz, M. & Grieb, P. (2023). Citicoline for supporting memory in aging humans. <em>Aging and Disease</em>, 14(4), 1184-1199. doi:10.14336/AD.2022.0913.</li>
+        <li>Stonehouse, W. et al. (2013). DHA supplementation improved both memory and reaction time in healthy young adults: a randomized controlled trial. <em>American Journal of Clinical Nutrition</em>, 97(5), 1134-1143.</li>
+        <li>Harris, C.B. et al. (2013). Dietary PQQ alters indicators of inflammation and mitochondrial-related metabolism in human subjects. <em>Journal of Nutritional Biochemistry</em>, 24(12), 2076-2084.</li>
+        <li>Alzheimer's Drug Discovery Foundation (2024). Lion's Mane Cognitive Vitality Rating. alzdiscovery.org.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Cognitive Longevity Protocol?</h3>
+      <p>The Brain Stack works best as part of a full daily protocol. See how it fits alongside the Foundation Stack and Anti-Aging Stack.</p>
+      <div class="cta-buttons">
+        <a href="/articles/personal-stack-guide.html" class="btn-gold">Read the Personal Stack Guide →</a>
+        <a href="/your-stack.html" class="btn-outline">Build YOUR Stack - Free →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Deep Dives - Individual Guides</div>
+      <div class="related-grid">
+        <a href="/articles/omega-3-complete-guide.html" class="related-card">
+          <div class="related-img c-omega">
+            <img src="/images/omega-3-capsules-moss.jpg" alt="Omega-3" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Omega-3</span>
+            <h4>Omega-3: The One Supplement Almost Everyone Is Taking Wrong</h4>
+          </div>
+        </a>
+        <a href="/articles/pqq-guide.html" class="related-card">
+          <div class="related-img c-pqq">
+            <img src="/images/tree-rings.jpg" alt="PQQ" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">PQQ</span>
+            <h4>PQQ: The Mitochondrial Spark That Keeps You Young and Sharp</h4>
+          </div>
+        </a>
+        <a href="/articles/alcar-guide.html" class="related-card">
+          <div class="related-img c-alcar">
+            <img src="/images/hero-alcar.jpg" alt="ALCAR" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">ALCAR</span>
+            <h4>Acetyl-L-Carnitine: The Brain-Boosting Fat Transporter</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

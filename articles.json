@@ -256,5 +256,15 @@
   "tags": "sleep longevity",
   "readTime": "12 min",
   "description": "Three compounds addressing the three root causes of poor sleep: magnesium deficiency, elevated evening cortisol and neural over-excitation. No grogginess. Better sleep architecture."
+},{
+  "title": "The Brain Stack: Omega-3, Lion's Mane, PQQ and CDP-Choline",
+  "tag": "Brain Protocol",
+  "url": "/articles/brain-stack.html",
+  "image": "/images/hero-brain-stack.jpg",
+  "color": "c-brain",
+  "type": "protocol",
+  "tags": "brain longevity energy",
+  "readTime": "12 min",
+  "description": "CDP-choline improved memory in a 100-person RCT. Lion's Mane stimulates NGF. Omega-3 is a structural brain component. PQQ builds new mitochondria in neurons. Four targets, one protocol."
 }
 ]
