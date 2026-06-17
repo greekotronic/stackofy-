@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lion's Mane: The NGF-Stimulating Mushroom for Brain Health and Neuroplasticity - Stackofy</title>
+  <meta name="description" content="Lion's Mane stimulates nerve growth factor - the protein responsible for neuron survival and growth. A 2025 double-blind RCT confirmed cognitive and mood benefits in healthy younger adults. Here is the complete evidence picture." />
+
+  <meta property="og:title" content="Lion's Mane: The NGF-Stimulating Mushroom for Brain Health" />
+  <meta property="og:description" content="Hericenones and erinacines cross the blood-brain barrier and stimulate NGF synthesis. A 2025 Frontiers in Nutrition RCT confirmed acute cognitive improvements in healthy adults. Here is what works - and what to look for on the label." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/lionsmane-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-lionsmane.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #1B4332, #2D6A4F); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,42,16,0.95) 0%, rgba(26,42,16,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .compound-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .compound-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .compound-card.featured { border-color: var(--green-dark); }
+    .compound-source { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+    .compound-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .compound-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .forms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .form-card { background: var(--surface); border-radius: var(--radius-sm); border: 0.5px solid var(--border); padding: 1rem; }
+    .form-card.best { border-color: var(--green-dark); }
+    .form-rank { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 4px; }
+    .form-rank.top { color: var(--green-dark); }
+    .form-rank.ok { color: var(--gold); }
+    .form-rank.skip { color: #C0392B; }
+    .form-card h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .form-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .tip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .tip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-brain { background: linear-gradient(135deg, #0a1a0a, #2D4A6B); }
+    .c-pqq { background: linear-gradient(135deg, #2C1A0E, #5C3A00); }
+    .c-alcar { background: linear-gradient(135deg, #0a1a0a, #1B4332); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .compound-grid { grid-template-columns: 1fr !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .forms-grid { grid-template-columns: 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-lionsmane.jpg" alt="Lion's Mane mushroom - the NGF-stimulating brain health fungus" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Lion's Mane</span>
+      <h1>The NGF-Stimulating Mushroom for Brain Health and Neuroplasticity</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>11 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Lion's Mane contains hericenones (fruiting body) and erinacines (mycelium) - both cross the blood-brain barrier and stimulate NGF synthesis</li>
+        <li>A 2025 double-blind RCT in healthy younger adults confirmed acute cognitive and mood improvements - expanding evidence beyond older adults with MCI</li>
+        <li>Most consistent evidence is in older adults and people with mild cognitive impairment - effects in healthy younger adults are more modest</li>
+        <li>Form matters enormously: fruiting body extracts contain hericenones, mycelium contains erinacines - look for products specifying both or stating extraction method</li>
+        <li>Cycle 6-8 weeks on, 1-2 weeks off - consistent with adaptogen protocols and supported by the evidence pattern</li>
+        <li>Generally well-tolerated but rare allergic reactions reported - do not use if you have mushroom allergies</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Lion's Mane (Hericium erinaceus) is one of the most visually distinctive organisms in nature - a white, cascading mass of tendrils that looks more like a sea creature than a forest mushroom. But its appearance is not why scientists find it interesting. What sets Lion's Mane apart from virtually every other dietary supplement is its documented ability to stimulate nerve growth factor (NGF) - the protein responsible for the survival, maintenance and growth of neurons.</p>
+
+      <p>This is not a marginal effect. Hericenones and erinacines - the two primary bioactive compound classes in Lion's Mane - cross the blood-brain barrier and directly upregulate NGF synthesis in the brain. In a world where most "brain supplements" operate through vague antioxidant effects or modest neurotransmitter support, Lion's Mane addresses neuroplasticity at a mechanistic level that no other widely available dietary compound can match.</p>
+
+      <p><strong>The caveat is equally important: the clinical evidence base in humans, while growing, is still limited in scale. The mechanism is compelling. The human data supports the mechanism. But this is not yet a compound with the same clinical weight as omega-3 or CDP-choline.</strong></p>
+
+      <div class="article-img">
+        <img src="/images/lionsmane-dried.jpg" alt="Dried Lion's Mane mushroom - the source of hericenones and erinacines" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Two Bioactive Compounds - and Why Both Matter</h2>
+
+      <p>Understanding Lion's Mane requires understanding that it contains two distinct classes of NGF-stimulating compounds found in different parts of the mushroom - and most supplements only deliver one of them.</p>
+
+      <div class="compound-grid">
+        <div class="compound-card featured">
+          <div class="compound-source">Fruiting Body</div>
+          <h4>Hericenones</h4>
+          <p>Found in the fruiting body (the visible mushroom). Smaller molecules that cross the blood-brain barrier and stimulate NGF synthesis in the brain. Most traditional culinary and medicinal use has involved the fruiting body. The majority of older human trials used fruiting body extracts standardized for hericenone content.</p>
+        </div>
+        <div class="compound-card featured">
+          <div class="compound-source">Mycelium</div>
+          <h4>Erinacines</h4>
+          <p>Found in the mycelium (the root-like structure). Also cross the blood-brain barrier and stimulate NGF - some research suggests erinacines may be even more potent NGF stimulators than hericenones. Mycelium-based extracts are increasingly common in supplements but vary enormously in quality and actual erinacine content.</p>
+        </div>
+      </div>
+
+      <p>The practical implication: a supplement made exclusively from fruiting body will not deliver erinacines, and one made exclusively from mycelium may not deliver meaningful hericenone levels. A full-spectrum product specifying both compounds - or separate fruiting body and mycelium extracts - provides the most complete NGF-stimulating profile. This is one of the most important label considerations for Lion's Mane quality.</p>
+
+      <h2>How NGF Relates to Brain Aging</h2>
+
+      <p>NGF (Nerve Growth Factor) is a neurotrophin - a protein that regulates the growth, maintenance and survival of neurons. It was discovered in the 1950s and earned Rita Levi-Montalcini and Stanley Cohen the Nobel Prize in 1986. NGF is essential for cholinergic neurons in the basal forebrain - the neurons most devastated in Alzheimer's disease - and for peripheral sensory and sympathetic neurons.</p>
+
+      <p>NGF levels decline with age. This decline is associated with neuronal atrophy, reduced synaptic plasticity and diminished cognitive resilience. The core hypothesis for Lion's Mane is that by stimulating NGF synthesis, it supports the maintenance and potential regeneration of neuronal structures that age-related decline would otherwise progressively erode.</p>
+
+      <p>The challenge with directly supplementing NGF is that it cannot cross the blood-brain barrier - it is too large a protein. This is where Lion's Mane's small bioactive molecules (hericenones and erinacines) provide a unique advantage: they cross the barrier and stimulate the brain's own NGF production from the inside.</p>
+
+      <div class="article-img">
+        <img src="/images/lionsmane-neurons.jpg" alt="NGF stimulating neuron branching - how Lion's Mane supports neuroplasticity" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Clinical Evidence</h2>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Mild Cognitive Impairment (MCI)</h4>
+          <p>A landmark Japanese RCT (Mori et al., 2009) showed significant cognitive improvements in older adults with MCI after 16 weeks of Lion's Mane supplementation - with decline after stopping. This remains the most cited human evidence and is consistent across multiple follow-up studies in cognitively impaired populations.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Healthy Younger Adults - Acute Effects</h4>
+          <p>A 2025 double-blind RCT published in Frontiers in Nutrition found acute improvements in cognitive processing speed and mood in healthy younger adults after a single dose of standardized Lion's Mane extract. A 2023 Northumbria University pilot study showed faster Stroop task performance at 60 minutes post-dose.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Mood and Anxiety</h4>
+          <p>Several trials report reductions in anxiety and depressive symptoms alongside cognitive improvements. The mechanism likely involves NGF's role in serotonergic and cholinergic neurotransmission rather than direct mood-regulating effects. Consistent signal across trials but effect sizes are modest.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Mixed Evidence</span>
+          <h4>Chronic Effects in Healthy Adults</h4>
+          <p>The 2023 Northumbria pilot study found only a trend (not significant) toward stress reduction after 28 days in healthy young adults. This is consistent with the general pattern: effects are strongest in populations with existing deficits or impairment. Healthy adults with no cognitive issues see more modest benefits.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">2025 Frontiers in Nutrition RCT - Healthy Younger Adults</div>
+        <p>A double-blind, randomized, placebo-controlled study published in Frontiers in Nutrition in February 2025 tested a standardized Hericium erinaceus extract in healthy younger adults. Results showed significant acute improvements in cognitive processing speed and mood following a single dose. This is notable because most previous human evidence focused on older adults or those with existing cognitive impairment - this trial extends the evidence to healthy individuals, albeit with acute rather than chronic measurements. The study adds weight to the case for Lion's Mane in cognitive performance protocols, not just cognitive decline prevention.</p>
+      </div>
+
+      <h2>Form and Quality - What to Look for on the Label</h2>
+
+      <div class="forms-grid">
+        <div class="form-card best">
+          <div class="form-rank top">Best Choice</div>
+          <h4>Full-Spectrum Extract</h4>
+          <p>Specifies both hericenone and erinacine content. Combines fruiting body and mycelium. Look for standardization percentages. This is the most complete NGF-stimulating profile available.</p>
+        </div>
+        <div class="form-card best">
+          <div class="form-rank top">Good Choice</div>
+          <h4>Fruiting Body Extract</h4>
+          <p>Delivers hericenones. The form used in most Japanese clinical trials. Look for "fruiting body only" and a specified extraction ratio (e.g. 8:1 or 10:1). Traditional and well-studied.</p>
+        </div>
+        <div class="form-card">
+          <div class="form-rank skip">Use Caution</div>
+          <h4>Generic "Mushroom Powder"</h4>
+          <p>Many products list only "Lion's Mane mushroom powder" with no extraction method, no compound specification and no standardization. These may deliver negligible hericenone or erinacine content. Avoid unspecified products.</p>
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">Mycelium on Grain - A Common Problem</div>
+        <p>Many Lion's Mane supplements labeled as "mycelium extract" are actually mycelium grown on grain substrate - and the final product contains significant quantities of grain rather than pure mycelium. Some independent analyses have found these products contain more starch than actual Lion's Mane compounds. Look for products that specify "mycelium extract" with a concentration ratio, or choose certified fruiting body extracts to avoid this issue.</p>
+      </div>
+
+      <h2>Dosing and Cycling</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Daily Dose</th>
+          <th>Form</th>
+          <th>Cycle</th>
+        </tr>
+        <tr>
+          <td>Cognitive support / neuroplasticity</td>
+          <td>500 - 1,000mg extract</td>
+          <td>Standardized fruiting body or full-spectrum extract</td>
+          <td>6-8 weeks on, 1-2 weeks off</td>
+        </tr>
+        <tr>
+          <td>MCI / cognitive decline support</td>
+          <td>1,000 - 3,000mg</td>
+          <td>Fruiting body extract standardized for hericenones</td>
+          <td>As per clinical trial protocols - discuss with healthcare provider</td>
+        </tr>
+        <tr>
+          <td>Acute cognitive performance</td>
+          <td>1,800mg single dose</td>
+          <td>Standardized extract</td>
+          <td>As needed - based on 2025 RCT acute protocol</td>
+        </tr>
+        <tr>
+          <td>Not recommended</td>
+          <td>-</td>
+          <td>Unstandardized powder, mycelium-on-grain products</td>
+          <td>Unpredictable bioactive content</td>
+        </tr>
+      </table>
+
+      <div class="tip-box">
+        <div class="tip-label">Practical Tip - Morning Timing</div>
+        <p>Lion's Mane is best taken in the morning with or without food. Some users report mild stimulating effects when taken in the evening - likely due to increased NGF and acetylcholine activity. It pairs well with CDP-choline (which also supports acetylcholine synthesis) and with omega-3 DHA (which provides structural support for the neuronal membranes that NGF helps maintain).</p>
+      </div>
+
+      <h2>Safety Profile</h2>
+
+      <p>Lion's Mane has a long history of safe culinary and medicinal use in East Asia. Clinical trials consistently report excellent tolerability with no serious adverse events at standard supplemental doses. The safety profile is considerably cleaner than ashwagandha - no documented liver toxicity, no thyroid interference, no hormonal effects.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">Mushroom Allergy</div>
+        <p>Do not use if you have a known mushroom or mold allergy. Rare cases of allergic reactions including skin rash and respiratory symptoms have been reported. People with autoimmune conditions should consult a healthcare professional before using Lion's Mane, as it has immunomodulatory properties that could theoretically affect immune-mediated conditions. Pregnant and breastfeeding women should also consult a healthcare provider before supplementing.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">7.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Unique mechanism - no other widely available supplement stimulates NGF directly. The evidence in MCI and older adults is consistent and meaningful. Growing evidence in healthy adults thanks to the 2025 RCT. Score tempered by the still-limited scale of human trials and the significant quality variation in products on the market. Clean safety profile relative to other adaptogens. Most valuable for people over 45 prioritizing cognitive longevity, or anyone in the Brain Stack looking for genuine neuroplasticity support rather than just neurotransmitter optimization.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Surendran, G. et al. (2025). Acute effects of a standardised extract of Hericium erinaceus on cognition and mood in healthy younger adults: double-blind RCT. <em>Frontiers in Nutrition</em>, 12, 1405796. doi:10.3389/fnut.2025.1405796.</li>
+        <li>Docherty, S. et al. (2023). The acute and chronic effects of Lion's Mane mushroom supplementation on cognitive function, stress and mood in young adults: double-blind pilot study. <em>Nutrients</em>, 15(22), 4842.</li>
+        <li>Mori, K. et al. (2009). Improving effects of the mushroom Yamabushitake on mild cognitive impairment: double-blind placebo-controlled clinical trial. <em>Phytotherapy Research</em>, 23(3), 367-372.</li>
+        <li>Kawagishi, H. et al. (1994). Erinacines A, B and C, strong stimulators of NGF-synthesis, from the mycelia of Hericium erinaceum. <em>Tetrahedron Letters</em>, 35, 1569-1572.</li>
+        <li>Phan, C.W. et al. (2025). Benefits, side effects, and uses of Hericium erinaceus as a supplement: systematic review. <em>Frontiers in Nutrition</em>. doi:10.3389/fnut.2025.1641246.</li>
+        <li>Alzheimer's Drug Discovery Foundation (2024). Lion's Mane Cognitive Vitality Rating. alzdiscovery.org.</li>
+        <li>La Monica, M.B. et al. (2023). Acute Lion's Mane supplementation and cognitive performance. <em>Nutrients</em>.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Brain Protocol?</h3>
+      <p>Lion's Mane works best as part of a coordinated brain health stack with omega-3, PQQ and CDP-choline.</p>
+      <div class="cta-buttons">
+        <a href="/articles/brain-stack.html" class="btn-gold">Read the Brain Stack Guide →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/brain-stack.html" class="related-card">
+          <div class="related-img c-brain">
+            <img src="/images/hero-brain-stack.jpg" alt="Brain Stack" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Brain Protocol</span>
+            <h4>The Brain Stack: Omega-3, Lion's Mane, PQQ and CDP-Choline</h4>
+          </div>
+        </a>
+        <a href="/articles/pqq-guide.html" class="related-card">
+          <div class="related-img c-pqq">
+            <img src="/images/tree-rings.jpg" alt="PQQ" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">PQQ</span>
+            <h4>PQQ: The Mitochondrial Spark That Keeps You Young and Sharp</h4>
+          </div>
+        </a>
+        <a href="/articles/alcar-guide.html" class="related-card">
+          <div class="related-img c-alcar">
+            <img src="/images/hero-alcar.jpg" alt="ALCAR" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">ALCAR</span>
+            <h4>Acetyl-L-Carnitine: The Brain-Boosting Fat Transporter</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you have existing health conditions or are taking medication. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

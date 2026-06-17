@@ -169,6 +169,22 @@ IMAGES = [
         "w": 900, "h": 420,
         "prompt": "abstract visualization of alpha brain waves as calm glowing green sine waves on dark background, peaceful and focused, scientific editorial aesthetic, bioluminescent quality"
     },
+    # ── LION'S MANE ───────────────────────────────────────────────────────
+    {
+        "file": "hero-lionsmane.jpg",
+        "w": 1216, "h": 704,
+        "prompt": "dramatic macro close-up of fresh lion's mane mushroom with white cascading tendrils on dark wet slate, soft gold side lighting, editorial food photography, deep forest green tones, scientific beauty"
+    },
+    {
+        "file": "lionsmane-dried.jpg",
+        "w": 900, "h": 420,
+        "prompt": "overhead flat lay of dried lion's mane mushroom pieces and powder in dark ceramic bowl on dark stone surface, warm amber side lighting, botanical editorial photography, minimal"
+    },
+    {
+        "file": "lionsmane-neurons.jpg",
+        "w": 900, "h": 420,
+        "prompt": "abstract visualization of nerve growth factor stimulating neuron branching and growth, glowing gold tendrils on dark green background, bioluminescent quality, scientific editorial aesthetic"
+    },
 ]
 ]
 
