@@ -173,7 +173,20 @@
 
     .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
     .disclaimer strong { color: var(--text); }
-
+/* FREE GIFT BANNER */
+    .free-gift-banner { background: var(--surface); border-radius: var(--radius); border: 2px solid var(--gold); padding: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; position: relative; overflow: hidden; }
+    .free-gift-banner::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold), var(--green-dark), var(--gold)); }
+    .free-gift-left { flex: 1; }
+    .free-gift-badge { display: inline-block; background: var(--gold); color: #1A1A1A; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-bottom: 0.75rem; }
+    .free-gift-left h3 { font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 0.6rem; line-height: 1.35; }
+    .free-gift-left p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; }
+    .btn-free { background: var(--green-dark); color: #FAF8F4; border: none; border-radius: var(--radius-sm); padding: 12px 22px; font-size: 14px; font-weight: 700; display: inline-block; }
+    .btn-free:hover { background: var(--green-mid); }
+    .free-gift-right { flex-shrink: 0; text-align: center; background: var(--gold-light); border-radius: var(--radius); padding: 1.5rem 2rem; border: 0.5px solid var(--gold); }
+    .free-gift-icon { font-size: 36px; margin-bottom: 8px; }
+    .free-gift-meta { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; }
+    .price-was { font-size: 14px; color: var(--text-muted); text-decoration: line-through; margin-right: 6px; }
+    .price-free { font-size: 22px; font-weight: 700; color: var(--green-dark); }
     @media (max-width: 900px) {
       .grid-4 { grid-template-columns: 1fr 1fr !important; }
       .grid-3 { grid-template-columns: 1fr 1fr !important; }
@@ -264,7 +277,20 @@
       <div><div class="trust-num">0</div><div class="trust-label">Pharma Sponsors</div></div>
       <div><div class="trust-num" id="article-count-home">9</div><div class="trust-label">In-Depth Guides</div></div>
     </div>
-
+<!-- FREE GIFT BANNER -->
+    <div class="free-gift-banner mb3">
+      <div class="free-gift-left">
+        <div class="free-gift-badge">🎁 100% Free</div>
+        <h3>Before You Buy Any NMN Supplement - Read This First</h3>
+        <p>Most NMN products on the market contain zero active ingredient. This free checklist tells you the 5 questions to ask before spending a cent. Takes 90 seconds. Could save you $80.</p>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-free">Download Free - No Email Required →</a>
+      </div>
+      <div class="free-gift-right">
+        <div class="free-gift-icon">📋</div>
+        <div class="free-gift-meta">NMN Quick-Start Checklist</div>
+        <div class="free-gift-price"><span class="price-was">$9</span> <span class="price-free">FREE</span></div>
+      </div>
+    </div>
     <!-- STACK AUDIT FEATURE -->
     <div class="stack-audit-feature mb3">
       <div class="audit-badge">ARI Special Report</div>
@@ -399,7 +425,7 @@
         <p>5 questions you must ask before buying any NMN supplement. Most brands fail at least 3 of them. Takes 90 seconds to read - could save you from wasting $80 on a product with zero active ingredient.</p>
       </div>
       <div class="lead-block-cta">
-        <a href="https://alethiaresearch.gumroad.com" class="btn-gold">Download Free →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-gold">Download Free →</a>
       </div>
     </div>
 
@@ -427,7 +453,7 @@
             <div class="rec-img r2"><img src="/images/longevity-plan-cover.jpg" alt="Longevity Plan" onerror="this.style.display='none'" /></div>
             <div class="rec-body"><div class="rec-label">Book - Amazon</div><h4>The $1,000 Longevity Plan</h4><p>Add 15 healthy years with smart supplements</p></div>
           </a>
-          <a href="https://alethiaresearch.gumroad.com" class="rec-card">
+          <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="rec-card">
             <div class="rec-img r3"></div>
             <div class="rec-body"><div class="rec-label">Free Download</div><h4>NMN Quick-Start Checklist</h4><p>5 questions before buying any NMN</p></div>
           </a>
