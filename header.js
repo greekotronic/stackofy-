@@ -29,6 +29,7 @@
     #site-mobile-menu.open { display: flex !important; }
     #site-mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); text-decoration: none; }
     #site-mobile-menu a:last-child { border-bottom: none; }
+    #site-mobile-menu .s-mobile-dark { background: rgba(255,255,255,0.1); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 10px 1rem; cursor: pointer; color: #FAF8F4; font-size: 14px; text-align: left; width: 100%; margin-top: 0.5rem; }
     #site-footer { background: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%); color: #95D5B2; text-align: center; padding: 2rem; font-size: 13px; line-height: 2; margin-top: 3rem; }
     #site-footer .sf-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 0.5rem; flex-wrap: wrap; }
     #site-footer .sf-links a { color: #95D5B2; font-size: 13px; text-decoration: none; }
@@ -47,7 +48,12 @@
   style.textContent = HEADER_CSS;
   document.head.appendChild(style);
 
-  // Build header HTML - burger is now OUTSIDE s-nav
+  // Determine initial theme label
+  function getDarkLabel(isDark) {
+    return isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+  }
+
+  // Build header HTML
   const header = document.createElement('header');
   header.id = 'site-header';
   header.innerHTML = `
@@ -61,7 +67,7 @@
         <a href="/articles.html">Articles</a>
         <a href="/your-stack.html">Stack Builder</a>
         <a href="/about.html">About</a>
-        <button class="s-dark" onclick="stackofyToggleDark()">🌙 Dark</button>
+        <button class="s-dark" onclick="stackofyToggleDark()">☀️ Light</button>
       </nav>
       <button class="s-burger" onclick="stackofyToggleMenu()" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -69,7 +75,7 @@
     </div>
   `;
 
-  // Build mobile menu
+  // Build mobile menu - includes dark mode toggle
   const mobileMenu = document.createElement('div');
   mobileMenu.id = 'site-mobile-menu';
   mobileMenu.innerHTML = `
@@ -77,6 +83,7 @@
     <a href="/articles.html" onclick="stackofyToggleMenu()">Articles</a>
     <a href="/your-stack.html" onclick="stackofyToggleMenu()">Stack Builder</a>
     <a href="/about.html" onclick="stackofyToggleMenu()">About</a>
+    <button class="s-mobile-dark" onclick="stackofyToggleDark()">☀️ Light Mode</button>
   `;
 
   // Build footer
@@ -94,10 +101,22 @@
     <div style="margin-top: 4px; font-size: 12px; color: #6B8A78;">Evidence-based. No pharma ties. No fluff.</div>
   `;
 
+  function applyTheme(isDark) {
+    if (isDark) {
+      document.body.setAttribute('data-theme', 'dark');
+    } else {
+      document.body.removeAttribute('data-theme');
+    }
+    // Update all dark toggle buttons
+    document.querySelectorAll('.s-dark, .s-mobile-dark').forEach(btn => {
+      btn.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
+    });
+  }
+
   function init() {
     if (!document.body) return;
 
-    // DUPLICATE PREVENTION: skip if header already exists
+    // DUPLICATE PREVENTION
     if (document.getElementById('site-header')) return;
 
     // Remove any hardcoded headers already in the page
@@ -109,12 +128,10 @@
     document.body.insertBefore(header, document.body.firstChild);
     document.body.appendChild(footer);
 
-    // Apply saved theme
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.setAttribute('data-theme', 'dark');
-      const btn = document.querySelector('.s-dark');
-      if (btn) btn.textContent = '☀️ Light';
-    }
+    // Apply theme: dark is default unless user explicitly chose light
+    const savedTheme = localStorage.getItem('theme');
+    const isDark = savedTheme !== 'light'; // dark unless explicitly set to light
+    applyTheme(isDark);
   }
 
   // Wait for DOM
@@ -130,17 +147,13 @@
   };
 
   window.stackofyToggleDark = function() {
-    const body = document.body;
-    const btn = document.querySelector('.s-dark');
-    if (body.getAttribute('data-theme') === 'dark') {
-      body.removeAttribute('data-theme');
-      if (btn) btn.textContent = '🌙 Dark';
-      localStorage.setItem('theme', 'light');
-    } else {
-      body.setAttribute('data-theme', 'dark');
-      if (btn) btn.textContent = '☀️ Light';
-      localStorage.setItem('theme', 'dark');
-    }
+    const isDark = document.body.getAttribute('data-theme') === 'dark';
+    const newDark = !isDark;
+    applyTheme(newDark);
+    localStorage.setItem('theme', newDark ? 'dark' : 'light');
+    // Close mobile menu if open
+    const menu = document.getElementById('site-mobile-menu');
+    if (menu) menu.classList.remove('open');
   };
 
 })();
