@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L-Theanine: Calm Focus Without Sedation - Stackofy</title>
+  <meta name="description" content="L-theanine promotes alpha brain waves within 30-40 minutes of ingestion - the neural state of calm alertness. A 2024 RCT confirmed stress and sleep benefits at 400mg daily. Here is what it does and does not do." />
+
+  <meta property="og:title" content="L-Theanine: Calm Focus Without Sedation" />
+  <meta property="og:description" content="Found almost exclusively in green tea, L-theanine crosses the blood-brain barrier and shifts brain activity toward alpha waves within 30-40 minutes. No sedation. No grogginess. A 2024 28-day RCT confirms sustained stress benefits." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/ltheanine-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-ltheanine.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1a0a, #1B4332, #2D6A4F); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,26,10,0.95) 0%, rgba(10,26,10,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .brainwave-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .brainwave-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .brainwave-row { display: flex; gap: 1rem; align-items: center; margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 0.5px solid var(--border); }
+    .brainwave-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .brainwave-name { font-size: 13px; font-weight: 700; color: var(--text); width: 60px; flex-shrink: 0; }
+    .brainwave-bar-wrap { flex: 1; }
+    .brainwave-bar { height: 8px; border-radius: 4px; }
+    .bar-beta { background: #C0392B; width: 90%; }
+    .bar-alpha { background: var(--green-dark); width: 65%; }
+    .bar-theta { background: #2D4A6B; width: 40%; }
+    .bar-delta { background: #1a1a4a; width: 20%; }
+    .brainwave-desc { font-size: 12px; color: var(--text-muted); width: 200px; flex-shrink: 0; }
+    .brainwave-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-sleep { background: linear-gradient(135deg, #0a0a1a, #1a2a4a); }
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+    .c-ashwa { background: linear-gradient(135deg, #1a0a00, #3E2010); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .brainwave-desc { display: none; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-ltheanine.jpg" alt="Fresh green tea leaves and matcha - the natural source of L-theanine" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">L-Theanine</span>
+      <h1>Calm Focus Without Sedation</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>10 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>L-theanine promotes alpha brain waves within 30-40 minutes - the neural state associated with calm alertness, not sleep</li>
+        <li>A 2024 28-day RCT confirmed significant stress reduction at 400mg daily - with an important nuance: cortisol levels did not differ significantly from placebo</li>
+        <li>The caffeine + L-theanine combination is one of the most studied nootropic pairings - L-theanine smooths the caffeine curve without reducing the cognitive boost</li>
+        <li>L-theanine + magnesium together regulate brain electrochemical activity better than either alone - per a Frontiers in Nutrition RCT</li>
+        <li>Exceptionally safe - no documented serious adverse events, no dependency, no withdrawal, no morning grogginess</li>
+        <li>Does not work for everyone - effects depend on baseline anxiety level and individual GABA sensitivity</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>L-theanine is one of the most elegant compounds in the supplement world. It does not sedate. It does not stimulate. It shifts the brain's activity pattern toward a specific state - alpha wave dominance - that sits precisely between the alertness of caffeine and the drowsiness of sleep. The Japanese have been consuming it in green tea for centuries. The science now explains why it works.</p>
+
+      <p>It is also one of the safest supplements available. No documented serious adverse events across decades of research and widespread consumption. No dependency. No tolerance buildup. No morning grogginess. For people looking to reduce anxiety, improve sleep onset or smooth the edges off caffeine - without the risks associated with ashwagandha or the uncertainty of stronger adaptogens - L-theanine is a clean and well-evidenced choice.</p>
+
+      <div class="article-img">
+        <img src="/images/ltheanine-green-tea.jpg" alt="Green tea leaves and matcha - the primary natural source of L-theanine" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Mechanism - What Alpha Waves Actually Mean</h2>
+
+      <p>L-theanine is a non-protein amino acid found almost exclusively in the leaves of Camellia sinensis - the tea plant - where it constitutes roughly 1-2% of dry weight. It crosses the blood-brain barrier within 30-60 minutes of ingestion and reaches peak brain concentration within that window.</p>
+
+      <p>Once in the brain, it modulates several neurotransmitter systems simultaneously: it increases GABA (the brain's primary inhibitory neurotransmitter), raises serotonin and dopamine levels, and - crucially - reduces glutamate activity. Glutamate is the brain's primary excitatory neurotransmitter. L-theanine's structural similarity to glutamate allows it to compete for receptor binding, effectively reducing neural excitation without blocking cognition.</p>
+
+      <p>The combined effect of these mechanisms is a characteristic shift in brain electrical activity:</p>
+
+      <div class="brainwave-visual">
+        <div class="brainwave-title">Brain Wave States - Where L-Theanine Acts</div>
+        <div class="brainwave-row">
+          <div class="brainwave-name">Beta</div>
+          <div class="brainwave-bar-wrap"><div class="brainwave-bar bar-beta"></div></div>
+          <div class="brainwave-desc">Alert, focused, stressed - the default waking state</div>
+        </div>
+        <div class="brainwave-row">
+          <div class="brainwave-name">Alpha ★</div>
+          <div class="brainwave-bar-wrap"><div class="brainwave-bar bar-alpha"></div></div>
+          <div class="brainwave-desc">Calm alertness - meditation, creative flow, relaxed focus</div>
+        </div>
+        <div class="brainwave-row">
+          <div class="brainwave-name">Theta</div>
+          <div class="brainwave-bar-wrap"><div class="brainwave-bar bar-theta"></div></div>
+          <div class="brainwave-desc">Drowsy, early sleep onset, deep meditation</div>
+        </div>
+        <div class="brainwave-row">
+          <div class="brainwave-name">Delta</div>
+          <div class="brainwave-bar-wrap"><div class="brainwave-bar bar-delta"></div></div>
+          <div class="brainwave-desc">Deep sleep - no conscious awareness</div>
+        </div>
+        <div class="brainwave-highlight">★ L-theanine specifically promotes alpha wave activity - shifting the brain toward calm alertness without moving into sedation territory. This is why it does not cause drowsiness.</div>
+      </div>
+
+      <h2>The Clinical Evidence</h2>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Alpha Wave Promotion</h4>
+          <p>Multiple EEG studies consistently show increased alpha wave power within 30-40 minutes of L-theanine ingestion. This is the most reliably replicated finding in L-theanine research and the mechanistic foundation for its subjective relaxation effect.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Caffeine Synergy</h4>
+          <p>The L-theanine + caffeine combination is one of the most studied nootropic pairings. Multiple RCTs show it improves attention, reaction time and working memory more than either compound alone, while reducing jitteriness and cardiovascular side effects of caffeine.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Stress and Anxiety Reduction</h4>
+          <p>A 2024 28-day RCT with 30 adults confirmed significant stress reduction on the Perceived Stress Scale at 400mg daily. Effects on subjective stress are consistent - but cortisol levels did not differ significantly from placebo, suggesting the mechanism is more neurological than hormonal.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Sleep Quality</h4>
+          <p>L-theanine improves sleep quality through relaxation rather than sedation - reducing the time it takes to transition into alpha and then theta states at bedtime. Most effective in people whose sleep is disrupted by an overactive mind rather than circadian rhythm issues.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">2024 AlphaWave RCT - 28 Days, 30 Adults</div>
+        <p>A randomized, double-blind, placebo-controlled trial published in Neurology and Therapy in 2024 tested 400mg L-theanine daily (200mg morning, 200mg evening) for 28 days in healthy adults with moderate stress. The L-theanine group showed significant reductions in Perceived Stress Scale scores at day 28, with improvements in sleep quality and cognitive attention. An important nuance: salivary cortisol did not differ significantly between groups. This suggests L-theanine's stress-reducing effect operates through neurological pathways (GABA, alpha waves) rather than by directly suppressing the HPA axis - distinguishing it mechanistically from ashwagandha.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/ltheanine-brain-waves.jpg" alt="Alpha brain waves - the calm focused state L-theanine promotes" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Caffeine Combination - Why It Works</h2>
+
+      <p>Green tea naturally contains both L-theanine and caffeine in roughly a 2:1 ratio (theanine:caffeine) - and this combination is not coincidental. The two compounds interact in ways that make the cognitive effect of green tea distinctly different from coffee.</p>
+
+      <p>Caffeine blocks adenosine receptors, increasing alertness and focus - but also anxiety, heart rate and cortisol in sensitive individuals. L-theanine counteracts several of these side effects: it reduces caffeine-induced blood pressure increases, dampens the anxiety and jitteriness, and extends the duration of the focus effect by reducing the abruptness of caffeine's offset.</p>
+
+      <p>For supplement use, a common ratio is 100mg caffeine with 200mg L-theanine - roughly the 1:2 ratio found in green tea. This is the combination used in the majority of nootropic RCTs showing cognitive performance improvements. It is one of the few supplement combinations with genuinely robust human evidence behind it.</p>
+
+      <div class="skip-box">
+        <div class="skip-label">Do You Need L-Theanine If You Already Drink Green Tea?</div>
+        <p>A standard cup of green tea contains roughly 25-60mg of L-theanine depending on the variety, brewing time and temperature. To reach the 200-400mg doses used in clinical trials, you would need 4-8 cups daily. That is a meaningful amount of caffeine alongside it. For therapeutic doses - particularly for sleep support in the evening when caffeine is not wanted - a standalone supplement is the practical choice. For daytime focus with caffeine, green tea delivers a naturally balanced ratio.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">☕</div>
+          <h4>Caffeine</h4>
+          <p>The most studied pairing. L-theanine at 200mg with 100mg caffeine improves cognition, reduces anxiety side effects and smooths the energy curve. The natural ratio in green tea.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">💊</div>
+          <h4>Magnesium Glycinate</h4>
+          <p>Together they regulate brain electrochemical activity more effectively than either alone - per a Frontiers in Nutrition RCT. The optimal sleep preparation combination.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🌿</div>
+          <h4>Glycine</h4>
+          <p>Glycine reduces core body temperature and supports sleep architecture. L-theanine facilitates the brain wave transition into sleep. Together they address both neurological and physiological sleep onset.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🧬</div>
+          <h4>ALCAR</h4>
+          <p>ALCAR supports acetylcholine and mitochondrial function for cognitive performance. L-theanine provides the calm focus state in which cognitive performance is maximized. Morning stack for sustained mental clarity.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🍄</div>
+          <h4>Lion's Mane</h4>
+          <p>Lion's Mane stimulates NGF for neuroplasticity. L-theanine creates the optimal brain state for cognitive work. Both are compatible in timing and have no known negative interactions.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">💤</div>
+          <h4>Low-Dose Melatonin</h4>
+          <p>L-theanine facilitates the alpha-to-theta wave transition. Low-dose melatonin (0.3-0.5mg) supports the circadian signal for sleep onset. Sequential effect - theanine first, melatonin reinforces.</p>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Dose</th>
+          <th>Timing</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Calm focus / daytime stress</td>
+          <td>100 - 200mg</td>
+          <td>Morning or as needed</td>
+          <td>Can be taken with caffeine at 1:2 ratio (caffeine:theanine)</td>
+        </tr>
+        <tr>
+          <td>Sleep support</td>
+          <td>200mg</td>
+          <td>30-45 min before bed</td>
+          <td>Without caffeine. Combine with magnesium glycinate for synergy</td>
+        </tr>
+        <tr>
+          <td>Sustained stress reduction</td>
+          <td>400mg/day</td>
+          <td>200mg morning + 200mg evening</td>
+          <td>Dose used in 2024 28-day RCT. No cycling needed</td>
+        </tr>
+        <tr>
+          <td>With caffeine (nootropic stack)</td>
+          <td>200mg theanine + 100mg caffeine</td>
+          <td>Morning</td>
+          <td>Classic ratio from cognitive performance RCTs</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Who Should Be Cautious</div>
+        <p>L-theanine is exceptionally well-tolerated with no documented serious adverse events. Minor cautions: people taking blood pressure medication should be aware that L-theanine has mild blood pressure-lowering effects - monitor accordingly. People already taking sedatives or benzodiazepines should discuss additive CNS effects with their doctor. Pregnant women should consult a healthcare professional before supplementing, as with any supplement during pregnancy. No documented drug interactions at standard doses.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">8.0/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          One of the cleanest safety profiles in the supplement world combined with genuine, well-replicated effects on brain wave activity, stress and sleep quality. The caffeine synergy is uniquely practical - most people already drink coffee and can benefit immediately. Scores slightly below its peak potential because cortisol effects are less consistent than subjective stress effects, and individual response varies significantly. For the right person - stress-driven sleep difficulty, caffeine sensitivity, anxiety without contraindications - it is an outstanding choice with minimal downside.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Moulin, M. et al. (2024). Safety and efficacy of AlphaWave L-theanine supplementation for 28 days in healthy adults with moderate stress: randomized, double-blind, placebo-controlled trial. <em>Neurology and Therapy</em>, 13(4), 1135-1153. doi:10.1007/s40120-024-00624-7.</li>
+        <li>Dasdelen, M.F. et al. (2022). A novel theanine complex, Mg-L-Theanine, improves sleep quality via regulating brain electrochemical activity. <em>Frontiers in Nutrition</em>. doi:10.3389/fnut.2022.874254.</li>
+        <li>Haskell-Ramsay, C.F. et al. (2021). The effects of L-theanine as a nootropic on older adults: a systematic review. <em>Geroscience</em>.</li>
+        <li>Owen, G.N. et al. (2008). The combined effects of L-theanine and caffeine on cognitive performance and mood. <em>Nutritional Neuroscience</em>, 11(4), 193-198.</li>
+        <li>Nobre, A.C. et al. (2008). L-theanine, a natural constituent in tea, and its effect on mental state. <em>Asia Pacific Journal of Clinical Nutrition</em>, 17(S1), 167-168.</li>
+        <li>Kimura, K. et al. (2007). L-theanine reduces psychological and physiological stress responses. <em>Biological Psychology</em>, 74(1), 39-45.</li>
+        <li>Lim, I.S. (2024). Effects of L-theanine on cognitive anxiety and cortisol in archery competition. <em>Physical Activity and Nutrition</em>, 28(4), 70-74.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Sleep and Stress Protocol?</h3>
+      <p>L-theanine works best as part of a coordinated evening protocol. See how it combines with magnesium and glycine in the Sleep Stack.</p>
+      <div class="cta-buttons">
+        <a href="/articles/sleep-stack.html" class="btn-gold">Read the Sleep Stack Guide →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/sleep-stack.html" class="related-card">
+          <div class="related-img c-sleep">
+            <img src="/images/hero-sleep-stack.jpg" alt="Sleep Stack" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Sleep Protocol</span>
+            <h4>The Sleep Stack: Magnesium, Ashwagandha and L-Theanine</h4>
+          </div>
+        </a>
+        <a href="/articles/magnesium-guide.html" class="related-card">
+          <div class="related-img c-mag">
+            <img src="/images/hero-magnesium.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Magnesium</span>
+            <h4>Magnesium: The Master Mineral That Everyone's Missing</h4>
+          </div>
+        </a>
+        <a href="/articles/ashwagandha-guide.html" class="related-card">
+          <div class="related-img c-ashwa">
+            <img src="/images/hero-ashwagandha.jpg" alt="Ashwagandha" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Ashwagandha</span>
+            <h4>Ashwagandha: The Stress Adaptogen with a Safety Warning Worth Reading</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

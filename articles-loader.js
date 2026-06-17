@@ -28,6 +28,7 @@ const COLORS = {
   'c-brain': 'background:linear-gradient(135deg,#0a1a0a,#2D4A6B)',
 'c-antiaging': 'background:linear-gradient(135deg,#1a0a00,#3E1F00)',
 'c-ashwa': 'background:linear-gradient(135deg,#1a0a00,#3E2010)',
+'c-lthea': 'background:linear-gradient(135deg,#0a1a0a,#1B4332)',
 };
 
 function makeCard(article, size) {

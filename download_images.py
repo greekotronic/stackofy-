@@ -17,13 +17,12 @@ import random
 # Pfad zum images Ordner - relativ zum Script-Speicherort
 IMAGES_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "images")
 
-# Alle Bilder die generiert werden sollen
 IMAGES = [
 
     # ── FOUNDATION STACK ──────────────────────────────────────────────────
     {
         "file": "hero-foundation-stack.jpg",
-        "w": 1216, "h": 704,,
+        "w": 1216, "h": 704,
         "prompt": "overhead flat lay vitamin D3 K2 capsules magnesium tablets omega-3 fish oil bottles on dark wet slate, soft gold side lighting, editorial supplement photography, deep forest green tones, cinematic"
     },
     {
@@ -40,7 +39,7 @@ IMAGES = [
     # ── ANTI-AGING STACK ──────────────────────────────────────────────────
     {
         "file": "hero-antiaging-stack.jpg",
-        "w": 1216, "h": 704,,
+        "w": 1216, "h": 704,
         "prompt": "elegant dark glass bottles NMN resveratrol CoQ10 supplements arranged on dark stone surface, longevity anti-aging concept, dramatic gold side lighting, premium editorial product photography, deep green tones"
     },
     {
@@ -57,7 +56,7 @@ IMAGES = [
     # ── SLEEP STACK ───────────────────────────────────────────────────────
     {
         "file": "hero-sleep-stack.jpg",
-        "w": 1216, "h": 704,,
+        "w": 1216, "h": 704,
         "prompt": "moody close-up magnesium glycinate capsules and chamomile flowers on dark slate, soft moonlight blue and green tones, calm atmospheric editorial photography, sleep supplement concept"
     },
     {
@@ -74,7 +73,7 @@ IMAGES = [
     # ── BRAIN STACK ───────────────────────────────────────────────────────
     {
         "file": "hero-brain-stack.jpg",
-        "w": 1216, "h": 704,,
+        "w": 1216, "h": 704,
         "prompt": "abstract macro glowing neural connections and brain synapses, deep forest green and gold bioluminescent quality, dark background, cognitive performance concept, scientific editorial aesthetic"
     },
     {
@@ -91,7 +90,7 @@ IMAGES = [
     # ── BIOHACKER COFFEE ──────────────────────────────────────────────────
     {
         "file": "hero-biohacker-coffee.jpg",
-        "w": 1216, "h": 704,,
+        "w": 1216, "h": 704,
         "prompt": "dramatic overhead shot dark ceramic mug steaming coffee on black slate, coconut oil cinnamon sticks raw cacao powder cardamom pods arranged around it, soft morning gold light, editorial food photography, moody premium"
     },
     {
@@ -108,7 +107,7 @@ IMAGES = [
     # ── PERSONAL STACK ────────────────────────────────────────────────────
     {
         "file": "hero-personal-stack.jpg",
-        "w": 1216, "h": 704,,
+        "w": 1216, "h": 704,
         "prompt": "overhead flat lay weekly pill organizer filled with supplements next to notebook with handwritten notes, coffee thermos and reading glasses on dark slate, warm morning light, editorial lifestyle photography"
     },
     {
@@ -125,7 +124,7 @@ IMAGES = [
     # ── REDUNDANT STACKS ──────────────────────────────────────────────────
     {
         "file": "hero-redundant-stacks.jpg",
-        "w": 1216, "h": 704,,
+        "w": 1216, "h": 704,
         "prompt": "overhead flat lay many supplement capsules and pills in various colors scattered on dark slate, editorial style, dark moody lighting, gold and green accents, some crossed out"
     },
     {
@@ -138,13 +137,45 @@ IMAGES = [
         "w": 900, "h": 420,
         "prompt": "three elegant minimalist supplement bottles arranged in a triangle on dark stone surface, soft gold side lighting, less is more concept, premium editorial aesthetic"
     },
+
+    # ── ASHWAGANDHA ───────────────────────────────────────────────────────
+    {
+        "file": "hero-ashwagandha.jpg",
+        "w": 1216, "h": 704,
+        "prompt": "dramatic macro close-up of ashwagandha root and powder in dark ceramic bowl on dark slate, warm amber side lighting, editorial food photography, deep forest green and gold tones, moody and scientific"
+    },
+    {
+        "file": "ashwagandha-root-plant.jpg",
+        "w": 900, "h": 420,
+        "prompt": "overhead flat lay of dried ashwagandha roots orange berries and green leaves on dark wet stone surface, botanical editorial photography, warm gold side lighting, minimal"
+    },
+    {
+        "file": "ashwagandha-stress-calm.jpg",
+        "w": 900, "h": 420,
+        "prompt": "abstract visualization of calm cortisol wave pattern descending, dark background, soft blue and green tones, scientific editorial aesthetic, stress reduction concept"
+    },# ── L-THEANINE ────────────────────────────────────────────────────────
+    {
+        "file": "hero-ltheanine.jpg",
+        "w": 1216, "h": 704,
+        "prompt": "dramatic macro close-up of fresh green tea leaves and small ceramic cup of matcha on dark wet slate, soft morning gold light, editorial food photography, deep forest green tones, calm and focused"
+    },
+    {
+        "file": "ltheanine-green-tea.jpg",
+        "w": 900, "h": 420,
+        "prompt": "overhead flat lay green tea leaves loose leaf matcha powder and small ceramic teapot on dark stone surface, editorial food photography, soft diffused light, minimal and serene"
+    },
+    {
+        "file": "ltheanine-brain-waves.jpg",
+        "w": 900, "h": 420,
+        "prompt": "abstract visualization of alpha brain waves as calm glowing green sine waves on dark background, peaceful and focused, scientific editorial aesthetic, bioluminescent quality"
+    },
+]
 ]
 
 
 def download_image(img_data, images_dir, max_retries=3):
     filepath = os.path.join(images_dir, img_data["file"])
 
-    # Überspringe wenn Datei bereits existiert
     if os.path.exists(filepath):
         print(f"  ⏭  Exists, skipping: {img_data['file']}")
         return True
@@ -193,12 +224,10 @@ def main():
     print("=" * 55)
     print(f"\nImages folder: {IMAGES_DIR}\n")
 
-    # Erstelle images/ Ordner falls nicht vorhanden
     os.makedirs(IMAGES_DIR, exist_ok=True)
 
     total = len(IMAGES)
     success = 0
-    skipped = 0
 
     for i, img in enumerate(IMAGES, 1):
         print(f"[{i}/{total}] {img['file']}")
@@ -206,25 +235,8 @@ def main():
         if result:
             if os.path.exists(os.path.join(IMAGES_DIR, img["file"])):
                 success += 1
-        # Kurze Pause zwischen Requests
         if i < total:
             time.sleep(2)
-            # ── ASHWAGANDHA ───────────────────────────────────────────────────────
-    {
-        "file": "hero-ashwagandha.jpg",
-        "w": 1216, "h": 704,
-        "prompt": "dramatic macro close-up of ashwagandha root and powder in dark ceramic bowl on dark slate, warm amber side lighting, editorial food photography, deep forest green and gold tones, moody and scientific"
-    },
-    {
-        "file": "ashwagandha-root-plant.jpg",
-        "w": 900, "h": 420,
-        "prompt": "overhead flat lay of dried ashwagandha roots orange berries and green leaves on dark wet stone surface, botanical editorial photography, warm gold side lighting, minimal"
-    },
-    {
-        "file": "ashwagandha-stress-calm.jpg",
-        "w": 900, "h": 420,
-        "prompt": "abstract visualization of calm cortisol wave pattern descending, dark background, soft blue and green tones, scientific editorial aesthetic, stress reduction concept"
-    },
 
     print("\n" + "=" * 55)
     print(f"  Done: {success}/{total} images in images/ folder")
