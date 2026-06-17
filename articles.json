@@ -236,5 +236,15 @@
   "tags": "longevity immune",
   "readTime": "12 min",
   "description": "D3+K2, Magnesium and Omega-3. A 2025 Nature Aging study found they slow DNA methylation clocks with additive benefits. The highest-impact starting point for any longevity protocol."
+},{
+  "title": "The Anti-Aging Stack: NMN/NR, Resveratrol, TMG, CoQ10 and PQQ",
+  "tag": "Anti-Aging Protocol",
+  "url": "/articles/antiaging-stack.html",
+  "image": "/images/hero-antiaging-stack.jpg",
+  "color": "c-nmn",
+  "type": "protocol",
+  "tags": "longevity energy brain",
+  "readTime": "14 min",
+  "description": "Five compounds targeting the NAD+ pathway from different angles. NMN fuels sirtuins, resveratrol activates them, CoQ10 runs the electron transport chain, PQQ builds new mitochondria - and TMG prevents the hidden methylation cost most people miss."
 }
 ]
