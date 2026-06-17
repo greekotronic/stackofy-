@@ -30,7 +30,7 @@
     .hero h1 { color: #FAF8F4; font-size: 2rem; font-weight: 700; margin-bottom: 0.6rem; letter-spacing: -0.5px; max-width: 640px; margin-left: auto; margin-right: auto; }
     .hero p { color: var(--green-light); font-size: 15px; margin-bottom: 1.8rem; }
     .search-bar { max-width: 560px; margin: 0 auto 2rem; display: flex; gap: 8px; }
-    .search-bar input { flex: 1; padding: 12px 18px; border-radius: var(--radius-sm); border: none; font-size: 15px; background: #FAF8F4; color: var(--text); }
+    .search-bar input { flex: 1; padding: 12px 18px; border-radius: var(--radius-sm); border: none; font-size: 15px; background: #FAF8F4; color: #1A1A1A; }
     .search-bar input:focus { outline: none; }
     .search-bar button { padding: 12px 24px; background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; cursor: pointer; }
     .categories { display: flex; gap: 0.6rem; justify-content: center; flex-wrap: wrap; }
@@ -257,7 +257,7 @@
     <p>Independent research on longevity, dosing protocols, and what actually works.</p>
     <div class="search-bar">
       <input type="text" placeholder="Search supplements, protocols, ingredients..." />
-      <button>Search</button>
+      <button onclick="searchHomepage()">Search</button>
     </div>
     <div class="categories">
       <a href="/articles.html" class="cat-pill">Longevity</a>
@@ -474,10 +474,10 @@
         <div class="section-label">Curated</div>
         <div class="section-header mb15"><div class="section-title">Popular Stacks</div></div>
         <div class="stack-grid">
-          <div class="stack-card"><div class="stack-img s1"></div><div class="stack-body"><div class="stack-label">Most Popular</div><h4>The Foundation Stack</h4><p>D3 + K2, Magnesium, Omega-3</p></div></div>
-          <div class="stack-card"><div class="stack-img s2"></div><div class="stack-body"><div class="stack-label">Longevity</div><h4>The Anti-Aging Stack</h4><p>NMN, Resveratrol, TMG, CoQ10, PQQ</p></div></div>
-          <div class="stack-card"><div class="stack-img s3"></div><div class="stack-body"><div class="stack-label">Sleep</div><h4>The Sleep Stack</h4><p>Magnesium Glycinate, Ashwagandha, L-Theanine</p></div></div>
-          <div class="stack-card"><div class="stack-img s4"></div><div class="stack-body"><div class="stack-label">Cognitive</div><h4>The Brain Stack</h4><p>Omega-3, Lions Mane, PQQ, CDP-Choline</p></div></div>
+          <a href="/articles/foundation-stack.html" class="stack-card"><div class="stack-img s1"></div><div class="stack-body"><div class="stack-label">Most Popular</div><h4>The Foundation Stack</h4><p>D3 + K2, Magnesium, Omega-3</p></div></a>
+          <a href="/articles/antiaging-stack.html" class="stack-card"><div class="stack-img s2"></div><div class="stack-body"><div class="stack-label">Longevity</div><h4>The Anti-Aging Stack</h4><p>NMN, Resveratrol, TMG, CoQ10, PQQ</p></div></a>
+          <a href="/articles/sleep-stack.html" class="stack-card"><div class="stack-img s3"></div><div class="stack-body"><div class="stack-label">Sleep</div><h4>The Sleep Stack</h4><p>Magnesium Glycinate, Ashwagandha, L-Theanine</p></div></a>
+          <a href="/articles/brain-stack.html" class="stack-card"><div class="stack-img s4"></div><div class="stack-body"><div class="stack-label">Cognitive</div><h4>The Brain Stack</h4><p>Omega-3, Lions Mane, PQQ, CDP-Choline</p></div></a>
         </div>
       </div>
       <div>
@@ -529,5 +529,15 @@
 
   </div>
   <script src="/articles-loader.js"></script>
+<script>
+  function searchHomepage() {
+    const query = document.getElementById('hp-search').value.toLowerCase().trim();
+    if (!query) return;
+    window.location.href = '/articles.html?q=' + encodeURIComponent(query);
+  }
+  document.getElementById('hp-search').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') searchHomepage();
+  });
+</script>
 </body>
 </html>
