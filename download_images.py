@@ -209,6 +209,22 @@ def main():
         # Kurze Pause zwischen Requests
         if i < total:
             time.sleep(2)
+            # ── ASHWAGANDHA ───────────────────────────────────────────────────────
+    {
+        "file": "hero-ashwagandha.jpg",
+        "w": 1216, "h": 704,
+        "prompt": "dramatic macro close-up of ashwagandha root and powder in dark ceramic bowl on dark slate, warm amber side lighting, editorial food photography, deep forest green and gold tones, moody and scientific"
+    },
+    {
+        "file": "ashwagandha-root-plant.jpg",
+        "w": 900, "h": 420,
+        "prompt": "overhead flat lay of dried ashwagandha roots orange berries and green leaves on dark wet stone surface, botanical editorial photography, warm gold side lighting, minimal"
+    },
+    {
+        "file": "ashwagandha-stress-calm.jpg",
+        "w": 900, "h": 420,
+        "prompt": "abstract visualization of calm cortisol wave pattern descending, dark background, soft blue and green tones, scientific editorial aesthetic, stress reduction concept"
+    },
 
     print("\n" + "=" * 55)
     print(f"  Done: {success}/{total} images in images/ folder")
