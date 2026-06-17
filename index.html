@@ -256,8 +256,8 @@
     <h1>Evidence-Based Supplement Stacks. No Pharma. No Fluff.</h1>
     <p>Independent research on longevity, dosing protocols, and what actually works.</p>
     <div class="search-bar">
-      <input type="text" placeholder="Search supplements, protocols, ingredients..." />
-      <button onclick="searchHomepage()">Search</button>
+      <input type="text" id="hp-search" placeholder="Search supplements, protocols, ingredients..." />
+      <button onclick="searchHomepage()"<button onclick="searchHomepage()">Search</button>
     </div>
     <div class="categories">
       <a href="/articles.html" class="cat-pill">Longevity</a>
@@ -528,7 +528,18 @@
     </div>
 
   </div>
-  <script src="/articles-loader.js"></script>
+  <script src="/<script src="/articles-loader.js"></script>
+<script>
+  function searchHomepage() {
+    const query = document.getElementById('hp-search').value.toLowerCase().trim();
+    if (!query) return;
+    window.location.href = '/articles.html?q=' + encodeURIComponent(query);
+  }
+  document.getElementById('hp-search').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') searchHomepage();
+  });
+</script>
+</body>
 <script>
   function searchHomepage() {
     const query = document.getElementById('hp-search').value.toLowerCase().trim();
