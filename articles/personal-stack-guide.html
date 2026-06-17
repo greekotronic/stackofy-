@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Personal Stack: How a 48-Year-Old Nutritionist Built His Daily Protocol - Stackofy</title>
+  <meta name="description" content="A step-by-step guide to building a personalized supplement protocol - from goal setting to daily integration. Including a real example with 5 daily portions, AI-assisted research and practical organization tips." />
+
+  <meta property="og:title" content="My Personal Stack: How a 48-Year-Old Nutritionist Built His Daily Protocol" />
+  <meta property="og:description" content="Not just what to take - but how to build a protocol that actually fits your life. Research, redundancy checks, timing optimization and the practical tricks that make it sustainable." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/personal-stack-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-personal-stack.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    header { background: var(--gradient); padding: 0 2rem; height: 64px; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; }
+    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
+    .header-right { display: flex; align-items: center; gap: 1.5rem; }
+    nav { display: flex; gap: 1.5rem; }
+    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
+    nav a:hover { color: #FAF8F4; }
+    .dark-toggle { background: rgba(255,255,255,0.15); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 12px; cursor: pointer; color: #FAF8F4; font-size: 13px; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1B4332, #2D6A4F, #3A3A10); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
+    .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content ul, .article-content ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
+    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    /* STEP PROCESS */
+    .process-steps { display: flex; flex-direction: column; gap: 0; margin: 2rem 0; }
+    .process-step { display: flex; gap: 1.5rem; position: relative; padding-bottom: 2rem; }
+    .process-step:last-child { padding-bottom: 0; }
+    .process-step:not(:last-child)::after { content: ''; position: absolute; left: 19px; top: 44px; bottom: 0; width: 2px; background: var(--border); }
+    .step-circle { width: 40px; height: 40px; border-radius: 50%; background: var(--green-dark); color: var(--gold); font-size: 16px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; position: relative; z-index: 1; }
+    .step-body { flex: 1; padding-top: 8px; }
+    .step-body h4 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+    .step-body p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin: 0; }
+
+    /* PORTION CARDS */
+    .portion-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; margin: 1.25rem 0; }
+    .portion-header { padding: 1rem 1.5rem; display: flex; align-items: center; gap: 1rem; border-bottom: 0.5px solid var(--border); }
+    .portion-num { background: var(--green-dark); color: var(--gold); font-size: 13px; font-weight: 700; padding: 4px 10px; border-radius: 4px; flex-shrink: 0; }
+    .portion-title { font-size: 15px; font-weight: 700; color: var(--text); }
+    .portion-meta { font-size: 12px; color: var(--text-muted); margin-left: auto; }
+    .portion-body { padding: 1rem 1.5rem; }
+    .portion-items { display: flex; flex-direction: column; gap: 0.5rem; }
+    .portion-item { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 13px; color: var(--text-muted); line-height: 1.5; padding: 0.5rem 0; border-bottom: 0.5px solid var(--border); }
+    .portion-item:last-child { border-bottom: none; }
+    .item-name { font-weight: 600; color: var(--text); min-width: 160px; flex-shrink: 0; }
+    .item-type { font-size: 11px; font-weight: 700; padding: 2px 6px; border-radius: 3px; flex-shrink: 0; }
+    .item-type.daily { background: #EAF5F0; color: var(--green-dark); }
+    .item-type.cycle { background: var(--gold-light); color: #7A5C10; }
+    .item-note { font-size: 12px; color: var(--text-muted); }
+
+    /* HIGHLIGHT / TIP BOXES */
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .tip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .tip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .tip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    /* GOAL GRID */
+    .goal-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .goal-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; text-align: center; }
+    .goal-card.active { border-color: var(--green-dark); }
+    .goal-icon { font-size: 28px; margin-bottom: 8px; }
+    .goal-card h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .goal-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    /* LABEL SYSTEM VISUAL */
+    .label-demo { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0; }
+    .label-demo-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .label-examples { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .label-example { background: var(--bg); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.75rem 1rem; text-align: center; min-width: 100px; }
+    .label-cap { font-size: 18px; font-weight: 700; color: var(--green-dark); }
+    .label-time { font-size: 11px; color: var(--gold); font-weight: 600; margin-top: 2px; }
+    .label-type { font-size: 10px; color: var(--text-muted); margin-top: 2px; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2rem; flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .c-coffee { background: linear-gradient(135deg, #1a0a00, #3E1F00); }
+    .c-audit { background: linear-gradient(135deg, #1a1a1a, #2D3A2A); }
+    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
+
+    @media (max-width: 600px) {
+      header { padding: 0 1rem !important; }
+      nav { display: none !important; }
+      .hamburger { display: flex !important; }
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+      .goal-grid { grid-template-columns: 1fr 1fr !important; }
+      .portion-header { flex-wrap: wrap !important; }
+      .portion-meta { margin-left: 0 !important; }
+      .item-name { min-width: 120px !important; }
+      .label-examples { gap: 0.5rem !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-personal-stack.jpg" alt="Personal supplement stack with daily pill organizer and notebook" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Personal Protocol</span>
+      <h1>My Personal Stack: How a 48-Year-Old Nutritionist Built His Daily Protocol</h1>
+      <div class="hero-meta">
+        <span>ARI Team Member</span>
+        <span>·</span>
+        <span>14 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <p>This is not a "take these 5 supplements" article. It is a walkthrough of how to build a protocol that actually fits your life - using my own stack as a real example. The key steps:</p>
+      <ul>
+        <li>Start with goals, not supplements - knowing what you want determines everything else</li>
+        <li>Use AI to process research efficiently, then verify everything at the primary source</li>
+        <li>Check for redundancy before you finalize - many people pay double for the same effect</li>
+        <li>Optimize timing around your actual daily routine, not an ideal one</li>
+        <li>Build physical systems - a labeled pill organizer beats willpower every time</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>I am 48, male and work as a nutritionist. I have been studying supplements professionally for years - and I still spent months taking the wrong things at the wrong times, doubling up on overlapping compounds, and wondering why my protocol felt like a part-time job.</p>
+
+      <p>The turning point was not finding a better supplement. It was building a better system. This article is about that system - the five steps I used to go from a chaotic collection of bottles to a protocol I actually follow every day without thinking about it.</p>
+
+      <p><strong>I am sharing my specific stack as a concrete example - but the method is what matters. Your goals, your schedule and your biochemistry are different from mine. Use this as a template, not a prescription.</strong></p>
+
+      <div class="article-img">
+        <img src="/images/personal-stack-ai-research.jpg" alt="Researching supplements with AI tools and scientific papers" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Five Steps</h2>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-circle">1</div>
+          <div class="step-body">
+            <h4>Define your goals - specifically</h4>
+            <p>Not "I want to be healthier." That is too vague to build a protocol around. The question is: what biological systems do you most want to support, and what is your timeline? Longevity and cellular maintenance require different compounds than acute cognitive performance or immune resilience. My goals were specific: slow mitochondrial decline, support glutathione as I age, maintain cognitive sharpness, protect connective tissue, and manage blood sugar stability. Each goal maps to a category of supplements. Without this clarity, you end up buying whatever sounds impressive.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">2</div>
+          <div class="step-body">
+            <h4>Research your candidates</h4>
+            <p>For each goal, identify the compounds with the strongest evidence. This is where AI becomes genuinely useful - not as a replacement for scientific judgment, but as a research accelerator. I use AI to scan recent literature, surface relevant clinical trials and identify mechanistic connections between compounds. What would take me three days in PubMed takes a few hours. The rule I follow: AI generates the shortlist, I verify every specific claim at the original source before it goes in the protocol. No blind trust in summaries.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">3</div>
+          <div class="step-body">
+            <h4>Eliminate redundancy</h4>
+            <p>This step alone has saved me more money than anything else. Once you have a longlist, you will find overlaps - compounds hitting the same pathways, precursors and end products taken simultaneously, or combinations where one negates the other. NR and NMN together. Resveratrol and pterostilbene at full dose. Multiple high-dose antioxidants that compete for absorption. Before your protocol is final, run a redundancy check. We have an entire article dedicated to this topic that I strongly recommend reading at this point.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">4</div>
+          <div class="step-body">
+            <h4>Optimize timing around your real schedule</h4>
+            <p>The best protocol is the one you actually follow. Supplement timing matters - some compounds need fat for absorption, some are stimulating and should not be taken in the evening, some compete for the same transporters and should be separated. But all of this is irrelevant if the timing means you skip doses. Map the timing to your actual daily rhythm, not an ideal one. I work four days per week and commute - so anything that needs to be refrigerated, taken fresh or requires a specific meal context gets assigned to those conditions, not added as a vague "take with food."</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-circle">5</div>
+          <div class="step-body">
+            <h4>Write the plan and build physical systems</h4>
+            <p>Print the plan and keep it with your supplements. Not on your phone - printed, next to the bottles. When you are half-asleep at 7am reaching for your morning portion, you do not want to be unlocking a screen. The plan should show: each portion, what goes in it, the dose, whether it is daily or cycled. Once it is printed and working, the physical organization systems take over and the cognitive load drops to almost zero.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>My Goals - What I Am Actually Trying to Achieve</h2>
+
+      <div class="goal-grid">
+        <div class="goal-card active">
+          <div class="goal-icon">🧬</div>
+          <h4>Longevity & Cellular Maintenance</h4>
+          <p>NAD+ pathway, autophagy, senolytic support, mitochondrial function</p>
+        </div>
+        <div class="goal-card active">
+          <div class="goal-icon">🧠</div>
+          <h4>Cognitive Sharpness</h4>
+          <p>Acetylcholine support, neuroplasticity, sustained focus without crash</p>
+        </div>
+        <div class="goal-card active">
+          <div class="goal-icon">🛡️</div>
+          <h4>Antioxidant Defense</h4>
+          <p>Glutathione system, NRF2 activation, heavy metal clearance</p>
+        </div>
+        <div class="goal-card active">
+          <div class="goal-icon">⚡</div>
+          <h4>Energy & Metabolism</h4>
+          <p>Mitochondrial efficiency, blood sugar stability, fat metabolism</p>
+        </div>
+        <div class="goal-card active">
+          <div class="goal-icon">🦴</div>
+          <h4>Structural Integrity</h4>
+          <p>Collagen synthesis, joint support, connective tissue maintenance</p>
+        </div>
+        <div class="goal-card active">
+          <div class="goal-icon">💤</div>
+          <h4>Sleep & Recovery</h4>
+          <p>GABA/glycine balance, melatonin regulation, overnight repair</p>
+        </div>
+      </div>
+
+      <h2>The Protocol - Five Daily Portions</h2>
+
+      <p>My stack is organized into five portions that map to five moments in my day. P1 and P5 I take at home. Portions P2, P3 and P4 travel with me in the pill organizer - they align with breakfast, lunch and afternoon, all of which happen away from home on workdays. Here is the full breakdown:</p>
+
+      <div class="portion-card">
+        <div class="portion-header">
+          <span class="portion-num">P1</span>
+          <div>
+            <div class="portion-title">Morning Fasted + Coffee</div>
+            <div class="portion-meta">Fasted · With collagen coffee</div>
+          </div>
+        </div>
+        <div class="portion-body">
+          <div class="portion-items">
+            <div class="portion-item">
+              <span class="item-name">Creatine</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">5 tablets daily for cellular saturation</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Vitamin C</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">500mg - protects creatine in stomach, supports collagen synthesis</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">TMG</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Methyl groups for caffeine and creatine metabolism</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">L-Carnitine</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Fatty acid transport into mitochondria - synergy with fasted state</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">B-Complex</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Foundation coverage, moderate B6/B12</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">B12 extra</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Additional requirement due to individual metabolism</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">L-Theanine</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">100-200mg - smooths caffeine curve, improves focus quality</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Magnesium Bisglycinate</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">1 of 4 capsules - spread across the day for better absorption</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Methylfolate</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">400-800mcg - active folate form for MTHFR variant support</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portion-card">
+        <div class="portion-header">
+          <span class="portion-num">P2</span>
+          <div>
+            <div class="portion-title">Breakfast - With Fat</div>
+            <div class="portion-meta">With fat · Travels in organizer</div>
+          </div>
+        </div>
+        <div class="portion-body">
+          <div class="portion-items">
+            <div class="portion-item">
+              <span class="item-name">NR</span>
+              <span class="item-type cycle">C</span>
+              <span class="item-note">4-8 weeks on, 1-2 weeks off - NAD+ precursor</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">PQQ</span>
+              <span class="item-type cycle">C</span>
+              <span class="item-note">4-8 weeks on, 1-2 weeks off - mitochondrial biogenesis</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">CDP-Choline</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Acetylcholine precursor - daily for cognitive support</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Cordyceps</span>
+              <span class="item-type cycle">C</span>
+              <span class="item-note">Adaptogen - 6-8 weeks on, 1-2 weeks off</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">D3 + K2</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Daily with fat - K2 essential to direct calcium correctly</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Vitamin C</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">1,000mg - primary dose for collagen synthesis support</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Omega-3 (Algae)</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">3 capsules - algae-derived DHA/EPA, short half-life requires daily dosing</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Astaxanthin</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Fat-soluble - must be taken with fatty meal</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">MSM</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">1-2 capsules - sulfur for glutathione and connective tissue</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Copper</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">1-2mg - balances zinc-induced copper depletion. Taken here, zinc in P4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portion-card">
+        <div class="portion-header">
+          <span class="portion-num">P3</span>
+          <div>
+            <div class="portion-title">Lunch - With Fat</div>
+            <div class="portion-meta">With lunch · Travels in organizer</div>
+          </div>
+        </div>
+        <div class="portion-body">
+          <div class="portion-items">
+            <div class="portion-item">
+              <span class="item-name">CoQ10</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Daily with fat - ubiquinol form preferred after 40</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Milk Thistle (Liver)</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Liver support and silymarin antioxidant activity</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Black Seed Oil</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Thymoquinone - NF-kB modulation and immune support</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">ALA</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">10-15 min before eating - blood sugar buffer, mitochondrial antioxidant</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Berberine</span>
+              <span class="item-type cycle">C</span>
+              <span class="item-note">Before lunch - blood sugar and AMPK activation</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">MSM</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">1-2 capsules continued</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Magnesium Bisglycinate</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">2nd of 4 capsules</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portion-card">
+        <div class="portion-header">
+          <span class="portion-num">P4</span>
+          <div>
+            <div class="portion-title">Afternoon - Fasted, No Fat</div>
+            <div class="portion-meta">Fasted · No fat · No caffeine · Travels in organizer</div>
+          </div>
+        </div>
+        <div class="portion-body">
+          <div class="portion-items">
+            <div class="portion-item">
+              <span class="item-name">Glutathione</span>
+              <span class="item-type cycle">C</span>
+              <span class="item-note">4-6 weeks on, 1-2 weeks off - fasted for best absorption</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">NAC</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">600mg - cysteine for glutathione synthesis, pairs with evening glycine</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Vitamin C</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">1,500mg - recycles glutathione</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Selenium</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Cofactor for glutathione peroxidase</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">OPC</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">4 weeks on/off or alternating with Quercetin</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Zinc</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Fasted for best absorption. Separated from copper (P2)</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Uridine</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Daily for synaptic support</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Lion's Mane</span>
+              <span class="item-type cycle">C</span>
+              <span class="item-note">Adaptogen - 6-8 weeks on, 1-2 weeks off</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Magnesium Bisglycinate</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">3rd of 4 capsules</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="portion-card">
+        <div class="portion-header">
+          <span class="portion-num">P5</span>
+          <div>
+            <div class="portion-title">Bedtime - Fasted, Water Only</div>
+            <div class="portion-meta">At home · Fasted · Water only</div>
+          </div>
+        </div>
+        <div class="portion-body">
+          <div class="portion-items">
+            <div class="portion-item">
+              <span class="item-name">Glycine</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">3g - sleep quality, glutathione precursor, overnight collagen synthesis</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Melatonin</span>
+              <span class="item-type cycle">C</span>
+              <span class="item-note">0.3-0.5mg only - 8 weeks on, 1 week off. Low dose preserves own production</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Reishi</span>
+              <span class="item-type cycle">C</span>
+              <span class="item-note">Adaptogen - 6-8 weeks on, 1-2 weeks off</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Taurine</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">GABA modulation, heart support, cell membrane integrity</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Bromelain + Papain</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Systemic enzymes - anti-inflammatory, gut clearance overnight</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">MSM</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">Final dose - sulfur for overnight glutathione synthesis</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Magnesium Bisglycinate</span>
+              <span class="item-type daily">D</span>
+              <span class="item-note">4th of 4 capsules - final dose supports sleep</span>
+            </div>
+            <div class="portion-item">
+              <span class="item-name">Apigenin</span>
+              <span class="item-type cycle">C</span>
+              <span class="item-note">50mg - mandatory on senolytic pulse days, also usable daily for calming effect</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Monthly Senolytic Pulse (3 days)</div>
+        <p>Three consecutive days per month I add high-dose Fisetin and Quercetin to P3, and Apigenin to P5. On pulse days, daily Quercetin and OPC are paused to reduce oxalate load on the kidneys. This is a separate protocol layered on top of the daily stack - not a daily practice.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/personal-stack-morning.jpg" alt="Five daily supplement portions organized and ready" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Organization Systems That Make It Sustainable</h2>
+
+      <p>The protocol above looks complex on paper. In practice it takes about three minutes in the morning and two at night. That is because of three physical systems that eliminate almost all decision-making from the process.</p>
+
+      <h3>System 1: The Two-Day Pill Organizer</h3>
+
+      <p>I use a large pill organizer with six compartments - enough for two full days of P1, P2 and P3. P4 and P5 I take at home so they do not need to travel. On Sunday evening I fill the organizer for the coming two days. It takes about eight minutes. For the rest of those two days, there are zero decisions to make about supplements during the workday - I just open the right compartment at the right time.</p>
+
+      <div class="tip-box">
+        <div class="tip-label">💡 Practical Tip</div>
+        <p>Look for a pill organizer with at least 3 compartments per day and two days capacity. The larger compartments accommodate bigger capsules and multiple tablets without jamming. A hard case that fits in a work bag is worth the small extra cost.</p>
+      </div>
+
+      <h3>System 2: Labeled Supplement Lids</h3>
+
+      <p>Every supplement bottle in my stack has a label on the lid with three pieces of information: the number of capsules per dose, the time of day to take it, and whether it is daily or cycled. I use a simple code: T for täglich (daily), C for Cycle.</p>
+
+      <div class="label-demo">
+        <div class="label-demo-title">Example Lid Labels</div>
+        <div class="label-examples">
+          <div class="label-example">
+            <div class="label-cap">2 caps</div>
+            <div class="label-time">Morning</div>
+            <div class="label-type">D</div>
+          </div>
+          <div class="label-example">
+            <div class="label-cap">1 cap</div>
+            <div class="label-time">Lunch</div>
+            <div class="label-type">C</div>
+          </div>
+          <div class="label-example">
+            <div class="label-cap">3 caps</div>
+            <div class="label-time">Afternoon</div>
+            <div class="label-type">D</div>
+          </div>
+          <div class="label-example">
+            <div class="label-cap">1 cap</div>
+            <div class="label-time">Bedtime</div>
+            <div class="label-type">D</div>
+          </div>
+        </div>
+      </div>
+<div class="article-img">
+  <img src="/images/supplement-lid-labels.jpg" alt="Supplement bottle lids labeled with dose, timing and D/C code" onerror="this.style.display='none'" />
+</div>
+      <p>When I need to refill the organizer, I do not need to remember anything - I just read the lid. When I am deciding whether to take something during an off-cycle week, the C on the lid reminds me immediately. This sounds trivial, but it eliminates a surprising amount of mental friction over months of consistent use.</p>
+
+      <h3>System 3: The Printed Plan</h3>
+
+      <p>Print the plan. Not as a PDF on your phone - printed on paper, next to your supplements. The plan should show all five portions, what goes in each, the dose, and the cycling schedule. When you are filling the organizer on Sunday evening, the plan is right there. When someone in your household asks what you are taking and why, you hand them the paper.</p>
+
+      <div class="tip-box">
+        <div class="tip-label">💡 Practical Tip</div>
+        <p>Laminate the printed plan or put it in a plastic sleeve. It lives next to the supplement storage permanently. Update it when your protocol changes and print a new version - do not try to maintain a handwritten version over time.</p>
+      </div>
+
+      <h2>On Using AI in This Process</h2>
+
+      <p>I use AI - specifically Claude - as a research accelerator throughout steps 1 and 2. Not to decide what I take, but to process large volumes of research faster than I could manually. A typical session: I describe my goal, ask for the compounds with the strongest evidence for that specific outcome, and then ask it to identify potential interactions or timing conflicts with what I already take.</p>
+
+      <p>The AI draws on thousands of studies simultaneously and can identify mechanistic connections that would take hours to surface manually. It also catches things I might miss - like the copper-zinc antagonism that moved my copper supplementation to a separate portion from my zinc, or the biotin depletion that long-term ALA use can cause.</p>
+
+      <p><strong>The non-negotiable rule:</strong> every specific claim the AI makes gets verified at the original source before it goes into the protocol. AI summaries are a starting point, not a conclusion. This is how we work across all ARI content - and it is how I work with my own stack.</p>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">📋</div>
+        <div class="aaf-label">
+          <strong>The Bottom Line</strong>
+          A supplement protocol is not a shopping list. It is a system - and like any system, the design determines the outcome. The five steps here apply regardless of whether your stack has 8 compounds or 40. Define the goals. Research the evidence. Cut the redundancy. Fit the timing to your real life. Then build the physical systems that make consistency automatic rather than effortful.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cta-block">
+      <h3>Want to Build Your Own Protocol?</h3>
+      <p>Start with the free Stack Builder - 2 minutes, no email required. Then check the Stack Audit article before you finalize your list.</p>
+      <div class="cta-buttons">
+        <a href="/your-stack.html" class="btn-gold">Build YOUR Stack - Free →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Protocols</div>
+      <div class="related-grid">
+        <a href="/articles/redundant-stacks.html" class="related-card">
+          <div class="related-img c-audit">
+            <img src="/images/hero-redundant-stacks.jpg" alt="Stack Audit" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Stack Audit</span>
+            <h4>The Supplement Combinations You Can Stop Buying</h4>
+          </div>
+        </a>
+        <a href="/articles/biohacker-coffee-guide.html" class="related-card">
+          <div class="related-img c-coffee">
+            <img src="/images/hero-biohacker-coffee.jpg" alt="Biohacker Coffee" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Nutrition Protocol</span>
+            <h4>The Biohacker's Coffee: What Science Says About Upgrading Your Morning Cup</h4>
+          </div>
+        </a>
+        <a href="/articles/nmn-supplements-guide.html" class="related-card">
+          <div class="related-img c-nmn">
+            <img src="/images/thumb-nmn.jpg" alt="NMN" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">NMN</span>
+            <h4>Why 64% of NMN Supplements Contain Zero Active Ingredient</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article describes a personal protocol developed by one member of the ARI team based on their individual health goals, professional background and current research. It is shared for educational and illustrative purposes only - not as a recommendation. Always consult a qualified healthcare professional before starting or modifying a supplement protocol.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
