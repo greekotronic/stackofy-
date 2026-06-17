@@ -24,7 +24,6 @@ const COLORS = {
   'c-collagen':'background:linear-gradient(135deg,#1a2a10,#2D5A1B)',
   'c-sulfo':  'background:linear-gradient(135deg,#0a1a0a,#1B4332)',
   'c-coffee': 'background:linear-gradient(135deg,#1a0a00,#3E1F00)',
-  'c-stack': 'background:linear-gradient(135deg,#1B4332,#2D6A4F)',
 };
 
 function makeCard(article, size) {
@@ -185,12 +184,35 @@ async function loadArticles() {
       immuneEl.innerHTML = immune.map(a => makeCard(a, 'horizontal')).join('');
     }
 
-    // ARTICLES PAGE - full grid
+    // ARTICLES PAGE - protocols section (top, gold cards)
+    const articlesProtocolsEl = document.getElementById('articles-protocols');
+    if (articlesProtocolsEl) {
+      const protocols = articles.filter(a => a.type === 'protocol');
+      articlesProtocolsEl.innerHTML = protocols.map(a => {
+        const bg = COLORS[a.color] || 'background:#1B4332';
+        return `
+          <a href="${a.url}" class="protocol-card-page">
+            <div class="protocol-card-img" style="${bg}">
+              <img src="${a.image}" alt="${a.tag}" onerror="this.style.display='none'" />
+              <span class="protocol-badge">★ Protocol</span>
+            </div>
+            <div class="protocol-card-body">
+              <span class="protocol-card-tag">${a.tag}</span>
+              <h3>${a.title}</h3>
+              <p>${a.description}</p>
+              <span class="protocol-card-meta">${a.readTime} read</span>
+            </div>
+          </a>`;
+      }).join('');
+    }
+
+    // ARTICLES PAGE - supplement guides only (no protocols)
     const articlesGridEl = document.getElementById('articles-grid');
     if (articlesGridEl) {
-      articlesGridEl.innerHTML = articles.map(a => makeCard(a, 'articles-page')).join('');
+      const guides = articles.filter(a => a.type !== 'protocol');
+      articlesGridEl.innerHTML = guides.map(a => makeCard(a, 'articles-page')).join('');
       const countEl = document.getElementById('article-count');
-      if (countEl) countEl.textContent = articles.length;
+      if (countEl) countEl.textContent = guides.length;
     }
 
   } catch (e) {

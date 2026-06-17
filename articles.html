@@ -21,6 +21,7 @@
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; transition: background 0.3s, color 0.3s; }
     a { text-decoration: none; color: inherit; }
 
+    /* HERO */
     .articles-hero { position: relative; height: 280px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
     .hero-bg { position: absolute; inset: 0; background: var(--gradient); }
     .hero-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.3; }
@@ -34,6 +35,28 @@
     .hero-search button { padding: 10px 20px; background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); font-size: 14px; font-weight: 600; cursor: pointer; }
 
     .main { max-width: 1040px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    /* PROTOCOL SECTION */
+    .protocol-section { background: linear-gradient(135deg, rgba(27,67,50,0.05), rgba(212,168,83,0.05)); border-radius: var(--radius); border: 1.5px solid var(--gold); padding: 2rem; margin-bottom: 3rem; }
+    .protocol-section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.5rem; }
+    .protocol-star { font-size: 18px; }
+    .protocol-section-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); }
+    .protocol-section-title { font-size: 18px; font-weight: 700; color: var(--text); margin-left: auto; }
+    .protocol-grid-page { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+
+    /* PROTOCOL CARD - articles page version */
+    .protocol-card-page { background: var(--surface); border-radius: var(--radius); border: 1.5px solid var(--gold); overflow: hidden; display: flex; transition: transform 0.2s, box-shadow 0.2s; }
+    .protocol-card-page:hover { transform: translateY(-2px); box-shadow: 0 4px 20px rgba(212,168,83,0.2); }
+    .protocol-card-img { width: 180px; flex-shrink: 0; overflow: hidden; position: relative; }
+    .protocol-card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .protocol-badge { position: absolute; top: 8px; left: 8px; background: var(--gold); color: #1A1A1A; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; }
+    .protocol-card-body { padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; }
+    .protocol-card-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: var(--gold-light); color: #7A5C10; border: 0.5px solid var(--gold); padding: 3px 8px; border-radius: 4px; display: inline-block; margin-bottom: 0.5rem; }
+    .protocol-card-body h3 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 0.4rem; line-height: 1.4; }
+    .protocol-card-body p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+    .protocol-card-meta { font-size: 11px; color: var(--gold); font-weight: 600; margin-top: 0.6rem; }
+
+    /* FILTER BAR */
     .filter-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
     .filter-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; }
     .pill { padding: 6px 14px; border-radius: 20px; font-size: 13px; font-weight: 500; cursor: pointer; border: 0.5px solid var(--border); background: var(--surface); color: var(--text-muted); transition: all 0.2s; }
@@ -41,11 +64,16 @@
     .pill.active { background: var(--green-dark); color: #FAF8F4; border-color: var(--green-dark); }
     .articles-count { font-size: 13px; color: var(--text-muted); }
     .articles-count span { font-weight: 700; color: var(--text); }
+    .section-divider { height: 1px; background: var(--border); margin: 0 0 2rem; }
+    .section-label-row { margin-bottom: 1.25rem; }
+    .section-label-row .label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.25rem; }
+    .section-label-row .title { font-size: 18px; font-weight: 700; color: var(--text); }
 
+    /* ARTICLE CARDS */
     .articles-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 2.5rem; }
     .article-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
     .article-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
-    .card-img { height: 140px; overflow: hidden; }
+    .card-img { height: 140px; overflow: hidden; position: relative; }
     .card-img img { width: 100%; height: 100%; object-fit: cover; }
     .card-body { padding: 1rem; }
     .card-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.5rem; }
@@ -55,12 +83,17 @@
     .article-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
     .article-card.hidden { display: none; }
 
+    /* COMING SOON */
     .coming-soon-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 2.5rem; }
     .coming-card { background: var(--surface); border-radius: var(--radius); border: 0.5px dashed var(--border); padding: 1.25rem; opacity: 0.7; }
     .coming-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
     .coming-card h4 { font-size: 13px; font-weight: 600; color: var(--text-muted); }
 
-    @media (max-width: 900px) { .articles-grid { grid-template-columns: 1fr 1fr !important; } .coming-soon-grid { grid-template-columns: 1fr 1fr !important; } }
+    @media (max-width: 900px) {
+      .articles-grid { grid-template-columns: 1fr 1fr !important; }
+      .coming-soon-grid { grid-template-columns: 1fr 1fr !important; }
+      .protocol-grid-page { grid-template-columns: 1fr !important; }
+    }
     @media (max-width: 600px) {
       .articles-hero { height: 220px !important; }
       .hero-text h1 { font-size: 1.4rem !important; }
@@ -70,6 +103,8 @@
       .filter-bar { flex-direction: column !important; align-items: flex-start !important; }
       .articles-grid { grid-template-columns: 1fr !important; }
       .coming-soon-grid { grid-template-columns: 1fr 1fr !important; }
+      .protocol-card-page { flex-direction: column !important; }
+      .protocol-card-img { width: 100% !important; height: 160px !important; }
     }
   </style>
 </head>
@@ -92,6 +127,21 @@
 
   <div class="main">
 
+    <!-- PROTOCOLS SECTION - top, gold border, separate -->
+    <div class="protocol-section">
+      <div class="protocol-section-header">
+        <span class="protocol-star">★</span>
+        <span class="protocol-section-label">Featured Protocols & Guides</span>
+      </div>
+      <div id="articles-protocols" class="protocol-grid-page"></div>
+    </div>
+
+    <!-- SUPPLEMENT GUIDES SECTION -->
+    <div class="section-label-row">
+      <div class="label">All Guides</div>
+      <div class="title">Supplement Research Library</div>
+    </div>
+
     <div class="filter-bar">
       <div class="filter-pills">
         <span class="pill active" onclick="filterBy('all', this)">All</span>
@@ -105,14 +155,13 @@
       <div class="articles-count"><span id="article-count">0</span> Articles</div>
     </div>
 
-    <!-- AUTO-LOADED FROM articles.json -->
     <div id="articles-grid" class="articles-grid"></div>
 
     <div style="margin-bottom: 1rem;">
       <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem;">Coming Soon</div>
     </div>
     <div class="coming-soon-grid">
-      <div class="coming-card"><div class="coming-label">Longevity</div><h4>Resveratrol + Pterostilbene</h4></div>
+      <div class="coming-card"><div class="coming-label">Longevity</div><h4>Fisetin</h4></div>
       <div class="coming-card"><div class="coming-label">Brain</div><h4>Lion's Mane Mushroom</h4></div>
       <div class="coming-card"><div class="coming-label">Sleep</div><h4>Ashwagandha + L-Theanine</h4></div>
       <div class="coming-card"><div class="coming-label">Metabolism</div><h4>Berberine</h4></div>
