@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Foundation Stack: D3+K2, Magnesium and Omega-3 - Stackofy</title>
+  <meta name="description" content="Three supplements. One protocol. The DO-HEALTH trial tested this exact combination in 2,157 older adults over 3 years. Here is what happened - and why this stack belongs in every longevity protocol." />
+
+  <meta property="og:title" content="The Foundation Stack: D3+K2, Magnesium and Omega-3" />
+  <meta property="og:description" content="A 2025 Nature Aging study found omega-3 and vitamin D3 together slowed DNA methylation clocks of biological aging with additive benefits. The case for starting here." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/foundation-stack" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-foundation-stack.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1B4332, #2D6A4F, #7A5C10); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    /* STACK OVERVIEW */
+    .stack-overview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stack-member { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .stack-member:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .stack-member-img { height: 80px; }
+    .sm1 { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .sm2 { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+    .sm3 { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
+    .stack-member-body { padding: 1rem; }
+    .stack-member-num { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .stack-member h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .stack-member p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-bottom: 0.75rem; }
+    .stack-member-link { font-size: 12px; font-weight: 600; color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    /* SYNERGY VISUAL */
+    .synergy-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .synergy-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .synergy-row { display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 0.5rem; align-items: center; margin-bottom: 1rem; }
+    .syn-pill { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.6rem 0.75rem; text-align: center; font-size: 12px; font-weight: 600; color: var(--text); }
+    .syn-arrow { color: var(--gold); font-weight: 700; font-size: 16px; text-align: center; }
+    .syn-result { background: var(--green-dark); border-radius: var(--radius-sm); padding: 0.6rem 0.75rem; text-align: center; font-size: 12px; font-weight: 600; color: #FAF8F4; }
+    .synergy-note { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    /* HIGHLIGHT / TIP BOXES */
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .tip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .tip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    /* DOSING TABLE */
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    /* STAT ROW */
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-vitd { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+    .c-omega { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .stack-overview { grid-template-columns: 1fr !important; }
+      .synergy-row { grid-template-columns: 1fr !important; }
+      .syn-arrow { transform: rotate(90deg); }
+      .stat-row { grid-template-columns: 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-foundation-stack.jpg" alt="Foundation Stack - D3+K2, Magnesium, Omega-3" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">★ Foundation Protocol</span>
+      <h1>The Foundation Stack: The Three Supplements Almost Everyone Should Be Taking</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>12 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>A 2025 Nature Aging study found omega-3 and vitamin D3 together slowed DNA methylation clocks of biological aging - with additive benefits when combined</li>
+        <li>Magnesium is required for vitamin D3 to be activated - without it, supplementing D3 has limited effect</li>
+        <li>The DO-HEALTH trial tested this exact combination in 2,157 older adults over 3 years - the largest trial of its kind</li>
+        <li>Most people are deficient in all three simultaneously - making this stack the highest-impact starting point for any longevity protocol</li>
+        <li>Always take D3 with K2 - K2 directs the calcium that D3 mobilizes into bones rather than arteries</li>
+        <li>These three work better together than any of them alone - the synergies are mechanistically distinct and clinically validated</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>If you are overwhelmed by the supplement world and want to start somewhere evidence-based, start here. Not because these three are the most exotic or the most discussed in biohacking circles - but because the combination of widespread deficiency, strong clinical evidence and genuine biological synergy makes them the most defensible foundation for any longevity protocol.</p>
+
+      <p>Vitamin D3 with K2. Magnesium. Omega-3. Three compounds. One protocol. And as of 2025, a growing body of clinical trial data showing they work better together than any of them alone.</p>
+
+      <div class="stack-overview">
+        <a href="/articles/vitamin-d3-k2-guide.html" class="stack-member">
+          <div class="stack-member-img sm1"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">01 · Foundation</div>
+            <h3>Vitamin D3 + K2</h3>
+            <p>Immune regulation, bone density, cardiovascular protection and - per the VITAL trial - slower telomere shortening over 4 years.</p>
+            <span class="stack-member-link">Full guide →</span>
+          </div>
+        </a>
+        <a href="/articles/magnesium-guide.html" class="stack-member">
+          <div class="stack-member-img sm2"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">02 · Foundation</div>
+            <h3>Magnesium</h3>
+            <p>Cofactor in 300+ enzyme reactions. Essential for D3 activation, ATP production, sleep quality and blood sugar regulation.</p>
+            <span class="stack-member-link">Full guide →</span>
+          </div>
+        </a>
+        <a href="/articles/omega-3-complete-guide.html" class="stack-member">
+          <div class="stack-member-img sm3"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">03 · Foundation</div>
+            <h3>Omega-3 (EPA/DHA)</h3>
+            <p>Anti-inflammatory, cardiovascular protective, neuroprotective. Slows three DNA methylation clocks of biological aging in the DO-HEALTH trial.</p>
+            <span class="stack-member-link">Full guide →</span>
+          </div>
+        </a>
+      </div>
+
+      <h2>Why These Three Specifically</h2>
+
+      <p>The supplement market has thousands of compounds, most with modest evidence and narrow effects. These three stand out for a different reason: they are not exotic interventions. They are nutrients that human biology depends on for basic function - and that modern diets and lifestyles systematically fail to provide in adequate amounts.</p>
+
+      <p><strong>Vitamin D3</strong> is produced by sunlight exposure to skin. Most people in Northern Europe and North America, and increasingly in sun-rich regions too due to indoor work and sun protection, are clinically deficient. Deficiency is associated with impaired immune function, increased cancer risk, cardiovascular disease and accelerated biological aging.</p>
+
+      <p><strong>Magnesium</strong> is depleted from soils through industrial agriculture, is lost in food processing, and is further depleted by stress, alcohol and certain medications. Estimates suggest 50-80% of Western adults have insufficient magnesium intake. It is required for over 300 enzymatic reactions - including the activation of vitamin D3.</p>
+
+      <p><strong>Omega-3</strong> requires dietary sources of fatty fish or algae. For most people eating a Western diet, the ratio of omega-6 to omega-3 is dramatically skewed - typically 15:1 to 20:1 versus the 4:1 or lower ratio associated with metabolic health. This chronic omega-3 insufficiency underlies much of the low-grade inflammation that drives age-related disease.</p>
+
+      <div class="article-img">
+        <img src="/images/foundation-stack-nutrients.jpg" alt="Vitamin D3, magnesium and omega-3 - the foundation stack" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Clinical Evidence - DO-HEALTH and VITAL</h2>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">2,157</div>
+          <div class="stat-label">Adults aged 70+ in the DO-HEALTH trial testing D3 + omega-3 over 3 years</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">3</div>
+          <div class="stat-label">DNA methylation clocks slowed by omega-3 in DO-HEALTH 2025 analysis</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">3 years</div>
+          <div class="stat-label">Telomere aging equivalent prevented by D3 supplementation in the VITAL trial</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">DO-HEALTH Trial 2025 - Nature Aging</div>
+        <p>A post-hoc analysis of 777 participants from the DO-HEALTH trial, published in Nature Aging in February 2025, measured the effect of vitamin D3 (2,000 IU/day) and omega-3 (1g/day) on four DNA methylation clocks of biological aging over 3 years. Omega-3 alone slowed the PhenoAge, GrimAge2 and DunedinPACE clocks. All three treatments - D3, omega-3 and exercise - had additive benefits on PhenoAge. This is the strongest clinical evidence to date that these compounds slow measurable biological aging, not just disease markers.</p>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">VITAL Trial 2025 - Telomere Length</div>
+        <p>The VITAL randomized controlled trial tested vitamin D3 at 2,000 IU/day in a large cohort and measured telomere length over 4 years. Vitamin D3 supplementation significantly reduced telomere shortening - preventing the equivalent of nearly 3 years of biological aging. Omega-3 supplementation did not show the same telomere effect, but the two compounds appear to protect against aging through different and complementary mechanisms.</p>
+      </div>
+
+      <h2>The Synergies - Why They Work Better Together</h2>
+
+      <p>These three are not just useful individually - they interact in ways that make the combination meaningfully greater than the sum of its parts.</p>
+
+      <div class="synergy-visual">
+        <div class="synergy-title">Key Synergistic Interactions</div>
+        <div class="synergy-row">
+          <div class="syn-pill">Magnesium</div>
+          <div class="syn-arrow">+</div>
+          <div class="syn-pill">Vitamin D3</div>
+          <div class="syn-arrow">→</div>
+          <div class="syn-result">D3 activation enabled</div>
+        </div>
+        <div class="synergy-row">
+          <div class="syn-pill">Vitamin D3</div>
+          <div class="syn-arrow">+</div>
+          <div class="syn-pill">K2</div>
+          <div class="syn-arrow">→</div>
+          <div class="syn-result">Calcium directed to bones not arteries</div>
+        </div>
+        <div class="synergy-row">
+          <div class="syn-pill">Omega-3</div>
+          <div class="syn-arrow">+</div>
+          <div class="syn-pill">Vitamin D3</div>
+          <div class="syn-arrow">→</div>
+          <div class="syn-result">Additive effect on PhenoAge clock</div>
+        </div>
+        <p class="synergy-note">Magnesium is required to convert inactive vitamin D (25-OH-D) into the active form (1,25-OH2-D). Without sufficient magnesium, taking more D3 may have limited benefit - your body cannot process it efficiently. This is one of the most important and most overlooked interactions in supplement science.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/foundation-stack-sun.jpg" alt="Sunlight vitamin D synthesis - the natural source most people miss" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>How to Take the Foundation Stack</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Supplement</th>
+          <th>Daily Dose</th>
+          <th>Form</th>
+          <th>Timing</th>
+        </tr>
+        <tr>
+          <td>Vitamin D3</td>
+          <td>2,000 - 4,000 IU</td>
+          <td>D3 (cholecalciferol) - not D2</td>
+          <td>With fat - breakfast or lunch</td>
+        </tr>
+        <tr>
+          <td>Vitamin K2</td>
+          <td>100 - 200 mcg</td>
+          <td>MK-7 form (longer half-life)</td>
+          <td>With fat - same meal as D3</td>
+        </tr>
+        <tr>
+          <td>Magnesium</td>
+          <td>300 - 400 mg</td>
+          <td>Glycinate or malate - not oxide</td>
+          <td>Split across meals or evening</td>
+        </tr>
+        <tr>
+          <td>Omega-3</td>
+          <td>1 - 2g EPA+DHA</td>
+          <td>Triglyceride form, IFOS certified</td>
+          <td>With fat - largest meal</td>
+        </tr>
+      </table>
+
+      <div class="tip-box">
+        <div class="tip-label">Practical Tip</div>
+        <p>D3, K2 and omega-3 are all fat-soluble. Taking them together with your largest meal of the day - which typically contains the most fat - maximizes absorption with zero extra effort. Magnesium glycinate can be split across the day or taken in the evening where it additionally supports sleep quality.</p>
+      </div>
+
+      <h2>What to Watch Out For</h2>
+
+      <p><strong>D3 without K2 is an incomplete intervention.</strong> Vitamin D3 increases calcium absorption from the gut. Without K2 to activate the proteins that direct calcium into bones and teeth, that calcium can accumulate in soft tissue and arteries. Most D3 supplements do not include K2 - always combine them or choose a combined product.</p>
+
+      <p><strong>Magnesium form matters enormously.</strong> Magnesium oxide - the cheapest and most common form - has approximately 4% bioavailability. Magnesium glycinate and malate are significantly better absorbed and gentler on the digestive system. If you have tried magnesium before and noticed no effect, the form was likely the problem.</p>
+
+      <p><strong>Most omega-3 supplements are already rancid.</strong> Oxidized fish oil delivers no benefit and may cause harm. Look for products with IFOS certification, a manufacture date within 18 months, and a triglyceride form rather than ethyl ester. Alternatively, algae-derived omega-3 avoids the oxidation problem entirely and provides DHA directly from the original source.</p>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">9.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          The highest-evidence, highest-impact starting point for any longevity protocol. Widespread deficiency across all three means virtually everyone benefits. The DO-HEALTH and VITAL trials provide the strongest combination of scale, duration and objective biological aging markers of any supplement combination studied. If you take nothing else, take these three - together, in the right forms, at the right doses.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Bischoff-Ferrari, H.A. et al. (2025). Individual and additive effects of vitamin D, omega-3 and exercise on DNA methylation clocks of biological aging: DO-HEALTH trial. <em>Nature Aging</em>. doi:10.1038/s43587-024-00793-y.</li>
+        <li>Shadyab, A.H. et al. (2025). Vitamin D3 and omega-3 fatty acids supplementation and leukocyte telomere length: 4-year findings from VITAL. <em>American Journal of Clinical Nutrition</em>.</li>
+        <li>Bischoff-Ferrari, H.A. et al. (2020). Effect of vitamin D supplementation, omega-3 fatty acid supplementation, or a strength-training exercise program on clinical outcomes in older adults: DO-HEALTH RCT. <em>JAMA</em>, 324(18), 1855-1868.</li>
+        <li>Reddy, P. & Edwards, L.R. (2019). Magnesium supplementation in vitamin D deficiency. <em>American Journal of Therapeutics</em>, 26(1), e124-e132.</li>
+        <li>Rosanoff, A. et al. (2021). Suboptimal magnesium status in the United States: are the health consequences underestimated? <em>Nutrition Reviews</em>, 70(3), 153-164.</li>
+        <li>Vermeer, C. (2012). Vitamin K: the effect on health beyond coagulation - an overview. <em>Food & Nutrition Research</em>, 56, 5329.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Ready to Build Your Complete Stack?</h3>
+      <p>The Foundation Stack is the starting point. Use the free Stack Builder to add the next layer based on your specific goals.</p>
+      <div class="cta-buttons">
+        <a href="/your-stack.html" class="btn-gold">Build YOUR Stack - Free →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Deep Dives - Individual Guides</div>
+      <div class="related-grid">
+        <a href="/articles/vitamin-d3-k2-guide.html" class="related-card">
+          <div class="related-img c-vitd">
+            <img src="/images/hero-vitd.jpg" alt="Vitamin D3" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin D3</span>
+            <h4>Vitamin D3 + K2: The Sunshine Molecule Your Immune System Depends On</h4>
+          </div>
+        </a>
+        <a href="/articles/magnesium-guide.html" class="related-card">
+          <div class="related-img c-mag">
+            <img src="/images/hero-magnesium.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Magnesium</span>
+            <h4>Magnesium: The Master Mineral That Everyone's Missing</h4>
+          </div>
+        </a>
+        <a href="/articles/omega-3-complete-guide.html" class="related-card">
+          <div class="related-img c-omega">
+            <img src="/images/omega-3-capsules-moss.jpg" alt="Omega-3" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Omega-3</span>
+            <h4>Omega-3: The One Supplement Almost Everyone Is Taking Wrong</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
