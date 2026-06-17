@@ -68,6 +68,7 @@
     .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
     .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
 
+    /* NORMAL ARTICLE CARD */
     .article-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
     .article-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
     .card-img { height: 120px; overflow: hidden; }
@@ -75,6 +76,27 @@
     .card-body { padding: 1rem; }
     .card-body h3 { font-size: 13px; font-weight: 600; color: var(--text); margin: 0.4rem 0; line-height: 1.4; }
     .card-body p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    /* PROTOCOL CARD - double wide, horizontal, gold border */
+    .protocol-card { border: 1.5px solid var(--gold) !important; }
+    .protocol-card:hover { border-color: var(--gold) !important; box-shadow: 0 4px 20px rgba(212,168,83,0.2); }
+    .protocol-wide { grid-column: span 2; display: flex !important; flex-direction: row !important; }
+    .protocol-wide-img { width: 220px; flex-shrink: 0; overflow: hidden; position: relative; }
+    .protocol-wide-img img { width: 100%; height: 100%; object-fit: cover; }
+    .protocol-badge { position: absolute; top: 8px; left: 8px; background: var(--gold); color: #1A1A1A; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; }
+    .protocol-wide-body { padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; flex: 1; }
+    .protocol-wide-body h3 { font-size: 14px; font-weight: 700; color: var(--text); margin: 0.4rem 0; line-height: 1.4; }
+    .protocol-wide-body p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-top: 0.4rem; }
+    .protocol-read-link { font-size: 12px; font-weight: 700; color: var(--gold); margin-top: 0.75rem; display: block; }
+    .protocol-tag { background: var(--gold-light) !important; color: #7A5C10 !important; border: 0.5px solid var(--gold); }
+
+    /* Protocol section grid - 2 columns so double-wide fills the row */
+    .protocol-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+
+    /* Articles page protocol card */
+    .protocol-card .card-img { position: relative; }
+    .protocol-card .protocol-img { position: relative; }
+    .protocol-card .protocol-badge { position: absolute; top: 8px; left: 8px; background: var(--gold); color: #1A1A1A; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; }
 
     .h-article { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: flex; transition: border-color 0.2s, transform 0.2s; }
     .h-article:hover { border-color: var(--green-dark); transform: translateY(-2px); }
@@ -98,6 +120,21 @@
     .trust-bar { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.5rem 2rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; }
     .trust-num { font-size: 26px; font-weight: 700; color: var(--green-dark); }
     .trust-label { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+
+    /* FREE GIFT BANNER */
+    .free-gift-banner { background: var(--surface); border-radius: var(--radius); border: 2px solid var(--gold); padding: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; position: relative; overflow: hidden; }
+    .free-gift-banner::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold), var(--green-dark), var(--gold)); }
+    .free-gift-left { flex: 1; }
+    .free-gift-badge { display: inline-block; background: var(--gold); color: #1A1A1A; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-bottom: 0.75rem; }
+    .free-gift-left h3 { font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 0.6rem; line-height: 1.35; }
+    .free-gift-left p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; }
+    .btn-free { background: var(--green-dark); color: #FAF8F4; border: none; border-radius: var(--radius-sm); padding: 12px 22px; font-size: 14px; font-weight: 700; display: inline-block; }
+    .btn-free:hover { background: var(--green-mid); }
+    .free-gift-right { flex-shrink: 0; text-align: center; background: var(--gold-light); border-radius: var(--radius); padding: 1.5rem 2rem; border: 0.5px solid var(--gold); }
+    .free-gift-icon { font-size: 36px; margin-bottom: 8px; }
+    .free-gift-meta { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; }
+    .price-was { font-size: 14px; color: var(--text-muted); text-decoration: line-through; margin-right: 6px; }
+    .price-free { font-size: 22px; font-weight: 700; color: var(--green-dark); }
 
     /* STACK AUDIT FEATURE */
     .stack-audit-feature { background: var(--surface); border-radius: var(--radius); border: 1.5px solid var(--green-dark); padding: 2rem; display: grid; grid-template-columns: 1fr auto; gap: 2rem; position: relative; overflow: hidden; }
@@ -173,20 +210,7 @@
 
     .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
     .disclaimer strong { color: var(--text); }
-/* FREE GIFT BANNER */
-    .free-gift-banner { background: var(--surface); border-radius: var(--radius); border: 2px solid var(--gold); padding: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; position: relative; overflow: hidden; }
-    .free-gift-banner::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold), var(--green-dark), var(--gold)); }
-    .free-gift-left { flex: 1; }
-    .free-gift-badge { display: inline-block; background: var(--gold); color: #1A1A1A; font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; margin-bottom: 0.75rem; }
-    .free-gift-left h3 { font-size: 1.2rem; font-weight: 700; color: var(--text); margin-bottom: 0.6rem; line-height: 1.35; }
-    .free-gift-left p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 1.25rem; }
-    .btn-free { background: var(--green-dark); color: #FAF8F4; border: none; border-radius: var(--radius-sm); padding: 12px 22px; font-size: 14px; font-weight: 700; display: inline-block; }
-    .btn-free:hover { background: var(--green-mid); }
-    .free-gift-right { flex-shrink: 0; text-align: center; background: var(--gold-light); border-radius: var(--radius); padding: 1.5rem 2rem; border: 0.5px solid var(--gold); }
-    .free-gift-icon { font-size: 36px; margin-bottom: 8px; }
-    .free-gift-meta { font-size: 12px; font-weight: 600; color: var(--text-muted); margin-bottom: 8px; }
-    .price-was { font-size: 14px; color: var(--text-muted); text-decoration: line-through; margin-right: 6px; }
-    .price-free { font-size: 22px; font-weight: 700; color: var(--green-dark); }
+
     @media (max-width: 900px) {
       .grid-4 { grid-template-columns: 1fr 1fr !important; }
       .grid-3 { grid-template-columns: 1fr 1fr !important; }
@@ -199,6 +223,8 @@
       .lead-block { flex-direction: column !important; align-items: flex-start !important; }
       .stack-audit-feature { grid-template-columns: 1fr !important; }
       .audit-stat-col { border-left: none !important; border-top: 1px solid var(--border); padding-left: 0 !important; padding-top: 1rem; flex-direction: row !important; }
+      .protocol-grid { grid-template-columns: 1fr !important; }
+      .protocol-wide { grid-column: span 1 !important; }
     }
     @media (max-width: 600px) {
       .hero { padding: 1.75rem 1rem 1.5rem !important; }
@@ -218,6 +244,9 @@
       .quiz-bottom h2 { font-size: 1.2rem !important; }
       .facts-grid { grid-template-columns: 1fr !important; }
       .stat-banner { grid-template-columns: 1fr !important; }
+      .protocol-wide { flex-direction: column !important; }
+      .protocol-wide-img { width: 100% !important; height: 160px !important; }
+      .free-gift-banner { flex-direction: column !important; }
     }
   </style>
 </head>
@@ -260,6 +289,14 @@
     </div>
     <div id="featured-article" class="mb3"></div>
 
+    <!-- PROTOCOL ARTICLES - double-wide cards -->
+    <div class="section-label">★ Featured Protocols</div>
+    <div class="section-header mb15">
+      <div class="section-title">Guides & Protocols</div>
+      <a href="/articles.html" class="see-all">See all →</a>
+    </div>
+    <div id="protocol-articles" class="protocol-grid mb3"></div>
+
     <!-- LATEST ARTICLES -->
     <div class="section-label">What's New</div>
     <div class="section-header mb15">
@@ -277,7 +314,8 @@
       <div><div class="trust-num">0</div><div class="trust-label">Pharma Sponsors</div></div>
       <div><div class="trust-num" id="article-count-home">9</div><div class="trust-label">In-Depth Guides</div></div>
     </div>
-<!-- FREE GIFT BANNER -->
+
+    <!-- FREE GIFT BANNER -->
     <div class="free-gift-banner mb3">
       <div class="free-gift-left">
         <div class="free-gift-badge">🎁 100% Free</div>
@@ -291,6 +329,7 @@
         <div class="free-gift-price"><span class="price-was">$9</span> <span class="price-free">FREE</span></div>
       </div>
     </div>
+
     <!-- STACK AUDIT FEATURE -->
     <div class="stack-audit-feature mb3">
       <div class="audit-badge">ARI Special Report</div>

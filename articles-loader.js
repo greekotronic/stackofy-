@@ -11,23 +11,24 @@ const COLORS = {
   'c-coq':    'background:linear-gradient(135deg,#1a0a00,#5C3A00)',
   'c-vitc':   'background:linear-gradient(135deg,#7A1A00,#C0392B)',
   'c-pqq':    'background:linear-gradient(135deg,#2C1A0E,#5C3A00)',
-  'c-resv': 'background:linear-gradient(135deg,#3d0a0a,#7A1A1A)',
-  'c-quer': 'background:linear-gradient(135deg,#3d4a10,#6B7A2A)',
-  'c-pter': 'background:linear-gradient(135deg,#1a2a4a,#2D4A6B)',
-  'c-nr': 'background:linear-gradient(135deg,#1B3A2A,#2D6A4F)',
-  'c-audit': 'background:linear-gradient(135deg,#1a1a1a,#2D3A2A)',
-  'c-sperm': 'background:linear-gradient(135deg,#2A3A10,#4A6A20)',
-  'c-ala': 'background:linear-gradient(135deg,#1a1a00,#3A3A10)',
-  'c-gly': 'background:linear-gradient(135deg,#1a2a1a,#2D6A4F)',
-  'c-alcar': 'background:linear-gradient(135deg,#0a1a0a,#1B4332)',
-  'c-creatine': 'background:linear-gradient(135deg,#1a1a1a,#2A2A10)',
-  'c-collagen': 'background:linear-gradient(135deg,#1a2a10,#2D5A1B)',
-  'c-sulfo': 'background:linear-gradient(135deg,#0a1a0a,#1B4332)',
+  'c-resv':   'background:linear-gradient(135deg,#3d0a0a,#7A1A1A)',
+  'c-quer':   'background:linear-gradient(135deg,#3d4a10,#6B7A2A)',
+  'c-pter':   'background:linear-gradient(135deg,#1a2a4a,#2D4A6B)',
+  'c-nr':     'background:linear-gradient(135deg,#1B3A2A,#2D6A4F)',
+  'c-audit':  'background:linear-gradient(135deg,#1a1a1a,#2D3A2A)',
+  'c-sperm':  'background:linear-gradient(135deg,#2A3A10,#4A6A20)',
+  'c-ala':    'background:linear-gradient(135deg,#1a1a00,#3A3A10)',
+  'c-gly':    'background:linear-gradient(135deg,#1a2a1a,#2D6A4F)',
+  'c-alcar':  'background:linear-gradient(135deg,#0a1a0a,#1B4332)',
+  'c-creatine':'background:linear-gradient(135deg,#1a1a1a,#2A2A10)',
+  'c-collagen':'background:linear-gradient(135deg,#1a2a10,#2D5A1B)',
+  'c-sulfo':  'background:linear-gradient(135deg,#0a1a0a,#1B4332)',
   'c-coffee': 'background:linear-gradient(135deg,#1a0a00,#3E1F00)',
 };
 
 function makeCard(article, size) {
   const bg = COLORS[article.color] || 'background:#1B4332';
+  const isProtocol = article.type === 'protocol';
 
   if (size === 'featured') {
     return `
@@ -61,6 +62,25 @@ function makeCard(article, size) {
   }
 
   if (size === 'articles-page') {
+    if (isProtocol) {
+      return `
+        <a href="${article.url}" class="article-card protocol-card"
+           data-tags="${article.tags}"
+           data-title="${article.title}">
+          <div class="card-img protocol-img" style="${bg}">
+            <img src="${article.image}" alt="${article.tag}" onerror="this.style.display='none'" />
+            <span class="protocol-badge">★ Protocol</span>
+          </div>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="article-tag protocol-tag">${article.tag}</span>
+              <span class="read-time">${article.readTime}</span>
+            </div>
+            <h3>${article.title}</h3>
+            <p>${article.description}</p>
+          </div>
+        </a>`;
+    }
     return `
       <a href="${article.url}" class="article-card"
          data-tags="${article.tags}"
@@ -75,6 +95,23 @@ function makeCard(article, size) {
           </div>
           <h3>${article.title}</h3>
           <p>${article.description}</p>
+        </div>
+      </a>`;
+  }
+
+  // Homepage small card - protocol gets double-wide card
+  if (isProtocol) {
+    return `
+      <a href="${article.url}" class="article-card protocol-card protocol-wide">
+        <div class="protocol-wide-img" style="${bg}">
+          <img src="${article.image}" alt="${article.tag}" onerror="this.style.display='none'" />
+          <span class="protocol-badge">★ Protocol</span>
+        </div>
+        <div class="protocol-wide-body">
+          <span class="article-tag protocol-tag">${article.tag}</span>
+          <h3>${article.title}</h3>
+          <p>${article.description}</p>
+          <span class="protocol-read-link">Read the full guide →</span>
         </div>
       </a>`;
   }
@@ -98,51 +135,52 @@ async function loadArticles() {
     const res = await fetch('/articles.json');
     const articles = await res.json();
 
-    // FEATURED ARTICLE (homepage) - the one marked featured:true
+    // FEATURED ARTICLE (homepage)
     const featuredEl = document.getElementById('featured-article');
     if (featuredEl) {
       const featured = articles.find(a => a.featured) || articles[0];
       featuredEl.innerHTML = makeCard(featured, 'featured');
     }
 
-    // LATEST ARTICLES (homepage) - all non-featured articles
+    // LATEST ARTICLES (homepage) - non-featured, non-protocol articles
     const latestEl = document.getElementById('latest-articles');
     if (latestEl) {
-      const latest = articles.filter(a => !a.featured);
+      const latest = articles.filter(a => !a.featured && a.type !== 'protocol');
       latestEl.innerHTML = latest.map(a => makeCard(a, 'small')).join('');
     }
 
-    // LONGEVITY SECTION (homepage) - top 3 longevity articles
+    // PROTOCOL ARTICLES (homepage) - only protocol type
+    const protocolEl = document.getElementById('protocol-articles');
+    if (protocolEl) {
+      const protocols = articles.filter(a => a.type === 'protocol');
+      protocolEl.innerHTML = protocols.map(a => makeCard(a, 'small')).join('');
+    }
+
+    // LONGEVITY SECTION (homepage)
     const longevityEl = document.getElementById('longevity-articles');
     if (longevityEl) {
-      const longevity = articles.filter(a => a.tags.includes('longevity')).slice(0, 3);
+      const longevity = articles.filter(a => a.tags.includes('longevity') && a.type !== 'protocol').slice(0, 3);
       longevityEl.innerHTML = longevity.map(a => makeCard(a, 'horizontal')).join('');
     }
 
-    // ENERGY & PERFORMANCE (homepage) - CoQ10 and PQQ
+    // ENERGY & PERFORMANCE (homepage)
     const energyEl = document.getElementById('energy-articles');
     if (energyEl) {
-      const energy = articles.filter(a =>
-        ['CoQ10', 'PQQ'].includes(a.tag)
-      );
+      const energy = articles.filter(a => ['CoQ10', 'PQQ'].includes(a.tag));
       energyEl.innerHTML = energy.map(a => makeCard(a, 'horizontal')).join('');
     }
 
-    // FOUNDATION SECTION (homepage) - D3, Magnesium, Omega-3
+    // FOUNDATION SECTION (homepage)
     const foundationEl = document.getElementById('foundation-articles');
     if (foundationEl) {
-      const foundation = articles.filter(a =>
-        ['Magnesium', 'Omega-3', 'Vitamin D3'].includes(a.tag)
-      );
+      const foundation = articles.filter(a => ['Magnesium', 'Omega-3', 'Vitamin D3'].includes(a.tag));
       foundationEl.innerHTML = foundation.map(a => makeCard(a, 'horizontal')).join('');
     }
 
-    // IMMUNE SECTION (homepage) - Vitamin C and Selenium
+    // IMMUNE SECTION (homepage)
     const immuneEl = document.getElementById('immune-articles');
     if (immuneEl) {
-      const immune = articles.filter(a =>
-        ['Vitamin C', 'Selenium'].includes(a.tag)
-      );
+      const immune = articles.filter(a => ['Vitamin C', 'Selenium'].includes(a.tag));
       immuneEl.innerHTML = immune.map(a => makeCard(a, 'horizontal')).join('');
     }
 
@@ -159,7 +197,6 @@ async function loadArticles() {
   }
 }
 
-// Run when DOM is ready
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', loadArticles);
 } else {

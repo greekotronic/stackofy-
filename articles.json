@@ -208,6 +208,7 @@
 },{
   "title": "The Biohacker's Coffee: What the Science Actually Says About Upgrading Your Morning Cup",
   "tag": "Nutrition Protocol",
+  "type": "protocol",
   "url": "/articles/biohacker-coffee-guide.html",
   "image": "/images/hero-biohacker-coffee.jpg",
   "color": "c-coffee",
