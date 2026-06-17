@@ -133,6 +133,7 @@
 ,{
   "title": "Stack Audit: The Supplement Combinations You Can Stop Buying",
   "tag": "Stack Audit",
+  "type": "protocol",
   "url": "/articles/redundant-stacks.html",
   "image": "/images/hero-redundant-stacks.jpg",
   "color": "c-audit",
