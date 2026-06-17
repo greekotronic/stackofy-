@@ -24,6 +24,7 @@ const COLORS = {
   'c-collagen':'background:linear-gradient(135deg,#1a2a10,#2D5A1B)',
   'c-sulfo':  'background:linear-gradient(135deg,#0a1a0a,#1B4332)',
   'c-coffee': 'background:linear-gradient(135deg,#1a0a00,#3E1F00)',
+  'c-stack': 'background:linear-gradient(135deg,#1B4332,#2D6A4F)',
 };
 
 function makeCard(article, size) {
