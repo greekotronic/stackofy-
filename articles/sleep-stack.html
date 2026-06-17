@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Sleep Stack: Magnesium Glycinate, Ashwagandha and L-Theanine - Stackofy</title>
+  <meta name="description" content="Three compounds targeting the biology of sleep from different angles. Magnesium calms the nervous system, ashwagandha lowers cortisol, L-theanine promotes alpha waves. Here is the evidence and how to combine them." />
+
+  <meta property="og:title" content="The Sleep Stack: Magnesium Glycinate, Ashwagandha and L-Theanine" />
+  <meta property="og:description" content="A 2025 RCT confirmed magnesium bisglycinate improves insomnia symptoms. A 2022 meta-analysis showed ashwagandha significantly reduces cortisol. L-theanine and magnesium together regulate brain electrochemical activity. Here is the complete protocol." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/sleep-stack" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-sleep-stack.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+      --sleep-blue: #1a2a4a; --sleep-mid: #2D4A6B;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a0a1a, #1a2a4a, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,26,0.95) 0%, rgba(10,10,26,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .stack-overview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .stack-member { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .stack-member:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .stack-member-img { height: 70px; }
+    .sm-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+    .sm-ash { background: linear-gradient(135deg, #1a3a1a, #2D6A2D); }
+    .sm-thea { background: linear-gradient(135deg, #1a2a4a, #2D4A6B); }
+    .stack-member-body { padding: 0.875rem; }
+    .stack-member-num { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+    .stack-member h3 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+    .stack-member p { font-size: 11px; color: var(--text-muted); line-height: 1.4; margin-bottom: 0.5rem; }
+    .stack-member-link { font-size: 11px; font-weight: 600; color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .mechanism-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .mechanism-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; text-align: center; }
+    .mechanism-icon { font-size: 28px; margin-bottom: 8px; }
+    .mechanism-card h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .mechanism-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .sleep-phases { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .sleep-phases-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .phase-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .phase-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .phase-time { font-size: 12px; font-weight: 700; color: var(--gold); flex-shrink: 0; width: 80px; margin-top: 2px; }
+    .phase-content h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+    .phase-content p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .tip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .tip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+    .c-gly { background: linear-gradient(135deg, #1a2a1a, #2D6A4F); }
+    .c-stack { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .stack-overview { grid-template-columns: 1fr !important; }
+      .mechanism-grid { grid-template-columns: 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-sleep-stack.jpg" alt="The Sleep Stack - Magnesium Glycinate, Ashwagandha, L-Theanine" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">★ Sleep Protocol</span>
+      <h1>The Sleep Stack: Magnesium Glycinate, Ashwagandha and L-Theanine</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>12 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>A 2025 RCT confirmed magnesium bisglycinate improves insomnia symptoms - with the greatest benefit in people with low dietary magnesium intake</li>
+        <li>Ashwagandha (KSM-66 extract) significantly reduced cortisol levels in a 2022 meta-analysis - making it the most evidence-backed option for stress-driven poor sleep</li>
+        <li>L-theanine + magnesium together regulate brain electrochemical activity more effectively than either alone - per a Frontiers in Nutrition RCT</li>
+        <li>This stack addresses three different root causes of poor sleep: magnesium deficiency, elevated evening cortisol and an overactive nervous system</li>
+        <li>None of these cause morning grogginess - unlike melatonin at high doses or sedative supplements</li>
+        <li>Timing matters: take 60-90 minutes before bed for maximum effect</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Most sleep supplements target the same mechanism: they sedate you. They make you drowsy by suppressing nervous system activity or flooding the brain with melatonin. The problem with this approach is that sedation is not sleep. You can be unconscious without getting the deep, restorative stages of sleep that actually repair tissue, consolidate memory and regulate hormones.</p>
+
+      <p>The Sleep Stack takes a different approach. Instead of sedating, it addresses the three most common biological reasons people struggle to fall and stay asleep: magnesium deficiency that keeps the nervous system in a state of low-level activation, elevated evening cortisol from chronic stress that delays sleep onset, and excessive neural excitation that prevents the brain from transitioning into alpha and theta wave states.</p>
+
+      <p><strong>The result is not grogginess. It is better sleep architecture - more time in deep and REM stages, easier onset and fewer night awakenings - with no next-morning impairment.</strong></p>
+
+      <div class="stack-overview">
+        <a href="/articles/magnesium-guide.html" class="stack-member">
+          <div class="stack-member-img sm-mag"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">01 · Core</div>
+            <h3>Magnesium Glycinate</h3>
+            <p>GABA receptor support, nerve relaxation, muscle release. The most bioavailable form for sleep. 2025 RCT confirmed insomnia benefits.</p>
+            <span class="stack-member-link">Full guide →</span>
+          </div>
+        </a>
+        <div class="stack-member">
+          <div class="stack-member-img sm-ash"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">02 · Cortisol</div>
+            <h3>Ashwagandha KSM-66</h3>
+            <p>Adaptogen that reduces cortisol and perceived stress. Most effective when sleep problems are driven by anxiety or burnout.</p>
+          </div>
+        </div>
+        <div class="stack-member">
+          <div class="stack-member-img sm-thea"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">03 · Alpha Waves</div>
+            <h3>L-Theanine</h3>
+            <p>Promotes alpha brain wave activity - calm without sedation. Works synergistically with magnesium to regulate brain electrochemical activity.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>The Three Root Causes This Stack Addresses</h2>
+
+      <div class="mechanism-grid">
+        <div class="mechanism-card">
+          <div class="mechanism-icon">🔋</div>
+          <h4>Magnesium Deficiency</h4>
+          <p>Magnesium is required for GABA receptor function - the brain's primary inhibitory neurotransmitter. Deficiency keeps neurons in a state of low-level activation that makes sleep onset difficult and sleep shallow.</p>
+        </div>
+        <div class="mechanism-card">
+          <div class="mechanism-icon">📈</div>
+          <h4>Elevated Evening Cortisol</h4>
+          <p>Cortisol should be lowest at night. Chronic stress disrupts the cortisol rhythm, keeping levels elevated in the evening. This is the most common reason people cannot switch off before bed.</p>
+        </div>
+        <div class="mechanism-card">
+          <div class="mechanism-icon">⚡</div>
+          <h4>Neural Over-Excitation</h4>
+          <p>The transition from wakefulness to sleep requires the brain to shift from beta waves (alert, active) to alpha and theta waves (relaxed, drowsy). Stress, blue light and stimulants prevent this transition.</p>
+        </div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/sleep-stack-calm.jpg" alt="Evening wind-down ritual - herbal tea and calm environment" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Magnesium Glycinate - The Foundation</h2>
+
+      <p>Of all the magnesium forms available, glycinate is the most appropriate for sleep support. The glycine molecule it is bound to is itself a calming amino acid - it directly activates inhibitory glycine receptors in the brainstem and modulates NMDA receptors that regulate neural excitation. So magnesium glycinate delivers two sleep-supportive compounds in one molecule: magnesium for GABA function and glycine for neural calming.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">2025 RCT - Magnesium Bisglycinate and Insomnia</div>
+        <p>A 2025 randomized controlled trial published in Frontiers in Nutrition tested magnesium bisglycinate supplementation specifically in people with insomnia symptoms. Results showed modest but statistically significant improvements in sleep quality. Importantly, participants with the lowest dietary magnesium intake showed the greatest benefit - confirming that the mechanism is deficiency correction rather than pharmacological sedation. This means people who eat well and already have adequate magnesium may see less dramatic effects, while those with typical Western diets (where magnesium is commonly insufficient) are more likely to notice significant improvement.</p>
+      </div>
+
+      <p>Magnesium also plays a direct role in melatonin synthesis - it is required for the enzymatic conversion of serotonin to melatonin. Deficiency therefore impairs not just nervous system relaxation but the body's own melatonin production. This is one reason why improving magnesium status often helps people who previously relied on melatonin supplements.</p>
+
+      <h2>Ashwagandha - The Cortisol Regulator</h2>
+
+      <p>Ashwagandha (Withania somnifera) is an adaptogen - a compound that helps the body normalize its stress response rather than simply suppressing or stimulating it. Its primary sleep-relevant mechanism is cortisol reduction via modulation of the HPA (hypothalamic-pituitary-adrenal) axis.</p>
+
+      <p>A 2022 meta-analysis in the Journal of Ethnopharmacology analyzed multiple RCTs and found ashwagandha supplementation significantly reduced both cortisol levels and perceived stress. The KSM-66 extract - a standardized root extract with 5% withanolides - is the most studied and consistent form for these outcomes.</p>
+
+      <p><strong>Who benefits most:</strong> Ashwagandha is most effective for people whose sleep problems are driven by stress, anxiety or burnout - the classic "tired but wired" pattern where the body is exhausted but the mind will not stop. For people who fall asleep easily but wake in the night, its benefit may be less pronounced compared to magnesium.</p>
+
+      <div class="tip-box">
+        <div class="tip-label">Cycling Ashwagandha</div>
+        <p>Ashwagandha works best cycled: 6-8 weeks on, 1-2 weeks off. Continuous long-term use without a break may reduce sensitivity to its cortisol-modulating effects. The break period allows the HPA axis to recalibrate. Most studies showing significant results ran for 8-12 weeks - consistency within a cycle is more important than total duration.</p>
+      </div>
+
+      <h2>L-Theanine - The Alpha Wave Promoter</h2>
+
+      <p>L-theanine is an amino acid found almost exclusively in green tea. Its primary mechanism is the promotion of alpha brain wave activity - the neural state associated with calm alertness and the relaxed transition toward sleep. Unlike sedatives, it does not suppress cognitive function. It shifts the brain's activity pattern without impairing awareness.</p>
+
+      <p>A study published in Frontiers in Nutrition demonstrated that a magnesium-L-theanine complex improved sleep quality by regulating brain electrochemical activity more effectively than either compound alone. The synergy is mechanistically logical: magnesium addresses GABA receptor function and muscle relaxation, while L-theanine drives the alpha wave shift that signals the brain to begin its transition toward sleep.</p>
+
+      <p>L-theanine also modestly reduces glutamate activity - the brain's primary excitatory neurotransmitter - which further reduces the neural "noise" that keeps people alert when they want to sleep. At 200mg it is effective without causing drowsiness if taken earlier in the day, making it flexible for people who experience anxiety throughout the day as well as at night.</p>
+
+      <div class="article-img">
+        <img src="/images/sleep-stack-night.jpg" alt="Sleep brain waves concept - the biology of restorative sleep" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Optimal Protocol - Timing and Doses</h2>
+
+      <p>Timing is more critical for the Sleep Stack than for most other protocols. These compounds work by shifting physiological states that take time to change - the effects are not instant. Taking them 60-90 minutes before your intended sleep time allows the peak effect to coincide with sleep onset.</p>
+
+      <div class="sleep-phases">
+        <div class="sleep-phases-title">Recommended Evening Protocol</div>
+        <div class="phase-row">
+          <div class="phase-time">60-90 min before bed</div>
+          <div class="phase-content">
+            <h4>Ashwagandha KSM-66 (300-600mg)</h4>
+            <p>Takes longest to influence cortisol levels. Start the cortisol reduction process earliest. Take with a small amount of food if stomach sensitivity is a concern.</p>
+          </div>
+        </div>
+        <div class="phase-row">
+          <div class="phase-time">60 min before bed</div>
+          <div class="phase-content">
+            <h4>Magnesium Glycinate (300-400mg elemental)</h4>
+            <p>GABA receptor modulation and muscle relaxation begin within 45-60 minutes. The glycine component also supports sleep onset directly.</p>
+          </div>
+        </div>
+        <div class="phase-row">
+          <div class="phase-time">30-45 min before bed</div>
+          <div class="phase-content">
+            <h4>L-Theanine (200mg)</h4>
+            <p>Alpha wave promotion onset is faster. Taking it slightly later means peak effect aligns with lights-out. Can be combined with magnesium if preferred.</p>
+          </div>
+        </div>
+        <div class="phase-row">
+          <div class="phase-time">Optional addition</div>
+          <div class="phase-content">
+            <h4>Glycine (3g) + Melatonin (0.3-0.5mg)</h4>
+            <p>Glycine from our personal stack further supports sleep architecture. Melatonin at low dose (not 5-10mg) for circadian rhythm support when needed. Cycle melatonin: 8 weeks on, 1 week off.</p>
+          </div>
+        </div>
+      </div>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Supplement</th>
+          <th>Daily Dose</th>
+          <th>Form</th>
+          <th>Cycle</th>
+        </tr>
+        <tr>
+          <td>Magnesium Glycinate</td>
+          <td>300 - 400mg elemental</td>
+          <td>Bisglycinate or glycinate - not oxide</td>
+          <td>Daily - safe long-term</td>
+        </tr>
+        <tr>
+          <td>Ashwagandha</td>
+          <td>300 - 600mg</td>
+          <td>KSM-66 or Sensoril extract (standardized)</td>
+          <td>6-8 weeks on, 1-2 weeks off</td>
+        </tr>
+        <tr>
+          <td>L-Theanine</td>
+          <td>200mg</td>
+          <td>Pure L-theanine - not tea extract blends</td>
+          <td>Daily - no cycling needed</td>
+        </tr>
+        <tr>
+          <td>Melatonin (optional)</td>
+          <td>0.3 - 0.5mg only</td>
+          <td>Low-dose tablet or sublingual</td>
+          <td>8 weeks on, 1 week off</td>
+        </tr>
+      </table>
+
+      <div class="tip-box">
+        <div class="tip-label">On Melatonin Dosing</div>
+        <p>Standard melatonin supplements sell 5-10mg doses. Research consistently shows 0.3-0.5mg is as effective for sleep onset and causes significantly less next-morning grogginess. High doses also suppress the body's own melatonin production over time. If your current melatonin dose is causing morning grogginess, halve it - or better, drop to 0.5mg and reassess.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">8.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Sleep quality is one of the highest-leverage longevity interventions available - it affects hormonal balance, immune function, cellular repair, cognitive health and metabolic regulation simultaneously. This stack addresses the biology of sleep rather than forcing sedation. Strong individual evidence for each compound, genuine synergy between magnesium and L-theanine confirmed in RCT data. Ashwagandha adds significant value specifically for stress-driven sleep problems. No morning grogginess risk at these doses.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Abdullah, M. et al. (2025). Effects of magnesium bisglycinate supplementation on insomnia: a randomized controlled trial. <em>Frontiers in Nutrition</em>.</li>
+        <li>Lopresti, A.L. et al. (2022). A meta-analysis of ashwagandha for anxiety and stress. <em>Journal of Ethnopharmacology</em>, 284, 114706.</li>
+        <li>Dasdelen, M.F. et al. (2022). A novel theanine complex, Mg-L-Theanine, improves sleep quality via regulating brain electrochemical activity. <em>Frontiers in Nutrition</em>. doi:10.3389/fnut.2022.874254.</li>
+        <li>Chandrasekhar, K. et al. (2012). A prospective, randomized double-blind study on ashwagandha root extract in reducing stress and anxiety. <em>Indian Journal of Psychological Medicine</em>, 34(3), 255-262.</li>
+        <li>Bannai, M. & Kawai, N. (2012). New therapeutic strategy for amino acid medicine: glycine improves the quality of sleep. <em>Journal of Pharmacological Sciences</em>, 118(2), 145-148.</li>
+        <li>Ferracioli-Oda, E. et al. (2013). Meta-analysis: melatonin for the treatment of primary sleep disorders. <em>PLOS ONE</em>, 8(5), e63773.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Personal Protocol?</h3>
+      <p>See how this Sleep Stack fits into a full daily supplement protocol - including timing across five daily portions.</p>
+      <div class="cta-buttons">
+        <a href="/articles/personal-stack-guide.html" class="btn-gold">Read the Personal Stack Guide →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/magnesium-guide.html" class="related-card">
+          <div class="related-img c-mag">
+            <img src="/images/hero-magnesium.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Magnesium</span>
+            <h4>Magnesium: The Master Mineral That Everyone's Missing</h4>
+          </div>
+        </a>
+        <a href="/articles/glycine-guide.html" class="related-card">
+          <div class="related-img c-gly">
+            <img src="/images/hero-glycine.jpg" alt="Glycine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Glycine</span>
+            <h4>Glycine: The Sweet Amino Acid That Calms, Repairs, and Rebuilds</h4>
+          </div>
+        </a>
+        <a href="/articles/personal-stack-guide.html" class="related-card">
+          <div class="related-img c-stack">
+            <img src="/images/hero-personal-stack.jpg" alt="Personal Stack" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Personal Protocol</span>
+            <h4>My Personal Stack: How a 48-Year-Old Nutritionist Built His Daily Protocol</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

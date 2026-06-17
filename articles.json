@@ -246,5 +246,15 @@
   "tags": "longevity energy brain",
   "readTime": "14 min",
   "description": "Five compounds targeting the NAD+ pathway from different angles. NMN fuels sirtuins, resveratrol activates them, CoQ10 runs the electron transport chain, PQQ builds new mitochondria - and TMG prevents the hidden methylation cost most people miss."
+},{
+  "title": "The Sleep Stack: Magnesium Glycinate, Ashwagandha and L-Theanine",
+  "tag": "Sleep Protocol",
+  "url": "/articles/sleep-stack.html",
+  "image": "/images/hero-sleep-stack.jpg",
+  "color": "c-sleep",
+  "type": "protocol",
+  "tags": "sleep longevity",
+  "readTime": "12 min",
+  "description": "Three compounds addressing the three root causes of poor sleep: magnesium deficiency, elevated evening cortisol and neural over-excitation. No grogginess. Better sleep architecture."
 }
 ]
