@@ -128,7 +128,7 @@
   <div class="main">
 
     <!-- PROTOCOLS SECTION - top, gold border, separate -->
-    <div class="protocol-section">
+    <div class="protocol-section" id="protocol-section">
       <div class="protocol-section-header">
         <span class="protocol-star">★</span>
         <span class="protocol-section-label">Featured Protocols & Guides</span>
@@ -171,8 +171,12 @@
 
   <script>
     function filterBy(tag, el) {
+      // Clear search when filter pill clicked
+      document.getElementById('search-input').value = '';
       document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
       el.classList.add('active');
+
+      // Filter supplement guides
       const cards = document.querySelectorAll('#articles-grid .article-card');
       let count = 0;
       cards.forEach(c => {
@@ -181,24 +185,57 @@
         else { c.classList.add('hidden'); }
       });
       document.getElementById('article-count').textContent = count;
+
+      // Show all protocols when filter pill clicked
+      document.querySelectorAll('#articles-protocols .protocol-card-page').forEach(c => {
+        c.style.display = '';
+      });
+      const ps = document.getElementById('protocol-section');
+      if (ps) ps.style.display = '';
     }
-// Pre-fill search from homepage
-const urlParams = new URLSearchParams(window.location.search);
-const q = urlParams.get('q');
-if (q) {
-  document.getElementById('search-input').value = q;
-  setTimeout(() => filterArticles(), 100);
-}
+
     function filterArticles() {
-      const query = document.getElementById('search-input').value.toLowerCase();
+      const query = document.getElementById('search-input').value.toLowerCase().trim();
+
+      // Reset filter pills to All
+      document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+      document.querySelector('.pill[onclick*="all"]').classList.add('active');
+
+      // Filter supplement guides
       const cards = document.querySelectorAll('#articles-grid .article-card');
       let count = 0;
       cards.forEach(c => {
-        const title = (c.getAttribute('data-title') || c.innerText).toLowerCase();
-        if (title.includes(query)) { c.classList.remove('hidden'); count++; }
+        const title = (c.getAttribute('data-title') || '').toLowerCase();
+        const desc = c.querySelector('p') ? c.querySelector('p').textContent.toLowerCase() : '';
+        const matches = !query || title.includes(query) || desc.includes(query);
+        if (matches) { c.classList.remove('hidden'); count++; }
         else { c.classList.add('hidden'); }
       });
       document.getElementById('article-count').textContent = count;
+
+      // Filter protocols - search in title and description
+      const protocolCards = document.querySelectorAll('#articles-protocols .protocol-card-page');
+      let protocolMatches = 0;
+      protocolCards.forEach(c => {
+        const title = (c.querySelector('h3') ? c.querySelector('h3').textContent : '').toLowerCase();
+        const desc = (c.querySelector('p') ? c.querySelector('p').textContent : '').toLowerCase();
+        const tag = (c.querySelector('.protocol-card-tag') ? c.querySelector('.protocol-card-tag').textContent : '').toLowerCase();
+        const matches = !query || title.includes(query) || desc.includes(query) || tag.includes(query);
+        c.style.display = matches ? '' : 'none';
+        if (matches) protocolMatches++;
+      });
+
+      // Hide entire protocol section if no protocols match and there is a query
+      const ps = document.getElementById('protocol-section');
+      if (ps) ps.style.display = (query && protocolMatches === 0) ? 'none' : '';
+    }
+
+    // Pre-fill search from homepage
+    const urlParams = new URLSearchParams(window.location.search);
+    const q = urlParams.get('q');
+    if (q) {
+      document.getElementById('search-input').value = q;
+      setTimeout(() => filterArticles(), 300);
     }
   </script>
 
