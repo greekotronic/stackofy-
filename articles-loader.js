@@ -22,6 +22,7 @@ const COLORS = {
   'c-alcar': 'background:linear-gradient(135deg,#0a1a0a,#1B4332)',
   'c-creatine': 'background:linear-gradient(135deg,#1a1a1a,#2A2A10)',
   'c-collagen': 'background:linear-gradient(135deg,#1a2a10,#2D5A1B)',
+  'c-sulfo': 'background:linear-gradient(135deg,#0a1a0a,#1B4332)',
 };
 
 function makeCard(article, size) {
