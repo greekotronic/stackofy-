@@ -30,6 +30,7 @@ const COLORS = {
 'c-ashwa': 'background:linear-gradient(135deg,#1a0a00,#3E2010)',
 'c-lthea': 'background:linear-gradient(135deg,#0a1a0a,#1B4332)',
 'c-lions': 'background:linear-gradient(135deg,#1a2a10,#1B4332)',
+'c-cdp': 'background:linear-gradient(135deg,#1a2a4a,#2D4A6B)',
 };
 
 function makeCard(article, size) {

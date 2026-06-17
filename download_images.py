@@ -185,6 +185,22 @@ IMAGES = [
         "w": 900, "h": 420,
         "prompt": "abstract visualization of nerve growth factor stimulating neuron branching and growth, glowing gold tendrils on dark green background, bioluminescent quality, scientific editorial aesthetic"
     },
+    # ── CDP-CHOLINE ───────────────────────────────────────────────────────
+    {
+        "file": "hero-cdpcholine.jpg",
+        "w": 1216, "h": 704,
+        "prompt": "dramatic macro close-up of dark glass supplement bottle with capsules spilling on dark slate, soft gold side lighting, editorial product photography, deep forest green and gold tones, premium and scientific"
+    },
+    {
+        "file": "cdpcholine-brain-acetylcholine.jpg",
+        "w": 900, "h": 420,
+        "prompt": "abstract visualization of acetylcholine neurotransmitter molecules at a synapse, glowing blue and gold on dark background, bioluminescent quality, scientific editorial aesthetic, neurotransmission concept"
+    },
+    {
+        "file": "cdpcholine-foods.jpg",
+        "w": 900, "h": 420,
+        "prompt": "overhead flat lay of eggs liver broccoli and sunflower seeds on dark stone surface, natural choline food sources, soft gold side lighting, editorial food photography, minimal"
+    },
 ]
 ]
 

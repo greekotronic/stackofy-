@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CDP-Choline (Citicoline): The Brain's Most Bioavailable Choline Source - Stackofy</title>
+  <meta name="description" content="CDP-choline at 500mg/day improved episodic memory in a 100-person RCT of healthy older adults. The most brain-bioavailable choline form - and the only one that also provides cytidine for synaptic membrane support." />
+
+  <meta property="og:title" content="CDP-Choline: The Brain's Most Bioavailable Choline Source" />
+  <meta property="og:description" content="500mg/day improved episodic memory in a 100-person RCT. CDP-choline delivers choline for acetylcholine AND cytidine for synaptic membranes - making it more complete than any other choline supplement." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/cdpcholine-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-cdpcholine.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a4a, #2D4A6B, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,42,74,0.95) 0%, rgba(26,42,74,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .mechanism-flow { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .mechanism-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .flow-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; flex-wrap: wrap; }
+    .flow-box { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.6rem 1rem; font-size: 13px; font-weight: 600; color: var(--text); flex: 1; min-width: 120px; text-align: center; }
+    .flow-box.source { background: var(--green-dark); color: #FAF8F4; border-color: var(--green-dark); }
+    .flow-box.result { background: var(--gold-light); border-color: var(--gold); }
+    .flow-arrow { color: var(--gold); font-size: 18px; font-weight: 700; flex-shrink: 0; }
+    .flow-note { font-size: 12px; color: var(--text-muted); margin-top: 0.75rem; line-height: 1.5; }
+
+    .comparison-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .comp-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .comp-card.best { border-color: var(--green-dark); }
+    .comp-rank { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+    .comp-rank.top { color: var(--green-dark); }
+    .comp-rank.ok { color: var(--gold); }
+    .comp-rank.low { color: #C0392B; }
+    .comp-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .comp-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .tip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .tip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-brain { background: linear-gradient(135deg, #0a1a0a, #2D4A6B); }
+    .c-lions { background: linear-gradient(135deg, #1a2a10, #1B4332); }
+    .c-alcar { background: linear-gradient(135deg, #0a1a0a, #1B4332); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .comparison-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+      .flow-row { flex-direction: column; align-items: stretch; }
+      .flow-arrow { transform: rotate(90deg); text-align: center; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-cdpcholine.jpg" alt="CDP-Choline - the brain's most bioavailable choline source" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">CDP-Choline</span>
+      <h1>The Brain's Most Bioavailable Choline Source</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>10 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>CDP-choline is the most brain-bioavailable choline form available - and the only one that also delivers cytidine, which converts to uridine for synaptic membrane support</li>
+        <li>A 100-person RCT at 500mg/day for 12 weeks confirmed significant improvements in episodic memory in healthy older adults with age-associated memory impairment</li>
+        <li>The EFSA reviewed the evidence in 2024 and noted that only one RCT in healthy participants showed a clear benefit - large confirmatory trials are still needed</li>
+        <li>CDP-choline is meaningfully superior to regular choline supplements (bitartrate, lecithin) for brain-specific outcomes - different compounds, very different bioavailability</li>
+        <li>Safe and well-tolerated - no serious adverse events documented across clinical trials</li>
+        <li>Best taken in the morning - choline supports alertness and focus, not sleep</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Choline is an essential nutrient that most people do not get enough of. It is required for acetylcholine synthesis - the neurotransmitter most associated with learning, memory and attention - and for the phosphatidylcholine that makes up neuronal cell membranes. The brain is disproportionately dependent on adequate choline supply, and choline deficiency is associated with accelerated cognitive aging.</p>
+
+      <p>The problem is not awareness of choline - it is that most choline supplements deliver very little of it to the brain. CDP-choline (also called citicoline) solves this with unusual elegance: it is metabolized in the gut and liver into choline and cytidine, both of which cross the blood-brain barrier efficiently. Once in the brain, choline feeds acetylcholine synthesis and cytidine converts to uridine, which supports synaptic membrane formation and maintenance.</p>
+
+      <p><strong>No other choline supplement delivers this dual mechanism. This is why CDP-choline is the preferred form for cognitive support protocols - not just because it delivers more choline to the brain, but because it delivers two distinct brain-beneficial compounds simultaneously.</strong></p>
+
+      <div class="article-img">
+        <img src="/images/cdpcholine-foods.jpg" alt="Natural choline food sources - eggs, liver, broccoli, sunflower seeds" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>How CDP-Choline Works - The Dual Pathway</h2>
+
+      <div class="mechanism-flow">
+        <div class="mechanism-title">CDP-Choline Metabolism and Brain Targets</div>
+        <div class="flow-row">
+          <div class="flow-box source">CDP-Choline ingested</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box">Metabolized in gut and liver</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box">Choline + Cytidine released</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-box">Choline crosses BBB</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box result">Acetylcholine synthesis - memory, attention</div>
+        </div>
+        <div class="flow-row">
+          <div class="flow-box">Cytidine crosses BBB → Uridine</div>
+          <div class="flow-arrow">→</div>
+          <div class="flow-box result">Synaptic membrane support - neuronal structure</div>
+        </div>
+        <p class="flow-note">The cytidine-to-uridine pathway is unique to CDP-choline. Uridine supports the synthesis of phosphatidylcholine in neuronal membranes - the structural component that determines how well synapses function and communicate. This membrane-building effect is absent from other choline supplements.</p>
+      </div>
+
+      <h2>The Clinical Evidence</h2>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">100</div>
+          <div class="stat-label">Healthy older adults in the landmark Cognizin RCT - 500mg/day for 12 weeks</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">12 weeks</div>
+          <div class="stat-label">Duration of the primary RCT showing significant episodic memory improvement</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">2024</div>
+          <div class="stat-label">Year EFSA reviewed CDP-choline evidence - recommending larger confirmatory trials</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Key RCT - 100 Healthy Older Adults, 12 Weeks</div>
+        <p>A randomized, double-blind, placebo-controlled trial published in the Journal of Nutrition enrolled 100 healthy men and women aged 50-85 with age-associated memory impairment. Participants received 500mg Cognizin citicoline daily or placebo for 12 weeks. Memory function was assessed using computerized Cambridge Brain Sciences tests. The citicoline group showed statistically significant improvements in overall memory performance, with the strongest effect on episodic memory. Safety was excellent with no clinically relevant adverse events. This remains the primary RCT evidence base for CDP-choline in healthy older adults.</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">EFSA 2024 - Honest Regulatory Assessment</div>
+        <p>The European Food Safety Authority reviewed CDP-choline's evidence in 2024 for a health claim application. Their conclusion was that only one RCT in healthy participants showed a clear benefit on episodic memory - and that larger confirmatory trials are needed before a cause-and-effect relationship can be established with confidence. This is an honest reflection of where the evidence stands: promising but not yet definitive at the population level. It does not mean CDP-choline does not work - it means the evidence base, while positive, is smaller than for foundational supplements like vitamin D3 or omega-3.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/cdpcholine-brain-acetylcholine.jpg" alt="Acetylcholine neurotransmitter at the synapse - the target of CDP-choline" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>CDP-Choline vs Other Choline Forms</h2>
+
+      <p>Not all choline supplements are equivalent. The differences in brain bioavailability and secondary mechanisms are significant enough to determine whether you see a cognitive effect or not.</p>
+
+      <div class="comparison-grid">
+        <div class="comp-card best">
+          <div class="comp-rank top">Best for Brain</div>
+          <h4>CDP-Choline (Citicoline)</h4>
+          <p>Most brain-bioavailable. Delivers choline AND cytidine/uridine. Direct acetylcholine precursor and synaptic membrane support. Only form with clear RCT evidence in healthy older adults. Higher cost per gram but superior brain targeting.</p>
+        </div>
+        <div class="comp-card best">
+          <div class="comp-rank top">Also Excellent</div>
+          <h4>Alpha-GPC</h4>
+          <p>Very high choline content per gram. Excellent brain bioavailability. No cytidine component but delivers more raw choline than CDP-choline. Some evidence for growth hormone release in athletes. Competitive with CDP-choline for pure acetylcholine support. Slightly cheaper.</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-rank low">Poor Brain Effect</div>
+          <h4>Choline Bitartrate / Lecithin</h4>
+          <p>Cheap and widely available. Poor blood-brain barrier penetration compared to CDP-choline and Alpha-GPC. Most of the choline from these forms does not reach the brain efficiently. May raise plasma choline without meaningfully raising brain acetylcholine. Not appropriate for cognitive support protocols.</p>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <div class="tip-label">CDP-Choline vs Alpha-GPC - How to Choose</div>
+        <p>For pure cognitive support and memory: CDP-choline is the more complete option due to the cytidine/uridine component. For athletes wanting acetylcholine maximization and potential growth hormone effects: Alpha-GPC is competitive and slightly more cost-effective per milligram of choline delivered. Many longevity protocols use CDP-choline for its dual mechanism. Either is dramatically superior to standard choline supplements.</p>
+      </div>
+
+      <h2>Acetylcholine and Cognitive Aging</h2>
+
+      <p>Acetylcholine is the neurotransmitter most directly associated with memory formation, learning and sustained attention. The cholinergic neurons of the basal forebrain - which project throughout the cortex and hippocampus - are among the first and most severely affected in Alzheimer's disease. This is why the first approved Alzheimer's drugs (acetylcholinesterase inhibitors like donepezil) work by preventing the breakdown of acetylcholine rather than increasing its production.</p>
+
+      <p>CDP-choline takes a complementary approach: rather than preventing breakdown, it increases the supply of raw material for acetylcholine synthesis. This upstream strategy is more appropriate for prevention and healthy aging than for treating established dementia - which is consistent with the evidence pattern, where CDP-choline shows clearest benefits in healthy aging adults and those with mild impairment.</p>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Daily Dose</th>
+          <th>Timing</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Memory and cognitive support</td>
+          <td>500mg</td>
+          <td>Morning - supports focus and alertness</td>
+          <td>Dose used in primary RCT. Cognizin brand is the most studied form</td>
+        </tr>
+        <tr>
+          <td>Intensive cognitive protocol</td>
+          <td>500 - 1,000mg</td>
+          <td>Split - morning and early afternoon</td>
+          <td>Higher end of studied range. No additional benefit demonstrated above 1,000mg</td>
+        </tr>
+        <tr>
+          <td>With ALCAR or Lion's Mane</td>
+          <td>250 - 500mg</td>
+          <td>Morning</td>
+          <td>Complementary mechanisms - can use lower dose when combining</td>
+        </tr>
+        <tr>
+          <td>Avoid</td>
+          <td>-</td>
+          <td>Evening</td>
+          <td>Choline is activating - evening use may interfere with sleep onset</td>
+        </tr>
+      </table>
+
+      <div class="tip-box">
+        <div class="tip-label">Choline and TMG - Methylation Connection</div>
+        <p>If you are already taking TMG as part of an Anti-Aging Stack, you are supporting the same methylation pathway that choline feeds into. CDP-choline and TMG are complementary - they support the same downstream pathway from different directions. No negative interaction, no redundancy, no need to choose. If you run both stacks, CDP-choline in the morning and TMG with your NAD+ precursor is a natural division.</p>
+      </div>
+
+      <h2>Safety Profile</h2>
+
+      <p>CDP-choline has an excellent safety profile across decades of research and widespread use. No serious adverse events have been documented in clinical trials at standard doses. The most common side effects at higher doses are mild gastrointestinal symptoms - nausea or stomach upset - which are resolved by taking it with food. No dependency, no tolerance, no withdrawal effects.</p>
+
+      <p>One theoretical concern applies to anyone with trimethylaminuria (a rare genetic condition affecting choline metabolism) - increased choline intake can worsen symptoms in these individuals. For the general population this is not relevant.</p>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">8.0/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          The most complete choline supplement available - delivering both acetylcholine precursor and synaptic membrane support through a single compound. Clean safety profile, meaningful RCT evidence in healthy older adults. Score tempered by the EFSA's 2024 assessment that the evidence base still needs larger confirmatory trials. Highest value for people over 45 experiencing memory or attention changes, and for anyone running a brain-focused supplement protocol. A natural and important part of the Brain Stack.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Nakazaki, E. et al. (2021). Citicoline and memory function in healthy older adults: a randomized, double-blind, placebo-controlled clinical trial. <em>Journal of Nutrition</em>, 151(8), 2153-2160.</li>
+        <li>EFSA Panel on Nutrition, Novel Foods and Food Allergens (2024). Citicoline and support of the memory function: evaluation of a health claim pursuant to Article 13(5). <em>EFSA Journal</em>. doi:10.2903/j.efsa.2024.8861.</li>
+        <li>Swiatkowicz, M. & Grieb, P. (2023). Citicoline for supporting memory in aging humans. <em>Aging and Disease</em>, 14(4), 1184-1199. doi:10.14336/AD.2022.0913.</li>
+        <li>Alzheimer's Drug Discovery Foundation (2024). Citicoline Cognitive Vitality Rating. alzdiscovery.org.</li>
+        <li>Fioravanti, M. & Yanagi, M. (2004). Cytidinediphosphocholine (CDP-choline) for cognitive and behavioural disturbances associated with chronic cerebral disorders in the elderly. <em>Cochrane Database of Systematic Reviews</em>.</li>
+        <li>Gareri, P. et al. (2015). The Role of Citicoline in Cognitive Impairment. <em>Journal of Neurology Research</em>.</li>
+        <li>Wignall, N.D. & Brown, E.S. (2014). Citicoline in addictive disorders: a review of the literature. <em>American Journal on Addictions</em>, 23(4), 301-309.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Brain Protocol?</h3>
+      <p>CDP-choline is one of four key compounds in the Brain Stack. See how it combines with omega-3, Lion's Mane and PQQ for comprehensive cognitive support.</p>
+      <div class="cta-buttons">
+        <a href="/articles/brain-stack.html" class="btn-gold">Read the Brain Stack Guide →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/brain-stack.html" class="related-card">
+          <div class="related-img c-brain">
+            <img src="/images/hero-brain-stack.jpg" alt="Brain Stack" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Brain Protocol</span>
+            <h4>The Brain Stack: Omega-3, Lion's Mane, PQQ and CDP-Choline</h4>
+          </div>
+        </a>
+        <a href="/articles/lionsmane-guide.html" class="related-card">
+          <div class="related-img c-lions">
+            <img src="/images/hero-lionsmane.jpg" alt="Lion's Mane" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Lion's Mane</span>
+            <h4>Lion's Mane: The NGF-Stimulating Mushroom for Brain Health</h4>
+          </div>
+        </a>
+        <a href="/articles/alcar-guide.html" class="related-card">
+          <div class="related-img c-alcar">
+            <img src="/images/hero-alcar.jpg" alt="ALCAR" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">ALCAR</span>
+            <h4>Acetyl-L-Carnitine: The Brain-Boosting Fat Transporter</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
