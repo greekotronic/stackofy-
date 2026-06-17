@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Books by Alethia Research Institute - Stackofy</title>
+  <meta name="description" content="Evidence-based books on longevity, supplements and the health system. Backed by hundreds of scientific studies. No pharma ties. No fluff." />
+  <meta property="og:title" content="Books by Alethia Research Institute" />
+  <meta property="og:description" content="Two books that cut through decades of confusion, fear-mongering and pharma-sponsored noise. Backed by science. Written for people who want the truth." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stackofy.com/books.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script src="/header.js"></script>
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+    img { display: block; }
+
+    .page-hero { background: var(--gradient); padding: 4rem 2rem 3rem; text-align: center; }
+    .page-hero .label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .page-hero h1 { color: #FAF8F4; font-size: 2.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.75rem; }
+    .page-hero p { color: var(--green-light); font-size: 16px; max-width: 580px; margin: 0 auto; line-height: 1.7; }
+
+    .main { max-width: 900px; margin: 0 auto; padding: 3rem 2rem; }
+
+    .book-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; margin-bottom: 3rem; transition: border-color 0.2s; }
+    .book-card:hover { border-color: var(--green-dark); }
+
+    .book-header { display: grid; grid-template-columns: 220px 1fr; gap: 0; }
+    .book-cover { min-height: 320px; display: flex; align-items: center; justify-content: center; padding: 2rem; }
+    .book-cover-vitd { background: linear-gradient(145deg, #0a1a0a, #1B4332, #2D6A4F); }
+    .book-cover-longevity { background: linear-gradient(145deg, #1a1a00, #2A3A10, #1B4332); }
+    .book-cover-inner { width: 140px; }
+    .book-cover-inner img { width: 100%; border-radius: 6px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); }
+    .book-cover-placeholder { width: 140px; height: 200px; border-radius: 6px; box-shadow: 0 8px 32px rgba(0,0,0,0.4); display: flex; align-items: center; justify-content: center; text-align: center; padding: 1rem; font-size: 13px; font-weight: 600; color: #FAF8F4; line-height: 1.4; }
+    .book-cover-placeholder.vitd { background: linear-gradient(135deg, #1B4332, #0a2a0a); border: 1px solid rgba(212,168,83,0.3); }
+    .book-cover-placeholder.longevity { background: linear-gradient(135deg, #2A3A10, #1B4332); border: 1px solid rgba(212,168,83,0.3); }
+
+    .book-body { padding: 2rem 2rem 2rem 1.5rem; display: flex; flex-direction: column; justify-content: space-between; }
+    .book-tag { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .book-body h2 { font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 0.4rem; line-height: 1.3; }
+    .book-subtitle { font-size: 14px; color: var(--text-muted); margin-bottom: 1.25rem; font-style: italic; }
+    .book-body > p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+
+    .book-highlights { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.75rem; }
+    .book-highlight { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+    .book-highlight::before { content: '✓'; color: var(--green-dark); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+    .book-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
+    .btn-primary { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 12px 24px; font-size: 14px; font-weight: 700; cursor: pointer; display: inline-block; transition: opacity 0.2s; }
+    .btn-primary:hover { opacity: 0.9; }
+    .btn-secondary { background: transparent; color: var(--green-dark); border: 1.5px solid var(--green-dark); border-radius: var(--radius-sm); padding: 11px 20px; font-size: 14px; font-weight: 600; display: inline-block; transition: background 0.2s; }
+    .btn-secondary:hover { background: var(--green-dark); color: #FAF8F4; }
+    .book-kindle { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
+
+    .book-details { border-top: 0.5px solid var(--border); }
+    .book-details-toggle { width: 100%; background: none; border: none; padding: 1.25rem 2rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 13px; font-weight: 600; color: var(--text-muted); }
+    .book-details-toggle:hover { color: var(--text); }
+    .toggle-arrow { transition: transform 0.2s; }
+    .toggle-arrow.open { transform: rotate(180deg); }
+    .book-details-content { display: none; padding: 0 2rem 2rem; }
+    .book-details-content.open { display: block; }
+    .book-details-content h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .book-details-content p { font-size: 13px; color: var(--text-muted); line-height: 1.7; margin-bottom: 1rem; }
+    .chapter-list { list-style: none; padding: 0; margin-bottom: 1.5rem; }
+    .chapter-list li { font-size: 13px; color: var(--text-muted); padding: 0.4rem 0; border-bottom: 0.5px solid var(--border); display: flex; gap: 0.75rem; }
+    .chapter-list li:last-child { border-bottom: none; }
+    .chapter-num { color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+    .trust-strip { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 2rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; text-align: center; margin-bottom: 3rem; }
+    .trust-item-num { font-size: 2rem; font-weight: 700; color: var(--green-dark); }
+    .trust-item-label { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .ari-note { background: var(--gold-light); border: 0.5px solid var(--gold); border-radius: var(--radius); padding: 1.75rem 2rem; margin-bottom: 3rem; }
+    .ari-note-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .ari-note p { font-size: 14px; color: var(--text); line-height: 1.7; }
+    .ari-note a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    @media (max-width: 700px) {
+      .book-header { grid-template-columns: 1fr !important; }
+      .book-cover { min-height: 200px !important; padding: 1.5rem !important; }
+      .book-body { padding: 1.5rem !important; }
+      .page-hero h1 { font-size: 1.5rem !important; }
+      .trust-strip { grid-template-columns: 1fr !important; }
+      .book-actions { flex-direction: column !important; }
+      .btn-primary, .btn-secondary { width: 100% !important; text-align: center !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-hero">
+    <div class="label">Alethia Research Institute</div>
+    <h1>Books That Tell You What Pharma Won't</h1>
+    <p>Evidence-based. No conflicts of interest. No sponsorships. Every claim backed by peer-reviewed research - and every source listed so you can verify it yourself.</p>
+  </div>
+
+  <div class="main">
+
+    <div class="trust-strip">
+      <div>
+        <div class="trust-item-num">300+</div>
+        <div class="trust-item-label">Scientific studies referenced across both titles</div>
+      </div>
+      <div>
+        <div class="trust-item-num">0</div>
+        <div class="trust-item-label">Pharma sponsors or paid partnerships</div>
+      </div>
+      <div>
+        <div class="trust-item-num">100%</div>
+        <div class="trust-item-label">Independent research - no industry funding</div>
+      </div>
+    </div>
+
+    <!-- BOOK 1: VITAMIN D CONSPIRACY -->
+    <div class="book-card">
+      <div class="book-header">
+        <div class="book-cover book-cover-vitd">
+          <div class="book-cover-inner">
+            <img src="/images/vitamin-d-conspiracy-cover.jpg" alt="The Vitamin D Conspiracy book cover" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder vitd\'>The Vitamin D<br>Conspiracy</div>'" />
+          </div>
+        </div>
+        <div class="book-body">
+          <div>
+            <div class="book-tag">Health System Exposé</div>
+            <h2>The Vitamin D Conspiracy</h2>
+            <p class="book-subtitle">How one vitamin exposes the trillion-dollar system of pharma, politics and media</p>
+            <p>What if the real pandemic is not a virus - but a system that profits from your illness? This book uncovers what health authorities, pharmaceutical giants and media conglomerates rarely talk about: vitamin D, a natural, inexpensive substance with enormous healing potential that is being systematically ignored and downplayed.</p>
+            <div class="book-highlights">
+              <div class="book-highlight">Why vitamin D is far more than a bone vitamin - immune strength, inflammation, mental health, cardiovascular function and cancer risk</div>
+              <div class="book-highlight">What science really says about optimal blood levels, high-dose supplementation and long-term prevention</div>
+              <div class="book-highlight">How low-dose studies distorted public perception - and why many guidelines are dangerously outdated</div>
+              <div class="book-highlight">Who profits when we stay sick - and what you can do to take back control of your health</div>
+            </div>
+          </div>
+          <div>
+            <div class="book-actions">
+              <a href="https://www.amazon.com/dp/B0F9YCWPXS" target="_blank" class="btn-primary">Read on Kindle →</a>
+              <a href="/articles/vitamin-d3-k2-guide.html" class="btn-secondary">Read the Free Article →</a>
+            </div>
+            <div class="book-kindle" style="margin-top:0.75rem;">📱 Available on Kindle Unlimited</div>
+          </div>
+        </div>
+      </div>
+      <div class="book-details">
+        <button class="book-details-toggle" onclick="toggleDetails('vitd')">
+          <span>What this book covers</span>
+          <span class="toggle-arrow" id="arrow-vitd">▼</span>
+        </button>
+        <div class="book-details-content" id="details-vitd">
+          <h4>Inside the Book</h4>
+          <p>Backed by over 300 scientific studies, this book cuts through decades of confusion and fear-mongering. It traces the political and financial history of how vitamin D research was suppressed, explains the biochemistry of why deficiency is so widespread, and provides a clear, evidence-based protocol for supplementation.</p>
+          <p>Whether you are a health-conscious reader, a skeptic of Big Pharma, or simply someone who wants to live longer and better - this book will change how you think about health forever.</p>
+          <h4 style="margin-top:1rem;">Who This Book Is For</h4>
+          <p>Anyone who has been told their vitamin D levels are "normal" but still feels tired, gets sick frequently, or has been diagnosed with autoimmune conditions. Anyone curious about why the official recommended daily intake is far lower than what clinical research supports. Anyone who wants to understand how health narratives are shaped by financial interests.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOOK 2: LONGEVITY PLAN -->
+    <div class="book-card">
+      <div class="book-header">
+        <div class="book-cover book-cover-longevity">
+          <div class="book-cover-inner">
+            <img src="/images/longevity-plan-cover.jpg" alt="The $1,000 Longevity Plan book cover" onerror="this.parentElement.innerHTML='<div class=\'book-cover-placeholder longevity\'>The $1,000<br>Longevity Plan</div>'" />
+          </div>
+        </div>
+        <div class="book-body">
+          <div>
+            <div class="book-tag">Longevity Protocol</div>
+            <h2>The $1,000 Longevity Plan</h2>
+            <p class="book-subtitle">Vitamins, Nutrition, and Lifestyle Tested by Science</p>
+            <p>What truly works to slow aging - and what is just marketing hype? Grounded in the latest scientific research, this book shows you the essential strategies that can add 10, 15 or more healthy years to your life. Not by chance. By choice.</p>
+            <div class="book-highlights">
+              <div class="book-highlight">68 supplements analyzed - from essentials like Vitamin D3 + K2 and Omega-3 to advanced compounds like Spermidine, NMN, CoQ10 and Resveratrol</div>
+              <div class="book-highlight">How fasting, autophagy, superfoods and anti-inflammatory diets protect cells and strengthen resilience</div>
+              <div class="book-highlight">The power of exercise, sleep optimization and stress reduction - small daily actions with outsized gains</div>
+              <div class="book-highlight">How to design your personal longevity protocol with science-based supplements, nutrition and habits</div>
+            </div>
+          </div>
+          <div>
+            <div class="book-actions">
+              <a href="https://www.amazon.com/dp/B0FVFR4HQG" target="_blank" class="btn-primary">Read on Kindle →</a>
+              <a href="/articles.html" class="btn-secondary">Explore the Free Guides →</a>
+            </div>
+            <div class="book-kindle" style="margin-top:0.75rem;">📱 Available on Kindle Unlimited</div>
+          </div>
+        </div>
+      </div>
+      <div class="book-details">
+        <button class="book-details-toggle" onclick="toggleDetails('longevity')">
+          <span>What this book covers</span>
+          <span class="toggle-arrow" id="arrow-longevity">▼</span>
+        </button>
+        <div class="book-details-content" id="details-longevity">
+          <h4>Chapter Overview</h4>
+          <ul class="chapter-list">
+            <li><span class="chapter-num">1</span>The New Age of Anti-Aging - how science is transforming aging from inevitable decline to active longevity</li>
+            <li><span class="chapter-num">2</span>The Molecules of Youth - a detailed review of 68 supplements with real relevance to aging</li>
+            <li><span class="chapter-num">3</span>Nutrition for Longevity - fasting, autophagy, superfoods and anti-inflammatory diets</li>
+            <li><span class="chapter-num">4</span>Lifestyle Factors That Extend Life - exercise, sleep optimization, stress reduction and mental resilience</li>
+            <li><span class="chapter-num">5</span>Ancient Wisdom, Modern Science - meditation, herbal medicine and traditional practices that align with longevity research</li>
+            <li><span class="chapter-num">6</span>Modern Medicine and Longevity - preventive medicine, diagnostics, hormone therapies and advanced treatments</li>
+            <li><span class="chapter-num">7</span>Daily Habits That Add Years - routines that preserve energy and cognition</li>
+            <li><span class="chapter-num">8</span>Integration and Planning - how to design your personal longevity plan</li>
+          </ul>
+          <h4>Why This Book Stands Out</h4>
+          <p>Most longevity books are written by doctors with a practice to promote, or by journalists who lack the biochemical depth to evaluate the research. This book takes a different approach: comprehensive, evidence-graded, and honest about where the science is strong versus where it is still developing. No miracle pills. No unsupported claims. Just the clearest picture of what the research actually supports.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ARI NOTE -->
+    <div class="ari-note">
+      <div class="ari-note-label">A Note from ARI</div>
+      <p>Everything in our books is also reflected in the free articles on this site. We believe that access to evidence-based health information should not be behind a paywall. The books go deeper - with more context, more nuance, and a complete analytical framework - but the core information is always free here. <a href="/articles.html">Browse all articles →</a></p>
+    </div>
+
+  </div>
+
+  <script>
+    function toggleDetails(id) {
+      const content = document.getElementById('details-' + id);
+      const arrow = document.getElementById('arrow-' + id);
+      content.classList.toggle('open');
+      arrow.classList.toggle('open');
+    }
+  </script>
+
+</body>
+</html>

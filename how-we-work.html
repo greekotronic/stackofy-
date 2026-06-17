@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How We Work - Alethia Research Institute - Stackofy</title>
+  <meta name="description" content="How the Alethia Research Institute researches, verifies and publishes. Our methodology, our sources, our standards - and why we are anonymous." />
+  <meta property="og:title" content="How We Work - Alethia Research Institute" />
+  <meta property="og:description" content="Transparent about our process. Every claim verified at the original source. AI-assisted but human-reviewed. Here is exactly how we do it." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stackofy.com/how-we-work.html" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <script src="/header.js"></script>
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    .page-hero { background: var(--gradient); padding: 4rem 2rem 3rem; text-align: center; }
+    .page-hero .label { font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .page-hero h1 { color: #FAF8F4; font-size: 2.2rem; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 0.75rem; }
+    .page-hero p { color: var(--green-light); font-size: 16px; max-width: 580px; margin: 0 auto; line-height: 1.7; }
+
+    .main { max-width: 800px; margin: 0 auto; padding: 3rem 2rem; }
+
+    .section { margin-bottom: 3.5rem; }
+    .section-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .section h2 { font-size: 1.5rem; font-weight: 700; color: var(--text); margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .section p { font-size: 15px; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.25rem; }
+    .section p strong { color: var(--text); }
+
+    .process-steps { display: flex; flex-direction: column; gap: 1.25rem; margin: 1.5rem 0; }
+    .process-step { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; display: flex; gap: 1.25rem; align-items: flex-start; }
+    .step-num { background: var(--green-dark); color: var(--gold); font-size: 16px; font-weight: 700; width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .step-body p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+    .standards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .standard-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .standard-icon { font-size: 24px; margin-bottom: 8px; }
+    .standard-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .standard-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    .quote-block { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.5rem 1.75rem; margin: 2rem 0; }
+    .quote-block blockquote { font-size: 1.05rem; font-style: italic; color: var(--text); line-height: 1.7; }
+    .quote-block cite { font-size: 12px; color: var(--text-muted); font-style: normal; font-weight: 600; margin-top: 0.5rem; display: block; }
+
+    .ai-transparency { background: var(--surface); border: 1.5px solid var(--green-dark); border-radius: var(--radius); padding: 2rem; margin: 2rem 0; }
+    .ai-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.75rem; }
+    .ai-transparency h3 { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 1rem; }
+    .ai-do-dont { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .ai-col h4 { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.75rem; }
+    .ai-col.do h4 { color: var(--green-dark); }
+    .ai-col.dont h4 { color: #C0392B; }
+    .ai-col ul { list-style: none; padding: 0; }
+    .ai-col ul li { font-size: 13px; color: var(--text-muted); padding: 0.4rem 0; border-bottom: 0.5px solid var(--border); line-height: 1.5; display: flex; gap: 0.5rem; }
+    .ai-col ul li:last-child { border-bottom: none; }
+    .ai-col.do ul li::before { content: '✓'; color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .ai-col.dont ul li::before { content: '✗'; color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .anon-section { background: var(--gradient); border-radius: var(--radius); padding: 2.5rem; margin: 2rem 0; }
+    .anon-section h3 { color: #FAF8F4; font-size: 1.2rem; font-weight: 700; margin-bottom: 1rem; }
+    .anon-section p { color: var(--green-light); font-size: 14px; line-height: 1.8; margin-bottom: 1rem; }
+    .anon-section p:last-child { margin-bottom: 0; }
+    .anon-section strong { color: #FAF8F4; }
+
+    .sources-section { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.75rem; }
+    .sources-section h3 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 1rem; }
+    .source-list { display: flex; flex-direction: column; gap: 0.75rem; }
+    .source-item { display: flex; gap: 0.75rem; align-items: flex-start; }
+    .source-item .source-icon { font-size: 18px; flex-shrink: 0; }
+    .source-item h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+    .source-item p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    .cta-strip { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 2rem; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; margin-top: 3rem; }
+    .cta-strip h3 { font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .cta-strip p { font-size: 13px; color: var(--text-muted); }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; white-space: nowrap; }
+
+    @media (max-width: 600px) {
+      .page-hero h1 { font-size: 1.5rem !important; }
+      .standards-grid { grid-template-columns: 1fr !important; }
+      .ai-do-dont { grid-template-columns: 1fr !important; }
+      .cta-strip { flex-direction: column !important; align-items: flex-start !important; }
+      .btn-gold { width: 100% !important; text-align: center !important; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="page-hero">
+    <div class="label">Transparency</div>
+    <h1>How We Work</h1>
+    <p>We believe you have a right to know exactly how our research is conducted, what tools we use, and where our information comes from. No black boxes. No vague credentials. Just the process.</p>
+  </div>
+
+  <div class="main">
+
+    <!-- OUR PROCESS -->
+    <div class="section">
+      <div class="section-label">Methodology</div>
+      <h2>Our Research Process</h2>
+      <p>Every article and book published under the Alethia Research Institute name follows a defined research process. Here is what that looks like in practice:</p>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h4>Topic Identification</h4>
+            <p>We identify topics based on two criteria: high public interest with widespread misinformation, and an active body of peer-reviewed research. We do not write about areas where the science is too thin to support meaningful conclusions.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h4>Primary Literature Search</h4>
+            <p>We search PubMed, ClinicalTrials.gov, and major journal databases for peer-reviewed studies, systematic reviews, meta-analyses and randomized controlled trials. We prioritize recent human clinical data over animal studies and in vitro research.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h4>AI-Assisted Analysis</h4>
+            <p>We use AI tools to help process and synthesize large bodies of research - identifying patterns, surfacing relevant studies and organizing complex information. This dramatically increases the breadth of literature we can cover. <strong>All AI output is reviewed and verified against original sources before publication.</strong> We never publish AI-generated claims without human verification.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h4>Source Verification</h4>
+            <p>Every specific claim is traced to its original source. We check that the study design, sample size, duration and outcomes actually support the claim being made - not just the abstract. Many supplement studies are small, short and funded by manufacturers; we flag this context when relevant.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">5</div>
+          <div class="step-body">
+            <h4>Nuance and Limitations</h4>
+            <p>We actively look for evidence that contradicts or complicates the main finding. Where clinical evidence is weak, mixed or context-dependent, we say so. We do not suppress inconvenient data to make a cleaner narrative.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-num">6</div>
+          <div class="step-body">
+            <h4>Source Citation</h4>
+            <p>All articles include a sources section with full citations. Where possible, we link directly to the study so you can read the original. We believe you should be able to verify everything we write, independently and for free.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI TRANSPARENCY -->
+    <div class="section">
+      <div class="section-label">AI Transparency</div>
+      <h2>Our Use of Artificial Intelligence</h2>
+      <p>We use AI as a research and writing tool. We believe in being transparent about this because it affects how you should evaluate our content - and because we think most publishers who use AI and do not disclose it are doing their readers a disservice.</p>
+
+      <div class="ai-transparency">
+        <div class="ai-label">AI in Our Workflow</div>
+        <h3>What AI does - and what it does not do</h3>
+        <div class="ai-do-dont">
+          <div class="ai-col do">
+            <h4>AI Is Used For</h4>
+            <ul>
+              <li>Processing and synthesizing large volumes of research literature</li>
+              <li>Identifying relevant studies across multiple databases</li>
+              <li>Drafting article structures and initial content</li>
+              <li>Checking internal consistency and logical flow</li>
+              <li>Formatting and presenting complex information clearly</li>
+            </ul>
+          </div>
+          <div class="ai-col dont">
+            <h4>AI Does Not</h4>
+            <ul>
+              <li>Publish claims without human verification at the original source</li>
+              <li>Replace judgment about research quality and study design</li>
+              <li>Generate citations - all sources are manually verified</li>
+              <li>Make final editorial decisions about what to include or exclude</li>
+              <li>Operate without review of its outputs for factual accuracy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <p>The use of AI in research and publishing is rapidly becoming standard across the industry. The difference between responsible and irresponsible use is human oversight. We maintain that oversight at every step. If you find a factual error in any of our content, <a href="/about.html" style="color:var(--green-dark);border-bottom:1px solid var(--green-light);">contact us</a> - we will investigate, correct and document any changes transparently.</p>
+    </div>
+
+    <!-- WHY ANONYMOUS -->
+    <div class="section">
+      <div class="section-label">Anonymity</div>
+      <h2>Why We Are Anonymous</h2>
+
+      <div class="anon-section">
+        <h3>Anonymity is not evasion. It is protection.</h3>
+        <p>The Alethia Research Institute publishes under a collective name rather than individual identities. This is a deliberate and considered decision - not an attempt to avoid accountability.</p>
+        <p><strong>The reason is simple:</strong> when you write critically about pharmaceutical industry practices, media narratives around health, and the financial interests that shape public health guidelines, you invite pressure. Journals get contacted. Employers get called. Individuals get targeted.</p>
+        <p>By publishing collectively and anonymously, we protect the ability to say what the evidence actually shows - without the chilling effect of personal exposure. The research speaks for itself. The sources are cited. The claims can be verified independently. Our identity adds nothing to the validity of the argument.</p>
+        <p><strong>What we are not anonymous about:</strong> our methods, our sources, our standards and our willingness to correct errors. Those are public and permanent.</p>
+      </div>
+    </div>
+
+    <!-- OUR STANDARDS -->
+    <div class="section">
+      <div class="section-label">Standards</div>
+      <h2>What We Hold Ourselves To</h2>
+
+      <div class="standards-grid">
+        <div class="standard-card">
+          <div class="standard-icon">📊</div>
+          <h4>Evidence Grading</h4>
+          <p>We distinguish between strong evidence (multiple large RCTs), moderate evidence (smaller trials, consistent animal data) and emerging evidence (early-stage research). We do not treat all positive studies equally.</p>
+        </div>
+        <div class="standard-card">
+          <div class="standard-icon">⚖️</div>
+          <h4>Conflict of Interest</h4>
+          <p>We do not accept paid placements, sponsored content or manufacturer partnerships. No supplement brand pays for coverage on this site or in our books. Period.</p>
+        </div>
+        <div class="standard-card">
+          <div class="standard-icon">🔄</div>
+          <h4>Corrections Policy</h4>
+          <p>When we are wrong, we say so publicly. Corrections are documented with the date and nature of the change. We do not quietly edit errors without disclosure.</p>
+        </div>
+        <div class="standard-card">
+          <div class="standard-icon">🔗</div>
+          <h4>Primary Sources</h4>
+          <p>We cite original studies, not secondary sources citing other secondary sources. If we cannot access the original paper, we do not make the claim.</p>
+        </div>
+        <div class="standard-card">
+          <div class="standard-icon">🧩</div>
+          <h4>Context Matters</h4>
+          <p>A study in mice is not evidence for humans. A study in elderly diabetics is not evidence for healthy 35-year-olds. We respect these distinctions and communicate them clearly.</p>
+        </div>
+        <div class="standard-card">
+          <div class="standard-icon">🛑</div>
+          <h4>No Medical Advice</h4>
+          <p>Our content is educational, not prescriptive. We explain what the research shows. We do not tell you what to take. That decision belongs to you and your healthcare provider.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SOURCES WE USE -->
+    <div class="section">
+      <div class="section-label">Sources</div>
+      <h2>Where Our Research Comes From</h2>
+
+      <div class="sources-section">
+        <h3>Primary databases and sources we rely on:</h3>
+        <div class="source-list">
+          <div class="source-item">
+            <div class="source-icon">🔬</div>
+            <div>
+              <h4>PubMed / MEDLINE</h4>
+              <p>The primary database for biomedical literature. Our first stop for any health or supplement claim. We search for systematic reviews and meta-analyses first, then individual RCTs.</p>
+            </div>
+          </div>
+          <div class="source-item">
+            <div class="source-icon">🏥</div>
+            <div>
+              <h4>ClinicalTrials.gov</h4>
+              <p>The US registry of clinical trials. We use it to find the most current trial data, including unpublished results and ongoing studies that have not yet appeared in journal form.</p>
+            </div>
+          </div>
+          <div class="source-item">
+            <div class="source-icon">📖</div>
+            <div>
+              <h4>Major Peer-Reviewed Journals</h4>
+              <p>Nature, Science, JAMA, The Lancet, New England Journal of Medicine, Cell Metabolism, Nature Medicine and specialist journals in nutrition, gerontology and pharmacology.</p>
+            </div>
+          </div>
+          <div class="source-item">
+            <div class="source-icon">🏛️</div>
+            <div>
+              <h4>Cochrane Reviews</h4>
+              <p>The gold standard for systematic evidence synthesis. When a Cochrane review exists on a topic, it is our primary reference for the overall state of the evidence.</p>
+            </div>
+          </div>
+          <div class="source-item">
+            <div class="source-icon">⚠️</div>
+            <div>
+              <h4>What We Treat with Caution</h4>
+              <p>Industry-funded studies, studies with very small sample sizes, animal-only data presented as human evidence, preprints without peer review, and media reports that misrepresent the underlying study conclusions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-strip">
+      <div>
+        <h3>Questions about our methodology?</h3>
+        <p>If you spot an error, have a question about our sources, or want to suggest a correction, we want to hear from you.</p>
+      </div>
+      <a href="/about.html" class="btn-gold">Contact ARI →</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

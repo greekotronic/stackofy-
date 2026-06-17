@@ -48,11 +48,6 @@
   style.textContent = HEADER_CSS;
   document.head.appendChild(style);
 
-  // Determine initial theme label
-  function getDarkLabel(isDark) {
-    return isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
-  }
-
   // Build header HTML
   const header = document.createElement('header');
   header.id = 'site-header';
@@ -65,8 +60,10 @@
       <nav class="s-nav">
         <a href="/">Home</a>
         <a href="/articles.html">Articles</a>
+        <a href="/books.html">Books</a>
         <a href="/your-stack.html">Stack Builder</a>
         <a href="/about.html">About</a>
+        <a href="/how-we-work.html">How We Work</a>
         <button class="s-dark" onclick="stackofyToggleDark()">☀️ Light</button>
       </nav>
       <button class="s-burger" onclick="stackofyToggleMenu()" aria-label="Menu">
@@ -75,14 +72,16 @@
     </div>
   `;
 
-  // Build mobile menu - includes dark mode toggle
+  // Build mobile menu
   const mobileMenu = document.createElement('div');
   mobileMenu.id = 'site-mobile-menu';
   mobileMenu.innerHTML = `
     <a href="/" onclick="stackofyToggleMenu()">Home</a>
     <a href="/articles.html" onclick="stackofyToggleMenu()">Articles</a>
+    <a href="/books.html" onclick="stackofyToggleMenu()">Books</a>
     <a href="/your-stack.html" onclick="stackofyToggleMenu()">Stack Builder</a>
     <a href="/about.html" onclick="stackofyToggleMenu()">About</a>
+    <a href="/how-we-work.html" onclick="stackofyToggleMenu()">How We Work</a>
     <button class="s-mobile-dark" onclick="stackofyToggleDark()">☀️ Light Mode</button>
   `;
 
@@ -93,8 +92,10 @@
     <div class="sf-links">
       <a href="/">Home</a>
       <a href="/articles.html">Articles</a>
+      <a href="/books.html">Books</a>
       <a href="/your-stack.html">Stack Builder</a>
       <a href="/about.html">About</a>
+      <a href="/how-we-work.html">How We Work</a>
       <a href="https://alethiaresearch.gumroad.com">Shop</a>
     </div>
     <div>Stackofy &nbsp;|&nbsp; Alethia Research Institute &nbsp;|&nbsp; © 2026</div>
@@ -107,7 +108,6 @@
     } else {
       document.body.removeAttribute('data-theme');
     }
-    // Update all dark toggle buttons
     document.querySelectorAll('.s-dark, .s-mobile-dark').forEach(btn => {
       btn.textContent = isDark ? '☀️ Light Mode' : '🌙 Dark Mode';
     });
@@ -130,7 +130,7 @@
 
     // Apply theme: dark is default unless user explicitly chose light
     const savedTheme = localStorage.getItem('theme');
-    const isDark = savedTheme !== 'light'; // dark unless explicitly set to light
+    const isDark = savedTheme !== 'light';
     applyTheme(isDark);
   }
 
@@ -151,7 +151,6 @@
     const newDark = !isDark;
     applyTheme(newDark);
     localStorage.setItem('theme', newDark ? 'dark' : 'light');
-    // Close mobile menu if open
     const menu = document.getElementById('site-mobile-menu');
     if (menu) menu.classList.remove('open');
   };
