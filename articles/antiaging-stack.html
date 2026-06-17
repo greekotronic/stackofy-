@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Anti-Aging Stack: NMN/NR, Resveratrol, TMG, CoQ10 and PQQ - Stackofy</title>
+  <meta name="description" content="Five compounds targeting the NAD+ pathway, sirtuin activation and mitochondrial function. What the science supports, what it does not - and how to build the stack without wasting money." />
+
+  <meta property="og:title" content="The Anti-Aging Stack: NMN/NR, Resveratrol, TMG, CoQ10 and PQQ" />
+  <meta property="og:description" content="NMN fuels sirtuins. Resveratrol activates them. CoQ10 runs the electron transport chain. PQQ builds new mitochondria. TMG prevents the methylation cost. Here is how they work together." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/antiaging-stack" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-antiaging-stack.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a0a00, #3E1F00, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(20,8,0,0.95) 0%, rgba(20,8,0,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    /* STACK MEMBERS */
+    .stack-overview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .stack-member { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .stack-member:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .stack-member-img { height: 70px; }
+    .sm-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .sm-resv { background: linear-gradient(135deg, #3d0a0a, #7A1A1A); }
+    .sm-tmg { background: linear-gradient(135deg, #1a1a3a, #2A2A6A); }
+    .sm-coq { background: linear-gradient(135deg, #1a0a00, #5C3A00); }
+    .sm-pqq { background: linear-gradient(135deg, #2C1A0E, #5C3A00); }
+    .stack-member-body { padding: 0.875rem; }
+    .stack-member-num { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 3px; }
+    .stack-member h3 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+    .stack-member p { font-size: 11px; color: var(--text-muted); line-height: 1.4; margin-bottom: 0.5rem; }
+    .stack-member-link { font-size: 11px; font-weight: 600; color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    /* NMN vs NR COMPARISON */
+    .comparison-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .comp-card { background: var(--surface); border-radius: var(--radius-sm); border: 0.5px solid var(--border); padding: 1.25rem; }
+    .comp-card.preferred { border-color: var(--green-dark); }
+    .comp-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+    .comp-label.premium { color: var(--gold); }
+    .comp-label.value { color: var(--green-dark); }
+    .comp-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .comp-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
+
+    /* PATHWAY VISUAL */
+    .pathway-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .pathway-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .pathway-flow { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+    .path-step { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.5rem 0.875rem; font-size: 12px; font-weight: 600; color: var(--text); text-align: center; }
+    .path-step.active { background: var(--green-dark); color: #FAF8F4; border-color: var(--green-dark); }
+    .path-step.result { background: var(--gold-light); border-color: var(--gold); }
+    .path-arrow { color: var(--gold); font-weight: 700; font-size: 16px; }
+    .pathway-note { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-top: 0.75rem; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .tip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 1.5rem 0; }
+    .tip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .c-coq { background: linear-gradient(135deg, #1a0a00, #5C3A00); }
+    .c-resv { background: linear-gradient(135deg, #3d0a0a, #7A1A1A); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .stack-overview { grid-template-columns: 1fr 1fr !important; }
+      .comparison-grid { grid-template-columns: 1fr !important; }
+      .pathway-flow { flex-direction: column; align-items: stretch; }
+      .path-arrow { transform: rotate(90deg); text-align: center; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-antiaging-stack.jpg" alt="The Anti-Aging Stack - NMN, Resveratrol, CoQ10, PQQ, TMG" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">★ Anti-Aging Protocol</span>
+      <h1>The Anti-Aging Stack: NMN/NR, Resveratrol, TMG, CoQ10 and PQQ</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>14 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>This stack targets the NAD+ pathway - the most studied longevity mechanism in current research - from five different angles simultaneously</li>
+        <li>NMN and NR are interchangeable NAD+ precursors: NMN is more direct but significantly more expensive; NR is cheaper and equally well-studied</li>
+        <li>TMG is not optional if you take NMN or NR - NMN synthesis consumes methyl groups and TMG replenishes them, preventing a hidden metabolic cost</li>
+        <li>Resveratrol activates sirtuins; NMN/NR fuels them - they are designed to work together</li>
+        <li>CoQ10 and PQQ support mitochondrial function through entirely different mechanisms: CoQ10 runs the electron transport chain, PQQ stimulates the growth of new mitochondria</li>
+        <li>The combination evidence is promising but mostly theoretical - individual compound evidence is strong; combination RCTs are still limited</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>If the Foundation Stack is about correcting deficiencies, the Anti-Aging Stack is about actively intervening in the biology of aging. These five compounds do not correct a missing nutrient - they target specific molecular pathways that decline with age and that research increasingly links to the rate at which we age.</p>
+
+      <p>The central mechanism is NAD+ - a coenzyme found in every cell that declines dramatically with age. By 60, most people have roughly half the NAD+ they had at 20. This decline impairs DNA repair, reduces mitochondrial efficiency, weakens sirtuin activity and accelerates cellular aging. The compounds in this stack address that decline from multiple directions at once.</p>
+
+      <div class="stack-overview">
+        <a href="/articles/nmn-supplements-guide.html" class="stack-member">
+          <div class="stack-member-img sm-nmn"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">01</div>
+            <h3>NMN or NR</h3>
+            <p>Direct NAD+ precursors. NMN is more expensive, NR more affordable. Both raise NAD+ levels effectively.</p>
+            <span class="stack-member-link">NMN guide →</span>
+          </div>
+        </a>
+        <a href="/articles/resveratrol-guide.html" class="stack-member">
+          <div class="stack-member-img sm-resv"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">02</div>
+            <h3>Resveratrol</h3>
+            <p>Sirtuin activator. Works synergistically with NMN - activates the enzymes that NAD+ fuels.</p>
+            <span class="stack-member-link">Full guide →</span>
+          </div>
+        </a>
+        <div class="stack-member">
+          <div class="stack-member-img sm-tmg"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">03</div>
+            <h3>TMG</h3>
+            <p>Methyl donor. Replenishes methyl groups consumed by NMN synthesis. Non-negotiable cofactor.</p>
+          </div>
+        </div>
+        <a href="/articles/coq10-guide.html" class="stack-member">
+          <div class="stack-member-img sm-coq"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">04</div>
+            <h3>CoQ10</h3>
+            <p>Runs the mitochondrial electron transport chain. ATP production depends on it - declines sharply after 40.</p>
+            <span class="stack-member-link">Full guide →</span>
+          </div>
+        </a>
+        <a href="/articles/pqq-guide.html" class="stack-member">
+          <div class="stack-member-img sm-pqq"></div>
+          <div class="stack-member-body">
+            <div class="stack-member-num">05</div>
+            <h3>PQQ</h3>
+            <p>Stimulates mitochondrial biogenesis - the growth of new mitochondria. Unique mechanism not replicated by any other supplement.</p>
+            <span class="stack-member-link">Full guide →</span>
+          </div>
+        </a>
+      </div>
+
+      <h2>The NAD+ Pathway - Why It Matters</h2>
+
+      <p>NAD+ (Nicotinamide Adenine Dinucleotide) is a coenzyme that sits at the intersection of energy metabolism, DNA repair and longevity signaling. It is required for sirtuins - a family of proteins that regulate gene expression, repair damaged DNA, control inflammation and respond to caloric restriction. It is also required for PARP enzymes that repair DNA strand breaks. And it is a critical electron carrier in the mitochondrial reactions that produce ATP.</p>
+
+      <div class="pathway-visual">
+        <div class="pathway-title">How the Anti-Aging Stack Targets the NAD+ Pathway</div>
+        <div class="pathway-flow">
+          <div class="path-step active">NMN or NR</div>
+          <div class="path-arrow">→</div>
+          <div class="path-step">NAD+ raised in cells</div>
+          <div class="path-arrow">→</div>
+          <div class="path-step active">Resveratrol</div>
+          <div class="path-arrow">→</div>
+          <div class="path-step result">Sirtuins activated</div>
+        </div>
+        <div class="pathway-flow">
+          <div class="path-step active">CoQ10</div>
+          <div class="path-arrow">→</div>
+          <div class="path-step result">Electron transport chain runs efficiently</div>
+        </div>
+        <div class="pathway-flow">
+          <div class="path-step active">PQQ</div>
+          <div class="path-arrow">→</div>
+          <div class="path-step result">New mitochondria grown (biogenesis)</div>
+        </div>
+        <div class="pathway-flow">
+          <div class="path-step active">TMG</div>
+          <div class="path-arrow">→</div>
+          <div class="path-step result">Methyl groups replenished - NMN side effect prevented</div>
+        </div>
+        <p class="pathway-note">Each compound targets a distinct step. NMN/NR supplies the fuel. Resveratrol activates the machinery that uses it. CoQ10 keeps energy production running. PQQ builds more production capacity. TMG prevents the hidden methylation cost of NMN synthesis.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/antiaging-stack-cells.jpg" alt="Mitochondria and cellular energy - the target of the anti-aging stack" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>NMN vs NR - Which Should You Choose</h2>
+
+      <p>NMN (Nicotinamide Mononucleotide) and NR (Nicotinamide Riboside) are both NAD+ precursors that raise intracellular NAD+ levels. The fundamental question most people ask is: which is better? The honest answer is that the clinical evidence does not clearly favor one over the other - and the price difference is significant.</p>
+
+      <div class="comparison-grid">
+        <div class="comp-card preferred">
+          <div class="comp-label value">More affordable · Well studied</div>
+          <h4>NR (Nicotinamide Riboside)</h4>
+          <p>Has been in human clinical trials longer. Multiple RCTs confirm it raises NAD+ effectively. Typically 40-60% cheaper than NMN per effective dose. The evidence base is slightly more mature. A strong choice for anyone starting a NAD+ protocol or working within a budget.</p>
+        </div>
+        <div class="comp-card">
+          <div class="comp-label premium">More direct · More expensive</div>
+          <h4>NMN (Nicotinamide Mononucleotide)</h4>
+          <p>One step closer to NAD+ in the biosynthesis pathway. Growing body of human RCTs showing NAD+ elevation and functional benefits. Higher cost per gram. May have marginal bioavailability advantage in some tissues. David Sinclair's preferred form - though this should be weighed as one data point, not a conclusion.</p>
+        </div>
+      </div>
+
+      <div class="tip-box">
+        <div class="tip-label">Practical Tip</div>
+        <p>If budget is a constraint, start with NR. If you want the most direct NAD+ precursor and are comfortable with the higher cost, choose NMN. Either way, always check that the product specifies active compound content - most NMN supplements on the market fail independent lab testing. Our free NMN checklist covers exactly what to look for.</p>
+      </div>
+
+      <h2>TMG - The Cofactor Nobody Talks About</h2>
+
+      <p>Trimethylglycine (TMG), also known as betaine, is one of the most important and most overlooked parts of any NMN or NR protocol. Here is why it matters.</p>
+
+      <p>When NMN is synthesized in the body from tryptophan and aspartate via the de novo pathway, methyl groups are consumed in the process. Taking supplemental NMN can therefore gradually deplete your body's methyl group reserves - a pool that is also needed for DNA methylation, neurotransmitter synthesis, homocysteine clearance and liver function.</p>
+
+      <p><strong>TMG donates methyl groups directly.</strong> One molecule of TMG carries three methyl groups and donates them to homocysteine, converting it to methionine. This simultaneously replenishes the methyl pool and reduces homocysteine - an independent cardiovascular risk marker. Taking TMG alongside NMN or NR is not optional if you plan to supplement long-term. The dose is typically 500mg to 1,500mg daily, taken with your NMN or NR.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">TMG and Homocysteine</div>
+        <p>Elevated homocysteine is associated with increased cardiovascular risk and cognitive decline. TMG is one of the most effective dietary interventions for lowering homocysteine - a benefit entirely separate from its role as a methyl donor for NMN metabolism. If you supplement NMN without TMG and have not checked your homocysteine levels, consider adding both.</p>
+      </div>
+
+      <h2>Resveratrol - The Sirtuin Activator</h2>
+
+      <p>Resveratrol's primary mechanism is SIRT1 activation - it stimulates the sirtuin proteins that regulate DNA repair, inflammation control and metabolic efficiency. Sirtuins require NAD+ to function, which is precisely why resveratrol and NMN/NR are designed to work together: resveratrol turns the key, NMN/NR supplies the fuel.</p>
+
+      <p>Resveratrol also activates AMPK, the cellular energy sensor that mimics some effects of caloric restriction, and has direct anti-inflammatory effects via NF-kB inhibition. A 2024 meta-analysis of 42 human trials found consistent reductions in biological age markers with daily resveratrol use at 100-150mg - with lower doses often outperforming higher ones due to bioavailability dynamics.</p>
+
+      <p><strong>Bioavailability is resveratrol's main challenge.</strong> Standard resveratrol has roughly 20% oral bioavailability. Taking it with a small amount of fat and in the morning significantly improves absorption. Micronized or liposomal forms are more bioavailable than standard powder.</p>
+
+      <div class="article-img">
+        <img src="/images/antiaging-stack-foods.jpg" alt="Resveratrol-rich foods - red grapes, berries, nuts" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>CoQ10 and PQQ - Mitochondrial Support from Two Directions</h2>
+
+      <p>CoQ10 and PQQ are frequently grouped together as "mitochondrial supplements" - which is accurate but obscures how fundamentally different their mechanisms are.</p>
+
+      <p><strong>CoQ10</strong> is a required component of the electron transport chain - the series of protein complexes in the inner mitochondrial membrane that produce ATP. Without adequate CoQ10, the chain runs inefficiently and produces more reactive oxygen species. CoQ10 levels decline by up to 50% between ages 40 and 70. Ubiquinol form (the reduced, active form) is significantly better absorbed than standard ubiquinone, particularly after age 40 when the conversion becomes less efficient.</p>
+
+      <p><strong>PQQ</strong> (Pyrroloquinoline Quinone) works upstream of CoQ10. Its most distinctive property is stimulating mitochondrial biogenesis - the growth of entirely new mitochondria via PGC-1alpha activation. More mitochondria means more total energy production capacity. PQQ also acts as a potent antioxidant within the mitochondrial membrane itself, protecting the very structures that CoQ10 depends on.</p>
+
+      <p>Together they address both the efficiency of existing mitochondria (CoQ10) and the quantity and quality of new ones (PQQ). This is genuine complementarity - not redundancy.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">Evidence Caveat</div>
+        <p>The individual evidence for each compound in this stack is solid. The evidence for the specific combination in human clinical trials is still developing. A 2025 ScienceDirect review confirmed the theoretical synergistic potential of NMN/NR + PQQ + CoQ10 combinations, but noted that most existing formulations rely on mechanistic assumptions rather than large-scale RCT data. This does not mean the stack does not work - it means you should calibrate your expectations to the current state of the evidence rather than marketing claims.</p>
+      </div>
+
+      <h2>How to Take the Anti-Aging Stack</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Supplement</th>
+          <th>Daily Dose</th>
+          <th>Timing</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>NMN or NR</td>
+          <td>300 - 600mg</td>
+          <td>Morning, fasted or with light meal</td>
+          <td>Always with TMG. Check product for active compound certification.</td>
+        </tr>
+        <tr>
+          <td>TMG</td>
+          <td>500 - 1,500mg</td>
+          <td>Same time as NMN/NR</td>
+          <td>Non-negotiable cofactor. Also lowers homocysteine independently.</td>
+        </tr>
+        <tr>
+          <td>Resveratrol</td>
+          <td>100 - 250mg</td>
+          <td>Morning with a small amount of fat</td>
+          <td>Micronized or liposomal form for better bioavailability.</td>
+        </tr>
+        <tr>
+          <td>CoQ10</td>
+          <td>100 - 200mg</td>
+          <td>With largest meal (fat-soluble)</td>
+          <td>Ubiquinol form preferred after age 40.</td>
+        </tr>
+        <tr>
+          <td>PQQ</td>
+          <td>10 - 20mg</td>
+          <td>Morning or with CoQ10</td>
+          <td>Cycle: 4-8 weeks on, 1-2 weeks off.</td>
+        </tr>
+      </table>
+
+      <div class="tip-box">
+        <div class="tip-label">Budget Tip</div>
+        <p>If you cannot run the full stack immediately, prioritize in this order: (1) NR + TMG as the core NAD+ intervention, (2) CoQ10 especially if you are over 40, (3) Resveratrol, (4) PQQ. The first two give you the greatest impact per euro spent. Add the others as budget allows.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">8.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          The most mechanistically coherent longevity stack available. Each compound has solid individual evidence and distinct mechanisms that genuinely complement rather than duplicate each other. The combination evidence is still developing - but the individual pieces are strong enough to justify the protocol. TMG is the most underappreciated element: always include it. Build on the Foundation Stack first, then add this layer.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Yoshida, M. et al. (2021). Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women. <em>Science</em>, 372(6547), 1224-1229.</li>
+        <li>Tramonte, A. et al. (2025). Comparison of anti-aging effects of PQQ and NMN/NR - possible combination use. <em>ScienceDirect / Ageing Research Reviews</em>. doi:10.1016/j.arr.2025.102706.</li>
+        <li>Rajman, L., Chwalek, K. & Sinclair, D.A. (2018). Therapeutic potential of NAD-boosting molecules: the in vivo evidence. <em>Cell Metabolism</em>, 27(3), 529-547.</li>
+        <li>Howitz, K.T. et al. (2003). Small molecule activators of sirtuins extend Saccharomyces cerevisiae lifespan. <em>Nature</em>, 425, 191-196.</li>
+        <li>Mortensen, S.A. et al. (2014). The effect of coenzyme Q10 on morbidity and mortality in chronic heart failure: Q-SYMBIO trial. <em>JACC Heart Failure</em>, 2(6), 641-649.</li>
+        <li>Harris, C.B. et al. (2013). Dietary pyrroloquinoline quinone alters indicators of inflammation and mitochondrial-related metabolism. <em>Journal of Nutritional Biochemistry</em>, 24(12), 2076-2084.</li>
+        <li>Olthof, M.R. et al. (2003). Betaine supplementation lowers plasma homocysteine in healthy men and women. <em>Journal of Nutrition</em>, 133(5), 1291-1295.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Before You Buy Any NMN - Read This First</h3>
+      <p>Most NMN products on the market contain zero active ingredient. The free checklist tells you the 5 questions to ask before spending a cent.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-gold">Download Free NMN Checklist →</a>
+        <a href="https://www.amazon.com/dp/B0FVFR4HQG" class="btn-outline">The $1,000 Longevity Plan →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Deep Dives - Individual Guides</div>
+      <div class="related-grid">
+        <a href="/articles/nmn-supplements-guide.html" class="related-card">
+          <div class="related-img c-nmn">
+            <img src="/images/thumb-nmn.jpg" alt="NMN" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">NMN</span>
+            <h4>Why 64% of NMN Supplements Contain Zero Active Ingredient</h4>
+          </div>
+        </a>
+        <a href="/articles/coq10-guide.html" class="related-card">
+          <div class="related-img c-coq">
+            <img src="/images/hero-coq10.jpg" alt="CoQ10" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">CoQ10</span>
+            <h4>CoQ10: The Spark Plug for Every Cell in Your Body</h4>
+          </div>
+        </a>
+        <a href="/articles/resveratrol-guide.html" class="related-card">
+          <div class="related-img c-resv">
+            <img src="/images/hero-resveratrol.jpg" alt="Resveratrol" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Resveratrol</span>
+            <h4>Resveratrol: The Red Wine Molecule That Activates Your Longevity Genes</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

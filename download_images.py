@@ -23,7 +23,7 @@ IMAGES = [
     # ── FOUNDATION STACK ──────────────────────────────────────────────────
     {
         "file": "hero-foundation-stack.jpg",
-        "w": 1200, "h": 630,
+        "w": 1216, "h": 704,,
         "prompt": "overhead flat lay vitamin D3 K2 capsules magnesium tablets omega-3 fish oil bottles on dark wet slate, soft gold side lighting, editorial supplement photography, deep forest green tones, cinematic"
     },
     {
@@ -40,7 +40,7 @@ IMAGES = [
     # ── ANTI-AGING STACK ──────────────────────────────────────────────────
     {
         "file": "hero-antiaging-stack.jpg",
-        "w": 1200, "h": 630,
+        "w": 1216, "h": 704,,
         "prompt": "elegant dark glass bottles NMN resveratrol CoQ10 supplements arranged on dark stone surface, longevity anti-aging concept, dramatic gold side lighting, premium editorial product photography, deep green tones"
     },
     {
@@ -57,7 +57,7 @@ IMAGES = [
     # ── SLEEP STACK ───────────────────────────────────────────────────────
     {
         "file": "hero-sleep-stack.jpg",
-        "w": 1200, "h": 630,
+        "w": 1216, "h": 704,,
         "prompt": "moody close-up magnesium glycinate capsules and chamomile flowers on dark slate, soft moonlight blue and green tones, calm atmospheric editorial photography, sleep supplement concept"
     },
     {
@@ -74,7 +74,7 @@ IMAGES = [
     # ── BRAIN STACK ───────────────────────────────────────────────────────
     {
         "file": "hero-brain-stack.jpg",
-        "w": 1200, "h": 630,
+        "w": 1216, "h": 704,,
         "prompt": "abstract macro glowing neural connections and brain synapses, deep forest green and gold bioluminescent quality, dark background, cognitive performance concept, scientific editorial aesthetic"
     },
     {
@@ -91,7 +91,7 @@ IMAGES = [
     # ── BIOHACKER COFFEE ──────────────────────────────────────────────────
     {
         "file": "hero-biohacker-coffee.jpg",
-        "w": 1200, "h": 630,
+        "w": 1216, "h": 704,,
         "prompt": "dramatic overhead shot dark ceramic mug steaming coffee on black slate, coconut oil cinnamon sticks raw cacao powder cardamom pods arranged around it, soft morning gold light, editorial food photography, moody premium"
     },
     {
@@ -108,7 +108,7 @@ IMAGES = [
     # ── PERSONAL STACK ────────────────────────────────────────────────────
     {
         "file": "hero-personal-stack.jpg",
-        "w": 1200, "h": 630,
+        "w": 1216, "h": 704,,
         "prompt": "overhead flat lay weekly pill organizer filled with supplements next to notebook with handwritten notes, coffee thermos and reading glasses on dark slate, warm morning light, editorial lifestyle photography"
     },
     {
@@ -125,7 +125,7 @@ IMAGES = [
     # ── REDUNDANT STACKS ──────────────────────────────────────────────────
     {
         "file": "hero-redundant-stacks.jpg",
-        "w": 1200, "h": 630,
+        "w": 1216, "h": 704,,
         "prompt": "overhead flat lay many supplement capsules and pills in various colors scattered on dark slate, editorial style, dark moody lighting, gold and green accents, some crossed out"
     },
     {
@@ -156,7 +156,7 @@ def download_image(img_data, images_dir, max_retries=3):
         url = (
             f"https://image.pollinations.ai/prompt/{prompt_encoded}"
             f"?width={img_data['w']}&height={img_data['h']}"
-            f"&model=flux&seed={seed}&nologo=true"
+            f"&model=flux&seed={seed}&nologo=true&aspect_ratio=16:9"
         )
         try:
             if attempt > 1:
