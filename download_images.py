@@ -153,7 +153,9 @@ IMAGES = [
         "file": "ashwagandha-stress-calm.jpg",
         "w": 900, "h": 420,
         "prompt": "abstract visualization of calm cortisol wave pattern descending, dark background, soft blue and green tones, scientific editorial aesthetic, stress reduction concept"
-    },# ── L-THEANINE ────────────────────────────────────────────────────────
+    },
+
+    # ── L-THEANINE ────────────────────────────────────────────────────────
     {
         "file": "hero-ltheanine.jpg",
         "w": 1216, "h": 704,
@@ -201,7 +203,6 @@ IMAGES = [
         "w": 900, "h": 420,
         "prompt": "overhead flat lay of eggs liver broccoli and sunflower seeds on dark stone surface, natural choline food sources, soft gold side lighting, editorial food photography, minimal"
     },
-]
 ]
 
 
