@@ -54,14 +54,14 @@
 
     .book-highlights { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.75rem; }
     .book-highlight { display: flex; gap: 0.75rem; align-items: flex-start; font-size: 13px; color: var(--text-muted); line-height: 1.5; }
-    .book-highlight::before { content: '✓'; color: var(--green-dark); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    .book-highlight::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
 
     .book-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; }
     .btn-primary { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 12px 24px; font-size: 14px; font-weight: 700; cursor: pointer; display: inline-block; transition: opacity 0.2s; }
     .btn-primary:hover { opacity: 0.9; }
-    .btn-secondary { background: transparent; color: var(--green-dark); border: 1.5px solid var(--green-dark); border-radius: var(--radius-sm); padding: 11px 20px; font-size: 14px; font-weight: 600; display: inline-block; transition: background 0.2s; }
-    .btn-secondary:hover { background: var(--green-dark); color: #FAF8F4; }
-    .book-kindle { font-size: 12px; color: var(--text-muted); display: flex; align-items: center; gap: 4px; }
+    .btn-secondary { background: transparent; color: var(--text); border: 1.5px solid var(--border); border-radius: var(--radius-sm); padding: 11px 20px; font-size: 14px; font-weight: 600; display: inline-block; transition: background 0.2s; }
+    .btn-secondary:hover { background: var(--green-dark); color: #FAF8F4; border-color: var(--green-dark); }
+    .book-kindle { font-size: 12px; color: var(--text); display: flex; align-items: center; gap: 4px; }
 
     .book-details { border-top: 0.5px solid var(--border); }
     .book-details-toggle { width: 100%; background: none; border: none; padding: 1.25rem 2rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 13px; font-weight: 600; color: var(--text-muted); }
@@ -84,7 +84,7 @@
     .ari-note { background: var(--gold-light); border: 0.5px solid var(--gold); border-radius: var(--radius); padding: 1.75rem 2rem; margin-bottom: 3rem; }
     .ari-note-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
     .ari-note p { font-size: 14px; color: var(--text); line-height: 1.7; }
-    .ari-note a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+    .ari-note a { color: var(--gold); border-bottom: 1px solid var(--gold); font-weight: 600; }
 
     @media (max-width: 700px) {
       .book-header { grid-template-columns: 1fr !important; }
