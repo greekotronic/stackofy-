@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The $1,000 Longevity Plan - Book by Alethia Research Institute - Stackofy</title>
+  <meta name="description" content="Not another book about kale and positive thinking. The $1,000 Longevity Plan analyzes 68 supplements with real evidence, covers Blue Zone nutrition, and builds a practical daily protocol. For people who want more good years - not just more years." />
+
+  <meta property="og:title" content="The $1,000 Longevity Plan - Add 15 Healthy Years by Choice, Not Chance" />
+  <meta property="og:description" content: "70-80% of your longevity is determined by lifestyle, not genetics. This book is the map, the translator, and the bullshit filter for everyone serious about aging well." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/longevity-plan-book" />
+  <meta property="og:image" content="https://stackofy.com/images/longevity-plan-cover.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1B4332, #2D6A4F, #7A5C10); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.97) 0%, rgba(27,67,50,0.4) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .book-cta-top { background: var(--surface); border: 2px solid var(--gold); border-radius: var(--radius); padding: 1.5rem 2rem; margin-bottom: 2.5rem; display: flex; align-items: center; gap: 2rem; }
+    .book-cover-placeholder { width: 100px; height: 140px; border-radius: 6px; background: var(--gradient); display: flex; align-items: center; justify-content: center; font-size: 28px; flex-shrink: 0; box-shadow: 0 4px 16px rgba(0,0,0,0.2); }
+    .book-cta-body h3 { font-size: 16px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .book-cta-body p { font-size: 13px; color: var(--text-muted); margin-bottom: 1rem; line-height: 1.6; }
+    .book-cta-buttons { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 10px 20px; font-size: 13px; font-weight: 700; display: inline-block; }
+    .btn-secondary { background: transparent; color: var(--green-dark); border: 1.5px solid var(--green-dark); border-radius: var(--radius-sm); padding: 9px 18px; font-size: 13px; font-weight: 600; display: inline-block; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .book-quote { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius) var(--radius) 0; padding: 1.75rem 2rem; margin: 2rem 0; position: relative; }
+    .book-quote::before { content: '\201C'; font-size: 4rem; color: var(--gold); opacity: 0.3; position: absolute; top: -0.5rem; left: 1rem; line-height: 1; font-family: Georgia, serif; }
+    .book-quote blockquote { font-size: 15px; color: var(--text); line-height: 1.8; font-style: italic; padding-left: 1rem; }
+    .book-quote cite { font-size: 12px; color: var(--text-muted); font-style: normal; font-weight: 700; display: block; margin-top: 0.75rem; padding-left: 1rem; letter-spacing: 0.5px; text-transform: uppercase; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .bluezone-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .bluezone-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; text-align: center; }
+    .bluezone-icon { font-size: 28px; margin-bottom: 8px; }
+    .bluezone-card h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .bluezone-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .chapter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin: 1.5rem 0; }
+    .chapter-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem 1.25rem; }
+    .chapter-num { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
+    .chapter-card h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .chapter-card p { font-size: 11px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    .supp-preview { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0; }
+    .supp-preview-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .supp-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .supp-tag { background: var(--bg); border: 0.5px solid var(--border); border-radius: 20px; padding: 5px 12px; font-size: 12px; color: var(--text-muted); font-weight: 500; }
+    .supp-tag.highlighted { background: var(--gold-light); border-color: var(--gold); color: #7A5C10; font-weight: 600; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold-lg { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 13px 26px; font-size: 15px; font-weight: 700; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 12px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .c-vitd { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .c-stack { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .book-cta-top { flex-direction: column !important; }
+      .chapter-grid { grid-template-columns: 1fr !important; }
+      .bluezone-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/longevity-plan-cover.jpg" alt="The $1,000 Longevity Plan book cover" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">★ ARI Book</span>
+      <h1>The $1,000 Longevity Plan: Add 15 Healthy Years by Choice, Not Chance</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>12 min read</span>
+        <span>·</span>
+        <span>68 supplements analyzed</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="book-cta-top">
+      <div class="book-cover-placeholder">📘</div>
+      <div class="book-cta-body">
+        <h3>The $1,000 Longevity Plan</h3>
+        <p>68 supplements analyzed. Blue Zone nutrition. Daily protocols built for real people. Available on Amazon as Paperback and Kindle.</p>
+        <div class="book-cta-buttons">
+          <a href="https://a.co/d/07lXIfR6" target="_blank" class="btn-gold">📖 Paperback on Amazon →</a>
+          <a href="https://www.amazon.com/dp/B0FVFR4HQG" target="_blank" class="btn-secondary">Kindle →</a>
+          <a href="/articles.html" class="btn-secondary">Free Guides →</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="article-content">
+
+      <p>Most longevity books fall into one of two traps. Either they promise the world with breathless enthusiasm and zero evidence - or they are so clinically dense that only a researcher with a grant and a free weekend can make it through chapter two.</p>
+
+      <p>The $1,000 Longevity Plan is neither. It is a book written for people who are serious about aging well but have actual lives to live - and it opens with one of the most honest statements in the genre.</p>
+
+      <div class="book-quote">
+        <blockquote>Let's get one thing straight: this is not another book promising to make you immortal if you eat more kale and smile at the sun. You won't find magical superfoods, blue-light-blocking crystals, or breathwork gurus with suspiciously symmetrical cheekbones. What you will find is something far more powerful: a sharp, science-backed, thoroughly practical guide to adding serious years to your life - without selling your house or joining a mountain cult.</blockquote>
+        <cite>The $1,000 Longevity Plan - Introduction</cite>
+      </div>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">68</div>
+          <div class="stat-label">Supplements analyzed - from essentials to experimental compounds</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">70-80%</div>
+          <div class="stat-label">of your longevity is determined by lifestyle and environment - not genetics</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">122</div>
+          <div class="stat-label">Years - Jeanne Calment's lifespan, cited as evidence of what human biology is structurally capable of</div>
+        </div>
+      </div>
+
+      <h2>How Long Could You Actually Live?</h2>
+
+      <p>The book opens its scientific argument with a question most people never ask - and the answer is more surprising than most people expect.</p>
+
+      <div class="book-quote">
+        <blockquote>Only about 20 to 30 percent of longevity is locked into your DNA. The rest? That's lifestyle, environment, mindset - and yes, nutrients. We've also seen this play out in places like Okinawa, Sardinia, and Nicoya - so-called Blue Zones where people routinely reach 90 or 100 without medical miracles or luxury gyms. They move daily, eat simply, stay socially connected, and experience very little of the chronic inflammation that plagues Western aging. Meanwhile, in laboratories across the world, mice and worms are living 30 to 50 percent longer thanks to simple tweaks: fewer calories, more NAD, better mitochondrial support. Not radical surgeries. Not robot limbs. Just the biochemical equivalent of a little tune-up, again and again.</blockquote>
+        <cite>The $1,000 Longevity Plan - Chapter: How Long Could You Live?</cite>
+      </div>
+
+      <p>This is the book's foundational argument - and it is backed by decades of epidemiological and laboratory research. The implication is significant: if genetics accounts for only 20-30% of your lifespan, then the majority of what determines how long and how well you live is within your control. Supplements are one tool in that toolkit. Not the only tool - but a meaningful one when chosen with evidence rather than marketing.</p>
+
+      <h2>What Blue Zone Centenarians Actually Eat</h2>
+
+      <p>Before diving into supplements, the book grounds its recommendations in something more fundamental: the dietary patterns of people who have already demonstrated that living well past 90 is possible without any of the compounds discussed in the rest of the book.</p>
+
+      <div class="book-quote">
+        <blockquote>Imagine a 103-year-old woman in Okinawa who still grows her own vegetables and dances after dinner. Or a shepherd in Sardinia who walks steep hills daily, eats cheese with every meal, and laughs with his neighbors over red wine. They're not calorie-counting. They're not on keto. They've never heard of resveratrol - but they drink it.</blockquote>
+        <cite>The $1,000 Longevity Plan - Chapter: The Longevity Diet</cite>
+      </div>
+
+      <div class="bluezone-grid">
+        <div class="bluezone-card">
+          <div class="bluezone-icon">🫘</div>
+          <h4>Legumes - Daily</h4>
+          <p>Lentils, chickpeas, black beans. Fiber, resistant starch, plant protein. The book calls them "the rockstars of the longevity world" - cheap, powerful and present in every Blue Zone diet.</p>
+        </div>
+        <div class="bluezone-card">
+          <div class="bluezone-icon">🥗</div>
+          <h4>Mostly Plants</h4>
+          <p>Not strictly vegan - but plant-forward. Animal products as side notes, not centerpieces. Pasture-raised when consumed. The anti-inflammatory foundation that supplements build on.</p>
+        </div>
+        <div class="bluezone-card">
+          <div class="bluezone-icon">🫙</div>
+          <h4>Fermented Foods</h4>
+          <p>Natto, miso, sauerkraut, yogurt. Combined with high fiber intake, these support a diverse gut microbiome that the book links to immune health, mood and chronic disease resistance.</p>
+        </div>
+        <div class="bluezone-card">
+          <div class="bluezone-icon">🫒</div>
+          <h4>Healthy Fats - No Fear</h4>
+          <p>Olive oil, nuts, seeds, fatty fish. Saturated fat from natural sources not avoided. Margarine and vegetable oils largely absent. The fat profile that supports brain and hormone health.</p>
+        </div>
+        <div class="bluezone-card">
+          <div class="bluezone-icon">🍽️</div>
+          <h4>Hara Hachi Bu</h4>
+          <p>The Okinawan practice of stopping at 80% full. No macro counting, no app, no restriction. Just listening to the body - a habit the book identifies as one of the most consistently life-extending behaviors across cultures.</p>
+        </div>
+        <div class="bluezone-card">
+          <div class="bluezone-icon">🚫</div>
+          <h4>Minimal Processing</h4>
+          <p>White flour, seed oils, added sugars and artificial flavors are largely absent from longevity diets. Not because of ideology - because the people who live longest simply never adopted them.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">The Real Secret</div>
+        <p>The book makes a point that gets lost in most longevity discourse: "It's tempting to chase the next miracle food or crash diet, but longevity doesn't work that way. It's the slow, daily habits that shape your future self. The people who live the longest don't overhaul their diet every January. They just eat real food, day after day, decade after decade." Supplements amplify a good foundation. They cannot replace one.</p>
+      </div>
+
+      <h2>68 Supplements - What the Book Analyzes</h2>
+
+      <p>The core of the book is a comprehensive analysis of 68 supplements with real relevance to aging. Each is examined for scientific evidence, optimal dosing, timing and synergies with other compounds. The range covers everything from foundation supplements most people should already be taking to advanced compounds at the cutting edge of longevity research.</p>
+
+      <div class="supp-preview">
+        <div class="supp-preview-label">Supplements covered in the book - a selection</div>
+        <div class="supp-tags">
+          <span class="supp-tag highlighted">Vitamin D3 + K2</span>
+          <span class="supp-tag highlighted">NMN / NR</span>
+          <span class="supp-tag highlighted">Omega-3</span>
+          <span class="supp-tag highlighted">Magnesium</span>
+          <span class="supp-tag highlighted">CoQ10</span>
+          <span class="supp-tag highlighted">Resveratrol</span>
+          <span class="supp-tag highlighted">Spermidine</span>
+          <span class="supp-tag highlighted">Fisetin</span>
+          <span class="supp-tag">Quercetin</span>
+          <span class="supp-tag">PQQ</span>
+          <span class="supp-tag">Berberine</span>
+          <span class="supp-tag">Ashwagandha</span>
+          <span class="supp-tag">Lion's Mane</span>
+          <span class="supp-tag">Collagen</span>
+          <span class="supp-tag">Creatine</span>
+          <span class="supp-tag">ALA</span>
+          <span class="supp-tag">Sulforaphane</span>
+          <span class="supp-tag">Zinc</span>
+          <span class="supp-tag">Selenium</span>
+          <span class="supp-tag">TMG</span>
+          <span class="supp-tag">Glycine</span>
+          <span class="supp-tag">NAC</span>
+          <span class="supp-tag">Melatonin</span>
+          <span class="supp-tag">+ 44 more</span>
+        </div>
+      </div>
+
+      <p>The highlighted supplements above have dedicated free articles on Stackofy. The book goes deeper on each - with full dosing analysis, interaction profiles and protocol recommendations - and covers dozens of additional compounds not yet covered in our article library.</p>
+
+      <h2>What the Book Covers</h2>
+
+      <div class="chapter-grid">
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 1</div>
+          <h4>The New Age of Anti-Aging</h4>
+          <p>How science is transforming aging from inevitable decline to active longevity. The biology of aging - telomeres, sirtuins, mTOR, NAD+ - explained without a PhD requirement.</p>
+        </div>
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 2</div>
+          <h4>The Molecules of Youth</h4>
+          <p>68 supplements analyzed. Scientific evidence, benefits, dosing and role in cellular health, energy, immunity and longevity. The core of the book.</p>
+        </div>
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 3</div>
+          <h4>Nutrition for Longevity</h4>
+          <p>Fasting, autophagy, Blue Zone diets and anti-inflammatory eating patterns. How food choices interact with supplement protocols.</p>
+        </div>
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 4</div>
+          <h4>Lifestyle Factors That Extend Life</h4>
+          <p>Exercise, sleep optimization, stress reduction and mental resilience. The non-supplement interventions with the strongest longevity evidence.</p>
+        </div>
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 5</div>
+          <h4>Ancient Wisdom, Modern Science</h4>
+          <p>How meditation, herbal medicine and traditional practices align with modern longevity research. What Blue Zone populations knew before clinical trials existed.</p>
+        </div>
+        <div class="chapter-card">
+          <div class="chapter-num">Chapter 6-8</div>
+          <h4>Your Personal Protocol</h4>
+          <p>Preventive medicine, diagnostics and hormone considerations. Daily routines that preserve energy and cognition. How to build your own evidence-based longevity plan.</p>
+        </div>
+      </div>
+
+      <div class="book-quote">
+        <blockquote>Most people take the wrong ones. Or the right ones in the wrong form, at the wrong time, in doses designed for mice. You shouldn't need a PhD to outsmart aging - but you do need a map. This book is your map. Your translator. Your bullshit filter. And your battle plan.</blockquote>
+        <cite>The $1,000 Longevity Plan - Introduction</cite>
+      </div>
+
+    </div>
+
+    <div class="cta-block">
+      <h3>68 Supplements. One Complete Protocol.</h3>
+      <p>Available on Amazon as Paperback and Kindle. Less than your monthly coffee spend. More useful than most of what you currently take.</p>
+      <div class="cta-buttons">
+        <a href="https://a.co/d/07lXIfR6" target="_blank" class="btn-gold-lg">📖 Paperback on Amazon →</a>
+        <a href="https://www.amazon.com/dp/B0FVFR4HQG" target="_blank" class="btn-outline">Kindle →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Free Articles from the Book's Topics</div>
+      <div class="related-grid">
+        <a href="/articles/nmn-supplements-guide.html" class="related-card">
+          <div class="related-img c-nmn">
+            <img src="/images/thumb-nmn.jpg" alt="NMN" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">NMN</span>
+            <h4>Why 64% of NMN Supplements Contain Zero Active Ingredient</h4>
+          </div>
+        </a>
+        <a href="/articles/vitamin-d3-k2-guide.html" class="related-card">
+          <div class="related-img c-vitd">
+            <img src="/images/hero-vitd.jpg" alt="Vitamin D3" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin D3</span>
+            <h4>Vitamin D3 + K2: The Sunshine Molecule Your Immune System Depends On</h4>
+          </div>
+        </a>
+        <a href="/articles/personal-stack-guide.html" class="related-card">
+          <div class="related-img c-stack">
+            <img src="/images/hero-personal-stack.jpg" alt="Personal Stack" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Personal Protocol</span>
+            <h4>My Personal Stack: How a 48-Year-Old Nutritionist Built His Daily Protocol</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article presents an overview of "The $1,000 Longevity Plan" by Alethia Research Institute. Content is for educational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
