@@ -47,6 +47,37 @@ const DARK_MODE_CSS = `
     [data-theme="dark"] h3 { color: #B8E0C8 !important; }
     [data-theme="dark"] a { color: #95D5B2 !important; }
     [data-theme="dark"] a:hover { color: #FAF8F4 !important; }
+
+    [data-theme="dark"] .stat-num { color: #95D5B2 !important; }
+    [data-theme="dark"] .stat-label { color: #B8E0C8 !important; }
+    [data-theme="dark"] .stat-box { background: #1C2E22 !important; border-color: #2A3D30 !important; }
+
+    [data-theme="dark"] .evidence-card { background: #1C2E22 !important; border-color: #2A3D30 !important; }
+    [data-theme="dark"] .evidence-card h4 { color: #F0EDE8 !important; }
+    [data-theme="dark"] .evidence-tag.strong { background: #1A3D2A !important; color: #95D5B2 !important; }
+    [data-theme="dark"] .evidence-tag.moderate { background: #2A220D !important; color: #D4A853 !important; }
+
+    [data-theme="dark"] .form-card { background: #1C2E22 !important; border-color: #2A3D30 !important; }
+    [data-theme="dark"] .form-card h4 { color: #F0EDE8 !important; }
+    [data-theme="dark"] .form-rank.top { color: #95D5B2 !important; }
+
+    [data-theme="dark"] .compound-card { background: #1C2E22 !important; border-color: #2A3D30 !important; }
+    [data-theme="dark"] .compound-name { color: #95D5B2 !important; }
+    [data-theme="dark"] .compound-card p { color: #9DB8AA !important; }
+
+    [data-theme="dark"] .related-card { background: #1C2E22 !important; border-color: #2A3D30 !important; }
+    [data-theme="dark"] .related-card h4 { color: #F0EDE8 !important; }
+    [data-theme="dark"] .related-tag { background: #1A3D2A !important; color: #95D5B2 !important; }
+
+    [data-theme="dark"] .btn-read, [data-theme="dark"] a.btn-read { color: #95D5B2 !important; }
+    [data-theme="dark"] .featured-card a, [data-theme="dark"] .article-card a { color: #95D5B2 !important; }
+
+    [data-theme="dark"] .trust-bar, [data-theme="dark"] .stat-banner, [data-theme="dark"] .quote-banner { color: #F0EDE8 !important; }
+    [data-theme="dark"] .trust-bar .num, [data-theme="dark"] .stat-banner .num { color: #95D5B2 !important; }
+
+    [data-theme="dark"] .ingredient-card { background: #1C2E22 !important; border-color: #2A3D30 !important; }
+    [data-theme="dark"] .ingredient-card h4 { color: #F0EDE8 !important; }
+    [data-theme="dark"] .caution-box, [data-theme="dark"] .who-caution { background: #1C2E22 !important; color: #F0EDE8 !important; }
   `;
 
   const darkStyle = document.createElement('style');
