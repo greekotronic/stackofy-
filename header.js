@@ -92,6 +92,8 @@ const DARK_MODE_CSS = `
 [data-theme="dark"] .trust-label { color: #9DB8AA !important; }
 [data-theme="dark"] .info-box { background: #1C2E22 !important; border-color: #2A3D30 !important; }
 [data-theme="dark"] .info-box h4 { color: #D4A853 !important; }
+[data-theme="dark"] .evidence-dot.filled { background: #D4A853 !important; border-color: #D4A853 !important; }
+[data-theme="dark"] .evidence-dot.empty { border-color: #4A6A54 !important; }
   `;
 
   const darkStyle = document.createElement('style');
