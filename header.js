@@ -95,6 +95,7 @@ const DARK_MODE_CSS = `
 [data-theme="dark"] .evidence-dot.filled { background: #D4A853 !important; border-color: #D4A853 !important; }
 [data-theme="dark"] .evidence-dot.empty { border-color: #4A6A54 !important; }
 [data-theme="dark"] .trust-item-num { color: #95D5B2 !important; }
+[data-theme="dark"] .mission-block strong { color: #95D5B2 !important; }
   `;
 
   const darkStyle = document.createElement('style');
