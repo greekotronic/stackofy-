@@ -322,5 +322,23 @@
   "tags": "brain longevity",
   "readTime": "10 min",
   "description": "500mg/day improved episodic memory in a 100-person RCT. CDP-choline delivers choline for acetylcholine AND cytidine for synaptic membranes - making it more complete than any other choline supplement."
+}{
+  "title": "Reishi: The Immortality Fungus That Actually Has Science Behind It",
+  "tag": "Reishi",
+  "url": "/articles/reishi-guide.html",
+  "image": "/images/hero-reishi-guide.jpg",
+  "color": "c-reishi",
+  "tags": "longevity immune sleep adaptogen",
+  "readTime": "12 min",
+  "description": "Ganoderma lucidum is the most studied medicinal mushroom on earth. Ganoderic acids, beta-glucans, telomere preservation, and a 2024 RCT. Here is what the science actually shows."
+}{
+  "title": "Cordyceps: The Energy Mushroom With Actual Performance Data",
+  "tag": "Cordyceps",
+  "url": "/articles/cordyceps-guide.html",
+  "image": "/images/hero-cordyceps-guide.jpg",
+  "color": "c-cordyceps",
+  "tags": "longevity energy adaptogen immune",
+  "readTime": "13 min",
+  "description": "Cordyceps activates AMPK, boosts mitochondrial biogenesis, and has real VO2max data from human RCTs. Here is what the science shows - and why species selection matters more than dose."
 }
 ]

@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cordyceps: The Energy Mushroom With Actual Performance Data | Stackofy</title>
+  <meta name="description" content="Cordyceps militaris and sinensis improve VO2max, ATP production, and mitochondrial function. Here is what the clinical data actually shows - and where the marketing lies.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cordyceps: The Energy Mushroom With Actual Performance Data">
+  <meta property="og:description" content="Cordyceps militaris and sinensis improve VO2max, ATP production, and mitochondrial function. Here is what the clinical data actually shows - and where the marketing lies.">
+  <meta property="og:image" content="/images/hero-cordyceps-guide.jpg">
+  <meta property="og:type" content="article">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script src="/header.js"></script>
+
+  <style>
+    :root {
+      --green-dark: #1B4332;
+      --green-mid: #2D6A4F;
+      --green-light: #95D5B2;
+      --gold: #D4A853;
+      --gold-light: #FDF3E0;
+      --bg: #FAF8F4;
+      --surface: #ffffff;
+      --text: #1A1A1A;
+      --text-muted: #666666;
+      --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0F1A14;
+      --surface: #1A2B20;
+      --text: #E8E4DC;
+      --text-muted: #9A9590;
+      --border: #2A3D2E;
+      --gold-light: #1E1A10;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    #progress-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: 3px;
+      background: var(--gold);
+      width: 0%;
+      z-index: 9999;
+      transition: width 0.1s ease;
+    }
+
+    .article-hero {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .article-tag {
+      display: inline-block;
+      background: #B85C00;
+      color: #fff;
+      font-size: 11pt;
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+
+    .article-title {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .article-meta {
+      font-family: 'Arial', sans-serif;
+      font-size: 10pt;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+    }
+
+    /* TL;DR */
+    .tldr-box {
+      background: var(--gold-light);
+      border-left: 4px solid var(--gold);
+      border-radius: var(--radius-sm);
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+
+    [data-theme="dark"] .tldr-box { background: #1E1A10; }
+
+    .tldr-box h3 {
+      font-family: 'Arial', sans-serif;
+      font-size: 10pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .tldr-box ul { padding-left: 20px; }
+
+    .tldr-box ul li {
+      font-family: 'Arial', sans-serif;
+      font-size: 10.5pt;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    /* Body */
+    .article-body h2 {
+      font-size: 1.5rem;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      color: var(--green-dark);
+    }
+
+    [data-theme="dark"] .article-body h2 { color: var(--green-light); }
+
+    .article-body h3 {
+      font-size: 1.15rem;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .article-body p {
+      font-size: 11pt;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    /* Compound Grid */
+    .compound-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
+    }
+
+    .compound-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    [data-theme="dark"] .compound-card { background: #1C2E22; }
+
+    .compound-card .compound-name {
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      font-size: 10pt;
+      color: var(--green-mid);
+      margin-bottom: 8px;
+    }
+
+    [data-theme="dark"] .compound-card .compound-name { color: var(--green-light); }
+
+    .compound-card p { font-size: 10pt; margin: 0; }
+
+    /* Evidence Grid */
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
+    }
+
+    .evidence-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+    }
+
+    [data-theme="dark"] .evidence-card { background: #1C2E22; }
+
+    .evidence-card .label {
+      font-family: 'Arial', sans-serif;
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .evidence-card .value {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--green-mid);
+    }
+
+    .evidence-card .sub {
+      font-family: 'Arial', sans-serif;
+      font-size: 9.5pt;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    /* Species Comparison */
+    .species-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-family: 'Arial', sans-serif;
+      font-size: 10pt;
+    }
+
+    .species-table th {
+      background: var(--green-dark);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .species-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .species-table tr:nth-child(even) td { background: var(--bg); }
+
+    [data-theme="dark"] .species-table tr:nth-child(even) td { background: #141F17; }
+
+    /* Highlight / Warning */
+    .highlight-box {
+      background: #EAF4EE;
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 32px 0;
+      border-left: 4px solid var(--green-mid);
+    }
+
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+
+    .highlight-box p { margin: 0; font-size: 10.5pt; }
+
+    .warning-box {
+      background: #FFF4E0;
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 32px 0;
+      border-left: 4px solid var(--gold);
+    }
+
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+
+    .warning-box p { margin: 0; font-size: 10.5pt; }
+
+    /* Inline Image */
+    .article-image {
+      width: 100%;
+      border-radius: var(--radius);
+      margin: 32px 0;
+      display: block;
+    }
+
+    /* AAF Badge */
+    .aaf-badge {
+      background: var(--gradient);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin: 40px 0;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .aaf-score {
+      font-size: 3rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .aaf-score span { font-size: 1.2rem; opacity: 0.7; }
+
+    .aaf-details h4 {
+      font-family: 'Arial', sans-serif;
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.8;
+      margin-bottom: 6px;
+    }
+
+    .aaf-details p { font-size: 10.5pt; opacity: 0.9; margin: 0; }
+
+    @media (max-width: 600px) {
+      .aaf-badge { flex-direction: column; text-align: center; }
+    }
+
+    /* Dosage Table */
+    .dosage-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-family: 'Arial', sans-serif;
+      font-size: 10pt;
+    }
+
+    .dosage-table th {
+      background: var(--green-dark);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .dosage-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .dosage-table tr:nth-child(even) td { background: var(--bg); }
+
+    [data-theme="dark"] .dosage-table tr:nth-child(even) td { background: #141F17; }
+
+    /* CTA Block */
+    .cta-block {
+      background: var(--gradient);
+      border-radius: var(--radius);
+      padding: 40px 36px;
+      text-align: center;
+      margin: 56px 0;
+      color: #fff;
+    }
+
+    .cta-block h3 { font-size: 1.4rem; margin-bottom: 10px; }
+
+    .cta-block p {
+      font-size: 10.5pt;
+      opacity: 0.85;
+      margin-bottom: 24px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #1A1A1A;
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      font-size: 10.5pt;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .btn-primary:hover { opacity: 0.88; }
+
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      font-weight: 600;
+      font-size: 10.5pt;
+      padding: 14px 28px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+
+    .btn-secondary:hover { border-color: #fff; }
+
+    /* Related */
+    .related-section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .related-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-decoration: none;
+      color: var(--text);
+      transition: box-shadow 0.2s;
+    }
+
+    .related-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+
+    [data-theme="dark"] .related-card { background: #1C2E22; }
+
+    .related-card .r-tag {
+      font-family: 'Arial', sans-serif;
+      font-size: 9pt;
+      text-transform: uppercase;
+      color: var(--green-mid);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .related-card h4 { font-size: 1rem; }
+
+    /* Sources */
+    .sources-section {
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      margin-top: 56px;
+    }
+
+    .sources-section h2 {
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .sources-section ol {
+      padding-left: 20px;
+      font-family: 'Arial', sans-serif;
+      font-size: 9.5pt;
+      color: var(--text-muted);
+    }
+
+    .sources-section li { margin-bottom: 8px; }
+
+    /* Disclaimer */
+    .disclaimer {
+      font-family: 'Arial', sans-serif;
+      font-size: 9pt;
+      color: var(--text-muted);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      margin-top: 40px;
+    }
+
+    [data-theme="dark"] .disclaimer { background: #111A14; }
+
+    /* Sticky CTA */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      background: var(--green-dark);
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+      font-family: 'Arial', sans-serif;
+      font-size: 10pt;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .sticky-cta.visible { transform: translateY(0); }
+
+    .sticky-cta a {
+      background: var(--gold);
+      color: #1A1A1A;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 9.5pt;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 600px) {
+      .sticky-cta { flex-direction: column; gap: 10px; text-align: center; }
+      .article-title { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<img
+  src="/images/hero-cordyceps-guide.jpg"
+  alt="Cordyceps mushroom in forest"
+  class="article-hero"
+  loading="lazy"
+>
+
+<div class="article-container">
+
+  <div class="article-tag">Cordyceps</div>
+  <h1 class="article-title">Cordyceps: The Energy Mushroom With Actual Performance Data</h1>
+  <div class="article-meta">
+    By the ARI Research Team &nbsp;|&nbsp; 13 min read &nbsp;|&nbsp; Energy, Longevity, Adaptogen, Performance
+  </div>
+
+  <!-- TL;DR -->
+  <div class="tldr-box">
+    <h3>TL;DR</h3>
+    <ul>
+      <li>Cordyceps works through a mechanism nobody else in the supplement world talks about honestly: cordycepin mimics AMP and activates AMPK, the master switch of cellular energy metabolism.</li>
+      <li>A 2024 clinical trial showed a 68% increase in cellular ATP production and significant sirtuin activation - the same longevity pathway as NMN and NR.</li>
+      <li>VO2max improvements of +4.8 ml/kg/min after 3 weeks confirmed in a double-blind RCT. Results require at least 3 weeks - one week shows nothing.</li>
+      <li><em>C. militaris</em> is the supplement-viable species. Wild <em>C. sinensis</em> costs more than gold and is largely irrelevant to what you buy in a capsule.</li>
+      <li>Timing matters: take it before training or in the morning. Not at night - it is stimulating, not calming.</li>
+    </ul>
+  </div>
+
+  <div class="article-body">
+
+    <p>
+      The parasite that controls minds. That is literally what Cordyceps does in nature - it infects insects, hijacks their nervous system, forces them to climb to an optimal height, then erupts from their heads to spread spores. If you have watched the opening of The Last of Us, you have seen a fictional version of this.
+    </p>
+    <p>
+      The mushroom you put in a capsule does not do this to humans. What it does do is arguably more interesting from a biochemistry standpoint: it activates one of the most important energy-regulating pathways in the human body through a mechanism that overlaps directly with longevity pharmacology. That connection is still being sorted out by researchers. The performance data, however, is already solid enough to take seriously.
+    </p>
+
+    <h2>Two Species, One Supplement Category</h2>
+
+    <p>
+      The Cordyceps family has over 600 species. Two matter for supplementation:
+    </p>
+
+    <table class="species-table">
+      <thead>
+        <tr>
+          <th>Species</th>
+          <th>Source</th>
+          <th>Key Compounds</th>
+          <th>Verdict</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><em>C. sinensis</em> (wild)</td>
+          <td>Tibetan plateau, 3,000-5,000m altitude, harvested from caterpillar larvae</td>
+          <td>Cordycepin, adenosine, polysaccharides</td>
+          <td>Astronomically expensive, inconsistent quality, mostly hype in the supplement market</td>
+        </tr>
+        <tr>
+          <td><em>C. sinensis</em> Cs-4 (fermented)</td>
+          <td>Lab-fermented mycelium of a specific strain</td>
+          <td>Cordycepin, adenosine</td>
+          <td>The species used in most serious clinical trials. Consistent and bioavailable.</td>
+        </tr>
+        <tr>
+          <td><em>C. militaris</em> (cultivated)</td>
+          <td>Commercially cultivated on grain or liquid substrate</td>
+          <td>Higher cordycepin content than wild sinensis, beta-glucans</td>
+          <td>Best value. Higher active compound load. Most modern research uses this species.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="highlight-box">
+      <p><strong>What this means for buying:</strong> If a label says "Cordyceps sinensis" without specifying Cs-4 or cultivated mycelium, you are almost certainly getting cheap grain-grown material with minimal cordycepin content. If it says "wild Cordyceps sinensis" and costs under 50 euros, it is not what the label claims. <em>C. militaris</em> fruiting body extract is the honest, evidence-backed choice for most people.</p>
+    </div>
+
+    <h2>The Bioactive Compound Profile</h2>
+
+    <div class="compound-grid">
+      <div class="compound-card">
+        <div class="compound-name">Cordycepin (3'-deoxyadenosine)</div>
+        <p>The primary active compound. An adenosine analog - structurally similar enough to adenosine to enter cells through adenosine transporters and activate the same energy-sensing pathways. The main driver of AMPK activation and ATP-related effects.</p>
+      </div>
+      <div class="compound-card">
+        <div class="compound-name">Adenosine</div>
+        <p>Found directly in Cordyceps extracts. Works alongside cordycepin to influence vasodilation, oxygen delivery, and cellular energy signaling. Contributes to the improved exercise tolerance observed in clinical trials.</p>
+      </div>
+      <div class="compound-card">
+        <div class="compound-name">Polysaccharides (Beta-Glucans)</div>
+        <p>The immune-modulating fraction. Cordyceps polysaccharides activate macrophages and natural killer cells, and have shown antioxidant activity relevant to post-exercise recovery and anti-aging applications.</p>
+      </div>
+      <div class="compound-card">
+        <div class="compound-name">Cordycepic Acid</div>
+        <p>One of the first compounds isolated from Cordyceps in 1951. Contributes to anti-inflammatory and metabolic effects. Less studied than cordycepin but part of the full-spectrum activity profile.</p>
+      </div>
+    </div>
+
+    <h2>The AMPK Connection: Where Energy Meets Longevity</h2>
+
+    <p>
+      This is the mechanism that most Cordyceps marketing either gets wrong or ignores entirely. And it is the reason Cordyceps deserves attention beyond basic sports supplementation.
+    </p>
+    <p>
+      Cordycepin enters cells via adenosine transporters. Once inside, it is metabolized into mono-, di-, and triphosphate forms. At sufficient concentrations, these can effectively substitute for cellular adenine nucleotides - the building blocks of ATP. The result: AMPK activation.
+    </p>
+    <p>
+      AMPK is the cellular energy sensor. When energy is low (AMP is high relative to ATP), AMPK switches on catabolic processes: it stimulates glucose uptake, fatty acid oxidation, and - critically - mitochondrial biogenesis. More mitochondria means more ATP production capacity. This is exactly the metabolic adaptation that endurance athletes develop over years of training, and it is what caloric restriction mimetics like metformin and rapamycin target for longevity purposes.
+    </p>
+    <p>
+      Cordycepin activates AMPK pharmacologically, without caloric restriction or pharmaceutical intervention. This places it in a category with berberine and resveratrol as natural AMPK activators - and makes the longevity connection biochemically plausible rather than speculative.
+    </p>
+
+    <img
+      src="/images/cordyceps-mitochondria.jpg"
+      alt="Abstract visualization of mitochondria and ATP energy production"
+      class="article-image"
+      loading="lazy"
+    >
+
+    <h2>The Sirtuin Data: The 2024 Clinical Trial Nobody Talks About</h2>
+
+    <p>
+      A 2024 double-blind, placebo-controlled clinical trial published in <em>International Journal of Molecular Sciences</em> (PMC11049886) investigated a standardized <em>C. sinensis</em> mycelium extract in 40 subjects. The findings were significant enough that they reframe how Cordyceps should be positioned in a longevity stack.
+    </p>
+    <p>
+      The extract significantly increased sirtuin expression: SirT1 up 33%, SirT3 up 10%, SirT6 up 72% versus control. NAD+ synthesis increased by 20% in cell models. Cellular ATP production increased by 68%. In the clinical arm, skin energy values - a validated proxy for mitochondrial activity - improved by 52% at day 28.
+    </p>
+    <p>
+      Sirtuins are the longevity proteins targeted by NMN, NR, and resveratrol supplementation. SirT1 and SirT3 regulate mitochondrial function and oxidative stress response. SirT6 is directly involved in DNA repair and inflammation suppression - and is one of the most interesting anti-aging targets currently under investigation. A 72% increase in SirT6 expression from a mushroom extract is a number worth noting.
+    </p>
+
+    <div class="evidence-grid">
+      <div class="evidence-card">
+        <div class="label">SirT6 Increase (2024 RCT)</div>
+        <div class="value">+72%</div>
+        <div class="sub">vs. control, p &lt; 0.05</div>
+      </div>
+      <div class="evidence-card">
+        <div class="label">ATP Production Increase</div>
+        <div class="value">+68%</div>
+        <div class="sub">in cellular model, same study</div>
+      </div>
+      <div class="evidence-card">
+        <div class="label">VO2max Improvement</div>
+        <div class="value">+4.8</div>
+        <div class="sub">ml/kg/min after 3 weeks (RCT)</div>
+      </div>
+      <div class="evidence-card">
+        <div class="label">Time to Exhaustion</div>
+        <div class="value">+70s</div>
+        <div class="sub">after 3 weeks vs. placebo</div>
+      </div>
+    </div>
+
+    <h2>Exercise Performance: What the RCTs Actually Show</h2>
+
+    <p>
+      Five human intervention studies between 2017 and 2024 have examined Cordyceps and exercise performance, totaling 321 participants. The picture is more nuanced than most supplement sites admit.
+    </p>
+
+    <h3>What Works</h3>
+    <p>
+      In a randomized, double-blind, placebo-controlled trial, subjects taking 4 g/day of a <em>C. militaris</em>-containing mushroom blend showed significantly improved VO2max (+4.8 ml/kg/min, p = 0.042) and ventilatory threshold after 3 weeks. Time to exhaustion improved by 28 seconds after one week and 70 seconds after three weeks. These are meaningful numbers in an athletic context.
+    </p>
+    <p>
+      A separate double-blind trial in healthy elderly subjects (age 50-75) using 3 g/day of Cs-4 for 12 weeks showed improved ventilatory threshold and exercise capacity markers versus placebo. The elderly data is particularly relevant for the longevity use case - VO2max decline with age is one of the strongest predictors of all-cause mortality.
+    </p>
+
+    <h3>What Does Not Work</h3>
+    <p>
+      One week of supplementation showed no significant VO2max improvement in the same trial - the effect requires consistent use over at least 3 weeks. Studies using multi-ingredient formulas where Cordyceps is one of several compounds cannot isolate the Cordyceps contribution. And at least one well-designed trial in endurance-trained cyclists showed no meaningful effect - suggesting that highly trained athletes with already-optimized mitochondrial capacity may see less benefit than recreational exercisers or sedentary individuals.
+    </p>
+
+    <div class="highlight-box">
+      <p><strong>The honest bottom line on performance:</strong> Cordyceps is not a pre-workout stimulant. It does not work acutely. It works over weeks by improving the underlying machinery - mitochondrial density, oxygen utilization efficiency, and ventilatory threshold. If you expect to feel something in the first week, you will be disappointed. If you stay consistent for a month, the data suggests real improvements in aerobic capacity - particularly if your baseline is not already highly trained.</p>
+    </div>
+
+    <img
+      src="/images/cordyceps-powder-capsules.jpg"
+      alt="Cordyceps mushroom powder and capsules"
+      class="article-image"
+      loading="lazy"
+    >
+
+    <h2>Anti-Aging Mechanisms Beyond Performance</h2>
+
+    <p>
+      Performance is the obvious application. The anti-aging angle is less marketed but better mechanistically supported.
+    </p>
+
+    <h3>Antioxidant Enzyme Activation</h3>
+    <p>
+      Research has demonstrated that <em>C. sinensis</em> improves the activity of superoxide dismutase (SOD), glutathione peroxidase (GPx), and catalase (CAT) - the three primary endogenous antioxidant enzymes. It also decreases lipid peroxidation markers in aging models. This is the same profile targeted by ALA and N-acetylcysteine supplementation, but through a different upstream mechanism.
+    </p>
+
+    <h3>Cordycepin and Neurological Aging</h3>
+    <p>
+      Network pharmacology analysis has identified 74 potential targets of cordycepin relevant to Alzheimer's disease, including AKT1, MAPK8, BCL2L1, FOXO3, and CTNNB1. FOXO3 variants are among the most replicated genetic associations with human longevity. That cordycepin influences this pathway is worth tracking as the mechanistic research develops.
+    </p>
+
+    <h3>Immune Modulation</h3>
+    <p>
+      A 2024 randomized controlled trial specifically examined the immune effects of a <em>C. militaris</em> beverage in healthy adults and confirmed meaningful immune response modulation. The beta-glucan fraction drives NK cell and macrophage activation via the same mechanisms as Reishi and Turkey Tail - making Cordyceps a reasonable addition to the immune pillar of a longevity stack even for non-athletes.
+    </p>
+
+    <!-- AAF Badge -->
+    <div class="aaf-badge">
+      <div class="aaf-score">7.4 <span>/10</span></div>
+      <div class="aaf-details">
+        <h4>Anti-Aging Factor Score (AAF)</h4>
+        <p>Strong mechanistic case through AMPK/sirtuin/mitochondrial pathways. Human performance RCT data solid. Docked for still-limited direct human longevity endpoint data and species/quality confusion in the supplement market. Buy <em>C. militaris</em> fruiting body or Cs-4 specifically.</p>
+      </div>
+    </div>
+
+    <h2>Dosage, Timing, and Forms</h2>
+
+    <table class="dosage-table">
+      <thead>
+        <tr>
+          <th>Form</th>
+          <th>Effective Range</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><em>C. militaris</em> fruiting body extract</td>
+          <td>1,000-3,000 mg/day</td>
+          <td>Best option. Look for standardized cordycepin content.</td>
+        </tr>
+        <tr>
+          <td>Cs-4 fermented mycelium</td>
+          <td>3,000 mg/day</td>
+          <td>Used in elderly RCTs. Consistent quality. Slightly lower cordycepin than militaris.</td>
+        </tr>
+        <tr>
+          <td>Generic "Cordyceps sinensis" powder</td>
+          <td>Any dose</td>
+          <td>Avoid. Likely grain-grown mycelium with minimal active compounds.</td>
+        </tr>
+        <tr>
+          <td>Wild <em>C. sinensis</em></td>
+          <td>Any dose</td>
+          <td>Not worth the cost for supplementation. Traditional medicine context only.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      <strong>Timing:</strong> Morning or pre-workout. Cordyceps is energizing through mitochondrial mechanisms - it does not contain caffeine but increases cellular energy availability. Taking it in the evening may interfere with sleep in sensitive individuals. In the ARI personal stack it sits in P2 (breakfast with fat), on a cycling protocol (8 weeks on, 2-4 weeks off) to maintain receptor sensitivity.
+    </p>
+
+    <div class="warning-box">
+      <p><strong>Note on cycling:</strong> The clinical trials ran 3 to 12 weeks. There is no established reason for continuous year-round supplementation, and AMPK signaling pathways can adapt over time. Cycling is the sensible approach. Mark it as (C) in your stack - daily during active blocks, off during rest periods.</p>
+    </div>
+
+    <h2>Stack Position and Synergies</h2>
+
+    <p>
+      Cordyceps fits naturally alongside other mitochondrial-support compounds. With CoQ10, you cover both the upstream (mitochondrial biogenesis via AMPK) and downstream (electron transport chain efficiency) of ATP production simultaneously. With NMN or NR, the NAD+ pathway gets support from two angles - Cordyceps increasing demand signals through AMPK, NMN/NR supplying the substrate.
+    </p>
+    <p>
+      In a mushroom stack context, Cordyceps provides the energy and performance layer while Reishi handles stress and immune regulation, and Lion's Mane covers neurological support. These three together cover the main functional pillars without meaningful overlap or competition for absorption.
+    </p>
+    <p>
+      For the ARI team member stack, Cordyceps is in P2 (breakfast with fat). Fat improves absorption of the lipophilic fractions. Taking it with a meal also avoids the mild gastric irritation some people notice on an empty stomach.
+    </p>
+
+    <!-- CTA Block -->
+    <div class="cta-block">
+      <h3>Build the Right Longevity Stack</h3>
+      <p>The ARI NMN Buyer's Protocol covers how to combine mitochondrial support compounds correctly - dosing, timing, cycling, and what to skip.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-primary" target="_blank" rel="noopener">NMN Buyer's Protocol - $47</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-secondary" target="_blank" rel="noopener">Free NMN Checklist</a>
+      </div>
+    </div>
+
+    <!-- Related -->
+    <div class="related-section">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/articles/reishi-guide.html">
+          <div class="r-tag">Reishi</div>
+          <h4>Reishi: The Immortality Fungus That Actually Has Science Behind It</h4>
+        </a>
+        <a class="related-card" href="/articles/coq10-guide.html">
+          <div class="r-tag">CoQ10</div>
+          <h4>CoQ10: The Mitochondrial Compound Your Body Makes Less of Every Decade</h4>
+        </a>
+        <a class="related-card" href="/articles/lionsmane-guide.html">
+          <div class="r-tag">Lion's Mane</div>
+          <h4>Lion's Mane: The NGF Mushroom and What It Actually Does to Your Brain</h4>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sources -->
+    <div class="sources-section">
+      <h2>Sources</h2>
+      <ol>
+        <li>Hirsch KR et al. Cordyceps militaris improves tolerance to high-intensity exercise after acute and chronic supplementation. <em>J Diet Suppl</em>. 2017;14(1):42-53. PMID: 27408987.</li>
+        <li>Colson SN et al. Cs-4 (Cordyceps sinensis) on exercise performance in healthy older subjects: a double-blind, placebo-controlled trial. <em>J Altern Complement Med</em>. 2005. PMC3110835.</li>
+        <li>Zhu JS et al. Aerobic capacity and respiratory function improvement in healthy elderly: randomized double-blind RCT of Cs-4. <em>Chinese J Integrative Medicine</em>.</li>
+        <li>Lanzetti M et al. NAD-Driven Sirtuin Activation by Cordyceps sinensis Extract: Exploring the Adaptogenic Potential to Promote Skin Longevity. <em>Int J Mol Sci</em>. 2024 Apr 12;25(8):4282. PMC11049886.</li>
+        <li>Ma X et al. Integration of network pharmacology and molecular docking to explore the molecular mechanism of Cordycepin in the treatment of Alzheimer's disease. <em>Front Aging Neurosci</em>. 2022. PMC9817107.</li>
+        <li>Tuli HS et al. Cordycepin (3'-deoxyadenosine) attenuates age-related oxidative stress and ameliorates antioxidant capacity in rats. <em>Exp Gerontol</em>. 2013;48(12):1386-96.</li>
+        <li>Ergogenic Aid by Cordyceps: Does It Work? Narrative review of 5 human RCTs 2017-2024. <em>ResearchGate</em>. 2025.</li>
+        <li>Randomized controlled clinical trial examining effects of a <em>Cordyceps militaris</em> beverage on immune response in healthy adults. <em>Sci Rep</em>. 2024;14:7994.</li>
+      </ol>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for educational purposes only and does not constitute medical advice. The statements on this page have not been evaluated by the FDA or any regulatory authority. Supplements are not intended to diagnose, treat, cure, or prevent any disease. Consult a qualified healthcare professional before starting any supplementation protocol, particularly if you have existing health conditions or take medications.
+    </div>
+
+  </div>
+</div>
+
+<!-- Sticky CTA -->
+<div class="sticky-cta" id="sticky-cta">
+  <span>Want our full mitochondrial stack breakdown?</span>
+  <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" target="_blank" rel="noopener">Get the Protocol - $47</a>
+</div>
+
+<script>
+  window.addEventListener('scroll', function() {
+    const doc = document.documentElement;
+    const scrollTop = doc.scrollTop || document.body.scrollTop;
+    const scrollHeight = doc.scrollHeight - doc.clientHeight;
+    const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    document.getElementById('progress-bar').style.width = pct + '%';
+    const cta = document.getElementById('sticky-cta');
+    if (pct > 30) { cta.classList.add('visible'); }
+    else { cta.classList.remove('visible'); }
+  });
+</script>
+
+</body>
+</html>

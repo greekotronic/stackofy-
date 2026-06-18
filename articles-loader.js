@@ -31,6 +31,8 @@ const COLORS = {
 'c-lthea': 'background:linear-gradient(135deg,#0a1a0a,#1B4332)',
 'c-lions': 'background:linear-gradient(135deg,#1a2a10,#1B4332)',
 'c-cdp': 'background:linear-gradient(135deg,#1a2a4a,#2D4A6B)',
+'c-reishi': 'background:linear-gradient(135deg,#2A1040,#6B2D6B)',
+'c-cordyceps': 'background:linear-gradient(135deg,#3D1A00,#B85C00)',
 };
 
 function makeCard(article, size) {

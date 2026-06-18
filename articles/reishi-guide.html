@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reishi Mushroom: The Immortality Fungus That Actually Has Science Behind It | Stackofy</title>
+  <meta name="description" content="Reishi (Ganoderma lucidum) is the most studied medicinal mushroom on earth. Here is what the research actually shows about longevity, immunity, sleep, and stress.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Reishi Mushroom: The Immortality Fungus That Actually Has Science Behind It">
+  <meta property="og:description" content="Reishi (Ganoderma lucidum) is the most studied medicinal mushroom on earth. Here is what the research actually shows about longevity, immunity, sleep, and stress.">
+  <meta property="og:image" content="/images/hero-reishi-guide.jpg">
+  <meta property="og:type" content="article">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <script src="/header.js"></script>
+
+  <style>
+    :root {
+      --green-dark: #1B4332;
+      --green-mid: #2D6A4F;
+      --green-light: #95D5B2;
+      --gold: #D4A853;
+      --gold-light: #FDF3E0;
+      --bg: #FAF8F4;
+      --surface: #ffffff;
+      --text: #1A1A1A;
+      --text-muted: #666666;
+      --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0F1A14;
+      --surface: #1A2B20;
+      --text: #E8E4DC;
+      --text-muted: #9A9590;
+      --border: #2A3D2E;
+      --gold-light: #1E1A10;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    /* Progress Bar */
+    #progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: var(--gold);
+      width: 0%;
+      z-index: 9999;
+      transition: width 0.1s ease;
+    }
+
+    /* Article Layout */
+    .article-hero {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .article-container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* Tag + Meta */
+    .article-tag {
+      display: inline-block;
+      background: #6B3FA0;
+      color: #fff;
+      font-size: 11pt;
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 12px;
+      border-radius: 4px;
+      margin-bottom: 16px;
+    }
+
+    .article-title {
+      font-size: 2.2rem;
+      line-height: 1.2;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--text);
+    }
+
+    .article-meta {
+      font-family: 'Arial', sans-serif;
+      font-size: 10pt;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+    }
+
+    /* TL;DR Box */
+    .tldr-box {
+      background: var(--gold-light);
+      border-left: 4px solid var(--gold);
+      border-radius: var(--radius-sm);
+      padding: 24px 28px;
+      margin-bottom: 40px;
+    }
+
+    .tldr-box h3 {
+      font-family: 'Arial', sans-serif;
+      font-size: 10pt;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .tldr-box ul {
+      padding-left: 20px;
+    }
+
+    .tldr-box ul li {
+      font-family: 'Arial', sans-serif;
+      font-size: 10.5pt;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    [data-theme="dark"] .tldr-box {
+      background: #1E1A10;
+      border-left-color: var(--gold);
+    }
+
+    /* Body Text */
+    .article-body h2 {
+      font-size: 1.5rem;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      color: var(--green-dark);
+    }
+
+    [data-theme="dark"] .article-body h2 {
+      color: var(--green-light);
+    }
+
+    .article-body h3 {
+      font-size: 1.15rem;
+      margin-top: 32px;
+      margin-bottom: 12px;
+      color: var(--text);
+    }
+
+    .article-body p {
+      font-size: 11pt;
+      margin-bottom: 20px;
+      color: var(--text);
+    }
+
+    .article-body strong {
+      color: var(--text);
+    }
+
+    /* Evidence Grid */
+    .evidence-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
+    }
+
+    .evidence-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .evidence-card .label {
+      font-family: 'Arial', sans-serif;
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .evidence-card .value {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--green-mid);
+    }
+
+    .evidence-card .sub {
+      font-family: 'Arial', sans-serif;
+      font-size: 9.5pt;
+      color: var(--text-muted);
+      margin-top: 6px;
+    }
+
+    [data-theme="dark"] .evidence-card {
+      background: #1C2E22;
+      border-color: var(--border);
+    }
+
+    /* AAF Badge */
+    .aaf-badge {
+      background: var(--gradient);
+      color: #fff;
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin: 40px 0;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .aaf-score {
+      font-size: 3rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .aaf-score span {
+      font-size: 1.2rem;
+      opacity: 0.7;
+    }
+
+    .aaf-details h4 {
+      font-family: 'Arial', sans-serif;
+      font-size: 9pt;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.8;
+      margin-bottom: 6px;
+    }
+
+    .aaf-details p {
+      font-size: 10.5pt;
+      opacity: 0.9;
+      margin: 0;
+    }
+
+    @media (max-width: 600px) {
+      .aaf-badge { flex-direction: column; text-align: center; }
+    }
+
+    /* Highlight Box */
+    .highlight-box {
+      background: #EAF4EE;
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 32px 0;
+      border-left: 4px solid var(--green-mid);
+    }
+
+    [data-theme="dark"] .highlight-box {
+      background: #1A2B20;
+    }
+
+    .highlight-box p {
+      margin: 0;
+      font-size: 10.5pt;
+    }
+
+    /* Warning Box */
+    .warning-box {
+      background: #FFF4E0;
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 32px 0;
+      border-left: 4px solid var(--gold);
+    }
+
+    [data-theme="dark"] .warning-box {
+      background: #2A1010 !important;
+    }
+
+    .warning-box p {
+      margin: 0;
+      font-size: 10.5pt;
+    }
+
+    /* Dosage Table */
+    .dosage-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      font-family: 'Arial', sans-serif;
+      font-size: 10pt;
+    }
+
+    .dosage-table th {
+      background: var(--green-dark);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .dosage-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .dosage-table tr:nth-child(even) td {
+      background: var(--bg);
+    }
+
+    [data-theme="dark"] .dosage-table tr:nth-child(even) td {
+      background: #141F17;
+    }
+
+    /* Compound Cards */
+    .compound-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
+    }
+
+    .compound-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    [data-theme="dark"] .compound-card {
+      background: #1C2E22;
+    }
+
+    .compound-card .compound-name {
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      font-size: 10pt;
+      color: var(--green-mid);
+      margin-bottom: 8px;
+    }
+
+    [data-theme="dark"] .compound-card .compound-name {
+      color: var(--green-light);
+    }
+
+    .compound-card p {
+      font-size: 10pt;
+      margin: 0;
+    }
+
+    /* CTA Block */
+    .cta-block {
+      background: var(--gradient);
+      border-radius: var(--radius);
+      padding: 40px 36px;
+      text-align: center;
+      margin: 56px 0;
+      color: #fff;
+    }
+
+    .cta-block h3 {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+    }
+
+    .cta-block p {
+      font-size: 10.5pt;
+      opacity: 0.85;
+      margin-bottom: 24px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #1A1A1A;
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      font-size: 10.5pt;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .btn-primary:hover { opacity: 0.88; }
+
+    .btn-secondary {
+      background: transparent;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      font-weight: 600;
+      font-size: 10.5pt;
+      padding: 14px 28px;
+      border-radius: 8px;
+      border: 1px solid rgba(255,255,255,0.5);
+      text-decoration: none;
+      transition: border-color 0.2s;
+    }
+
+    .btn-secondary:hover { border-color: #fff; }
+
+    /* Related Articles */
+    .related-section h2 {
+      font-size: 1.3rem;
+      margin-bottom: 24px;
+      color: var(--text);
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .related-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      text-decoration: none;
+      color: var(--text);
+      transition: box-shadow 0.2s;
+    }
+
+    .related-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.1); }
+
+    [data-theme="dark"] .related-card {
+      background: #1C2E22;
+    }
+
+    .related-card .r-tag {
+      font-family: 'Arial', sans-serif;
+      font-size: 9pt;
+      text-transform: uppercase;
+      color: var(--green-mid);
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .related-card h4 {
+      font-size: 1rem;
+    }
+
+    /* Sources */
+    .sources-section {
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      margin-top: 56px;
+    }
+
+    .sources-section h2 {
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .sources-section ol {
+      padding-left: 20px;
+      font-family: 'Arial', sans-serif;
+      font-size: 9.5pt;
+      color: var(--text-muted);
+    }
+
+    .sources-section li {
+      margin-bottom: 8px;
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      font-family: 'Arial', sans-serif;
+      font-size: 9pt;
+      color: var(--text-muted);
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      margin-top: 40px;
+    }
+
+    [data-theme="dark"] .disclaimer {
+      background: #111A14;
+    }
+
+    /* Sticky CTA */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--green-dark);
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 999;
+      font-family: 'Arial', sans-serif;
+      font-size: 10pt;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+
+    .sticky-cta.visible {
+      transform: translateY(0);
+    }
+
+    .sticky-cta a {
+      background: var(--gold);
+      color: #1A1A1A;
+      font-weight: 700;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 9.5pt;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 600px) {
+      .sticky-cta { flex-direction: column; gap: 10px; text-align: center; }
+      .article-title { font-size: 1.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- Hero Image -->
+<img
+  src="/images/hero-reishi-guide.jpg"
+  alt="Reishi mushroom Ganoderma lucidum"
+  class="article-hero"
+  loading="lazy"
+>
+
+<div class="article-container">
+
+  <!-- Tag + Title -->
+  <div class="article-tag">Reishi</div>
+  <h1 class="article-title">Reishi: The Immortality Fungus That Actually Has Science Behind It</h1>
+  <div class="article-meta">
+    By the ARI Research Team &nbsp;|&nbsp; 12 min read &nbsp;|&nbsp; Longevity, Immune, Adaptogen, Sleep
+  </div>
+
+  <!-- TL;DR -->
+  <div class="tldr-box">
+    <h3>TL;DR</h3>
+    <ul>
+      <li>Reishi (<em>Ganoderma lucidum</em>) contains ganoderic acids and beta-glucans that work on multiple longevity pathways simultaneously.</li>
+      <li>It is the only mushroom with solid evidence for telomere preservation, autophagy enhancement, and immune modulation in one compound class.</li>
+      <li>A 2024 RCT showed significant reductions in anxiety, depression, and fatigue in humans at 1,000 mg/day.</li>
+      <li>Sleep benefits are real but dose-dependent: take it at night, not in the morning.</li>
+      <li>Requires a hot-water or dual extract to get both polysaccharides and triterpenoids. Anything less is underdosed marketing.</li>
+    </ul>
+  </div>
+
+  <div class="article-body">
+
+    <p>
+      For 2,000 years, Chinese emperors paid fortunes for it. Taoist monks called it the herb of spiritual potency. Ancient texts documented it as an elixir that could extend life. Every culture that encountered <em>Ganoderma lucidum</em> had the same instinct: this mushroom is different.
+    </p>
+    <p>
+      Here is the uncomfortable truth about traditional medicine: most of it does not survive contact with modern biochemistry. But Reishi is one of the few cases where the mythos actually maps onto plausible mechanisms. Not because of magic. Because of ganoderic acids, beta-glucans, and what these molecules demonstrably do inside aging biology.
+    </p>
+    <p>
+      This is not a supplement for people who want a quick fix. Reishi is slow, systemic, and requires the right form to do anything at all. Which is exactly why most products on the market are a waste of money.
+    </p>
+
+    <h2>What Is Reishi?</h2>
+
+    <p>
+      <em>Ganoderma lucidum</em> is a large, hard-shelled fungus native to Asia. "Lucidus" is Latin for shiny - and the mushroom lives up to it, with its distinctive glossy, lacquered exterior. In China it is called Lingzhi ("herb of spiritual potency"), in Japan Reishi or Mannentake ("10,000 year mushroom"), in Korea Youngzhi.
+    </p>
+    <p>
+      It does not taste good. It is intensely bitter. This is not a culinary mushroom - it is a medicinal mushroom, meaning the entire point is the bioactive compound load, not the flavor. Archaeological evidence places its medicinal use as far back as 6,800 years ago, making it one of the oldest continuously used botanical medicines on earth.
+    </p>
+
+    <h2>The Bioactive Compound Profile</h2>
+
+    <p>
+      Reishi contains over 400 identified bioactive compounds. The longevity-relevant ones cluster into two main classes:
+    </p>
+
+    <div class="compound-grid">
+      <div class="compound-card">
+        <div class="compound-name">Triterpenoids (Ganoderic Acids)</div>
+        <p>Over 150 different triterpenes, particularly ganoderic acids A, B, C1, D, and T. Fat-soluble. Found primarily in the fruiting body. Responsible for the bitter taste. The longevity and neuroprotective mechanisms run through this compound class.</p>
+      </div>
+      <div class="compound-card">
+        <div class="compound-name">Polysaccharides (Beta-Glucans)</div>
+        <p>Water-soluble beta-1,3 and beta-1,6 D-glucans. The primary immune-modulating fraction. Reishi Polysaccharide Fraction 3 (RF3) and polysaccharides I through IV have all shown lifespan extension activity in model organisms.</p>
+      </div>
+      <div class="compound-card">
+        <div class="compound-name">Ganodermasides A, B, C, D</div>
+        <p>Structurally unique compounds only found in <em>G. lucidum</em>. Some have been shown to induce yeast lifespan extension. Still under active investigation for human translation.</p>
+      </div>
+      <div class="compound-card">
+        <div class="compound-name">Sterols, Peptides, Phenolics</div>
+        <p>Supporting antioxidant load. Contribute to the overall anti-inflammatory and free radical scavenging activity without being the primary mechanism drivers.</p>
+      </div>
+    </div>
+
+    <div class="highlight-box">
+      <p><strong>Why this matters for supplement selection:</strong> Polysaccharides are water-soluble. Triterpenoids require alcohol or heat extraction. A product that only uses one method delivers half the compound profile. Always look for "dual extract" or "hot-water and ethanol extract" on the label.</p>
+    </div>
+
+    <h2>Longevity Mechanisms: What the Research Actually Shows</h2>
+
+    <p>
+      This is where Reishi separates itself from most adaptogens. The longevity data is not marketing language - it is mechanistic.
+    </p>
+
+    <h3>Telomere Preservation</h3>
+    <p>
+      A study published in Frontiers in Aging Neuroscience found that long-term administration of Ganoderma triterpenoids (TGL) mitigated age-associated brain decline in aging mice. The proposed mechanism included telomere length preservation - one of the central hallmarks of biological aging. Ganoderic acid A was identified as the likely active constituent in Alzheimer's disease models, potentially acting through regulation of sphingolipid metabolism alongside telomere support.
+    </p>
+
+    <h3>Autophagy Enhancement</h3>
+    <p>
+      The same Frontiers research identified enhanced autophagy as a secondary mechanism. Autophagy is the cell's self-cleaning process - the degradation and recycling of damaged proteins and organelles. It is a core target in longevity pharmacology. Reishi triterpenoids appear to support this pathway, which would explain the observed improvements in organ function and the reduction of pathological metabolites in aging tissue.
+    </p>
+
+    <h3>Immunosenescence Delay</h3>
+    <p>
+      Immune decline with age (immunosenescence) is one of the major contributors to age-related disease and all-cause mortality. A 2024 study in <em>British Journal of Nutrition</em> found that Reishi dry extract supplementation modulated T lymphocyte function in older women. Clinical research has consistently validated Reishi's ability to influence key immune markers including T lymphocyte subsets and natural killer cell activity.
+    </p>
+
+    <h3>Mitochondrial Protection</h3>
+    <p>
+      Reishi triterpenoids suppress pro-inflammatory NF-kB signaling and protect mitochondrial membrane integrity. Mitochondrial dysfunction is one of the nine established hallmarks of aging. The cardioprotective effects of Reishi observed in animal models likely run through this pathway.
+    </p>
+
+    <div class="evidence-grid">
+      <div class="evidence-card">
+        <div class="label">Years of Traditional Use</div>
+        <div class="value">2,000+</div>
+        <div class="sub">Documented in Shen Nong's Herbal Classic, 100 BC</div>
+      </div>
+      <div class="evidence-card">
+        <div class="label">Identified Bioactive Compounds</div>
+        <div class="value">400+</div>
+        <div class="sub">Most studied medicinal mushroom on earth</div>
+      </div>
+      <div class="evidence-card">
+        <div class="label">Human RCT (2024)</div>
+        <div class="value">1g/day</div>
+        <div class="sub">Significant reductions in anxiety, depression, fatigue over 30 days</div>
+      </div>
+      <div class="evidence-card">
+        <div class="label">Safe Duration (Evidence)</div>
+        <div class="value">12 mo</div>
+        <div class="sub">Oral supplementation assessed as likely safe up to one year</div>
+      </div>
+    </div>
+
+    <!-- AAF Badge -->
+    <div class="aaf-badge">
+      <div class="aaf-score">7.8 <span>/10</span></div>
+      <div class="aaf-details">
+        <h4>Anti-Aging Factor Score (AAF)</h4>
+        <p>Strong multi-pathway longevity evidence. Docked for limited large-scale human RCT data on aging endpoints specifically. Best evidence base of any medicinal mushroom. Extract quality is the critical variable.</p>
+      </div>
+    </div>
+
+    <h2>Immune Modulation: Not Just "Boosting"</h2>
+
+    <p>
+      The supplement industry loves the word "immune booster." It is also meaningless. A hyperactive immune system causes autoimmune disease. A suppressed one leaves you vulnerable to infection and cancer. What you actually want is a well-regulated immune system.
+    </p>
+    <p>
+      This is where Reishi's mechanism is actually interesting: it is an immune modulator, not a stimulant. Beta-glucans in Reishi activate macrophages, natural killer cells, and dendritic cells - the innate immune front line - while also supporting T lymphocyte regulation. The net effect is a more responsive immune system without the systemic inflammation that comes from indiscriminate activation.
+    </p>
+    <p>
+      A randomized controlled trial evaluated beta-1,3/1,6 D-glucans from <em>G. lucidum</em> in healthy adult volunteers and confirmed meaningful immune modulation. For anyone over 45, where immunosenescence is already measurable, this is directly relevant.
+    </p>
+
+    <h2>Sleep and Stress: The Shen Tonic Explanation</h2>
+
+    <p>
+      Traditional Chinese Medicine classifies Reishi as a "shen tonic" - shen meaning spirit or consciousness. The intended effect was calming, sleep-promoting, and anxiety-reducing. For two millennia, this was attributed to energetic properties. Modern biochemistry has a better explanation.
+    </p>
+    <p>
+      Reishi triterpenoids appear to inhibit overactivated microglia - the brain's resident immune cells. When microglia are chronically activated by stress, they generate inflammatory signals that directly impair mood regulation and sleep quality. Reishi appears to quiet this neuroinflammatory process at a mechanistic level.
+    </p>
+    <p>
+      Additionally, Reishi influences GABA and serotonin pathways, which govern sleep architecture. Animal models have consistently shown reduced sleep latency (time to fall asleep) and extended sleep duration with Reishi extract.
+    </p>
+
+    <div class="highlight-box">
+      <p><strong>The 2024 human RCT:</strong> A double-blind, randomized, placebo-controlled trial published in <em>International Journal of Medicinal Mushrooms</em> (Mitra et al., PMID: 39241163) enrolled 78 female college students under psychological stress. After 30 days of 1,000 mg/day of <em>G. lucidum</em>, the Reishi group showed significantly improved scores across validated measures of anxiety, depression, vitality, and positive well-being. This is the most rigorous human stress/mood data currently available for Reishi.</p>
+    </div>
+
+    <h2>What the Evidence Does Not Support</h2>
+
+    <p>
+      Intellectual honesty requires this section.
+    </p>
+    <p>
+      Blood sugar and lipid lowering effects seen in animal and in vitro models have not translated consistently into human trials. One older study in healthy adults showed a slight trend toward lower lipid levels, but it was not statistically significant. Do not take Reishi expecting cholesterol changes - the mechanism may exist but the clinical data does not confirm it in otherwise healthy people.
+    </p>
+    <p>
+      Anticancer claims are premature for human application. Ganoderic acid T caused mitochondrial dysfunction in lung tumor cells in vitro. Interesting biology. Not a treatment. Not a prevention strategy with confirmed human evidence. Anyone marketing Reishi as an anticancer supplement is selling you a preclinical observation dressed as a clinical conclusion.
+    </p>
+
+    <div class="warning-box">
+      <p><strong>Liver note:</strong> Rare cases of liver toxicity have been reported with powdered Reishi mushroom preparations, distinct from water-based extracts. If you have existing liver conditions or take hepatotoxic medications, check with your doctor. The signal is small but real enough to mention.</p>
+    </div>
+
+    <h2>Dosage and Forms</h2>
+
+    <p>
+      This is where most Reishi products fail before they even reach the customer.
+    </p>
+
+    <table class="dosage-table">
+      <thead>
+        <tr>
+          <th>Form</th>
+          <th>Effective Range</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Hot-water extract (fruiting body)</td>
+          <td>1,000-3,000 mg/day</td>
+          <td>Delivers polysaccharides. Dual extract preferred.</td>
+        </tr>
+        <tr>
+          <td>Dual extract (water + ethanol)</td>
+          <td>500-1,500 mg/day</td>
+          <td>Higher potency per mg. Best option overall.</td>
+        </tr>
+        <tr>
+          <td>Dried whole mushroom powder</td>
+          <td>3-9 g/day (TCM range)</td>
+          <td>Low bioavailability. Not recommended for supplementation goals.</td>
+        </tr>
+        <tr>
+          <td>Mycelium-only products</td>
+          <td>Any dose</td>
+          <td>Avoid. Typically high starch, low active compound content.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>
+      The 2024 human RCT used 1,000 mg/day of whole mushroom extract. For sleep, take Reishi 60-90 minutes before bed. For immune and longevity purposes, morning or evening both work. It is in the ARI team's P5 (evening) stack, which makes sense given its calming and sleep-supportive profile.
+    </p>
+
+    <h3>Quality Markers to Look For</h3>
+    <p>
+      Check for beta-glucan content on the label (target above 20%). Avoid products that only list "polysaccharides" without specifying beta-glucans - polysaccharides include starch, which is useless. Fruiting body sourcing matters; mycelium grown on grain is primarily grain. Third-party testing for heavy metals is not optional for mushroom products - they bioaccumulate.
+    </p>
+
+    <h2>Synergies and Stack Position</h2>
+
+    <p>
+      Reishi pairs logically with other longevity fundamentals. With NMN or NR, you get mitochondrial support from multiple angles. With Ashwagandha, the adaptogenic and cortisol-lowering effects compound. With Lion's Mane, you cover neurological and neuroprotective ground simultaneously - which is why a Mushroom Protocol combining these three makes structural sense.
+    </p>
+    <p>
+      For the ARI personal stack, Reishi sits in P5 (evening, at home) together with Glycine, Apigenin, and Melatonin. The rationale is clear: all four work on sleep architecture and nervous system downregulation, and none compete for absorption in meaningful ways.
+    </p>
+    <p>
+      One note on cycling: Reishi is marked as a cycle supplement (C) in the ARI stack. Given that the 2024 RCT showed effects after 30 days, a standard approach is 8 weeks on, 2-4 weeks off, repeating. There is no established toxicity at this frequency but continuous year-round dosing is not necessary and may reduce receptor sensitivity over time.
+    </p>
+
+    <!-- CTA Block -->
+    <div class="cta-block">
+      <h3>Build Your Longevity Stack Correctly</h3>
+      <p>The ARI NMN Buyer's Protocol covers supplement sourcing, quality markers, and stack sequencing for the serious longevity stack. Free checklist available.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-primary" target="_blank" rel="noopener">NMN Buyer's Protocol - $47</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-secondary" target="_blank" rel="noopener">Free NMN Checklist</a>
+      </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="related-section">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <a class="related-card" href="/articles/lionsmane-guide.html">
+          <div class="r-tag">Lion's Mane</div>
+          <h4>Lion's Mane: The NGF Mushroom and What It Actually Does to Your Brain</h4>
+        </a>
+        <a class="related-card" href="/articles/ashwagandha-guide.html">
+          <div class="r-tag">Ashwagandha</div>
+          <h4>Ashwagandha: The Adaptogen With an Actual Cortisol Data Set</h4>
+        </a>
+        <a class="related-card" href="/articles/sleep-stack.html">
+          <div class="r-tag">Sleep Protocol</div>
+          <h4>The ARI Sleep Stack: Everything That Works, Nothing That Doesn't</h4>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sources -->
+    <div class="sources-section">
+      <h2>Sources</h2>
+      <ol>
+        <li>Lai G et al. Long-Term Administration of Triterpenoids From <em>Ganoderma lucidum</em> Mitigates Age-Associated Brain Physiological Decline via Regulating Sphingolipid Metabolism and Enhancing Autophagy in Mice. <em>Frontiers in Aging Neuroscience</em>. 2021. PMC8134542.</li>
+        <li>Mitra S et al. Effects of <em>Ganoderma lucidum</em> supplementation on psychological stress, anxiety, and well-being in college students. <em>Int J Med Mushrooms</em>. 2024. PMID: 39241163.</li>
+        <li>Iser-Bem PN et al. <em>Ganoderma lucidum</em> dry extract supplementation modulates T lymphocyte function in older women. <em>Br J Nutr</em>. 2024 Jul 28;132(2):130-40.</li>
+        <li>Chen SN et al. Evaluation of immune modulation by beta-1,3; 1,6 D-glucan derived from <em>Ganoderma lucidum</em> in healthy adult volunteers. <em>Foods</em>. 2023 Feb 3;12(3).</li>
+        <li>Wachtel-Galor S et al. Ganoderma lucidum (Lingzhi or Reishi). In: Benzie IFF, Wachtel-Galor S, editors. Herbal Medicine: Biomolecular and Clinical Aspects. 2nd ed. CRC Press; 2011. Chapter 9. NBK92757.</li>
+        <li>Ahmad MF et al. Emerging Roles of <em>Ganoderma lucidum</em> in Anti-Aging. <em>PMC</em>. 2018. PMC5758346.</li>
+        <li>Abulizi A et al. Significant role of bioactive compounds of <em>Ganoderma lucidum</em> in the aging process. ResearchGate. 2025.</li>
+        <li>Tinsley G, Ajmera R. 6 Benefits of Reishi Mushroom. <em>Healthline</em>. Updated May 2025.</li>
+        <li>Gonzalez G, Mathena L. What is Reishi? <em>Life Extension Magazine</em>. January 2025.</li>
+      </ol>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for educational purposes only and does not constitute medical advice. The statements on this page have not been evaluated by the FDA or any regulatory authority. Supplements are not intended to diagnose, treat, cure, or prevent any disease. Consult a qualified healthcare professional before starting any supplementation protocol, particularly if you have existing health conditions or take medications.
+    </div>
+
+  </div><!-- /article-body -->
+</div><!-- /article-container -->
+
+<!-- Sticky CTA -->
+<div class="sticky-cta" id="sticky-cta">
+  <span>Want our full longevity stack breakdown?</span>
+  <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" target="_blank" rel="noopener">Get the Protocol - $47</a>
+</div>
+
+<script>
+  // Progress Bar
+  window.addEventListener('scroll', function() {
+    const doc = document.documentElement;
+    const scrollTop = doc.scrollTop || document.body.scrollTop;
+    const scrollHeight = doc.scrollHeight - doc.clientHeight;
+    const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    document.getElementById('progress-bar').style.width = pct + '%';
+
+    // Sticky CTA appears after 30% scroll
+    const cta = document.getElementById('sticky-cta');
+    if (pct > 30) {
+      cta.classList.add('visible');
+    } else {
+      cta.classList.remove('visible');
+    }
+  });
+</script>
+
+</body>
+</html>

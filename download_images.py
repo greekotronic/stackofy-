@@ -19,190 +19,103 @@ IMAGES_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "images")
 
 IMAGES = [
 
-    # ── FOUNDATION STACK ──────────────────────────────────────────────────
+    # ── REISHI ────────────────────────────────────────────────────────────
     {
-        "file": "hero-foundation-stack.jpg",
+        "file": "hero-reishi-guide.jpg",
         "w": 1216, "h": 704,
-        "prompt": "overhead flat lay vitamin D3 K2 capsules magnesium tablets omega-3 fish oil bottles on dark wet slate, soft gold side lighting, editorial supplement photography, deep forest green tones, cinematic"
+        "prompt": "Reishi mushroom Ganoderma lucidum growing on dark mossy log in forest, wide cinematic 16:9 composition, moody atmospheric forest light, rich deep red and earthy tones, editorial nature photography"
     },
     {
-        "file": "foundation-stack-nutrients.jpg",
+        "file": "reishi-dried-powder.jpg",
         "w": 900, "h": 420,
-        "prompt": "macro close-up vitamin D3 capsules with soft sunlight casting golden shadows on dark stone surface, minimal editorial supplement photography, warm gold and green tones"
+        "prompt": "dried reishi mushroom slices and dark red powder in black ceramic bowl on dark wet slate, wide 16:9 composition, warm amber side lighting, minimal editorial botanical photography"
     },
     {
-        "file": "foundation-stack-sun.jpg",
+        "file": "reishi-immune-cells.jpg",
         "w": 900, "h": 420,
-        "prompt": "sunlight streaming through forest leaves creating vitamin D concept, nature longevity health, deep forest green tones, editorial lifestyle photography, soft golden light"
+        "prompt": "abstract visualization of glowing immune cells and natural killer cells in bloodstream, wide cinematic 16:9 composition, gold and deep green bioluminescent quality, dark background, scientific editorial aesthetic"
     },
 
-    # ── ANTI-AGING STACK ──────────────────────────────────────────────────
+    # ── CORDYCEPS ─────────────────────────────────────────────────────────
     {
-        "file": "hero-antiaging-stack.jpg",
+        "file": "hero-cordyceps-guide.jpg",
         "w": 1216, "h": 704,
-        "prompt": "elegant dark glass bottles NMN resveratrol CoQ10 supplements arranged on dark stone surface, longevity anti-aging concept, dramatic gold side lighting, premium editorial product photography, deep green tones"
+        "prompt": "Cordyceps mushroom growing on dark forest floor with dramatic side lighting, wide cinematic 16:9 composition, deep orange and earthy tones, moody atmospheric editorial nature photography"
     },
     {
-        "file": "antiaging-stack-cells.jpg",
+        "file": "cordyceps-powder-capsules.jpg",
         "w": 900, "h": 420,
-        "prompt": "abstract macro visualization glowing mitochondria and DNA strands, gold and green bioluminescent quality, dark background, longevity cellular aging concept, scientific editorial aesthetic"
+        "prompt": "cordyceps mushroom powder and capsules arranged on dark stone surface, wide 16:9 composition, warm gold side lighting, minimal editorial supplement photography"
     },
     {
-        "file": "antiaging-stack-foods.jpg",
+        "file": "cordyceps-mitochondria.jpg",
         "w": 900, "h": 420,
-        "prompt": "overhead flat lay resveratrol rich foods red grapes dark berries nuts on dark slate, anti-aging superfoods concept, editorial food photography, deep green gold tones"
+        "prompt": "abstract visualization of glowing mitochondria producing ATP energy, wide cinematic 16:9 composition, deep orange and gold bioluminescent quality, dark background, scientific editorial aesthetic"
     },
 
-    # ── SLEEP STACK ───────────────────────────────────────────────────────
+    # ── CHAGA ─────────────────────────────────────────────────────────────
     {
-        "file": "hero-sleep-stack.jpg",
+        "file": "hero-chaga-guide.jpg",
         "w": 1216, "h": 704,
-        "prompt": "moody close-up magnesium glycinate capsules and chamomile flowers on dark slate, soft moonlight blue and green tones, calm atmospheric editorial photography, sleep supplement concept"
+        "prompt": "Chaga mushroom conk on birch tree bark in winter forest, wide cinematic 16:9 composition, dark moody tones, snow dusted bark, dramatic side lighting, editorial nature photography"
     },
     {
-        "file": "sleep-stack-calm.jpg",
+        "file": "chaga-chunks-tea.jpg",
         "w": 900, "h": 420,
-        "prompt": "dark ceramic cup warm herbal tea with soft evening candlelight on dark wood surface, calm nighttime ritual, editorial lifestyle photography, blue green tones"
+        "prompt": "rough dark chaga mushroom chunks and dark amber tea in black ceramic cup on slate surface, wide 16:9 composition, warm side lighting, minimal editorial botanical photography"
     },
     {
-        "file": "sleep-stack-night.jpg",
+        "file": "chaga-antioxidant.jpg",
         "w": 900, "h": 420,
-        "prompt": "abstract visualization calm brain waves and sleep cycle concept, dark background, soft blue green bioluminescent glow, scientific editorial aesthetic, peaceful"
+        "prompt": "abstract visualization of antioxidant molecules neutralizing free radicals, wide cinematic 16:9 composition, deep amber and gold bioluminescent quality, dark background, scientific editorial aesthetic"
     },
 
-    # ── BRAIN STACK ───────────────────────────────────────────────────────
+    # ── TURKEY TAIL ───────────────────────────────────────────────────────
     {
-        "file": "hero-brain-stack.jpg",
+        "file": "hero-turkeytail-guide.jpg",
         "w": 1216, "h": 704,
-        "prompt": "abstract macro glowing neural connections and brain synapses, deep forest green and gold bioluminescent quality, dark background, cognitive performance concept, scientific editorial aesthetic"
+        "prompt": "Turkey tail mushroom Trametes versicolor fan-shaped bracket fungi on mossy log, wide cinematic 16:9 composition, rich multicolor brown gold teal tones, soft forest light, editorial nature photography"
     },
     {
-        "file": "brain-stack-focus.jpg",
+        "file": "turkeytail-closeup.jpg",
         "w": 900, "h": 420,
-        "prompt": "overhead flat lay lion's mane mushroom omega-3 capsules and walnuts on dark slate, brain health foods, soft gold side lighting, editorial food photography, minimal"
+        "prompt": "extreme macro close-up of turkey tail mushroom surface showing concentric color bands, wide 16:9 composition, warm forest light, editorial botanical photography, detailed texture"
     },
     {
-        "file": "brain-stack-neurons.jpg",
+        "file": "turkeytail-gut-microbiome.jpg",
         "w": 900, "h": 420,
-        "prompt": "dramatic macro close-up lion's mane mushroom on dark wet slate, white neural-like tendrils, editorial food photography, deep forest green and gold tones, scientific beauty"
+        "prompt": "abstract visualization of healthy gut microbiome with glowing beneficial bacteria, wide cinematic 16:9 composition, teal and gold bioluminescent quality, dark background, scientific editorial aesthetic"
     },
 
-    # ── BIOHACKER COFFEE ──────────────────────────────────────────────────
+    # ── MAITAKE ───────────────────────────────────────────────────────────
     {
-        "file": "hero-biohacker-coffee.jpg",
+        "file": "hero-maitake-guide.jpg",
         "w": 1216, "h": 704,
-        "prompt": "dramatic overhead shot dark ceramic mug steaming coffee on black slate, coconut oil cinnamon sticks raw cacao powder cardamom pods arranged around it, soft morning gold light, editorial food photography, moody premium"
+        "prompt": "Maitake hen of the woods mushroom cluster on forest floor, wide cinematic 16:9 composition, rich earthy brown and forest green tones, soft dramatic side lighting, editorial nature photography"
     },
     {
-        "file": "coffee-ingredients-flatlay.jpg",
+        "file": "maitake-fresh-closeup.jpg",
         "w": 900, "h": 420,
-        "prompt": "flat lay biohacker coffee ingredients coconut oil glass jar dark cacao powder cinnamon sticks cardamom pods collagen powder on dark stone surface, warm amber side lighting, minimal editorial style"
+        "prompt": "fresh maitake mushroom fronds arranged on dark wet slate surface, wide 16:9 composition, soft gold side lighting, editorial food photography, minimal and moody"
     },
     {
-        "file": "coffee-thermos-morning.jpg",
+        "file": "maitake-blood-sugar.jpg",
         "w": 900, "h": 420,
-        "prompt": "sleek dark thermos flask next to specialty coffee bag on wooden desk with morning light streaming in, minimalist lifestyle photography, warm tones, premium editorial"
+        "prompt": "abstract visualization of stable blood glucose curve as smooth glowing line graph, wide cinematic 16:9 composition, deep green and gold tones, dark background, scientific editorial aesthetic"
     },
 
-    # ── PERSONAL STACK ────────────────────────────────────────────────────
+    # ── MUSHROOM PROTOCOL ─────────────────────────────────────────────────
     {
-        "file": "hero-personal-stack.jpg",
+        "file": "hero-mushroom-protocol.jpg",
         "w": 1216, "h": 704,
-        "prompt": "overhead flat lay weekly pill organizer filled with supplements next to notebook with handwritten notes, coffee thermos and reading glasses on dark slate, warm morning light, editorial lifestyle photography"
+        "prompt": "six different medicinal mushrooms reishi chaga turkey tail lion's mane cordyceps maitake arranged dramatically on dark wet slate, wide cinematic 16:9 composition, gold side lighting, premium editorial food photography"
     },
     {
-        "file": "personal-stack-morning.jpg",
+        "file": "mushroom-protocol-stack.jpg",
         "w": 900, "h": 420,
-        "prompt": "five small groups of supplements arranged in a row on dark stone surface each group with small handwritten label card, soft gold morning side lighting, organized intentional lifestyle photography"
-    },
-    {
-        "file": "personal-stack-ai-research.jpg",
-        "w": 900, "h": 420,
-        "prompt": "dark laptop screen with scientific papers supplement research, handwritten notes beside it, coffee cup, warm evening light, minimal editorial aesthetic, research concept"
+        "prompt": "overhead flat lay of six dark supplement capsule bottles labeled with mushroom names on dark slate surface, wide 16:9 composition, soft gold lighting, minimal editorial product photography"
     },
 
-    # ── REDUNDANT STACKS ──────────────────────────────────────────────────
-    {
-        "file": "hero-redundant-stacks.jpg",
-        "w": 1216, "h": 704,
-        "prompt": "overhead flat lay many supplement capsules and pills in various colors scattered on dark slate, editorial style, dark moody lighting, gold and green accents, some crossed out"
-    },
-    {
-        "file": "stack-audit-table.jpg",
-        "w": 900, "h": 420,
-        "prompt": "two identical supplement bottles side by side on dark surface, one with checkmark and one with X, clean editorial product photography, dark background, minimal"
-    },
-    {
-        "file": "smart-stack-simple.jpg",
-        "w": 900, "h": 420,
-        "prompt": "three elegant minimalist supplement bottles arranged in a triangle on dark stone surface, soft gold side lighting, less is more concept, premium editorial aesthetic"
-    },
-
-    # ── ASHWAGANDHA ───────────────────────────────────────────────────────
-    {
-        "file": "hero-ashwagandha.jpg",
-        "w": 1216, "h": 704,
-        "prompt": "dramatic macro close-up of ashwagandha root and powder in dark ceramic bowl on dark slate, warm amber side lighting, editorial food photography, deep forest green and gold tones, moody and scientific"
-    },
-    {
-        "file": "ashwagandha-root-plant.jpg",
-        "w": 900, "h": 420,
-        "prompt": "overhead flat lay of dried ashwagandha roots orange berries and green leaves on dark wet stone surface, botanical editorial photography, warm gold side lighting, minimal"
-    },
-    {
-        "file": "ashwagandha-stress-calm.jpg",
-        "w": 900, "h": 420,
-        "prompt": "abstract visualization of calm cortisol wave pattern descending, dark background, soft blue and green tones, scientific editorial aesthetic, stress reduction concept"
-    },
-
-    # ── L-THEANINE ────────────────────────────────────────────────────────
-    {
-        "file": "hero-ltheanine.jpg",
-        "w": 1216, "h": 704,
-        "prompt": "dramatic macro close-up of fresh green tea leaves and small ceramic cup of matcha on dark wet slate, soft morning gold light, editorial food photography, deep forest green tones, calm and focused"
-    },
-    {
-        "file": "ltheanine-green-tea.jpg",
-        "w": 900, "h": 420,
-        "prompt": "overhead flat lay green tea leaves loose leaf matcha powder and small ceramic teapot on dark stone surface, editorial food photography, soft diffused light, minimal and serene"
-    },
-    {
-        "file": "ltheanine-brain-waves.jpg",
-        "w": 900, "h": 420,
-        "prompt": "abstract visualization of alpha brain waves as calm glowing green sine waves on dark background, peaceful and focused, scientific editorial aesthetic, bioluminescent quality"
-    },
-    # ── LION'S MANE ───────────────────────────────────────────────────────
-    {
-        "file": "hero-lionsmane.jpg",
-        "w": 1216, "h": 704,
-        "prompt": "dramatic macro close-up of fresh lion's mane mushroom with white cascading tendrils on dark wet slate, soft gold side lighting, editorial food photography, deep forest green tones, scientific beauty"
-    },
-    {
-        "file": "lionsmane-dried.jpg",
-        "w": 900, "h": 420,
-        "prompt": "overhead flat lay of dried lion's mane mushroom pieces and powder in dark ceramic bowl on dark stone surface, warm amber side lighting, botanical editorial photography, minimal"
-    },
-    {
-        "file": "lionsmane-neurons.jpg",
-        "w": 900, "h": 420,
-        "prompt": "abstract visualization of nerve growth factor stimulating neuron branching and growth, glowing gold tendrils on dark green background, bioluminescent quality, scientific editorial aesthetic"
-    },
-    # ── CDP-CHOLINE ───────────────────────────────────────────────────────
-    {
-        "file": "hero-cdpcholine.jpg",
-        "w": 1216, "h": 704,
-        "prompt": "dramatic macro close-up of dark glass supplement bottle with capsules spilling on dark slate, soft gold side lighting, editorial product photography, deep forest green and gold tones, premium and scientific"
-    },
-    {
-        "file": "cdpcholine-brain-acetylcholine.jpg",
-        "w": 900, "h": 420,
-        "prompt": "abstract visualization of acetylcholine neurotransmitter molecules at a synapse, glowing blue and gold on dark background, bioluminescent quality, scientific editorial aesthetic, neurotransmission concept"
-    },
-    {
-        "file": "cdpcholine-foods.jpg",
-        "w": 900, "h": 420,
-        "prompt": "overhead flat lay of eggs liver broccoli and sunflower seeds on dark stone surface, natural choline food sources, soft gold side lighting, editorial food photography, minimal"
-    },
 ]
 
 
@@ -210,7 +123,7 @@ def download_image(img_data, images_dir, max_retries=3):
     filepath = os.path.join(images_dir, img_data["file"])
 
     if os.path.exists(filepath):
-        print(f"  ⏭  Exists, skipping: {img_data['file']}")
+        print(f"  Exists, skipping: {img_data['file']}")
         return True
 
     prompt_encoded = urllib.parse.quote(img_data["prompt"])
@@ -220,11 +133,11 @@ def download_image(img_data, images_dir, max_retries=3):
         url = (
             f"https://image.pollinations.ai/prompt/{prompt_encoded}"
             f"?width={img_data['w']}&height={img_data['h']}"
-            f"&model=flux&seed={seed}&nologo=true&aspect_ratio=16:9"
+            f"&model=flux&seed={seed}&nologo=true"
         )
         try:
             if attempt > 1:
-                print(f"  ↻  Retry {attempt}/{max_retries}: {img_data['file']}")
+                print(f"  Retry {attempt}/{max_retries}: {img_data['file']}")
             headers = {
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
                 "Accept": "image/jpeg,image/*",
@@ -233,21 +146,21 @@ def download_image(img_data, images_dir, max_retries=3):
             with urllib.request.urlopen(req, timeout=90) as response:
                 data = response.read()
                 if len(data) < 5000:
-                    print(f"  ✗  Response too small ({len(data)} bytes), retrying...")
+                    print(f"  Response too small ({len(data)} bytes), retrying...")
                     time.sleep(3)
                     continue
                 with open(filepath, "wb") as f:
                     f.write(data)
-            print(f"  ✓  {img_data['file']} ({len(data) // 1024} KB)")
+            print(f"  OK  {img_data['file']} ({len(data) // 1024} KB)")
             return True
         except Exception as e:
-            print(f"  ✗  Attempt {attempt} failed: {e}")
+            print(f"  Attempt {attempt} failed: {e}")
             if attempt < max_retries:
                 wait = attempt * 4
                 print(f"     Waiting {wait}s before retry...")
                 time.sleep(wait)
 
-    print(f"  ✗  SKIPPED after {max_retries} attempts: {img_data['file']}")
+    print(f"  SKIPPED after {max_retries} attempts: {img_data['file']}")
     return False
 
 
