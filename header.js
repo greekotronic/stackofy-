@@ -90,6 +90,8 @@ const DARK_MODE_CSS = `
 [data-theme="dark"] .ai-col { background: #162616 !important; border-color: #2A3D30 !important; }
 [data-theme="dark"] .trust-num { color: #D4A853 !important; }
 [data-theme="dark"] .trust-label { color: #9DB8AA !important; }
+[data-theme="dark"] .info-box { background: #1C2E22 !important; border-color: #2A3D30 !important; }
+[data-theme="dark"] .info-box h4 { color: #D4A853 !important; }
   `;
 
   const darkStyle = document.createElement('style');
