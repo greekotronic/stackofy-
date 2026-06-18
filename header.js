@@ -83,6 +83,7 @@ const DARK_MODE_CSS = `
     [data-theme="dark"] .highlight-label { color: #95D5B2 !important; }
     [data-theme="dark"] .upgrade-card h4 { color: #F0EDE8 !important; }
 [data-theme="dark"] .upgrade-card { background: #1C2E22 !important; border-color: #2A3D30 !important; }
+[data-theme="dark"] .section-label { color: #D4A853 !important; }
   `;
 
   const darkStyle = document.createElement('style');
