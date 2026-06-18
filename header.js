@@ -43,8 +43,8 @@
     }
   `;
 const DARK_MODE_CSS = `
-    [data-theme="dark"] h2 { color: #95D5B2 !important; }
-    [data-theme="dark"] h3 { color: #B8E0C8 !important; }
+   [data-theme="dark"] h2 { color: #D4A853 !important; border-bottom-color: #D4A853 !important; }
+[data-theme="dark"] h3 { color: #D4A853 !important; }
     [data-theme="dark"] a { color: #95D5B2 !important; }
     [data-theme="dark"] a:hover { color: #FAF8F4 !important; }
 
