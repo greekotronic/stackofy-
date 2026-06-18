@@ -42,7 +42,18 @@
       #site-mobile-menu { top: 56px !important; }
     }
   `;
+const DARK_MODE_CSS = `
+    [data-theme="dark"] h2 { color: #95D5B2 !important; }
+    [data-theme="dark"] h3 { color: #B8E0C8 !important; }
+    [data-theme="dark"] a { color: #95D5B2 !important; }
+    [data-theme="dark"] a:hover { color: #FAF8F4 !important; }
+  `;
 
+  const darkStyle = document.createElement('style');
+  darkStyle.textContent = DARK_MODE_CSS;
+  document.head.appendChild(darkStyle);
+
+ 
   // Inject CSS
   const style = document.createElement('style');
   style.textContent = HEADER_CSS;
