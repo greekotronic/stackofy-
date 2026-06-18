@@ -78,6 +78,7 @@ const DARK_MODE_CSS = `
     [data-theme="dark"] .ingredient-card { background: #1C2E22 !important; border-color: #2A3D30 !important; }
     [data-theme="dark"] .ingredient-card h4 { color: #F0EDE8 !important; }
     [data-theme="dark"] .caution-box, [data-theme="dark"] .who-caution { background: #1C2E22 !important; color: #F0EDE8 !important; }
+    [data-theme="dark"] .article-content h2 { color: #D4A853 !important; border-bottom-color: #D4A853 !important; }
   `;
 
   const darkStyle = document.createElement('style');
