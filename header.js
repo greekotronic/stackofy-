@@ -80,6 +80,7 @@ const DARK_MODE_CSS = `
     [data-theme="dark"] .caution-box, [data-theme="dark"] .who-caution { background: #1C2E22 !important; color: #F0EDE8 !important; }
     [data-theme="dark"] .article-content h2 { color: #D4A853 !important; border-bottom-color: #D4A853 !important; }
     [data-theme="dark"] .exception-verdict { color: #D4A853 !important; }
+    [data-theme="dark"] .highlight-label { color: #95D5B2 !important; }
   `;
 
   const darkStyle = document.createElement('style');
