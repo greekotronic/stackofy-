@@ -166,6 +166,8 @@
     .stack-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
     .stack-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
     .stack-img { height: 80px; }
+    .stack-img { height: 80px; overflow: hidden; }
+.stack-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .s1 { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
     .s2 { background: linear-gradient(135deg, #7A5C10, #D4A853); }
     .s3 { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
@@ -474,11 +476,11 @@
         <div class="section-label">Curated</div>
         <div class="section-header mb15"><div class="section-title">Popular Stacks</div></div>
         <div class="stack-grid">
-          <a href="/articles/foundation-stack.html" class="stack-card"><div class="stack-img s1"></div><div class="stack-body"><div class="stack-label">Most Popular</div><h4>The Foundation Stack</h4><p>D3 + K2, Magnesium, Omega-3</p></div></a>
-          <a href="/articles/antiaging-stack.html" class="stack-card"><div class="stack-img s2"></div><div class="stack-body"><div class="stack-label">Longevity</div><h4>The Anti-Aging Stack</h4><p>NMN, Resveratrol, TMG, CoQ10, PQQ</p></div></a>
-          <a href="/articles/sleep-stack.html" class="stack-card"><div class="stack-img s3"></div><div class="stack-body"><div class="stack-label">Sleep</div><h4>The Sleep Stack</h4><p>Magnesium Glycinate, Ashwagandha, L-Theanine</p></div></a>
-          <a href="/articles/brain-stack.html" class="stack-card"><div class="stack-img s4"></div><div class="stack-body"><div class="stack-label">Cognitive</div><h4>The Brain Stack</h4><p>Omega-3, Lions Mane, PQQ, CDP-Choline</p></div></a>
-        </div>
+          <a href="/articles/foundation-stack.html" class="stack-card"><div class="stack-img s1"><img src="/images/hero-foundation-stack.jpg" alt="Foundation Stack" onerror="this.style.display='none'" /></div><div class="stack-body"><div class="stack-label">Most Popular</div><h4>The Foundation Stack</h4><p>D3 + K2, Magnesium, Omega-3</p></div></a>
+<a href="/articles/antiaging-stack.html" class="stack-card"><div class="stack-img s2"><img src="/images/hero-antiaging-stack.jpg" alt="Anti-Aging Stack" onerror="this.style.display='none'" /></div><div class="stack-body"><div class="stack-label">Longevity</div><h4>The Anti-Aging Stack</h4><p>NMN, Resveratrol, TMG, CoQ10, PQQ</p></div></a>
+<a href="/articles/sleep-stack.html" class="stack-card"><div class="stack-img s3"><img src="/images/hero-sleep-stack.jpg" alt="Sleep Stack" onerror="this.style.display='none'" /></div><div class="stack-body"><div class="stack-label">Sleep</div><h4>The Sleep Stack</h4><p>Magnesium Glycinate, Ashwagandha, L-Theanine</p></div></a>
+<a href="/articles/brain-stack.html" class="stack-card"><div class="stack-img s4"><img src="/images/hero-brain-stack.jpg" alt="Brain Stack" onerror="this.style.display='none'" /></div><div class="stack-body"><div class="stack-label">Cognitive</div><h4>The Brain Stack</h4><p>Omega-3, Lions Mane, PQQ, CDP-Choline</p></div></a>
+ </div>
       </div>
       <div>
         <div class="section-label">From ARI</div>
