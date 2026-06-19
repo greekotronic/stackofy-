@@ -102,6 +102,8 @@ const DARK_MODE_CSS = `
 [data-theme="dark"] .comp-card h4 { color: #F0EDE8 !important; }
 [data-theme="dark"] .read-link { color: #95D5B2 !important; }
 [data-theme="dark"] .rec-label { color: #95D5B2 !important; }
+[data-theme="dark"] .audit-stat-num { color: #D4A853 !important; }
+[data-theme="dark"] .audit-stat-label { color: #9DB8AA !important; }
   `;
 
   const darkStyle = document.createElement('style');
