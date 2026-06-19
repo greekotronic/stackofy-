@@ -78,7 +78,7 @@ function makeCard(article, size) {
            data-title="${article.title}">
           <div class="card-img protocol-img" style="${bg}">
             <img src="${article.image}" alt="${article.tag}" onerror="this.style.display='none'" />
-            <span class="protocol-badge">★ Protocol</span>
+            <span class="protocol-badge">${article.tag === 'ARI Book' ? '★ Featured' : '★ Protocol'}</span>
           </div>
           <div class="card-body">
             <div class="card-meta">
@@ -114,7 +114,7 @@ function makeCard(article, size) {
       <a href="${article.url}" class="article-card protocol-card protocol-wide">
         <div class="protocol-wide-img" style="${bg}">
           <img src="${article.image}" alt="${article.tag}" onerror="this.style.display='none'" />
-          <span class="protocol-badge">★ Protocol</span>
+          <span class="protocol-badge">${article.tag === 'ARI Book' ? '★ Featured' : '★ Protocol'}</span>
         </div>
         <div class="protocol-wide-body">
           <span class="article-tag protocol-tag">${article.tag}</span>
@@ -203,7 +203,7 @@ async function loadArticles() {
           <a href="${a.url}" class="protocol-card-page">
             <div class="protocol-card-img" style="${bg}">
               <img src="${a.image}" alt="${a.tag}" onerror="this.style.display='none'" />
-              <span class="protocol-badge">★ Protocol</span>
+              <span class="protocol-badge">${a.tag === 'ARI Book' ? '★ Featured' : '★ Protocol'}</span>
             </div>
             <div class="protocol-card-body">
               <span class="protocol-card-tag">${a.tag}</span>
