@@ -251,13 +251,13 @@
   </style>
 </head>
 <body>
-
+<main>
   <div class="hero">
     <h1>Evidence-Based Supplement Stacks. No Pharma. No Fluff.</h1>
     <p>Independent research on longevity, dosing protocols, and what actually works.</p>
     <div class="search-bar">
       <input type="text" id="hp-search" placeholder="Search supplements, protocols, ingredients..." />
-      <button onclick="searchHomepage()"<button onclick="searchHomepage()">Search</button>
+      <button onclick="searchHomepage()">Search</button>
     </div>
     <div class="categories">
       <a href="/articles.html" class="cat-pill">Longevity</a>
@@ -529,17 +529,7 @@
 
   </div>
   <script src="/articles-loader.js"></script>
-<script>
-  function searchHomepage() {
-    const query = document.getElementById('hp-search').value.toLowerCase().trim();
-    if (!query) return;
-    window.location.href = '/articles.html?q=' + encodeURIComponent(query);
-  }
-  document.getElementById('hp-search').addEventListener('keydown', function(e) {
-    if (e.key === 'Enter') searchHomepage();
-  });
-</script>
-</body>
+</main>
 <script>
   function searchHomepage() {
     const query = document.getElementById('hp-search').value.toLowerCase().trim();
