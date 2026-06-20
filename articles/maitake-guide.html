@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maitake: The Blood Sugar Mushroom With a Vitamin D Secret - Stackofy</title>
+  <meta name="description" content="Maitake's D-fraction has real human immune data, genuine blood sugar effects, and is one of the only food sources of fungal vitamin D2. Here is what the science actually shows." />
+
+  <meta property="og:title" content="Maitake: The Blood Sugar Mushroom With a Vitamin D Secret" />
+  <meta property="og:description" content="Maitake's D-fraction has real human immune data, genuine blood sugar effects, and is one of the only food sources of fungal vitamin D2. Here is what the science actually shows." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/maitake-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-maitake-guide.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a1208, #3D3018, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,18,8,0.95) 0%, rgba(26,18,8,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .compound-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .compound-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .compound-name { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 6px; }
+    .compound-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin-bottom: 0.75rem; }
+    .warning-box p:last-child { margin-bottom: 0; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-vitd { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .c-chaga { background: linear-gradient(135deg, #0a0a0a, #3D2B1F); }
+    .c-reishi { background: linear-gradient(135deg, #2A1040, #6B2D6B); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .compound-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <main>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-maitake-guide.jpg" alt="Maitake mushroom hen of the woods" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Maitake</span>
+      <h1>The Blood Sugar Mushroom With a Vitamin D Secret</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>11 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Maitake (Grifola frondosa) is one of the only medicinal mushrooms with a real, dose-escalation human clinical trial behind it - a phase I/II breast cancer immune study, not just animal data</li>
+        <li>Its D-fraction polysaccharide has documented immune-modulating effects in humans, with measurable changes in peripheral blood after just 7 days of oral dosing</li>
+        <li>Multiple animal studies confirm genuine blood-sugar-lowering activity through alpha-glucan and glycoprotein mechanisms - this is one of the better-supported metabolic claims in the mushroom category</li>
+        <li>Maitake is one of the few food sources of fungal vitamin D2, and recent research shows your body can use it as a measurable alternative to D3 supplementation</li>
+        <li>If you take diabetes medication, the blood-sugar effect is not theoretical - it is a real interaction risk worth monitoring with your doctor</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>In feudal Japan, foragers who found a maitake in the wild would reportedly dance with joy. The name itself means "dancing mushroom." Local lords offered it as tribute to the Shogun. It was worth its weight in silver - not because it tasted exceptional, but because people who ate it regularly seemed to get sick less often.</p>
+
+      <p>What sets Maitake apart from most of the medicinal mushroom category is not folklore - it is the unusually direct human clinical data. While Reishi and Cordyceps lean heavily on animal models and in vitro work, Maitake has an actual phase I/II human dose-escalation trial behind its primary active compound. That is rare in this category, and worth taking seriously.</p>
+
+      <h2>What Is Maitake?</h2>
+
+      <p>Grifola frondosa is a large polypore mushroom that grows at the base of oak, elm and maple trees across temperate forests in Japan, China, Europe and the northeastern United States. Individual specimens can grow to over 50 pounds. In English it is commonly called "hen of the woods" for its ruffled, feather-like overlapping fronds - distinct from "chicken of the woods," which is an entirely different species and often a source of confusion when shopping.</p>
+
+      <p>Unlike Reishi or Chaga, Maitake is genuinely edible and commonly cooked - you can buy it at a farmers market and saute it for dinner. The medicinal use case is a separate, concentrated extraction of its specific bioactive fractions, not just eating it as food, though both have documented value.</p>
+
+      <h2>The D-Fraction: Maitake's Signature Compound</h2>
+
+      <p>Japanese researchers identified Maitake's primary active constituent in 1955: a protein-bound polysaccharide now known as the D-fraction, or Grifola frondosa polysaccharide (GFP). It consists of several types of beta-glucans found in both the fruiting body and the mycelium. To date, researchers have identified at least 47 distinct bioactive polysaccharides in Maitake, with multiple isolated fractions used in research - including D-fraction, MD-fraction, MZ-fraction, SX-fraction and various grifolans.</p>
+
+      <div class="compound-grid">
+        <div class="compound-card">
+          <div class="compound-name">D-Fraction (GFP)</div>
+          <p>The primary protein-bound beta-glucan, the most extensively researched component for immune and anticancer activity. The compound used in the human breast cancer immune trial.</p>
+        </div>
+        <div class="compound-card">
+          <div class="compound-name">MD-Fraction</div>
+          <p>A more purified derivative of D-fraction. Studied specifically in the context of cancer patient support and reducing chemotherapy-related immunosuppression and side effects.</p>
+        </div>
+        <div class="compound-card">
+          <div class="compound-name">Alpha-Glucans &amp; Glycoproteins</div>
+          <p>Distinct from the beta-glucan fractions. These are the compounds specifically responsible for the blood-sugar-lowering activity documented in animal models.</p>
+        </div>
+        <div class="compound-card">
+          <div class="compound-name">Ergosterol (Vitamin D2 Precursor)</div>
+          <p>Converts to vitamin D2 (ergocalciferol) when exposed to UV light, the same way human skin produces vitamin D3 from sunlight. Makes Maitake one of the few significant food sources of fungal vitamin D.</p>
+        </div>
+      </div>
+
+      <h2>The Human Immune Trial</h2>
+
+      <p>A phase I/II dose-escalation trial enrolled 34 postmenopausal breast cancer patients who were disease-free after initial treatment. Maitake liquid extract was administered orally at five different dose levels, twice daily for three weeks, with peripheral blood collected at multiple time points to track immunological changes.</p>
+
+      <p>The result: oral administration of the Maitake polysaccharide extract produced both immune-stimulatory and immune-inhibitory measurable effects in peripheral blood - meaning it is a genuine immune modulator, not a simple "booster," consistent with how beta-glucan mushroom compounds tend to behave generally. No dose-limiting toxicity was found across any of the five dosing cohorts, which is meaningful safety data that most mushroom supplements simply do not have behind them.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Why This Trial Matters</div>
+        <p>This was specifically designed to determine whether oral Maitake extract produces measurable immune changes in actual human blood - not cell cultures, not mice. The researchers explicitly noted that cancer patients using botanical immune supplements should understand both the stimulatory and inhibitory directions these compounds can produce, which is a level of nuance rarely communicated in mushroom supplement marketing.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/maitake-fresh-closeup.jpg" alt="Fresh maitake mushroom fronds close up" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Blood Sugar: The Better-Supported Metabolic Claim</h2>
+
+      <p>Of all the metabolic claims made about medicinal mushrooms, Maitake's blood sugar effect has some of the more consistent animal evidence behind it. A glycoprotein extracted from Maitake demonstrated enhanced insulin-related hypoglycemic activity in rats. A separate study found that an alpha-glucan isolated from the fruiting body showed measurable anti-diabetic effect in a diabetic mouse model. More recent research examining alkaloid-rich Maitake extracts found genuine hypoglycemic activity in rats on a high-fat, high-sucrose diet, along with favorable changes to gut microbiota composition.</p>
+
+      <p>This is animal data, not a large human RCT - an important distinction to be honest about. But the mechanism (alpha-glucan and glycoprotein activity affecting insulin signaling) is consistent across multiple independent studies and multiple research groups, which gives it more weight than a single isolated finding would.</p>
+
+      <h2>The Vitamin D Connection Nobody Talks About</h2>
+
+      <p>This is the most underrated angle in the entire Maitake research picture. Like all mushrooms, Maitake contains ergosterol, which converts to vitamin D2 when exposed to UV light - the fungal equivalent of how human skin produces D3 from sunlight.</p>
+
+      <p>Recent research examined this directly in vitamin D-deficient mice fed a Maitake-fortified diet. The result: mice fed Maitake showed increased 25(OH)D2 in their blood as a genuine alternative to 25(OH)D3, at levels comparable to mice given an equivalent dose of straight vitamin D2 supplementation. Vitamin D-responsive gene expression markers normalized in the Maitake-fed group. For a food-based, fungal-derived alternative pathway to vitamin D status, that is a meaningfully positive result - and almost nobody selling Maitake supplements mentions it.</p>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">47+</div>
+          <div class="stat-label">Distinct bioactive polysaccharides identified in Maitake to date, across multiple research fractions</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">34</div>
+          <div class="stat-label">Patients in the human phase I/II D-fraction immune dose-escalation trial</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">1955</div>
+          <div class="stat-label">Year Japanese researchers first identified the D-fraction as Maitake's primary active compound</div>
+        </div>
+      </div>
+
+      <h2>What the Evidence Does Not Confirm</h2>
+
+      <p>The anticancer narrative around Maitake is the part most prone to overstatement. The D-fraction has shown antitumor effects and reduced immunosuppression from chemotherapy agents in animal models, and a review of Chinese research literature has suggested Maitake's polysaccharides may have superior anti-tumor activity compared to Reishi, Shiitake and Turkey Tail in preclinical testing. That comparison comes from preclinical research, not head-to-head human trials, and should be read as a research lead rather than a settled clinical fact.</p>
+
+      <p>The human breast cancer trial discussed above measured immune markers, not cancer outcomes or recurrence rates. Nobody should use Maitake supplementation as a substitute for, or even confidently alongside, actual cancer treatment without direct medical guidance - especially given that the same trial found both stimulatory and inhibitory immune effects, which is exactly the kind of nuance that matters in an active cancer context.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong</span>
+          <h4>Human Immune Modulation</h4>
+          <p>Phase I/II dose-escalation trial in 34 patients confirmed measurable immune changes in human peripheral blood with no dose-limiting toxicity across five dose levels.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate</span>
+          <h4>Blood Sugar Regulation</h4>
+          <p>Multiple independent animal studies confirm hypoglycemic activity via alpha-glucan and glycoprotein mechanisms. No large human RCT yet for this specific outcome.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate</span>
+          <h4>Vitamin D2 Alternative Pathway</h4>
+          <p>Animal model confirms Maitake-derived D2 normalizes vitamin D status comparably to direct D2 supplementation. Promising but early-stage translation to humans.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate</span>
+          <h4>Anticancer Activity</h4>
+          <p>Preclinical antitumor and chemoprotective effects well documented in animal models. Human outcome data (not just immune marker data) remains limited.</p>
+        </div>
+      </div>
+
+      <h2>Dosage and Forms</h2>
+
+      <table class="dosing-table">
+        <thead>
+          <tr>
+            <th>Form</th>
+            <th>Effective Range</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>D-fraction standardized extract</td>
+            <td>0.5-5 mg/kg bodyweight (clinical trial range)</td>
+            <td>Most researched form. Look for stated D-fraction or beta-glucan percentage.</td>
+          </tr>
+          <tr>
+            <td>Whole fruiting body extract</td>
+            <td>1,000-3,000 mg/day</td>
+            <td>Broader compound profile including alpha-glucans relevant to blood sugar effects.</td>
+          </tr>
+          <tr>
+            <td>Fresh culinary mushroom</td>
+            <td>As food, 100-200g servings</td>
+            <td>Contains ergosterol (vitamin D2 precursor) and broad nutritional value, but lower concentration of isolated D-fraction than supplements.</td>
+          </tr>
+          <tr>
+            <td>Mycelium-on-grain products</td>
+            <td>Any dose</td>
+            <td>Generally lower in the specific polysaccharide fractions studied. Check label for fruiting body sourcing.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Blood Sugar Medication Interaction</div>
+        <p>If you take insulin, metformin, or any other glucose-lowering medication, Maitake's documented hypoglycemic activity is a real interaction risk, not a theoretical one. Combining the two could push blood sugar lower than intended. Monitor closely and discuss with your doctor before adding Maitake to an existing diabetes management plan - this is exactly the situation where the supplement's main benefit becomes its main caution.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">7.0/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          One of the stronger human evidence bases in the mushroom category thanks to the phase I/II immune trial. Solid, mechanistically consistent animal data for blood sugar regulation. The vitamin D2 angle is genuinely underexplored and worth more research attention. Docked for the gap between preclinical anticancer claims and confirmed human outcome data.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Wesa KM et al. A phase I/II trial of a polysaccharide extract from Grifola frondosa (Maitake mushroom) in breast cancer patients: immunological effects. PubMed. PMID: 19253021.</li>
+        <li>Preuss HG et al. Enhanced insulin-hypoglycemic activity in rats consuming a specific glycoprotein extracted from maitake mushroom. Mol Cell Biochem. 2007;306:105-113.</li>
+        <li>Hong L et al. Anti-diabetic effect of an alpha-glucan from fruit body of maitake (Grifola frondosa) on KK-Ay mice. J Pharm Pharmacol. 2007;59:575-582.</li>
+        <li>Effects of alkaloid-rich extracts obtained from Grifola frondosa on gut microbiota and glucose homeostasis in rats. Food Funct. 2022, Issue 5.</li>
+        <li>Attenuative Effect of Grifola frondosa (Maitake Mushroom) on Severe DSS-Induced Colitis in Vitamin D-Deficient Mice. Mol Nutr Food Res. 2025;69(19):e70135.</li>
+        <li>Kodama N et al. Maitake D-fraction enhances antitumor effects and reduces immunosuppression by mitomycin-C in tumor-bearing mice. Functional Foods in Health and Disease. 2017;7(7):462-482.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Build Your Longevity Stack Correctly</h3>
+      <p>The ARI NMN Buyer's Protocol covers supplement sourcing, quality markers, and stack sequencing for the serious longevity stack.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">NMN Buyer's Protocol - $47 →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/vitamin-d3-k2-guide.html" class="related-card">
+          <div class="related-img c-vitd">
+            <img src="/images/hero-foundation-stack.jpg" alt="Vitamin D3" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin D3</span>
+            <h4>Vitamin D3 + K2: The Foundation Most People Get Wrong</h4>
+          </div>
+        </a>
+        <a href="/articles/chaga-guide.html" class="related-card">
+          <div class="related-img c-chaga">
+            <img src="/images/hero-chaga-guide.jpg" alt="Chaga" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Chaga</span>
+            <h4>The Antioxidant Powerhouse With a Real Immune and Liver Story</h4>
+          </div>
+        </a>
+        <a href="/articles/reishi-guide.html" class="related-card">
+          <div class="related-img c-reishi">
+            <img src="/images/hero-reishi-guide.jpg" alt="Reishi" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Reishi</span>
+            <h4>The Immortality Fungus That Actually Has Science Behind It</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for educational purposes only and does not constitute medical advice. The statements on this page have not been evaluated by the FDA or any regulatory authority. Supplements are not intended to diagnose, treat, cure, or prevent any disease. Consult a qualified healthcare professional before starting any supplementation protocol, particularly if you have existing health conditions or take medications.
+    </div>
+
+  </div>
+
+  </main>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

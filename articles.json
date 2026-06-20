@@ -340,5 +340,35 @@
   "tags": "longevity energy adaptogen immune",
   "readTime": "13 min",
   "description": "Cordyceps activates AMPK, boosts mitochondrial biogenesis, and has real VO2max data from human RCTs. Here is what the science shows - and why species selection matters more than dose."
+},
+{
+  "title": "Chaga: The Antioxidant Powerhouse With a Real Immune and Liver Story",
+  "tag": "Chaga",
+  "url": "/articles/chaga-guide.html",
+  "image": "/images/hero-chaga-guide.jpg",
+  "color": "c-chaga",
+  "tags": "longevity immune antioxidant",
+  "readTime": "12 min",
+  "description": "Betulinic acid, melanin, and a gut microbiome finding nobody talks about. Here is what the Chaga research actually shows - and why the ORAC score claim is mostly meaningless."
+},
+{
+  "title": "Maitake: The Blood Sugar Mushroom With a Vitamin D Secret",
+  "tag": "Maitake",
+  "url": "/articles/maitake-guide.html",
+  "image": "/images/hero-maitake-guide.jpg",
+  "color": "c-maitake",
+  "tags": "longevity immune blood sugar",
+  "readTime": "11 min",
+  "description": "A real human dose-escalation immune trial, genuine blood sugar effects, and an underrated vitamin D2 pathway. Here is what the Maitake science actually shows."
+},
+{
+  "title": "Turkey Tail: The Only Mushroom With an Actual Approved Cancer Drug Inside It",
+  "tag": "Turkey Tail",
+  "url": "/articles/turkeytail-guide.html",
+  "image": "/images/hero-turkeytail-guide.jpg",
+  "color": "c-turkeytail",
+  "tags": "longevity immune oncology",
+  "readTime": "13 min",
+  "description": "PSK has been a government-approved adjuvant cancer therapy in Japan for 30+ years, backed by large RCTs. Here is the strongest clinical evidence base of any medicinal mushroom - and where it does not apply."
 }
 ]

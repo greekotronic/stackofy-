@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turkey Tail: The Only Mushroom With an Actual Approved Cancer Drug Inside It - Stackofy</title>
+  <meta name="description" content="PSK has been a government-approved adjuvant cancer therapy in Japan for over 30 years, backed by large randomized trials. Here is the real Turkey Tail evidence - including the Mayo Clinic trial recruiting right now." />
+
+  <meta property="og:title" content="Turkey Tail: The Only Mushroom With an Actual Approved Cancer Drug Inside It" />
+  <meta property="og:description" content="PSK has been a government-approved adjuvant cancer therapy in Japan for over 30 years, backed by large randomized trials. Here is the real Turkey Tail evidence." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/turkeytail-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-turkeytail-guide.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1a1a, #1A3540, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,26,26,0.95) 0%, rgba(10,26,26,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .compound-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .compound-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .compound-name { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 6px; }
+    .compound-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin-bottom: 0.75rem; }
+    .warning-box p:last-child { margin-bottom: 0; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-reishi { background: linear-gradient(135deg, #2A1040, #6B2D6B); }
+    .c-maitake { background: linear-gradient(135deg, #1a1208, #6B5530); }
+    .c-chaga { background: linear-gradient(135deg, #0a0a0a, #3D2B1F); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .compound-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <main>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-turkeytail-guide.jpg" alt="Turkey tail mushroom Trametes versicolor" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Turkey Tail</span>
+      <h1>The Only Mushroom With an Actual Approved Cancer Drug Inside It</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>13 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Turkey Tail's PSK (polysaccharide-K) is a government-approved adjuvant cancer therapy in Japan, used alongside chemotherapy for over 30 years - this is not a typical supplement claim, it is regulatory history</li>
+        <li>Large randomized controlled trials in hundreds of gastric and colorectal cancer patients show measurable survival benefits when PSK is added to standard chemotherapy</li>
+        <li>Mayo Clinic is actively recruiting for a Phase 2 trial (NCT06450873) testing Turkey Tail in breast cancer patients before surgery, completing in late 2026</li>
+        <li>This evidence is specifically for PSK/PSP as an adjuvant alongside conventional treatment - not as a standalone replacement for chemotherapy, surgery, or radiation</li>
+        <li>For general immune support outside an active cancer context, the evidence is thinner - most of the strong data is in the oncology adjuvant setting specifically</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Most medicinal mushroom claims live in a frustrating gray zone: promising lab data, animal studies, traditional use, and a conspicuous absence of large human trials. Turkey Tail is the exception, and it is worth being precise about why.</p>
+
+      <p>Polysaccharide-K (PSK, marketed in Japan as Krestin) extracted from Trametes versicolor has been an approved adjuvant cancer therapy in Japan for more than three decades. Not a supplement occupying a regulatory gray area - an approved drug, prescribed alongside chemotherapy, with government health insurance coverage in Japan for specific cancer indications. That is a different category of evidence than almost anything else covered on this site, and it deserves to be treated with the seriousness it has actually earned.</p>
+
+      <h2>What Is Turkey Tail?</h2>
+
+      <p>Trametes versicolor (also called Coriolus versicolor) is a thin, fan-shaped bracket fungus that grows in overlapping clusters on dead logs and stumps worldwide. The name comes from its concentric color bands - browns, creams, and blue-greens - that resemble a wild turkey's tail feathers. Unlike Reishi or Chaga, it does not require rare conditions to grow; it is one of the most common wood-decay fungi in temperate forests globally.</p>
+
+      <p>The two clinically relevant extracts are PSK and PSP (polysaccharide-peptide), both protein-bound polysaccharides derived from the mycelium, developed and standardized separately in Japan and China respectively. They share a similar structure and mechanism but were studied through somewhat different clinical research traditions.</p>
+
+      <h2>The Compound: PSK and PSP</h2>
+
+      <div class="compound-grid">
+        <div class="compound-card">
+          <div class="compound-name">PSK (Polysaccharide-K / Krestin)</div>
+          <p>Developed and approved in Japan. The most clinically studied form, with the largest body of randomized controlled trial data, primarily in gastric and colorectal cancer as a chemotherapy adjuvant.</p>
+        </div>
+        <div class="compound-card">
+          <div class="compound-name">PSP (Polysaccharide-Peptide)</div>
+          <p>Developed independently in China from a different Trametes versicolor strain. Studied for similar immune-modulating and direct cytotoxic effects, with documented activity against non-small cell lung cancer progression.</p>
+        </div>
+      </div>
+
+      <p>Both compounds show a dual mechanism that makes them mechanistically interesting beyond just "immune support": direct cytotoxic activity against cancer cells in vitro, combined with genuine immune system stimulation - increasing lymphocyte counts, natural killer cell activity, and CD8+ T cell and CD19+ B cell counts in treated patients.</p>
+
+      <h2>The Clinical Evidence: What Large Trials Actually Show</h2>
+
+      <h3>Gastric Cancer</h3>
+      <p>A controlled trial of 349 stage II/III gastric cancer patients receiving adjuvant therapy after curative resection compared standard oral chemotherapy alone against chemotherapy plus PSK. The PSK group showed survival-prolonging effects, with the benefit concentrated in patients at high risk of recurrence - specifically those with lymph node metastasis and absent MHC class I expression. A separate trial of 254 gastric cancer patients evaluated PSK's effect on overall survival with similarly positive findings.</p>
+
+      <h3>Colorectal Cancer</h3>
+      <p>Multiple studies have found that colorectal cancer patients treated with PSK alongside chemotherapy showed better survival outcomes, with the evidence notably stronger for those taking PSK alongside oral chemotherapy specifically, compared to intravenous regimens. A randomised controlled study examining adjuvant immunochemotherapy with oral tegafur/uracil plus PSK in stage II/III colorectal cancer patients confirmed this pattern. A more recent 2024 trial directly compared UFT/LV chemotherapy alone, UFT/LV plus PSK, and a longer course of UFT/LV plus PSK in stage II/III colorectal cancer patients after surgical resection, tracking three-year survival outcomes.</p>
+
+      <div class="article-img">
+        <img src="/images/hero-turkeytail-guide.jpg" alt="Turkey tail mushroom close up texture" onerror="this.style.display='none'" />
+      </div>
+
+      <h3>Breast Cancer and Immune Markers</h3>
+      <p>A small uncontrolled trial found that breast cancer patients treated with 6 grams of Turkey Tail mushroom daily after completing radiotherapy showed greater lymphocyte counts, natural killer cell activity, and CD8+ T cell and CD19+ B cell counts compared to their own baseline, with the effect increasing at higher doses. This is exactly the kind of immune-marker data that supports the adjuvant use case, separate from the direct survival data seen in gastric and colorectal cancer.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">The Mayo Clinic Trial Happening Right Now</div>
+        <p>A Phase 2 pilot "window of opportunity" study sponsored by Mayo Clinic (NCT06450873) is actively recruiting postmenopausal women with HER2-negative, ER-positive breast cancer who are planning surgery. Participants take Coriolus versicolor extract before their operation, with researchers measuring the change in Ki-67 (a cell proliferation marker) between baseline and surgery. Enrollment target is 100 patients, with the study expected to complete in late 2026. This is meaningfully different from older retrospective or small uncontrolled studies - it is prospective, has a defined primary endpoint, and is being run at a major academic medical center.</p>
+      </div>
+
+      <h2>Where the Evidence Gets Thinner</h2>
+
+      <p>This is the section that separates Turkey Tail from supplement marketing, and it matters to be direct about it.</p>
+
+      <p>The strong human RCT evidence is specifically in the adjuvant oncology setting - PSK or PSP added to standard chemotherapy in patients who already have a cancer diagnosis and are receiving conventional treatment. It is not evidence that Turkey Tail prevents cancer in healthy people, treats cancer as a standalone therapy, or substitutes for chemotherapy, surgery, or radiation in any way.</p>
+
+      <p>For general immune support outside an active cancer context - the use case most people buying Turkey Tail supplements actually have - the evidence is considerably thinner. The mechanism (beta-glucan and polysaccharide-peptide immune modulation) is plausible and consistent with the broader medicinal mushroom category, but the large, well-controlled trials specifically exist in the oncology adjuvant population, not in healthy adults seeking a general immune boost.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">If You Are in Active Cancer Treatment</div>
+        <p>Higher immune activation is not automatically beneficial in every cancer context, and Turkey Tail should never be added to a treatment regimen without direct physician involvement. PSK and PSP have real drug-like activity - they are not a neutral "natural" addition. If you or someone you know is considering this alongside conventional cancer treatment, the conversation needs to happen with the treating oncologist, not as a self-directed supplement decision.</p>
+      </div>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong</span>
+          <h4>Adjuvant Gastric &amp; Colorectal Cancer</h4>
+          <p>Multiple large RCTs (200-350+ patients) show survival benefits when PSK is added to standard chemotherapy in these specific cancers. This is the best-supported claim in the entire medicinal mushroom category.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong</span>
+          <h4>Regulatory History</h4>
+          <p>PSK has been an approved, insurance-covered adjuvant cancer therapy in Japan for over 30 years - a level of regulatory validation no other medicinal mushroom compound has achieved.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate</span>
+          <h4>Breast Cancer</h4>
+          <p>Smaller, often uncontrolled studies show favorable immune marker changes. A rigorous Mayo Clinic Phase 2 trial is currently underway and will add meaningfully better-quality data.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate</span>
+          <h4>General Immune Support</h4>
+          <p>Plausible mechanism shared with other beta-glucan mushrooms, but the large RCT evidence base is concentrated in oncology adjuvant settings, not general healthy-population use.</p>
+        </div>
+      </div>
+
+      <h2>Dosage and Forms</h2>
+
+      <table class="dosing-table">
+        <thead>
+          <tr>
+            <th>Form</th>
+            <th>Effective Range</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>PSK extract (standardized)</td>
+            <td>3,000 mg/day (clinical adjuvant range)</td>
+            <td>The dose used in most Japanese RCTs. Look for stated PSK content, not just "Turkey Tail extract."</td>
+          </tr>
+          <tr>
+            <td>Whole fruiting body extract</td>
+            <td>1,000-6,000 mg/day</td>
+            <td>Broader compound profile, used in the breast cancer immune marker study at the higher end of this range.</td>
+          </tr>
+          <tr>
+            <td>PSP extract</td>
+            <td>Varies by product, follow label</td>
+            <td>Chinese research tradition. Similar mechanism to PSK, fewer large Western-language RCTs.</td>
+          </tr>
+          <tr>
+            <td>Mycelium-on-grain products</td>
+            <td>Any dose</td>
+            <td>Generally lower in PSK/PSP content than fruiting body extracts. Check sourcing on the label.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">8.2/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          The strongest human clinical evidence base of any medicinal mushroom covered on this site, with a 30-year regulatory track record and active ongoing trials. Score reflects oncology-adjuvant evidence specifically; the score would be lower if evaluated purely for general healthy-population immune support, where the data is thinner. Use case matters enormously here.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Ohwada S et al. Adjuvant immunochemotherapy with oral tegafur/uracil plus PSK in patients with stage II or III colorectal cancer: a randomised controlled study. Br J Cancer. 2004;90(5):1003-10.</li>
+        <li>Ogawa H, Shiraishi T. Adjuvant Chemotherapy With UFT/LV Versus UFT/LV Plus PSK in Stage II/III Colorectal Cancer. Anticancer Research. 2024;44(2):805-14.</li>
+        <li>Tanaka et al. Effect of Protein-bound PSK on the overall survival of patients with gastric cancer. 254-patient cohort study, 2012.</li>
+        <li>Torkelson CJ et al. Phase 1 clinical trial of Trametes versicolor in women with breast cancer. ISRN Oncology. 2012;2012:251632.</li>
+        <li>Tsang KW et al. Coriolus versicolor polysaccharide peptide slows progression of advanced non-small cell lung cancer. Respir Med. 2003;97(6):618-24.</li>
+        <li>ClinicalTrials.gov NCT06450873. Turkey Tail Mushroom for Treating Post-Menopausal Women With HER2-Negative ER-Positive Breast Cancer Undergoing Surgery. Mayo Clinic. Status: Recruiting.</li>
+        <li>Medicinal Mushrooms (PDQ). PDQ Cancer Information Summaries. NCBI Bookshelf. Updated July 2024.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Build Your Longevity Stack Correctly</h3>
+      <p>The ARI NMN Buyer's Protocol covers supplement sourcing, quality markers, and stack sequencing for the serious longevity stack.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">NMN Buyer's Protocol - $47 →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/reishi-guide.html" class="related-card">
+          <div class="related-img c-reishi">
+            <img src="/images/hero-reishi-guide.jpg" alt="Reishi" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Reishi</span>
+            <h4>The Immortality Fungus That Actually Has Science Behind It</h4>
+          </div>
+        </a>
+        <a href="/articles/maitake-guide.html" class="related-card">
+          <div class="related-img c-maitake">
+            <img src="/images/hero-maitake-guide.jpg" alt="Maitake" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Maitake</span>
+            <h4>The Blood Sugar Mushroom With a Vitamin D Secret</h4>
+          </div>
+        </a>
+        <a href="/articles/chaga-guide.html" class="related-card">
+          <div class="related-img c-chaga">
+            <img src="/images/hero-chaga-guide.jpg" alt="Chaga" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Chaga</span>
+            <h4>The Antioxidant Powerhouse With a Real Immune and Liver Story</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for educational purposes only and does not constitute medical advice. The statements on this page have not been evaluated by the FDA or any regulatory authority. Supplements are not intended to diagnose, treat, cure, or prevent any disease. Turkey Tail extracts (PSK/PSP) discussed here have specific regulatory and clinical history outside the United States and should never be used to replace conventional cancer treatment without direct guidance from your treating physician. Consult a qualified healthcare professional before starting any supplementation protocol.
+    </div>
+
+  </div>
+
+  </main>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

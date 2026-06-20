@@ -33,6 +33,9 @@ const COLORS = {
 'c-cdp': 'background:linear-gradient(135deg,#1a2a4a,#2D4A6B)',
 'c-reishi': 'background:linear-gradient(135deg,#2A1040,#6B2D6B)',
 'c-cordyceps': 'background:linear-gradient(135deg,#3D1A00,#B85C00)',
+'c-chaga': 'background:linear-gradient(135deg,#0a0a0a,#3D2B1F)',
+'c-maitake': 'background:linear-gradient(135deg,#1a1208,#6B5530)',
+'c-turkeytail': 'background:linear-gradient(135deg,#0a1a1a,#2D6A6A)',
 };
 
 function makeCard(article, size) {
