@@ -175,12 +175,28 @@ async function loadArticles() {
       protocolMoreEl.innerHTML = remaining.map(a => makeCard(a, 'small')).join('');
     }
 
-    // MORE ARTICLES (homepage) - remaining articles after first 8
+    // MORE PROTOCOLS (homepage) - remaining protocols after first 4, limited to 4
+    const protocolMoreEl = document.getElementById('protocol-articles-more');
+    if (protocolMoreEl) {
+      const protocols = articles.filter(a => a.type === 'protocol');
+      const remaining = protocols.slice(0, -4).reverse().slice(0, 4);
+      protocolMoreEl.innerHTML = remaining.map(a => makeCard(a, 'small')).join('');
+    }
+
+    // MORE ARTICLES (homepage) - remaining articles after first 8, limited to 8
     const latestMoreEl = document.getElementById('latest-articles-more');
     if (latestMoreEl) {
       const latest = articles.filter(a => !a.featured && a.type !== 'protocol');
       const remaining = latest.slice(0, -8).reverse();
-      latestMoreEl.innerHTML = remaining.map(a => makeCard(a, 'small')).join('');
+      latestMoreEl.innerHTML = remaining.slice(0, 8).map(a => makeCard(a, 'small')).join('');
+    }
+
+    // MORE ARTICLES SECOND BATCH (homepage) - next 8 after that
+    const latestMore2El = document.getElementById('latest-articles-more2');
+    if (latestMore2El) {
+      const latest = articles.filter(a => !a.featured && a.type !== 'protocol');
+      const remaining = latest.slice(0, -8).reverse();
+      latestMore2El.innerHTML = remaining.slice(8, 16).map(a => makeCard(a, 'small')).join('');
     }
 
     // LATEST PROTOCOL SPOTLIGHT (homepage) - newest protocol only

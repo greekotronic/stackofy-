@@ -82,6 +82,9 @@
     .protocol-card:hover { border-color: var(--gold) !important; box-shadow: 0 4px 20px rgba(212,168,83,0.2); }
     .protocol-wide { grid-column: span 2; display: flex !important; flex-direction: row !important; }
     .protocol-wide-img { width: 220px; flex-shrink: 0; overflow: hidden; position: relative; }
+    .tag-banner { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .tag-pill-item { background: var(--surface); border: 1px solid var(--border); border-radius: 20px; padding: 8px 16px; font-size: 13px; font-weight: 600; color: var(--text); text-decoration: none; transition: border-color 0.2s, transform 0.2s; }
+    .tag-pill-item:hover { border-color: var(--green-dark); transform: translateY(-1px); }
     .protocol-wide-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
     .protocol-badge { position: absolute; top: 8px; left: 8px; background: var(--gold); color: #1A1A1A; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; }
     .protocol-wide-body { padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; flex: 1; align-items: flex-start; }
@@ -325,6 +328,17 @@
     </div>
     <div id="featured-article" class="mb3"></div>
 
+    <!-- TAG BANNER -->
+    <div class="tag-banner mb3">
+      <a href="/articles.html?tag=longevity" class="tag-pill-item">🧬 Longevity</a>
+      <a href="/articles.html?tag=sleep" class="tag-pill-item">🌙 Sleep</a>
+      <a href="/articles.html?tag=brain" class="tag-pill-item">🧠 Brain</a>
+      <a href="/articles.html?tag=immune" class="tag-pill-item">🛡️ Immune</a>
+      <a href="/articles.html?tag=performance" class="tag-pill-item">⚡ Performance</a>
+      <a href="/articles.html?tag=mood" class="tag-pill-item">☀️ Mood</a>
+      <a href="/articles.html?tag=metabolism" class="tag-pill-item">🔥 Metabolism</a>
+    </div>
+
     <!-- PROTOCOL ARTICLES - double-wide cards (limited to 4 newest) -->
     <div class="section-label">★ Featured Protocols</div>
     <div class="section-header mb15">
@@ -366,6 +380,24 @@
       </div>
     </div>
 
+    <!-- SPOTLIGHT -->
+    <div class="section-label">Spotlight</div>
+    <div class="section-header mb15">
+      <div class="section-title">This Week's Deep Read</div>
+    </div>
+    <a href="/articles/omega-3-complete-guide.html" class="spotlight mb3">
+      <div class="spotlight-img" style="background:linear-gradient(135deg,#0a3d6b,#185FA5);">
+        <img src="/images/omega-3-capsules-moss.jpg" alt="Omega-3" onerror="this.style.display='none'" />
+      </div>
+      <div class="spotlight-body">
+        <span class="article-tag">Omega-3 - Foundation</span>
+        <blockquote class="spotlight-quote">"Form matters more than dose. Most cheap fish oil fails before it reaches you."</blockquote>
+        <h3>Omega-3: The One Supplement Almost Everyone Is Taking Wrong</h3>
+        <p>Ethyl ester vs triglyceride form. IFOS certification. Algae oil vs fish oil. Why the capsule you have been taking for years might be delivering a fraction of what is on the label.</p>
+        <span class="read-link">Read the full guide →</span>
+      </div>
+    </a>
+
     <!-- STACK AUDIT FEATURE -->
     <div class="stack-audit-feature mb3">
       <div class="audit-badge">ARI Special Report</div>
@@ -395,24 +427,6 @@
       <a href="/articles.html" class="see-all">See all →</a>
     </div>
     <div id="longevity-articles" class="grid-3 mb3"></div>
-
-    <!-- SPOTLIGHT -->
-    <div class="section-label">Spotlight</div>
-    <div class="section-header mb15">
-      <div class="section-title">This Week's Deep Read</div>
-    </div>
-    <a href="/articles/omega-3-complete-guide.html" class="spotlight mb3">
-      <div class="spotlight-img" style="background:linear-gradient(135deg,#0a3d6b,#185FA5);">
-        <img src="/images/omega-3-capsules-moss.jpg" alt="Omega-3" onerror="this.style.display='none'" />
-      </div>
-      <div class="spotlight-body">
-        <span class="article-tag">Omega-3 - Foundation</span>
-        <blockquote class="spotlight-quote">"Form matters more than dose. Most cheap fish oil fails before it reaches you."</blockquote>
-        <h3>Omega-3: The One Supplement Almost Everyone Is Taking Wrong</h3>
-        <p>Ethyl ester vs triglyceride form. IFOS certification. Algae oil vs fish oil. Why the capsule you have been taking for years might be delivering a fraction of what is on the label.</p>
-        <span class="read-link">Read the full guide →</span>
-      </div>
-    </a>
 
     <div class="divider"></div>
 
@@ -509,6 +523,14 @@
       <blockquote>"The difference between a supplement that works and one that doesn't is rarely the ingredient - it's the form, the dose, and whether it was handled correctly before it reached you."</blockquote>
       <cite>- Alethia Research Institute</cite>
     </div>
+
+    <!-- MORE ARTICLES SECOND BATCH -->
+    <div class="section-label">Still Curious</div>
+    <div class="section-header mb15">
+      <div class="section-title">More Articles</div>
+      <a href="/articles.html" class="see-all">See all →</a>
+    </div>
+    <div id="latest-articles-more2" class="grid-4 mb3"></div>
 
     <!-- FREE LEAD MAGNET -->
     <div class="lead-block">
