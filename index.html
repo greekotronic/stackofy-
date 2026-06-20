@@ -100,9 +100,9 @@
 
     .h-article { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: flex; transition: border-color 0.2s, transform 0.2s; }
     .h-article:hover { border-color: var(--green-dark); transform: translateY(-2px); }
-    .h-article-img { width: 160px; flex-shrink: 0; overflow: hidden; }
+    .h-article-img { width: 160px; height: 160px; flex-shrink: 0; overflow: hidden; }
     .h-article-img img { width: 100%; height: 100%; object-fit: cover; }
-    .h-article-body { padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; }
+    .h-article-body { padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
     .h-article-body h3 { font-size: 14px; font-weight: 600; color: var(--text); margin: 0.4rem 0; line-height: 1.4; }
     .h-article-body p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-top: 0.4rem; }
     .read-time { font-size: 11px; color: var(--text-muted); margin-top: 0.5rem; display: block; }
@@ -227,7 +227,7 @@
 .quiz-banner-small .qb-img { width: 140px; height: 140px; flex-shrink: 0; overflow: hidden; }
 .quiz-banner-small .qb-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
 .quiz-banner-small .qb-text { flex: 1; padding: 1rem 1.25rem 1rem 0; }
-.quiz-banner-small .qb-text span { font-size: 13px; color: #FAF8F4; display: block; margin-bottom: 0.6rem; }
+.quiz-banner-small .qb-text > span:first-child { font-size: 13px; color: #FAF8F4; display: block; margin-bottom: 0.6rem; }
 .btn-gold-small { background: var(--gold); color: #1A1A1A; font-size: 12px; font-weight: 700; padding: 9px 18px; border-radius: 6px; text-decoration: none; white-space: nowrap; display: inline-block; }
 
 @media (max-width: 600px) {
