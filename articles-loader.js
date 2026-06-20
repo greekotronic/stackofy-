@@ -174,14 +174,20 @@ async function loadArticles() {
       const protocols = articles.filter(a => a.type === 'protocol');
       const newest = protocols[protocols.length - 1];
       if (newest) {
+        const bg = COLORS[newest.color] || 'background:#1B4332';
         spotlightEl.href = newest.url;
         spotlightEl.innerHTML = `
-          <div class="lp-img"><img src="${newest.image}" alt="${newest.tag}" onerror="this.style.display='none'" /></div>
-          <div class="lp-content">
-            <span class="lp-tag">${newest.tag}</span>
+          <div class="h-article-img" style="${bg}">
+            <img src="${newest.image}" alt="${newest.tag}" onerror="this.style.display='none'" />
+          </div>
+          <div class="h-article-body">
+            <span class="article-tag">${newest.tag}</span>
             <h3>${newest.title}</h3>
+            <p>${newest.description}</p>
+            <span class="read-time">${newest.readTime}</span>
           </div>
         `;
+        spotlightEl.className = 'h-article mb3';
       }
     }
 
