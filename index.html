@@ -212,7 +212,24 @@
 
     .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
     .disclaimer strong { color: var(--text); }
+.latest-protocol-card { display: block; background: var(--gradient); border-radius: var(--radius); padding: 1.5rem; text-decoration: none; color: #FAF8F4; position: relative; overflow: hidden; min-height: 140px; display: flex; align-items: center; }
+.latest-protocol-card .lp-img { position: absolute; inset: 0; opacity: 0.35; }
+.latest-protocol-card .lp-img img { width: 100%; height: 100%; object-fit: cover; }
+.latest-protocol-card .lp-content { position: relative; z-index: 2; }
+.latest-protocol-card .lp-tag { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 6px; display: block; }
+.latest-protocol-card h3 { font-size: 18px; font-weight: 700; color: #FAF8F4; margin: 0; }
 
+.search-banner { display: flex; gap: 0.75rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.75rem 1rem; }
+.search-banner input { flex: 1; border: none; background: transparent; font-size: 14px; color: var(--text); outline: none; }
+.search-banner button { background: var(--green-dark); color: #FAF8F4; border: none; border-radius: 6px; padding: 0.5rem 1.25rem; font-size: 13px; font-weight: 600; cursor: pointer; }
+
+.quiz-banner-small { display: flex; justify-content: space-between; align-items: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.875rem 1.25rem; font-size: 13px; color: var(--text-muted); flex-wrap: wrap; gap: 0.75rem; }
+.btn-gold-small { background: var(--gold); color: #1A1A1A; font-size: 12px; font-weight: 700; padding: 8px 16px; border-radius: 6px; text-decoration: none; white-space: nowrap; }
+
+@media (max-width: 600px) {
+  .latest-protocol-card { min-height: 110px; padding: 1.25rem; }
+  .quiz-banner-small { flex-direction: column; align-items: flex-start; }
+}
     @media (max-width: 900px) {
       .grid-4 { grid-template-columns: 1fr 1fr !important; }
       .grid-3 { grid-template-columns: 1fr 1fr !important; }
@@ -255,32 +272,29 @@
 <body>
 <main>
   <div class="hero">
-    <h1>Evidence-Based Supplement Stacks. No Pharma. No Fluff.</h1>
-    <p>Independent research on longevity, dosing protocols, and what actually works.</p>
-    <div class="search-bar">
-      <input type="text" id="hp-search" placeholder="Search supplements, protocols, ingredients..." />
-      <button onclick="searchHomepage()">Search</button>
-    </div>
-    <div class="categories">
-      <a href="/articles.html" class="cat-pill">Longevity</a>
-      <a href="/articles.html" class="cat-pill">Sleep</a>
-      <a href="/articles.html" class="cat-pill">Brain</a>
-      <a href="/articles.html" class="cat-pill">Immune</a>
-      <a href="/articles.html" class="cat-pill">Performance</a>
-      <a href="/articles.html" class="cat-pill">Mood</a>
-      <a href="/articles.html" class="cat-pill">Metabolism</a>
-    </div>
+    <h1>What Actually Works</h1>
+    <p>Independent research on longevity, dosing protocols, and no pharma fluff.</p>
   </div>
 
   <div class="main">
 
+    <!-- LATEST PROTOCOL SPOTLIGHT -->
+    <div class="section-label">Just Published</div>
+    <div class="section-header mb15">
+      <div class="section-title">Latest Protocol</div>
+    </div>
+    <a id="latest-protocol-spotlight" href="#" class="latest-protocol-card mb3"></a>
+
+    <!-- SEARCH BANNER -->
+    <div class="search-banner mb3">
+      <input type="text" id="hp-search" placeholder="Search supplements, protocols, ingredients..." />
+      <button onclick="searchHomepage()">Search</button>
+    </div>
+
     <!-- QUIZ BANNER TOP -->
-    <div class="quiz-banner mb3">
-      <div>
-        <h2>Find your perfect supplement stack</h2>
-        <p>Answer a few questions about your lifestyle and goals. Get a personalized protocol in 2 minutes.</p>
-      </div>
-      <a href="/your-stack.html" class="btn-gold">Start Stack Builder →</a>
+    <div class="quiz-banner-small mb3">
+      <span>Want a personalized stack? Answer a few quick questions.</span>
+      <a href="/your-stack.html" class="btn-gold-small">Start Stack Builder →</a>
     </div>
 
     <!-- FEATURED ARTICLE -->
@@ -291,7 +305,7 @@
     </div>
     <div id="featured-article" class="mb3"></div>
 
-    <!-- PROTOCOL ARTICLES - double-wide cards -->
+    <!-- PROTOCOL ARTICLES - double-wide cards (limited to 4 newest) -->
     <div class="section-label">★ Featured Protocols</div>
     <div class="section-header mb15">
       <div class="section-title">Guides & Protocols</div>
@@ -299,7 +313,7 @@
     </div>
     <div id="protocol-articles" class="protocol-grid mb3"></div>
 
-    <!-- LATEST ARTICLES -->
+    <!-- LATEST ARTICLES (limited to 8 newest) -->
     <div class="section-label">What's New</div>
     <div class="section-header mb15">
       <div class="section-title">Latest Articles</div>

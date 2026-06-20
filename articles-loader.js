@@ -154,18 +154,35 @@ async function loadArticles() {
       featuredEl.innerHTML = makeCard(featured, 'featured');
     }
 
-    // LATEST ARTICLES (homepage) - non-featured, non-protocol articles
+    // LATEST ARTICLES (homepage) - non-featured, non-protocol articles, limited to 8 newest
     const latestEl = document.getElementById('latest-articles');
     if (latestEl) {
       const latest = articles.filter(a => !a.featured && a.type !== 'protocol');
-      latestEl.innerHTML = latest.map(a => makeCard(a, 'small')).join('');
+      latestEl.innerHTML = latest.slice(-8).reverse().map(a => makeCard(a, 'small')).join('');
     }
 
-    // PROTOCOL ARTICLES (homepage) - only protocol type
+    // PROTOCOL ARTICLES (homepage) - only protocol type, limited to 4 newest
     const protocolEl = document.getElementById('protocol-articles');
     if (protocolEl) {
       const protocols = articles.filter(a => a.type === 'protocol');
-      protocolEl.innerHTML = protocols.map(a => makeCard(a, 'small')).join('');
+      protocolEl.innerHTML = protocols.slice(-4).reverse().map(a => makeCard(a, 'small')).join('');
+    }
+
+    // LATEST PROTOCOL SPOTLIGHT (homepage) - newest protocol only
+    const spotlightEl = document.getElementById('latest-protocol-spotlight');
+    if (spotlightEl) {
+      const protocols = articles.filter(a => a.type === 'protocol');
+      const newest = protocols[protocols.length - 1];
+      if (newest) {
+        spotlightEl.href = newest.url;
+        spotlightEl.innerHTML = `
+          <div class="lp-img"><img src="${newest.image}" alt="${newest.tag}" onerror="this.style.display='none'" /></div>
+          <div class="lp-content">
+            <span class="lp-tag">${newest.tag}</span>
+            <h3>${newest.title}</h3>
+          </div>
+        `;
+      }
     }
 
     // LONGEVITY SECTION (homepage)
