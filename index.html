@@ -101,7 +101,7 @@
     .h-article { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: flex; transition: border-color 0.2s, transform 0.2s; }
     .h-article:hover { border-color: var(--green-dark); transform: translateY(-2px); }
     .h-article-img { width: 160px; height: 160px; flex-shrink: 0; overflow: hidden; }
-    .h-article-img img { width: 100%; height: 100%; object-fit: cover; }
+    .h-article-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
     .h-article-body { padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
     .h-article-body h3 { font-size: 14px; font-weight: 600; color: var(--text); margin: 0.4rem 0; line-height: 1.4; }
     .h-article-body p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-top: 0.4rem; }
@@ -218,15 +218,18 @@
 .search-banner input { flex: 1; border: none; background: transparent; font-size: 14px; color: var(--text); outline: none; }
 .search-banner button { background: var(--green-dark); color: #FAF8F4; border: none; border-radius: 6px; padding: 0.5rem 1.25rem; font-size: 13px; font-weight: 600; cursor: pointer; }
 
-.quiz-banner-small { display: flex; align-items: center; gap: 1.25rem; background: var(--gradient); border: 1px solid var(--gold); border-radius: var(--radius); overflow: hidden; padding: 0; }
-.quiz-banner-small .qb-img { width: 140px; height: 140px; flex-shrink: 0; overflow: hidden; }
-.quiz-banner-small .qb-img img { width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.quiz-banner-small .qb-text { flex: 1; padding: 1rem 1.25rem 1rem 0; }
-.quiz-banner-small .qb-text > span:first-child { font-size: 13px; color: #FAF8F4; display: block; margin-bottom: 0.6rem; }
+.quiz-banner-small { display: flex; align-items: stretch; gap: 0; background: var(--gradient); border: 1px solid var(--gold); border-radius: var(--radius); overflow: hidden; padding: 0; min-height: 180px; }
+.quiz-banner-small .qb-img { width: 200px; flex-shrink: 0; overflow: hidden; }
+.quiz-banner-small .qb-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
+.quiz-banner-small .qb-text { flex: 1; padding: 1.5rem; display: flex; flex-direction: column; justify-content: center; }
+.quiz-banner-small .qb-text > span:first-child { font-size: 16px; line-height: 1.5; color: #FAF8F4; display: block; margin-bottom: 0.4rem; font-weight: 600; }
+.quiz-banner-small .qb-subtext { font-size: 13px; color: var(--green-light); display: block; margin-bottom: 1.1rem; line-height: 1.5; }
 .btn-gold-small { background: var(--gold); color: #1A1A1A; font-size: 12px; font-weight: 700; padding: 9px 18px; border-radius: 6px; text-decoration: none; white-space: nowrap; display: inline-block; }
 
 @media (max-width: 600px) {
-  .quiz-banner-small .qb-img { width: 90px; height: 90px; }
+  .quiz-banner-small { flex-direction: column; min-height: auto; }
+  .quiz-banner-small .qb-img { width: 100%; height: 160px; }
+  .quiz-banner-small .qb-text { padding: 1.25rem; }
 }
 
 @media (max-width: 600px) {
@@ -269,6 +272,8 @@
       .protocol-wide { flex-direction: column !important; }
       .protocol-wide-img { width: 100% !important; height: 160px !important; }
       .free-gift-banner { flex-direction: column !important; }
+      .stack-audit-feature { padding-top: 3rem !important; }
+      .audit-badge { position: static !important; display: inline-block; margin-bottom: 1rem; }
     }
     #latest-protocol-spotlight { border: 2px solid var(--gold); border-radius: var(--radius); }
   </style>
@@ -300,7 +305,8 @@
     <a href="/your-stack.html" class="quiz-banner-small mb3">
       <div class="qb-img"><img src="/images/stack-builder-personalize.jpg" alt="Personalized Stack Builder" onerror="this.style.display='none'" /></div>
       <div class="qb-text">
-        <span>Want a personalized stack? Answer a few quick questions.</span>
+        <span>Want a personalized stack?</span>
+        <span class="qb-subtext">Answer a few quick questions about your age, goals and lifestyle. Get a research-backed protocol built specifically for you - no email required, no upsell.</span>
         <span class="btn-gold-small">Start Stack Builder →</span>
       </div>
     </a>
@@ -401,6 +407,24 @@
         <span class="read-link">Read the full guide →</span>
       </div>
     </a>
+
+    <div class="divider"></div>
+
+    <!-- MORE PROTOCOLS (remaining, after first 4) -->
+    <div class="section-label">More to Explore</div>
+    <div class="section-header mb15">
+      <div class="section-title">More Protocols & Guides</div>
+      <a href="/articles.html" class="see-all">See all →</a>
+    </div>
+    <div id="protocol-articles-more" class="protocol-grid mb3"></div>
+
+    <!-- MORE ARTICLES (remaining, after first 8) -->
+    <div class="section-label">Keep Reading</div>
+    <div class="section-header mb15">
+      <div class="section-title">More Articles</div>
+      <a href="/articles.html" class="see-all">See all →</a>
+    </div>
+    <div id="latest-articles-more" class="grid-4 mb3"></div>
 
     <div class="divider"></div>
 

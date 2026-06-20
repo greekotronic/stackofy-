@@ -167,6 +167,21 @@ async function loadArticles() {
       const protocols = articles.filter(a => a.type === 'protocol');
       protocolEl.innerHTML = protocols.slice(-4).reverse().map(a => makeCard(a, 'small')).join('');
     }
+    // MORE PROTOCOLS (homepage) - remaining protocols after first 4
+    const protocolMoreEl = document.getElementById('protocol-articles-more');
+    if (protocolMoreEl) {
+      const protocols = articles.filter(a => a.type === 'protocol');
+      const remaining = protocols.slice(0, -4).reverse();
+      protocolMoreEl.innerHTML = remaining.map(a => makeCard(a, 'small')).join('');
+    }
+
+    // MORE ARTICLES (homepage) - remaining articles after first 8
+    const latestMoreEl = document.getElementById('latest-articles-more');
+    if (latestMoreEl) {
+      const latest = articles.filter(a => !a.featured && a.type !== 'protocol');
+      const remaining = latest.slice(0, -8).reverse();
+      latestMoreEl.innerHTML = remaining.map(a => makeCard(a, 'small')).join('');
+    }
 
     // LATEST PROTOCOL SPOTLIGHT (homepage) - newest protocol only
     const spotlightEl = document.getElementById('latest-protocol-spotlight');
