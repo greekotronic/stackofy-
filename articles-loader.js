@@ -188,6 +188,7 @@ async function loadArticles() {
           </div>
         `;
         spotlightEl.className = 'h-article mb3';
+        spotlightEl.style.display = 'flex';
       }
     }
 
