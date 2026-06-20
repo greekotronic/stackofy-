@@ -167,14 +167,6 @@ async function loadArticles() {
       const protocols = articles.filter(a => a.type === 'protocol');
       protocolEl.innerHTML = protocols.slice(-4).reverse().map(a => makeCard(a, 'small')).join('');
     }
-    // MORE PROTOCOLS (homepage) - remaining protocols after first 4
-    const protocolMoreEl = document.getElementById('protocol-articles-more');
-    if (protocolMoreEl) {
-      const protocols = articles.filter(a => a.type === 'protocol');
-      const remaining = protocols.slice(0, -4).reverse();
-      protocolMoreEl.innerHTML = remaining.map(a => makeCard(a, 'small')).join('');
-    }
-
     // MORE PROTOCOLS (homepage) - remaining protocols after first 4, limited to 4
     const protocolMoreEl = document.getElementById('protocol-articles-more');
     if (protocolMoreEl) {
