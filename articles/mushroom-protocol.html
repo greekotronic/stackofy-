@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Mushroom Protocol: Six Medicinal Mushrooms, One Coherent Stack - Stackofy</title>
+  <meta name="description" content="Reishi, Cordyceps, Chaga, Turkey Tail, Maitake and Lion's Mane each target a different system. Here is how to combine them without redundancy, with dosing, timing and cycling." />
+
+  <meta property="og:title" content="The Mushroom Protocol: Six Medicinal Mushrooms, One Coherent Stack" />
+  <meta property="og:description" content="Reishi, Cordyceps, Chaga, Turkey Tail, Maitake and Lion's Mane each target a different system. Here is how to combine them without redundancy." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/mushroom-protocol" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-mushroom-protocol.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a1408, #3D3018, #7A5C10); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,20,8,0.95) 0%, rgba(26,20,8,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .mushroom-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .mushroom-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.25rem 1.5rem; display: flex; gap: 1rem; align-items: flex-start; transition: border-color 0.2s; }
+    .mushroom-card:hover { border-color: var(--green-dark); }
+    .mushroom-card .m-num { background: var(--green-dark); color: #FAF8F4; font-weight: 700; font-size: 13px; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+    .mushroom-card .m-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .mushroom-card .m-role { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--gold); margin-bottom: 6px; display: block; }
+    .mushroom-card .m-body p { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+    .mushroom-card .m-body a { font-size: 12px; font-weight: 600; color: var(--green-dark); border-bottom: 1px solid var(--green-light); margin-top: 6px; display: inline-block; }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin-bottom: 0.75rem; }
+    .warning-box p:last-child { margin-bottom: 0; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 13px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 12px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 12px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-reishi { background: linear-gradient(135deg, #2A1040, #6B2D6B); }
+    .c-cordyceps { background: linear-gradient(135deg, #3D1A00, #B85C00); }
+    .c-turkeytail { background: linear-gradient(135deg, #0a1a1a, #2D6A6A); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+      .mushroom-card { flex-direction: column; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <main>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-mushroom-protocol.jpg" alt="Six medicinal mushrooms arranged together" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Mushroom Protocol</span>
+      <h1>Six Medicinal Mushrooms, One Coherent Stack</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>14 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Six medicinal mushrooms, six different jobs - this is not "take more mushrooms," it is a structured stack where each one covers a system the others do not</li>
+        <li>Reishi (sleep/immune), Cordyceps (energy/mitochondria), Lion's Mane (cognition/NGF), Chaga (antioxidant/liver), Turkey Tail (oncology-adjuvant immune), Maitake (blood sugar/immune) - minimal functional overlap</li>
+        <li>You almost certainly do not need all six at once. Pick based on your actual goal, not because a "mushroom complex" product bundles them</li>
+        <li>Timing matters more than most people realize: Reishi at night, Cordyceps in the morning, the rest are flexible</li>
+        <li>Quality variance across this category is extreme - extraction method and mushroom part (fruiting body vs. mycelium-on-grain) change the active compound content by an order of magnitude</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>The "mushroom complex" supplement category has a marketing problem: most products bundle 6-10 mushrooms into one capsule with the implicit message that more mushrooms equals more benefit. That is not how this works. Reishi and Cordyceps do almost entirely different things. Taking both does not double an effect - it covers two separate systems.</p>
+
+      <p>This protocol is the opposite approach. Across the six individual guides on this site, here is how the mechanisms actually map onto each other, where they overlap, where they do not, and how to build a stack that makes structural sense for your specific goal rather than buying whatever blend happened to get bottled together.</p>
+
+      <h2>The Six Mushrooms and What Each One Actually Does</h2>
+
+      <div class="mushroom-grid">
+
+        <div class="mushroom-card">
+          <div class="m-num">1</div>
+          <div class="m-body">
+            <span class="m-role">Sleep / Immune / Stress</span>
+            <h4>Reishi (Ganoderma lucidum)</h4>
+            <p>Ganoderic acids and beta-glucans. Telomere preservation and autophagy enhancement in animal models, confirmed T-lymphocyte modulation in humans, and a 2024 RCT showing real anxiety and sleep benefits at 1g/day. The "shen tonic" of the group - take it in the evening.</p>
+            <a href="/articles/reishi-guide.html">Read the full Reishi guide →</a>
+          </div>
+        </div>
+
+        <div class="mushroom-card">
+          <div class="m-num">2</div>
+          <div class="m-body">
+            <span class="m-role">Energy / Mitochondria / Performance</span>
+            <h4>Cordyceps (C. militaris / C. sinensis)</h4>
+            <p>Cordycepin activates AMPK, the same energy-sensing pathway targeted by berberine and metformin. A 2024 trial showed 72% SirT6 increase and 68% more cellular ATP production. Confirmed VO2max gains in human RCTs after 3+ weeks. Take it in the morning - it is stimulating, not calming.</p>
+            <a href="/articles/cordyceps-guide.html">Read the full Cordyceps guide →</a>
+          </div>
+        </div>
+
+        <div class="mushroom-card">
+          <div class="m-num">3</div>
+          <div class="m-body">
+            <span class="m-role">Cognition / Nerve Growth</span>
+            <h4>Lion's Mane (Hericium erinaceus)</h4>
+            <p>The only mushroom in this stack with documented nerve growth factor (NGF) stimulation. Covers neurological territory none of the other five touch directly. Pairs naturally with Cordyceps for a complete cognitive-and-energy morning combination.</p>
+            <a href="/articles/lionsmane-guide.html">Read the full Lion's Mane guide →</a>
+          </div>
+        </div>
+
+        <div class="mushroom-card">
+          <div class="m-num">4</div>
+          <div class="m-body">
+            <span class="m-role">Antioxidant / Liver / Gut</span>
+            <h4>Chaga (Inonotus obliquus)</h4>
+            <p>Betulinic acid and melanin with genuine hepatoprotective and antioxidant activity - better supported than the often-quoted ORAC score. A specific extraction method also showed a real gut-microbiome effect, increasing beneficial bacteria growth.</p>
+            <a href="/articles/chaga-guide.html">Read the full Chaga guide →</a>
+          </div>
+        </div>
+
+        <div class="mushroom-card">
+          <div class="m-num">5</div>
+          <div class="m-body">
+            <span class="m-role">Oncology-Adjuvant Immune</span>
+            <h4>Turkey Tail (Trametes versicolor)</h4>
+            <p>PSK has been an approved, insurance-covered adjuvant cancer therapy in Japan for over 30 years, backed by large RCTs in gastric and colorectal cancer. The strongest human clinical evidence base of any mushroom here - specifically in an oncology-adjuvant context, not general wellness.</p>
+            <a href="/articles/turkeytail-guide.html">Read the full Turkey Tail guide →</a>
+          </div>
+        </div>
+
+        <div class="mushroom-card">
+          <div class="m-num">6</div>
+          <div class="m-body">
+            <span class="m-role">Blood Sugar / Immune / Vitamin D</span>
+            <h4>Maitake (Grifola frondosa)</h4>
+            <p>D-fraction has real human dose-escalation immune trial data. Alpha-glucans show consistent blood-sugar-lowering activity across multiple animal studies. An underrated bonus: Maitake is a meaningful food source of fungal vitamin D2.</p>
+            <a href="/articles/maitake-guide.html">Read the full Maitake guide →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="article-img">
+        <img src="/images/mushroom-protocol-stack.jpg" alt="Six mushroom supplement bottles in a row" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Where the Overlap Actually Is</h2>
+
+      <p>Almost every medicinal mushroom shares one mechanism at the base level: beta-glucan polysaccharides that activate macrophages and natural killer cells through the innate immune system. This means there is some redundancy if your only goal is "general immune support" - Reishi, Turkey Tail, and Maitake all hit this same pathway to varying degrees.</p>
+
+      <p>The differentiation happens in the secondary compound classes. Reishi's ganoderic acids drive its neurological and sleep effects. Cordyceps' cordycepin drives the AMPK/mitochondrial story. Chaga's betulinic acid drives its liver and antioxidant profile. Turkey Tail's PSK has documented direct cytotoxic activity against cancer cells, not just immune modulation. Maitake's alpha-glucans drive its blood sugar effect. None of the other five mushrooms have a comparable secondary mechanism in these specific areas.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">The Practical Takeaway</div>
+        <p>If your goal is general immune resilience, one mushroom with strong beta-glucan content (Reishi or Maitake) is sufficient - adding all three immune-focused mushrooms produces diminishing returns on that specific axis. The real value of combining mushrooms comes from stacking different secondary mechanisms - Reishi for sleep plus Cordyceps for energy plus Lion's Mane for cognition covers three genuinely separate systems with minimal functional overlap.</p>
+      </div>
+
+      <h2>Building Your Stack by Goal</h2>
+
+      <table class="dosing-table">
+        <thead>
+          <tr>
+            <th>Goal</th>
+            <th>Recommended Mushrooms</th>
+            <th>Why</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>General longevity / foundation</td>
+            <td>Reishi + Chaga</td>
+            <td>Covers sleep/immune and antioxidant/liver without redundancy. The most defensible two-mushroom starting point.</td>
+          </tr>
+          <tr>
+            <td>Energy and cognitive performance</td>
+            <td>Cordyceps + Lion's Mane</td>
+            <td>AMPK/mitochondrial energy plus NGF/cognitive support. Both work best taken in the morning.</td>
+          </tr>
+          <tr>
+            <td>Sleep and stress</td>
+            <td>Reishi alone</td>
+            <td>The only mushroom in this group with meaningful human RCT data on anxiety and sleep specifically. Adding others does not add to this axis.</td>
+          </tr>
+          <tr>
+            <td>Metabolic health (blood sugar focus)</td>
+            <td>Maitake + Chaga</td>
+            <td>Maitake's alpha-glucan blood sugar effect, Chaga's antioxidant and liver support. Complementary, not redundant.</td>
+          </tr>
+          <tr>
+            <td>Active cancer treatment (adjuvant, with oncologist)</td>
+            <td>Turkey Tail specifically</td>
+            <td>This is the one mushroom with regulatory history and large RCTs in this exact context. Discuss with treating physician first, always.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>Timing and Cycling</h2>
+
+      <p>Two of the six mushrooms have a clear directional timing requirement. Reishi is calming and works on sleep architecture - take it in the evening, 60-90 minutes before bed. Cordyceps is energizing through mitochondrial mechanisms - take it in the morning or pre-workout, never in the evening if you are sensitive to it.</p>
+
+      <p>Lion's Mane, Chaga, Turkey Tail and Maitake are flexible on timing and can be taken with any meal containing some fat, which improves absorption of the fat-soluble triterpenoid fractions present in most of these mushrooms.</p>
+
+      <p>On cycling: most of the human RCT data behind these mushrooms covers 3-12 week intervention periods, not indefinite year-round use. An 8-weeks-on, 2-weeks-off rotation is a reasonable default for the energy and cognitive mushrooms (Cordyceps, Lion's Mane). Reishi and the immune-focused mushrooms (Turkey Tail, Maitake) are more commonly used continuously in the research literature, particularly in oncology-adjuvant contexts where consistency matters more than cycling.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">Quality Variance Is the Real Risk Here</div>
+        <p>The single biggest quality issue across this entire category: mycelium grown quickly on grain substrate versus actual fruiting body extracted properly. Mycelium-on-grain products can contain a fraction of the active compound content of fruiting body extracts, while costing nearly the same. Across all six guides on this site, the buying advice converges on the same point - check whether the label specifies fruiting body sourcing and dual extraction (water plus alcohol), and be skeptical of any product that does not.</p>
+      </div>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong</span>
+          <h4>Turkey Tail (Oncology-Adjuvant)</h4>
+          <p>Large RCTs, 30+ years of regulatory approval in Japan. The strongest single evidence base in this entire stack, in its specific context.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong</span>
+          <h4>Maitake (Human Immune Trial)</h4>
+          <p>Phase I/II dose-escalation human trial with no dose-limiting toxicity across five dose levels - rare direct human data for this category.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate</span>
+          <h4>Reishi &amp; Cordyceps</h4>
+          <p>Strong mechanistic and animal data, with growing human RCT support for sleep/mood (Reishi) and exercise performance (Cordyceps) specifically.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate</span>
+          <h4>Chaga &amp; Lion's Mane</h4>
+          <p>Solid mechanistic case (betulinic acid, NGF stimulation respectively) with the human RCT base still developing relative to the other four.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">7.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor (Protocol Average)</strong>
+          A genuinely complementary stack when built by function rather than by buying a generic blend. The combined evidence base spans actual human RCTs (Turkey Tail, Maitake, Reishi, Cordyceps) more than most supplement categories can claim. Quality sourcing remains the limiting factor across the board.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Full citations for each mushroom are available in their individual guides: <a href="/articles/reishi-guide.html">Reishi</a>, <a href="/articles/cordyceps-guide.html">Cordyceps</a>, <a href="/articles/lionsmane-guide.html">Lion's Mane</a>, <a href="/articles/chaga-guide.html">Chaga</a>, <a href="/articles/turkeytail-guide.html">Turkey Tail</a>, and <a href="/articles/maitake-guide.html">Maitake</a>.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Build Your Longevity Stack Correctly</h3>
+      <p>The ARI NMN Buyer's Protocol covers supplement sourcing, quality markers, and stack sequencing for the serious longevity stack.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">NMN Buyer's Protocol - $47 →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/reishi-guide.html" class="related-card">
+          <div class="related-img c-reishi">
+            <img src="/images/hero-reishi-guide.jpg" alt="Reishi" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Reishi</span>
+            <h4>The Immortality Fungus That Actually Has Science Behind It</h4>
+          </div>
+        </a>
+        <a href="/articles/cordyceps-guide.html" class="related-card">
+          <div class="related-img c-cordyceps">
+            <img src="/images/hero-cordyceps-guide.jpg" alt="Cordyceps" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Cordyceps</span>
+            <h4>The Energy Mushroom With Actual Performance Data</h4>
+          </div>
+        </a>
+        <a href="/articles/turkeytail-guide.html" class="related-card">
+          <div class="related-img c-turkeytail">
+            <img src="/images/hero-turkeytail-guide.jpg" alt="Turkey Tail" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Turkey Tail</span>
+            <h4>The Only Mushroom With an Actual Approved Cancer Drug Inside It</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for educational purposes only and does not constitute medical advice. The statements on this page have not been evaluated by the FDA or any regulatory authority. Supplements are not intended to diagnose, treat, cure, or prevent any disease. Consult a qualified healthcare professional before starting any supplementation protocol, particularly if you have existing health conditions or take medications.
+    </div>
+
+  </div>
+
+  </main>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
