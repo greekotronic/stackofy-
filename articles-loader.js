@@ -37,6 +37,7 @@ const COLORS = {
 'c-maitake': 'background:linear-gradient(135deg,#1a1208,#6B5530)',
 'c-turkeytail': 'background:linear-gradient(135deg,#0a1a1a,#2D6A6A)',
 'c-curcumin': 'background:linear-gradient(135deg,#3D2400,#D4A853)',
+'c-shilajit': 'background:linear-gradient(135deg,#1a0f00,#5C3A1E)',
 };
 
 function makeCard(article, size) {
