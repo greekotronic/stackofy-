@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shilajit: The Himalayan Tar With a Heavy Metal Problem - Stackofy</title>
+  <meta name="description" content="A 90-day RCT shows real testosterone gains. Fulvic acid content varies 32,000% between commercial products. Here is what shilajit actually does - and why third-party testing is not optional." />
+
+  <meta property="og:title" content="Shilajit: The Himalayan Tar With a Heavy Metal Problem" />
+  <meta property="og:description" content="A 90-day RCT shows real testosterone gains. Fulvic acid content varies 32,000% between commercial products. Here is what shilajit actually does - and why third-party testing is not optional." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/shilajit-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-shilajit-guide.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a0f00, #3D2B10, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,15,0,0.95) 0%, rgba(26,15,0,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .compound-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .compound-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .compound-name { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 6px; }
+    .compound-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin-bottom: 0.75rem; }
+    .warning-box p:last-child { margin-bottom: 0; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-cordyceps { background: linear-gradient(135deg, #3D1A00, #B85C00); }
+    .c-creatine { background: linear-gradient(135deg, #1a1a1a, #2A2A10); }
+    .c-coq { background: linear-gradient(135deg, #1a0a00, #5C3A00); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .compound-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <main>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-shilajit-guide.jpg" alt="Shilajit resin" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Shilajit</span>
+      <h1>The Himalayan Tar With a Heavy Metal Problem</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>12 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Shilajit is a mineral-rich resin that seeps from Himalayan rock, formed over centuries from compressed plant material and microbial activity - it is not a plant extract, it is geological tar</li>
+        <li>A peer-reviewed 90-day RCT in healthy men showed real increases in total and free testosterone using a standardized, purified extract - this is one of the better human trials in the adaptogen category</li>
+        <li>Fulvic acid is the key active compound, acting as a mineral chelator that shuttles zinc and other cofactors into cells, with documented mitochondrial and antioxidant effects</li>
+        <li>A 2024 independent lab analysis found fulvic acid content varying by nearly 32,000% across eight commercial products - this is the single biggest quality problem in this category</li>
+        <li>Raw, unpurified shilajit can contain dozens of heavy metals. Purification and third-party testing are not optional extras here - they are the difference between a supplement and a liability</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Shilajit looks like nothing else on a supplement shelf. It is a thick, tar-like resin, sometimes sold as sticky paste, sometimes as powder, that oozes out of rock crevices in the Himalayas, the Caucasus, and a handful of other high-altitude mountain ranges during warm months. Classical Ayurvedic texts classify it as a rasayana - a rejuvenating substance used for stamina, recovery, and longevity.</p>
+
+      <p>What makes shilajit genuinely unusual in the supplement world is its origin: it is not extracted from a single plant or fungus. It forms over centuries from layers of decomposing plant material and minerals, transformed by heat, pressure, and microbial activity into a dense, mineral-saturated substance. That geological origin is also exactly why quality control here is harder, and more important, than almost anywhere else in this category.</p>
+
+      <h2>What's Actually In Shilajit</h2>
+
+      <div class="compound-grid">
+        <div class="compound-card">
+          <div class="compound-name">Fulvic Acid</div>
+          <p>Makes up 50-80% of premium shilajit. An organic chelator and potent antioxidant, small enough at the molecular level to shuttle minerals and nutrients directly across cell membranes. Considered the primary bioactive compound and a bioavailability enhancer in its own right.</p>
+        </div>
+        <div class="compound-card">
+          <div class="compound-name">Dibenzo-alpha-pyrones (DBPs)</div>
+          <p>Mitochondria-targeted antioxidant compounds. Research attributes much of shilajit's energy and hormone-related effects to DBPs working alongside fulvic acid, particularly through support of ATP production in mitochondria.</p>
+        </div>
+        <div class="compound-card">
+          <div class="compound-name">Humic Acid</div>
+          <p>A related but distinct organic acid fraction. Contributes to the overall antioxidant and mineral-binding profile, though less studied individually than fulvic acid.</p>
+        </div>
+        <div class="compound-card">
+          <div class="compound-name">Trace Minerals (60-84 elements)</div>
+          <p>Including zinc, magnesium, and iron - critical cofactors for hormone production and enzymatic function. The same chelating property that makes fulvic acid useful also means shilajit can carry both beneficial minerals and harmful heavy metals, depending on the source and purification.</p>
+        </div>
+      </div>
+
+      <h2>The Testosterone Evidence: Genuinely Solid</h2>
+
+      <p>This is shilajit's best-supported claim, and the evidence base here is better than most adaptogens get.</p>
+
+      <p>A randomized, double-blind, placebo-controlled clinical trial evaluated purified Shilajit on testosterone levels in healthy male volunteers, using a standardized extract (PrimaVie) verified by HPLC to contain not less than 50% fulvic acids and 0.3% dibenzo-alpha-pyrones. At 250 mg taken twice daily over 90 days, the shilajit group showed measurable increases in both total and free testosterone compared to placebo.</p>
+
+      <div class="article-img">
+        <img src="/images/shilajit-spoon-dissolve.jpg" alt="Shilajit resin dissolving in warm water" onerror="this.style.display='none'" />
+      </div>
+
+      <p>The proposed mechanism is mechanistically coherent, not just correlational. Dibenzo-alpha-pyrones support mitochondrial ATP production, which feeds the activity of the StAR (Steroidogenic Acute Regulatory) protein - the protein responsible for shuttling cholesterol into mitochondria as the first step of testosterone synthesis. Without sufficient cellular energy, this first step stalls. Separately, fulvic acid's chelating ability is thought to deliver zinc - a direct cofactor for testosterone production - into Leydig cells, the testes' primary hormone-producing cells, while also activating the Nrf2 antioxidant pathway that protects those same cells from oxidative damage.</p>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">90 days</div>
+          <div class="stat-label">Duration of the key placebo-controlled testosterone RCT in healthy men</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">500mg</div>
+          <div class="stat-label">Daily dose used in the testosterone trial (250mg twice daily)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">32,000%</div>
+          <div class="stat-label">Variance in fulvic acid content found across 8 commercial products tested independently</div>
+        </div>
+      </div>
+
+      <h2>Beyond Testosterone: Other Documented Effects</h2>
+
+      <h3>Sperm Quality and Fertility</h3>
+      <p>A clinical evaluation of processed shilajit in men with oligospermia (low sperm count) found measurable improvements in semen analysis parameters, with safety data showing unaltered liver and kidney function markers at the doses studied. This is an older but methodologically reasonable study that adds to the reproductive health angle of shilajit's evidence base.</p>
+
+      <h3>Physical Performance and Strength Retention</h3>
+      <p>A study on muscular strength and shilajit supplementation found that 500 mg/day of standardized extract promoted retention of maximal muscular strength and decreased baseline hydroxyproline - a biomarker associated with collagen breakdown - in trained individuals. A more recent 28-day open-label pilot study testing a standardized shilajit resin tracked muscle strength, endurance, grip strength, and fatigue measures alongside blood biomarkers including CRP and testosterone, reflecting growing interest in rigorously testing physical performance claims rather than relying on traditional use alone.</p>
+
+      <h3>Cognitive and Neuroprotective Signals</h3>
+      <p>Laboratory research on shilajit's fulvic acid found it reduced tau protein aggregation, a key pathological factor in Alzheimer's disease - an interesting preclinical signal, though far from a clinical claim. Separate research into fulvic acid's antioxidant and metal-binding activity suggests potential support for energy metabolism in brain cells, a plausible but still early-stage area of investigation.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong</span>
+          <h4>Testosterone (Healthy Men)</h4>
+          <p>Peer-reviewed, randomized, placebo-controlled 90-day trial with HPLC-verified standardized extract. One of the better human trials in the adaptogen category.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate</span>
+          <h4>Sperm Quality / Fertility</h4>
+          <p>Documented improvement in oligospermia patients with confirmed liver/kidney safety, though the underlying study is older and would benefit from modern replication.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate</span>
+          <h4>Physical Strength &amp; Performance</h4>
+          <p>Multiple studies show real biomarker changes (hydroxyproline, strength retention), with newer pilot trials expanding into broader performance metrics.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate</span>
+          <h4>Cognitive / Neuroprotective</h4>
+          <p>Promising mechanistic and preclinical signal (tau aggregation, brain cell energy) but lacking large human cognitive outcome trials specifically.</p>
+        </div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/shilajit-minerals-testosterone.jpg" alt="Abstract visualization of trace minerals flowing into cells" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Quality Problem: This Is Where It Gets Serious</h2>
+
+      <p>Shilajit has a genuine quality control crisis that does not get enough attention relative to how seriously it should be taken.</p>
+
+      <p>An independent testing organization evaluated eight popular commercial shilajit supplements for fulvic acid content and heavy metal contamination in 2024, finding fulvic acid amounts varied by nearly 32,000% across products. That is not a typo, and it is not a minor labeling inconsistency - it means some products sold as "shilajit" may contain almost none of the compound responsible for most of its documented effects.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">The Heavy Metal Issue Is Real, Not Theoretical</div>
+        <p>A comprehensive review examining shilajit's heavy metal profile found that raw shilajit can naturally contain around 65 different heavy metals, alongside its beneficial mineral content, and the review specifically examined the detoxification mechanisms of the humic substances that help mitigate this. Raw, unprocessed resin sourced directly from mountain rock without proper purification is the highest-risk form. This is not a reason to avoid shilajit entirely - it is the reason purification and third-party testing are non-negotiable, not optional upgrades.</p>
+      </div>
+
+      <h2>Dosage and Forms</h2>
+
+      <table class="dosing-table">
+        <thead>
+          <tr>
+            <th>Form</th>
+            <th>Effective Range</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Purified, standardized resin/extract</td>
+            <td>250-500 mg/day, often split into two doses</td>
+            <td>The form used in the testosterone and strength trials. Look for verified fulvic acid percentage (50%+) on the label.</td>
+          </tr>
+          <tr>
+            <td>Encapsulated standardized powder</td>
+            <td>300-600 mg/day</td>
+            <td>More convenient than resin, same quality requirements apply - check for third-party testing.</td>
+          </tr>
+          <tr>
+            <td>Raw, unpurified mountain resin</td>
+            <td>Not recommended without independent testing</td>
+            <td>Highest variability in composition, highest contamination risk. Only buy if the seller provides current third-party lab results.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>What to look for on a label:</strong> a stated fulvic acid percentage (the trials used 50% or higher), confirmation of dibenzo-alpha-pyrone (DBP) content, GMP manufacturing, and third-party testing for heavy metals, microbial load, pesticides, and aflatoxins. If a product does not specify fulvic acid percentage at all, treat that as a red flag rather than an oversight.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Stack Position</div>
+        <p>Shilajit's mitochondrial and zinc-delivery mechanisms make it a reasonable complement to CoQ10 (mitochondrial support from a different angle) or Cordyceps (also ATP/mitochondria focused, but through cordycepin rather than DBPs). There is no documented interaction risk between these, but as with any two mitochondria-targeting compounds, there is also limited evidence that combining them produces additive benefit beyond either alone.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">7.2/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Genuinely solid human RCT for testosterone, with a coherent and plausible mitochondrial mechanism. Heavily docked for the extreme product quality variance and real heavy metal contamination risk in this specific category - more than almost any other supplement on this site, sourcing quality determines whether this score even applies to what you actually bought.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Pandit S et al. Clinical evaluation of purified Shilajit on testosterone levels in healthy volunteers. Andrologia. 2016.</li>
+        <li>Pandit S et al. Clinical evaluation of spermatogenic activity of processed Shilajit in oligospermia. Andrologia. 2010.</li>
+        <li>Keller J et al. The effects of Shilajit supplementation on fatigue-induced changes in muscular strength. J Int Soc Sports Nutr. 2019.</li>
+        <li>Safety and Efficacy of TruBlk Shilajit Resin Supplementation on Physical Performance and Blood Biomarkers in Healthy Adults: A 28-Day Open-Label Pilot Study. PMC12848467. 2025.</li>
+        <li>Carrasco-Gallardo C et al. Shilajit: A natural phytocomplex with potential procognitive activity. Int J Alzheimers Dis. 2012.</li>
+        <li>Hussain N, Saeed M. Heavy metal profile, associated toxicities, and detoxification mechanisms of humic substances in Shilajit. Biol Trace Elem Res. 2024.</li>
+        <li>ConsumerLab. Independent evaluation of fulvic acid content and heavy metal contamination across commercial Shilajit supplements. 2024.</li>
+        <li>A herbo-mineral compound with multifaceted health benefits: review of Shilajit mechanisms and clinical evidence. Int J Basic Clin Pharmacol. 2025;14(4):638.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Build Your Longevity Stack Correctly</h3>
+      <p>The ARI NMN Buyer's Protocol covers supplement sourcing, quality markers, and stack sequencing for the serious longevity stack.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">NMN Buyer's Protocol - $47 →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/cordyceps-guide.html" class="related-card">
+          <div class="related-img c-cordyceps">
+            <img src="/images/hero-cordyceps-guide.jpg" alt="Cordyceps" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Cordyceps</span>
+            <h4>The Energy Mushroom With Actual Performance Data</h4>
+          </div>
+        </a>
+        <a href="/articles/creatine-guide.html" class="related-card">
+          <div class="related-img c-creatine">
+            <img src="/images/hero-creatine.jpg" alt="Creatine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Creatine</span>
+            <h4>Creatine: The Most Researched Supplement That Still Gets Underused</h4>
+          </div>
+        </a>
+        <a href="/articles/coq10-guide.html" class="related-card">
+          <div class="related-img c-coq">
+            <img src="/images/hero-coq10.jpg" alt="CoQ10" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">CoQ10</span>
+            <h4>CoQ10: The Mitochondrial Compound Your Body Makes Less of Every Decade</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for educational purposes only and does not constitute medical advice. The statements on this page have not been evaluated by the FDA or any regulatory authority. Supplements are not intended to diagnose, treat, cure, or prevent any disease. Consult a qualified healthcare professional before starting any supplementation protocol, particularly if you have existing health conditions or take medications.
+    </div>
+
+  </div>
+
+  </main>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
