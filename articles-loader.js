@@ -156,9 +156,6 @@ async function loadArticles() {
     const res = await fetch('/articles.json');
     const articles = await res.json();
 
-   
-
-    }
     // LATEST ARTICLES (homepage) - non-featured, non-protocol articles, limited to 8 newest
     const latestEl = document.getElementById('latest-articles');
     if (latestEl) {
