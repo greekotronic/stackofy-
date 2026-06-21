@@ -381,5 +381,15 @@
   "tags": "longevity immune energy",
   "readTime": "14 min",
   "description": "Reishi, Cordyceps, Chaga, Turkey Tail, Maitake and Lion's Mane each target a different system. Here is how to combine them without redundancy - dosing, timing and which ones you actually need."
+},
+{
+  "title": "Curcumin: The Anti-Inflammatory With a Bioavailability Problem",
+  "tag": "Curcumin",
+  "url": "/articles/curcumin-guide.html",
+  "image": "/images/hero-curcumin-guide.jpg",
+  "color": "c-curcumin",
+  "tags": "longevity immune brain",
+  "readTime": "13 min",
+  "description": "21 trials, 1,705 patients confirm curcumin lowers inflammatory markers in osteoarthritis. But the black pepper trick may not work the way you think. Here is the real evidence."
 }
 ]
