@@ -90,7 +90,7 @@ function makeCard(article, size) {
            data-title="${article.title}">
           <div class="card-img protocol-img" style="${bg}">
             <img src="${article.image}" alt="${article.tag}" onerror="this.style.display='none'" />
-            <span class="protocol-badge">${(article.tag === 'ARI Book' || article.featured) ? '★ Featured' : '★ Protocol'}</span>
+            <span class="protocol-badge">${article.tag === 'ARI Book' ? '★ Featured' : '★ Protocol'}</span>
           </div>
           <div class="card-body">
             <div class="card-meta">
@@ -126,7 +126,7 @@ function makeCard(article, size) {
       <a href="${article.url}" class="article-card protocol-card protocol-wide">
         <div class="protocol-wide-img" style="${bg}">
           <img src="${article.image}" alt="${article.tag}" onerror="this.style.display='none'" />
-          <span class="protocol-badge">${(article.tag === 'ARI Book' || article.featured) ? '★ Featured' : '★ Protocol'}</span>
+          <span class="protocol-badge">${article.tag === 'ARI Book' ? '★ Featured' : '★ Protocol'}</span>
         </div>
         <div class="protocol-wide-body">
           <span class="article-tag protocol-tag">${article.tag}</span>
@@ -159,7 +159,7 @@ async function loadArticles() {
     // FEATURED ARTICLE (homepage)
     const featuredEl = document.getElementById('featured-article');
     if (featuredEl) {
-      const featured = articles.find(a => a.featured) || articles[0];
+      const featured = articles.find(a => a.featured && a.url !== '/articles/do-supplements-work-guide.html') || articles[0];
       featuredEl.innerHTML = makeCard(featured, 'featured');
     }
 // NMN SPOTLIGHT (homepage) - fixed position between Energy and Stat Banner
@@ -207,11 +207,10 @@ async function loadArticles() {
       latestMore2El.innerHTML = remaining.slice(8, 16).map(a => makeCard(a, 'small')).join('');
     }
 
-    // LATEST PROTOCOL SPOTLIGHT (homepage) - newest protocol only
+    // LATEST PROTOCOL SPOTLIGHT (homepage) - fixed to the skeptic article
     const spotlightEl = document.getElementById('latest-protocol-spotlight');
     if (spotlightEl) {
-      const protocols = articles.filter(a => a.type === 'protocol');
-      const newest = protocols[protocols.length - 1];
+      const newest = articles.find(a => a.url === '/articles/do-supplements-work-guide.html');
       if (newest) {
         const bg = COLORS[newest.color] || 'background:#1B4332';
         spotlightEl.href = newest.url;
@@ -269,7 +268,7 @@ async function loadArticles() {
           <a href="${a.url}" class="protocol-card-page">
             <div class="protocol-card-img" style="${bg}">
               <img src="${a.image}" alt="${a.tag}" onerror="this.style.display='none'" />
-              <span class="protocol-badge">${(a.tag === 'ARI Book' || a.featured) ? '★ Featured' : '★ Protocol'}</span>
+              <span class="protocol-badge">${a.tag === 'ARI Book' ? '★ Featured' : '★ Protocol'}</span>
             </div>
             <div class="protocol-card-body">
               <span class="protocol-card-tag">${a.tag}</span>
