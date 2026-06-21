@@ -51,9 +51,7 @@ function makeCard(article, size) {
   if (size === 'featured') {
     return `
       <a href="${article.url}" class="featured-xl mb3">
-        <div class="featured-xl-img" style="${bg}">
-          <img src="${article.image}" alt="${article.tag}" onerror="this.style.display='none'" />
-        </div>
+        <div class="featured-xl-img" style="${bg} background-image:url('${article.image}'); background-size:cover; background-position:center 30%;"></div>
         <div class="featured-xl-body">
           <div class="featured-label">Most Read - ${article.readTime}</div>
           <span class="article-tag">${article.tag}</span>
