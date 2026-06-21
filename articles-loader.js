@@ -148,8 +148,6 @@ function makeCard(article, size) {
     </a>`;
 }
 
-}
-
 async function loadArticles() {
   try {
     const res = await fetch('/articles.json');
