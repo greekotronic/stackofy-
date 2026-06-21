@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TMG: The Methyl Donor Every NMN User Forgets to Take - Stackofy</title>
+  <meta name="description" content="TMG reliably lowers homocysteine and replenishes methyl groups depleted by NAD+ precursors. But higher doses raise LDL, and the cardiovascular benefit everyone assumes has never been confirmed in outcome trials." />
+
+  <meta property="og:title" content="TMG: The Methyl Donor Every NMN User Forgets to Take" />
+  <meta property="og:description" content="TMG reliably lowers homocysteine and replenishes methyl groups depleted by NAD+ precursors. But higher doses raise LDL, and the cardiovascular benefit nobody has confirmed." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/tmg-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-tmg-guide.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #3D0A1A, #6B1A2A, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(61,10,26,0.95) 0%, rgba(61,10,26,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .compound-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .compound-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .compound-name { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 6px; }
+    .compound-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin-bottom: 0.75rem; }
+    .warning-box p:last-child { margin-bottom: 0; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .c-gly { background: linear-gradient(135deg, #1a2a1a, #2D6A4F); }
+    .c-resv { background: linear-gradient(135deg, #3d0a0a, #7A1A1A); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .compound-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <main>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-tmg-guide.jpg" alt="TMG powder and beets" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">TMG</span>
+      <h1>The Methyl Donor Every NMN User Forgets to Take</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>12 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>TMG (trimethylglycine, also called betaine) is a methyl donor that reliably lowers homocysteine and recycles it back into methionine - this part of the evidence is solid and well-replicated</li>
+        <li>If you take NMN, NR, or other NAD+ precursors, TMG matters specifically: NAD+ metabolism consumes methyl groups to excrete nicotinamide byproducts, and that consumption can deplete the same methyl pool your body needs for neurotransmitter synthesis, DNA methylation, and other essential functions</li>
+        <li>What is not proven: that lowering homocysteine with TMG actually reduces cardiovascular disease or improves blood vessel function. Multiple trials confirm the biomarker effect but not the clinical outcome</li>
+        <li>Higher doses (6g/day) have raised LDL and triglycerides in healthy adults in clinical trials - a real tradeoff that complicates the simple "lower homocysteine, protect your heart" narrative</li>
+        <li>Effective range for methylation support is typically 1-3g/day; the higher 4-6g/day range used in homocysteine trials carries more of the lipid-related tradeoff</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>TMG is one of the more quietly important supplements on this site, mostly because almost nobody who needs it knows they need it. It does not have a dramatic story. It does not promise dramatic results. What it does is patch a specific biochemical hole that opens up when you take other, more popular longevity supplements - particularly NAD+ precursors like NMN and NR.</p>
+
+      <p>If you are taking those and have never heard of TMG, this is the gap in your stack worth understanding, even if you decide not to fill it.</p>
+
+      <h2>What Is TMG?</h2>
+
+      <p>Trimethylglycine - also called betaine or betaine anhydrous - is a naturally occurring compound found in foods like beets, spinach, quinoa, and whole grains, though cooking substantially reduces its content. It is also produced naturally inside the human body. Chemically, it is glycine with three methyl groups attached, which is exactly what makes it useful: those methyl groups are a transferable resource your body needs constantly for dozens of biochemical processes.</p>
+
+      <p>Important labeling note: "betaine" and "betaine HCl" are not the same product. Betaine HCl is a digestive aid used to support stomach acid production, sold for an entirely different purpose. TMG, sometimes labeled "betaine anhydrous," is the form relevant to methylation support. Confusing the two means buying the wrong supplement entirely.</p>
+
+      <h2>The Core Mechanism: Methyl Donation and Homocysteine</h2>
+
+      <p>TMG's primary, best-documented action is donating a methyl group to homocysteine, converting it back into methionine via the enzyme betaine-homocysteine methyltransferase (BHMT). This matters because elevated homocysteine has been associated with cardiovascular risk, and TMG supplementation reliably and consistently lowers blood homocysteine levels across multiple clinical trials.</p>
+
+      <div class="compound-grid">
+        <div class="compound-card">
+          <div class="compound-name">Methyl Group Donation</div>
+          <p>TMG's defining function. Donates one of its three methyl groups to homocysteine via the BHMT enzyme, converting it to methionine independent of B12 and folate status - a separate pathway from the more commonly discussed folate-methylation cycle.</p>
+        </div>
+        <div class="compound-card">
+          <div class="compound-name">Osmolyte Function</div>
+          <p>Beyond methylation, TMG helps cells maintain proper hydration and resist osmotic stress, particularly in the liver, kidneys, gut, and fat tissue - a distinct, independent mechanism from its methyl-donor role.</p>
+        </div>
+        <div class="compound-card">
+          <div class="compound-name">Downstream Methylation Support</div>
+          <p>The methionine generated feeds into SAMe (S-adenosylmethionine) production, the body's universal methyl donor used for neurotransmitter synthesis, DNA methylation, creatine production, and CoQ10 and melatonin biosynthesis.</p>
+        </div>
+        <div class="compound-card">
+          <div class="compound-name">Nitric Oxide Support</div>
+          <p>Some research indicates TMG supplementation may increase blood nitric oxide levels, which widens blood vessels during exercise and may improve nutrient delivery and waste clearance - relevant to its modest performance application below.</p>
+        </div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/tmg-methylation-cycle.jpg" alt="Abstract visualization of the methylation cycle" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Why This Matters Specifically for NAD+ Precursor Users</h2>
+
+      <p>This is the most practically important section of this article, and the reason TMG appears at all in serious longevity stack discussions.</p>
+
+      <p>When NAD+ is consumed by the body's enzymes, it breaks down into nicotinamide (NAM). To be excreted safely, NAM needs a methyl group attached to form methylnicotinamide before it can leave the body through the kidneys. The more NAD+ precursor you take - NMN, NR, or niacin - the more NAM gets produced, and the more methyl groups get consumed just to clear it out. This creates a real, mechanistically described tradeoff: boosting NAD+ levels can quietly draw down the same methyl pool your body needs for neurotransmitter synthesis, DNA methylation, and other baseline functions.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">The Sinclair/Stanfield Rationale</div>
+        <p>This connection has been described publicly by both Dr. David Sinclair and Dr. Brad Stanfield, two of the more visible figures in NAD+ supplementation research and commentary - both have specifically noted that NMN and NR can interfere with the body's DNA methylation process by consuming methyl groups, and both have described taking TMG specifically to offset this effect. This is not formal trial data; it is expert mechanistic reasoning that has become widely adopted practice among serious NAD+ supplement users, including the ARI personal stack.</p>
+      </div>
+
+      <h2>The Cardiovascular Question: Biomarker vs. Outcome</h2>
+
+      <p>This is where TMG's story gets genuinely more complicated than most supplement guides admit, and it is worth being precise about the distinction.</p>
+
+      <p>TMG reliably lowers homocysteine at 4-6 g/day - this part is well-established across multiple trials. What has not been shown is that this translates into improved blood vessel function or better cardiovascular outcomes. A 2013 meta-analysis and a separate 6-week randomized trial measuring flow-mediated dilation (a direct measure of blood vessel function) found no clear improvement despite the homocysteine reduction. This is an important example of the broader "biomarker versus outcome" problem in nutrition science: moving a number in the right direction does not guarantee the thing that number is supposed to predict actually improves.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">The Lipid Tradeoff</div>
+        <p>A 2005 clinical trial found that higher TMG doses (6 g/day) raised LDL cholesterol and triglycerides in healthy adults. This is a genuine complication for anyone taking TMG specifically for cardiovascular reasons - you may be lowering one cardiovascular risk marker (homocysteine) while raising another (LDL/triglycerides) at the same dose. This tension is rarely mentioned in TMG marketing, but it is documented in the clinical literature and should factor into dosing decisions, particularly at the higher end of the range.</p>
+      </div>
+
+      <h2>Beyond Methylation: Other Studied Applications</h2>
+
+      <h3>Exercise Performance</h3>
+      <p>A 2024 systematic review and meta-analysis on chronic betaine supplementation and exercise performance found modest support for certain outcomes, building on earlier work including a 2012 trial and a 2024 Nutrients time-trial study showing small improvements in sprint and cycling performance at 2.5-3 g/day over 1-2 weeks. A 2017 review characterized the overall performance evidence as inconsistent - real in some studies, absent in others, which is a fair, unglamorous summary of where this application currently stands.</p>
+
+      <h3>Liver Health</h3>
+      <p>A 2025 review examined betaine's role in regulating the gut-liver axis as a therapeutic approach for chronic liver diseases, building on TMG's longer-studied historical use in alcoholic and non-alcoholic fatty liver disease, where its osmolyte and methylation functions are both thought to play a protective role.</p>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">4-6g</div>
+          <div class="stat-label">Daily dose range shown to reliably lower homocysteine across clinical trials</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">2025</div>
+          <div class="stat-label">Year of the most recent review on betaine's gut-liver axis therapeutic role</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">0.5-9g</div>
+          <div class="stat-label">Full range studied across adult human trials, depending on application</div>
+        </div>
+      </div>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong</span>
+          <h4>Homocysteine Lowering</h4>
+          <p>Well-replicated across multiple RCTs at 4-6g/day. One of the more consistently confirmed biomarker effects in the supplement category.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Unconfirmed</span>
+          <h4>Cardiovascular Outcomes</h4>
+          <p>Homocysteine reduction does not reliably translate to improved vascular function in controlled trials. Treat as biomarker support, not a proven heart-protective intervention.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Modest</span>
+          <h4>Exercise Performance</h4>
+          <p>Small positive signal in some sprint/cycling studies at 2.5-3g/day short-term. Overall evidence base described as inconsistent by review authors.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Mechanistic</span>
+          <h4>NAD+ Precursor Methyl Support</h4>
+          <p>Sound biochemical rationale, widely adopted by NAD+ researchers and practitioners. Not yet validated by a dedicated head-to-head clinical trial measuring methylation status with vs. without TMG co-supplementation.</p>
+        </div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/tmg-capsules-beets.jpg" alt="TMG supplement capsules with fresh beetroot" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Dosage and Forms</h2>
+
+      <table class="dosing-table">
+        <thead>
+          <tr>
+            <th>Goal</th>
+            <th>Range</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Methylation support alongside NAD+ precursors</td>
+            <td>1-3 g/day</td>
+            <td>The most common practical range for this specific use case. Lower lipid-impact risk than the homocysteine-focused dose range.</td>
+          </tr>
+          <tr>
+            <td>Homocysteine reduction</td>
+            <td>4-6 g/day</td>
+            <td>Trial-validated range for lowering homocysteine specifically. Monitor lipid panel given the documented LDL/triglyceride tradeoff at this range.</td>
+          </tr>
+          <tr>
+            <td>Exercise performance</td>
+            <td>2.5-3 g/day, short-term (1-2 weeks)</td>
+            <td>Modest, inconsistent evidence. Take with meals; some users split morning/evening or pre-workout dosing.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Form:</strong> always choose "betaine anhydrous" specifically - not "betaine HCl," which serves a different digestive purpose entirely. <strong>Timing:</strong> take with meals, split between morning and evening doses if using the higher homocysteine-focused range. In the ARI personal stack, TMG is taken in P1 (morning, fasted, with coffee) - directly alongside the NAD+ precursor dose it is meant to offset.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">Who Should Be Cautious</div>
+        <p>If you have a lipid disorder or are actively managing cholesterol, the documented LDL/triglyceride increase at higher doses (6g/day) is relevant - discuss with your doctor before using TMG in this range, and consider the lower 1-3g methylation-support dose instead. TMG should not be confused with prescription betaine, which is used under medical supervision for the genetic condition homocystinuria at doses and monitoring protocols well outside standard supplementation.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">6.8/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Solid, well-replicated mechanism for homocysteine and methyl group support, with a genuinely useful niche role for anyone taking NAD+ precursors. Docked for the unconfirmed cardiovascular outcome benefit and the real lipid tradeoff at higher doses - this is a supporting-cast supplement, not a headline longevity intervention on its own.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Effects of low-dose B vitamins plus betaine supplementation on lowering homocysteine concentrations among Chinese adults with hyperhomocysteinemia: a randomized, double-blind, controlled preliminary clinical trial. 2023.</li>
+        <li>Betaine as a Functional Ingredient: Metabolism, Health-Promoting Attributes, Food Sources, Applications and Analysis Methods. Review. 2023.</li>
+        <li>Effects of chronic betaine supplementation on exercise performance: Systematic review and meta-analysis. 2024.</li>
+        <li>Betaine regulates the gut-liver axis: a therapeutic approach for chronic liver diseases. Review. 2025.</li>
+        <li>TMG Supplement: Benefits, Dosage, Safety, and Use. BodySpec. Citing 2005, 2012, 2013, 2017, and 2024 clinical and review sources.</li>
+        <li>How Can TMG Help Your Homocysteine Levels? Life Extension. Citing McCully homocysteine theory literature and 2022-2023 mechanistic reviews.</li>
+        <li>Trimethylglycine as a therapeutic supplement. EBSCO Research Starters. 2025.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Build Your Longevity Stack Correctly</h3>
+      <p>The ARI NMN Buyer's Protocol covers supplement sourcing, quality markers, and stack sequencing - including why TMG belongs alongside your NAD+ precursor.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">NMN Buyer's Protocol - $47 →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/antiaging-stack.html" class="related-card">
+          <div class="related-img c-nmn">
+            <img src="/images/hero-antiaging-stack.jpg" alt="Anti-Aging Stack" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Anti-Aging Protocol</span>
+            <h4>The ARI Anti-Aging Stack: NMN, Resveratrol, TMG and More</h4>
+          </div>
+        </a>
+        <a href="/articles/nmn-supplements-guide.html" class="related-card">
+          <div class="related-img c-nmn">
+            <img src="/images/hero-nmn.jpg" alt="NMN" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">NMN</span>
+            <h4>NMN: What the Research Actually Shows About NAD+ Supplementation</h4>
+          </div>
+        </a>
+        <a href="/articles/glycine-guide.html" class="related-card">
+          <div class="related-img c-gly">
+            <img src="/images/hero-glycine.jpg" alt="Glycine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Glycine</span>
+            <h4>Glycine: The Overlooked Amino Acid Behind Better Sleep</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for educational purposes only and does not constitute medical advice. The statements on this page have not been evaluated by the FDA or any regulatory authority. Supplements are not intended to diagnose, treat, cure, or prevent any disease. Consult a qualified healthcare professional before starting any supplementation protocol, particularly if you have existing health conditions or take medications.
+    </div>
+
+  </div>
+
+  </main>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
