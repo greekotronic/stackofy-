@@ -439,6 +439,7 @@
   "image": "/images/hero-do-supplements-work-v2.jpg",
   "color": "c-skeptic",
   "featured": true,
+  "type": "protocol",
   "tags": "skepticism evidence",
   "readTime": "14 min",
   "description": "Most supplements are marketing dressed up as science. A few have evidence as strong as anything in medicine. The skeptics are not wrong about the industry - they are wrong that the question has one answer."
