@@ -55,8 +55,8 @@
 
     .featured-xl { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: grid; grid-template-columns: 1.1fr 1fr; transition: border-color 0.2s, transform 0.2s; }
     .featured-xl:hover { border-color: var(--green-dark); transform: translateY(-2px); }
-    .featured-xl-img { height: 340px; overflow: hidden; }
-    .featured-xl-img img { width: 100%; height: 100%; object-fit: cover; }
+    .featured-xl-img { height: 340px; overflow: hidden; margin: 0; padding: 0; line-height: 0; }
+    .featured-xl-img img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 30%; margin: 0; padding: 0; border: none; }
     .featured-xl-body { padding: 2.5rem; display: flex; flex-direction: column; justify-content: center; }
     .featured-label { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
     .featured-xl-body h2 { font-size: 1.6rem; font-weight: 700; color: var(--text); margin-bottom: 1rem; line-height: 1.35; margin-top: 0.5rem; }
