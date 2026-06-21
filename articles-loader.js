@@ -159,7 +159,14 @@ async function loadArticles() {
       const featured = articles.find(a => a.featured) || articles[0];
       featuredEl.innerHTML = makeCard(featured, 'featured');
     }
-
+// NMN SPOTLIGHT (homepage) - fixed position between Energy and Stat Banner
+    const nmnSpotlightEl = document.getElementById('nmn-spotlight');
+    if (nmnSpotlightEl) {
+      const nmnArticle = articles.find(a => a.url === '/articles/nmn-supplements-guide.html');
+      if (nmnArticle) {
+        nmnSpotlightEl.innerHTML = makeCard(nmnArticle, 'featured');
+      }
+    }
     // LATEST ARTICLES (homepage) - non-featured, non-protocol articles, limited to 8 newest
     const latestEl = document.getElementById('latest-articles');
     if (latestEl) {
