@@ -38,6 +38,7 @@ const COLORS = {
 'c-turkeytail': 'background:linear-gradient(135deg,#0a1a1a,#2D6A6A)',
 'c-curcumin': 'background:linear-gradient(135deg,#3D2400,#D4A853)',
 'c-shilajit': 'background:linear-gradient(135deg,#1a0f00,#5C3A1E)',
+'c-toxic': 'background:linear-gradient(135deg,#2A0A0A,#7A1A1A)',
 };
 
 function makeCard(article, size) {
