@@ -157,12 +157,26 @@ async function loadArticles() {
     const articles = await res.json();
 
    
-// NMN SPOTLIGHT (homepage) - fixed position between Energy and Stat Banner
-    const nmnSpotlightEl = document.getElementById('nmn-spotlight');
+// NMN SPOTLIGHT (homepage) - independent, isolated card
+    const nmnSpotlightEl = document.getElementById('nmn-spotlight-new');
     if (nmnSpotlightEl) {
       const nmnArticle = articles.find(a => a.url === '/articles/nmn-supplements-guide.html');
       if (nmnArticle) {
-        nmnSpotlightEl.innerHTML = makeCard(nmnArticle, 'featured');
+        const nmnBg = COLORS[nmnArticle.color] || 'background:#1B4332';
+        nmnSpotlightEl.innerHTML = `
+          <a href="${nmnArticle.url}" class="article-card nmn-card mb3">
+            <div class="card-img nmn-card-img" style="${nmnBg}">
+              <img src="${nmnArticle.image}" alt="${nmnArticle.tag}" onerror="this.style.display='none'" />
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <span class="article-tag">${nmnArticle.tag}</span>
+                <span class="read-time">${nmnArticle.readTime}</span>
+              </div>
+              <h3>${nmnArticle.title}</h3>
+              <p>${nmnArticle.description}</p>
+            </div>
+          </a>`;
       }
     }
     // LATEST ARTICLES (homepage) - non-featured, non-protocol articles, limited to 8 newest
