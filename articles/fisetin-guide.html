@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fisetin: The Senolytic Flavonoid With Real Human Trial Data - Stackofy</title>
+  <meta name="description" content="A Mayo Clinic trial in 536 long-COVID patients. A phase 2 sepsis trial enrolling now. Fisetin has more active human research than almost any other senolytic. Here is what it actually does, and the bioavailability problem nobody mentions." />
+
+  <meta property="og:title" content="Fisetin: The Senolytic Flavonoid With Real Human Trial Data" />
+  <meta property="og:description" content="A Mayo Clinic trial in 536 long-COVID patients. A phase 2 sepsis trial enrolling now. Here is what fisetin actually does, and the bioavailability problem nobody mentions." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/fisetin-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-fisetin-guide.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #4D1020, #7A1A1A, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(77,16,32,0.95) 0%, rgba(77,16,32,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .compound-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .compound-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .compound-name { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 6px; }
+    .compound-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin-bottom: 0.75rem; }
+    .warning-box p:last-child { margin-bottom: 0; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-quer { background: linear-gradient(135deg, #3d4a10, #6B7A2A); }
+    .c-resv { background: linear-gradient(135deg, #3d0a0a, #7A1A1A); }
+    .c-pter { background: linear-gradient(135deg, #1a2a4a, #2D4A6B); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .compound-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <main>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-fisetin-guide.jpg" alt="Strawberries and fisetin powder" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Fisetin</span>
+      <h1>The Senolytic Flavonoid With Real Human Trial Data</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>13 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Fisetin is a senolytic flavonoid - it selectively clears senescent "zombie" cells rather than acting as a general antioxidant, which puts it in a fundamentally different category from most polyphenol supplements</li>
+        <li>A Mayo Clinic study in 536 long-COVID patients found 64% of those who received fisetin reported significant symptom relief - one of the largest human fisetin datasets to date, though not yet a full randomized trial</li>
+        <li>A phase 2 randomized trial testing fisetin in elderly sepsis patients is actively running, alongside a separate pilot trial measuring fisetin's pharmacokinetics directly in healthy volunteers and older multimorbid patients</li>
+        <li>2025 mouse data shows fisetin improves physical function and reduces frailty markers comparably to genetic senescent cell clearance - a meaningful mechanistic validation</li>
+        <li>The unresolved problem is bioavailability: fisetin has low absorption and rapid metabolism, which is part of why effective trial doses are unusually high (20 mg/kg) rather than the gram-scale doses sold in most supplements</li>
+        <li>It is naturally found in strawberries, but at concentrations far too low to replicate trial-level dosing through diet alone</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Most longevity supplements work by supporting a process your body already does - more antioxidant capacity, better mitochondrial function, improved nutrient delivery. Fisetin works differently. It belongs to a small, genuinely novel category called senolytics: compounds designed to selectively kill off senescent cells, the "zombie cells" that stop dividing with age but refuse to die, instead sitting in tissue and releasing inflammatory signals that damage everything around them.</p>
+
+      <p>This distinction matters because it changes what kind of evidence is relevant. You are not asking whether fisetin reduces oxidative stress in a test tube - dozens of polyphenols do that. You are asking whether it can selectively clear a specific, biologically defined cell population in a living human being, and whether that translates into something you can actually feel or measure. The honest answer in 2026 is: more than almost any other senolytic, but with real unresolved questions.</p>
+
+      <h2>What Is Fisetin?</h2>
+
+      <p>Fisetin is a flavonoid - a naturally occurring plant pigment - found in a variety of fruits and vegetables, most notably strawberries, but also in apples, persimmons, onions, and cucumbers. It has been studied for decades as a general antioxidant and anti-inflammatory compound. What changed its profile entirely was a landmark 2018 discovery that fisetin acts as a senolytic: it preferentially induces apoptosis (programmed cell death) in senescent cells while sparing healthy, non-senescent cells nearby.</p>
+
+      <p>That selectivity is the entire point. A compound that simply kills cells indiscriminately would be a poison. A compound that can distinguish a senescent cell from a healthy one and clear only the former is doing something genuinely difficult and genuinely useful for aging biology - assuming the effect holds up in humans the way it does in mice.</p>
+
+      <h2>The Senescence Mechanism, Briefly</h2>
+
+      <p>Senescent cells accumulate with age. They stop dividing, but instead of dying off through normal apoptosis, they persist and secrete a cocktail of inflammatory proteins known as the senescence-associated secretory phenotype, or SASP. This SASP output is one of the central drivers of the chronic, low-grade inflammation associated with aging - sometimes called "inflammaging" - and is mechanistically linked to frailty, reduced physical function, and a wide range of age-related diseases.</p>
+
+      <div class="compound-grid">
+        <div class="compound-card">
+          <div class="compound-name">Selective Apoptosis Induction</div>
+          <p>Fisetin triggers programmed cell death specifically in senescent cells, sparing healthy tissue. This selectivity, demonstrated across multiple senescent cell types in vitro, is the core senolytic mechanism distinguishing fisetin from generic antioxidants.</p>
+        </div>
+        <div class="compound-card">
+          <div class="compound-name">SASP Reduction</div>
+          <p>By clearing senescent cells, fisetin indirectly reduces the inflammatory SASP signaling those cells produce - the proposed link between fisetin treatment and reduced systemic inflammation in animal models.</p>
+        </div>
+        <div class="compound-card">
+          <div class="compound-name">Hormetic Dose Response</div>
+          <p>A 2025 review specifically attributes many of fisetin's chemoprotective effects to hormesis - a biphasic dose-response where low doses trigger adaptive, protective cellular responses, distinct from a simple linear dose-effect relationship.</p>
+        </div>
+        <div class="compound-card">
+          <div class="compound-name">Limited Cell-Type Selectivity</div>
+          <p>Research has found fisetin induces apoptosis in many, but not all, types of senescent cells - an important nuance, since it means fisetin's effect is not uniform across every tissue or every form of cellular senescence.</p>
+        </div>
+      </div>
+
+      <h2>The Mayo Clinic Long-COVID Data</h2>
+
+      <p>This is the largest human dataset currently available for fisetin, and it deserves a clear-eyed look at exactly what it does and does not show.</p>
+
+      <p>A 2024 study involving 536 long-COVID patients tracked outcomes for participants, of whom 44 received a fisetin intervention. Among those 44 patients, 64% reported significant alleviation in symptoms including fatigue, muscle pain, and orthostatic hypotension - a notable result, given that long-COVID symptom clusters overlap substantially with patterns associated with cellular senescence and chronic inflammation.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">Read the Sample Size Correctly</div>
+        <p>The "536 patients" figure describes the overall study population, not the number who received fisetin - only 44 patients actually got the intervention being evaluated. A 64% response rate in 44 people is a meaningful, hypothesis-generating signal, not proof of efficacy at the scale the headline number might suggest. This is exactly the kind of detail that gets flattened in supplement marketing, and exactly the kind of detail worth checking yourself before trusting any single statistic.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/fisetin-senolytic-cells.jpg" alt="Abstract visualization of senescent cells being cleared" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What's Actually Running Right Now</h2>
+
+      <p>Fisetin has an unusually active human clinical trial pipeline for a flavonoid supplement, which is itself a signal worth noting - most supplements never reach this stage of investigation.</p>
+
+      <h3>Phase 2 Sepsis Trial (STOP-Sepsis)</h3>
+      <p>A multi-center, randomized, double-blinded, adaptive allocation phase 2 clinical trial is actively testing fisetin's efficacy in preventing clinical deterioration in elderly sepsis patients. The trial plans to enroll 220 patients over age 65, randomized to receive fisetin as a single 20 mg/kg oral dose, two 20 mg/kg doses spaced one day apart, or placebo. The underlying hypothesis is that senescent immune cells contribute to maladaptive responses during sepsis, and that clearing them with fisetin could mitigate that response - a genuinely novel application outside the typical "anti-aging" framing.</p>
+
+      <h3>Pharmacokinetic Pilot Trial</h3>
+      <p>A separate pilot trial is specifically measuring how fisetin is absorbed and metabolized in both healthy volunteers and older patients with multiple chronic conditions, using a 20 mg/kg/day dose over two consecutive days, followed by monitoring for up to three months. This is foundational pharmacokinetic work - the kind of basic data that determines whether dosing recommendations on supplement bottles have any real grounding.</p>
+
+      <h2>What the Animal Data Shows</h2>
+
+      <p>A 2025 study found that intermittent fisetin supplementation improved physical function and decreased cellular senescence in aging skeletal muscle, with effects comparable to both genetic clearance of senescent cells and synthetic senolytic drug treatment - a meaningful benchmark, since it places fisetin's effect size in the same range as more targeted, lab-engineered interventions. The same research found fisetin treatment reduced age-associated frailty index scores, using a frailty measure reflective of clinical frailty indices used in human medicine.</p>
+
+      <p>Separately, intermittent fisetin treatment in old mice improved arterial function by decreasing cellular senescence in vascular tissue - extending the senolytic story beyond muscle into cardiovascular aging specifically.</p>
+
+      <div class="stat-row">
+        <div class="stat-box">
+          <div class="stat-num">64%</div>
+          <div class="stat-label">Of 44 long-COVID patients receiving fisetin reported significant symptom relief (Mayo Clinic, 2024)</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">220</div>
+          <div class="stat-label">Patients targeted for enrollment in the active phase 2 sepsis senolytic trial</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">20mg/kg</div>
+          <div class="stat-label">Dose used across most active human trials - roughly 1,400mg for a 70kg adult</div>
+        </div>
+      </div>
+
+      <h2>The Bioavailability Problem</h2>
+
+      <p>This is the part of the fisetin story that supplement marketing tends to skip entirely. A 2024 scientific review directly states that fisetin's low bioavailability and rapid metabolism may hinder its clinical translation - meaning even where the underlying biological effect is real, getting enough active fisetin into the bloodstream and keeping it there long enough to matter is a genuine pharmacological challenge.</p>
+
+      <p>This is part of why the clinical trial doses look so different from typical supplement bottle doses. The trials above use 20 mg/kg - for a 70 kg (154 lb) adult, that works out to roughly 1,400 mg, taken intermittently rather than daily. Many commercial fisetin supplements are dosed at 100-500 mg, far below the trial-validated range, and almost certainly insufficient to replicate the senescent cell clearance effect seen in the research.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Why Strawberries Won't Get You There</div>
+        <p>Fisetin is naturally present in strawberries, but at concentrations measured in single-digit micrograms per gram of fruit. Reaching even a moderate supplemental dose through diet alone would require eating an impractical quantity of strawberries daily, and natural dietary fisetin still carries the same bioavailability limitation as supplemental fisetin. This is a case where "get it from food" genuinely is not a realistic alternative to supplementation, if the senolytic dose-range effect is what you are after.</p>
+        </div>
+
+      <h2>Other Documented Effects</h2>
+
+      <p>Research on fisetin's blood-brain barrier penetration has found it can directly neutralize free radicals and reduce pro-inflammatory cytokines in brain tissue, with one 2024 study reporting fisetin increased dopamine levels by 1.8 to 2.2 times in a Parkinson's disease animal model - an early but mechanistically interesting signal for neurological applications. Separate research has examined fisetin's potential role in bone health, including osteoporosis and osteoarthritis, through reduction of pro-inflammatory cytokines like TNF-alpha.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Promising</span>
+          <h4>Long-COVID Symptom Relief</h4>
+          <p>64% response rate in a 44-patient Mayo Clinic cohort. Meaningful signal, but small sample and not yet a placebo-controlled outcome trial.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Active Investigation</span>
+          <h4>Sepsis (Phase 2 RCT)</h4>
+          <p>A genuinely rigorous, randomized, adaptive-allocation trial enrolling 220 elderly patients is underway - results not yet available as of this writing.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong (Animal)</span>
+          <h4>Physical Function &amp; Frailty</h4>
+          <p>2025 mouse data shows effects comparable to genetic senescent cell clearance - one of the most direct mechanistic validations available for any senolytic supplement.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Early</span>
+          <h4>Neurological &amp; Bone Health</h4>
+          <p>Interesting dopaminergic and anti-inflammatory signals in animal models. Human translation for these specific applications remains largely unstudied.</p>
+        </div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/fisetin-capsules-strawberry.jpg" alt="Fisetin supplement capsules with strawberries" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Dosage and Forms</h2>
+
+      <table class="dosing-table">
+        <thead>
+          <tr>
+            <th>Approach</th>
+            <th>Range</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Senolytic protocol (research-aligned)</td>
+            <td>~20 mg/kg, taken intermittently (2 consecutive days, then weeks off)</td>
+            <td>Matches the dose used in active human trials. High dose; intermittent use is intentional, mirroring how senolytics are designed to work.</td>
+          </tr>
+          <tr>
+            <td>Standard supplement dose</td>
+            <td>100-500 mg/day</td>
+            <td>Common commercial dosing. Likely insufficient to replicate trial-level senescent cell clearance based on bioavailability data.</td>
+          </tr>
+          <tr>
+            <td>Dietary intake (strawberries, apples)</td>
+            <td>Negligible relative to supplemental doses</td>
+            <td>Contributes to overall polyphenol intake but not a realistic path to senolytic-range dosing.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>On the ARI personal stack,</strong> fisetin is used as part of a monthly senolytic pulse alongside high-dose quercetin and apigenin, taken on 3 consecutive days per month rather than continuously - consistent with the "hit it, then clear out" logic behind intermittent senolytic dosing rather than daily low-dose use.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">A Note on Self-Experimentation</div>
+        <p>The 20 mg/kg research dose is substantially higher than what most commercial supplements provide, and intermittent high-dose senolytic protocols are still an active area of human investigation, not an established consumer practice. If you have any chronic illness, are on medication, or are considering anything beyond standard label-dose supplementation, this is a conversation for your doctor, not a self-directed experiment based on a clinical trial protocol designed for a specific, monitored patient population.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">7.7/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          One of the most actively researched senolytics in human trials currently running, with a genuinely novel and well-characterized mechanism. Docked for the real, unresolved bioavailability gap between research doses and commercial supplement doses, and for the still-limited size of completed (versus ongoing) human efficacy data.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Tavenier J et al. Senolytics To slOw Progression of Sepsis (STOP-Sepsis) in elderly patients: study protocol. Trials. 2024;25:111995. PMID: 39384074.</li>
+        <li>Pilot Trial of Fisetin in Healthy Volunteers and Older Patients With Multimorbidity. ClinicalTrials.gov NCT06431932.</li>
+        <li>Intermittent Supplementation With Fisetin Improves Physical Function and Decreases Cellular Senescence in Skeletal Muscle With Aging. PMC12341784. 2025.</li>
+        <li>Intermittent supplementation with fisetin improves arterial function in old mice by decreasing cellular senescence. PMC10928570.</li>
+        <li>Fisetin as a senotherapeutic agent: Evidence and perspectives for age-related diseases. ScienceDirect. 2024.</li>
+        <li>Calabrese EJ et al. Fisetin: hormesis accounts for many of its chemoprotective effects. Biogerontology. 2025;26(2):90. PMID: 40208387.</li>
+        <li>COVID-FIS: Pilot in COVID-19 (SARS-CoV-2) of Fisetin in Older Adults in Nursing Homes. ClinicalTrials.gov NCT04537299. Mayo Clinic.</li>
+        <li>Clinical research on fisetin: Multi-targeted approach to cellular homeostasis. NutraIngredients. 2025.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Build Your Longevity Stack Correctly</h3>
+      <p>The ARI NMN Buyer's Protocol covers supplement sourcing, quality markers, and stack sequencing for the serious longevity stack.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">NMN Buyer's Protocol - $47 →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/quercetin-guide.html" class="related-card">
+          <div class="related-img c-quer">
+            <img src="/images/hero-quercetin.jpg" alt="Quercetin" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Quercetin</span>
+            <h4>Quercetin: The Senolytic Flavonoid With Real Zombie Cell Data</h4>
+          </div>
+        </a>
+        <a href="/articles/resveratrol-guide.html" class="related-card">
+          <div class="related-img c-resv">
+            <img src="/images/hero-resveratrol.jpg" alt="Resveratrol" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Resveratrol</span>
+            <h4>Resveratrol: The Longevity Molecule and Its Bioavailability Problem</h4>
+          </div>
+        </a>
+        <a href="/articles/pterostilbene-guide.html" class="related-card">
+          <div class="related-img c-pter">
+            <img src="/images/hero-pterostilbene.jpg" alt="Pterostilbene" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Pterostilbene</span>
+            <h4>Pterostilbene: Resveratrol's More Bioavailable Cousin</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for educational purposes only and does not constitute medical advice. The statements on this page have not been evaluated by the FDA or any regulatory authority. Supplements are not intended to diagnose, treat, cure, or prevent any disease. Consult a qualified healthcare professional before starting any supplementation protocol, particularly if you have existing health conditions or take medications.
+    </div>
+
+  </div>
+
+  </main>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
