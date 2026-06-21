@@ -40,6 +40,8 @@ const COLORS = {
 'c-shilajit': 'background:linear-gradient(135deg,#1a0f00,#5C3A1E)',
 'c-toxic': 'background:linear-gradient(135deg,#2A0A0A,#7A1A1A)',
 'c-fisetin': 'background:linear-gradient(135deg,#4D1020,#C0392B)',
+'c-tmg': 'background:linear-gradient(135deg,#3D0A1A,#6B1A2A)',
+'c-skeptic': 'background:linear-gradient(135deg,#1A1A1A,#3D3D2A)',
 };
 
 function makeCard(article, size) {

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Do Supplements Even Work? An Honest Answer From People Who Sell Them - Stackofy</title>
+  <meta name="description" content="Most supplements are marketing dressed up as science. A few have evidence as strong as anything in medicine. The skeptics are not wrong about the industry. They are wrong that the question has one answer." />
+
+  <meta property="og:title" content="Do Supplements Even Work? An Honest Answer From People Who Sell Them" />
+  <meta property="og:description" content="Most supplements are marketing dressed up as science. A few have evidence as strong as anything in medicine. The skeptics are not wrong about the industry - they are wrong that the question has one answer." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/do-supplements-work-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-do-supplements-work.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1A1A1A, #3D3D2A, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(26,26,26,0.95) 0%, rgba(26,26,26,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.weak { background: #FFF0F0; color: #C0392B; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .compound-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .compound-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .compound-name { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 6px; }
+    .compound-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin-bottom: 0.75rem; }
+    .warning-box p:last-child { margin-bottom: 0; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+    .stat-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .stat-num { font-size: 1.8rem; font-weight: 700; color: var(--green-dark); }
+    .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-creatine { background: linear-gradient(135deg, #1a1a1a, #2A2A10); }
+    .c-vitd { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .c-audit { background: linear-gradient(135deg, #1a1a1a, #2D3A2A); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .compound-grid { grid-template-columns: 1fr !important; }
+      .stat-row { grid-template-columns: 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <main>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-do-supplements-work.jpg" alt="Supplement capsules on dark background" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Honest Answer</span>
+      <h1>Do Supplements Even Work? An Honest Answer From People Who Sell Them</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>14 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>If you think "supplements are a scam," you are mostly right about the industry and wrong about the question - "do supplements work" has no single answer because it lumps together compounds with wildly different evidence quality</li>
+        <li>Creatine has evidence as strong as most prescription drugs: a meta-analysis of 49 trials and 1,863 participants confirms measurable strength and muscle mass gains. Most "detox" and "metabolism boosting" products have none</li>
+        <li>A 2025 JAMA study found people believe vague label claims even for a completely fictional supplement - which tells you the placebo effect of marketing language is doing more work than most people realize</li>
+        <li>75% of Americans take supplements regularly, and the market is worth $64 billion in the US alone - that scale guarantees both real products and enormous amounts of noise selling on the same shelf</li>
+        <li>The honest move is not picking a side. It is learning to tell the difference between a compound backed by real trials and one backed by a marketing budget - and we will show you exactly how</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>If you think supplements are mostly nonsense, you are not wrong. You are just not finished thinking about it.</p>
+
+      <p>The skepticism is earned. Walk into any pharmacy or scroll any wellness influencer's page and you will find products promising to "detox," "boost metabolism," "balance hormones," or "supercharge immunity" - vague enough to mean nothing and specific enough to sound like something. Most of these claims rest on cell-culture studies, animal models, or nothing at all. The supplement industry has spent decades training people to distrust it, and a website like this one, run by people who sell supplement-related products, has zero credibility if it pretends otherwise.</p>
+
+      <p>But "do supplements work" is the wrong question, and answering it with a flat yes or no - in either direction - is itself a kind of intellectual laziness. The right question is: which specific compound, at what dose, for what outcome, backed by what kind of evidence? That question has very different answers depending on what you're asking about, and the gap between the best-supported and worst-supported products on the market is enormous.</p>
+
+      <h2>The Skeptic's Case, Stated Fairly</h2>
+
+      <p>Before defending anything, it's worth stating the skeptical case as strongly as it deserves to be stated, because most of it is correct.</p>
+
+      <p>The supplement market in the US was estimated at $64 billion in 2024 and is projected to nearly double to $124 billion by 2033. That kind of money does not flow toward rigorous science by default - it flows toward whatever sells, and what sells is often confident language, not confirmed mechanisms. Physicians interviewed on this exact question note that supplement evidence "varies widely," with one noting that positive studies on certain popular categories have "all been industry funded" - a real, structural conflict of interest that should make anyone cautious by default.</p>
+
+      <p>A 2025 study published in JAMA Network Open ran a revealing experiment: researchers showed participants different label claims for a real fish oil supplement and for a completely fictional product. Across both, people who saw heart-health or brain-health language on the label were more likely to believe the product delivered those benefits - even for the product that does not exist. This is the marketing mechanism in its purest form: vague, suggestive language creates belief independent of whether any actual evidence supports it.</p>
+
+      <div class="article-img">
+        <img src="/images/skeptic-vs-evidence.jpg" alt="Two pill bottles representing evidence versus marketing" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Part the Skeptics Usually Miss</h2>
+
+      <p>Here is where the "it's all fake" position runs into a problem: some compounds have evidence that would hold up in any other area of medicine, and dismissing them along with the junk is its own form of not paying attention.</p>
+
+      <p>Creatine is the clearest example. A systematic review covering 49 trials and 1,863 participants found that creatine plus protein supplementation produced a significant average increase of 2.5 kg in one-rep max strength and roughly 0.3 kg in fat-free muscle mass during training programs lasting six weeks or longer - with effects seen across age groups, strongest in people already resistance-trained. Separately, a 2024 review of 8 randomized controlled trials found creatine improved working memory and processing speed in healthy adults, a cognitive effect distinct from its muscle-building reputation. This is not a single small study with a flashy headline. This is the kind of effect size and trial volume that would be taken seriously if creatine were a pharmaceutical instead of a $15 tub of white powder.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Why This Matters for the Skeptic's Argument</div>
+        <p>If creatine - one of the most studied compounds in all of sports science - gets dismissed using the same "supplements don't work" reasoning applied to a magnesium-infused "calm gummy" with zero trials behind it, the reasoning itself has stopped doing useful work. The category "supplement" is a regulatory classification, not a measure of evidence quality. Treating it as the latter is exactly the kind of category error that lets genuinely useless products hide behind the reputation of genuinely useful ones - and vice versa.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/creatine-research-papers.jpg" alt="Creatine powder with scientific research papers" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Why the Confusion Persists: Three Real Reasons</h2>
+
+      <h3>The Market Is Too Big to Be Mostly Honest</h3>
+      <p>At $64 billion and growing, the US supplement market simply contains more products than any single consumer can evaluate, and most of those products were never required to prove anything before reaching the shelf. The Dietary Supplement Health and Education Act of 1994 means the FDA's role is almost entirely reactive - companies do not need premarket approval or proof of efficacy, only the absence of provably false or dangerous claims after the fact. That regulatory gap is real and it is the single biggest reason the "is this legit" question is so hard to answer at a glance.</p>
+
+      <h3>Quality Testing Itself Gets Contested</h3>
+      <p>Even independent testing organizations trying to add transparency generate disagreement. A 2024-2025 protein powder report found that 47% of 160 tested products exceeded California's Proposition 65 safety thresholds for toxic metals - a genuinely concerning finding, but one that drew industry pushback arguing the trace levels found were still well below federally established safety thresholds, and that the framing risked making consumers think trace contamination equals serious health risk. Both things can be true at once: the testing surfaced a real quality issue worth knowing about, and the public framing of that issue was not fully calibrated to the actual risk level. This kind of nuance rarely survives a viral headline.</p>
+
+      <h3>The Industry Itself Funds Much of the Positive Research</h3>
+      <p>This is the most structurally important point and the one worth taking most seriously. When the studies showing a benefit are funded by the company selling the product, that is not automatically fraud, but it is a documented, well-known source of bias in published research across all of science, not just supplements. The appropriate response is not to discard all industry-adjacent research, but to weight independently replicated, multi-study evidence (like the creatine meta-analyses above, which pool data across many independent research groups) far more heavily than single-study claims from a company's own funded trial.</p>
+
+      <h2>A Side-by-Side Look at Evidence Quality</h2>
+
+      <p>This is the actual answer to "do supplements work" - not yes, not no, but: it depends entirely on which one, and here is what that difference actually looks like in practice.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong</span>
+          <h4>Creatine Monohydrate</h4>
+          <p>49-trial meta-analysis, 1,863 participants, consistent strength and lean mass effects. Among the most replicated findings in sports nutrition science.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong</span>
+          <h4>Vitamin D3 (in deficiency)</h4>
+          <p>Clear, mechanistically obvious benefit when correcting an actual measured deficiency. The evidence weakens substantially in people who are not deficient - context changes the answer entirely.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag weak">Weak/None</span>
+          <h4>"Detox" and "Cleanse" Products</h4>
+          <p>No credible mechanism: your liver and kidneys already perform this function continuously. No rigorous trial has demonstrated a meaningful health benefit specific to these products.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag weak">Weak/None</span>
+          <h4>Most "Metabolism Boosting" Blends</h4>
+          <p>Frequently rely on underpowered, often industry-funded single studies measuring minor, short-term metabolic markers rather than meaningful, replicated weight or health outcomes.</p>
+        </div>
+      </div>
+
+      <h2>Why You Won't Notice When Something Works</h2>
+
+      <p>There is a psychological reason skepticism feels so intuitively correct, separate from any evidence question: supplements that genuinely work for their intended purpose are often invisible in daily experience. Vitamin D3 correcting an actual deficiency does not feel like anything in the moment - it shows up months later as fewer infections or better bone density on a scan. Magnesium correcting a mild deficiency does not announce itself; it just quietly improves sleep quality you might attribute to a better week.</p>
+
+      <p>Meanwhile, the products people remember vividly are the ones that promised something dramatic and delivered nothing - the energy blend that did nothing, the focus supplement that felt like sugar. Dramatic non-events are memorable. Quiet, slow, correctly-targeted interventions are not. This asymmetry in memorability skews the felt sense of "supplements don't work" even when it is not actually representative of the full evidence picture.</p>
+
+      <h2>A Practical Framework, Not a Verdict</h2>
+
+      <table class="dosing-table">
+        <thead>
+          <tr>
+            <th>Question to Ask</th>
+            <th>Strong Signal</th>
+            <th>Weak Signal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>How many independent trials exist?</td>
+            <td>Multiple research groups, meta-analyses pooling dozens of studies</td>
+            <td>One study, especially one funded by the manufacturer</td>
+          </tr>
+          <tr>
+            <td>What was actually measured?</td>
+            <td>Objective outcomes: strength, blood markers, validated clinical scales</td>
+            <td>Vague self-reported "wellness" or "energy" with no defined measure</td>
+          </tr>
+          <tr>
+            <td>Does the claimed mechanism make biological sense?</td>
+            <td>Plausible, well-characterized pathway (e.g., creatine and ATP)</td>
+            <td>Vague appeals to "toxins," "balance," or "detoxification" with no specific mechanism</td>
+          </tr>
+          <tr>
+            <td>Is the dose in the product close to the dose in the trials?</td>
+            <td>Matches or exceeds the effective trial dose</td>
+            <td>A fraction of the trial dose, hidden in a proprietary blend</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">This Cuts Both Ways</div>
+        <p>This framework is not a defense of the supplement industry as a whole - it is a tool that will disqualify most products on a typical store shelf, including many this site has not written about precisely because the evidence does not clear this bar. If you want to see what genuinely poor sourcing and contamination look like in this industry, read our <a href="/articles/toxic-supplements-guide.html">investigation into dangerous and adulterated supplements</a>. The skepticism that brought you to this article is, in many specific cases, completely justified.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">N/A</div>
+        <div class="aaf-label">
+          <strong>This Article Has No AAF Score</strong>
+          There is no single score for "supplements" as a category, because that category contains both rigorously validated compounds and pure marketing fiction. That is the entire point of this article.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Assadourian JN, Peterson ED, Navar AM. Label Statements and Perceived Health Benefits of Dietary Supplements. JAMA Network Open. September 2025.</li>
+        <li>Dietary supplements: Key facts, research studies, and advice for journalists. Journalist's Resource. 2026, citing NHANES 2011-2018 data (12,529 participants).</li>
+        <li>Dietary supplement evidence "varies widely" with inconsistent regulations. Healio. October 2024.</li>
+        <li>Top 10 Dietary Supplements of 2025 Ranked by Scientific Efficacy. American Dietary Supplements. Citing creatine meta-analysis (49 trials, 1,863 participants) and 2024 cognitive RCT review (8 trials).</li>
+        <li>Forces and factors that fueled the supplement industry in 2025. NutraIngredients. January 2026. Citing Clean Label Project 2024-2025 Protein Powder Category Report.</li>
+        <li>CRN 2024 Consumer Survey, conducted by Ipsos. Council for Responsible Nutrition. 3,194 respondents.</li>
+        <li>Grand View Research. US Dietary Supplements Market Size & Trends report. 2024.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Learn to Tell the Difference Yourself</h3>
+      <p>The ARI NMN Buyer's Protocol walks through exactly how to evaluate sourcing, dosing, and evidence quality before you buy anything.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">NMN Buyer's Protocol - $47 →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/creatine-guide.html" class="related-card">
+          <div class="related-img c-creatine">
+            <img src="/images/hero-creatine.jpg" alt="Creatine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Creatine</span>
+            <h4>Creatine: The Most Researched Supplement That Still Gets Underused</h4>
+          </div>
+        </a>
+        <a href="/articles/vitamin-d3-k2-guide.html" class="related-card">
+          <div class="related-img c-vitd">
+            <img src="/images/hero-foundation-stack.jpg" alt="Vitamin D3" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin D3</span>
+            <h4>Vitamin D3 + K2: The Foundation Most People Get Wrong</h4>
+          </div>
+        </a>
+        <a href="/articles/toxic-supplements-guide.html" class="related-card">
+          <div class="related-img c-audit">
+            <img src="/images/hero-toxic-supplements.jpg" alt="Toxic Supplements" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">ARI Investigation</span>
+            <h4>The Dangerous Supplements Nobody Warns You About</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for educational purposes only and does not constitute medical advice. The statements on this page have not been evaluated by the FDA or any regulatory authority. Supplements are not intended to diagnose, treat, cure, or prevent any disease. Consult a qualified healthcare professional before starting any supplementation protocol, particularly if you have existing health conditions or take medications.
+    </div>
+
+  </div>
+
+  </main>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

@@ -422,5 +422,26 @@
   "tags": "longevity",
   "readTime": "13 min",
   "description": "A Mayo Clinic trial in long-COVID patients. A phase 2 sepsis trial enrolling now. Fisetin has more active human research than almost any other senolytic - and a real bioavailability gap nobody mentions."
+},
+{
+  "title": "TMG: The Methyl Donor Every NMN User Forgets to Take",
+  "tag": "TMG",
+  "url": "/articles/tmg-guide.html",
+  "image": "/images/hero-tmg-guide.jpg",
+  "color": "c-tmg",
+  "tags": "longevity",
+  "readTime": "12 min",
+  "description": "TMG reliably lowers homocysteine and replenishes methyl groups depleted by NAD+ precursors. But higher doses raise LDL, and the cardiovascular benefit everyone assumes has never been confirmed."
+},
+{
+  "title": "Do Supplements Even Work? An Honest Answer From People Who Sell Them",
+  "tag": "Honest Answer",
+  "url": "/articles/do-supplements-work-guide.html",
+  "image": "/images/hero-do-supplements-work.jpg",
+  "color": "c-skeptic",
+  "featured": true,
+  "tags": "skepticism evidence",
+  "readTime": "14 min",
+  "description": "Most supplements are marketing dressed up as science. A few have evidence as strong as anything in medicine. The skeptics are not wrong about the industry - they are wrong that the question has one answer."
 }
 ]

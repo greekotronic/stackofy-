@@ -129,6 +129,9 @@
     .related-section { margin: 2.5rem 0; }
     .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
     .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.related-card-wide { grid-column: 1 / -1; display: flex; align-items: center; margin-bottom: 1rem; }
+.related-card-wide .related-img { width: 180px; height: 110px; flex-shrink: 0; }
+.related-card-wide .related-body { flex: 1; padding: 1rem 1.25rem; }
     .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
     .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
     .related-img { height: 110px; overflow: hidden; }
@@ -423,8 +426,19 @@
       </div>
     </div>
 
-    <div class="related-section">
+   <div class="related-section">
       <div class="related-title">Deep Dives - Individual Guides</div>
+
+      <a href="/articles/tmg-guide.html" class="related-card related-card-wide">
+        <div class="related-img c-tmg">
+          <img src="/images/hero-tmg-guide.jpg" alt="TMG" onerror="this.style.display='none'" />
+        </div>
+        <div class="related-body">
+          <span class="related-tag">TMG</span>
+          <h4>The Methyl Donor Every NMN User Forgets to Take</h4>
+        </div>
+      </a>
+
       <div class="related-grid">
         <a href="/articles/nmn-supplements-guide.html" class="related-card">
           <div class="related-img c-nmn">
