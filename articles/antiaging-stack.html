@@ -59,7 +59,8 @@
     .stack-overview { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
     .stack-member { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
     .stack-member:hover { border-color: var(--green-dark); transform: translateY(-2px); }
-    .stack-member-img { height: 70px; }
+    .stack-member-img { height: 70px; overflow: hidden; }
+    .stack-member-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .sm-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
     .sm-resv { background: linear-gradient(135deg, #3d0a0a, #7A1A1A); }
     .sm-tmg { background: linear-gradient(135deg, #1a1a3a, #2A2A6A); }
@@ -78,6 +79,8 @@
     .comp-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
     .comp-label.premium { color: var(--gold); }
     .comp-label.value { color: var(--green-dark); }
+    [data-theme="dark"] .comp-label.value { color: var(--green-light); }
+    [data-theme="dark"] .comp-card { background: #1C2E22; border-color: #2A3D30; }
     .comp-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
     .comp-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; }
 
@@ -204,7 +207,7 @@
 
       <div class="stack-overview">
         <a href="/articles/nmn-supplements-guide.html" class="stack-member">
-          <div class="stack-member-img sm-nmn"></div>
+          <div class="stack-member-img sm-nmn"><img src="/images/thumb-nmn.jpg" alt="NMN" onerror="this.style.display='none'" /></div>
           <div class="stack-member-body">
             <div class="stack-member-num">01</div>
             <h3>NMN or NR</h3>
@@ -213,7 +216,7 @@
           </div>
         </a>
         <a href="/articles/resveratrol-guide.html" class="stack-member">
-          <div class="stack-member-img sm-resv"></div>
+          <div class="stack-member-img sm-resv"><img src="/images/hero-resveratrol.jpg" alt="Resveratrol" onerror="this.style.display='none'" /></div>
           <div class="stack-member-body">
             <div class="stack-member-num">02</div>
             <h3>Resveratrol</h3>
@@ -221,16 +224,17 @@
             <span class="stack-member-link">Full guide →</span>
           </div>
         </a>
-        <div class="stack-member">
-          <div class="stack-member-img sm-tmg"></div>
+        <a href="/articles/tmg-guide.html" class="stack-member">
+          <div class="stack-member-img sm-tmg"><img src="/images/hero-tmg-guide.jpg" alt="TMG" onerror="this.style.display='none'" /></div>
           <div class="stack-member-body">
             <div class="stack-member-num">03</div>
             <h3>TMG</h3>
             <p>Methyl donor. Replenishes methyl groups consumed by NMN synthesis. Non-negotiable cofactor.</p>
+            <span class="stack-member-link">Full guide →</span>
           </div>
-        </div>
+        </a>
         <a href="/articles/coq10-guide.html" class="stack-member">
-          <div class="stack-member-img sm-coq"></div>
+          <div class="stack-member-img sm-coq"><img src="/images/hero-coq10.jpg" alt="CoQ10" onerror="this.style.display='none'" /></div>
           <div class="stack-member-body">
             <div class="stack-member-num">04</div>
             <h3>CoQ10</h3>
@@ -239,7 +243,7 @@
           </div>
         </a>
         <a href="/articles/pqq-guide.html" class="stack-member">
-          <div class="stack-member-img sm-pqq"></div>
+          <div class="stack-member-img sm-pqq"><img src="/images/tree-rings.jpg" alt="PQQ" onerror="this.style.display='none'" /></div>
           <div class="stack-member-body">
             <div class="stack-member-num">05</div>
             <h3>PQQ</h3>
@@ -345,6 +349,12 @@
 
       <div class="warning-box">
         <div class="warning-label">Evidence Caveat</div>
+        <p>The individual evidence for each compound in this stack is solid. The evidence for the specific combination in human clinical trials is still developing. A 2025 ScienceDirect review confirmed the theoretical synergistic potential of NMN/NR + PQQ + CoQ10 combinations, but noted that most existing formulations rely on mechanistic assumptions rather than large-scale RCT data. This does not mean the stack does not work - it means you should calibrate your expectations to the current state of the evidence rather than marketing claims.</p>
+      </div>
+
+      <h2>Evidence Caveat</h2>
+
+      <div class="highlight-box">
         <p>The individual evidence for each compound in this stack is solid. The evidence for the specific combination in human clinical trials is still developing. A 2025 ScienceDirect review confirmed the theoretical synergistic potential of NMN/NR + PQQ + CoQ10 combinations, but noted that most existing formulations rely on mechanistic assumptions rather than large-scale RCT data. This does not mean the stack does not work - it means you should calibrate your expectations to the current state of the evidence rather than marketing claims.</p>
       </div>
 
