@@ -156,12 +156,7 @@ async function loadArticles() {
     const res = await fetch('/articles.json');
     const articles = await res.json();
 
-    // FEATURED ARTICLE (homepage)
-    const featuredEl = document.getElementById('featured-article');
-    if (featuredEl) {
-      const featured = articles.find(a => a.featured && a.url !== '/articles/do-supplements-work-guide.html') || articles[0];
-      featuredEl.innerHTML = makeCard(featured, 'featured');
-    }
+   
 // NMN SPOTLIGHT (homepage) - fixed position between Energy and Stat Banner
     const nmnSpotlightEl = document.getElementById('nmn-spotlight');
     if (nmnSpotlightEl) {
