@@ -161,7 +161,6 @@ function loadSkepticCard(article) {
 }
 
 async function loadArticles() {
-async function loadArticles() {
   try {
     const res = await fetch('/articles.json');
     const articles = await res.json();
