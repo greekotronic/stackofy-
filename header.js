@@ -23,6 +23,12 @@
     #site-header .s-nav a { color: #95D5B2; font-size: 14px; text-decoration: none; transition: color 0.2s; }
     #site-header .s-nav a:hover { color: #FAF8F4; }
     #site-header .s-dark { background: rgba(255,255,255,0.15); border: 0.5px solid rgba(255,255,255,0.2); border-radius: 20px; padding: 5px 12px; cursor: pointer; color: #FAF8F4; font-size: 13px; }
+    #site-header .s-search-toggle { background: none; border: none; font-size: 16px; cursor: pointer; padding: 4px; line-height: 1; }
+    #site-search-bar { max-height: 0; overflow: hidden; background: var(--surface, #fff); border-bottom: 1px solid var(--border, #E0DDD8); transition: max-height 0.25s ease; display: flex; gap: 8px; padding: 0 2rem; }
+    #site-search-bar.open { max-height: 70px; padding: 12px 2rem; }
+    #site-search-bar input { flex: 1; max-width: 480px; margin: 0 auto 0 0; padding: 10px 16px; border-radius: 8px; border: 1px solid var(--border, #E0DDD8); font-size: 14px; background: var(--bg, #FAF8F4); color: var(--text, #1A1A1A); }
+    #site-search-bar input:focus { outline: none; border-color: #1B4332; }
+    #site-search-bar button { padding: 10px 20px; background: #D4A853; color: #1A1A1A; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
     #site-header .s-burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
     #site-header .s-burger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
     #site-mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; }
@@ -38,8 +44,11 @@
       #site-header { padding: 0 1rem !important; height: 56px !important; }
       #site-header .s-nav { display: none !important; }
       #site-header .s-dark { display: none !important; }
+      #site-header .s-search-toggle { display: none !important; }
       #site-header .s-burger { display: flex !important; }
       #site-mobile-menu { top: 56px !important; }
+      #site-search-bar { padding: 0 1rem; }
+      #site-search-bar.open { padding: 10px 1rem; }
     }
   `;
 const DARK_MODE_CSS = `
@@ -134,6 +143,7 @@ const DARK_MODE_CSS = `
         <a href="/your-stack.html">Stack Builder</a>
         <a href="/about.html">About</a>
         <a href="/how-we-work.html">How We Work</a>
+        <button class="s-search-toggle" onclick="stackofyToggleSearch()" aria-label="Search">🔍</button>
         <button class="s-dark" onclick="stackofyToggleDark()">☀️ Light</button>
       </nav>
       <button class="s-burger" onclick="stackofyToggleMenu()" aria-label="Menu">
@@ -141,6 +151,15 @@ const DARK_MODE_CSS = `
       </button>
     </div>
   `;
+
+  // Insert search bar below header
+  const searchBar = document.createElement('div');
+  searchBar.id = 'site-search-bar';
+  searchBar.innerHTML = `
+    <input type="text" id="site-search-input" placeholder="Search supplements, protocols, ingredients..." />
+    <button onclick="stackofySearch()">Search</button>
+  `;
+  header.parentNode.insertBefore(searchBar, header.nextSibling);
 
   // Build mobile menu
   const mobileMenu = document.createElement('div');
@@ -224,5 +243,23 @@ const DARK_MODE_CSS = `
     const menu = document.getElementById('site-mobile-menu');
     if (menu) menu.classList.remove('open');
   };
+window.stackofyToggleSearch = function() {
+    const bar = document.getElementById('site-search-bar');
+    if (bar) bar.classList.toggle('open');
+    if (bar && bar.classList.contains('open')) {
+      document.getElementById('site-search-input').focus();
+    }
+  };
 
+  window.stackofySearch = function() {
+    const query = document.getElementById('site-search-input').value.trim();
+    if (!query) return;
+    window.location.href = '/articles.html?q=' + encodeURIComponent(query);
+  };
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && document.activeElement && document.activeElement.id === 'site-search-input') {
+      window.stackofySearch();
+    }
+  });
 })();
