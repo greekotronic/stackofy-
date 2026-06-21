@@ -152,15 +152,6 @@ const DARK_MODE_CSS = `
     </div>
   `;
 
-  // Insert search bar below header
-  const searchBar = document.createElement('div');
-  searchBar.id = 'site-search-bar';
-  searchBar.innerHTML = `
-    <input type="text" id="site-search-input" placeholder="Search supplements, protocols, ingredients..." />
-    <button onclick="stackofySearch()">Search</button>
-  `;
-  header.parentNode.insertBefore(searchBar, header.nextSibling);
-
   // Build mobile menu
   const mobileMenu = document.createElement('div');
   mobileMenu.id = 'site-mobile-menu';
@@ -191,6 +182,14 @@ const DARK_MODE_CSS = `
     <div style="margin-top: 4px; font-size: 12px; color: #6B8A78;">Evidence-based. No pharma ties. No fluff.</div>
   `;
 
+  // Build search bar
+  const searchBar = document.createElement('div');
+  searchBar.id = 'site-search-bar';
+  searchBar.innerHTML = `
+    <input type="text" id="site-search-input" placeholder="Search supplements, protocols, ingredients..." />
+    <button onclick="stackofySearch()">Search</button>
+  `;
+
   function applyTheme(isDark) {
     if (isDark) {
       document.body.setAttribute('data-theme', 'dark');
@@ -215,6 +214,7 @@ const DARK_MODE_CSS = `
     // Insert into page
     document.body.insertBefore(mobileMenu, document.body.firstChild);
     document.body.insertBefore(header, document.body.firstChild);
+    header.parentNode.insertBefore(searchBar, header.nextSibling);
     document.body.appendChild(footer);
 
     // Apply theme: dark is default unless user explicitly chose light
