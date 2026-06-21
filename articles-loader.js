@@ -147,17 +147,7 @@ function makeCard(article, size) {
       </div>
     </a>`;
 }
-function loadSkepticCard(article) {
-  const el = document.getElementById('skeptic-feature');
-  if (!el) return;
-  el.innerHTML = `
-    <a href="${article.url}" class="skeptic-card">
-      <div class="skeptic-card-img" style="background-image:url('${article.image}')"></div>
-      <div class="skeptic-card-body">
-        <h2>${article.title}</h2>
-        <p>${article.description}</p>
-      </div>
-    </a>`;
+
 }
 
 async function loadArticles() {
@@ -166,8 +156,11 @@ async function loadArticles() {
     const articles = await res.json();
 
     // FEATURED ARTICLE (homepage)
-    const skepticArticle = articles.find(a => a.featured) || articles[0];
-    loadSkepticCard(skepticArticle);
+    const featuredEl = document.getElementById('featured-article');
+    if (featuredEl) {
+      const featured = articles.find(a => a.featured) || articles[0];
+      featuredEl.innerHTML = makeCard(featured, 'featured');
+    }
 // NMN SPOTLIGHT (homepage) - fixed position between Energy and Stat Banner
     const nmnSpotlightEl = document.getElementById('nmn-spotlight');
     if (nmnSpotlightEl) {
