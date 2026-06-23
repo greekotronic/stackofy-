@@ -476,5 +476,16 @@
   "tags": "digestion gut-health",
   "readTime": "10 min",
   "description": "Papain has decades of use as a digestive aid and wound-care agent - and a 2008 FDA market withdrawal for topical use due to allergy risk. Here is what the evidence actually supports and where the real caution lies."
+},
+{
+  "title": "Bromelain: The Pineapple Enzyme With Actual RCTs Behind It",
+  "tag": "Bromelain",
+  "url": "/articles/bromelain-guide.html",
+  "image": "/images/hero-bromelain.jpg",
+  "color": "c-bromelain",
+  "featured": false,
+  "tags": "digestion gut-health performance",
+  "readTime": "11 min",
+  "description": "Bromelain has real randomized controlled trials behind it - pediatric sinusitis, ulcerative colitis, periodontal surgery. It also has a documented bleeding risk that matters more than most supplement warnings."
 }
 ]

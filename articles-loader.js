@@ -45,6 +45,7 @@ const COLORS = {
 'c-berberine': 'background:linear-gradient(135deg,#3D2E00,#B8860B)',
 'c-astax': 'background:linear-gradient(135deg,#1a0a00,#7A4A10)',
 'c-papain': 'background:linear-gradient(135deg,#1a2400,#6B8E23)',
+'c-bromelain': 'background:linear-gradient(135deg,#1a2e00,#D4A017)',
 };
 
 function makeCard(article, size) {

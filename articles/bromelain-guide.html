@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bromelain: The Pineapple Enzyme With Actual RCTs Behind It - Stackofy</title>
+  <meta name="description" content="Bromelain has real randomized controlled trials behind it - pediatric sinusitis, ulcerative colitis, periodontal surgery. It also has a documented bleeding risk that matters more than most supplement warnings. Here is the full evidence picture." />
+
+  <meta property="og:title" content="Bromelain: The Pineapple Enzyme With Actual RCTs Behind It" />
+  <meta property="og:description" content="Unlike most digestive enzymes, bromelain has genuine randomized controlled trials across several conditions - sinusitis in children, ulcerative colitis, post-surgical healing. It also has a real anticoagulant effect that needs to be taken seriously." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/bromelain-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-bromelain.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1a0a, #1B4332, #2D6A4F); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,26,10,0.95) 0%, rgba(10,26,10,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 18px; font-weight: 700; color: var(--gold); width: 70px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-papain { background: linear-gradient(135deg, #1a2400, #6B8E23); }
+    .c-berberine { background: linear-gradient(135deg, #3D2E00, #B8860B); }
+    .c-toxic { background: linear-gradient(135deg, #2A0A0A, #7A1A1A); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .rct-desc { font-size: 12px; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-bromelain.jpg" alt="Fresh pineapple, the natural source of the proteolytic enzyme bromelain" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Bromelain</span>
+      <h1>The Pineapple Enzyme With Actual RCTs Behind It</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>11 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Bromelain is a mixture of proteolytic enzymes from pineapple stem and fruit, studied for inflammation, sinusitis, digestion and post-surgical recovery</li>
+        <li>Unlike most enzyme supplements, bromelain has genuine randomized controlled trials behind several of its claims - not just small open-label studies</li>
+        <li>A classic pediatric trial in 116 children with acute sinusitis found bromelain alone produced faster symptom recovery than standard therapy or the combination</li>
+        <li>A 2025 triple-blind RCT in 70 patients with mild-to-moderate ulcerative colitis found bromelain supplementation improved disease activity and quality of life over 8 weeks</li>
+        <li>Bromelain has a real, well-documented anticoagulant effect - it appears on hospital lists of supplements that increase bleeding risk during surgery</li>
+        <li>The standard advice to stop bromelain at least one to two weeks before any scheduled surgery is not boilerplate caution - it reflects a genuine, multi-pathway effect on clotting</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Bromelain is the enzyme responsible for two things most people have personally experienced: pineapple tenderizing meat, and pineapple making your tongue tingle after eating too much of it fresh. Both happen because bromelain is, structurally, a mixture of cysteine proteases that breaks down protein on contact - including, briefly, the proteins on your own tongue's surface before saliva and mucus repair the damage.</p>
+
+      <p>That same protein-breaking mechanism is the basis for bromelain's much longer list of therapeutic claims: anti-inflammatory effects, digestive support, wound healing, sinusitis relief, even adjunct cancer research. What sets bromelain apart from most supplements making similarly broad claims is that several of these specific applications have been tested in actual randomized controlled trials, including some in pediatric populations - a level of evidence most enzyme supplements never reach.</p>
+
+      <div class="article-img">
+        <img src="/images/bromelain-pineapple-stem.jpg" alt="Pineapple plant stem and crown, the source of bromelain enzymes" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What Bromelain Actually Is</h2>
+
+      <p>Bromelain is extracted primarily from pineapple stem (industrially, since stems are otherwise a processing byproduct) and also occurs in the fruit itself, though at lower concentrations. It is not a single enzyme but a mixture of several proteolytic enzymes plus other compounds, measured in commercial products by Gelatin Digesting Units (GDU) or Milk Clotting Units (MCU) rather than simple milligram weight alone, since enzyme potency varies by extraction batch.</p>
+
+      <p>Mechanistically, bromelain's effects fall into two main buckets. The first is straightforward proteolysis - breaking down protein, which underlies its use in meat tenderizing, digestive support, and topical wound debridement. The second is a broader anti-inflammatory and circulatory effect, where bromelain appears to modulate inflammatory cytokines and prostaglandins, and interferes with the blood clotting cascade by inhibiting platelet aggregation and promoting fibrin breakdown. This second mechanism is the basis for most of bromelain's more ambitious therapeutic research - and also the basis for its most important safety caution.</p>
+
+      <h2>The Clinical Evidence - Where Bromelain Pulls Ahead of Most Enzyme Supplements</h2>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Acute Sinusitis (Pediatric)</h4>
+          <p>A trial in 116 children under 11 with acute sinusitis found those treated with bromelain alone recovered significantly faster (6.66 days) than standard therapy alone (7.95 days) or the combination - a result the researchers noted replicated earlier findings.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Ulcerative Colitis</h4>
+          <p>A 2025 triple-blind, randomized, parallel-group RCT in 70 patients with mild-to-moderate ulcerative colitis found bromelain supplementation significantly improved disease activity index and quality-of-life scores over 8 weeks compared to placebo.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Chronic Rhinosinusitis</h4>
+          <p>Pilot studies in adults with chronic rhinosinusitis, including patients who had already undergone sinus surgery, report symptom relief and good tissue distribution of bromelain to rhinosinusal tissue after oral tablet dosing over 3 months.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Post-Surgical Healing</h4>
+          <p>A double-blind RCT in periodontal surgery patients found bromelain capsules reduced bleeding on probing and improved gingival index scores compared to placebo four weeks after pocket-elimination surgery, alongside other small trials in dental and minor surgical contexts.</p>
+        </div>
+      </div>
+
+      <div class="rct-visual">
+        <div class="rct-title">Selected Randomized Controlled Trials</div>
+        <div class="rct-row">
+          <div class="rct-n">116<span>Children</span></div>
+          <div class="rct-desc"><strong>Acute sinusitis trial.</strong> Bromelain-alone group recovered in 6.66 days vs. 7.95 days for standard therapy - a statistically significant difference in a moderately sized pediatric cohort.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">70<span>Adults</span></div>
+          <div class="rct-desc"><strong>2025 ulcerative colitis RCT, Scientific Reports.</strong> Triple-blind, parallel-group design over 8 weeks. Significant improvement in disease activity and quality-of-life scores versus placebo.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">28<span>Adults</span></div>
+          <div class="rct-desc"><strong>Periodontal surgery RCT.</strong> Double-blind, placebo-controlled. Bromelain group showed reduced bleeding on probing and better gingival index four weeks post-surgery.</div>
+        </div>
+        <div class="rct-highlight">For context, most supplement ingredients never reach a single properly randomized trial of this size. Bromelain having three independent RCTs across three different conditions is genuinely above the typical evidence bar for this category - though each trial is still a single data point that needs replication before being considered definitive.</div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/bromelain-sinus-relief.jpg" alt="Visual representation of bromelain's traditional use for sinus and respiratory comfort" onerror="this.style.display='none'" />
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Why the Sinusitis Data Is the Most Interesting Part</div>
+        <p>Most supplement research for respiratory or sinus conditions is thin and observational. The pediatric acute sinusitis trial stands out because it directly compared bromelain alone, standard therapy alone, and the combination of both - and bromelain alone outperformed standard therapy alone on recovery time. That is a genuinely informative trial design, not just "bromelain vs. nothing." It does not mean bromelain should replace medical treatment for sinusitis, but it is one of the more rigorously designed pieces of evidence in the entire enzyme-supplement category.</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">The Bleeding Risk Is Not Boilerplate - It's Mechanistic</div>
+        <p>Bromelain genuinely slows blood clotting through multiple pathways: it interferes with the clotting cascade, reduces the stability of existing clots, and helps break down fibrin, the protein mesh that holds clots together. This is not a vague "talk to your doctor" caution applied reflexively to every supplement - it is a specific, multi-pathway anticoagulant mechanism that hospitals take seriously enough to list bromelain among supplements that increase surgical bleeding risk. Memorial Sloan Kettering Cancer Center specifically warns against combining bromelain with warfarin or other blood thinners. The standard recommendation is to stop bromelain at least one to two weeks before any scheduled surgery, and to disclose its use to your surgical team even though it is "just a supplement."</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🟡</div>
+          <h4>Papain</h4>
+          <p>Another plant-derived cysteine protease, from papaya. Frequently combined with bromelain in digestive enzyme blends for broader protein-digestion coverage across two complementary plant sources.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🟠</div>
+          <h4>Curcumin</h4>
+          <p>Some research suggests bromelain may enhance curcumin's notoriously poor oral bioavailability, and both share anti-inflammatory mechanisms, making the pairing common in joint-support formulas.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🍇</div>
+          <h4>Quercetin</h4>
+          <p>Both have been studied together in respiratory and sinus-inflammation contexts, including pilot research pairing bromelain with quercetin and other plant compounds for airway inflammation.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🧪</div>
+          <h4>N-Acetylcysteine</h4>
+          <p>Combined as "BromAc" in early-phase clinical research for intraperitoneal use in specific surgical oncology contexts - a specialized medical application, not a general supplement pairing.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🦠</div>
+          <h4>Rutoside</h4>
+          <p>Studied together with bromelain and trypsin in post-surgical dental trials for reducing swelling and pain after procedures like third molar extraction.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>NSAIDs (Caution)</h4>
+          <p>Not a beneficial combination - both affect bleeding risk and inflammation pathways. Combining bromelain with ibuprofen, naproxen or aspirin increases bruising and bleeding risk and should be discussed with a doctor first.</p>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Dose</th>
+          <th>Timing</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Digestive support</td>
+          <td>80 - 400mg per serving</td>
+          <td>With meals containing protein</td>
+          <td>Lower end of the range; potency varies by GDU/MCU rating, not just milligrams</td>
+        </tr>
+        <tr>
+          <td>Systemic anti-inflammatory effects</td>
+          <td>200 - 400mg, 2-3x daily</td>
+          <td>Between meals, on an empty stomach</td>
+          <td>Taken away from food to maximize systemic absorption rather than digestive action</td>
+        </tr>
+        <tr>
+          <td>Sinusitis (as studied)</td>
+          <td>500 FIP tablets, daily</td>
+          <td>Daily for up to 3 months in pilot studies</td>
+          <td>Reflects the specific dosing used in chronic rhinosinusitis pilot research, not a universal recommendation</td>
+        </tr>
+      </table>
+
+      <div class="skip-box">
+        <div class="skip-label">Before Any Surgery or Dental Procedure</div>
+        <p>Stop bromelain at least one to two weeks before any scheduled surgery, including dental procedures, and tell your surgical team you have been taking it. This is the single most important practical instruction in this entire article. The anticoagulant effect is real and multi-pathway, not a theoretical supplement-label disclaimer.</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">Who Should Be Cautious</div>
+        <p>Avoid bromelain if you take blood thinners (warfarin, heparin), antiplatelet medications (aspirin, clopidogrel, ticagrelor), or NSAIDs regularly, due to documented increased bleeding and bruising risk. People allergic to pineapple, latex, certain pollens, or cross-reactive foods like celery, carrots, rye, and wheat flour should avoid bromelain entirely, since both food and supplement forms can trigger reactions. Bromelain may also alter absorption of certain antibiotics, including amoxicillin and tetracycline, and may potentiate sedatives. Safety in pregnancy and breastfeeding has not been established, and bromelain is generally not recommended for children outside of supervised clinical research settings. Side effects at high doses can include digestive upset, diarrhea, and heavier menstrual bleeding.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">7.0/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Bromelain earns a solid score for something rare in this category: actual randomized controlled trials across multiple distinct conditions, including a well-designed pediatric sinusitis trial and a 2025 RCT in ulcerative colitis. That is a meaningfully higher evidence bar than most enzyme or anti-inflammatory supplements clear. It loses points because its most powerful mechanism - the anticoagulant effect - is also its biggest liability, demanding real caution around medications and surgery rather than a generic disclaimer. For people without bleeding-risk medications or pineapple/latex allergies, bromelain is one of the better-evidenced enzyme supplements available, provided the surgical timing rule is actually followed.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Braun, J., Schneider, B., Beuth, H. (2005). Therapeutic use, efficiency and safety of the proteolytic pineapple enzyme Bromelain-POS in children with acute sinusitis in Germany. <em>In Vivo</em>.</li>
+        <li>Scientific Reports (2025). Triple-blind, randomized, parallel-group RCT of bromelain supplementation in patients with mild-to-moderate ulcerative colitis.</li>
+        <li>Babazade, H., Mirzaagha, A., Konarizadeh, S. (2023). The effect of bromelain in periodontal surgery: a double-blind randomized placebo-controlled trial. <em>BMC Oral Health</em>. DOI: 10.1186/s12903-023-02971-7.</li>
+        <li>ClinicalTrials.gov NCT06351696 (2024). The Effects of Low FODMAP Diets With and Without Bromelain Supplement in Patients With Ulcerative Colitis.</li>
+        <li>Memorial Sloan Kettering Cancer Center. Bromelain - About Herbs, Botanicals & Other Products. Drug interaction and bleeding risk guidance.</li>
+        <li>Efficacy and tolerability of bromelain in patients with chronic rhinosinusitis - A pilot study. Researchgate.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Curious About Papain Too?</h3>
+      <p>Bromelain and papain are close cousins in the proteolytic enzyme world - but their evidence and safety profiles diverge in important ways.</p>
+      <div class="cta-buttons">
+        <a href="/articles/papain-guide.html" class="btn-gold">Read the Papain Guide →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/papain-guide.html" class="related-card">
+          <div class="related-img c-papain">
+            <img src="/images/hero-papain.jpg" alt="Papain" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Papain</span>
+            <h4>Papain: The Papaya Enzyme With a Real FDA Warning Behind It</h4>
+          </div>
+        </a>
+        <a href="/articles/berberine-guide.html" class="related-card">
+          <div class="related-img c-berberine">
+            <img src="/images/hero-berberine.jpg" alt="Berberine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Berberine</span>
+            <h4>Berberine: The "Nature's Ozempic" Claim, Fact-Checked</h4>
+          </div>
+        </a>
+        <a href="/articles/do-supplements-work-guide.html" class="related-card">
+          <div class="related-img c-toxic">
+            <img src="/images/hero-toxic.jpg" alt="Do Supplements Work" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Honest Answer</span>
+            <h4>Do Supplements Even Work? What We Found Out the Hard Way</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
