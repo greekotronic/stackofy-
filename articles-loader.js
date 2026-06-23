@@ -195,7 +195,13 @@ async function loadArticles() {
       const remaining = latest.slice(0, -8).reverse();
       latestMore2El.innerHTML = remaining.slice(8, 16).map(a => makeCard(a, 'small')).join('');
     }
-
+// MORE ARTICLES THIRD BATCH (homepage) - next 8 after that
+    const latestMore3El = document.getElementById('latest-articles-more3');
+    if (latestMore3El) {
+      const latest = articles.filter(a => !a.featured && a.type !== 'protocol');
+      const remaining = latest.slice(0, -8).reverse();
+      latestMore3El.innerHTML = remaining.slice(16, 24).map(a => makeCard(a, 'small')).join('');
+    }
     // LATEST PROTOCOL SPOTLIGHT (homepage) - fixed to the skeptic article
     const spotlightEl = document.getElementById('latest-protocol-spotlight');
     if (spotlightEl) {
