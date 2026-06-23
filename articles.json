@@ -465,5 +465,16 @@
     "tags": "longevity,antioxidant",
     "color": "c-astax",
     "type": "guide"
-  }
+  },
+{
+  "title": "Papain: The Papaya Enzyme With a Real FDA Warning Behind It",
+  "tag": "Papain",
+  "url": "/articles/papain-guide.html",
+  "image": "/images/hero-papain.jpg",
+  "color": "c-papain",
+  "featured": false,
+  "tags": "digestion gut-health",
+  "readTime": "10 min",
+  "description": "Papain has decades of use as a digestive aid and wound-care agent - and a 2008 FDA market withdrawal for topical use due to allergy risk. Here is what the evidence actually supports and where the real caution lies."
+}
 ]
