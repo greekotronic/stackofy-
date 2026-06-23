@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vitamin K2 (MK-7): The Calcium Traffic Controller Almost Nobody Takes - Stackofy</title>
+  <meta name="description" content="A 2026 JAMA Cardiology trial found MK-7 slowed coronary artery calcification by nearly a third over two years. It also interferes with warfarin at doses as low as 10mcg - here is the full evidence and the one interaction that actually matters." />
+
+  <meta property="og:title" content="Vitamin K2 (MK-7): The Calcium Traffic Controller Almost Nobody Takes" />
+  <meta property="og:description" content="Vitamin D gets calcium into your bloodstream. Vitamin K2 decides where it actually goes - bones or arteries. A 2026 randomized trial found MK-7 slowed coronary calcification progression by nearly a third over two years." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/vitamin-k2-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-vitamink2.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .rct-n { color: var(--gold) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1a0a, #1B4332, #2D6A4F); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,26,10,0.95) 0%, rgba(10,26,10,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .mech-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .mech-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .mech-flow { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .mech-step { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.75rem 1rem; font-size: 13px; font-weight: 600; color: var(--text); flex: 1; min-width: 140px; text-align: center; }
+    .mech-arrow { font-size: 18px; color: var(--gold); flex-shrink: 0; }
+    .mech-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 18px; font-weight: 700; color: var(--gold); width: 70px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-vitd { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .c-interactions { background: linear-gradient(135deg, #1B4332, #D4A853); }
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .mech-flow { flex-direction: column; }
+      .mech-arrow { transform: rotate(90deg); }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-vitamink2.jpg" alt="Fermented natto, one of the richest natural sources of vitamin K2 MK-7" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Vitamin K2</span>
+      <h1>The Calcium Traffic Controller Almost Nobody Takes</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>12 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Vitamin K2 activates proteins that direct calcium into bone and out of arteries - vitamin D gets calcium into your blood, K2 decides where it actually ends up</li>
+        <li>A 2026 randomized, double-blind, placebo-controlled trial (JAMA Cardiology) found MK-7 supplementation slowed coronary artery calcification progression by nearly a third over two years</li>
+        <li>A separate one-year RCT in adults with vitamin K insufficiency found 180mcg of MK-7 daily produced significant bone and vascular biomarker improvements</li>
+        <li>MK-7 (the long-chain form) has a much longer half-life than MK-4 or K1, giving it steadier, once-daily dosing - but this same property is what makes it interact more strongly with blood thinners</li>
+        <li>If you take warfarin or another vitamin K antagonist, MK-7 can disrupt your INR at doses as low as 10-20mcg daily - lower than almost any other supplement warning threshold</li>
+        <li>The Council for Responsible Nutrition sets 375mcg/day as the highest observed safe intake for MK-7 in healthy adults not on anticoagulants</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Most people who take a calcium supplement, or even just eat a calcium-rich diet, assume the job is done once the mineral gets absorbed. It isn't. Calcium absorbed into the bloodstream needs to be directed somewhere - ideally into bone, where it builds structure, and not into the walls of your arteries, where it contributes to the stiffening and plaque buildup behind cardiovascular disease. Vitamin D handles absorption. Vitamin K2 handles direction. It's the second half of a process most supplement routines only address half of.</p>
+
+      <p>This is not a fringe biochemistry detail. A 2026 randomized controlled trial published in JAMA Cardiology, following the same population for two years, found that vitamin K2 supplementation measurably slowed the progression of coronary artery calcification compared to placebo - a finding strong enough that it's worth understanding exactly how K2 does this, and exactly where the real caution lies.</p>
+
+      <div class="article-img">
+        <img src="/images/vitamink2-bone-mechanism.jpg" alt="Hard cheese, a dietary source of vitamin K2 produced through fermentation" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Traffic Controller Mechanism</h2>
+
+      <p>Vitamin K2 activates two specific proteins through a process called carboxylation: osteocalcin, which binds calcium into bone tissue, and matrix Gla protein (MGP), which inhibits calcium from depositing in soft tissue like arterial walls. Without adequate K2, both proteins remain in their inactive, "uncarboxylated" form - they exist in your body but can't do their job. This is measurable directly: dephosphorylated-uncarboxylated MGP (dp-ucMGP) is a specific blood biomarker researchers use to track vitamin K-dependent vascular calcification risk, and it responds directly to K2 supplementation.</p>
+
+      <div class="mech-visual">
+        <div class="mech-title">How the Calcium-Direction System Works</div>
+        <div class="mech-flow">
+          <div class="mech-step">Vitamin D<br>absorbs calcium into blood</div>
+          <div class="mech-arrow">→</div>
+          <div class="mech-step">Vitamin K2<br>activates osteocalcin + MGP</div>
+          <div class="mech-arrow">→</div>
+          <div class="mech-step">Calcium directed to bone, away from arteries</div>
+        </div>
+        <div class="mech-highlight">This is why vitamin D and K2 are frequently sold together - without K2, additional vitamin D-driven calcium absorption has no mechanism ensuring the calcium ends up somewhere useful instead of somewhere harmful.</div>
+      </div>
+
+      <h2>The Clinical Evidence</h2>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Coronary Artery Calcification</h4>
+          <p>A 2026 two-year randomized, double-blind, placebo-controlled trial (VitaK-CAC, published in JAMA Cardiology) found MK-7 supplementation slowed progression of coronary artery calcification by nearly one-third compared to placebo.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Vascular Calcification Biomarkers (CKD)</h4>
+          <p>Multiple RCTs in hemodialysis patients found 360mcg/day of MK-7 produced a 30-50% reduction in dp-ucMGP, the key biomarker of vitamin K-dependent vascular calcification risk, within 12 to 24 weeks.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Bone Density (Postmenopausal Women)</h4>
+          <p>2025 trial data and earlier RCTs support 100-200mcg/day of MK-7 improving bone density markers more effectively than calcium alone in women over 50, without the side-effect profile of bisphosphonate medications.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Arterial Stiffness &amp; Glucose Markers</h4>
+          <p>A three-year RCT in healthy postmenopausal women found improved arterial elasticity with MK-7. Separately, a trial in insulin-dependent diabetics taking 360mcg/day for 12 weeks found improved fasting glucose, insulin, HOMA-IR, and HbA1c.</p>
+        </div>
+      </div>
+
+      <div class="rct-visual">
+        <div class="rct-title">The Headline Trial</div>
+        <div class="rct-row">
+          <div class="rct-n">2<span>Years</span></div>
+          <div class="rct-desc"><strong>VitaK-CAC Trial, JAMA Cardiology (2026).</strong> Randomized, double-blind, placebo-controlled. Participants with established coronary artery calcification took MK-7 daily for two years, with calcification progression tracked via cardiac CT imaging.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">~33%<span>Slower</span></div>
+          <div class="rct-desc">The MK-7 group showed significantly slower progression of coronary artery calcification compared to placebo - a hard imaging endpoint, not a subjective or self-reported outcome.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">240<span>Men</span></div>
+          <div class="rct-desc">An earlier related trial in the same research program randomized men from the community with an aortic valve calcification score above 300 to MK-7 plus vitamin D versus placebo over 24 months, building the foundation for the larger 2026 result.</div>
+        </div>
+        <div class="rct-highlight">Coronary artery calcification is an established, independent predictor of heart attack and cardiac death - not a cosmetic or soft marker. A two-year RCT showing a measurable slowdown via a recognized imaging biomarker is a genuinely strong result for a supplement.</div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/vitamink2-heart-health.jpg" alt="Balanced stones representing the structural balance vitamin K2 supports between bone and arterial health" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>MK-4 vs. MK-7: Why the Form Matters</h2>
+
+      <p>Vitamin K2 isn't a single molecule - it's a family of compounds called menaquinones, distinguished by the length of their side chain. MK-4 is found in animal products and has a short half-life of only a few hours, meaning it needs to be taken multiple times a day to maintain stable blood levels. MK-7, found in fermented foods like natto and most modern supplements, has a half-life measured in days, providing much steadier activation of osteocalcin and MGP from a single daily dose. This is why nearly all consumer K2 supplements today use the MK-7 form specifically.</p>
+
+      <p>That same long half-life is a double-edged property. It's what makes MK-7 effective with simple once-daily dosing - and it's also exactly why MK-7 interferes with blood-thinning medication more persistently than MK-4 or K1 ever did, which brings us to the single most important caution in this entire article.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">If You Take Warfarin, This Is Not a Normal Supplement Caution</div>
+        <p>Warfarin works by blocking the vitamin K cycle that activates clotting factors. Adding vitamin K2 back into your system directly opposes that mechanism. A landmark dose-response study found that MK-7, even at doses as low as 10 to 20mcg daily, significantly reduced INR (the standard measure of blood clotting time) in patients on stable anticoagulant therapy within just two weeks - and the effect was stronger and longer-lasting than equivalent doses of vitamin K1. This is a far lower threshold than typical supplement-drug interaction warnings, which usually involve hundreds of milligrams, not micrograms. If you are on warfarin or acenocoumarol, do not start a K2 supplement, and be aware that natto (extremely concentrated in MK-7) can meaningfully affect your INR even as a dietary choice, not just a supplement.</p>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Newer Blood Thinners Are a Different Story</div>
+        <p>Direct oral anticoagulants like apixaban (Eliquis), rivaroxaban (Xarelto), and dabigatran (Pradaxa) work by directly blocking specific clotting factors rather than depleting vitamin K. Because they don't rely on the vitamin K cycle, vitamin K2 supplementation is generally not expected to interfere with these medications the way it does with warfarin. If you're on one of these newer drugs and interested in K2, this is still worth confirming with your prescribing doctor - but the mechanism-based conflict that makes warfarin a hard stop simply doesn't apply the same way here. This is a useful real-world example of the absorption-vs-mechanism distinction explained in our supplement interactions guide.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">☀️</div>
+          <h4>Vitamin D3</h4>
+          <p>The classic pairing. D3 increases calcium absorption into the bloodstream; K2 ensures that calcium gets activated into bone rather than soft tissue. Taking D3 without K2 is widely considered an incomplete strategy by researchers in this space.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🦴</div>
+          <h4>Magnesium</h4>
+          <p>Magnesium is a cofactor for converting vitamin D into its active form, indirectly supporting the same calcium-regulation pathway that K2 operates on at the activation step.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🥛</div>
+          <h4>Calcium</h4>
+          <p>Calcium provides the raw material K2-activated proteins direct into bone. Taking calcium supplements without adequate K2 status is the specific scenario researchers point to when discussing misdirected calcium deposition risk.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🐟</div>
+          <h4>Omega-3</h4>
+          <p>Both are fat-soluble and benefit from being taken with dietary fat. Omega-3's cardiovascular anti-inflammatory profile and K2's anti-calcification mechanism address heart health from two distinct angles.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🧪</div>
+          <h4>Vitamin K1</h4>
+          <p>K1 (phylloquinone) is the form found in leafy greens and primarily supports clotting function; K2 specifically targets bone and arterial calcium direction. Some formulations include both for broader vitamin K coverage.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Warfarin (Avoid)</h4>
+          <p>Not a beneficial pairing under any circumstance without direct physician supervision. K2 directly counteracts warfarin's mechanism, even at very low doses, risking dangerous INR instability.</p>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Dose (MK-7)</th>
+          <th>Timing</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>General bone &amp; cardiovascular support</td>
+          <td>90 - 200mcg/day</td>
+          <td>With a meal containing fat</td>
+          <td>Most consumer-facing studies and product labels fall in this range</td>
+        </tr>
+        <tr>
+          <td>Postmenopausal bone density</td>
+          <td>100 - 200mcg/day</td>
+          <td>Daily, with food, long-term</td>
+          <td>Reflects dosing used in the 2025 bone density trial data</td>
+        </tr>
+        <tr>
+          <td>Vascular calcification (as studied)</td>
+          <td>360mcg/day</td>
+          <td>Daily, with food</td>
+          <td>Higher dose used specifically in CKD and dialysis biomarker trials - not a general recommendation</td>
+        </tr>
+        <tr>
+          <td>Highest observed safe intake (healthy adults)</td>
+          <td>375mcg/day</td>
+          <td>-</td>
+          <td>CRN-established ceiling for adults NOT on vitamin K antagonist medication</td>
+        </tr>
+      </table>
+
+      <div class="skip-box">
+        <div class="skip-label">Food Sources, If You'd Rather Not Supplement</div>
+        <p>Natto (fermented soybeans) is by far the richest dietary source of MK-7, concentrated enough that even a normal serving can noticeably affect warfarin therapy. Hard, aged cheeses like Gouda and Jarlsberg contain modest amounts through fermentation. Egg yolks, particularly from pasture-raised hens, and goose liver also contain K2, though in smaller, less concentrated amounts than natto.</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">Who Should Be Cautious</div>
+        <p>Anyone on warfarin, acenocoumarol, or another vitamin K antagonist should not supplement K2 without direct physician guidance - this is the one interaction in this entire article that deserves a hard stop rather than a "discuss with your doctor" softening. CoQ10 is structurally similar to vitamin K2 and may also reduce warfarin's effect, though evidence here is more mixed. People with a history of hormone-sensitive cancers should discuss K2 with their oncologist, as some preliminary research has explored vitamin K's role in cell proliferation pathways, though this is not a settled safety concern for typical supplemental doses. MK-7 has shown a strong safety profile in toxicology studies at doses far exceeding typical supplemental amounts, with no adverse effects observed even at gram-level doses in animal models.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">8.0/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          A genuinely well-evidenced nutrient with a hard cardiovascular imaging endpoint behind it - the 2026 JAMA Cardiology coronary calcification trial is exactly the kind of result that's rare in the supplement world. The mechanism is clean, well-understood, and addresses a real gap left by vitamin D-only calcium strategies. It loses points only because of how narrow and severe its one real contraindication is: the warfarin interaction occurs at unusually low doses and demands genuinely careful handling, not a generic disclaimer. For anyone not on a vitamin K antagonist, K2 paired with D3 is one of the more solidly evidenced additions to a longevity-focused stack.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Vossen, L.M., de Leeuw, P.W., Schurgers, L.J. et al. (2026). Two Years of Menaquinone-7 Supplementation and Coronary Artery Calcification: A Randomized Clinical Trial. <em>JAMA Cardiology</em>. DOI: 10.1001/jamacardio.2026.1279.</li>
+        <li>Brandenburg, V. et al. Vitamin K2 and D in Patients With Aortic Valve Calcification: A Randomized Double-Blinded Clinical Trial. <em>Circulation</em>.</li>
+        <li>Knapen, M.H., Braam, L.A., Drummen, N.E. et al. (2015). Menaquinone-7 supplementation improves arterial stiffness in healthy postmenopausal women: a randomised, double-blind, placebo-controlled trial. <em>Thrombosis and Haemostasis</em>.</li>
+        <li>Effect of low-dose supplements of menaquinone-7 (vitamin K2) on the stability of oral anticoagulant treatment: dose-response relationship in healthy volunteers. <em>Journal of Thrombosis and Haemostasis</em>.</li>
+        <li>Council for Responsible Nutrition Foundation (2025). Vitamin K2 (MK-7) Highest Observed Intake safety update.</li>
+        <li>ConsumerLab.com. Vitamin K & Blood Thinners Such as Coumadin - Concerns and Cautions.</li>
+        <li>Safety and toxicological evaluation of a synthetic vitamin K2, menaquinone-7. PMC3172146.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Already Taking Vitamin D3 Alone?</h3>
+      <p>D3 and K2 work as a pair - one absorbs calcium, the other directs it. See how they fit together in a complete calcium-handling strategy.</p>
+      <div class="cta-buttons">
+        <a href="/articles/supplement-interactions-guide.html" class="btn-gold">Check the Interactions Guide →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/supplement-interactions-guide.html" class="related-card">
+          <div class="related-img c-interactions">
+            <img src="/images/hero-supplement-interactions.jpg" alt="Supplement Interactions" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Safety Guide</span>
+            <h4>Supplement Interactions Nobody Explains Properly</h4>
+          </div>
+        </a>
+        <a href="/articles/magnesium-guide.html" class="related-card">
+          <div class="related-img c-mag">
+            <img src="/images/hero-magnesium.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Magnesium</span>
+            <h4>Magnesium: The Master Mineral That Everyone's Missing</h4>
+          </div>
+        </a>
+        <a href="/articles/vitamin-d3-k2-guide.html" class="related-card">
+          <div class="related-img c-vitd">
+            <img src="/images/old-hand-young-hand.jpg" alt="Vitamin D3 and K2" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin D3</span>
+            <h4>Vitamin D3 + K2: The Cheapest Longevity Insurance You Are Not Taking Correctly</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
