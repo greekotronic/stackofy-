@@ -90,423 +90,414 @@
     "description": "Most supplements improve what you have. PQQ helps you grow new mitochondria."
   },
   {
-    "title": "Resveratrol: The Red Wine Molecule That Still Has Real Potential",
-    "tag": "Resveratrol",
-    "url": "/articles/resveratrol-guide.html",
-    "image": "/images/hero-resveratrol.jpg",
-    "color": "c-resv",
-    "tags": "longevity",
-    "readTime": "9 min",
-    "description": "Activates your longevity genes. Mimics caloric restriction. But only works in the right stack - here is what the science actually says."
-  },
-  {
-    "title": "Quercetin: The Swiss Army Knife of Flavonoids",
-    "tag": "Quercetin",
-    "url": "/articles/quercetin-guide.html",
-    "image": "/images/hero-quercetin.jpg",
-    "color": "c-quer",
-    "tags": "longevity immune",
-    "readTime": "10 min",
-    "description": "Antioxidant, zinc ionophore, senolytic assistant and anti-inflammatory - all in one molecule. One of the most versatile flavonoids in the longevity toolkit."
-  },
-  {
-    "title": "Pterostilbene: The Sleek Cousin of Resveratrol With Extra Staying Power",
-    "tag": "Pterostilbene",
-    "url": "/articles/pterostilbene-guide.html",
-    "image": "/images/hero-pterostilbene.jpg",
-    "color": "c-pter",
-    "tags": "longevity brain",
-    "readTime": "9 min",
-    "description": "80% bioavailability vs 20% for resveratrol. 7x longer half-life. Better brain penetration. But there is a catch with LDL - here is the full picture."
-  },
-  {
-    "title": "NR (Nicotinamide Riboside): The NAD+ Precursor With the Longest Track Record",
-    "tag": "NR",
-    "url": "/articles/nr-guide.html",
-    "image": "/images/hero-nr.jpg",
-    "color": "c-nr",
-    "tags": "longevity energy brain",
-    "readTime": "11 min",
-    "description": "NR has 40+ human clinical trials and a 2026 head-to-head study showing 2.3x more NAD+ than NMN at the same dose. The most evidence-backed NAD+ precursor available."
-  },
-  {
-    "title": "Stack Audit: The Supplement Combinations You Can Stop Buying",
-    "tag": "Stack Audit",
-    "type": "protocol",
-    "url": "/articles/redundant-stacks.html",
-    "image": "/images/hero-redundant-stacks.jpg",
-    "color": "c-audit",
-    "tags": "longevity",
-    "readTime": "10 min",
-    "description": "Most people are doubling up on supplements that hit the same targets. ARI breaks down which combinations are redundant - and where to spend your budget instead.",
-    "badgeType": "protocol"
-  },
-  {
-    "title": "Spermidine: The Autophagy Activator That Mimics Fasting",
-    "tag": "Spermidine",
-    "url": "/articles/spermidine-guide.html",
-    "image": "/images/hero-spermidine.jpg",
-    "color": "c-sperm",
-    "tags": "longevity brain",
-    "readTime": "10 min",
-    "description": "Spermidine triggers the same cellular cleanup as fasting. A 2024 Nature study confirmed it is the essential mediator of fasting's longevity effects."
-  },
-  {
-    "title": "Alpha-Lipoic Acid: The Dual-Soluble Antioxidant with Mitochondrial Muscle",
-    "tag": "ALA",
-    "url": "/articles/ala-guide.html",
-    "image": "/images/hero-ala.jpg",
-    "color": "c-ala",
-    "tags": "longevity energy",
-    "readTime": "10 min",
-    "description": "ALA works in water AND fat - reaching mitochondria and the brain where other antioxidants cannot. A 2025 meta-analysis of 63 RCTs confirms its metabolic benefits."
-  },
-  {
-    "title": "Glycine: The Sweet Amino Acid That Calms, Repairs, and Rebuilds",
-    "tag": "Glycine",
-    "url": "/articles/glycine-guide.html",
-    "image": "/images/hero-glycine.jpg",
-    "color": "c-gly",
-    "tags": "longevity sleep brain",
-    "readTime": "10 min",
-    "description": "3g before bed improves sleep from night one. Combined with NAC, it reversed 7 of 9 aging hallmarks in a clinical trial. One of the best-value longevity supplements available."
-  },
-  {
-    "title": "Acetyl-L-Carnitine (ALCAR): The Brain-Boosting Fat Transporter",
-    "tag": "ALCAR",
-    "url": "/articles/alcar-guide.html",
-    "image": "/images/hero-alcar.jpg",
-    "color": "c-alcar",
-    "tags": "longevity brain energy",
-    "readTime": "10 min",
-    "description": "ALCAR crosses the blood-brain barrier and matched antidepressants in a 12-RCT meta-analysis. Strong evidence for neuropathic pain, MCI and fatigue - here is what actually works."
-  },
-  {
-    "title": "Creatine: The Muscle Molecule That's Actually a Brain Booster in Disguise",
-    "tag": "Creatine",
-    "url": "/articles/creatine-guide.html",
-    "image": "/images/hero-creatine.jpg",
-    "color": "c-creatine",
-    "tags": "longevity brain energy",
-    "readTime": "10 min",
-    "description": "A 2025 trial slowed Alzheimer's cognitive decline by 30% with creatine. One of the safest, cheapest and most studied supplements - and most people are taking it for entirely the wrong reasons."
-  },
-  {
-    "title": "Collagen: Rebuilding You from the Inside Out",
-    "tag": "Collagen",
-    "url": "/articles/collagen-guide.html",
-    "image": "/images/hero-collagen.jpg",
-    "color": "c-collagen",
-    "tags": "longevity",
-    "readTime": "11 min",
-    "description": "A 2024 RCT with 112 women confirmed significant skin improvements in 8 weeks. But which type do you need - Type I, II or III? And why vitamin C is non-negotiable."
-  },
-  {
-    "title": "Sulforaphane: The Detox Whisperer That Flips Your Genetic Switches",
-    "tag": "Sulforaphane",
-    "url": "/articles/sulforaphane-guide.html",
-    "image": "/images/hero-sulforaphane.jpg",
-    "color": "c-sulfo",
-    "tags": "longevity immune",
-    "readTime": "11 min",
-    "description": "Sulforaphane activates 200+ protective genes through NRF2. A 12-month trial reduced lung cancer risk markers. But most supplements deliver almost none - here is why and what to look for."
-  },
-  {
-    "title": "The Biohacker's Coffee: What the Science Actually Says About Upgrading Your Morning Cup",
-    "tag": "Nutrition Protocol",
-    "type": "protocol",
-    "url": "/articles/biohacker-coffee-guide.html",
-    "image": "/images/hero-biohacker-coffee.jpg",
-    "color": "c-coffee",
-    "tags": "longevity brain energy",
-    "readTime": "12 min",
-    "description": "Coconut oil for ketones. Ceylon cinnamon for blood sugar. Raw cacao for focus. Collagen for structure. The evidence behind every ingredient in an optimized morning coffee.",
-    "badgeType": "protocol"
-  },
-  {
-    "title": "My Personal Stack: How a 48-Year-Old Nutritionist Built His Daily Protocol",
-    "tag": "Personal Protocol",
-    "url": "/articles/personal-stack-guide.html",
-    "image": "/images/hero-personal-stack.jpg",
-    "color": "c-stack",
-    "type": "protocol",
-    "tags": "longevity brain energy",
-    "readTime": "14 min",
-    "description": "Not just what to take - but how to build a protocol that fits your life. Research, redundancy checks, timing and the practical systems that make consistency automatic.",
-    "badgeType": "protocol"
-  },
-  {
-    "title": "The Foundation Stack: The Three Supplements Almost Everyone Should Be Taking",
-    "tag": "Foundation Protocol",
-    "url": "/articles/foundation-stack.html",
-    "image": "/images/hero-foundation-stack.jpg",
-    "color": "c-vitd",
-    "type": "protocol",
-    "tags": "longevity immune",
-    "readTime": "12 min",
-    "description": "D3+K2, Magnesium and Omega-3. A 2025 Nature Aging study found they slow DNA methylation clocks with additive benefits. The highest-impact starting point for any longevity protocol.",
-    "badgeType": "protocol"
-  },
-  {
-    "title": "The Anti-Aging Stack: NMN/NR, Resveratrol, TMG, CoQ10 and PQQ",
-    "tag": "Anti-Aging Protocol",
-    "url": "/articles/antiaging-stack.html",
-    "image": "/images/hero-antiaging-stack.jpg",
-    "color": "c-nmn",
-    "type": "protocol",
-    "tags": "longevity energy brain",
-    "readTime": "14 min",
-    "description": "Five compounds targeting the NAD+ pathway from different angles. NMN fuels sirtuins, resveratrol activates them, CoQ10 runs the electron transport chain, PQQ builds new mitochondria - and TMG prevents the hidden methylation cost most people miss.",
-    "badgeType": "protocol"
-  },
-  {
-    "title": "The Sleep Stack: Magnesium Glycinate, Ashwagandha and L-Theanine",
-    "tag": "Sleep Protocol",
-    "url": "/articles/sleep-stack.html",
-    "image": "/images/hero-sleep-stack.jpg",
-    "color": "c-sleep",
-    "type": "protocol",
-    "tags": "sleep longevity",
-    "readTime": "12 min",
-    "description": "Three compounds addressing the three root causes of poor sleep: magnesium deficiency, elevated evening cortisol and neural over-excitation. No grogginess. Better sleep architecture.",
-    "badgeType": "protocol"
-  },
-  {
-    "title": "The Brain Stack: Omega-3, Lion's Mane, PQQ and CDP-Choline",
-    "tag": "Brain Protocol",
-    "url": "/articles/brain-stack.html",
-    "image": "/images/hero-brain-stack.jpg",
-    "color": "c-brain",
-    "type": "protocol",
-    "tags": "brain longevity energy",
-    "readTime": "12 min",
-    "description": "CDP-choline improved memory in a 100-person RCT. Lion's Mane stimulates NGF. Omega-3 is a structural brain component. PQQ builds new mitochondria in neurons. Four targets, one protocol.",
-    "badgeType": "protocol"
-  },
-  {
-    "title": "The Vitamin D Conspiracy: How One Vitamin Exposes the Trillion-Dollar System",
-    "tag": "ARI Book",
-    "url": "/articles/vitamin-d-conspiracy-book.html",
-    "image": "/images/vitamin-d-conspiracy-cover.jpg",
-    "color": "c-vitd",
-    "type": "protocol",
-    "tags": "longevity immune",
-    "readTime": "12 min",
-    "description": "Why do official guidelines use doses studies show are inadequate? The VITAL study reported no benefit - but used sub-therapeutic doses. The book that explains why this keeps happening. 300+ scientific sources.",
-    "badgeType": "book"
-  },
-  {
-    "title": "The $1,000 Longevity Plan: Add 15 Healthy Years by Choice, Not Chance",
-    "tag": "ARI Book",
-    "url": "/articles/longevity-plan-book.html",
-    "image": "/images/longevity-plan-cover.jpg",
-    "color": "c-nmn",
-    "type": "protocol",
-    "tags": "longevity brain energy",
-    "readTime": "12 min",
-    "description": "68 supplements analyzed. Blue Zone nutrition. Daily protocols for real people. 70-80% of your longevity is not genetics - it is choices. Here is the map.",
-    "badgeType": "book"
-  },
-  {
-    "title": "Ashwagandha: The Stress Adaptogen with a Safety Warning Worth Reading",
-    "tag": "Ashwagandha",
-    "url": "/articles/ashwagandha-guide.html",
-    "image": "/images/hero-ashwagandha.jpg",
-    "color": "c-ashwa",
-    "tags": "sleep longevity",
-    "readTime": "11 min",
-    "description": "Strong evidence for cortisol and stress reduction. Also: 23 documented liver injury cases, thyroid interference, and UK regulatory concern in 2024. The complete picture - including who should not take it."
-  },
-  {
-    "title": "L-Theanine: Calm Focus Without Sedation",
-    "tag": "L-Theanine",
-    "url": "/articles/ltheanine-guide.html",
-    "image": "/images/hero-ltheanine.jpg",
-    "color": "c-lthea",
-    "tags": "sleep brain",
-    "readTime": "10 min",
-    "description": "L-theanine promotes alpha brain waves within 30-40 minutes - calm alertness without sedation. A 2024 28-day RCT confirmed stress and sleep benefits. One of the safest supplements available."
-  },
-  {
-    "title": "Lion's Mane: The NGF-Stimulating Mushroom for Brain Health and Neuroplasticity",
-    "tag": "Lion's Mane",
-    "url": "/articles/lionsmane-guide.html",
-    "image": "/images/hero-lionsmane.jpg",
-    "color": "c-lions",
-    "tags": "brain longevity",
-    "readTime": "11 min",
-    "description": "Lion's Mane stimulates NGF - the protein responsible for neuron survival and growth. A 2025 double-blind RCT confirmed cognitive improvements in healthy adults. Form matters enormously - here is what to look for."
-  },
-  {
-    "title": "CDP-Choline (Citicoline): The Brain's Most Bioavailable Choline Source",
-    "tag": "CDP-Choline",
-    "url": "/articles/cdpcholine-guide.html",
-    "image": "/images/hero-cdpcholine.jpg",
-    "color": "c-cdp",
-    "tags": "brain longevity",
-    "readTime": "10 min",
-    "description": "500mg/day improved episodic memory in a 100-person RCT. CDP-choline delivers choline for acetylcholine AND cytidine for synaptic membranes - making it more complete than any other choline supplement."
-  },
-  {
-    "title": "Reishi: The Immortality Fungus That Actually Has Science Behind It",
-    "tag": "Reishi",
-    "url": "/articles/reishi-guide.html",
-    "image": "/images/hero-reishi-guide.jpg",
-    "color": "c-reishi",
-    "tags": "longevity immune sleep adaptogen",
-    "readTime": "12 min",
-    "description": "Ganoderma lucidum is the most studied medicinal mushroom on earth. Ganoderic acids, beta-glucans, telomere preservation, and a 2024 RCT. Here is what the science actually shows."
-  },
-  {
-    "title": "Cordyceps: The Energy Mushroom With Actual Performance Data",
-    "tag": "Cordyceps",
-    "url": "/articles/cordyceps-guide.html",
-    "image": "/images/hero-cordyceps-guide.jpg",
-    "color": "c-cordyceps",
-    "tags": "longevity energy adaptogen immune",
-    "readTime": "13 min",
-    "description": "Cordyceps activates AMPK, boosts mitochondrial biogenesis, and has real VO2max data from human RCTs. Here is what the science shows - and why species selection matters more than dose."
-  },
-  {
-    "title": "Chaga: The Antioxidant Powerhouse With a Real Immune and Liver Story",
-    "tag": "Chaga",
-    "url": "/articles/chaga-guide.html",
-    "image": "/images/hero-chaga-guide.jpg",
-    "color": "c-chaga",
-    "tags": "longevity immune antioxidant",
-    "readTime": "12 min",
-    "description": "Betulinic acid, melanin, and a gut microbiome finding nobody talks about. Here is what the Chaga research actually shows - and why the ORAC score claim is mostly meaningless."
-  },
-  {
-    "title": "Maitake: The Blood Sugar Mushroom With a Vitamin D Secret",
-    "tag": "Maitake",
-    "url": "/articles/maitake-guide.html",
-    "image": "/images/hero-maitake-guide.jpg",
-    "color": "c-maitake",
-    "tags": "longevity immune blood sugar",
-    "readTime": "11 min",
-    "description": "A real human dose-escalation immune trial, genuine blood sugar effects, and an underrated vitamin D2 pathway. Here is what the Maitake science actually shows."
-  },
-  {
-    "title": "Turkey Tail: The Only Mushroom With an Actual Approved Cancer Drug Inside It",
-    "tag": "Turkey Tail",
-    "url": "/articles/turkeytail-guide.html",
-    "image": "/images/hero-turkeytail-guide.jpg",
-    "color": "c-turkeytail",
-    "tags": "longevity immune oncology",
-    "readTime": "13 min",
-    "description": "PSK has been a government-approved adjuvant cancer therapy in Japan for 30+ years, backed by large RCTs. Here is the strongest clinical evidence base of any medicinal mushroom - and where it does not apply."
-  },
-  {
-    "title": "The Mushroom Protocol: Six Medicinal Mushrooms, One Coherent Stack",
-    "tag": "Mushroom Protocol",
-    "url": "/articles/mushroom-protocol.html",
-    "image": "/images/hero-mushroom-protocol.jpg",
-    "color": "c-cordyceps",
-    "type": "protocol",
-    "tags": "longevity immune energy",
-    "readTime": "14 min",
-    "description": "Reishi, Cordyceps, Chaga, Turkey Tail, Maitake and Lion's Mane each target a different system. Here is how to combine them without redundancy - dosing, timing and which ones you actually need.",
-    "badgeType": "protocol"
-  },
-  {
-    "title": "Curcumin: The Anti-Inflammatory With a Bioavailability Problem",
-    "tag": "Curcumin",
-    "url": "/articles/curcumin-guide.html",
-    "image": "/images/hero-curcumin-guide.jpg",
-    "color": "c-curcumin",
-    "tags": "longevity immune brain",
-    "readTime": "13 min",
-    "description": "21 trials, 1,705 patients confirm curcumin lowers inflammatory markers in osteoarthritis. But the black pepper trick may not work the way you think. Here is the real evidence."
-  },
-  {
-    "title": "Shilajit: The Himalayan Tar With a Heavy Metal Problem",
-    "tag": "Shilajit",
-    "url": "/articles/shilajit-guide.html",
-    "image": "/images/hero-shilajit-guide.jpg",
-    "color": "c-shilajit",
-    "tags": "longevity performance energy",
-    "readTime": "12 min",
-    "description": "A 90-day RCT shows real testosterone gains. Fulvic acid content varies 32,000% between commercial products. Here is what shilajit actually does - and why third-party testing is not optional."
-  },
-  {
-    "title": "The Dangerous Supplements Nobody Warns You About",
-    "tag": "ARI Book",
-    "url": "/articles/toxic-supplements-guide.html",
-    "image": "/images/hero-toxic-supplements.jpg",
-    "color": "c-toxic",
-    "type": "protocol",
-    "tags": "safety quality",
-    "readTime": "16 min",
-    "description": "Lead chromate in turmeric. Counterfeit saffron. Hidden pharmaceutical drugs in muscle-building products. Here is what is actually getting into your supplements - and how to check.",
-    "badgeType": "featured"
-  },
-  {
-    "title": "Fisetin: The Senolytic Flavonoid With Real Human Trial Data",
-    "tag": "Fisetin",
-    "url": "/articles/fisetin-guide.html",
-    "image": "/images/hero-fisetin-guide.jpg",
-    "color": "c-fisetin",
-    "tags": "longevity",
-    "readTime": "13 min",
-    "description": "A Mayo Clinic trial in long-COVID patients. A phase 2 sepsis trial enrolling now. Fisetin has more active human research than almost any other senolytic - and a real bioavailability gap nobody mentions."
-  },
-  {
-    "title": "TMG: The Methyl Donor Every NMN User Forgets to Take",
-    "tag": "TMG",
-    "url": "/articles/tmg-guide.html",
-    "image": "/images/hero-tmg-guide.jpg",
-    "color": "c-tmg",
-    "tags": "longevity",
-    "readTime": "12 min",
-    "description": "TMG reliably lowers homocysteine and replenishes methyl groups depleted by NAD+ precursors. But higher doses raise LDL, and the cardiovascular benefit everyone assumes has never been confirmed."
-  },
-  {
-    "title": "Do Supplements Even Work? What We Found Out the Hard Way",
-    "tag": "Honest Answer",
-    "url": "/articles/do-supplements-work-guide.html",
-    "image": "/images/hero-do-supplements-work-v2.jpg",
-    "color": "c-skeptic",
-    "featured": true,
-    "type": "protocol",
-    "tags": "skepticism evidence",
-    "readTime": "14 min",
-    "description": "Most supplements are marketing dressed up as science. A few have evidence as strong as anything in medicine. The skeptics are not wrong about the industry - they are wrong that the question has one answer.",
-    "badgeType": "featured"
-  },
-  {
-    "title": "Berberine: The 'Nature's Ozempic' Claim, Fact-Checked",
-    "tag": "Berberine",
-    "url": "/articles/berberine-guide.html",
-    "image": "/images/hero-berberine.jpg",
-    "color": "c-berberine",
-    "featured": false,
-    "tags": "metabolism blood-sugar longevity",
-    "readTime": "12 min",
-    "description": "Social media calls it 'nature's Ozempic.' The blood sugar data is real and surprisingly strong. The weight loss comparison is where the hype runs ahead of the evidence."
-  },
+  "title": "Resveratrol: The Red Wine Molecule That Still Has Real Potential",
+  "tag": "Resveratrol",
+  "url": "/articles/resveratrol-guide.html",
+  "image": "/images/hero-resveratrol.jpg",
+  "color": "c-resv",
+  "tags": "longevity",
+  "readTime": "9 min",
+  "description": "Activates your longevity genes. Mimics caloric restriction. But only works in the right stack - here is what the science actually says."
+},
+{
+  "title": "Quercetin: The Swiss Army Knife of Flavonoids",
+  "tag": "Quercetin",
+  "url": "/articles/quercetin-guide.html",
+  "image": "/images/hero-quercetin.jpg",
+  "color": "c-quer",
+  "tags": "longevity immune",
+  "readTime": "10 min",
+  "description": "Antioxidant, zinc ionophore, senolytic assistant and anti-inflammatory - all in one molecule. One of the most versatile flavonoids in the longevity toolkit."
+}
+,{
+  "title": "Pterostilbene: The Sleek Cousin of Resveratrol With Extra Staying Power",
+  "tag": "Pterostilbene",
+  "url": "/articles/pterostilbene-guide.html",
+  "image": "/images/hero-pterostilbene.jpg",
+  "color": "c-pter",
+  "tags": "longevity brain",
+  "readTime": "9 min",
+  "description": "80% bioavailability vs 20% for resveratrol. 7x longer half-life. Better brain penetration. But there is a catch with LDL - here is the full picture."
+}
+,{
+  "title": "NR (Nicotinamide Riboside): The NAD+ Precursor With the Longest Track Record",
+  "tag": "NR",
+  "url": "/articles/nr-guide.html",
+  "image": "/images/hero-nr.jpg",
+  "color": "c-nr",
+  "tags": "longevity energy brain",
+  "readTime": "11 min",
+  "description": "NR has 40+ human clinical trials and a 2026 head-to-head study showing 2.3x more NAD+ than NMN at the same dose. The most evidence-backed NAD+ precursor available."
+}
+,{
+  "title": "Stack Audit: The Supplement Combinations You Can Stop Buying",
+  "tag": "Stack Audit",
+  "type": "protocol",
+  "url": "/articles/redundant-stacks.html",
+  "image": "/images/hero-redundant-stacks.jpg",
+  "color": "c-audit",
+  "tags": "longevity",
+  "readTime": "10 min",
+  "description": "Most people are doubling up on supplements that hit the same targets. ARI breaks down which combinations are redundant - and where to spend your budget instead."
+}
+,{
+  "title": "Spermidine: The Autophagy Activator That Mimics Fasting",
+  "tag": "Spermidine",
+  "url": "/articles/spermidine-guide.html",
+  "image": "/images/hero-spermidine.jpg",
+  "color": "c-sperm",
+  "tags": "longevity brain",
+  "readTime": "10 min",
+  "description": "Spermidine triggers the same cellular cleanup as fasting. A 2024 Nature study confirmed it is the essential mediator of fasting's longevity effects."
+}
+,{
+  "title": "Alpha-Lipoic Acid: The Dual-Soluble Antioxidant with Mitochondrial Muscle",
+  "tag": "ALA",
+  "url": "/articles/ala-guide.html",
+  "image": "/images/hero-ala.jpg",
+  "color": "c-ala",
+  "tags": "longevity energy",
+  "readTime": "10 min",
+  "description": "ALA works in water AND fat - reaching mitochondria and the brain where other antioxidants cannot. A 2025 meta-analysis of 63 RCTs confirms its metabolic benefits."
+}
+,{
+  "title": "Glycine: The Sweet Amino Acid That Calms, Repairs, and Rebuilds",
+  "tag": "Glycine",
+  "url": "/articles/glycine-guide.html",
+  "image": "/images/hero-glycine.jpg",
+  "color": "c-gly",
+  "tags": "longevity sleep brain",
+  "readTime": "10 min",
+  "description": "3g before bed improves sleep from night one. Combined with NAC, it reversed 7 of 9 aging hallmarks in a clinical trial. One of the best-value longevity supplements available."
+},{
+  "title": "Acetyl-L-Carnitine (ALCAR): The Brain-Boosting Fat Transporter",
+  "tag": "ALCAR",
+  "url": "/articles/alcar-guide.html",
+  "image": "/images/hero-alcar.jpg",
+  "color": "c-alcar",
+  "tags": "longevity brain energy",
+  "readTime": "10 min",
+  "description": "ALCAR crosses the blood-brain barrier and matched antidepressants in a 12-RCT meta-analysis. Strong evidence for neuropathic pain, MCI and fatigue - here is what actually works."
+},{
+  "title": "Creatine: The Muscle Molecule That's Actually a Brain Booster in Disguise",
+  "tag": "Creatine",
+  "url": "/articles/creatine-guide.html",
+  "image": "/images/hero-creatine.jpg",
+  "color": "c-creatine",
+  "tags": "longevity brain energy",
+  "readTime": "10 min",
+  "description": "A 2025 trial slowed Alzheimer's cognitive decline by 30% with creatine. One of the safest, cheapest and most studied supplements - and most people are taking it for entirely the wrong reasons."
+},{
+  "title": "Collagen: Rebuilding You from the Inside Out",
+  "tag": "Collagen",
+  "url": "/articles/collagen-guide.html",
+  "image": "/images/hero-collagen.jpg",
+  "color": "c-collagen",
+  "tags": "longevity",
+  "readTime": "11 min",
+  "description": "A 2024 RCT with 112 women confirmed significant skin improvements in 8 weeks. But which type do you need - Type I, II or III? And why vitamin C is non-negotiable."
+},{
+  "title": "Sulforaphane: The Detox Whisperer That Flips Your Genetic Switches",
+  "tag": "Sulforaphane",
+  "url": "/articles/sulforaphane-guide.html",
+  "image": "/images/hero-sulforaphane.jpg",
+  "color": "c-sulfo",
+  "tags": "longevity immune",
+  "readTime": "11 min",
+  "description": "Sulforaphane activates 200+ protective genes through NRF2. A 12-month trial reduced lung cancer risk markers. But most supplements deliver almost none - here is why and what to look for."
+},{
+  "title": "The Biohacker's Coffee: What the Science Actually Says About Upgrading Your Morning Cup",
+  "tag": "Nutrition Protocol",
+  "type": "protocol",
+  "url": "/articles/biohacker-coffee-guide.html",
+  "image": "/images/hero-biohacker-coffee.jpg",
+  "color": "c-coffee",
+  "tags": "longevity brain energy",
+  "readTime": "12 min",
+  "description": "Coconut oil for ketones. Ceylon cinnamon for blood sugar. Raw cacao for focus. Collagen for structure. The evidence behind every ingredient in an optimized morning coffee."
+},{
+  "title": "My Personal Stack: How a 48-Year-Old Nutritionist Built His Daily Protocol",
+  "tag": "Personal Protocol",
+  "url": "/articles/personal-stack-guide.html",
+  "image": "/images/hero-personal-stack.jpg",
+  "color": "c-stack",
+  "type": "protocol",
+  "tags": "longevity brain energy",
+  "readTime": "14 min",
+  "description": "Not just what to take - but how to build a protocol that fits your life. Research, redundancy checks, timing and the practical systems that make consistency automatic."
+},{
+  "title": "The Foundation Stack: The Three Supplements Almost Everyone Should Be Taking",
+  "tag": "Foundation Protocol",
+  "url": "/articles/foundation-stack.html",
+  "image": "/images/hero-foundation-stack.jpg",
+  "color": "c-vitd",
+  "type": "protocol",
+  "tags": "longevity immune",
+  "readTime": "12 min",
+  "description": "D3+K2, Magnesium and Omega-3. A 2025 Nature Aging study found they slow DNA methylation clocks with additive benefits. The highest-impact starting point for any longevity protocol."
+},{
+  "title": "The Anti-Aging Stack: NMN/NR, Resveratrol, TMG, CoQ10 and PQQ",
+  "tag": "Anti-Aging Protocol",
+  "url": "/articles/antiaging-stack.html",
+  "image": "/images/hero-antiaging-stack.jpg",
+  "color": "c-nmn",
+  "type": "protocol",
+  "tags": "longevity energy brain",
+  "readTime": "14 min",
+  "description": "Five compounds targeting the NAD+ pathway from different angles. NMN fuels sirtuins, resveratrol activates them, CoQ10 runs the electron transport chain, PQQ builds new mitochondria - and TMG prevents the hidden methylation cost most people miss."
+},{
+  "title": "The Sleep Stack: Magnesium Glycinate, Ashwagandha and L-Theanine",
+  "tag": "Sleep Protocol",
+  "url": "/articles/sleep-stack.html",
+  "image": "/images/hero-sleep-stack.jpg",
+  "color": "c-sleep",
+  "type": "protocol",
+  "tags": "sleep longevity",
+  "readTime": "12 min",
+  "description": "Three compounds addressing the three root causes of poor sleep: magnesium deficiency, elevated evening cortisol and neural over-excitation. No grogginess. Better sleep architecture."
+},{
+  "title": "The Brain Stack: Omega-3, Lion's Mane, PQQ and CDP-Choline",
+  "tag": "Brain Protocol",
+  "url": "/articles/brain-stack.html",
+  "image": "/images/hero-brain-stack.jpg",
+  "color": "c-brain",
+  "type": "protocol",
+  "tags": "brain longevity energy",
+  "readTime": "12 min",
+  "description": "CDP-choline improved memory in a 100-person RCT. Lion's Mane stimulates NGF. Omega-3 is a structural brain component. PQQ builds new mitochondria in neurons. Four targets, one protocol."
+},{
+  "title": "The Vitamin D Conspiracy: How One Vitamin Exposes the Trillion-Dollar System",
+  "tag": "ARI Book",
+  "url": "/articles/vitamin-d-conspiracy-book.html",
+  "image": "/images/vitamin-d-conspiracy-cover.jpg",
+  "color": "c-vitd",
+  "type": "protocol",
+  "tags": "longevity immune",
+  "readTime": "12 min",
+  "description": "Why do official guidelines use doses studies show are inadequate? The VITAL study reported no benefit - but used sub-therapeutic doses. The book that explains why this keeps happening. 300+ scientific sources."
+},{
+  "title": "The $1,000 Longevity Plan: Add 15 Healthy Years by Choice, Not Chance",
+  "tag": "ARI Book",
+  "url": "/articles/longevity-plan-book.html",
+  "image": "/images/longevity-plan-cover.jpg",
+  "color": "c-nmn",
+  "type": "protocol",
+  "tags": "longevity brain energy",
+  "readTime": "12 min",
+  "description": "68 supplements analyzed. Blue Zone nutrition. Daily protocols for real people. 70-80% of your longevity is not genetics - it is choices. Here is the map."
+},{
+  "title": "Ashwagandha: The Stress Adaptogen with a Safety Warning Worth Reading",
+  "tag": "Ashwagandha",
+  "url": "/articles/ashwagandha-guide.html",
+  "image": "/images/hero-ashwagandha.jpg",
+  "color": "c-ashwa",
+  "tags": "sleep longevity",
+  "readTime": "11 min",
+  "description": "Strong evidence for cortisol and stress reduction. Also: 23 documented liver injury cases, thyroid interference, and UK regulatory concern in 2024. The complete picture - including who should not take it."
+},{
+  "title": "L-Theanine: Calm Focus Without Sedation",
+  "tag": "L-Theanine",
+  "url": "/articles/ltheanine-guide.html",
+  "image": "/images/hero-ltheanine.jpg",
+  "color": "c-lthea",
+  "tags": "sleep brain",
+  "readTime": "10 min",
+  "description": "L-theanine promotes alpha brain waves within 30-40 minutes - calm alertness without sedation. A 2024 28-day RCT confirmed stress and sleep benefits. One of the safest supplements available."
+},{
+  "title": "Lion's Mane: The NGF-Stimulating Mushroom for Brain Health and Neuroplasticity",
+  "tag": "Lion's Mane",
+  "url": "/articles/lionsmane-guide.html",
+  "image": "/images/hero-lionsmane.jpg",
+  "color": "c-lions",
+  "tags": "brain longevity",
+  "readTime": "11 min",
+  "description": "Lion's Mane stimulates NGF - the protein responsible for neuron survival and growth. A 2025 double-blind RCT confirmed cognitive improvements in healthy adults. Form matters enormously - here is what to look for."
+},{
+  "title": "CDP-Choline (Citicoline): The Brain's Most Bioavailable Choline Source",
+  "tag": "CDP-Choline",
+  "url": "/articles/cdpcholine-guide.html",
+  "image": "/images/hero-cdpcholine.jpg",
+  "color": "c-cdp",
+  "tags": "brain longevity",
+  "readTime": "10 min",
+  "description": "500mg/day improved episodic memory in a 100-person RCT. CDP-choline delivers choline for acetylcholine AND cytidine for synaptic membranes - making it more complete than any other choline supplement."
+},{
+  "title": "Reishi: The Immortality Fungus That Actually Has Science Behind It",
+  "tag": "Reishi",
+  "url": "/articles/reishi-guide.html",
+  "image": "/images/hero-reishi-guide.jpg",
+  "color": "c-reishi",
+  "tags": "longevity immune sleep adaptogen",
+  "readTime": "12 min",
+  "description": "Ganoderma lucidum is the most studied medicinal mushroom on earth. Ganoderic acids, beta-glucans, telomere preservation, and a 2024 RCT. Here is what the science actually shows."
+},{
+  "title": "Cordyceps: The Energy Mushroom With Actual Performance Data",
+  "tag": "Cordyceps",
+  "url": "/articles/cordyceps-guide.html",
+  "image": "/images/hero-cordyceps-guide.jpg",
+  "color": "c-cordyceps",
+  "tags": "longevity energy adaptogen immune",
+  "readTime": "13 min",
+  "description": "Cordyceps activates AMPK, boosts mitochondrial biogenesis, and has real VO2max data from human RCTs. Here is what the science shows - and why species selection matters more than dose."
+},
+{
+  "title": "Chaga: The Antioxidant Powerhouse With a Real Immune and Liver Story",
+  "tag": "Chaga",
+  "url": "/articles/chaga-guide.html",
+  "image": "/images/hero-chaga-guide.jpg",
+  "color": "c-chaga",
+  "tags": "longevity immune antioxidant",
+  "readTime": "12 min",
+  "description": "Betulinic acid, melanin, and a gut microbiome finding nobody talks about. Here is what the Chaga research actually shows - and why the ORAC score claim is mostly meaningless."
+},
+{
+  "title": "Maitake: The Blood Sugar Mushroom With a Vitamin D Secret",
+  "tag": "Maitake",
+  "url": "/articles/maitake-guide.html",
+  "image": "/images/hero-maitake-guide.jpg",
+  "color": "c-maitake",
+  "tags": "longevity immune blood sugar",
+  "readTime": "11 min",
+  "description": "A real human dose-escalation immune trial, genuine blood sugar effects, and an underrated vitamin D2 pathway. Here is what the Maitake science actually shows."
+},
+{
+  "title": "Turkey Tail: The Only Mushroom With an Actual Approved Cancer Drug Inside It",
+  "tag": "Turkey Tail",
+  "url": "/articles/turkeytail-guide.html",
+  "image": "/images/hero-turkeytail-guide.jpg",
+  "color": "c-turkeytail",
+  "tags": "longevity immune oncology",
+  "readTime": "13 min",
+  "description": "PSK has been a government-approved adjuvant cancer therapy in Japan for 30+ years, backed by large RCTs. Here is the strongest clinical evidence base of any medicinal mushroom - and where it does not apply."
+},
+{
+  "title": "The Mushroom Protocol: Six Medicinal Mushrooms, One Coherent Stack",
+  "tag": "Mushroom Protocol",
+  "url": "/articles/mushroom-protocol.html",
+  "image": "/images/hero-mushroom-protocol.jpg",
+  "color": "c-cordyceps",
+  "type": "protocol",
+  "tags": "longevity immune energy",
+  "readTime": "14 min",
+  "description": "Reishi, Cordyceps, Chaga, Turkey Tail, Maitake and Lion's Mane each target a different system. Here is how to combine them without redundancy - dosing, timing and which ones you actually need."
+},
+{
+  "title": "Curcumin: The Anti-Inflammatory With a Bioavailability Problem",
+  "tag": "Curcumin",
+  "url": "/articles/curcumin-guide.html",
+  "image": "/images/hero-curcumin-guide.jpg",
+  "color": "c-curcumin",
+  "tags": "longevity immune brain",
+  "readTime": "13 min",
+  "description": "21 trials, 1,705 patients confirm curcumin lowers inflammatory markers in osteoarthritis. But the black pepper trick may not work the way you think. Here is the real evidence."
+},
+{
+  "title": "Shilajit: The Himalayan Tar With a Heavy Metal Problem",
+  "tag": "Shilajit",
+  "url": "/articles/shilajit-guide.html",
+  "image": "/images/hero-shilajit-guide.jpg",
+  "color": "c-shilajit",
+  "tags": "longevity performance energy",
+  "readTime": "12 min",
+  "description": "A 90-day RCT shows real testosterone gains. Fulvic acid content varies 32,000% between commercial products. Here is what shilajit actually does - and why third-party testing is not optional."
+},
+{
+  "title": "The Dangerous Supplements Nobody Warns You About",
+  "tag": "ARI Book",
+  "url": "/articles/toxic-supplements-guide.html",
+  "image": "/images/hero-toxic-supplements.jpg",
+  "color": "c-toxic",
+  "type": "protocol",
+  "tags": "safety quality",
+  "readTime": "16 min",
+  "description": "Lead chromate in turmeric. Counterfeit saffron. Hidden pharmaceutical drugs in muscle-building products. Here is what is actually getting into your supplements - and how to check."
+},
+{
+  "title": "Fisetin: The Senolytic Flavonoid With Real Human Trial Data",
+  "tag": "Fisetin",
+  "url": "/articles/fisetin-guide.html",
+  "image": "/images/hero-fisetin-guide.jpg",
+  "color": "c-fisetin",
+  "tags": "longevity",
+  "readTime": "13 min",
+  "description": "A Mayo Clinic trial in long-COVID patients. A phase 2 sepsis trial enrolling now. Fisetin has more active human research than almost any other senolytic - and a real bioavailability gap nobody mentions."
+},
+{
+  "title": "TMG: The Methyl Donor Every NMN User Forgets to Take",
+  "tag": "TMG",
+  "url": "/articles/tmg-guide.html",
+  "image": "/images/hero-tmg-guide.jpg",
+  "color": "c-tmg",
+  "tags": "longevity",
+  "readTime": "12 min",
+  "description": "TMG reliably lowers homocysteine and replenishes methyl groups depleted by NAD+ precursors. But higher doses raise LDL, and the cardiovascular benefit everyone assumes has never been confirmed."
+},
+{
+  "title": "Do Supplements Even Work? What We Found Out the Hard Way",
+  "tag": "Honest Answer",
+  "url": "/articles/do-supplements-work-guide.html",
+  "image": "/images/hero-do-supplements-work-v2.jpg",
+  "color": "c-skeptic",
+  "featured": true,
+  "type": "protocol",
+  "tags": "skepticism evidence",
+  "readTime": "14 min",
+  "description": "Most supplements are marketing dressed up as science. A few have evidence as strong as anything in medicine. The skeptics are not wrong about the industry - they are wrong that the question has one answer."
+},
+{
+  "title": "Berberine: The 'Nature's Ozempic' Claim, Fact-Checked",
+  "tag": "Berberine",
+  "url": "/articles/berberine-guide.html",
+  "image": "/images/hero-berberine.jpg",
+  "color": "c-berberine",
+  "featured": false,
+  "tags": "metabolism blood-sugar longevity",
+  "readTime": "12 min",
+  "description": "Social media calls it 'nature's Ozempic.' The blood sugar data is real and surprisingly strong. The weight loss comparison is where the hype runs ahead of the evidence."
+},
   {
     "title": "Astaxanthin: The Algae Antioxidant That Protects From the Inside Out",
     "tag": "Astaxanthin",
-    "url": "/articles/astaxanthin-guide.html",
+    "description": "One of the most potent antioxidants ever measured in lab assays. A 2026 RCT confirmed real UV protection in human skin at 6mg daily - here is what the data actually shows.",
     "image": "/images/hero-astaxanthin.jpg",
+    "url": "/articles/astaxanthin-guide.html",
+    "readTime": "11 min read",
+    "tags": "longevity,antioxidant",
     "color": "c-astax",
-    "featured": false,
-    "tags": "longevity antioxidant performance",
-    "readTime": "11 min",
-    "description": "One of the most potent antioxidants ever measured in lab assays. A 2026 RCT confirmed real UV protection in human skin at 6mg daily - here is what the data actually shows."
+    "type": "guide"
   },
-  {
-    "title": "Supplement Interactions Nobody Explains Properly",
-    "tag": "Safety Guide",
-    "url": "/articles/supplement-interactions-guide.html",
-    "image": "/images/hero-supplement-interactions.jpg",
-    "color": "c-interactions",
-    "featured": false,
-    "type": "protocol",
-    "badgeType": "featured",
-    "tags": "safety interactions",
-    "readTime": "15 min",
-    "description": "Interaction checkers disagree with each other and none of them explain why. Here are the supplement-drug interactions that actually matter, organized by mechanism instead of as a list to memorize."
-  }
+{
+  "title": "Papain: The Papaya Enzyme With a Real FDA Warning Behind It",
+  "tag": "Papain",
+  "url": "/articles/papain-guide.html",
+  "image": "/images/hero-papain.jpg",
+  "color": "c-papain",
+  "featured": false,
+  "tags": "digestion gut-health",
+  "readTime": "10 min",
+  "description": "Papain has decades of use as a digestive aid and wound-care agent - and a 2008 FDA market withdrawal for topical use due to allergy risk. Here is what the evidence actually supports and where the real caution lies."
+},
+{
+  "title": "Bromelain: The Pineapple Enzyme With Actual RCTs Behind It",
+  "tag": "Bromelain",
+  "url": "/articles/bromelain-guide.html",
+  "image": "/images/hero-bromelain.jpg",
+  "color": "c-bromelain",
+  "featured": false,
+  "tags": "digestion gut-health performance",
+  "readTime": "11 min",
+  "description": "Bromelain has real randomized controlled trials behind it - pediatric sinusitis, ulcerative colitis, periodontal surgery. It also has a documented bleeding risk that matters more than most supplement warnings."
+},
+{
+  "title": "Supplement Interactions Nobody Explains Properly",
+  "tag": "Safety Guide",
+  "url": "/articles/supplement-interactions-guide.html",
+  "image": "/images/hero-supplement-interactions.jpg",
+  "color": "c-interactions",
+  "featured": false,
+  "type": "protocol",
+  "tags": "safety interactions",
+  "readTime": "15 min",
+  "description": "Interaction checkers disagree with each other and none of them explain why. Here are the supplement-drug interactions that actually matter, organized by mechanism instead of as a list to memorize."
+}
 ]

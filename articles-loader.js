@@ -46,6 +46,7 @@ const COLORS = {
 'c-astax': 'background:linear-gradient(135deg,#1a0a00,#7A4A10)',
 'c-papain': 'background:linear-gradient(135deg,#1a2400,#6B8E23)',
 'c-bromelain': 'background:linear-gradient(135deg,#1a2e00,#D4A017)',
+'c-interactions': 'background:linear-gradient(135deg,#1B4332,#D4A853)',
 };
 
 function makeCard(article, size) {
@@ -167,18 +168,32 @@ async function loadArticles() {
       latestEl.innerHTML = latest.slice(-8).reverse().map(a => makeCard(a, 'small')).join('');
     }
 
-    // PROTOCOL ARTICLES (homepage) - only protocol type, limited to 4 newest
+    // PROTOCOL ARTICLES (homepage) - only real protocols, limited to 4 newest
     const protocolEl = document.getElementById('protocol-articles');
     if (protocolEl) {
-      const protocols = articles.filter(a => a.type === 'protocol');
+      const protocols = articles.filter(a => a.badgeType === 'protocol');
       protocolEl.innerHTML = protocols.slice(-4).reverse().map(a => makeCard(a, 'small')).join('');
     }
-    // MORE PROTOCOLS (homepage) - remaining protocols after first 4, limited to 4
+    // MORE PROTOCOLS (homepage) - remaining protocols after first 4
     const protocolMoreEl = document.getElementById('protocol-articles-more');
     if (protocolMoreEl) {
-      const protocols = articles.filter(a => a.type === 'protocol');
+      const protocols = articles.filter(a => a.badgeType === 'protocol');
       const remaining = protocols.slice(0, -4).reverse().slice(0, 4);
       protocolMoreEl.innerHTML = remaining.map(a => makeCard(a, 'small')).join('');
+    }
+
+    // EDITORIAL ARTICLES (homepage) - featured/editorial badgeType
+    const editorialEl = document.getElementById('editorial-articles');
+    if (editorialEl) {
+      const editorial = articles.filter(a => a.badgeType === 'featured');
+      editorialEl.innerHTML = editorial.reverse().map(a => makeCard(a, 'small')).join('');
+    }
+
+    // BOOKS (homepage) - book badgeType
+    const booksEl = document.getElementById('books-articles');
+    if (booksEl) {
+      const books = articles.filter(a => a.badgeType === 'book');
+      booksEl.innerHTML = books.reverse().map(a => makeCard(a, 'small')).join('');
     }
 
     // MORE ARTICLES (homepage) - remaining articles after first 8, limited to 8
@@ -254,26 +269,44 @@ async function loadArticles() {
       immuneEl.innerHTML = immune.map(a => makeCard(a, 'horizontal')).join('');
     }
 
+    // Shared card renderer for protocols-page-style cards (used on articles.html)
+    function makeProtocolPageCard(a) {
+      const bg = COLORS[a.color] || 'background:#1B4332';
+      const badgeText = a.badgeType === 'book' ? '★ Book' : a.badgeType === 'featured' ? '★ Featured' : '★ Protocol';
+      return `
+        <a href="${a.url}" class="protocol-card-page">
+          <div class="protocol-card-img" style="${bg}">
+            <img src="${a.image}" alt="${a.tag}" onerror="this.style.display='none'" />
+            <span class="protocol-badge">${badgeText}</span>
+          </div>
+          <div class="protocol-card-body">
+            <span class="protocol-card-tag">${a.tag}</span>
+            <h3>${a.title}</h3>
+            <p>${a.description}</p>
+            <span class="protocol-card-meta">${a.readTime} read</span>
+          </div>
+        </a>`;
+    }
+
     // ARTICLES PAGE - protocols section (top, gold cards)
     const articlesProtocolsEl = document.getElementById('articles-protocols');
     if (articlesProtocolsEl) {
-      const protocols = articles.filter(a => a.type === 'protocol');
-      articlesProtocolsEl.innerHTML = protocols.map(a => {
-        const bg = COLORS[a.color] || 'background:#1B4332';
-        return `
-          <a href="${a.url}" class="protocol-card-page">
-            <div class="protocol-card-img" style="${bg}">
-              <img src="${a.image}" alt="${a.tag}" onerror="this.style.display='none'" />
-              <span class="protocol-badge">${a.badgeType === 'book' ? '★ Book' : a.badgeType === 'featured' ? '★ Featured' : '★ Protocol'}</span>
-            </div>
-            <div class="protocol-card-body">
-              <span class="protocol-card-tag">${a.tag}</span>
-              <h3>${a.title}</h3>
-              <p>${a.description}</p>
-              <span class="protocol-card-meta">${a.readTime} read</span>
-            </div>
-          </a>`;
-      }).join('');
+      const protocols = articles.filter(a => a.badgeType === 'protocol');
+      articlesProtocolsEl.innerHTML = protocols.map(makeProtocolPageCard).join('');
+    }
+
+    // ARTICLES PAGE - editorial section
+    const articlesEditorialEl = document.getElementById('articles-editorial');
+    if (articlesEditorialEl) {
+      const editorial = articles.filter(a => a.badgeType === 'featured');
+      articlesEditorialEl.innerHTML = editorial.map(makeProtocolPageCard).join('');
+    }
+
+    // ARTICLES PAGE - books section
+    const articlesBooksEl = document.getElementById('articles-books');
+    if (articlesBooksEl) {
+      const books = articles.filter(a => a.badgeType === 'book');
+      articlesBooksEl.innerHTML = books.map(makeProtocolPageCard).join('');
     }
 
     // ARTICLES PAGE - supplement guides only (no protocols)
