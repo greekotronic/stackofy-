@@ -156,6 +156,19 @@
     .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
     .disclaimer strong { color: var(--text); }
 
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
     .related-section { margin: 2.5rem 0; }
     .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
     .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
@@ -427,6 +440,18 @@
         <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
       </div>
     </div>
+
+    <a href="/articles/supplement-interactions-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-supplement-interactions.jpg" alt="Supplement Interactions" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ Before You Combine This</div>
+        <h4>Berberine can inhibit liver enzymes that metabolize common medications</h4>
+        <p>See how its CYP450 effects interact with other drugs and supplements in our full interactions guide.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
 
     <div class="related-section">
       <div class="related-title">More Articles</div>
