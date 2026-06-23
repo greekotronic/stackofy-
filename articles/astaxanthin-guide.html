@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Astaxanthin: The Algae Antioxidant That Protects From the Inside Out - Stackofy</title>
+  <meta name="description" content="Astaxanthin is one of the most potent antioxidants ever measured - far stronger than vitamin C or E in lab assays. A 2026 RCT confirmed real UV protection in human skin at 6mg daily. Here is what it does and does not do." />
+
+  <meta property="og:title" content="Astaxanthin: The Algae Antioxidant That Protects From the Inside Out" />
+  <meta property="og:description" content="Derived from the microalgae Haematococcus pluvialis, astaxanthin crosses both the blood-brain and blood-retina barrier - something almost no other carotenoid can do. A 2026 double-blind RCT confirms measurable UV protection in human skin." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/astaxanthin-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-astaxanthin.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1a0a, #1B4332, #2D6A4F); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,26,10,0.95) 0%, rgba(10,26,10,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .potency-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .potency-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .potency-row { display: flex; gap: 1rem; align-items: center; margin-bottom: 0.75rem; padding-bottom: 0.75rem; border-bottom: 0.5px solid var(--border); }
+    .potency-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .potency-name { font-size: 13px; font-weight: 700; color: var(--text); width: 90px; flex-shrink: 0; }
+    .potency-bar-wrap { flex: 1; }
+    .potency-bar { height: 8px; border-radius: 4px; }
+    .bar-astax { background: var(--gold); width: 95%; }
+    .bar-vite { background: var(--green-mid); width: 16%; }
+    .bar-vitc { background: #2D4A6B; width: 12%; }
+    .bar-betac { background: #7A5C10; width: 30%; }
+    .potency-desc { font-size: 12px; color: var(--text-muted); width: 190px; flex-shrink: 0; }
+    .potency-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-sleep { background: linear-gradient(135deg, #0a0a1a, #1a2a4a); }
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+    .c-omega { background: linear-gradient(135deg, #0a1a2a, #1B4D5C); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .potency-desc { display: none; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-astaxanthin.jpg" alt="Vibrant red-orange astaxanthin from microalgae - one of nature's most potent antioxidants" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Astaxanthin</span>
+      <h1>The Algae Antioxidant That Protects From the Inside Out</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>11 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Astaxanthin is a carotenoid from the microalgae Haematococcus pluvialis - one of the most potent antioxidants ever measured in lab assays, far exceeding vitamin C, vitamin E and beta-carotene</li>
+        <li>A 2026 double-blind RCT in 44 adults confirmed a measurable increase in Minimal Erythema Dose (MED) after 8 weeks at 6mg daily - real, quantified UV resistance, not a marketing claim</li>
+        <li>A separate 2025 RCT in 64 children with high screen exposure found 4mg daily for 84 days reduced digital eye strain scores by 20% and visual fatigue by 27%</li>
+        <li>Unlike most carotenoids, astaxanthin crosses both the blood-brain barrier and the blood-retina barrier - this is structurally unusual and explains its eye and neurological research interest</li>
+        <li>Well-tolerated at studied doses (4-12mg/day) with no serious adverse events reported - the main visible side effect is a harmless reddish tint to stool at higher doses</li>
+        <li>It does not replace sunscreen and provides no SPF - it supports the skin's internal antioxidant defenses, not its physical UV barrier</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Astaxanthin is the pigment responsible for the red-orange color of salmon, shrimp and flamingo feathers - none of which produce it themselves. They get it from eating microalgae, specifically Haematococcus pluvialis, which produces astaxanthin in large quantities as a survival mechanism when its pond dries up or gets hit with intense UV radiation. The algae essentially manufactures its own sunscreen and stress shield. Humans have spent the last two decades trying to figure out if swallowing that same molecule does anything useful for us.</p>
+
+      <p>The answer, based on a growing body of double-blind human trials through 2025 and 2026, is a qualified yes - particularly for UV-related skin stress and screen-related eye strain, two very modern problems with surprisingly specific clinical data behind this one molecule.</p>
+
+      <div class="article-img">
+        <img src="/images/astaxanthin-algae-source.jpg" alt="Haematococcus pluvialis microalgae, the natural source of astaxanthin" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Why It Gets Called "The King of Carotenoids"</h2>
+
+      <p>Astaxanthin belongs to the carotenoid family, the same group that includes beta-carotene and lutein. What sets it apart is its molecular structure - it has hydroxyl and keto groups on both ends of its carbon chain, which gives it antioxidant activity across the entire cell membrane, spanning both the fat-soluble interior and the water-facing surface. Most antioxidants can only protect one side. Astaxanthin protects both simultaneously.</p>
+
+      <p>In laboratory free-radical scavenging assays, this translates to potency figures that sound almost implausible: anywhere from 6 to 550 times stronger than vitamin E and vitamin C depending on the specific assay and radical type tested. These numbers come from in-vitro chemistry, not from how the body actually uses the molecule, so they should be read as a measure of raw antioxidant capacity rather than a promise of proportional real-world benefit.</p>
+
+      <div class="potency-visual">
+        <div class="potency-title">Relative Antioxidant Capacity - In Vitro Assays</div>
+        <div class="potency-row">
+          <div class="potency-name">Astaxanthin ★</div>
+          <div class="potency-bar-wrap"><div class="potency-bar bar-astax"></div></div>
+          <div class="potency-desc">Singlet oxygen quenching, strongest of the group tested</div>
+        </div>
+        <div class="potency-row">
+          <div class="potency-name">Beta-Carotene</div>
+          <div class="potency-bar-wrap"><div class="potency-bar bar-betac"></div></div>
+          <div class="potency-desc">Common provitamin A carotenoid</div>
+        </div>
+        <div class="potency-row">
+          <div class="potency-name">Vitamin E</div>
+          <div class="potency-bar-wrap"><div class="potency-bar bar-vite"></div></div>
+          <div class="potency-desc">Fat-soluble membrane antioxidant</div>
+        </div>
+        <div class="potency-row">
+          <div class="potency-name">Vitamin C</div>
+          <div class="potency-bar-wrap"><div class="potency-bar bar-vitc"></div></div>
+          <div class="potency-desc">Water-soluble antioxidant</div>
+        </div>
+        <div class="potency-highlight">★ These figures come from in-vitro singlet oxygen and free-radical assays. They describe chemical reactivity, not clinical outcomes - the gap between a strong lab result and a measurable human benefit is exactly why the RCTs below matter.</div>
+      </div>
+
+      <h2>The Clinical Evidence</h2>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>UV Skin Protection</h4>
+          <p>Multiple double-blind RCTs in Japanese adults, including a 2026 trial with 44 participants, show increased Minimal Erythema Dose and reduced UV-related moisture loss at 4-6mg daily over 8-10 weeks. This is the most consistently replicated finding in astaxanthin research.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Digital Eye Strain</h4>
+          <p>A 2025 RCT in 64 children aged 10-14 with heavy screen exposure found 4mg daily for 84 days significantly reduced computer vision syndrome scores and visual fatigue, with measurable improvements in tear production and pupillary light reflex.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Exercise Recovery</h4>
+          <p>Trials using 4-12mg daily over 4 weeks in trained and untrained adults report reduced exercise-induced oxidative stress markers and some improvements in endurance performance. Effect sizes vary across studies and training status.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Skin Aging Markers</h4>
+          <p>Trials combining astaxanthin with collagen hydrolysate show improved skin viscoelasticity and reduced markers of collagen breakdown (MMP-1, MMP-12). Whether astaxanthin alone drives this effect independent of collagen is less clear.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">2026 Journal of Functional Foods RCT - 44 Adults, 8 Weeks</div>
+        <p>A randomized, double-blind, placebo-controlled trial in 44 healthy Japanese adults tested 6mg of Haematococcus-derived astaxanthin daily against placebo for 8 weeks. Researchers measured Minimal Erythema Dose, the amount of UV exposure needed to cause visible skin redness, where a higher value means better natural UV resistance. The supplemented group showed a measurable reduction in UV-induced skin redness, alongside improvements in subjective hair dryness compared to placebo. This is a quantified physiological outcome, not a self-reported feeling - and it lines up with earlier smaller trials finding the same MED effect at similar doses over 9-10 weeks.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/astaxanthin-eye-protection.jpg" alt="Conceptual image representing astaxanthin's role in eye protection and oxidative stress defense" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Screen-Time Angle Most People Miss</h2>
+
+      <p>The UV story gets most of the marketing attention, but the eye strain data is arguably more relevant to how people actually live now. A 2025 randomized, double-blind, placebo-controlled trial published in Advances in Therapy looked at 64 children aged 10 to 14 who spent at least four hours a day on digital devices, giving them 4mg of natural astaxanthin daily for 84 days. Compared with placebo, the astaxanthin group showed a 20% reduction in computer vision syndrome scores and a 27% drop in visual fatigue scores, along with improved stereopsis and pupillary light reflex after sustained visual load, plus increased tear production. No changes were seen in visual acuity or refractive measurements, which makes sense - astaxanthin is not correcting eyesight, it is reducing the oxidative load that accumulates from sustained close-up screen focus.</p>
+
+      <p>This connects to a structural quirk that makes astaxanthin unusual among carotenoids: it crosses both the blood-brain barrier and the blood-retina barrier. Lutein and zeaxanthin, the carotenoids most associated with eye health, accumulate in the macula but do not cross into neural tissue as readily. Astaxanthin's ability to reach both the retina and the brain is why it shows up in eye strain research and in early-stage cognitive and neuroinflammation research simultaneously.</p>
+
+      <div class="skip-box">
+        <div class="skip-label">Does Astaxanthin Replace Sunscreen?</div>
+        <p>No, and this needs to be stated plainly. Astaxanthin supplements provide no SPF rating and do not block UV radiation the way a topical sunscreen does. What the MED data shows is that supplementation appears to support the skin's internal antioxidant response to UV-induced oxidative stress, meaning the skin tolerates a given dose of UV exposure slightly better before visible redness appears. That is a meaningful but modest physiological effect, not a substitute for physical sun protection. Think of it as raising the floor on cellular resilience, not raising the ceiling on how much sun exposure is safe.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🐟</div>
+          <h4>Omega-3 (EPA/DHA)</h4>
+          <p>Both are fat-soluble and absorb better with dietary fat. Omega-3's anti-inflammatory action and astaxanthin's antioxidant action target overlapping oxidative stress pathways, particularly for skin and cardiovascular markers.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🌻</div>
+          <h4>Vitamin E</h4>
+          <p>Vitamin E regenerates from its oxidized form more efficiently in the presence of other antioxidants. Some formulations pair the two specifically to extend astaxanthin's membrane-spanning protective effect.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🧬</div>
+          <h4>Collagen Peptides</h4>
+          <p>Trials combining the two show improved skin viscoelasticity and reduced collagen-degrading enzyme activity (MMP-1, MMP-12) compared to either alone, suggesting complementary mechanisms for skin structure.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">👁️</div>
+          <h4>Lutein and Zeaxanthin</h4>
+          <p>These macular carotenoids concentrate directly in the retina while astaxanthin crosses into broader neural and ocular tissue. Combined, they cover a wider range of eye-related antioxidant territory.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">☀️</div>
+          <h4>Vitamin D3</h4>
+          <p>No direct interaction, but both are taken with fat-containing meals for absorption, making them a practical morning pairing for people building a sun-exposure and skin-resilience stack.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🏃</div>
+          <h4>CoQ10</h4>
+          <p>Both target mitochondrial oxidative stress from different angles. Athletes researching exercise-recovery stacks often combine them, though direct synergy trials between the two specifically are limited.</p>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Dose</th>
+          <th>Timing</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>General antioxidant support</td>
+          <td>4 - 6mg</td>
+          <td>With a meal containing fat</td>
+          <td>Matches the dose used in most positive skin and eye RCTs</td>
+        </tr>
+        <tr>
+          <td>UV / skin resilience</td>
+          <td>6mg/day</td>
+          <td>Daily, with food</td>
+          <td>Dose used in the 2026 8-week MED trial. Effects build over 8-10 weeks, not days</td>
+        </tr>
+        <tr>
+          <td>Digital eye strain</td>
+          <td>4mg/day</td>
+          <td>Daily, with food</td>
+          <td>Dose used in the 2025 84-day pediatric RCT. Adult studies use similar ranges</td>
+        </tr>
+        <tr>
+          <td>Exercise recovery / performance</td>
+          <td>4 - 12mg/day</td>
+          <td>Daily, with food, for at least 4 weeks</td>
+          <td>Higher end of the studied range. Benefits are modest, not dramatic</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Who Should Be Cautious</div>
+        <p>Astaxanthin is well-tolerated across studied doses up to 12mg/day, with no serious adverse events reported in clinical trials. The most commonly noted harmless side effect is a reddish-orange tint to stool, a simple consequence of the pigment itself passing through. As a carotenoid, it is fat-soluble, so people on blood thinners or with bleeding disorders should mention it to their doctor, since some carotenoids have mild antiplatelet activity at high doses. Pregnant or breastfeeding women should consult a healthcare professional before supplementing, as dedicated safety data in this population is limited. People with shellfish or algae allergies should check the source material, since some astaxanthin is derived from krill or shrimp byproducts rather than algae.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">7.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          A genuinely interesting molecule with two specific, well-replicated human outcomes - UV-related skin resilience and digital eye strain reduction - that map directly onto modern lifestyle exposures most people actually have. Its dual blood-brain and blood-retina barrier crossing is structurally unique among carotenoids and earns it a strong score. It loses points because the effect sizes, while statistically real, are modest rather than dramatic, and several of the more ambitious claims around longevity and cardiovascular protection still rest on smaller or shorter trials. For people with high sun exposure or heavy screen time, it is a well-evidenced, low-risk addition.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Sekikawa, T., Li, Y., Izumi, T. et al. (2026). Anti-ultraviolet effects of astaxanthin derived from Haematococcus pluvialis microalgae on the skin, hair, and nails of Japanese people: a randomized, placebo-controlled, double-blind, parallel-group comparative study. <em>Journal of Functional Foods</em>, 136, 107138. doi:10.1016/j.jff.2025.107138.</li>
+        <li>Advances in Therapy (2025). Effects of natural astaxanthin supplementation on digital eye strain and visual performance in children with high screen exposure: a randomized, double-blind, placebo-controlled trial.</li>
+        <li>Tominaga, K. et al. (2017/2018). Protective effects of astaxanthin on UV-induced skin deterioration in healthy people - a randomized, double-blind, placebo-controlled trial. <em>NCBI PMC</em>, PMC6073124.</li>
+        <li>Journal of the International Society of Sports Nutrition (2024). Effects of astaxanthin supplementation on exercise-induced oxidative stress and performance markers in trained adults.</li>
+        <li>Iconthin Biotech (2026). Astaxanthin in 2026: update on human clinical evidence across eye health, performance, inflammation and skin aging.</li>
+        <li>Atika Wellness Journal (2026). Astaxanthin for skin: what human clinical studies show - review of MED, TEWL and viscoelasticity trial data.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Building a Full Antioxidant and Skin-Resilience Stack?</h3>
+      <p>Astaxanthin works best alongside omega-3s and a baseline antioxidant protocol. See how it fits into the bigger picture.</p>
+      <div class="cta-buttons">
+        <a href="/articles/omega3-guide.html" class="btn-gold">Read the Omega-3 Guide →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/omega3-guide.html" class="related-card">
+          <div class="related-img c-omega">
+            <img src="/images/hero-omega3.jpg" alt="Omega-3" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Omega-3</span>
+            <h4>Omega-3: The Anti-Inflammatory Foundation Most People Get Wrong</h4>
+          </div>
+        </a>
+        <a href="/articles/ltheanine-guide.html" class="related-card">
+          <div class="related-img c-sleep">
+            <img src="/images/hero-ltheanine.jpg" alt="L-Theanine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">L-Theanine</span>
+            <h4>L-Theanine: Calm Focus Without Sedation</h4>
+          </div>
+        </a>
+        <a href="/articles/magnesium-guide.html" class="related-card">
+          <div class="related-img c-mag">
+            <img src="/images/hero-magnesium.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Magnesium</span>
+            <h4>Magnesium: The Master Mineral That Everyone's Missing</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

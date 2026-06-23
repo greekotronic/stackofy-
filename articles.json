@@ -454,5 +454,16 @@
   "tags": "metabolism blood-sugar longevity",
   "readTime": "12 min",
   "description": "Social media calls it 'nature's Ozempic.' The blood sugar data is real and surprisingly strong. The weight loss comparison is where the hype runs ahead of the evidence."
-}
+},
+  {
+    "slug": "astaxanthin-guide",
+    "title": "Astaxanthin: The Algae Antioxidant That Protects From the Inside Out",
+    "tag": "Astaxanthin",
+    "excerpt": "One of the most potent antioxidants ever measured in lab assays. A 2026 RCT confirmed real UV protection in human skin at 6mg daily - here is what the data actually shows.",
+    "heroImage": "/images/hero-astaxanthin.jpg",
+    "url": "/articles/astaxanthin-guide.html",
+    "date": "2026-06-23",
+    "readTime": "11 min read",
+    "category": "Antioxidants"
+  }
 ]

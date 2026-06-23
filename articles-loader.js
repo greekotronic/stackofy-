@@ -43,6 +43,7 @@ const COLORS = {
 'c-tmg': 'background:linear-gradient(135deg,#3D0A1A,#6B1A2A)',
 'c-skeptic': 'background:linear-gradient(135deg,#1A1A1A,#3D3D2A)',
 'c-berberine': 'background:linear-gradient(135deg,#3D2E00,#B8860B)',
+'c-astax': 'background:linear-gradient(135deg,#1a0a00,#7A4A10)',
 };
 
 function makeCard(article, size) {
