@@ -42,6 +42,7 @@ const COLORS = {
 'c-fisetin': 'background:linear-gradient(135deg,#4D1020,#C0392B)',
 'c-tmg': 'background:linear-gradient(135deg,#3D0A1A,#6B1A2A)',
 'c-skeptic': 'background:linear-gradient(135deg,#1A1A1A,#3D3D2A)',
+'c-berberine': 'background:linear-gradient(135deg,#3D2E00,#B8860B)',
 };
 
 function makeCard(article, size) {
