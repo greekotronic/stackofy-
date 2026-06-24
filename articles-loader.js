@@ -49,6 +49,7 @@ const COLORS = {
 'c-interactions': 'background:linear-gradient(135deg,#1B4332,#D4A853)',
 'c-vitk2': 'background:linear-gradient(135deg,#3D2400,#D4A853)',
 'c-taurine': 'background:linear-gradient(135deg,#1a2a3a,#4A7A9D)',
+'c-akker': 'background:linear-gradient(135deg,#0a1a1a,#2D6A6A)',
 };
 
 function makeCard(article, size) {

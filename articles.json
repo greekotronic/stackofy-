@@ -552,5 +552,16 @@
     "tags": "longevity performance",
     "readTime": "12 min",
     "description": "A 2023 mouse study made taurine the it-supplement of biohacking. Two 2025 human studies then found the opposite of what the hype claimed. Here is the real, more boring, more useful story."
-  }
+  },
+{
+  "title": "Akkermansia: The Gut Bacterium That Eats Its Own Protection",
+  "tag": "Akkermansia",
+  "url": "/articles/akkermansia-guide.html",
+  "image": "/images/hero-akkermansia.jpg",
+  "color": "c-akker",
+  "featured": false,
+  "tags": "gut-health metabolism longevity",
+  "readTime": "13 min",
+  "description": "Akkermansia muciniphila is the fastest-growing name in gut health research, with real human RCTs showing improved insulin sensitivity. It also survives by eating the mucus layer that protects your gut - and too much of it can backfire."
+}
 ]
