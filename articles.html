@@ -127,7 +127,10 @@
 
   <div class="main">
 
-    <!-- PROTOCOLS SECTION - top, gold border, separate -->
+    <!-- SUPPLEMENT GUIDES SECTION -->
+
+    <div id="protocols-section-wrapper">
+    <!-- PROTOCOLS SECTION - gold border, separate -->
     <div class="protocol-section" id="protocol-section">
       <div class="protocol-section-header">
         <span class="protocol-star">★</span>
@@ -153,8 +156,9 @@
       </div>
       <div id="articles-books" class="protocol-grid-page"></div>
     </div>
+    </div>
 
-    <!-- SUPPLEMENT GUIDES SECTION -->
+    <div id="supplement-section-wrapper">
     <div class="section-label-row">
       <div class="label">All Guides</div>
       <div class="title">Supplement Research Library</div>
@@ -174,7 +178,9 @@
     </div>
 
     <div id="articles-grid" class="articles-grid"></div>
+    </div>
 
+    <div class="section-divider" id="section-divider-anchor"></div>
     <div style="margin-bottom: 1rem;">
       <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem;">Coming Soon</div>
     </div>
@@ -204,12 +210,14 @@
       });
       document.getElementById('article-count').textContent = count;
 
-      // Show all protocols when filter pill clicked
-      document.querySelectorAll('#articles-protocols .protocol-card-page').forEach(c => {
+      // Show all protocols/editorial/books when filter pill clicked
+      document.querySelectorAll('#articles-protocols .protocol-card-page, #articles-editorial .protocol-card-page, #articles-books .protocol-card-page').forEach(c => {
         c.style.display = '';
       });
-      const ps = document.getElementById('protocol-section');
-      if (ps) ps.style.display = '';
+      ['protocol-section', 'editorial-section', 'books-section'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = '';
+      });
     }
 
     function filterArticles() {
@@ -231,21 +239,46 @@
       });
       document.getElementById('article-count').textContent = count;
 
-      // Filter protocols - search in title and description
-      const protocolCards = document.querySelectorAll('#articles-protocols .protocol-card-page');
-      let protocolMatches = 0;
-      protocolCards.forEach(c => {
-        const title = (c.querySelector('h3') ? c.querySelector('h3').textContent : '').toLowerCase();
-        const desc = (c.querySelector('p') ? c.querySelector('p').textContent : '').toLowerCase();
-        const tag = (c.querySelector('.protocol-card-tag') ? c.querySelector('.protocol-card-tag').textContent : '').toLowerCase();
-        const matches = !query || title.includes(query) || desc.includes(query) || tag.includes(query);
-        c.style.display = matches ? '' : 'none';
-        if (matches) protocolMatches++;
+      // Filter protocols, editorial, and books sections - search in title, description, and tag
+      const sectionMap = [
+        { gridId: 'articles-protocols', sectionId: 'protocol-section' },
+        { gridId: 'articles-editorial', sectionId: 'editorial-section' },
+        { gridId: 'articles-books', sectionId: 'books-section' }
+      ];
+
+      sectionMap.forEach(({ gridId, sectionId }) => {
+        const cards = document.querySelectorAll('#' + gridId + ' .protocol-card-page');
+        let matchCount = 0;
+        cards.forEach(c => {
+          const title = (c.querySelector('h3') ? c.querySelector('h3').textContent : '').toLowerCase();
+          const desc = (c.querySelector('p') ? c.querySelector('p').textContent : '').toLowerCase();
+          const tag = (c.querySelector('.protocol-card-tag') ? c.querySelector('.protocol-card-tag').textContent : '').toLowerCase();
+          const matches = !query || title.includes(query) || desc.includes(query) || tag.includes(query);
+          c.style.display = matches ? '' : 'none';
+          if (matches) matchCount++;
+        });
+        const sectionEl = document.getElementById(sectionId);
+        if (sectionEl) sectionEl.style.display = (query && matchCount === 0) ? 'none' : '';
       });
 
-      // Hide entire protocol section if no protocols match and there is a query
-      const ps = document.getElementById('protocol-section');
-      if (ps) ps.style.display = (query && protocolMatches === 0) ? 'none' : '';
+      // DOM REORDERING: during an active search, move supplement guides above protocols/editorial/books
+      // When search is cleared, restore the original library order (protocols first)
+      const supplementWrapper = document.getElementById('supplement-section-wrapper');
+      const protocolsWrapper = document.getElementById('protocols-section-wrapper');
+      const divider = document.getElementById('section-divider-anchor');
+      const mainEl = document.querySelector('.main');
+
+      if (supplementWrapper && protocolsWrapper && divider && mainEl) {
+        if (query) {
+          // Active search: supplement results first
+          mainEl.insertBefore(supplementWrapper, protocolsWrapper);
+          mainEl.insertBefore(divider, protocolsWrapper);
+        } else {
+          // No search: restore original order (protocols/editorial/books first, then supplements)
+          mainEl.insertBefore(protocolsWrapper, supplementWrapper);
+          mainEl.insertBefore(divider, supplementWrapper);
+        }
+      }
     }
 
     // Pre-fill search from homepage
