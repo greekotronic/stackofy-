@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glutathione: The "0% Absorbed" Claim That Doesn't Hold Up - Stackofy</title>
+  <meta name="description" content="Liposomal glutathione brands love to say standard oral glutathione is 0% absorbed. A 6-month, 54-person RCT found otherwise - at a fraction of the price. Here is what the actual research says, where it genuinely conflicts, and the one real interaction that matters." />
+
+  <meta property="og:title" content="Glutathione: The 0% Absorbed Claim That Doesn't Hold Up" />
+  <meta property="og:description" content="Almost every source claiming oral glutathione is unabsorbable also sells the pricier liposomal alternative. A 2015 randomized, double-blind, placebo-controlled, 6-month trial in 54 adults found standard oral glutathione raised body stores significantly. A separate trial found nothing. Here is the real, conflicting picture." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/glutathione-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-glutathione.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .clash-card.real .clash-label { color: var(--green-light) !important; }
+    [data-theme="dark"] .clash-card.marketing .clash-label { color: #FF8080 !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1a0a, #1B4332, #2D6A4F); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,26,10,0.95) 0%, rgba(10,26,10,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .clash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .clash-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+    .clash-card.marketing { border-color: #C0392B; }
+    .clash-card.real { border-color: var(--green-dark); }
+    .clash-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .clash-card.marketing .clash-label { color: #C0392B; }
+    .clash-card.real .clash-label { color: var(--green-dark); }
+    .clash-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+    .clash-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 18px; font-weight: 700; color: var(--gold); width: 80px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-toxic { background: linear-gradient(135deg, #2A0A0A, #7A1A1A); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+    .c-quer { background: linear-gradient(135deg, #3d4a10, #6B7A2A); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .clash-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-glutathione.jpg" alt="Glutathione antioxidant in a glass laboratory vial" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Glutathione</span>
+      <h1>The "0% Absorbed" Claim That Doesn't Hold Up</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>13 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Glutathione is the body's most abundant intracellular antioxidant, made from three amino acids, and central to detoxification and immune regulation - the biology here is genuinely well-established</li>
+        <li>Almost every source claiming standard oral glutathione has "0% absorption" is also selling the more expensive liposomal version - a textbook conflict of interest worth noticing</li>
+        <li>A 6-month, randomized, double-blind, placebo-controlled trial in 54 healthy adults found standard oral glutathione (250mg or 1,000mg/day, no liposomal technology) significantly raised body glutathione stores in blood, red blood cells, plasma, and lymphocytes</li>
+        <li>A separate trial in a different population found no change at all from oral glutathione - the discrepancy likely comes down to dose and especially duration (6 months vs. a few weeks), not a fundamental absorption barrier</li>
+        <li>Liposomal glutathione genuinely does show faster, more pronounced increases at lower doses in its own trials - the technology has real merit, just not the "standard oral does literally nothing" framing often used to sell it</li>
+        <li>The one real caution: glutathione may reduce the effectiveness of certain chemotherapy drugs by protecting cancer cells from oxidative damage the treatment is designed to cause - anyone undergoing chemotherapy needs oncologist guidance before supplementing, not generic caution</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Search "glutathione absorption" and you'll find dozens of nearly identical claims: standard oral glutathione is broken down completely in the digestive tract, absorption is "as low as 0%," and only liposomal delivery actually works. Look closer at who's making that claim, and a pattern emerges fast - almost every source repeating it is also selling a liposomal glutathione product at two to three times the price of the standard form.</p>
+
+      <p>That pattern alone doesn't make the claim false. But it's exactly the kind of setup that deserves a primary-source check rather than taking the marketing copy at face value - so that's what we did.</p>
+
+      <div class="article-img">
+        <img src="/images/glutathione-lab-research.jpg" alt="Laboratory test tubes representing glutathione research" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What the Marketing Says vs. What a 6-Month RCT Found</h2>
+
+      <div class="clash-grid">
+        <div class="clash-card marketing">
+          <div class="clash-label">The Common Marketing Claim</div>
+          <h4>"Standard Oral Absorption Is 0-5%"</h4>
+          <p>Repeated across dozens of liposomal supplement brand websites, often without a specific citation, or citing the general fragility of the tripeptide bond in stomach acid as proof that no meaningful amount reaches the bloodstream intact.</p>
+        </div>
+        <div class="clash-card real">
+          <div class="clash-label">The Actual Published RCT</div>
+          <h4>Richie et al. (2015), European Journal of Nutrition</h4>
+          <p>Randomized, double-blind, placebo-controlled, 6 months, 54 non-smoking adults, standard (non-liposomal) oral glutathione at 250mg or 1,000mg/day. GSH levels in blood increased significantly at 1, 3, and 6 months versus baseline at both doses.</p>
+        </div>
+      </div>
+
+      <p>The mechanistic argument behind the marketing claim isn't entirely wrong - glutathione is a tripeptide, and the digestive tract does break down a substantial portion of it before it can be absorbed intact. Where the claim overreaches is treating "intact molecule breakdown" as equivalent to "the supplement does nothing." The Richie trial's results suggest the body still benefits from the amino acid building blocks and partial breakdown products, using them to support its own glutathione synthesis, rather than requiring the whole molecule to survive digestion unchanged.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">What the 2015 RCT Actually Measured</div>
+        <div class="rct-row">
+          <div class="rct-n">54<span>Adults</span></div>
+          <div class="rct-desc"><strong>6-month design.</strong> Randomized, double-blind, placebo-controlled - the gold-standard trial structure, run far longer than most supplement studies in this category.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">30-35%<span>Increase</span></div>
+          <div class="rct-desc">At 6 months, the high-dose (1,000mg/day) group showed mean GSH increases of 30-35% in erythrocytes, plasma, and lymphocytes - and a striking 260% increase in buccal mucosal cells, more than double the placebo group's change.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">3 mo.<span>Onset</span></div>
+          <div class="rct-desc">Effects were measurable starting around month 1 but became clearly significant by month 3 and continued building through month 6 - a slow, cumulative pattern rather than something detectable in a 2-4 week study.</div>
+        </div>
+        <div class="rct-highlight">This timeline is the key to resolving the apparent contradiction in the research. Most negative trials of oral glutathione run for only a few weeks. The trial that found the strongest effect ran for six months. That difference in duration, not a fundamental "it can't work" barrier, likely explains why studies disagree.</div>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">A Different Study Found Nothing - and That Matters Too</div>
+        <p>In fairness to the skeptical side: a separate trial (Allen and Bradly) in 40 healthy American adults found that oral GSH supplementation did not change glutathione levels or oxidative stress biomarkers at all. Researchers reviewing both studies have attributed the discrepancy to differences in dose, duration, and which blood compartment was measured - plasma glutathione turns over far faster than the erythrocyte fraction, making it a noisier, less reliable marker. The honest conclusion is that oral glutathione's effects appear real but are dose- and duration-dependent in a way that a short, underpowered study can easily miss entirely.</p>
+      </div>
+
+      <h2>Where Liposomal Technology Actually Earns Its Premium</h2>
+
+      <p>None of this means liposomal glutathione is snake oil - the opposite, actually. A separate trial of liposomal GSH (500mg and 1,000mg/day) found measurable increases in whole blood, erythrocyte, plasma, and PBMC glutathione within just 1-2 weeks, alongside reductions in oxidative stress markers - a faster onset than the standard-form trial, at a shorter duration. That's a real, legitimate advantage: liposomal encapsulation does appear to speed up and may modestly improve the magnitude of the effect, particularly useful if you want results faster than a 6-month commitment.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Raises Body Glutathione Stores</h4>
+          <p>Confirmed in multiple RCTs across both standard oral (longer duration, lower cost) and liposomal (faster onset, higher cost) forms. The "does oral glutathione work at all" question is genuinely answered: yes, with the right dose and time frame.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Skin Pigmentation / Whitening</h4>
+          <p>Some RCTs support reduced melanin and tyrosinase activity with oral or buccal glutathione for hyperpigmentation, but a clinical review notes general consensus still leans against oral treatment for this specific use, given inconsistent trial quality and short durations.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Type 2 Diabetes - Oxidative Damage</h4>
+          <p>A randomized trial in elderly type 2 diabetics found long-term glutathione supplementation reduced oxidative damage markers and improved HbA1c - a meaningful metabolic outcome beyond just raising a blood biomarker.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Preliminary</span>
+          <h4>Immune Function in HIV-Infected Individuals</h4>
+          <p>Small studies suggest liposomal glutathione may help restore healthier cytokine responses to infection in immunocompromised populations - promising but based on limited sample sizes so far.</p>
+        </div>
+      </div>
+
+      <h2>The One Caution That Actually Matters</h2>
+
+      <p>Most glutathione safety content reads like generic supplement boilerplate. One specific interaction deserves to stand out from the noise: glutathione is a powerful antioxidant that can protect cells - including cancer cells - from oxidative damage. Several chemotherapy drugs, including cisplatin and cyclophosphamide, work in part by inducing oxidative stress that destroys cancer cells. There is genuine pharmacological reason to think glutathione supplementation during chemotherapy could blunt the treatment's intended mechanism, not just a vague "antioxidants might interfere with chemo" talking point repeated without explanation.</p>
+
+      <div class="skip-box">
+        <div class="skip-label">If You Are Undergoing Cancer Treatment</div>
+        <p>Do not start glutathione supplementation without your oncologist's explicit input. This is not a precaution applied reflexively to every supplement - it is a specific, mechanism-based concern: the antioxidant activity that makes glutathione attractive for general health is the same property that could counteract certain chemotherapy regimens.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/glutathione-cell-protection.jpg" alt="Cellular membrane protection concept representing glutathione's antioxidant role" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🍊</div>
+          <h4>Vitamin C</h4>
+          <p>Vitamin C helps regenerate oxidized glutathione back to its active form, a well-documented synergy that several formulations and clinicians specifically pair together.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🧪</div>
+          <h4>NAC (N-Acetylcysteine)</h4>
+          <p>NAC is a direct precursor your body uses to synthesize its own glutathione - often considered a complementary or even preferable route for some people given its longer track record and lower cost.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🧂</div>
+          <h4>Selenium</h4>
+          <p>A required cofactor for glutathione peroxidase, the enzyme that actually puts glutathione to work neutralizing peroxides - low selenium status can bottleneck glutathione's functional benefit regardless of how much you supplement.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Chemotherapy Drugs (Caution)</h4>
+          <p>Specific, mechanism-based caution covered above - glutathione's protective antioxidant action may reduce the efficacy of oxidative-stress-dependent chemotherapy agents like cisplatin.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🔋</div>
+          <h4>Zinc</h4>
+          <p>Long-term glutathione supplementation has been associated with reduced zinc levels in some reports - worth monitoring or pairing with adequate zinc intake on extended protocols.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">💊</div>
+          <h4>Acetaminophen (Caution)</h4>
+          <p>High-dose acetaminophen depletes liver glutathione as part of its toxicity mechanism - a reason some clinical protocols specifically use glutathione precursors (NAC) in acetaminophen overdose treatment, though this is a medical intervention, not a casual supplement pairing.</p>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Form</th>
+          <th>Dose</th>
+          <th>Duration to Expect Results</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Standard oral GSH</td>
+          <td>250 - 1,000mg/day</td>
+          <td>3 - 6 months minimum</td>
+          <td>Reflects the dose and timeline from the strongest available RCT - patience is the price of the lower cost</td>
+        </tr>
+        <tr>
+          <td>Liposomal GSH</td>
+          <td>500 - 1,000mg/day</td>
+          <td>1 - 2 weeks for initial changes</td>
+          <td>Faster onset shown in trials, at a meaningfully higher price per dose</td>
+        </tr>
+        <tr>
+          <td>General maintenance</td>
+          <td>250 - 500mg/day</td>
+          <td>Ongoing</td>
+          <td>Most commonly cited range for general antioxidant support across both forms</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Who Should Be Cautious</div>
+        <p>Anyone undergoing or scheduled for chemotherapy should not supplement without oncologist approval, given the mechanism-based interference risk described above. People taking immunosuppressants should also consult their doctor, as glutathione may influence immune responses. Pregnancy and breastfeeding safety has not been established - avoid use without medical guidance. People with G6PD deficiency should be cautious, as rare reports link high-dose glutathione to hemolysis in this specific population. Long-term users should monitor zinc status. Side effects at typical doses are generally mild - bloating, headache, or digestive discomfort - with allergic reactions being rare but possible.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">6.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          The underlying biology is genuinely strong - glutathione's role as the body's master intracellular antioxidant is not in dispute. What earns this a middling-to-good rather than excellent score is the marketing distortion around delivery form: the "standard oral does nothing" claim that dominates this category's sales copy doesn't survive contact with the best available RCT, a 6-month trial that found real, dose-dependent increases without any liposomal technology at all. Liposomal forms do show faster onset in their own right and are a legitimate option for people who want quicker results, but the inflated framing used to sell them is exactly the kind of claim worth discounting. The chemotherapy interaction is the one genuinely sharp-edged safety point in an otherwise mild profile.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ Why We Checked the Primary Source Here</div>
+        <h4>Most "0% absorbed" claims trace back to marketing, not the actual RCT</h4>
+        <p>See our framework for reading past confident headlines and checking what a study actually found.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Richie, J.P. Jr., Nichenametla, S., Neidig, W. et al. (2015). Randomized controlled trial of oral glutathione supplementation on body stores of glutathione. <em>European Journal of Nutrition</em>, 54(2), 251-263.</li>
+        <li>Sinha, R., Sinha, I., Calcagnotto, A. et al. (2018). Oral supplementation with liposomal glutathione elevates body stores of glutathione and markers of immune function. <em>European Journal of Clinical Nutrition</em>, 72(1), 105-111.</li>
+        <li>Randomised clinical trial of long-term glutathione supplementation offers protection from oxidative damage and improves HbA1c in elderly type 2 diabetic patients. <em>Antioxidants</em>, 11(5), 1026.</li>
+        <li>Sharma, D.K. & Sharma, P. (2022). Augmented Glutathione Absorption from Oral Mucosa and its Effect on Skin Pigmentation: A Clinical Review. <em>Clinical, Cosmetic and Investigational Dermatology</em>, 15, 1853-1862.</li>
+        <li>Glutathione Levels after Glutathione Supplementation: A Systematic Review and Meta-analysis. <em>Journal of Current Science and Technology</em>.</li>
+        <li>Glutathione: Chemotherapy Uses, Warnings, Side Effects, Dosage. MedicineNet.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Curious About Other Inflated Supplement Claims?</h3>
+      <p>Glutathione isn't the only category where marketing outpaces the actual primary research.</p>
+      <div class="cta-buttons">
+        <a href="/articles/do-supplements-work-guide.html" class="btn-gold">Read the Honest Answer →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+        <a href="/articles/toxic-supplements-guide.html" class="related-card">
+          <div class="related-img c-toxic">
+            <img src="/images/hero-toxic-supplements.jpg" alt="Dangerous Supplements" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Investigation</span>
+            <h4>The Dangerous Supplements Nobody Warns You About</h4>
+          </div>
+        </a>
+        <a href="/articles/quercetin-guide.html" class="related-card">
+          <div class="related-img c-quer">
+            <img src="/images/hero-quercetin.jpg" alt="Quercetin" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Quercetin</span>
+            <h4>Quercetin: The Swiss Army Knife of Flavonoids</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are undergoing cancer treatment, taking immunosuppressants, or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

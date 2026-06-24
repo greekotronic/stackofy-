@@ -576,5 +576,16 @@
   "tags": "skepticism evidence",
   "readTime": "16 min",
   "description": "A famous 2005 paper argued most published research findings are false. Twenty years later, the debate is still alive - including about the paper itself. Here is how small samples, p-hacking, and publication bias distort supplement research, and how to actually read a study."
+},
+{
+  "title": "Glutathione: The \"0% Absorbed\" Claim That Doesn't Hold Up",
+  "tag": "Glutathione",
+  "url": "/articles/glutathione-guide.html",
+  "image": "/images/hero-glutathione.jpg",
+  "color": "c-glutathione",
+  "featured": false,
+  "tags": "longevity antioxidant",
+  "readTime": "13 min",
+  "description": "Liposomal glutathione brands love to say standard oral glutathione is 0% absorbed. A 6-month, 54-person RCT found otherwise - at a fraction of the price. Here is what the actual research says, where it genuinely conflicts, and the one real interaction that matters."
 }
 ]
