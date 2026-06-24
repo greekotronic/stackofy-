@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Urolithin A: Why Most People Can't Get It From Pomegranates Alone - Stackofy</title>
+  <meta name="description" content="Only 12% of people in one study had detectable urolithin A at baseline - your gut bacteria, not your diet, decide whether you make it at all. Most of the human research comes from the company that patented it. Here is the evidence, the conflict of interest, and what actually holds up." />
+
+  <meta property="og:title" content="Urolithin A: Why Most People Can't Get It From Pomegranates Alone" />
+  <meta property="og:description" content="Urolithin A only forms when specific gut bacteria break down ellagitannins from pomegranates, walnuts, and berries - and most people's microbiomes barely produce it. Nearly all human trials are funded by the company holding the patent. Here is the full, honestly-flagged picture." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/urolithin-a-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-urolithin-a.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1a0a, #1B4332, #2D6A4F); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,26,10,0.95) 0%, rgba(10,26,10,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .mech-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .mech-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .mech-flow { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .mech-step { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.75rem 1rem; font-size: 13px; font-weight: 600; color: var(--text); flex: 1; min-width: 140px; text-align: center; }
+    .mech-arrow { font-size: 18px; color: var(--gold); flex-shrink: 0; }
+    .mech-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 18px; font-weight: 700; color: var(--gold); width: 80px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-akker { background: linear-gradient(135deg, #0a1a1a, #2D6A6A); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+    .c-creatine { background: linear-gradient(135deg, #1a1a1a, #2A2A10); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .mech-flow { flex-direction: column; }
+      .mech-arrow { transform: rotate(90deg); }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-urolithin-a.jpg" alt="Pomegranate, the dietary source of ellagitannins that convert to urolithin A" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Urolithin A</span>
+      <h1>Why Most People Can't Get It From Pomegranates Alone</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>12 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Urolithin A doesn't exist in pomegranates, walnuts, or berries directly - it's produced when specific gut bacteria break down ellagitannins from those foods, and not everyone's microbiome can do this conversion well</li>
+        <li>In one study, only 12% of 100 participants had detectable urolithin A at baseline, and after drinking pomegranate juice, only about 40% showed significant conversion - the rest produced little to none regardless of diet</li>
+        <li>A single 500mg dose of direct urolithin A supplementation produced plasma levels six times higher than pomegranate juice did in the same study - a real, measurable advantage of bypassing the conversion step entirely</li>
+        <li>A 2025 systematic review of human muscle-performance trials found only 4 of 12 measured outcomes reached statistical significance - real signal, but far from overwhelming, and one trial's walk-distance improvement narrowly missed significance (p=0.12)</li>
+        <li>Almost all human clinical research on urolithin A is funded by or affiliated with Amazentis, the company holding key patents and selling it as Mitopure - this doesn't make the data wrong, but it means independent replication is still genuinely thin</li>
+        <li>Safety data across studies up to 12 months shows no major concerns - this is one of the cleaner safety profiles in the newer longevity-compound category</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Urolithin A has a genuinely unusual origin story among "longevity compounds" - it isn't actually in any food you eat. Pomegranates, walnuts, strawberries, and raspberries contain ellagitannins, a class of polyphenols that your gut bacteria - not your digestive enzymes - convert into urolithins. Urolithin A is the most biologically active of these conversion products, and whether your body makes any meaningful amount of it depends almost entirely on which bacterial strains happen to live in your gut.</p>
+
+      <p>That detail matters more than it sounds like it should, and it's the reason direct urolithin A supplementation exists as a category at all rather than just "eat more pomegranates."</p>
+
+      <div class="article-img">
+        <img src="/images/urolithin-gut-conversion.jpg" alt="Walnuts and berries, dietary sources of ellagitannins that gut bacteria convert to urolithin A" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Conversion Problem - Why Diet Alone Often Doesn't Work</h2>
+
+      <div class="mech-visual">
+        <div class="mech-title">From Pomegranate to Urolithin A - A Bacterial Bottleneck</div>
+        <div class="mech-flow">
+          <div class="mech-step">Ellagitannins in pomegranate, walnuts, berries</div>
+          <div class="mech-arrow">→</div>
+          <div class="mech-step">Specific gut bacteria convert to urolithins</div>
+          <div class="mech-arrow">→</div>
+          <div class="mech-step">Only some people produce meaningful Urolithin A</div>
+        </div>
+        <div class="mech-highlight">Researchers classify people into urolithin "metabotypes" based on how efficiently their gut bacteria perform this conversion - and the variation between individuals is large enough that diet alone is an unreliable way to guarantee meaningful urolithin A exposure.</div>
+      </div>
+
+      <p>A study examining this directly recruited 100 participants and found that only 12% had detectable urolithin A in their system at baseline. After drinking pomegranate juice, roughly 40% of participants showed significant conversion to urolithin A - meaning the majority still didn't, even with a direct dietary source. The same study then gave participants a single 500mg dose of purified urolithin A (the Mitopure formulation), which produced plasma urolithin A levels six times higher than the pomegranate juice phase achieved. That gap is the entire commercial and scientific rationale for urolithin A as a standalone supplement: it sidesteps a bacterial conversion step that a large share of people simply can't perform efficiently, regardless of how much pomegranate they eat.</p>
+
+      <h2>What It Does in the Body</h2>
+
+      <p>Urolithin A's primary mechanism of interest is its role as a mitophagy inducer - it triggers the cellular process that identifies and clears out damaged mitochondria, the energy-producing structures inside cells. Since mitochondrial dysfunction accumulates with age and is linked to muscle decline (sarcopenia), inflammation, and several degenerative conditions, a compound that meaningfully supports this cellular cleanup process has a plausible, mechanistically grounded case for broad relevance to aging.</p>
+
+      <h2>The Human Evidence - Real, But Not Overwhelming</h2>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Muscle Strength &amp; Performance</h4>
+          <p>A 2025 systematic review of placebo-controlled human trials (174 total participants across 3 eligible studies) found 4 of 12 measured outcomes reached statistical significance. Walk distance improved by 23m but narrowly missed significance (p=0.12). Real signal, genuinely mixed results.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Immune Aging</h4>
+          <p>A 2025 randomized, double-blind, placebo-controlled trial in 50 healthy middle-aged adults (1,000mg/day, 4 weeks) found measurable changes in T cell subsets and immune metabolic markers related to age-related immune decline.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Heart Failure Biomarkers</h4>
+          <p>A randomized, double-blind, crossover, placebo-controlled trial in heart failure patients with reduced ejection fraction found improvements in select cardiovascular biomarkers, alongside preclinical cardioprotection data.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Preliminary</span>
+          <h4>Athletic Performance (Soccer Players)</h4>
+          <p>A pilot RCT in academy soccer players during preseason training examined aerobic endurance, sprint speed, and antioxidant capacity - an early-stage, small-sample study in a specific athletic population, not yet broadly generalizable.</p>
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">A Conflict of Interest Worth Naming Directly</div>
+        <p>The overwhelming majority of human clinical research on urolithin A - including most of the trials cited above - is funded by, affiliated with, or uses the proprietary formulation from Amazentis, the company that holds key patents and markets urolithin A as Mitopure (sold directly and through the Timeline brand). This is stated plainly on the company's own research page, which frames itself as standing "against pseudoscience" by publishing in peer-reviewed journals - a reasonable practice, but it does not substitute for independent replication. None of this means the published data is fabricated or wrong. It does mean that, as of 2026, broad independent confirmation outside the patent holder's own research program is still genuinely thin, and that's worth knowing before treating any single trial result as definitive.</p>
+      </div>
+
+      <div class="rct-visual">
+        <div class="rct-title">What's Currently in the Pipeline</div>
+        <div class="rct-row">
+          <div class="rct-n">URO-PRO<span>Trial</span></div>
+          <div class="rct-desc">A placebo-controlled trial in men with prostate cancer undergoing radical prostatectomy, sponsored by the National Cancer Institute (NIH) - notably independent of Amazentis, currently recruiting with results expected around 2027.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">NCT07231783</div>
+          <div class="rct-desc">A newer randomized, double-blind, parallel trial specifically testing Mitopure on muscle strength in healthy middle-aged adults, with an extensive list of excluded concurrent medications - a sign of a more rigorously controlled design than some earlier studies.</div>
+        </div>
+        <div class="rct-highlight">The NCI-sponsored prostate cancer trial is a genuinely useful data point precisely because it's independent of the patent holder - worth watching for when results land, as a check on whether the broader pattern of findings holds up outside Amazentis-affiliated research.</div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/urolithin-muscle-mitochondria.jpg" alt="Dumbbell representing muscle and mitochondrial health research on urolithin A" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🍇</div>
+          <h4>Resveratrol</h4>
+          <p>Both are polyphenol-derived compounds with proposed roles in mitochondrial and cellular aging pathways, frequently combined in broader longevity-stack formulations.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">💪</div>
+          <h4>Creatine</h4>
+          <p>Targets muscle energy and performance through a completely different, well-established mechanism - a logical pairing for anyone interested in the muscle-aging angle specifically.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🦠</div>
+          <h4>Akkermansia / Gut-Supportive Fiber</h4>
+          <p>Since natural urolithin A production depends on gut bacterial composition, supporting overall gut microbiome diversity is mechanistically relevant even when also taking a direct supplement.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🐟</div>
+          <h4>Omega-3</h4>
+          <p>Both have proposed roles in mitochondrial membrane health and inflammation, making them a common pairing in cellular-health-focused stacks, though direct synergy trials are limited.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🍊</div>
+          <h4>Vitamin C</h4>
+          <p>General antioxidant support pairing common in broader formulations; no specific mechanistic interaction with urolithin A's mitophagy pathway has been established.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">📋</div>
+          <h4>Independent Verification (Always)</h4>
+          <p>Given how much of the evidence base traces back to one company, cross-checking any specific claim against the NCI-sponsored or other independently funded trials as they publish is a reasonable habit for this particular compound.</p>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>General use (as studied)</td>
+          <td>500mg/day</td>
+          <td>Single-dose pharmacokinetic studies show six-fold higher plasma levels than pomegranate juice at this dose</td>
+        </tr>
+        <tr>
+          <td>Muscle/immune trials</td>
+          <td>1,000mg/day</td>
+          <td>Used in several of the 4-week RCTs discussed above; longer trials (12 months) have also used doses in this range without major safety signals</td>
+        </tr>
+        <tr>
+          <td>Dietary alternative</td>
+          <td>Pomegranate, walnuts, berries</td>
+          <td>Conversion to actual urolithin A is highly individual-dependent; not a reliable substitute for direct supplementation if consistent levels matter to you</td>
+        </tr>
+      </table>
+
+      <div class="skip-box">
+        <div class="skip-label">Should You Bother With Pomegranate Juice Instead?</div>
+        <p>If your goal is specifically urolithin A exposure, dietary sources are a genuine gamble given that roughly 60% of people in the cited study showed minimal conversion even after direct ellagitannin intake. Eating pomegranates and walnuts is still a reasonable general health habit for other reasons, but it is not an evidence-based substitute for a direct urolithin A supplement if that specific compound is your actual target.</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">Who Should Be Cautious</div>
+        <p>Safety studies including trials running up to 12 months report no major safety concerns, no adverse liver or kidney effects, and good tolerability. Mild gastrointestinal symptoms have been reported in a minority of users, particularly at higher doses. As with most newer compounds, safety data in pregnancy, breastfeeding, and children is not established - avoid use without medical guidance in these groups. Given the limited independent research base discussed above, anyone on complex medication regimens should discuss urolithin A with their doctor before adding it, simply because drug-interaction research specifically is still thin.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">6.0/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          A genuinely interesting compound with a clean mechanistic story (mitophagy induction) and an excellent safety profile across studies running up to a year. The score sits in the middle rather than higher for two honest reasons: human outcome trials show real but modest effects, with several individual outcomes failing to reach statistical significance, and the overwhelming majority of the evidence comes from research funded by or affiliated with the single company holding the key patents. That isn't a reason to dismiss urolithin A - the NCI-sponsored independent trial currently underway is a good sign that broader scrutiny is coming - but it is a reason to treat current claims as promising rather than settled.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ Why the Funding Source Matters Here</div>
+        <h4>Most urolithin A trials come from the company that patented it</h4>
+        <p>See our framework for weighing funding source and replication status before trusting any single study.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Individual gut microbiome responses to pomegranate overcome by direct urolithin A supplementation. <em>NutraIngredients</em> coverage of underlying clinical study, Amazentis-affiliated research.</li>
+        <li>Williams, P. et al. (2025). The effects of urolithin A supplementation on muscle strength, muscle mass and physical performance in humans - a systematic review. medRxiv. DOI: 10.1101/2025.07.10.25331277.</li>
+        <li>Effect of the mitophagy inducer urolithin A on age-related immune decline: a randomized, placebo-controlled trial. <em>Nature Aging</em>, 5, 2309-2322 (2025).</li>
+        <li>Jamialahmadi, T. et al. (2024). Evaluation of Urolithin A efficacy in heart failure patients with reduced ejection fraction: a randomized, double-blind, crossover, placebo-controlled clinical trial. <em>Reviews on Recent Clinical Trials</em>, 19, 221-228.</li>
+        <li>Emerging evidence of Urolithin A in sports nutrition: bridging preclinical findings to athletic applications. <em>Frontiers in Nutrition</em>, 12 (2025).</li>
+        <li>Heilman, J., Andreux, P., Tran, N., Rinsch, C., Blanco-Bose, W. (2017). Safety assessment of urolithin A, a metabolite produced by the human gut microbiota upon dietary intake of plant derived ellagitannins and ellagic acid. <em>Food and Chemical Toxicology</em>, 108, 289-297.</li>
+        <li>URO-PRO Trial: Placebo-Controlled Trial of Urolithin A Supplementation in Men With Prostate Cancer Undergoing Radical Prostatectomy. ClinicalTrials.gov NCT06022822, National Cancer Institute.</li>
+        <li>Study Details, NCT07231783: The Effect of Urolithin A (Mitopure) Supplementation on Muscle Strength in Healthy Middle-Aged Adults. ClinicalTrials.gov.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want to Know How to Read Studies Like These Yourself?</h3>
+      <p>Funding source, sample size, and replication status all change how much weight a single study deserves.</p>
+      <div class="cta-buttons">
+        <a href="/articles/research-flaws-guide.html" class="btn-gold">Read the Critical Thinking Guide →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+        <a href="/articles/akkermansia-guide.html" class="related-card">
+          <div class="related-img c-akker">
+            <img src="/images/hero-akkermansia.jpg" alt="Akkermansia" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Akkermansia</span>
+            <h4>Akkermansia: The Gut Bacterium That Eats Its Own Protection</h4>
+          </div>
+        </a>
+        <a href="/articles/creatine-guide.html" class="related-card">
+          <div class="related-img c-creatine">
+            <img src="/images/hero-creatine.jpg" alt="Creatine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Creatine</span>
+            <h4>Creatine: The Muscle Molecule That's Actually a Brain Booster in Disguise</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
