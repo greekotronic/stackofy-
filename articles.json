@@ -20,14 +20,14 @@
     "description": "Form matters more than dose. Most cheap fish oil fails before it reaches you."
   },
   {
-    "title": "Vitamin D3 + K2: The Cheapest Longevity Insurance You Are Not Taking Correctly",
+    "title": "Vitamin D3 + K2: Why the Experts Can't Agree on a Number",
     "tag": "Vitamin D3",
     "url": "/articles/vitamin-d3-k2-guide.html",
-    "image": "/images/old-hand-young-hand.jpg",
+    "image": "/images/hero-vitamind-controversy.jpg",
     "color": "c-vitd",
     "tags": "longevity immune",
-    "readTime": "9 min",
-    "description": "Most adults are chronically deficient. Here is what the research actually says."
+    "readTime": "17 min",
+    "description": "The Endocrine Society reversed its own 30-year-old thresholds in 2024. The IOM still says 600 IU is plenty. Finland mandates fortification and nearly eliminated deficiency; the UK fortifies almost nothing. Here is the real, contested picture."
   },
   {
     "title": "Magnesium: The Master Mineral That Everyone's Missing",
@@ -531,26 +531,26 @@
     "description": "Interaction checkers disagree with each other and none of them explain why. Here are the supplement-drug interactions that actually matter, organized by mechanism instead of as a list to memorize.",
     "badgeType": "featured"
   },
-{
-  "title": "Vitamin K2 (MK-7): The Calcium Traffic Controller Almost Nobody Takes",
-  "tag": "Vitamin K2",
-  "url": "/articles/vitamin-k2-guide.html",
-  "image": "/images/hero-vitamink2.jpg",
-  "color": "c-vitk2",
-  "featured": false,
-  "tags": "longevity heart-health bone-health",
-  "readTime": "12 min",
-  "description": "A 2026 JAMA Cardiology trial found MK-7 slowed coronary artery calcification by nearly a third over two years. It also interferes with warfarin at doses as low as 10mcg - here is the full evidence and the one interaction that actually matters."
-},
-{
-  "title": "Taurine: The Longevity Hype the Follow-Up Studies Walked Back",
-  "tag": "Taurine",
-  "url": "/articles/taurine-guide.html",
-  "image": "/images/hero-taurine.jpg",
-  "color": "c-taurine",
-  "featured": false,
-  "tags": "longevity performance",
-  "readTime": "12 min",
-  "description": "A 2023 mouse study made taurine the it-supplement of biohacking. Two 2025 human studies then found the opposite of what the hype claimed. Here is the real, more boring, more useful story."
-}
+  {
+    "title": "Vitamin K2 (MK-7): The Calcium Traffic Controller Almost Nobody Takes",
+    "tag": "Vitamin K2",
+    "url": "/articles/vitamin-k2-guide.html",
+    "image": "/images/hero-vitamink2.jpg",
+    "color": "c-vitk2",
+    "featured": false,
+    "tags": "longevity heart-health bone-health",
+    "readTime": "12 min",
+    "description": "A 2026 JAMA Cardiology trial found MK-7 slowed coronary artery calcification by nearly a third over two years. It also interferes with warfarin at doses as low as 10mcg - here is the full evidence and the one interaction that actually matters."
+  },
+  {
+    "title": "Taurine: The Longevity Hype the Follow-Up Studies Walked Back",
+    "tag": "Taurine",
+    "url": "/articles/taurine-guide.html",
+    "image": "/images/hero-taurine.jpg",
+    "color": "c-taurine",
+    "featured": false,
+    "tags": "longevity performance",
+    "readTime": "12 min",
+    "description": "A 2023 mouse study made taurine the it-supplement of biohacking. Two 2025 human studies then found the opposite of what the hype claimed. Here is the real, more boring, more useful story."
+  }
 ]
