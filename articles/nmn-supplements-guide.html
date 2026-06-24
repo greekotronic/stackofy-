@@ -3,394 +3,160 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Why 64% of NMN Supplements Contain Zero Active Ingredient - Stackofy</title>
-  <meta name="description" content="Independent lab tests found that 64% of top-selling NMN supplements on Amazon contained NMN levels below the detectable limit. Here is how to spot the real ones in 90 seconds." />
+  <title>NMN: Banned, Unbanned, and Still 64% Fake - Stackofy</title>
+  <meta name="description" content="The FDA banned NMN as a supplement in 2022, then reversed itself in 2025 after a lawsuit. Independent lab tests found 64% of top-selling NMN products contain zero detectable active ingredient. Here is the regulatory mess, the real human trial data, and how to actually buy this correctly." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Why 64% of NMN Supplements Contain Zero Active Ingredient" />
-  <meta property="og:description" content="Independent lab tests exposed the NMN market. Here is how to spot quality products in 90 seconds." />
+  <meta property="og:title" content="NMN: Banned, Unbanned, and Still 64% Fake" />
+  <meta property="og:description" content="In November 2022 the FDA ruled NMN couldn't legally be sold as a supplement. In September 2025, after a lawsuit, it reversed itself. Through all of it, independent testing kept finding the same thing: most products on the shelf contain little to no actual NMN. Here is the full picture." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://stackofy.com/articles/nmn-supplements-guide" />
-  <meta property="og:image" content="https://stackofy.com/images/nmn-supplements.jpg" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-nmn.jpg" />
 
   <link rel="icon" type="image/png" href="/favicon.svg" />
 
   <style>
     :root {
-      --green-dark: #1B4332;
-      --green-mid: #2D6A4F;
-      --green-light: #95D5B2;
-      --gold: #D4A853;
-      --gold-light: #FDF3E0;
-      --bg: #FAF8F4;
-      --surface: #ffffff;
-      --text: #1A1A1A;
-      --text-muted: #666666;
-      --border: #E0DDD8;
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
       --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
-      --radius: 12px;
-      --radius-sm: 8px;
+      --radius: 12px; --radius-sm: 8px;
     }
-
-    [data-theme="dark"] {
-      --bg: #0F1A14;
-      --surface: #1A2B20;
-      --text: #F0EDE8;
-      --text-muted: #9DB8AA;
-      --border: #2A3D30;
-      --gold-light: #2A220D;
-    }
-
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    [data-theme="dark"] .timeline-year { color: var(--green-light) !important; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      transition: background 0.3s, color 0.3s;
-    }
-
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
     a { text-decoration: none; color: inherit; }
 
-    #progress-bar {
-      position: fixed;
-      top: 0; left: 0;
-      height: 3px;
-      background: var(--gold);
-      width: 0%;
-      z-index: 200;
-      transition: width 0.1s;
-    }
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
 
-    header {
-      background: var(--gradient);
-      padding: 0 2rem;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1B4332, #2D6A4F, #0a3d6b); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.4) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
 
-    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
-    .logo-icon { display: flex; flex-direction: column; gap: 3px; }
-    .capsule { height: 7px; border-radius: 4px; }
-    .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
-    .capsule:nth-child(2) { width: 22px; background: var(--green-light); }
-    .capsule:nth-child(3) { width: 26px; margin-left: 2px; background: var(--gold); }
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
 
-    .header-right { display: flex; align-items: center; gap: 1.5rem; }
-    nav { display: flex; gap: 1.5rem; }
-    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
-    nav a:hover { color: #FAF8F4; }
-
-    .dark-toggle {
-      background: rgba(255,255,255,0.15);
-      border: 0.5px solid rgba(255,255,255,0.2);
-      border-radius: 20px;
-      padding: 5px 12px;
-      cursor: pointer;
-      color: #FAF8F4;
-      font-size: 13px;
-    }
-
-    .article-hero {
-      position: relative;
-      height: 380px;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-    }
-
-    .hero-img {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, #1B4332, #2D6A4F, #0a3d6b);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 100px;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.4) 60%, transparent 100%);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 2rem 3rem;
-      max-width: 860px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .article-tag {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      background: var(--gold);
-      color: #1A1A1A;
-      padding: 4px 10px;
-      border-radius: 4px;
-      display: inline-block;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-content h1 {
-      color: #FAF8F4;
-      font-size: 1.9rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.3px;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-meta {
-      color: var(--green-light);
-      font-size: 13px;
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-    }
-
-    .article-wrapper {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem;
-    }
-
-    .tldr-box {
-      background: var(--gold-light);
-      border-left: 4px solid var(--gold);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .tldr-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.5rem;
-    }
-
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
     .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
     .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
     .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
 
     .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
     .article-content p { margin-bottom: 1.4rem; }
-
-    .article-content h2 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--green-dark);
-      margin: 2.5rem 0 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--gold);
-      display: inline-block;
-    }
-
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
     .article-content h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
     .article-content strong { color: var(--text); font-weight: 600; }
     .article-content ul, .article-content ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
     .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
     .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
-    .article-content a:hover { border-color: var(--green-dark); }
 
-    .checklist-box {
-      background: var(--surface);
-      border: 0.5px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      margin: 2rem 0;
-    }
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; max-height: 420px; object-fit: cover; display: block; }
 
+    .timeline-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .timeline-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .timeline-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .timeline-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .timeline-year { font-size: 13px; font-weight: 700; color: var(--green-dark); width: 70px; flex-shrink: 0; }
+    .timeline-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .timeline-row.flag .timeline-year { color: #C0392B; }
+    [data-theme="dark"] .timeline-row.flag .timeline-year { color: #FF8080 !important; }
+    .timeline-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
     .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
-
-    .checklist-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      margin-bottom: 0.75rem;
-      font-size: 14px;
-      color: var(--text);
-    }
-
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
     .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
     .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
 
-    .brand-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.5rem 0;
-      font-size: 14px;
-    }
-
-    .brand-table th {
-      background: var(--green-dark);
-      color: #FAF8F4;
-      padding: 10px 14px;
-      text-align: left;
-      font-weight: 600;
-    }
-
-    .brand-table td {
-      padding: 10px 14px;
-      border-bottom: 0.5px solid var(--border);
-      color: var(--text);
-    }
-
+    .brand-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .brand-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .brand-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
     .brand-table tr:nth-child(even) td { background: var(--bg); }
+    .badge-green { background: #EAF5F0; color: var(--green-dark); font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+    [data-theme="dark"] .badge-green { background: #1A3D2A; color: var(--green-light); }
 
-    .badge-green {
-      background: #EAF5F0;
-      color: var(--green-dark);
-      font-size: 11px;
-      font-weight: 700;
-      padding: 2px 8px;
-      border-radius: 4px;
-    }
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
 
-    .aaf-badge {
-      background: var(--gradient);
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-      margin: 2rem 0;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
     .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
     .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
     .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
 
-    .sources {
-      background: var(--surface);
-      border: 0.5px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      margin: 2.5rem 0;
-    }
-
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
     .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
     .sources ol { padding-left: 1.25rem; }
     .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
     .sources a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
     [data-theme="dark"] .sources a { color: var(--green-light); }
 
-    .cta-block {
-      background: var(--gradient);
-      border-radius: var(--radius);
-      padding: 2rem;
-      margin: 2.5rem 0;
-      text-align: center;
-    }
-
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
     .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
     .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
     .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
-    .btn-gold {
-      background: var(--gold);
-      color: #1A1A1A;
-      border: none;
-      border-radius: var(--radius-sm);
-      padding: 11px 22px;
-      font-size: 14px;
-      font-weight: 600;
-      display: inline-block;
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: #FAF8F4;
-      border: 1px solid rgba(255,255,255,0.4);
-      border-radius: var(--radius-sm);
-      padding: 11px 22px;
-      font-size: 14px;
-      font-weight: 600;
-      display: inline-block;
-    }
-
-    .disclaimer {
-      background: var(--gold-light);
-      border-radius: var(--radius-sm);
-      border: 0.5px solid var(--gold);
-      padding: 1rem 1.25rem;
-      margin: 2rem 0;
-      font-size: 12px;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .disclaimer strong { color: var(--text); }
-
-    footer {
-      background: var(--gradient);
-      color: var(--green-light);
-      text-align: center;
-      padding: 2rem;
-      font-size: 13px;
-      line-height: 2;
-    }
-
-    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 0.5rem; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
-    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; gap: 0; }
-    .mobile-menu.open { display: flex !important; }
-    .mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
-    .mobile-menu a:last-child { border-bottom: none; }
-    @media (max-width: 600px) { header { padding: 0 1rem !important; } nav { display: none !important; } .hamburger { display: flex !important; } .hero-content { padding: 1.5rem 1.25rem !important; } .hero-content h1 { font-size: 1.4rem !important; } .article-wrapper { padding: 1.5rem 1rem !important; } }
-    .footer-links a { color: var(--green-light); font-size: 13px; }
-    .footer-links a:hover { color: #FAF8F4; }
-    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.7; }
-    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
-    .article-img img { width: 100%; height: auto; max-height: 420px; object-fit: cover; display: block; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
-    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; gap: 0; }
-    .mobile-menu.open { display: flex !important; }
-    .mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
-    .mobile-menu a:last-child { border-bottom: none; }
-    @media (max-width: 600px) {
-      header { padding: 0 1rem !important; }
-      nav { display: none !important; }
-      .hamburger { display: flex !important; }
-      .hero-content { padding: 1.5rem 1.25rem !important; }
-      .hero-content h1 { font-size: 1.4rem !important; }
-      .article-wrapper { padding: 1.5rem 1rem !important; }
-    }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
 
     .related-section { margin: 2.5rem 0; }
     .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
     .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; cursor: pointer; transition: border-color 0.2s, transform 0.2s; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
     .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
-    .related-img { height: 110px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .related-img { height: 110px; overflow: hidden; }
     .related-img img { width: 100%; height: 100%; object-fit: cover; }
     .related-body { padding: 0.875rem; }
     .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
     .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
-    @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr !important; } }
-    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
     .c-omega { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
     .c-vitd { background: linear-gradient(135deg, #7A5C10, #D4A853); }
     .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
-    .c-zinc { background: linear-gradient(135deg, #1a3a2a, #2D6A4F); }
-    .c-sel { background: linear-gradient(135deg, #2C1A0E, #5C3A1E); }
     .c-coq { background: linear-gradient(135deg, #1a0a00, #5C3A00); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
   </style>
   <script src="/header.js"></script>
 </head>
@@ -405,11 +171,11 @@
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <span class="article-tag">NMN</span>
-      <h1>Why 64% of NMN Supplements Contain Zero Active Ingredient</h1>
+      <h1>Banned, Unbanned, and Still 64% Fake</h1>
       <div class="hero-meta">
         <span>Alethia Research Institute</span>
         <span>·</span>
-        <span>10 min read</span>
+        <span>14 min read</span>
         <span>·</span>
         <span>June 2026</span>
       </div>
@@ -420,48 +186,95 @@
 
     <div class="tldr-box">
       <div class="tldr-label">TL;DR</div>
-      <p>Most NMN supplements on Amazon are fake or heavily underdosed. Before buying anything, run through this checklist:</p>
+      <p>NMN has had one of the strangest regulatory rides of any supplement, and the quality problem on store shelves has never gone away. Before buying anything:</p>
       <ul>
-        <li>Certificate of Analysis from an ISO 17025 accredited independent lab</li>
-        <li>Purity stated as 98%+ beta-NMN specifically - confirmed by COA</li>
-        <li>GMP certified manufacturing facility</li>
-        <li>Clean, short ingredient list - no fillers or proprietary blends</li>
-        <li>Price between $40-80 per month at 500mg/day</li>
-        <li>Always add TMG alongside NMN - most people skip this and shouldn't</li>
+        <li>In November 2022 the FDA ruled NMN couldn't legally be sold as a dietary supplement at all. In September 2025, after a lawsuit, it completely reversed itself - NMN is legal again, but the saga shows how fragile this category's legal footing actually is</li>
+        <li>Independent lab testing found 64% of top-selling NMN supplements on Amazon contained NMN levels below the detectable limit - and there's no evidence this quality problem has improved since the ban-and-reversal cycle</li>
+        <li>A January 2026 head-to-head human trial found NMN and NR raised blood NAD+ comparably well, while plain nicotinamide (NAM) did not raise it at all - useful for knowing which precursor name on a label actually does something</li>
+        <li>Certificate of Analysis from an ISO 17025 accredited lab, 98%+ beta-NMN purity, GMP certification, no filler blends, and a realistic price ($40-80/month at 500mg/day) remain the non-negotiable checks</li>
+        <li>Take it in the morning with a fat source, give it 60-90 days minimum, and add TMG to handle the homocysteine byproduct of NAD+ production - skipping TMG is one of the most common avoidable mistakes</li>
       </ul>
     </div>
 
     <div class="article-content">
 
-      <p>Let's be honest. You're here because one of two things happened. Either you Googled "NMN supplements" and ended up in a rabbit hole of contradicting articles and shady Amazon listings - or you already bought NMN, took it for two months, felt absolutely nothing, and now you're wondering if you wasted 60 bucks on expensive chalk.</p>
+      <p>Let's be honest about why you're here. Either you Googled "NMN supplements" and landed in a swamp of contradicting articles and shady Amazon listings - or you already bought a bottle, took it for two months, felt absolutely nothing, and are now wondering if you paid sixty dollars for expensive chalk. Both situations are common. Neither is your fault, and as you're about to see, the second one might literally be true.</p>
 
-      <p>Both are valid. Both are extremely common. And neither is your fault.</p>
-
-      <p>Here's what nobody tells you upfront: most NMN products on the market are garbage. Not "slightly below average" garbage - we're talking independent lab tests finding that <strong>64% of top-selling NMN supplements on Amazon contained NMN levels below the detectable limit.</strong> Zero. Nada. You might as well have been swallowing sugar pills.</p>
-
-      <p>So if you tried NMN and felt nothing - there's a good chance the product was the problem, not your biology.</p>
-
-      <h2>What NMN Actually Does</h2>
-
-      <p>NMN is a precursor. Its whole job is to convert into something called NAD+ inside your cells. NAD+ is the fuel your cells run on - involved in energy production, DNA repair, and keeping your cellular machinery from falling apart.</p>
-
-      <p>The problem? Your NAD+ levels drop off a cliff as you age. By the time you hit 40, you've got roughly half the NAD+ you had at 20. By 60, even less. That decline shows up in ways you've probably already noticed - slower recovery, lower energy, brain fog, the feeling that your body just doesn't bounce back the way it used to.</p>
-
-      <p>That's where NMN comes in. You take NMN, your body converts it to NAD+, NAD+ levels go back up, and your cells start functioning more like they did a decade ago.</p>
+      <p>Here's what most coverage of NMN leaves out entirely: this molecule spent three straight years in genuine legal limbo in the United States, banned outright as a dietary supplement by the FDA in late 2022, only to be un-banned in 2025 after an industry lawsuit forced the agency's hand. Through all of that legal whiplash, the underlying quality problem on store shelves never went away - independent testing kept finding the same thing it found before the ban: a huge share of products on the market simply don't contain meaningful amounts of the ingredient on the label.</p>
 
       <div class="article-img">
         <img src="/images/nmn-cell-energy.jpg" alt="NAD+ and cellular energy production" onerror="this.style.display='none'" />
       </div>
 
-      <p>What NMN is not: a miracle cure, a substitute for sleep and exercise, or something you'll feel dramatically after day three. Anyone selling you that story is lying to your face. What it can realistically do over weeks and months with a quality product: support cellular energy, improve NAD+ levels measurably via blood tests, and potentially slow some of the cellular degradation that comes with aging.</p>
+      <h2>What NMN Actually Does</h2>
+
+      <p>NMN is a precursor - its job is to convert into NAD+ inside your cells. NAD+ is a coenzyme essential to energy production, DNA repair, and keeping cellular machinery functioning. Your NAD+ levels decline measurably with age: by 40, you've got roughly half of what you had at 20, and less again by 60. That decline tracks with things people notice directly - slower recovery, lower energy, brain fog, reduced resilience.</p>
+
+      <p>What NMN is not: a miracle cure, a substitute for sleep and exercise, or something you'll feel dramatically by day three. What a quality product can realistically do over weeks to months: support cellular energy pathways, measurably raise NAD+ levels (confirmable via blood test), and potentially slow some age-associated cellular decline - the mechanistic case is genuinely solid, even where the human outcome data is still maturing.</p>
+
+      <h2>The Three-Year Regulatory Rollercoaster</h2>
+
+      <p>This part of the NMN story gets almost no coverage, and it matters for understanding why quality control in this category has been so inconsistent.</p>
+
+      <div class="timeline-visual">
+        <div class="timeline-title">NMN's Legal Status: A Three-Year Whiplash</div>
+        <div class="timeline-row">
+          <div class="timeline-year">May 2022</div>
+          <div class="timeline-desc">FDA acknowledges New Dietary Ingredient Notifications (NDINs) from SyncoZymes and Inner Mongolia Kingdomway, the standard regulatory green light for selling NMN as a supplement ingredient.</div>
+        </div>
+        <div class="timeline-row flag">
+          <div class="timeline-year">Nov 2022</div>
+          <div class="timeline-desc">★ FDA reverses itself, ruling that NMN is excluded from the legal definition of a dietary supplement under the "drug preclusion clause" - because a pharmaceutical company had already studied NMN as an investigational drug (MIB-626) before it was lawfully marketed as a supplement. Retailers including Amazon began pulling NMN listings.</div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-year">2023-24</div>
+          <div class="timeline-desc">The Natural Products Association files a citizen petition, then a federal lawsuit, arguing NMN had clearly been marketed as a supplement before the drug investigation began. A court-ordered stay pauses enforcement while the FDA reconsiders.</div>
+        </div>
+        <div class="timeline-row flag">
+          <div class="timeline-year">Sept 2025</div>
+          <div class="timeline-desc">★ FDA completely reverses its 2022 position, confirming NMN "is not excluded from the definition of a dietary supplement" after all. By December 2025, the agency sends formal letters reinstating the original NDI notifications.</div>
+        </div>
+        <div class="timeline-highlight">★ The entire three-year saga was a legal and regulatory dispute, never a safety finding - the FDA at no point declared NMN unsafe. But the back-and-forth illustrates how legally fragile a popular supplement category can be, and explains why some manufacturers paused production or reformulated during the ban, which may have contributed to ongoing inconsistency in what's actually on shelves today.</div>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">The Quality Problem Predates and Outlasts the Ban</div>
+        <p>Independent lab tests examining top-selling NMN supplements on Amazon found that <strong>64% contained NMN levels below the detectable limit</strong> - effectively zero active ingredient. This testing was conducted around the same period as the regulatory chaos, and nothing about the FDA's 2025 reversal addresses product quality at all; it only resolved whether NMN can legally be sold. A supplement being legal and a supplement actually containing what it claims are two completely separate questions, and this category has a documented history of failing the second one at a striking rate.</p>
+      </div>
+
+      <h2>The Human Trial Evidence - What's Actually Confirmed</h2>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Raises Blood NAD+ Levels</h4>
+          <p>A January 2026 four-arm RCT (n=65) found NMN and NR doubled circulating NAD+ over 14 days, while plain nicotinamide (NAM) showed no significant increase - useful, direct evidence for which precursor name on a label actually moves the needle.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Insulin Sensitivity (Prediabetic Women)</h4>
+          <p>A controlled trial found NMN supplementation improved muscle insulin sensitivity in prediabetic postmenopausal women - one of the more frequently cited human metabolic outcomes, though in a specific population.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Liposomal Form Outperforms Standard</h4>
+          <p>A February 2025 trial in men over 40 found liposomal NMN raised NAD+ significantly more than non-liposomal NMN at the same 350mg dose - a meaningful formulation detail most product labels don't address.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Established Safety</span>
+          <h4>Well-Tolerated at Studied Doses</h4>
+          <p>A randomized, double-blind, placebo-controlled safety trial found 1,250mg/day oral β-NMN for 4 weeks was well-tolerated in healthy adults aged 20-65, supporting safety at doses considerably above typical consumer use.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">NMN vs. NR - They're Not Identical, But They're Comparable</div>
+        <p>The January 2026 head-to-head trial is genuinely useful because it directly compared three NAD+ precursor approaches in the same people under the same conditions, rather than relying on cross-study comparisons. NMN and NR performed comparably at raising blood NAD+, with no statistically significant difference between them - despite years of marketing from each side claiming superiority. The one notable side finding: NAM (plain nicotinamide, the cheapest and most common vitamin B3 form) increased homocysteine without meaningfully raising NAD+, reinforcing why TMG supplementation alongside NMN/NR matters more than alongside NAM.</p>
+      </div>
 
       <h2>The 90-Second Quality Check</h2>
 
-      <div class="article-img">
-        <img src="/images/nmn-powder-jar.jpg" alt="NMN powder - quality matters enormously" onerror="this.style.display='none'" />
-      </div>
-
-      <p>Once you know what to look for, filtering out the garbage takes about 90 seconds per product. Here is what actually matters:</p>
+      <p>Once you know what to look for, filtering out the garbage takes about 90 seconds per product.</p>
 
       <div class="checklist-box">
         <h4>Before You Buy Any NMN Supplement</h4>
@@ -479,33 +292,51 @@
         </div>
         <div class="checklist-item">
           <span class="check-no">✗</span>
-          <span><strong>Wall of fillers or proprietary blends?</strong> Quality NMN needs nothing else. If you see a long ingredient list full of additives, you're paying for padding.</span>
+          <span><strong>Wall of fillers or proprietary blends?</strong> Quality NMN needs nothing else. A long ingredient list full of additives means you're paying for padding.</span>
         </div>
         <div class="checklist-item">
           <span class="check-yes">✓</span>
-          <span><strong>Price $40-80 per month at 500mg/day?</strong> Quality NMN costs money to produce properly. Significantly below that - someone cut corners.</span>
+          <span><strong>Price $40-80 per month at 500mg/day?</strong> Quality NMN costs money to produce properly. Significantly below that, someone cut corners.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Reasonably current NDI/regulatory standing?</strong> Given the 2022-2025 legal back-and-forth, a brand that can point to a reinstated or original NDI notification has at least cleared a real regulatory bar, not just a marketing claim.</span>
         </div>
       </div>
 
       <h2>How to Dose It Correctly</h2>
 
-      <p>Current human research points to a sweet spot of <strong>250mg to 500mg per day</strong> for most people. Start at 250mg for the first two to four weeks, let your body adjust, then move to 500mg if you want to push further.</p>
+      <p>Current human research points to a sweet spot of <strong>250mg to 500mg per day</strong> for most people. Start at 250mg for two to four weeks, let your body adjust, then move to 500mg if you want to push further. Take it in the morning with breakfast and a fat source - NAD+ is connected to circadian rhythm, and taking it at night can interfere with sleep in some people.</p>
 
-      <p><strong>Take it in the morning.</strong> NAD+ is deeply connected to your circadian rhythm - taking it at night can interfere with sleep. Morning, with breakfast and a fat source. Not complicated but consistently ignored.</p>
-
-      <p>Give it at least 60 days with a quality product before making any judgments. The people who quit after two weeks because they "didn't feel anything" are the same people who plant seeds and dig them up after three days to check if they're growing.</p>
+      <p>Give it at least 60 days with a quality product before judging it. Anyone quitting after two weeks because they "didn't feel anything" is applying a standard the molecule was never going to meet that quickly.</p>
 
       <h2>The Stack Partner Nobody Talks About: TMG</h2>
 
-      <p>When your body converts NMN to NAD+, it produces something called homocysteine as a byproduct. Elevated homocysteine is associated with cardiovascular issues - and it builds up silently.</p>
+      <p>When your body converts NMN to NAD+, it produces homocysteine as a byproduct. Elevated homocysteine is associated with cardiovascular issues and builds up silently. TMG (trimethylglycine, also called betaine) neutralizes that homocysteine through methylation - cleaning up the metabolic byproduct that NAD+ production leaves behind.</p>
 
-      <p>TMG - Trimethylglycine, also called betaine - neutralizes that homocysteine through a process called methylation. It cleans up the mess that NAD+ production leaves behind.</p>
+      <p><strong>Dose: 500-1000mg daily alongside your NMN.</strong> Inexpensive, widely available, and almost always overlooked. This stops being optional once you're taking NMN seriously and consistently.</p>
 
-      <p><strong>Dose: 500-1000mg daily alongside your NMN.</strong> Inexpensive, widely available, and almost always overlooked. This is not optional if you're serious about NMN supplementation.</p>
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🧬</div>
+          <h4>TMG</h4>
+          <p>Neutralizes the homocysteine byproduct of NAD+ synthesis. The single most important and most skipped pairing in NMN supplementation.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚡</div>
+          <h4>Resveratrol</h4>
+          <p>Activates sirtuins, the enzymes that use NAD+ as fuel. Some research pairs the two on the theory that more NAD+ availability supports sirtuin activity more effectively.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🔬</div>
+          <h4>CoQ10</h4>
+          <p>Supports mitochondrial electron transport alongside NAD+'s role in cellular energy metabolism - a common pairing in broader anti-aging stacks targeting cellular energy from multiple angles.</p>
+        </div>
+      </div>
 
       <h2>Brands That Currently Pass the Quality Bar</h2>
 
-      <p>Based on publicly available COAs and stated manufacturing standards - not affiliate agreements. These brands currently meet the minimum bar. Verify yourself before buying.</p>
+      <p>Based on publicly available COAs and stated manufacturing standards - not affiliate agreements. These brands currently meet the minimum bar. Verify yourself before buying; brands change and batches vary, especially given the regulatory disruption of the past few years.</p>
 
       <table class="brand-table">
         <tr>
@@ -546,23 +377,21 @@
         </tr>
       </table>
 
-      <p>No list replaces doing the 90-second check yourself. Brands change. Batches vary. Stay sharp.</p>
-
       <h2>How to Measure Whether It's Working</h2>
 
-      <p>You can feel great and have terrible biomarkers. You can feel nothing and have excellent ones. If you're serious about longevity, measure.</p>
+      <p>You can feel great with terrible biomarkers, or feel nothing with excellent ones. If you're serious about this, measure rather than guess.</p>
 
       <ul>
-        <li><strong>NAD+ blood test</strong> - companies like Jinfiniti offer at-home testing. Baseline before you start, retest at 90 days. Around $100. Worth every cent.</li>
-        <li><strong>Homocysteine</strong> - confirms your TMG is doing its job. Ideal below 9 umol/L.</li>
-        <li><strong>The 2pm test</strong> - the mid-afternoon energy crash is one of the earliest signs of improving NAD+ status. As levels improve, this wall often softens before you notice any other changes.</li>
+        <li><strong>NAD+ blood test</strong> - companies like Jinfiniti offer at-home testing. Baseline before you start, retest at 90 days. Around $100, worth it for actual confirmation.</li>
+        <li><strong>Homocysteine</strong> - confirms your TMG is doing its job. Ideal below 9 µmol/L.</li>
+        <li><strong>The 2pm test</strong> - the mid-afternoon energy crash is one of the earliest subjective signs of changing NAD+ status. As levels improve, this dip often softens before other changes become noticeable.</li>
       </ul>
 
       <div class="aaf-badge">
-        <div class="aaf-score">8/10</div>
+        <div class="aaf-score">7.5/10</div>
         <div class="aaf-label">
           <strong>Anti-Aging Factor</strong>
-          Strong mechanistic evidence, growing human trial data, and a clear quality problem in the market that rewards informed buyers. Results require 60-90 days and a quality product.
+          Strong mechanistic evidence and a growing, increasingly direct human trial base - the January 2026 head-to-head precursor comparison is exactly the kind of evidence this category needed. The score reflects two honest realities working against it: human outcome data (beyond raising NAD+ itself) is still maturing, and this is a category with a documented, repeated history of mass quality failure - 64% of tested top-sellers contained no detectable active ingredient - compounded by three years of genuine legal uncertainty about whether the ingredient could even be sold. None of that makes NMN itself a bad bet mechanistically. It does mean the brand you choose matters as much as the molecule, possibly more.
         </div>
       </div>
 
@@ -573,8 +402,13 @@
       <ol>
         <li>Rajman, L. et al. (2018). Therapeutic Potential of NAD-Boosting Molecules: The In Vivo Evidence. <em>Cell Metabolism</em>, 27(3), 529-547.</li>
         <li>Yoshino, J. et al. (2021). Nicotinamide mononucleotide increases muscle insulin sensitivity in prediabetic women. <em>Science</em>, 372(6547), 1224-1229.</li>
+        <li>Christen, F. et al. (2025/2026). Scientists Unveil Results from Human Trial Directly Comparing Three NAD+ Precursors. <em>Nature Metabolism</em>, via nmn.com coverage.</li>
+        <li>Intervention Study Comparing Blood NAD+ Concentrations with Liposomal and Non-Liposomal Nicotinamide Mononucleotide (2025).</li>
+        <li>Safety evaluation of β-nicotinamide mononucleotide oral administration in healthy adult men and women. <em>Scientific Reports</em> (2022). PMC9400576.</li>
+        <li>FDA letters to SyncoZymes and Inner Mongolia Kingdomway Pharmaceutical (Sept 29, 2025 and Dec 2, 2025), reinstating NMN's NDI status.</li>
+        <li>Natural Products Association (2025). FDA Reinstates NMN As Dietary Supplement After NPA Lawsuit.</li>
+        <li>FDA Declares Nicotinamide Mononucleotide Is a Dietary Supplement. Venable LLP Insights (2025).</li>
         <li>Mills, K.F. et al. (2016). Long-Term Administration of Nicotinamide Mononucleotide Mitigates Age-Associated Physiological Decline in Mice. <em>Cell Metabolism</em>, 24(6), 795-806.</li>
-        <li>Shade, C. (2020). The Science Behind NMN - A Stable, Reliable NAD+ Activator and Anti-Aging Molecule. <em>Integrative Medicine</em>, 19(1), 12-14.</li>
       </ol>
     </div>
 
@@ -592,7 +426,6 @@
       </div>
     </div>
 
-
     <div class="related-section">
       <div class="related-title">More Articles</div>
       <div class="related-grid">
@@ -607,7 +440,7 @@
         </a>
         <a href="/articles/magnesium-guide.html" class="related-card">
           <div class="related-img c-mag">
-            <img src="/images/white-powder-capsules-on-moss.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+            <img src="/images/hero-magnesium.jpg" alt="Magnesium" onerror="this.style.display='none'" />
           </div>
           <div class="related-body">
             <span class="related-tag">Magnesium</span>
@@ -616,15 +449,16 @@
         </a>
         <a href="/articles/vitamin-d3-k2-guide.html" class="related-card">
           <div class="related-img c-vitd">
-            <img src="/images/old-hand-young-hand.jpg" alt="Vitamin D3" onerror="this.style.display='none'" />
+            <img src="/images/hero-vitamind-controversy.jpg" alt="Vitamin D3" onerror="this.style.display='none'" />
           </div>
           <div class="related-body">
             <span class="related-tag">Vitamin D3</span>
-            <h4>Vitamin D3 + K2: The Cheapest Longevity Insurance</h4>
+            <h4>Vitamin D3 + K2: Why the Experts Can't Agree on a Number</h4>
           </div>
         </a>
       </div>
     </div>
+
     <div class="disclaimer">
       <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
     </div>
@@ -632,14 +466,9 @@
   </div>
 
   <script>
-
-    }
-
     if (localStorage.getItem('theme') === 'dark') {
       document.body.setAttribute('data-theme', 'dark');
-      document.querySelector('.dark-toggle').textContent = '☀️ Light';
     }
-
     window.addEventListener('scroll', () => {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrolled = (window.scrollY / docHeight) * 100;
