@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nattokinase: The Blood Pressure Data Is Real, the Cholesterol Story Isn't Settled - Stackofy</title>
+  <meta name="description" content="A meta-analysis of 546 people found nattokinase lowers blood pressure consistently. The same meta-analysis found low doses worsened HDL and LDL cholesterol, while a 3-year trial found zero effect on actual atherosclerosis. Here is the real evidence and the documented bleeding cases worth knowing about." />
+
+  <meta property="og:title" content="Nattokinase: The Blood Pressure Data Is Real, the Cholesterol Story Isn't Settled" />
+  <meta property="og:description" content="A meta-analysis of 7 RCTs found nattokinase reliably lowers blood pressure. The same analysis found low doses worsened cholesterol markers, high doses showed mixed results, and a 3-year trial found no effect on actual artery thickness. Documented case reports include a fatal internal bleed and a thrombosis after substituting nattokinase for warfarin." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/nattokinase-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-nattokinase.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1a0a, #1B4332, #2D6A4F); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,26,10,0.95) 0%, rgba(10,26,10,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .dose-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .dose-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+    .dose-card.low { border-color: #C0392B; }
+    .dose-card.high { border-color: var(--green-dark); }
+    .dose-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .dose-card.low .dose-label { color: #C0392B; }
+    [data-theme="dark"] .dose-card.low .dose-label { color: #FF8080; }
+    .dose-card.high .dose-label { color: var(--green-dark); }
+    [data-theme="dark"] .dose-card.high .dose-label { color: var(--green-light); }
+    .dose-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+    .dose-card ul { padding-left: 1.1rem; }
+    .dose-card li { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-bottom: 4px; }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .case-box { background: var(--surface); border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0; }
+    .case-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 1rem; }
+    [data-theme="dark"] .case-title { color: #FF8080; }
+    .case-item { display: flex; gap: 0.75rem; margin-bottom: 0.9rem; font-size: 13px; color: var(--text); line-height: 1.5; }
+    .case-item:last-child { margin-bottom: 0; }
+    .case-icon { flex-shrink: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-bromelain { background: linear-gradient(135deg, #1a2e00, #D4A017); }
+    .c-vitk2 { background: linear-gradient(135deg, #3D2400, #D4A853); }
+    .c-interactions { background: linear-gradient(135deg, #1B4332, #D4A853); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .dose-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-nattokinase.jpg" alt="Fermented natto soybeans, the source of nattokinase enzyme" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Nattokinase</span>
+      <h1>The Blood Pressure Data Is Real, the Cholesterol Story Isn't Settled</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>14 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Nattokinase is a fibrinolytic enzyme purified from natto, fermented Japanese soybeans, studied since the 1980s for its ability to break down fibrin, the protein mesh that forms blood clots</li>
+        <li>A 2024 meta-analysis pooling 3 RCTs (223 people) found nattokinase reliably and significantly lowered both systolic and diastolic blood pressure - this is the most consistent finding in the human evidence</li>
+        <li>The same meta-analysis found something genuinely counterintuitive on cholesterol: relatively low total doses actually worsened HDL ("good") cholesterol and LDL ("bad") cholesterol versus placebo, while high doses showed mixed, mostly non-significant results - the opposite of a clean dose-response story</li>
+        <li>The only long-term trial (3 years, 265 healthy adults) found no significant difference in actual carotid artery thickness progression between nattokinase and placebo - a real-world atherosclerosis outcome, not just a blood marker</li>
+        <li>Documented case reports include a fatal internal bleed in an elderly woman taking nattokinase alone (no other blood thinners) and a thrombosis after a patient substituted nattokinase for prescribed warfarin with a mechanical heart valve - both are real, named cases, not theoretical risk</li>
+        <li>Anyone on anticoagulant or antiplatelet medication, anyone with a bleeding disorder, anyone with a soy allergy, and anyone scheduled for surgery needs to treat nattokinase with real caution, not generic supplement boilerplate</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Natto - fermented soybeans with a famously divisive, sticky, ammonia-edged smell - has been a Japanese breakfast staple for centuries, credited in part for the country's historically low cardiovascular disease rates. In the 1980s, researchers isolated the specific enzyme responsible for much of natto's reputed blood-flow benefits: nattokinase, a serine protease produced by the bacterium Bacillus subtilis during fermentation. It has stronger fibrinolytic activity than plasmin, the body's own clot-dissolving enzyme, and can directly break down fibrin in laboratory conditions.</p>
+
+      <p>That mechanistic pedigree, plus decades of animal research, made nattokinase a natural candidate for human cardiovascular trials. The actual human data, now reasonably mature, tells a more textured story than the supplement aisle suggests - genuinely solid on one outcome, genuinely unresolved on another, and worth pairing with some specific, named safety cases that don't get enough attention.</p>
+
+      <div class="article-img">
+        <img src="/images/nattokinase-lab-research.jpg" alt="Laboratory glassware representing nattokinase research" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What's Solid: Blood Pressure</h2>
+
+      <p>A 2024 systematic review and meta-analysis (Li et al., Reviews in Cardiovascular Medicine, PROSPERO-registered) pooled three randomized, double-blind, placebo-controlled trials covering 223 participants and found nattokinase supplementation produced a statistically significant reduction in both systolic blood pressure (mean difference -3.45 mmHg) and diastolic blood pressure (mean difference -2.32 mmHg) compared to placebo, both at p<0.00001. An earlier, separate 8-week RCT in 73 people with pre-hypertension or stage 1 hypertension found a similar pattern: -5.55 mmHg systolic and -2.84 mmHg diastolic versus control, alongside a measurable drop in renin activity, an enzyme central to blood pressure regulation.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Blood Pressure</h4>
+          <p>Consistent, statistically significant reductions across multiple independent RCTs, with a plausible mechanism (ACE inhibition, reduced angiotensin II and renin activity) supported by both human and animal data.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Clotting &amp; Fibrinolytic Markers</h4>
+          <p>A single-dose pharmacokinetic study found oral nattokinase measurably enhanced fibrinolysis and anticoagulation markers in humans within hours. Longer trials show mixed marker changes, and quantitative meta-analysis of clinical clotting endpoints is still lacking.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Genuinely Unresolved</span>
+          <h4>Cholesterol &amp; Lipids</h4>
+          <p>The 2024 meta-analysis explicitly concludes that low-dose, short-term nattokinase showed no lipid-lowering benefit and in some markers a worsening effect - this is detailed fully below, since it's the most counterintuitive part of the evidence.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">No Effect Found</span>
+          <h4>Actual Atherosclerosis Progression</h4>
+          <p>The only long-term (3-year) trial, measuring real carotid artery intima-media thickness rather than a blood marker, found no significant difference between nattokinase and placebo (p=0.31).</p>
+        </div>
+      </div>
+
+      <h2>The Cholesterol Paradox - What the Data Actually Shows</h2>
+
+      <p>This is where nattokinase's evidence gets genuinely interesting, and where most consumer-facing content oversimplifies. The 2024 meta-analysis split available trials into a "relatively low total dosage" subgroup (8-week trials) and a "relatively high total dosage" subgroup (6-month and 3-year trials) specifically because the results were too inconsistent to pool as one number.</p>
+
+      <div class="dose-grid">
+        <div class="dose-card low">
+          <div class="dose-label">Low Total Dose (8-week trials)</div>
+          <h4>Cholesterol Markers Got Worse, Not Better</h4>
+          <ul>
+            <li>HDL ("good") cholesterol: significantly <strong>decreased</strong> vs. placebo (p<0.00001)</li>
+            <li>LDL ("bad") cholesterol: significantly <strong>increased</strong> vs. placebo (p=0.02)</li>
+            <li>Total cholesterol: significantly <strong>increased</strong> vs. placebo (p<0.00001)</li>
+          </ul>
+        </div>
+        <div class="dose-card high">
+          <div class="dose-label">High Total Dose (6-month / 3-year trials)</div>
+          <h4>Mixed, Mostly Non-Significant</h4>
+          <ul>
+            <li>HDL: favorable but <strong>not statistically significant</strong> increase (p=0.19)</li>
+            <li>LDL: no significant difference (p=0.93)</li>
+            <li>Total cholesterol: still significantly higher than control (p<0.00001)</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>In other words: there is no clean "more nattokinase, better cholesterol" story in the pooled randomized data. The meta-analysis authors themselves call this finding unexpected and note it conflicts with several animal studies - their proposed explanation is that animal studies often used crude natto extract (which contains other cardiovascular-relevant compounds like soy isoflavones), while human RCTs used purified nattokinase alone. A separate, larger Chinese clinical study of 1,062 hyperlipidemia patients using a high dose (10,800 FU/day) for a full year did report improvements across total cholesterol, triglycerides, LDL, and HDL - but this single large study sits in tension with the pooled RCT data above, and the field's own conclusion is that whether nattokinase's lipid effects are genuinely dose-dependent remains an open question requiring further trials.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">The Atherosclerosis Trial - The One That Looked at the Actual Disease, Not a Marker</div>
+        <div class="rct-row">
+          <div class="rct-n">265<span>Adults</span></div>
+          <div class="rct-desc"><strong>Hodis et al. (2021), Clinical Hemorheology and Microcirculation.</strong> A 3-year, randomized, double-blind, single-center trial in healthy adults (mean age 65) - by far the longest nattokinase RCT, and the only one to measure an actual disease-progression endpoint rather than a blood biomarker.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">0.013mm<span>vs 0.011mm</span></div>
+          <div class="rct-desc">Annual carotid artery intima-media thickness progression was 0.013mm/year in the nattokinase group versus 0.011mm/year in placebo - not a statistically significant difference (p=0.31). Arterial stiffness also showed no significant difference between groups.</div>
+        </div>
+        <div class="rct-highlight">This is an important reality check: the longest, most rigorous nattokinase trial to date - specifically designed to detect atherosclerosis prevention - found no measurable benefit on the actual disease process. Shorter-term blood pressure and biomarker improvements are real, but they have not yet translated into a demonstrated reduction in artery disease progression itself.</div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/nattokinase-blood-flow.jpg" alt="Liquid swirling in a glass, representing blood flow research on nattokinase" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Safety Cases Worth Knowing By Name</h2>
+
+      <p>Most nattokinase safety content repeats the same generic line - "may increase bleeding risk, talk to your doctor." That's true but vague enough to be easy to dismiss. The actual documented cases are more specific and more serious than that framing suggests.</p>
+
+      <div class="case-box">
+        <div class="case-title">Documented Case Reports (Memorial Sloan Kettering Cancer Center)</div>
+        <div class="case-item">
+          <span class="case-icon">⚠️</span>
+          <span><strong>Fatal internal bleeding:</strong> An elderly woman taking over-the-counter nattokinase alone - not combined with any other blood thinner - for an irregular rapid heartbeat died from internal bleeding.</span>
+        </div>
+        <div class="case-item">
+          <span class="case-icon">⚠️</span>
+          <span><strong>Thrombosis after self-substitution:</strong> A patient with a mechanical aortic valve substituted nattokinase for their prescribed warfarin over a long period, developed shortness of breath and chest pain, and required a repeat valve replacement.</span>
+        </div>
+        <div class="case-item">
+          <span class="case-icon">⚠️</span>
+          <span><strong>Cerebellar hemorrhage (theoretical risk, documented case):</strong> A case report links nattokinase use to acute cerebellar hemorrhage in a patient with a prior history of ischemic stroke.</span>
+        </div>
+        <div class="case-item">
+          <span class="case-icon">⚠️</span>
+          <span><strong>Severe allergic reactions:</strong> Anaphylaxis and urticaria have been reported in patients with fermented soybean allergy after natto/nattokinase exposure.</span>
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">Why the Warfarin Case Matters Specifically</div>
+        <p>The mechanical heart valve case is worth sitting with: this wasn't someone casually adding a supplement to their routine - it was a patient who replaced a medically essential, monitored anticoagulant with an unmonitored supplement, based on the apparently reasonable assumption that "natural blood thinner" meant equivalent protection. It did not. Nattokinase's anticoagulant effect, while measurable, is considerably milder and far less predictable than therapeutic warfarin dosing, which is precisely calibrated and monitored via regular INR blood tests. Substituting one for the other is not a like-for-like swap.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🥝</div>
+          <h4>Bromelain</h4>
+          <p>Another fibrinolytic/proteolytic enzyme with its own documented anticoagulant effect - combining the two compounds the bleeding-risk consideration rather than adding unrelated benefit.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🫐</div>
+          <h4>CoQ10</h4>
+          <p>Often paired in cardiovascular-support formulations targeting blood pressure and circulatory health from a different, mitochondrial-energy angle rather than a clotting-pathway angle.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🧄</div>
+          <h4>Garlic Extract</h4>
+          <p>Both have documented mild antiplatelet/blood-pressure effects; a common cardiovascular-support pairing, though combining two compounds that affect clotting compounds the same caution rather than diversifying it.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Warfarin / DOACs (Avoid)</h4>
+          <p>Not a combination to attempt, and never a substitute for prescribed anticoagulation - see the case report above. Nattokinase's effect is milder and unmonitored compared to therapeutic anticoagulants.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Aspirin / Antiplatelets (Caution)</h4>
+          <p>Additive bleeding risk through a different but overlapping mechanism. Discuss with a doctor before combining, particularly at higher nattokinase doses.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🥬</div>
+          <h4>Vitamin K2 (Distinct From Natto Itself)</h4>
+          <p>Worth distinguishing: whole natto food is very high in vitamin K2, which can counteract warfarin. Purified nattokinase supplements are sold for the enzyme and typically contain little to no vitamin K2 - a frequently confused but important difference.</p>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Blood pressure support (as studied)</td>
+          <td>2,000 FU/day</td>
+          <td>Dose used in the trials showing the most consistent blood-pressure benefit, typically over 8 weeks</td>
+        </tr>
+        <tr>
+          <td>General/long-term use (as studied)</td>
+          <td>Up to 10,800 FU/day</td>
+          <td>Higher end used in the longest trials; total daily dose across included RCTs ranged from 1,200 to 8,000 FU, with one larger study using 10,800 FU</td>
+        </tr>
+        <tr>
+          <td>Common commercial capsules</td>
+          <td>100mg (~2,000 FU)</td>
+          <td>FU (fibrinolytic units) measures enzymatic activity, not weight - check the FU rating specifically, not just milligrams</td>
+        </tr>
+      </table>
+
+      <div class="skip-box">
+        <div class="skip-label">If You're Already on Blood Pressure Medication</div>
+        <p>Nattokinase's blood-pressure-lowering effect can stack with antihypertensive medication, potentially causing blood pressure to drop further than intended. If you're being actively treated for hypertension, loop your doctor in before adding nattokinase rather than treating it as a harmless add-on alongside your prescription.</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">Who Should Not Use This Without Medical Guidance</div>
+        <p>Avoid nattokinase if you take warfarin, apixaban, rivaroxaban, dabigatran, heparin, clopidogrel, or daily aspirin, given the documented additive bleeding risk. Avoid it if you have a bleeding disorder such as hemophilia, or a history of intracranial bleeding. Stop at least two weeks before any scheduled surgery or dental procedure. Avoid it if you have a known soy or natto allergy - severe allergic reactions including anaphylaxis are documented. Safety data in pregnancy and breastfeeding is insufficient; avoid in these groups. People with naturally low blood pressure should be cautious given the established hypotensive effect.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">5.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          The blood pressure evidence is genuinely solid and consistent across independent trials - a real strength. The score sits in the middle rather than higher because the rest of the cardiovascular story is considerably messier than typical marketing suggests: pooled cholesterol data shows low doses performing worse than placebo on key markers, and the only long-term trial measuring actual artery disease progression found no benefit at all. Add to that a small but real and specifically documented set of serious bleeding and allergy case reports - not generic caution, but named, citable incidents - and this lands as a supplement with one solid use case (blood pressure) wrapped in a considerably less settled broader cardiovascular narrative than it's usually sold with.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/supplement-interactions-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-supplement-interactions.jpg" alt="Supplement Interactions" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ Before You Combine This</div>
+        <h4>Nattokinase has a real, additive bleeding-risk effect with blood thinners</h4>
+        <p>See the full mechanism and which combinations need real caution in our broader interactions guide.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Li, X., Long, J., Gao, Q. et al. (2023). Nattokinase Supplementation and Cardiovascular Risk Factors: A Systematic Review and Meta-Analysis of Randomized Controlled Trials. <em>Reviews in Cardiovascular Medicine</em>, 24(8), 234. DOI: 10.31083/j.rcm2408234.</li>
+        <li>Hodis, H.N., Mack, W.J., Meiselman, H.J. et al. (2021). Nattokinase atherothrombotic prevention study: A randomized controlled trial. <em>Clinical Hemorheology and Microcirculation</em>, 78, 339-353.</li>
+        <li>Kim, J.Y., Gum, S.N., Paik, J.K. et al. (2008). Effects of nattokinase on blood pressure: a randomized, controlled trial. <em>Hypertension Research</em>, 31, 1583-1588.</li>
+        <li>Jensen, G.S., Lenninger, M., Ero, M.P., Benson, K.F. (2016). Consumption of nattokinase is associated with reduced blood pressure and von Willebrand factor. <em>Integrated Blood Pressure Control</em>, 9, 95-104.</li>
+        <li>Kurosawa, Y. et al. (2015). A single-dose of oral nattokinase potentiates thrombolysis and anti-coagulation profiles. <em>Scientific Reports</em>, 5, 11601.</li>
+        <li>Memorial Sloan Kettering Cancer Center. Nattokinase - About Herbs, Botanicals & Other Products. Case report summaries on bleeding and allergic reactions.</li>
+        <li>Gallelli, G., Di Mizio, G., Palleria, C. et al. (2021). Data Recorded in Real Life Support the Safety of Nattokinase in Patients with Vascular Diseases. <em>Nutrients</em>, 13, 2031.</li>
+        <li>Wu, D.J., Lin, C.S., Lee, M.Y. (2009). Lipid-Lowering Effect of Nattokinase in Patients with Primary Hypercholesterolemia. <em>Acta Cardiologica Sinica</em>, 25, 26-30.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Already Looking at Other Fibrinolytic Enzymes?</h3>
+      <p>Nattokinase and bromelain share overlapping bleeding-risk considerations worth understanding together.</p>
+      <div class="cta-buttons">
+        <a href="/articles/bromelain-guide.html" class="btn-gold">Read the Bromelain Guide →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/bromelain-guide.html" class="related-card">
+          <div class="related-img c-bromelain">
+            <img src="/images/hero-bromelain.jpg" alt="Bromelain" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Bromelain</span>
+            <h4>Bromelain: The Pineapple Enzyme With Actual RCTs Behind It</h4>
+          </div>
+        </a>
+        <a href="/articles/vitamin-k2-guide.html" class="related-card">
+          <div class="related-img c-vitk2">
+            <img src="/images/hero-vitamink2.jpg" alt="Vitamin K2" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin K2</span>
+            <h4>Vitamin K2 (MK-7): The Calcium Traffic Controller Almost Nobody Takes</h4>
+          </div>
+        </a>
+        <a href="/articles/supplement-interactions-guide.html" class="related-card">
+          <div class="related-img c-interactions">
+            <img src="/images/hero-supplement-interactions.jpg" alt="Supplement Interactions" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Safety Guide</span>
+            <h4>Supplement Interactions Nobody Explains Properly</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking any anticoagulant or antiplatelet medication, have a bleeding disorder, or are scheduled for surgery. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

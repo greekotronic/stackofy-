@@ -598,5 +598,16 @@
   "tags": "longevity performance",
   "readTime": "12 min",
   "description": "Only 12% of people in one study had detectable urolithin A at baseline - your gut bacteria, not your diet, decide whether you make it at all. Most of the human research comes from the company that patented it. Here is the evidence, the conflict of interest, and what actually holds up."
+},
+{
+  "title": "Nattokinase: The Blood Pressure Data Is Real, the Cholesterol Story Isn't Settled",
+  "tag": "Nattokinase",
+  "url": "/articles/nattokinase-guide.html",
+  "image": "/images/hero-nattokinase.jpg",
+  "color": "c-natto",
+  "featured": false,
+  "tags": "longevity heart-health",
+  "readTime": "14 min",
+  "description": "A meta-analysis of 546 people found nattokinase lowers blood pressure consistently. The same meta-analysis found low doses worsened HDL and LDL cholesterol, while a 3-year trial found zero effect on actual atherosclerosis. Here is the real evidence and the documented bleeding cases worth knowing about."
 }
 ]
