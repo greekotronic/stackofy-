@@ -563,5 +563,18 @@
     "tags": "gut-health metabolism longevity",
     "readTime": "13 min",
     "description": "Akkermansia muciniphila is the fastest-growing name in gut health research, with real human RCTs showing improved insulin sensitivity. It also survives by eating the mucus layer that protects your gut - and too much of it can backfire."
-  }
+  },
+{
+  "title": "Why Most Published Research Findings Are False",
+  "tag": "Critical Thinking",
+  "url": "/articles/research-flaws-guide.html",
+  "image": "/images/hero-research-flaws.jpg",
+  "color": "c-research",
+  "featured": false,
+  "type": "protocol",
+  "badgeType": "featured",
+  "tags": "skepticism evidence",
+  "readTime": "16 min",
+  "description": "A famous 2005 paper argued most published research findings are false. Twenty years later, the debate is still alive - including about the paper itself. Here is how small samples, p-hacking, and publication bias distort supplement research, and how to actually read a study."
+}
 ]

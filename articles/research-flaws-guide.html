@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Most Published Research Findings Are False - Stackofy</title>
+  <meta name="description" content="A famous 2005 paper argued most published research findings are false. Twenty years later, the debate is still alive - including about the paper itself. Here is how small samples, p-hacking, and publication bias distort supplement research, and how to actually read a study." />
+
+  <meta property="og:title" content="Why Most Published Research Findings Are False" />
+  <meta property="og:description" content="John Ioannidis's famous 2005 paper triggered two decades of debate about how reliable published research really is. His critics have data of their own. The Open Science Collaboration could only replicate 39% of psychology findings. Here is what actually goes wrong in supplement and nutrition studies - and how to read past the headline." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/research-flaws-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-research-flaws.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .mech-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .quote-card .quote-author { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1a0a, #1B4332, #2D6A4F); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,26,10,0.95) 0%, rgba(10,26,10,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .quote-card { background: var(--surface); border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.5rem; margin: 1.5rem 0; }
+    .quote-card p { font-size: 15px; color: var(--text); line-height: 1.6; font-style: italic; margin-bottom: 0.5rem; }
+    .quote-card .quote-author { font-size: 12px; font-weight: 700; color: var(--green-dark); text-transform: uppercase; letter-spacing: 0.5px; }
+
+    .mech-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .mech-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .mech-num { font-size: 20px; font-weight: 700; color: var(--gold); margin-bottom: 6px; }
+    .mech-card h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 6px; }
+    .mech-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 18px; font-weight: 700; color: var(--gold); width: 80px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-skeptic { background: linear-gradient(135deg, #1A1A1A, #3D3D2A); }
+    .c-interactions { background: linear-gradient(135deg, #1B4332, #D4A853); }
+    .c-toxic { background: linear-gradient(135deg, #2A0A0A, #7A1A1A); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .mech-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-research-flaws.jpg" alt="Magnifying glass over research papers, representing scrutiny of scientific studies" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Critical Thinking</span>
+      <h1>Why Most Published Research Findings Are False</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>16 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>In 2005, epidemiologist John Ioannidis published a paper arguing that most published research findings are false - one of the most cited and debated papers in modern science, still actively argued over twenty years later</li>
+        <li>His critics have real counter-evidence too: statisticians Goodman and Greenland called his mathematical proof circular, and a separate analysis estimated the actual false-positive rate in biomedical research closer to 14%, not the 50%+ Ioannidis implied - the debate itself is a useful lesson in not taking any single paper's conclusion as final</li>
+        <li>The Open Science Collaboration's landmark Reproducibility Project could only successfully replicate 39% of 100 psychology studies it re-tested - a concrete, measured number, not a theoretical estimate</li>
+        <li>The specific failure modes - small sample sizes, p-hacking, publication bias, HARKing (hypothesizing after results are known) - show up constantly in nutrition and supplement research specifically, not just psychology</li>
+        <li>Industry-funded nutrition studies are roughly 7.6 times more likely to report a favorable result than independently funded ones on the same question - though bias in the opposite direction ("white hat bias") is also documented</li>
+        <li>None of this means "don't trust any study" - it means knowing which questions to ask before trusting one: sample size, replication status, funding source, and whether the hypothesis was set before or after looking at the data</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Every supplement claim you've ever read traces back to a study, and every study has a sample size, a funding source, a set of researchers with their own incentives, and a journal that decided whether to publish it. None of that makes a study worthless. All of it makes a single study, on its own, a much weaker form of evidence than headlines tend to suggest - and there is two decades of serious, ongoing scientific debate about exactly how weak.</p>
+
+      <p>This isn't a cynical "don't trust science" piece. It's the opposite: understanding exactly where and why research goes wrong is what lets you trust the studies that hold up under scrutiny, and discount the ones that don't, instead of treating every press release with a study attached as settled fact.</p>
+
+      <div class="article-img">
+        <img src="/images/research-data-charts.jpg" alt="Research data and graphs representing statistical analysis in scientific studies" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Paper That Started an Argument That's Still Going</h2>
+
+      <p>In 2005, Stanford epidemiologist John P. A. Ioannidis published an essay in PLOS Medicine with a title that was impossible to ignore: "Why Most Published Research Findings Are False." Using a mathematical framework built on statistical power, effect sizes, and the number of relationships tested in a field, Ioannidis argued that for many study designs and settings, a published positive finding is more likely to be false than true. The paper has since been cited tens of thousands of times and remains one of the most influential pieces of writing in the entire field of metascience - the science of how science itself is done.</p>
+
+      <div class="quote-card">
+        <p>"For many current scientific fields, claimed research findings may often be simply accurate measures of the prevailing bias."</p>
+        <div class="quote-author">John P. A. Ioannidis, "Why Most Published Research Findings Are False" (2005)</div>
+      </div>
+
+      <p>What gets left out of most popular retellings of this story is that the paper itself has been seriously contested by other respected statisticians - and that disagreement is just as instructive as the original claim.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">The Argument About the Argument</div>
+        <div class="rct-row">
+          <div class="rct-n">2007<span>Rebuttal</span></div>
+          <div class="rct-desc"><strong>Goodman &amp; Greenland.</strong> Two statisticians published a direct response arguing Ioannidis's mathematical model was circular - built in a way that almost guaranteed his dramatic conclusion regardless of real-world data, by assigning study types extreme prior probabilities before the math even started.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">~14%<span>vs. 50%+</span></div>
+          <div class="rct-desc"><strong>Jager &amp; Leek.</strong> Biostatisticians who actually measured false-positive rates empirically across biomedical literature found a rate closer to 14% - serious, but nowhere near the "most findings are false" headline most people remember.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">39%<span>Replicated</span></div>
+          <div class="rct-desc"><strong>Open Science Collaboration (2015).</strong> Separately from the Ioannidis debate entirely, this landmark project attempted to directly replicate 100 published psychology studies and succeeded in only 39% of cases - a measured, empirical number rather than a theoretical model.</div>
+        </div>
+        <div class="rct-highlight">Notice what's happening here: even the most famous claim about science being unreliable is itself subject to the same scrutiny it describes. That's not a contradiction - it's the system working as intended. The right takeaway isn't "Ioannidis was wrong" or "Ioannidis was right." It's that confident, dramatic titles deserve exactly the same skepticism whether they're about a supplement or about science itself.</div>
+      </div>
+
+      <h2>The Specific Ways Studies Go Wrong</h2>
+
+      <p>Setting aside the meta-debate, there's broad agreement across statisticians, replication researchers, and even Ioannidis's critics about which specific practices most reliably produce unreliable findings. These show up constantly in nutrition and supplement research, not just psychology.</p>
+
+      <div class="mech-grid">
+        <div class="mech-card">
+          <div class="mech-num">1</div>
+          <h4>Small Sample Sizes</h4>
+          <p>Studies with too few participants have low statistical power - a reduced chance of detecting a true effect, and a higher chance that any "significant" result found is actually just noise. The classic pattern: a small study finds an exciting effect, a larger follow-up study finds nothing.</p>
+        </div>
+        <div class="mech-card">
+          <div class="mech-num">2</div>
+          <h4>P-Hacking</h4>
+          <p>Running many different analyses - different variables, different subgroups, different statistical models - until something crosses the significance threshold, then reporting only that result as if it were the planned analysis all along.</p>
+        </div>
+        <div class="mech-card">
+          <div class="mech-num">3</div>
+          <h4>Publication Bias</h4>
+          <p>Journals prefer publishing "X causes Y" over "no effect found." This skews the visible literature toward positive findings even when many null results exist but were never submitted or accepted for publication.</p>
+        </div>
+        <div class="mech-card">
+          <div class="mech-num">4</div>
+          <h4>HARKing</h4>
+          <p>Hypothesizing After Results are Known - looking at the data first, then writing the hypothesis as though it had been predicted from the start. It reads like clean science but reverses the actual order of discovery and confirmation.</p>
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">Social Sciences Aren't Uniquely Bad - They're Uniquely Visible</div>
+        <p>Psychology and nutrition research get singled out in replication-crisis discussions not necessarily because the science is worse, but because human subjects are extremely variable, confounding variables are everywhere, and tightly controlled experiments are genuinely harder to run than in, say, chemistry. That context matters: it's a reason for extra scrutiny, not a reason to dismiss the entire field.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/research-lab-notebook.jpg" alt="Laboratory notebook representing scientific methodology and hypothesis testing" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Who's Paying for the Study Matters - In Both Directions</h2>
+
+      <p>This is the part of the conversation that's most directly relevant to supplement research specifically, and it's more nuanced than "industry funding equals bad science."</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">The Numbers Are Real and Specific</div>
+        <p>A widely cited analysis of 206 nutrition-related articles found that studies with all-industry funding had odds 7.61 times higher of reporting a favorable conclusion compared to studies with no industry funding on the same general topic. Separately, a meta-analysis of 88 studies on soft drink consumption and weight found that industry-funded studies reported significantly smaller effect sizes than independently funded ones - in the direction you'd expect if funding shaped outcomes.</p>
+      </div>
+
+      <p>But the same body of research has also documented something called "white hat bias" - distortion in the opposite direction, where researchers opposed to an industry interest skew their interpretation or reporting toward the conclusion they consider righteous, rather than what the data actually shows. In that same soft-drink meta-analysis, the statistical test for publication bias was significant specifically among the non-industry-funded studies - meaning independent researchers were more likely to not publish a study if it didn't find the "expected" negative association. Funding bias is real and well-documented. It is not, however, a one-directional problem, and treating "independently funded" as an automatic stamp of trustworthiness is its own kind of mistake.</p>
+
+      <h2>What's Being Done About It</h2>
+
+      <p>The same researchers cataloging these problems have spent the last fifteen years building concrete fixes, several of which are now standard practice at serious journals.</p>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">📋</div>
+          <h4>Preregistration</h4>
+          <p>Researchers publicly lock in their hypothesis, analysis plan, and exclusion criteria before collecting data - making it much harder to quietly adjust the analysis until something significant appears.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🔁</div>
+          <h4>Replication Projects</h4>
+          <p>Large coordinated efforts like the Open Science Collaboration and Many Labs projects specifically re-run published studies to see if the original finding holds up independently.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🔓</div>
+          <h4>Open Data &amp; Code</h4>
+          <p>Making raw data and analysis scripts public lets anyone re-check the math, dramatically increasing the chance that errors or manipulation get caught.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">👥</div>
+          <h4>Large Consortium Studies</h4>
+          <p>Pooling data across many labs into studies with thousands of participants instead of dozens produces far more statistically stable results than isolated small trials.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">📊</div>
+          <h4>Better Statistics</h4>
+          <p>Statisticians like Andrew Gelman have pushed for Bayesian approaches, more cautious p-value interpretation, and a focus on effect size over a binary "significant or not" cutoff.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Critical Meta-Analyses</h4>
+          <p>Combining many studies can help - but only if publication bias and funding-source imbalance across the included studies are explicitly checked for, not assumed away.</p>
+        </div>
+      </div>
+
+      <h2>How to Actually Read a Supplement Study</h2>
+
+      <p>This is the practical payoff. The next time you see "Study finds X supplement does Y," run through this before updating your beliefs.</p>
+
+      <div class="checklist-box">
+        <h4>Before You Trust a Single Study</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>How many participants?</strong> Under 50 is a red flag for anything but a preliminary pilot finding. Three-digit sample sizes carry far more weight.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Has it been replicated?</strong> A single study, however well-designed, is the start of evidence, not the conclusion. Look for follow-up trials confirming the same result.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Who funded it?</strong> Not a disqualifier either way, but worth knowing - and worth checking whether independent replications point the same direction.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Was it preregistered?</strong> A registered clinical trial number (ClinicalTrials.gov, ISRCTN) means the hypothesis was locked in before the data came in - a meaningfully stronger signal.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Is the headline bigger than the data supports?</strong> "Reduces risk by 28%" sounds dramatic; check whether that's relative risk on a small absolute baseline, which can mean a tiny real-world effect.</span>
+        </div>
+      </div>
+
+      <div class="skip-box">
+        <div class="skip-label">The One-Sentence Version</div>
+        <p>A single study is a data point, not a verdict - weight your confidence by sample size, replication, and how the result compares to the broader body of evidence, not by how confidently the headline is written.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">N/A</div>
+        <div class="aaf-label">
+          <strong>This Article Has No AAF Score</strong>
+          Our Anti-Aging Factor score evaluates individual supplements for benefit versus risk. This article is about how to evaluate the evidence behind any supplement claim - the framework here applies across every article in this library, including the ones that score well.
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Ioannidis, J.P.A. (2005). Why Most Published Research Findings Are False. <em>PLOS Medicine</em>, 2(8), e124.</li>
+        <li>Goodman, S. &amp; Greenland, S. (2007). Why Most Published Research Findings Are False: Problems in the Analysis. <em>PLOS Medicine</em>, 4(4), e168.</li>
+        <li>Jager, L.R. &amp; Leek, J.T. (2014). An estimate of the science-wise false discovery rate and application to the top medical literature. <em>Biostatistics</em>.</li>
+        <li>Open Science Collaboration (2015). Estimating the reproducibility of psychological science. <em>Science</em>, 349(6251).</li>
+        <li>Lesser, L.I. et al. (2007). Relationship between funding source and conclusion among nutrition-related scientific articles. <em>PLOS Medicine</em>, 4(1), e5.</li>
+        <li>Shyam, S. &amp; Salas-Salvadó, J. (2025). The impact of investigator bias in nutrition research. <em>Frontiers in Nutrition</em>, 12:1513343.</li>
+        <li>Allison, D.B. et al. White hat bias: examples of its presence in obesity research and a call for renewed commitment to faithfulness in research reporting. <em>International Journal of Obesity</em>, 34, 84-88.</li>
+        <li>Munafò, M.R. et al. (2017). A manifesto for reproducible science. <em>Nature Human Behaviour</em>, 1, 0021.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Put This Framework to Use</h3>
+      <p>Now that you know what to look for, see how it applies to specific supplement claims across our research library.</p>
+      <div class="cta-buttons">
+        <a href="/articles/do-supplements-work-guide.html" class="btn-gold">Read the Honest Answer →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/do-supplements-work-guide.html" class="related-card">
+          <div class="related-img c-skeptic">
+            <img src="/images/hero-do-supplements-work-v2.jpg" alt="Do Supplements Work" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Honest Answer</span>
+            <h4>Do Supplements Even Work? What We Found Out the Hard Way</h4>
+          </div>
+        </a>
+        <a href="/articles/supplement-interactions-guide.html" class="related-card">
+          <div class="related-img c-interactions">
+            <img src="/images/hero-supplement-interactions.jpg" alt="Supplement Interactions" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Safety Guide</span>
+            <h4>Supplement Interactions Nobody Explains Properly</h4>
+          </div>
+        </a>
+        <a href="/articles/toxic-supplements-guide.html" class="related-card">
+          <div class="related-img c-toxic">
+            <img src="/images/hero-toxic-supplements.jpg" alt="Dangerous Supplements" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Investigation</span>
+            <h4>The Dangerous Supplements Nobody Warns You About</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational and educational purposes only and does not constitute medical advice. It is intended to help readers evaluate scientific evidence critically, not to dismiss legitimate research. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
