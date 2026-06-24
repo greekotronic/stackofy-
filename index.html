@@ -106,14 +106,14 @@
     .protocol-card .protocol-img { position: relative; }
     .protocol-card .protocol-badge { position: absolute; top: 8px; left: 8px; background: var(--gold); color: #1A1A1A; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; }
 
-    .h-article { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: flex; transition: border-color 0.2s, transform 0.2s; }
+    .h-article { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: flex; align-items: stretch; transition: border-color 0.2s, transform 0.2s; }
     .h-article:hover { border-color: var(--green-dark); transform: translateY(-2px); }
-    .h-article-img { width: 160px; height: 160px; flex-shrink: 0; overflow: hidden; }
+    .h-article-img { width: 160px; flex-shrink: 0; overflow: hidden; align-self: stretch; }
     #latest-protocol-spotlight .h-article-img { width: 260px; }
     .h-article-img img { width: 100%; height: 100%; object-fit: cover; object-position: center; }
     .h-article-body { padding: 1.25rem; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
     .h-article-body h3 { font-size: 14px; font-weight: 600; color: var(--text); margin: 0.4rem 0; line-height: 1.4; }
-    .h-article-body p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-top: 0.4rem; }
+    .h-article-body p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-top: 0.4rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
     .read-time { font-size: 11px; color: var(--text-muted); margin-top: 0.5rem; display: block; }
 
     .spotlight { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; display: grid; grid-template-columns: 1fr 1.6fr; transition: border-color 0.2s; }
