@@ -128,8 +128,28 @@
   <div class="main">
 
     <!-- SUPPLEMENT GUIDES SECTION -->
+    <div class="section-label-row">
+      <div class="label">All Guides</div>
+      <div class="title">Supplement Research Library</div>
+    </div>
 
-    <div id="protocols-section-wrapper">
+    <div class="filter-bar">
+      <div class="filter-pills">
+        <span class="pill active" onclick="filterBy('all', this)">All</span>
+        <span class="pill" onclick="filterBy('longevity', this)">Longevity</span>
+        <span class="pill" onclick="filterBy('immune', this)">Immune</span>
+        <span class="pill" onclick="filterBy('brain', this)">Brain</span>
+        <span class="pill" onclick="filterBy('sleep', this)">Sleep</span>
+        <span class="pill" onclick="filterBy('performance', this)">Performance</span>
+        <span class="pill" onclick="filterBy('energy', this)">Energy</span>
+      </div>
+      <div class="articles-count"><span id="article-count">0</span> Articles</div>
+    </div>
+
+    <div id="articles-grid" class="articles-grid"></div>
+
+    <div class="section-divider"></div>
+
     <!-- PROTOCOLS SECTION - gold border, separate -->
     <div class="protocol-section" id="protocol-section">
       <div class="protocol-section-header">
@@ -156,31 +176,7 @@
       </div>
       <div id="articles-books" class="protocol-grid-page"></div>
     </div>
-    </div>
 
-    <div id="supplement-section-wrapper">
-    <div class="section-label-row">
-      <div class="label">All Guides</div>
-      <div class="title">Supplement Research Library</div>
-    </div>
-
-    <div class="filter-bar">
-      <div class="filter-pills">
-        <span class="pill active" onclick="filterBy('all', this)">All</span>
-        <span class="pill" onclick="filterBy('longevity', this)">Longevity</span>
-        <span class="pill" onclick="filterBy('immune', this)">Immune</span>
-        <span class="pill" onclick="filterBy('brain', this)">Brain</span>
-        <span class="pill" onclick="filterBy('sleep', this)">Sleep</span>
-        <span class="pill" onclick="filterBy('performance', this)">Performance</span>
-        <span class="pill" onclick="filterBy('energy', this)">Energy</span>
-      </div>
-      <div class="articles-count"><span id="article-count">0</span> Articles</div>
-    </div>
-
-    <div id="articles-grid" class="articles-grid"></div>
-    </div>
-
-    <div class="section-divider" id="section-divider-anchor"></div>
     <div style="margin-bottom: 1rem;">
       <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem;">Coming Soon</div>
     </div>
@@ -228,7 +224,12 @@
       document.querySelector('.pill[onclick*="all"]').classList.add('active');
 
       // Filter supplement guides
-      const cards = document.querySelectorAll('#articles-grid .article-card');
+      const grid = document.getElementById('articles-grid');
+      if (grid && !grid.dataset.originalOrderCaptured) {
+        grid.__originalOrder = Array.from(grid.querySelectorAll('.article-card'));
+        grid.dataset.originalOrderCaptured = 'true';
+      }
+      const cards = grid && grid.__originalOrder ? grid.__originalOrder : Array.from(document.querySelectorAll('#articles-grid .article-card'));
       let count = 0;
       cards.forEach(c => {
         const title = (c.getAttribute('data-title') || '').toLowerCase();
@@ -238,6 +239,23 @@
         else { c.classList.add('hidden'); }
       });
       document.getElementById('article-count').textContent = count;
+
+      // Rank visible cards: title matches first, then description-only matches, original order preserved within each group
+      if (query && grid) {
+        const titleMatches = [];
+        const descOnlyMatches = [];
+        const rest = [];
+        cards.forEach(c => {
+          const title = (c.getAttribute('data-title') || '').toLowerCase();
+          if (c.classList.contains('hidden')) { rest.push(c); return; }
+          if (title.includes(query)) titleMatches.push(c);
+          else descOnlyMatches.push(c);
+        });
+        titleMatches.concat(descOnlyMatches, rest).forEach(c => grid.appendChild(c));
+      } else if (grid) {
+        // No active query: restore original document order
+        cards.forEach(c => grid.appendChild(c));
+      }
 
       // Filter protocols, editorial, and books sections - search in title, description, and tag
       const sectionMap = [
@@ -260,25 +278,6 @@
         const sectionEl = document.getElementById(sectionId);
         if (sectionEl) sectionEl.style.display = (query && matchCount === 0) ? 'none' : '';
       });
-
-      // DOM REORDERING: during an active search, move supplement guides above protocols/editorial/books
-      // When search is cleared, restore the original library order (protocols first)
-      const supplementWrapper = document.getElementById('supplement-section-wrapper');
-      const protocolsWrapper = document.getElementById('protocols-section-wrapper');
-      const divider = document.getElementById('section-divider-anchor');
-      const mainEl = document.querySelector('.main');
-
-      if (supplementWrapper && protocolsWrapper && divider && mainEl) {
-        if (query) {
-          // Active search: supplement results first
-          mainEl.insertBefore(supplementWrapper, protocolsWrapper);
-          mainEl.insertBefore(divider, protocolsWrapper);
-        } else {
-          // No search: restore original order (protocols/editorial/books first, then supplements)
-          mainEl.insertBefore(protocolsWrapper, supplementWrapper);
-          mainEl.insertBefore(divider, supplementWrapper);
-        }
-      }
     }
 
     // Pre-fill search from homepage
