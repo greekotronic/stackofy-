@@ -541,5 +541,16 @@
   "tags": "longevity heart-health bone-health",
   "readTime": "12 min",
   "description": "A 2026 JAMA Cardiology trial found MK-7 slowed coronary artery calcification by nearly a third over two years. It also interferes with warfarin at doses as low as 10mcg - here is the full evidence and the one interaction that actually matters."
+},
+{
+  "title": "Taurine: The Longevity Hype the Follow-Up Studies Walked Back",
+  "tag": "Taurine",
+  "url": "/articles/taurine-guide.html",
+  "image": "/images/hero-taurine.jpg",
+  "color": "c-taurine",
+  "featured": false,
+  "tags": "longevity performance",
+  "readTime": "12 min",
+  "description": "A 2023 mouse study made taurine the it-supplement of biohacking. Two 2025 human studies then found the opposite of what the hype claimed. Here is the real, more boring, more useful story."
 }
 ]

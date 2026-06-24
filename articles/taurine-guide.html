@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Taurine: The Longevity Hype the Follow-Up Studies Walked Back - Stackofy</title>
+  <meta name="description" content="A 2023 mouse study made taurine the it-supplement of biohacking. Two 2025 human studies then found the opposite of what the hype claimed. Here is the real, more boring, more useful story - heart failure, blood pressure, and what the evidence actually supports." />
+
+  <meta property="og:title" content="Taurine: The Longevity Hype the Follow-Up Studies Walked Back" />
+  <meta property="og:description" content="Taurine became a longevity darling after a 2023 mouse and monkey study. In 2025, a Science journal paper and an Aging Cell study both found circulating taurine does not decline with age in humans - directly contradicting the premise the hype was built on." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/taurine-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-taurine.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .timeline-year { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1a0a, #1B4332, #2D6A4F); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,26,10,0.95) 0%, rgba(10,26,10,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 860px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 860px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .timeline-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .timeline-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .timeline-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .timeline-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .timeline-year { font-size: 13px; font-weight: 700; color: var(--green-dark); width: 60px; flex-shrink: 0; }
+    .timeline-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .timeline-row.flag .timeline-year { color: #C0392B; }
+    [data-theme="dark"] .timeline-row.flag .timeline-year { color: #FF8080 !important; }
+    .timeline-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-skeptic { background: linear-gradient(135deg, #1A1A1A, #3D3D2A); }
+    .c-creatine { background: linear-gradient(135deg, #1a1a1a, #2A2A10); }
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .timeline-desc { font-size: 12px; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-taurine.jpg" alt="Taurine crystalline powder, the amino acid behind the 2023 longevity hype" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Taurine</span>
+      <h1>The Longevity Hype the Follow-Up Studies Walked Back</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>12 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>A 2023 Columbia study found taurine levels decline with age in mice, worms, and monkeys, and supplementing it extended mouse lifespan by up to 12% - this single study launched taurine into mainstream longevity supplementation</li>
+        <li>Two independent 2025 studies, including one in Science, found circulating taurine does NOT decline with human age - it stayed flat or even increased in some cohorts, directly contradicting the premise the hype was built on</li>
+        <li>Outside the aging debate, taurine has genuinely solid evidence for a narrower, less exciting use case: improving exercise capacity and cardiac function in people with heart failure, at doses of 500mg to 6g daily</li>
+        <li>A 2024 meta-analysis found taurine produces measurable, dose-dependent reductions in blood pressure and heart rate, with the largest effects in heart failure patients and healthy individuals specifically</li>
+        <li>Taurine has an excellent long-term human safety record at doses up to 10g/day in clinical trials, with no significant adverse effects reported across decades of research</li>
+        <li>A large, well-designed human RCT (the TauAge study) is currently underway to test whether 4g/day actually changes biological aging markers - the question remains genuinely open</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Taurine has had one of the strangest supplement origin stories of the past few years. For most of its existence, it was best known as the ingredient on energy drink cans nobody could explain - present in Red Bull, present in your cells in larger quantities than almost any other amino acid, but without a clear, exciting human story attached. That changed in June 2023, when a Columbia University-led team published a study in Science showing that taurine levels decline with age across mice, worms, and monkeys, and that supplementing it extended mouse lifespan by up to 10-12% and improved markers of muscle and bone health.</p>
+
+      <p>The supplement world reacted immediately and enthusiastically. Taurine became a fixture in longevity stacks almost overnight. Then, in 2025, the human data started coming back - and it complicated the story considerably. This article covers both halves honestly: what the aging hype actually claimed, why the follow-up human research pushes back on it, and the separate, more boring, much better-established case for taurine in cardiovascular health that has nothing to do with the aging debate at all.</p>
+
+      <div class="article-img">
+        <img src="/images/taurine-research-lab.jpg" alt="Laboratory research setting representing the scientific study of taurine and aging" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Hype, the Walk-Back, and Why Both Matter</h2>
+
+      <p>Understanding taurine right now means understanding a real scientific disagreement playing out in real time - not a settled answer being twisted by marketing, but two groups of serious researchers looking at the same molecule and reaching opposite conclusions about whether it declines with human age at all.</p>
+
+      <div class="timeline-visual">
+        <div class="timeline-title">The Taurine Aging Timeline</div>
+        <div class="timeline-row">
+          <div class="timeline-year">2023</div>
+          <div class="timeline-desc">Columbia team (Yadav et al., <em>Science</em>) finds circulating taurine declines with age in mice, worms, and monkeys. In ~250,000 older European adults, those with higher taurine levels were healthier - less diabetes, less obesity, less inflammation. Taurine supplementation extended mouse lifespan and healthspan.</div>
+        </div>
+        <div class="timeline-row flag">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-desc">★ A study published in <em>Science</em> (Fernandez et al.) directly tested whether taurine declines with age in three geographically distinct human cohorts plus nonhuman primates - and found taurine concentrations increased or stayed unchanged with age, the opposite of the 2023 premise.</div>
+        </div>
+        <div class="timeline-row flag">
+          <div class="timeline-year">2025</div>
+          <div class="timeline-desc">★ A separate study in <em>Aging Cell</em> measured circulating taurine in 137 men aged 20-93 and found no association between taurine levels and age, muscle mass, strength, physical performance, or mitochondrial function - challenging the deficiency-as-driver-of-aging hypothesis directly.</div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-year">2026</div>
+          <div class="timeline-desc">The TauAge study and a separate Bayesian-optimized phase II RCT both launch to directly test taurine supplementation (3-4g/day) against placebo on biological age markers, metabolic health, and epigenetic clocks in humans over 6 months - results not yet available.</div>
+        </div>
+        <div class="timeline-highlight">★ Two independent human studies in 2025 specifically contradict the foundational premise the 2023 hype was built on. This does not mean taurine is useless - it means the "taurine declines with age, so replace it" story that drove the supplement trend is currently unsupported by the best available human data.</div>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">A Biomarker Being Wrong Doesn't Make a Supplement Useless</div>
+        <p>It's worth being precise about what the 2025 studies actually overturned: the idea that taurine is a reliable aging biomarker that consistently drops as you get older. They did not test, and do not disprove, whether supplementing taurine produces other specific benefits - cardiovascular, metabolic, or otherwise - independent of the aging-decline story. Those are two separate questions, and conflating them in either direction (assuming the supplement does nothing because the biomarker theory was wrong, or assuming the biomarker theory must be right because the supplement seems to help with something) is a reasoning error worth avoiding.</p>
+      </div>
+
+      <h2>The Evidence That Doesn't Depend on the Aging Debate</h2>
+
+      <p>Set aside longevity entirely, and taurine has a genuinely solid, decades-old evidence base in a much narrower lane: cardiovascular function, particularly in people with heart failure. This research predates the 2023 hype by years and stands independently of it.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Heart Failure - Exercise Capacity</h4>
+          <p>A randomized, placebo-controlled trial found 500mg three times daily increased exercise time, METs, and exercise distance in heart failure patients already on standard medical treatment, within just two weeks.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Blood Pressure &amp; Heart Rate</h4>
+          <p>A 2024 systematic review and meta-analysis of RCTs found a dose-dependent reduction in heart rate, systolic and diastolic blood pressure with taurine, with the largest heart-rate improvements in both heart failure patients and healthy individuals.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Dilated Cardiomyopathy</h4>
+          <p>A systematic review of 11 studies found improvements in diastolic/systolic function and exercise capacity were commonly reported, though a meta-analysis of ejection fraction specifically did not reach statistical significance - the authors called for a dedicated formal trial.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Mixed Evidence</span>
+          <h4>Athletic Performance</h4>
+          <p>A controlled trial of 1g acute taurine dosing before a 4km cycling time trial in trained cyclists found no performance advantage and no change in blood buffering response - despite taurine's popularity in pre-workout and energy products.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Why the Heart Failure Data Is More Convincing Than the Sports Data</div>
+        <p>The cardiovascular research uses hard, measurable endpoints - blood pressure readings, ejection fraction, exercise distance under standardized protocols - in clinical populations being closely monitored. The athletic performance research, by contrast, keeps coming back negative or null for the specific use case (energy drinks, pre-workout) that actually drives most consumer taurine intake. If you take taurine because you saw it in an energy drink and assumed it boosts performance, the evidence for that specific claim is weak. If you're interested in it for cardiovascular support, the evidence is considerably stronger.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/taurine-heart-mechanism.jpg" alt="Stethoscope representing taurine's cardiovascular research applications" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What Taurine Actually Does in the Body</h2>
+
+      <p>Taurine is a sulfur-containing amino acid - technically not used in protein synthesis the way most amino acids are, which is part of why its function took so long to pin down. It's found in extremely high concentration in excitable tissue, particularly the heart, where it accounts for roughly half of all free amino acids. It functions as an intracellular osmolyte (helping regulate cell volume), regulates calcium and sodium balance, supports normal mitochondrial function, and has documented effects on vasodilation, partly through modulating an overactive sympathetic nervous system response.</p>
+
+      <p>None of these mechanisms require the "taurine declines with age" story to be true in order to matter. A semi-essential amino acid this concentrated in cardiac tissue, with this much mechanistic plausibility for calcium handling and vascular tone, was always going to have cardiovascular research interest - and it did, well before 2023.</p>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🧂</div>
+          <h4>Magnesium</h4>
+          <p>Both play roles in cardiac electrical stability and vascular tone. Frequently combined in cardiovascular-support formulations targeting blood pressure and heart rhythm from complementary angles.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">💪</div>
+          <h4>Creatine</h4>
+          <p>Both are popular in performance contexts and share some overlapping interest in muscle and mitochondrial function research, though their evidence bases and mechanisms are largely independent of each other.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🐟</div>
+          <h4>Omega-3</h4>
+          <p>Both have independent cardiovascular research support - omega-3 through anti-inflammatory and lipid effects, taurine through calcium handling and blood pressure - making them a logical heart-health pairing.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🍵</div>
+          <h4>L-Theanine</h4>
+          <p>No direct interaction data, but both are commonly found alongside caffeine in energy products specifically because they're perceived to soften the harsher cardiovascular and jittery effects of stimulants.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🧬</div>
+          <h4>Glycine</h4>
+          <p>Both are simple amino acids with some overlapping research interest in sleep and metabolic health, and both appear in the GlyNAC combination (glycine + N-acetylcysteine) studied separately in aging research.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">☕</div>
+          <h4>Caffeine</h4>
+          <p>The classic energy-drink pairing. Some research suggests taurine may modestly offset caffeine-induced increases in heart rate and blood pressure, though this is not the primary reason either is typically taken.</p>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Dose</th>
+          <th>Timing</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>General cardiovascular support</td>
+          <td>500 - 1500mg/day</td>
+          <td>Split across 2-3 doses, with or without food</td>
+          <td>Lower end of the clinically studied range</td>
+        </tr>
+        <tr>
+          <td>Heart failure exercise capacity (as studied)</td>
+          <td>500mg, 3x daily (1.5g/day total)</td>
+          <td>Alongside standard medical treatment, not as a replacement</td>
+          <td>Reflects the dose used in the controlled exercise-capacity trial</td>
+        </tr>
+        <tr>
+          <td>Aging/metabolic research dose</td>
+          <td>3 - 4g/day</td>
+          <td>Daily, ongoing</td>
+          <td>The dose currently being tested in the 2026 TauAge and Bayesian RCTs - not yet confirmed effective for this purpose</td>
+        </tr>
+        <tr>
+          <td>Highest studied RCT dose</td>
+          <td>10g/day (6 months)</td>
+          <td>-</td>
+          <td>No significant adverse effects reported at this dose in the reviewed trial literature</td>
+        </tr>
+      </table>
+
+      <div class="skip-box">
+        <div class="skip-label">If You're Taking It Purely for "Anti-Aging"</div>
+        <p>Be honest with yourself about what you're betting on. The mouse and monkey data from 2023 is real and was published in a top-tier journal - but the two most directly relevant human follow-up studies in 2025 did not replicate the core premise that taurine declines with human age. Ongoing RCTs (TauAge, the Bayesian phase II trial) are specifically designed to settle whether supplementation changes human biological aging markers, and results aren't in yet. Taking taurine now for this specific purpose means betting on a hypothesis the most recent human evidence has made less likely, not more.</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">Who Should Be Cautious</div>
+        <p>Taurine has an unusually clean long-term safety record, with no significant adverse effects reported across decades of controlled human trials up to 10g/day. Mild gastric discomfort is the most commonly reported side effect at higher doses. People with kidney disease should consult a doctor before supplementing, since taurine is processed renally. Anyone with existing heart failure or cardiac arrhythmia should use taurine only under medical supervision rather than self-directed dosing, given its direct effects on cardiac calcium handling and rhythm-relevant pathways - this is a case where the mechanism that makes it potentially helpful is the same one that warrants medical oversight rather than solo experimentation.</p>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">6.0/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          A genuinely interesting molecule caught in the middle of an active scientific disagreement. The cardiovascular evidence - blood pressure, heart failure exercise capacity - is real, predates the hype, and doesn't depend on taurine being an aging biomarker at all. The "anti-aging" framing that made taurine famous, however, took a serious hit from two independent 2025 human studies that found the opposite of what the foundational 2023 mouse research implied. That's not disqualifying, but it does mean anyone taking taurine specifically to reverse an age-related decline is currently acting ahead of the human evidence, not in step with it. An excellent safety profile keeps this from scoring lower.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/supplement-interactions-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-supplement-interactions.jpg" alt="Supplement Interactions" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ Before You Combine This</div>
+        <h4>Taurine affects cardiac rhythm pathways shared with several heart medications</h4>
+        <p>See how additive cardiovascular effects work and which combinations need real caution in our full interactions guide.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Singh, P., Gollapalli, K., Mangiola, S. et al. (2023). Taurine deficiency as a driver of aging. <em>Science</em>, 380(6649), eabn9257.</li>
+        <li>Fernandez, M.E. et al. (2025). Is taurine an aging biomarker? <em>Science</em>, 388, eadl2116.</li>
+        <li>Marcangeli, V., Cefis, M. et al. (2025). Experimental Evidence Against Taurine Deficiency as a Driver of Aging in Humans. <em>Aging Cell</em>, 24(10), e70191.</li>
+        <li>Insights into the cardiovascular benefits of taurine: a systematic review and meta-analysis. PubMed PMID: 39148075.</li>
+        <li>Effect of taurine supplementation on exercise capacity of patients with heart failure. <em>Journal of Cardiology</em> (2011).</li>
+        <li>Effect of taurine administration on symptoms, severity, or clinical outcome of dilated cardiomyopathy and heart failure in humans: a systematic review. PMC9257265.</li>
+        <li>The Anti-Inflammatory Effect of Taurine on Cardiovascular Disease. PMC7551180.</li>
+        <li>The effect of acute taurine ingestion on 4-km time trial performance in trained cyclists. PMC5073122.</li>
+        <li>Chu, et al. (2026). Effects of taurine supplementation on metabolic health and biological aging in healthcare workers: protocol for a triple-blinded, Bayesian-optimized phase II RCT. <em>PLOS One</em>.</li>
+        <li>The TauAge Study. German Clinical Trials Register, DRKS00035066.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Curious About Other Longevity Claims That Didn't Hold Up?</h3>
+      <p>Taurine isn't the only supplement where the hype outran the human data. See our broader investigation into evidence versus marketing.</p>
+      <div class="cta-buttons">
+        <a href="/articles/do-supplements-work-guide.html" class="btn-gold">Read the Honest Answer →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/do-supplements-work-guide.html" class="related-card">
+          <div class="related-img c-skeptic">
+            <img src="/images/hero-do-supplements-work-v2.jpg" alt="Do Supplements Work" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Honest Answer</span>
+            <h4>Do Supplements Even Work? What We Found Out the Hard Way</h4>
+          </div>
+        </a>
+        <a href="/articles/creatine-guide.html" class="related-card">
+          <div class="related-img c-creatine">
+            <img src="/images/hero-creatine.jpg" alt="Creatine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Creatine</span>
+            <h4>Creatine: The Muscle Molecule That's Actually a Brain Booster in Disguise</h4>
+          </div>
+        </a>
+        <a href="/articles/magnesium-guide.html" class="related-card">
+          <div class="related-img c-mag">
+            <img src="/images/hero-magnesium.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Magnesium</span>
+            <h4>Magnesium: The Master Mineral That Everyone's Missing</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking medication or have a pre-existing heart condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

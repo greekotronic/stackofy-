@@ -48,6 +48,7 @@ const COLORS = {
 'c-bromelain': 'background:linear-gradient(135deg,#1a2e00,#D4A017)',
 'c-interactions': 'background:linear-gradient(135deg,#1B4332,#D4A853)',
 'c-vitk2': 'background:linear-gradient(135deg,#3D2400,#D4A853)',
+'c-taurine': 'background:linear-gradient(135deg,#1a2a3a,#4A7A9D)',
 };
 
 function makeCard(article, size) {
