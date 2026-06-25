@@ -55,6 +55,7 @@ const COLORS = {
 'c-urolithin': 'background:linear-gradient(135deg,#3D0A1A,#C0392B)',
 'c-natto': 'background:linear-gradient(135deg,#1a1208,#6B5530)',
 'c-saffron': 'background:linear-gradient(135deg,#3D0A1A,#C0392B)',
+'c-peptides': 'background:linear-gradient(135deg,#1A1A1A,#4A6A6A)',
 };
 
 function makeCard(article, size) {

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peptides: Two Completely Different Categories Wearing the Same Name - Stackofy</title>
+  <meta name="description" content="Collagen peptides in your protein shake and BPC-157 sold as a 'research chemical' online have almost nothing in common except the word peptide. One category has real human trials and clear legal status. The other has a single research group's animal data and a regulatory status that's changing as you read this." />
+
+  <meta property="og:title" content="Peptides: Two Completely Different Categories Wearing the Same Name" />
+  <meta property="og:description" content="The peptide supplement market hit $4.1 billion in 2025 and is projected to reach $11.2 billion by 2035 - but that number blends two unrelated worlds. Collagen and creatine-adjacent peptides have real RCTs and legal clarity. Injectable 'research peptides' like BPC-157 rest on a single research group's data and a regulatory status in active flux." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/peptides-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-peptides.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1a0a, #1B4332, #2D6A4F); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,26,10,0.95) 0%, rgba(10,26,10,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .clash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .clash-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+    .clash-card.legal { border-color: var(--green-dark); }
+    .clash-card.gray { border-color: #C0392B; }
+    .clash-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .clash-card.legal .clash-label { color: var(--green-dark); }
+    [data-theme="dark"] .clash-card.legal .clash-label { color: var(--green-light); }
+    .clash-card.gray .clash-label { color: #C0392B; }
+    [data-theme="dark"] .clash-card.gray .clash-label { color: #FF8080; }
+    .clash-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+    .clash-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+    .clash-card ul { margin: 0.5rem 0 0; padding-left: 1.1rem; }
+    .clash-card li { font-size: 12px; color: var(--text-muted); margin-bottom: 4px; line-height: 1.5; }
+
+    .timeline-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .timeline-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .timeline-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .timeline-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .timeline-year { font-size: 13px; font-weight: 700; color: var(--green-dark); width: 90px; flex-shrink: 0; }
+    .timeline-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .timeline-row.flag .timeline-year { color: #C0392B; }
+    [data-theme="dark"] .timeline-row.flag .timeline-year { color: #FF8080 !important; }
+    .timeline-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-collagen { background: linear-gradient(135deg, #1a2a10, #2D5A1B); }
+    .c-creatine { background: linear-gradient(135deg, #1a1a1a, #2A2A10); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .clash-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-peptides.jpg" alt="A vial representing the broad and varied category of peptide supplements" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Peptides</span>
+      <h1>Two Completely Different Categories Wearing the Same Name</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>14 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>"Peptide" is a chemistry term, not a category - it just means a short chain of amino acids. Collagen in your protein shake and an injectable compound sold as a "research chemical" online are both technically peptides, and that's nearly the only thing they have in common</li>
+        <li>The peptide supplement market hit roughly $4.1 billion in 2025 and is projected to reach $11.2 billion by 2035, a figure that blends two genuinely unrelated industries together</li>
+        <li>Oral, legal peptides (collagen, creatine-adjacent products) have real human RCTs, established regulatory status as foods or supplements, and decades of safety data</li>
+        <li>Injectable "research peptides" like BPC-157 and TB-500 are sold online despite a 2026 investigative report finding that nearly all existing data comes from a single Croatian research group, with almost no independent replication</li>
+        <li>These injectable compounds' US regulatory status changed dramatically in 2023 (restricted to Category 2, ending compounding pharmacy access) and is changing again in 2026 (a partial reclassification announced but not yet formally finalized) - meaning their legal status is genuinely unsettled right now, not a stable fact you can rely on</li>
+        <li>The practical rule: if it's swallowed and sold as a food/supplement (collagen, certain dipeptides), treat it like any other supplement claim. If it's injected and labeled "not for human consumption" or "research use only," that label exists for a real regulatory reason, not just liability theater</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>"Peptide" has become one of those words that sounds precise and scientific while actually telling you almost nothing. Technically, a peptide is just a short chain of amino acids linked together - shorter than a full protein, but built from the same building blocks. By that definition, the collagen in your morning protein shake is a peptide. So is insulin. So is GLP-1, the hormone that Ozempic and Wegovy mimic. So is BPC-157, a compound sold in vials online with labels reading "not for human consumption."</p>
+
+      <p>That's the core problem with treating "peptides" as one supplement category, the way most 2026 trend reports do when they cite a single multi-billion-dollar market size. It collapses two industries with almost nothing in common - one with real clinical trials and clear legal footing, the other with a regulatory status that is, as of this writing, actively being rewritten in real time.</p>
+
+      <div class="article-img">
+        <img src="/images/peptides-collagen-protein.jpg" alt="Protein powder representing the legal, oral peptide supplement category" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Split: Two Worlds Sharing One Word</h2>
+
+      <div class="clash-grid">
+        <div class="clash-card legal">
+          <div class="clash-label">Oral / Topical, Legal Category</div>
+          <h4>Collagen, Certain Bioactive Dipeptides</h4>
+          <p>Sold as foods, supplements, or cosmetics. Established regulatory pathway. Multiple human RCTs.</p>
+          <ul>
+            <li>Collagen peptides for skin, joints</li>
+            <li>Copper peptides (topical, e.g. GHK-Cu) for skin</li>
+            <li>Collagen-derived GLP-1-stimulating peptides (e.g. Nextida GC)</li>
+          </ul>
+        </div>
+        <div class="clash-card gray">
+          <div class="clash-label">Injectable, Unsettled Category</div>
+          <h4>"Research Peptides" - BPC-157, TB-500, etc.</h4>
+          <p>Sold online, often labeled "research use only." Regulatory status actively in flux. Evidence base thin and narrow.</p>
+          <ul>
+            <li>BPC-157 (tissue repair claims)</li>
+            <li>TB-500 (recovery claims)</li>
+            <li>CJC-1295, Ipamorelin (growth hormone-related)</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>The first category behaves like any other supplement ingredient discussed elsewhere on this site - you evaluate the specific human trial evidence, the dose, the safety profile, same as magnesium or creatine. The second category needs a fundamentally different framework, because the central question isn't just "does it work" - it's "is what's being sold even legal to use this way, and who actually generated the data behind the claims."</p>
+
+      <h2>Why BPC-157 Is the Case Study Worth Understanding</h2>
+
+      <p>BPC-157 (Body Protection Compound-157) is the most recognized name in the "research peptide" world, and a February 2026 investigative report from STAT and Undark traced exactly how thin its evidence base actually is. A chief medical resident who decided to formally review the literature found that the overwhelming majority of existing data - which sounds substantial when summarized in marketing copy - traces back to a single research group based in Croatia. Independent replication from unrelated labs is sparse. Nearly all of it is animal or in-vitro data; rigorous human trials are essentially absent.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Why "A Single Research Group" Matters</div>
+        <p>This connects directly to the kind of scrutiny worth applying to any health claim: a large volume of published papers from one team, however prolific, is not the same as broad scientific consensus built from independent replication. It's a structurally weaker form of evidence than results confirmed across multiple unrelated labs - precisely the distinction this site's piece on research methodology covers in more depth.</p>
+      </div>
+
+      <div class="timeline-visual">
+        <div class="timeline-title">BPC-157's Regulatory Status - Actively Changing</div>
+        <div class="timeline-row flag">
+          <div class="timeline-year">Late 2023</div>
+          <div class="timeline-desc">★ The FDA places 19 peptides, including BPC-157, TB-500, and others, on a restricted "Category 2" list - effectively ending licensed compounding pharmacies' ability to legally prepare and dispense them under physician prescription.</div>
+        </div>
+        <div class="timeline-row">
+          <div class="timeline-year">2023-25</div>
+          <div class="timeline-desc">Despite the prescription-compounding restriction, retail distribution of unapproved peptides expands dramatically, including listings on major e-commerce platforms, typically marketed as "research chemicals" not for human consumption.</div>
+        </div>
+        <div class="timeline-row flag">
+          <div class="timeline-year">Feb 2026</div>
+          <div class="timeline-desc">★ HHS Secretary Robert F. Kennedy Jr. announces that approximately 14 of the 19 restricted peptides, including BPC-157, are expected to move back to Category 1 status, restoring a legal pathway through licensed compounding pharmacies under prescription.</div>
+        </div>
+        <div class="timeline-row flag">
+          <div class="timeline-year">Apr 2026</div>
+          <div class="timeline-desc">★ The FDA formally removes a number of peptides from Category 2. As of this writing, the complete, finalized list and its practical implications are still being clarified - this is a live, moving regulatory situation, not a settled fact.</div>
+        </div>
+        <div class="timeline-highlight">Two things remain true throughout this entire timeline, regardless of which Category a given peptide sits in: distributing these compounds for human use outside an actual prescription pathway remains illegal, and the underlying human safety and efficacy data has not materially changed just because the compounding classification has.</div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/peptides-research-regulation.jpg" alt="Documents representing the shifting regulatory landscape of research peptides" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Legal, Well-Evidenced Side of the Category</h2>
+
+      <p>It would be a mistake to let the BPC-157 situation color the entire "peptide" word, because collagen peptides specifically have a genuinely different, much more mature evidence profile.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Collagen Peptides - Skin</h4>
+          <p>Multiple double-blind, placebo-controlled trials (Proksch et al. and others) show oral collagen peptide supplementation reduces wrinkle depth and increases dermal collagen synthesis - among the better-evidenced "beauty-from-within" claims in the supplement world.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Collagen Peptides - Joints</h4>
+          <p>Several RCTs support modest improvements in joint comfort and function with regular collagen peptide use, particularly in athletes and older adults, though effect sizes vary by study population and collagen source.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Specific GLP-1-Stimulating Collagen Peptides</h4>
+          <p>Patented formulations like Nextida GC have published data showing activation of intestinal incretin hormone pathways and reduced post-meal glucose spikes - an emerging, food-derived alternative angle to the GLP-1 conversation, distinct from pharmaceutical GLP-1 agonists.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Topical Copper Peptides (GHK-Cu)</h4>
+          <p>12-week clinical trials on topical copper peptide formulations report measurable reductions in wrinkle depth and improvements in skin firmness - a different application route (skin, not oral) with its own separate evidence base.</p>
+        </div>
+      </div>
+
+      <h2>How to Actually Evaluate Any Peptide Claim</h2>
+
+      <div class="skip-box">
+        <div class="skip-label">A Practical Three-Question Filter</div>
+        <p><strong>1. Is it oral/topical, or injectable?</strong> Oral collagen peptides and topical copper peptides are sold as conventional supplements/cosmetics with standard regulatory oversight. Injectable compounds marketed as "research chemicals" exist in a fundamentally different, currently unsettled legal space.<br><br><strong>2. Where does the human data actually come from?</strong> A genuine body of independent RCTs (collagen) is a different evidentiary world than primarily animal studies from one research group (BPC-157). Ask specifically whether multiple unrelated labs have replicated a claim.<br><br><strong>3. What does the actual product label say?</strong> "Not for human consumption" or "research use only" on an injectable peptide is not boilerplate legal cover - it reflects genuine, current regulatory status. Treat it as a real signal, not a technicality to route around.</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">On the Injectable Category Specifically</div>
+        <p>Beyond the thin evidence base, injectable research peptides carry the standard risks of any unregulated, self-administered injectable: uncertain sterility, uncertain actual dose and purity (since these products aren't subject to standard supplement or pharmaceutical manufacturing oversight), and unknown long-term safety given the near-total absence of human trials. The WADA prohibited-substance status of several of these compounds (including a past listing for BPC-157) is itself a signal that regulatory and sporting bodies have flagged them for genuine scrutiny, not simply bureaucratic caution.</p>
+      </div>
+
+      <h2>What This Means If You're Considering Either Category</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🧴</div>
+          <h4>Collagen Peptides</h4>
+          <p>A reasonable, well-evidenced addition for skin and joint goals - see our dedicated collagen guide for dosing and sourcing specifics.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">💪</div>
+          <h4>Creatine (Adjacent Category)</h4>
+          <p>Not technically a peptide but frequently marketed alongside this category - one of the best-evidenced supplements available regardless of labeling trends.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>"Research Peptides" (Medical Supervision Only)</h4>
+          <p>If considering any injectable compound in this category for a real medical purpose, that conversation belongs with a licensed physician working through an actual legal compounding pathway - not a self-directed online purchase.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">N/A</div>
+        <div class="aaf-label">
+          <strong>This Article Has No Single AAF Score</strong>
+          "Peptides" is too broad a category for one score - it spans some of the best-evidenced supplements available (collagen) and some of the least independently verified, legally unsettled compounds in the wellness space (injectable research peptides). See our dedicated Collagen guide for a specific evaluation of that well-evidenced category.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ Why "One Research Group" Is a Red Flag</div>
+        <h4>Most BPC-157 data traces back to a single lab with limited independent replication</h4>
+        <p>See our framework for evaluating evidence strength before trusting any single research program's output.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>BPC-157: The peptide with big claims and scant evidence. <em>STAT</em> / <em>Undark</em> (February 3, 2026).</li>
+        <li>Józwiak, M., Bauer, M., Kamysz, W., Kleczkowska, P. (2025). Multifunctionality and Possible Medical Application of the BPC 157 Peptide - Literature and Patent Review. <em>Pharmaceuticals</em>, 18, 185.</li>
+        <li>What's Changing With Peptide Regulation in 2026. BSCG (Banned Substances Control Group).</li>
+        <li>BPC-157 FDA Status 2026: What the RFK Reclassification Means for Patients. AgeMD Insights.</li>
+        <li>BPC-157: A prohibited peptide and an unapproved drug found in health and wellness products. Operation Supplement Safety (OPSS), U.S. Department of Defense.</li>
+        <li>Proksch, E. et al. (2014). Oral intake of specific bioactive collagen peptides reduces skin wrinkles and increases dermal matrix synthesis. <em>Skin Pharmacology and Physiology</em>, 27(3), 113-119.</li>
+        <li>Peptide Supplements Market Growth, Collagen Boost & Wellness Trends. Future Market Insights (2025-2026 projections).</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Specific Collagen Evidence?</h3>
+      <p>See our dedicated guide on dosing, sourcing, and what the skin and joint research actually shows.</p>
+      <div class="cta-buttons">
+        <a href="/articles/collagen-guide.html" class="btn-gold">Read the Collagen Guide →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/collagen-guide.html" class="related-card">
+          <div class="related-img c-collagen">
+            <img src="/images/hero-collagen.jpg" alt="Collagen" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Collagen</span>
+            <h4>Collagen: Rebuilding You from the Inside Out</h4>
+          </div>
+        </a>
+        <a href="/articles/creatine-guide.html" class="related-card">
+          <div class="related-img c-creatine">
+            <img src="/images/hero-creatine.jpg" alt="Creatine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Creatine</span>
+            <h4>Creatine: The Muscle Molecule That's Actually a Brain Booster in Disguise</h4>
+          </div>
+        </a>
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational and educational purposes only and does not constitute medical or legal advice. Regulatory status discussed here reflects the situation as of publication and may have changed - always verify current legal status independently. Never use any injectable compound without consulting a licensed physician. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

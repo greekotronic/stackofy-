@@ -620,5 +620,18 @@
   "tags": "mood longevity",
   "readTime": "13 min",
   "description": "A December 2025 RCT in healthy adults found saffron didn't move the needle on depression, anxiety, or fatigue. Earlier trials in clinically depressed adults found real effects comparable to SSRIs. Both can be true. Here is the evidence, the 20-30% adulteration problem, and how to actually verify what's in the bottle."
+},
+{
+  "title": "Peptides: Two Completely Different Categories Wearing the Same Name",
+  "tag": "Peptides",
+  "url": "/articles/peptides-guide.html",
+  "image": "/images/hero-peptides.jpg",
+  "color": "c-peptides",
+  "featured": false,
+  "type": "protocol",
+  "badgeType": "featured",
+  "tags": "safety performance longevity",
+  "readTime": "14 min",
+  "description": "Collagen peptides in your protein shake and BPC-157 sold as a 'research chemical' online have almost nothing in common except the word peptide. One category has real human trials and clear legal status. The other has a single research group's animal data and a regulatory status that's changing as you read this."
 }
 ]
