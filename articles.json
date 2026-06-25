@@ -633,5 +633,18 @@
   "tags": "safety performance longevity",
   "readTime": "14 min",
   "description": "Collagen peptides in your protein shake and BPC-157 sold as a 'research chemical' online have almost nothing in common except the word peptide. One category has real human trials and clear legal status. The other has a single research group's animal data and a regulatory status that's changing as you read this."
+},
+{
+  "title": "What You Actually Need on Ozempic or Wegovy",
+  "tag": "GLP-1 Support",
+  "url": "/articles/glp1-nutrition-guide.html",
+  "image": "/images/hero-glp1-nutrition.jpg",
+  "color": "c-glp1",
+  "featured": false,
+  "type": "protocol",
+  "badgeType": "featured",
+  "tags": "metabolism performance",
+  "readTime": "15 min",
+  "description": "A Cambridge review found only 12 studies on nutrition during GLP-1 treatment - and most lacked standardized methods. One obesity doctor calls muscle-loss fears manufactured; the data shows 20-60% of weight lost can be lean mass. Here is what's actually worth doing about protein, micronutrients, and muscle."
 }
 ]

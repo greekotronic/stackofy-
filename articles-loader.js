@@ -56,6 +56,7 @@ const COLORS = {
 'c-natto': 'background:linear-gradient(135deg,#1a1208,#6B5530)',
 'c-saffron': 'background:linear-gradient(135deg,#3D0A1A,#C0392B)',
 'c-peptides': 'background:linear-gradient(135deg,#1A1A1A,#4A6A6A)',
+'c-glp1': 'background:linear-gradient(135deg,#1a2a3a,#4A7A9D)',
 };
 
 function makeCard(article, size) {
