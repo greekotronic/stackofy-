@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saffron: The World's Most Faked Spice Also Has Real Mood Data - Stackofy</title>
+  <meta name="description" content="A December 2025 RCT in healthy adults found saffron didn't move the needle on depression, anxiety, or fatigue. Earlier trials in clinically depressed adults found real effects comparable to SSRIs. Both can be true. Here is the evidence, the 20-30% adulteration problem, and how to actually verify what's in the bottle." />
+
+  <meta property="og:title" content="Saffron: The World's Most Faked Spice Also Has Real Mood Data" />
+  <meta property="og:description" content="A 2025 RCT in healthy adults found no effect on depression, anxiety, or fatigue. A larger 12-week trial in people with depressive symptoms found real benefit. Globally, 20-30% of commercial saffron is adulterated, sometimes with carcinogenic dyes. Here is the real evidence and how to verify what you're buying." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/saffron-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-saffron.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1a0a, #1B4332, #7A1A1A); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,26,10,0.95) 0%, rgba(10,26,10,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .clash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .clash-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+    .clash-card.healthy { border-color: #C0392B; }
+    .clash-card.depressed { border-color: var(--green-dark); }
+    .clash-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .clash-card.healthy .clash-label { color: #C0392B; }
+    [data-theme="dark"] .clash-card.healthy .clash-label { color: #FF8080; }
+    .clash-card.depressed .clash-label { color: var(--green-dark); }
+    [data-theme="dark"] .clash-card.depressed .clash-label { color: var(--green-light); }
+    .clash-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+    .clash-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .fraud-stat { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .fraud-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .fraud-row { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+    .fraud-region { font-size: 13px; font-weight: 600; color: var(--text); width: 130px; flex-shrink: 0; }
+    .fraud-bar-wrap { flex: 1; background: var(--bg); border-radius: 4px; height: 22px; overflow: hidden; }
+    .fraud-bar { height: 100%; background: linear-gradient(90deg, var(--gold), #C0392B); border-radius: 4px; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; }
+    .fraud-bar span { font-size: 11px; font-weight: 700; color: #fff; }
+    .fraud-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-ashwa { background: linear-gradient(135deg, #1a0a00, #3E2010); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+    .c-toxic { background: linear-gradient(135deg, #2A0A0A, #7A1A1A); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .clash-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-saffron.jpg" alt="Vibrant red saffron threads, the world's most valuable and most adulterated spice" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Saffron</span>
+      <h1>The World's Most Faked Spice Also Has Real Mood Data</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>13 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>A December 2025 RCT in 51 healthy adults found saffron extract did not improve depression, anxiety, or fatigue scores over 6 weeks compared to placebo - the headline finding contradicts decades of saffron's reputation as a mood supplement</li>
+        <li>The same trial found something easy to miss in the headline: saffron did significantly improve self-rated general mental health (p=0.04), even though it didn't move the primary clinical symptom scores - a real but more modest effect than marketing suggests</li>
+        <li>A larger, 12-week RCT in 202 adults with actual depressive symptoms (not healthy volunteers) found measurable mood benefits - the populations tested matter as much as the supplement itself</li>
+        <li>A meta-analysis of 23 trials found saffron at 28-30mg/day produced antidepressant effects comparable to some prescription SSRIs in people with diagnosed depression, with fewer side effects - but trial sizes have historically been small</li>
+        <li>Globally, 20-30% of commercial saffron is adulterated, ranging from 3.5% in regulated EU markets to as high as 60% in some Indian markets - common fakes include dyed corn silk, safflower, and synthetic dyes including carcinogenic Sudan compounds</li>
+        <li>Saffron has a genuinely concerning safety profile only at high doses - amounts above 5g (not mg) can cause toxicity, and doses this size have been documented as fatal when misused as an abortifacient. Standard 30mg supplement doses are well below this threshold</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Saffron has two completely separate reputations that rarely get discussed together. As a spice, it's the most expensive in the world by weight - $1,100 to $11,000 per kilogram - and one of the most counterfeited foods on earth, with a fraud history dating back to medieval Europe, where selling fake saffron could get you executed. As a supplement, it has a genuine, decades-deep body of clinical research into depression and mood, with some meta-analyses finding effects comparable to prescription antidepressants.</p>
+
+      <p>Both of those things are true simultaneously, and 2025 added a third layer worth understanding: a rigorous new trial found saffron didn't actually move the needle on the primary outcomes it was designed to test in healthy people - while still showing something real, just smaller and different than expected. This is a case where the full picture genuinely requires holding several true things at once.</p>
+
+      <div class="article-img">
+        <img src="/images/saffron-mood-research.jpg" alt="Clinical questionnaire representing saffron mood research" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The December 2025 Trial That Complicated the Story</h2>
+
+      <p>A randomized, double-blind, placebo-controlled trial published in the American Journal of Clinical Nutrition tested 6 weeks of saffron extract in 51 healthy adults with subclinical neuropsychiatric symptoms - meaning low mood, mild anxiety, or fatigue that didn't meet criteria for a clinical diagnosis. The primary outcome was a composite score combining standardized depression, anxiety, and fatigue measures.</p>
+
+      <p>The result: no significant effect on that composite score, and no significant effect on any of the three individual symptom measures either. The trial also found no significant change in inflammatory markers or HPA-axis (stress hormone) reactivity - mechanisms often proposed to explain saffron's effects. This is a genuinely negative result on the primary endpoints, run by a credible research team, published in a respected journal.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">But the Same Trial Found Something Else</div>
+        <p>Buried past the headline finding: saffron significantly improved self-perceived mental health scores on a standard quality-of-life questionnaire (the SF-12) compared to placebo (p=0.04), even though it didn't move the clinical symptom scales. People taking saffron felt their general mental health had improved more than the placebo group did - a real, statistically significant, but considerably more modest and subjective outcome than "saffron treats depression." This is the kind of nuance that gets lost when a study gets compressed into a single headline in either direction.</p>
+      </div>
+
+      <h2>Why an Earlier, Larger Trial Found More</h2>
+
+      <p>Context matters enormously here, and it explains why this isn't really a contradiction. A separate 2025 trial published in the Journal of Nutrition tested a standardized saffron extract (Affron, 28mg/day) over 12 weeks in 202 adults specifically selected for having depressive symptoms - not healthy volunteers, but people who actually had something to improve. That's a meaningfully different population and a longer treatment window than the 6-week, 51-person trial above.</p>
+
+      <div class="clash-grid">
+        <div class="clash-card healthy">
+          <div class="clash-label">Dec 2025 Trial - Healthy Adults</div>
+          <h4>51 People, 6 Weeks, No Diagnosis Required</h4>
+          <p>Subclinical symptoms only. No effect on primary composite symptom score. Real but modest effect on self-rated general mental health only.</p>
+        </div>
+        <div class="clash-card depressed">
+          <div class="clash-label">2025 Affron Trial - Symptomatic Adults</div>
+          <h4>202 People, 12 Weeks, Depressive Symptoms Required</h4>
+          <p>Larger sample, longer duration, a population actually experiencing the symptom being measured - a structurally stronger design for detecting a true effect if one exists.</p>
+        </div>
+      </div>
+
+      <p>This pattern - smaller effects or null results in healthy populations, larger effects in symptomatic populations - shows up across antidepressant research generally, including for prescription SSRIs, which also struggle to outperform placebo in mild or subclinical cases. It doesn't mean saffron "doesn't work." It means the honest claim is narrower than the marketing version: saffron's evidence is strongest for people with actual depressive symptoms, not as a general mood enhancer for anyone feeling fine.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Depression (Clinically Diagnosed)</h4>
+          <p>A meta-analysis of 23 trials found saffron at 28-30mg/day produced antidepressant effects in adults with major depressive disorder comparable to some SSRIs, with fewer reported adverse events - though individual trial sizes have often been small.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Subclinical / Mild Mood Symptoms</h4>
+          <p>Mixed: some trials in this population show modest mood benefits (self-rated wellbeing, sleep), while the December 2025 trial found no effect on primary clinical symptom scores in a similar population.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>PMS &amp; Sexual Dysfunction</h4>
+          <p>A trial in 120 women with PMDD found saffron significantly improved symptom severity versus placebo, performing comparably to fluoxetine. Separate research supports benefit for antidepressant-related sexual dysfunction specifically.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Preliminary</span>
+          <h4>Metabolic Markers (Prediabetes)</h4>
+          <p>Some trials report improved fasting glucose, lipid profile, and waist circumference in overweight/prediabetic individuals, part of a broader pattern of saffron research extending well beyond mood into metabolic health.</p>
+        </div>
+      </div>
+
+      <h2>The Adulteration Problem - Why Quality Might Matter More Than the Studies Suggest</h2>
+
+      <p>Here's a confounding variable almost no saffron study fully accounts for: a large share of commercial saffron isn't actually pure saffron. A 2025 systematic review of 23 studies (PubMed, Scopus, ScienceDirect, 2015-2025) found that <strong>20-30% of commercial saffron globally is adulterated</strong> - with sharp regional variation.</p>
+
+      <div class="fraud-stat">
+        <div class="fraud-title">Saffron Adulteration Rate by Market</div>
+        <div class="fraud-row">
+          <div class="fraud-region">EU (regulated)</div>
+          <div class="fraud-bar-wrap"><div class="fraud-bar" style="width: 12%;"><span>3.5%</span></div></div>
+        </div>
+        <div class="fraud-row">
+          <div class="fraud-region">Global average</div>
+          <div class="fraud-bar-wrap"><div class="fraud-bar" style="width: 50%;"><span>20-30%</span></div></div>
+        </div>
+        <div class="fraud-row">
+          <div class="fraud-region">India (some markets)</div>
+          <div class="fraud-bar-wrap"><div class="fraud-bar" style="width: 100%;"><span>up to 60%</span></div></div>
+        </div>
+        <div class="fraud-highlight">Common fraud methods: substitution with safflower ("bastard saffron"), marigold, dyed corn silk, or turmeric; bulking with extraneous plant material; and - most concerning from a safety standpoint - addition of synthetic dyes including Sudan compounds and auramine-O, both considered potentially genotoxic and carcinogenic. The UK's National Food Crime Unit issued a specific fraud alert in 2025 after finding illegally enhanced saffron in the UK market.</div>
+      </div>
+
+      <p>This matters for interpreting the research itself. If a meaningful share of saffron used in lower-quality commercial products - or even occasionally in less rigorously sourced study material - isn't full-strength, genuine saffron, that's a plausible contributor to inconsistent trial results across the literature, on top of the population and duration differences discussed above.</p>
+
+      <div class="article-img">
+        <img src="/images/saffron-authenticity-test.jpg" alt="Saffron threads being tested for authenticity in water" onerror="this.style.display='none'" />
+      </div>
+
+      <div class="checklist-box">
+        <h4>How to Check What You're Actually Buying</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Do the water test:</strong> drop a thread in warm water. Genuine saffron releases color slowly over several minutes. Dyed fakes bleed color almost instantly.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Look for ISO 3632 grading</strong> or a Certificate of Analysis specifying crocin content (the compound that determines color strength and grade).</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>For supplements specifically</strong>, look for a standardized extract (like the Affron or other named, clinically studied formulations) rather than generic "saffron extract" with no stated standardization.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Uniform, perfectly even red color</strong> in whole threads is a warning sign - genuine saffron threads show deep red bodies with slightly lighter orange-yellow tips, not flawless uniformity.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Suspiciously cheap pricing</strong> for the claimed origin/grade. Saffron's price floor is determined by hand-harvesting roughly 150 flowers per gram - genuine product cannot be cheap.</span>
+        </div>
+      </div>
+
+      <h2>Safety - Where the Real Danger Threshold Sits</h2>
+
+      <p>Saffron has an unusually wide safety margin at studied doses. Clinical trials use 20-100mg/day, typically for up to 12 weeks, with side effects limited mostly to mild nausea, dry mouth, and headache. The real danger zone is dramatically higher: toxic effects begin around 5 grams (5,000mg) per day, and doses of 12-20 grams have been documented as potentially lethal - almost always in the specific context of saffron being deliberately misused at extreme doses as an abortifacient, a traditional but dangerous practice with documented fatalities in the medical literature.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">Who Should Be Cautious</div>
+        <p>Avoid saffron in pregnancy beyond normal culinary amounts - doses above roughly 5g have documented uterine-stimulant and abortifacient effects, and safety in lactation is not well established. Avoid it if you have bipolar disorder, as saffron's effect on serotonin may trigger excitability or impulsive episodes. Saffron has a mild antiplatelet effect and may enhance the anticoagulant effect of rivaroxaban specifically - caution is warranted with any blood thinner. It can also lower blood pressure, which may compound with antihypertensive medication. People allergic to Lolium, Olea (olive), or Salsola plant species may cross-react with saffron.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🌿</div>
+          <h4>Scutellaria (Baikal Skullcap)</h4>
+          <p>A 2025 RCT tested the combination specifically for mood regulation in adults with mild-to-moderate depressive symptoms, building on each compound's individually documented neurotransmitter-modulating and anti-inflammatory effects.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🍵</div>
+          <h4>L-Theanine</h4>
+          <p>Both are studied for mood and stress support through different, non-sedating mechanisms - a common pairing in calm-focus formulations, though direct combination trials are limited.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🧘</div>
+          <h4>Ashwagandha</h4>
+          <p>Both are adaptogenic-leaning compounds studied for stress and mood; frequently combined in broader mental-wellness stacks targeting cortisol and neurotransmitter pathways from complementary angles.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>SSRIs / Antidepressants (Medical Supervision)</h4>
+          <p>Saffron has been studied as an adjunct to conventional antidepressants for treatment-related sexual dysfunction specifically - a legitimate research area, but combination should be physician-guided, not self-directed.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Blood Thinners (Caution)</h4>
+          <p>Additive bleeding-risk consideration given saffron's antiplatelet activity, particularly noted with rivaroxaban specifically in the available interaction literature.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">💊</div>
+          <h4>Sedatives (Caution)</h4>
+          <p>Saffron's mild sleep-promoting effect may add to sedatives like benzodiazepines, potentially causing excessive drowsiness - worth spacing out or discussing with a doctor.</p>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Dose</th>
+          <th>Duration (as studied)</th>
+        </tr>
+        <tr>
+          <td>Depression (clinically significant)</td>
+          <td>28 - 30mg/day standardized extract</td>
+          <td>6 - 12 weeks in most positive trials</td>
+        </tr>
+        <tr>
+          <td>General mood / mild symptoms</td>
+          <td>20 - 30mg/day</td>
+          <td>Effects, where present, are modest - not a fast-acting mood lift</td>
+        </tr>
+        <tr>
+          <td>PMS / PMDD</td>
+          <td>15mg twice daily (luteal phase)</td>
+          <td>2 menstrual cycles in the cited trial</td>
+        </tr>
+        <tr>
+          <td>Culinary use</td>
+          <td>5 - 15mg (a few threads)</td>
+          <td>No meaningful safety concern at this level</td>
+        </tr>
+      </table>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">6.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          A genuinely interesting compound with real, decades-deep clinical interest in depression specifically - the SSRI-comparable meta-analysis result is a meaningfully strong signal in this category. The score isn't higher for two honest reasons: a rigorous late-2025 trial found no effect on primary symptom measures in healthy adults, complicating the "saffron lifts anyone's mood" framing into something narrower and population-specific, and the well-documented 20-30% global adulteration rate means a real share of what's sold as saffron isn't delivering the studied compound at all - an unusually large quality-control problem layered on top of the science itself. For people with actual depressive symptoms using a verified, standardized extract, the evidence is genuinely solid; for casual mood support in someone already doing fine, it's a much weaker bet.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ Why Population Matters as Much as the Study</div>
+        <h4>Healthy adults and depressed adults respond differently to the same supplement</h4>
+        <p>See our framework for reading past a single trial's headline before drawing conclusions.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Effect of saffron extract supplementation on mood in healthy adults with subclinical symptoms of depression: a randomized, double-blind placebo-controlled study. <em>American Journal of Clinical Nutrition</em> (2025).</li>
+        <li>An Examination into the Effects of a Saffron Extract (Affron) on Mood and General Wellbeing in Adults Experiencing Low Mood: A Randomized, Double-Blind, Placebo-Controlled Trial. <em>The Journal of Nutrition</em> (2025). DOI: 10.1016/j.tjnut.2025.05.024.</li>
+        <li>Dai, L., Chen, L., Wang, W. (2020). Safety and Efficacy of Saffron for Treating Mild to Moderate Depression: A Systematic Review and Meta-analysis. <em>Journal of Nervous and Mental Disease</em>, 208(4), 269-276.</li>
+        <li>Mehdizadeh, M., Omidi, A., Morya, S., Abideen, Z. (2025/2026). Combating saffron fraud: a systematic review of adulteration practices, detection technologies, recommendations and challenges. <em>Critical Reviews in Food Science and Nutrition</em>. DOI: 10.1080/10408398.2025.2544767.</li>
+        <li>UK National Food Crime Unit Alert 2025/A004. Saffron fraud alert - authenticity testing support. Eurofins Food Testing UK.</li>
+        <li>Toxicology effects of saffron and its constituents: a review. PMC5339650.</li>
+        <li>Agha-Hosseini, M. et al. Crocus sativus L. (saffron) in the treatment of premenstrual syndrome: a double-blind, randomised and placebo-controlled trial. <em>BJOG</em>.</li>
+        <li>The Effects of Combined Scutellaria and Saffron Supplementation on Mood Regulation in Participants with Mild-to-Moderate Depressive Symptoms. <em>Nutrients</em> 2025, 17(5), 809.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want to Know How to Read Studies Like These Yourself?</h3>
+      <p>Population, sample size, and trial duration all change how much weight a single result deserves.</p>
+      <div class="cta-buttons">
+        <a href="/articles/research-flaws-guide.html" class="btn-gold">Read the Critical Thinking Guide →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/ashwagandha-guide.html" class="related-card">
+          <div class="related-img c-ashwa">
+            <img src="/images/hero-ashwagandha.jpg" alt="Ashwagandha" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Ashwagandha</span>
+            <h4>Ashwagandha: The Stress Adaptogen with a Safety Warning Worth Reading</h4>
+          </div>
+        </a>
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+        <a href="/articles/toxic-supplements-guide.html" class="related-card">
+          <div class="related-img c-toxic">
+            <img src="/images/hero-toxic-supplements.jpg" alt="Dangerous Supplements" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Investigation</span>
+            <h4>The Dangerous Supplements Nobody Warns You About</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are pregnant, have bipolar disorder, or are taking medication for depression, anxiety, or blood clotting. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

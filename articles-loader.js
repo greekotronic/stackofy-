@@ -54,6 +54,7 @@ const COLORS = {
 'c-glutathione': 'background:linear-gradient(135deg,#0a1a1a,#4A8A8A)',
 'c-urolithin': 'background:linear-gradient(135deg,#3D0A1A,#C0392B)',
 'c-natto': 'background:linear-gradient(135deg,#1a1208,#6B5530)',
+'c-saffron': 'background:linear-gradient(135deg,#3D0A1A,#C0392B)',
 };
 
 function makeCard(article, size) {

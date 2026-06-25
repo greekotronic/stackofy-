@@ -609,5 +609,16 @@
   "tags": "longevity heart-health",
   "readTime": "14 min",
   "description": "A meta-analysis of 546 people found nattokinase lowers blood pressure consistently. The same meta-analysis found low doses worsened HDL and LDL cholesterol, while a 3-year trial found zero effect on actual atherosclerosis. Here is the real evidence and the documented bleeding cases worth knowing about."
+},
+{
+  "title": "Saffron: The World's Most Faked Spice Also Has Real Mood Data",
+  "tag": "Saffron",
+  "url": "/articles/saffron-guide.html",
+  "image": "/images/hero-saffron.jpg",
+  "color": "c-saffron",
+  "featured": false,
+  "tags": "mood longevity",
+  "readTime": "13 min",
+  "description": "A December 2025 RCT in healthy adults found saffron didn't move the needle on depression, anxiety, or fatigue. Earlier trials in clinically depressed adults found real effects comparable to SSRIs. Both can be true. Here is the evidence, the 20-30% adulteration problem, and how to actually verify what's in the bottle."
 }
 ]
