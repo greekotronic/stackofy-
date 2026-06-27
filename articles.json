@@ -654,6 +654,8 @@
   "image": "/images/hero-hangover-supplements.jpg",
   "color": "c-hangover",
   "featured": false,
+  "type": "protocol",
+  "badgeType": "featured",
   "tags": "skepticism evidence",
   "readTime": "13 min",
   "description": "A marketing site claims a 2024 study proves DHM cuts hangovers by 70%. The actual study found that number nowhere - only one of nine symptoms hit statistical significance, and not even from DHM alone. Here is what the real research says, including why even NAC failed its own 2024 RCT."
