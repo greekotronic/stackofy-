@@ -120,8 +120,24 @@ const DARK_MODE_CSS = `
   const darkStyle = document.createElement('style');
   darkStyle.textContent = DARK_MODE_CSS;
   document.head.appendChild(darkStyle);
+// Inject Organization Schema (SEO)
+  const orgSchema = document.createElement('script');
+  orgSchema.type = 'application/ld+json';
+  orgSchema.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Alethia Research Institute",
+    "alternateName": "Stackofy",
+    "url": "https://stackofy.com",
+    "logo": "https://stackofy.com/favicon.svg",
+    "description": "An anonymous collective of scientists, physicians and independent researchers publishing evidence-based research on supplements, longevity and integrative health - free from pharmaceutical and advertiser influence.",
+    "slogan": "Evidence-based. No pharma ties. No fluff.",
+    "email": "research@stackofy.com",
+    "knowsAbout": ["Dietary Supplements", "Longevity Research", "Nutritional Science", "Clinical Research Methodology", "Preventive Medicine"]
+  });
+  document.head.appendChild(orgSchema);
 
- 
+  
   // Inject CSS
   const style = document.createElement('style');
   style.textContent = HEADER_CSS;

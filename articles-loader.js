@@ -333,8 +333,41 @@ async function loadArticles() {
   }
 }
 
+// Automatically inject Article schema markup for SEO on individual article pages
+async function injectArticleSchema() {
+  const path = window.location.pathname;
+  if (!path.startsWith('/articles/') || path === '/articles.html') return;
+
+  try {
+    const res = await fetch('/articles.json');
+    const articles = await res.json();
+    const current = articles.find(a => a.url === path);
+    if (!current) return;
+
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": current.title,
+      "description": current.description,
+      "image": `https://stackofy.com${current.image}`,
+      "author": { "@type": "Organization", "name": "Alethia Research Institute", "url": "https://stackofy.com/about.html" },
+      "publisher": { "@type": "Organization", "name": "Alethia Research Institute", "logo": { "@type": "ImageObject", "url": "https://stackofy.com/favicon.svg" } },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": `https://stackofy.com${current.url}` }
+    };
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+  } catch (e) {
+    console.error('Stackofy: Could not inject article schema', e);
+  }
+}
+
 if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', loadArticles);
+  document.addEventListener('DOMContentLoaded', injectArticleSchema);
 } else {
   setTimeout(loadArticles, 50);
+  setTimeout(injectArticleSchema, 50);
 }
