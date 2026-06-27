@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hangover Supplements: The "70% Reduction" Number That Doesn't Exist - Stackofy</title>
+  <meta name="description" content="A marketing site claims a 2024 study proves DHM cuts hangovers by 70%. The actual study found that number nowhere - only one of nine symptoms hit statistical significance, and not even from DHM alone. Here is what the real research says, including why even NAC failed its own 2024 RCT." />
+
+  <meta property="og:title" content="Hangover Supplements: The 70% Reduction Number That Doesn't Exist" />
+  <meta property="og:description" content="An independent review of 21 placebo-controlled trials found only very low quality evidence for any hangover product. A widely cited '70% reduction' DHM statistic doesn't appear anywhere in the study it's attributed to. Here is the honest evidence on DHM, NAC, and what mechanistically plausible options remain." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/hangover-supplements-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-hangover-supplements.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #0a1a0a, #1B4332, #2D6A4F); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,26,10,0.95) 0%, rgba(10,26,10,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .clash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+    .clash-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; }
+    .clash-card.marketing { border-color: #C0392B; }
+    .clash-card.real { border-color: var(--green-dark); }
+    .clash-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.5rem; }
+    .clash-card.marketing .clash-label { color: #C0392B; }
+    [data-theme="dark"] .clash-card.marketing .clash-label { color: #FF8080; }
+    .clash-card.real .clash-label { color: var(--green-dark); }
+    [data-theme="dark"] .clash-card.real .clash-label { color: var(--green-light); }
+    .clash-card h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 0.5rem; }
+    .clash-card p { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+    .c-glutathione { background: linear-gradient(135deg, #0a1a1a, #4A8A8A); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .clash-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-hangover-supplements.jpg" alt="A glass of water with electrolytes, representing hydration-based hangover support" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Hangover Support</span>
+      <h1>The "70% Reduction" Number That Doesn't Exist</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>13 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>A widely shared marketing claim says a 2024 clinical trial "proves DHM cuts hangover severity by 70%." We read the actual study. That number appears nowhere in it - it does not exist in the source being cited</li>
+        <li>The real study tested 25 people, measured 9 separate hangover symptoms, and found exactly one - gastrointestinal discomfort - statistically significant, and even that result came from a Hovenia dulcis + kudzu combination, not DHM alone</li>
+        <li>An independent 2022 systematic review of 21 placebo-controlled hangover trials concluded there is only "very low quality evidence" for any hangover product currently on the market - this is the category-wide pattern, not a DHM-specific failure</li>
+        <li>Even N-acetylcysteine (NAC), which has solid mechanistic logic (it's a glutathione precursor that can bind acetaldehyde), failed to beat placebo in a 2024 randomized trial despite the theory making sense on paper</li>
+        <li>The most mechanistically defensible approach remains addressing the things that demonstrably happen during a hangover - dehydration and electrolyte loss - even though dedicated RCTs specifically isolating magnesium or electrolytes for hangover relief are thin</li>
+        <li>DHM itself has a real, separate problem: it has poor solubility, poor intestinal absorption, and poor stability in light - a bioavailability issue that exists independently of whether the symptom-relief claims hold up</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>The hangover supplement market is worth roughly $1.8 to $2.8 billion and growing fast, and dihydromyricetin (DHM) has become its star ingredient - the flavonoid compound found in Hovenia dulcis, the Japanese/Chinese raisin tree, and the active ingredient in most "scientifically-backed" hangover products on the market today.</p>
+
+      <p>One thing prompted us to dig deeper than usual here: a marketing page makes a very specific, very confident claim - that a 2024 clinical trial in the journal Foods "proves DHM cuts hangover severity by 70% (p&lt;0.001)." That's an unusually precise number for a category an independent academic review just called "very low quality evidence." So we went and read the actual study.</p>
+
+      <div class="article-img">
+        <img src="/images/hangover-raisin-tree-fruit.jpg" alt="Dried Hovenia dulcis raisin tree fruit, the source of dihydromyricetin" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The 70% Number Does Not Exist in the Study Being Cited</h2>
+
+      <p>We located and read the full text of the actual 2024 paper (Lee et al., Foods, DOI: 10.3390/foods13244021) that the "70% reduction" claim is attributed to. The number is not in it. Not the headline figure, not in any table, not in the discussion. Here is what the study actually found.</p>
+
+      <div class="clash-grid">
+        <div class="clash-card marketing">
+          <div class="clash-label">The Marketing Claim</div>
+          <h4>"70% Hangover Reduction, p&lt;0.001"</h4>
+          <p>Presented as the strongest clinical evidence yet for DHM, citing "UCLA and USC research" and describing the study as using "25 healthy adults" with results "across all primary outcome measures."</p>
+        </div>
+        <div class="clash-card real">
+          <div class="clash-label">What the Actual Paper Says</div>
+          <h4>1 of 9 Symptoms Significant - Not From DHM Alone</h4>
+          <p>25 participants, Korean research team (Korea University and Kwangdong Pharmaceutical), testing Hovenia combined with either kudzu root or glutathione yeast extract - not isolated DHM. Total hangover score: not significant (p=0.32). Eight of nine individual symptoms: not significant. Only gastrointestinal discomfort reached significance (p&lt;0.05), and only in the Hovenia+kudzu group.</p>
+        </div>
+      </div>
+
+      <p>To be precise about what this study is and isn't: it's a real, properly randomized, double-blind, placebo-controlled, peer-reviewed trial - the methodology itself is sound. The institutions are Korea University and a Korean medical research center, not UCLA or USC. Several study authors are employees of Kwangdong Pharmaceutical, the company that supplied the extracts, which is disclosed in the paper's own conflict-of-interest statement. None of that makes the study fraudulent. It does mean the "70% reduction" figure attributed to it is simply not something this paper supports, by any reading of its actual results tables.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">This Is a Pattern Worth Naming, Not Just a Single Bad Statistic</div>
+        <p>An independent 2022 systematic review of 21 placebo-controlled hangover trials, covering a wide range of products, concluded there is currently only "very low quality evidence" supporting any hangover treatment or prevention product on the market. This is the category-level finding from researchers with no product to sell - not a hit piece on one ingredient, but the honest baseline you should bring to any hangover supplement marketing claim, DHM or otherwise.</p>
+      </div>
+
+      <h2>What About NAC? It Has Better Logic, Same Result</h2>
+
+      <p>N-acetylcysteine is mechanistically one of the more plausible hangover compounds: it's a direct precursor to glutathione, the antioxidant your liver depletes while processing alcohol's toxic byproduct, acetaldehyde. The theory is clean and the biochemistry checks out on paper. A 2024 randomized, double-blind, placebo-controlled study tested exactly this - and found NAC produced no significant difference from placebo on hangover severity scores, despite measuring real biochemical changes in the process.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Tested and Failed</span>
+          <h4>NAC (N-Acetylcysteine)</h4>
+          <p>2024 RCT in 40 students found no significant effect on hangover severity scores (AHSS) versus placebo, despite NAC's sound glutathione-precursor mechanism. A separate, smaller 49-person crossover study using low-dose NAC (600-1800mg) also failed to show clear benefit.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">One Mild Signal, Not From DHM Alone</span>
+          <h4>Hovenia dulcis / DHM Combinations</h4>
+          <p>The 2024 Foods study found a significant reduction in one of nine symptoms (GI discomfort), only in the Hovenia+kudzu combination group. Earlier smaller crossover trials (Kim et al. 2017) reported broader hangover symptom improvement in a specific subgroup (heterozygous ALDH2 genotype) - a genetically narrower finding than general marketing suggests.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Thin, Not Absent</span>
+          <h4>Electrolytes &amp; Hydration</h4>
+          <p>Alcohol is a diuretic and dehydration is a measurable, real contributor to hangover symptoms - this part of the mechanism is not contested. Dedicated RCTs isolating electrolyte repletion specifically as a hangover treatment are surprisingly sparse, but the underlying physiological rationale is more solid than for most "hangover cure" ingredients.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Category-Wide Verdict</span>
+          <h4>Everything Else (Milk Thistle, B Vitamins, Prickly Pear)</h4>
+          <p>The 2022 systematic review of 21 trials found only clove extract, tolfenamic acid, and pyritinol among the more promising interventions identified across the entire literature - and even those are described as preliminary, not as established treatments.</p>
+        </div>
+      </div>
+
+      <div class="rct-visual">
+        <div class="rct-title">DHM's Separate, Less-Discussed Problem: Bioavailability</div>
+        <div class="rct-row">
+          <div class="rct-n">Poor<span>Solubility</span></div>
+          <div class="rct-desc">According to a pharmacology review from the Alzheimer's Drug Discovery Foundation's Cognitive Vitality program, DHM has low bioavailability, low solubility, poor intestinal absorption, poor permeability, and poor stability - it also decomposes when exposed to light.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">No<span>Established Dose</span></div>
+          <div class="rct-desc">The same review states plainly that no clinically validated therapeutic dose has been established for DHM for any indication, despite commercial products confidently listing specific milligram amounts.</div>
+        </div>
+        <div class="rct-highlight">This is a separate issue from whether the symptom-relief claims hold up in trials - it's a pharmacokinetic problem on top of an efficacy problem. Even if DHM did something meaningful, getting a reliable, absorbed dose into your system is its own unresolved challenge.</div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/hangover-hydration-electrolytes.jpg" alt="Water with citrus, representing hydration-based hangover support" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What's Actually Worth Doing - and the Honest Limits of the Evidence</h2>
+
+      <p>Dehydration, electrolyte loss, blood sugar disruption, and disrupted sleep architecture are the parts of a hangover with the clearest, least disputed physiological basis - alcohol is a diuretic, and a night of drinking reliably disrupts all of these. That doesn't mean there's a deep RCT library proving magnesium or electrolyte supplements cure hangovers; that specific research is thinner than you'd expect for something this physiologically obvious. What it does mean is that addressing demonstrated deficits (fluid, electrolytes, blood sugar) rests on more solid physiological ground than most of what's sold as a dedicated "hangover cure," even without a flashy trial behind each individual nutrient.</p>
+
+      <div class="skip-box">
+        <div class="skip-label">A Reasonable, Honest Framework</div>
+        <p>Hydrate with electrolytes (sodium, potassium, magnesium) rather than plain water alone, since alcohol depletes more than just fluid volume. Eat before or while drinking to blunt blood sugar swings. Prioritize sleep, since alcohol disrupts sleep architecture even when total sleep time seems normal. None of this is a guaranteed fix - the underlying physiology of why hangovers happen at all is still not fully understood, per multiple researchers in this space - but it targets mechanisms that are actually measurable, rather than a marketing claim attributed to a study that doesn't contain it.</p>
+      </div>
+
+      <h2>What It Stacks Well With (and What Doesn't Add Much)</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🧂</div>
+          <h4>Magnesium + Electrolytes</h4>
+          <p>Addresses a demonstrated physiological deficit (alcohol-driven diuresis) rather than a marketing-driven mechanism - the most defensible category here, even without a dedicated hangover RCT to point to.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🍞</div>
+          <h4>Food Before/During Drinking</h4>
+          <p>Slows alcohol absorption and blunts the blood sugar disruption that contributes to next-day fatigue and brain fog - simple, unglamorous, and mechanistically solid.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⏱️</div>
+          <h4>Time and Sleep</h4>
+          <p>No supplement substitutes for this. Hangover symptoms resolve as the body clears alcohol's metabolic byproducts and sleep debt - a process that happens regardless of what you take.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>DHM (Tempered Expectations)</h4>
+          <p>Not harmful at studied doses, but the evidence for symptom relief is thin and the "70% reduction" framing some sellers use does not reflect what the underlying research actually shows.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>NAC (Tempered Expectations)</h4>
+          <p>Good mechanistic story, no RCT support so far for actual hangover symptom relief. Worth knowing if you're taking it specifically for this purpose rather than another use case.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">💊</div>
+          <h4>Pain Relievers (Caution)</h4>
+          <p>Acetaminophen specifically should be avoided with residual alcohol in your system due to additive liver stress - a genuine safety consideration, not just a hangover-efficacy question.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">3.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          The entire hangover supplement category scores low for the same reason across nearly every ingredient marketed within it: an independent systematic review of 21 trials found only very low quality evidence for any product, and our own check of one of the most frequently cited "breakthrough" studies found its actual results don't support the statistic commonly attributed to it. DHM is not dangerous at studied doses, and the underlying biochemistry of compounds like NAC is genuinely reasonable - but reasonable mechanism and actual measured symptom relief are two different things, and this category currently has much more of the former than the latter. The mechanistically soundest move - replacing fluid and electrolytes lost to alcohol's diuretic effect - barely needs a "supplement" framing at all.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ Why We Read the Primary Source Here</div>
+        <h4>A widely cited "70% reduction" statistic doesn't appear in the study it's attributed to</h4>
+        <p>See our framework for checking what a study actually says before trusting a marketing summary of it.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Lee, K.W., Xu, G., Paik, D.H. et al. (2024). Clinical Evaluation of Hovenia dulcis Extract Combinations for Effective Hangover Relief in Humans. <em>Foods</em>, 13(24), 4021. DOI: 10.3390/foods13244021.</li>
+        <li>Verster, J.C., van Rossum, C.J.I., Scholey, A. (2021). Unknown safety and efficacy of alcohol hangover treatments puts consumers at risk. <em>Addictive Behaviors</em>, 122, 107029.</li>
+        <li>Pirnar, Z., et al. (2024). N-Acetylcysteine Ineffective in Alleviating Hangover from Binge Drinking: A Clinical Study. <em>Biomedicines</em> / MDPI, 12(8), 585.</li>
+        <li>The use of N-acetylcysteine in the prevention of hangover: a randomized trial. PMC8238992.</li>
+        <li>Dihydromyricetin. Cognitive Vitality, Alzheimer's Drug Discovery Foundation - pharmacology and bioavailability review.</li>
+        <li>Kim, H., Kim, Y.J., Jeong, H.Y. et al. (2017). A standardized extract of the fruit of Hovenia dulcis alleviated alcohol-induced hangover in healthy subjects with heterozygous ALDH2: A randomized, controlled, crossover trial. <em>Journal of Ethnopharmacology</em>, 209, 167-174.</li>
+        <li>Kramer, M.S. (2023). Preventing or treating a hangover: Dilution or delusion? In: <em>Believe It or Not</em>. Springer.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want to Know How to Read Studies Like These Yourself?</h3>
+      <p>Marketing summaries and the actual underlying data don't always match - here's the framework for checking.</p>
+      <div class="cta-buttons">
+        <a href="/articles/research-flaws-guide.html" class="btn-gold">Read the Critical Thinking Guide →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+        <a href="/articles/magnesium-guide.html" class="related-card">
+          <div class="related-img c-mag">
+            <img src="/images/hero-magnesium.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Magnesium</span>
+            <h4>Magnesium: The Master Mineral That Everyone's Missing</h4>
+          </div>
+        </a>
+        <a href="/articles/glutathione-guide.html" class="related-card">
+          <div class="related-img c-glutathione">
+            <img src="/images/hero-glutathione.jpg" alt="Glutathione" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Glutathione</span>
+            <h4>Glutathione: The "0% Absorbed" Claim That Doesn't Hold Up</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. It does not address or condone excessive alcohol consumption; if you're concerned about your drinking, please speak with a healthcare professional. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
