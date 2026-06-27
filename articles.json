@@ -670,5 +670,16 @@
   "tags": "performance safety longevity",
   "readTime": "14 min",
   "description": "Methylene blue's mitochondrial electron-cycling mechanism is real biochemistry, not hype. Its FDA prescribing information also lists a specific, documented, sometimes fatal interaction with common antidepressants - one that goes well beyond just SSRIs. Here is the real mechanism and the warning worth taking seriously."
+},
+{
+  "title": "Inositol: What the Evidence Actually Supports for PCOS",
+  "tag": "Inositol",
+  "url": "/articles/inositol-guide.html",
+  "image": "/images/hero-inositol.jpg",
+  "color": "c-inositol",
+  "featured": false,
+  "tags": "hormones fertility",
+  "readTime": "14 min",
+  "description": "International guidelines recommend inositol as a first-line PCOS option. A January 2026 umbrella review of 13 meta-analyses found zero high-quality evidence behind any of it. Both things are true at once. Here is what the data actually shows, dose by dose, outcome by outcome."
 }
 ]
