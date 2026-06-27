@@ -58,6 +58,7 @@ const COLORS = {
 'c-peptides': 'background:linear-gradient(135deg,#1A1A1A,#4A6A6A)',
 'c-glp1': 'background:linear-gradient(135deg,#1a2a3a,#4A7A9D)',
 'c-hangover': 'background:linear-gradient(135deg,#1a1a1a,#2D6A4F)',
+'c-methyleneblue': 'background:linear-gradient(135deg,#0a1a2a,#185FA5)',
 };
 
 function makeCard(article, size) {
