@@ -30,15 +30,16 @@
     "description": "The Endocrine Society reversed its own 30-year-old thresholds in 2024. The IOM still says 600 IU is plenty. Finland mandates fortification and nearly eliminated deficiency; the UK fortifies almost nothing. Here is the real, contested picture."
   },
   {
-    "title": "Magnesium: The Master Mineral That Everyone's Missing",
-    "tag": "Magnesium",
-    "url": "/articles/magnesium-guide.html",
-    "image": "/images/hero-magnesium.jpg",
-    "color": "c-mag",
-    "tags": "longevity sleep brain performance",
-    "readTime": "9 min",
-    "description": "Involved in 300+ enzyme reactions. Most people are deficient and don't know it."
-  },
+  "title": "Magnesium: The Master Mineral That Everyone's Missing",
+  "tag": "Magnesium",
+  "url": "/articles/magnesium-guide.html",
+  "image": "/images/hero-magnesium.jpg",
+  "color": "c-mag",
+  "featured": false,
+  "tags": "sleep longevity",
+  "readTime": "18 min",
+  "description": "Roughly half the US population doesn't get enough magnesium, and standard blood tests miss most of it. The 'glycinate for sleep, threonate for brain' story you've heard is largely marketing - no trial has ever compared the forms head-to-head. Here is what the actual research supports, form by form."
+},
   {
     "title": "Zinc: The Quiet Mineral That Keeps Everything Running",
     "tag": "Zinc",
