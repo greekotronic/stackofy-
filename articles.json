@@ -49,16 +49,17 @@
     "readTime": "8 min",
     "description": "Subtle deficiency quietly erodes immunity, testosterone and mental sharpness."
   },
-  {
-    "title": "Selenium: The Tiny Mineral with Giant Anti-Aging Powers",
-    "tag": "Selenium",
-    "url": "/articles/selenium-guide.html",
-    "image": "/images/thumb-selenium.jpg",
-    "color": "c-sel",
-    "tags": "longevity immune",
-    "readTime": "8 min",
-    "description": "Cofactor in your master antioxidant enzyme. Supports thyroid, immune function and DNA repair."
-  },
+ {
+  "title": "Selenium: Small Amounts, Big Impact - If You Actually Need It",
+  "tag": "Selenium",
+  "url": "/articles/selenium-guide.html",
+  "image": "/images/hero-selenium.jpg",
+  "color": "c-sel",
+  "featured": false,
+  "tags": "thyroid immune longevity",
+  "readTime": "14 min",
+  "description": "A $114 million trial of 35,533 men was stopped early after a possible signal linking selenium to higher diabetes risk. The explanation isn't that selenium is dangerous - it's that the men were already selenium-replete, and there's a real, mouse-confirmed mechanism for why excess matters. Here is the full, honest picture."
+},
   {
   "title": "CoQ10: The Heart Evidence Is Strong, the Muscle Evidence Is Mixed",
   "tag": "CoQ10",

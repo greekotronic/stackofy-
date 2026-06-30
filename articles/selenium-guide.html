@@ -3,12 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Selenium: The Tiny Mineral with Giant Anti-Aging Powers - Stackofy</title>
-  <meta name="description" content="You only need trace amounts of selenium - but without it, your antioxidant system falters, your thyroid stalls, and your risk of chronic disease quietly ticks upward. Here is what you need to know." />
+  <title>Selenium: Small Amounts, Big Impact - If You Actually Need It - Stackofy</title>
+  <meta name="description" content="A $114 million trial of 35,533 men was stopped early after a possible signal linking selenium to higher diabetes risk. The explanation isn't that selenium is dangerous - it's that the men were already selenium-replete, and there's a real, mouse-confirmed mechanism for why excess matters. Here is the full, honest picture." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Selenium: The Tiny Mineral with Giant Anti-Aging Powers" />
-  <meta property="og:description" content="Trace amounts. Giant impact. Selenium supports your master antioxidant enzyme, thyroid function, immune balance and DNA repair." />
+  <meta property="og:title" content="Selenium: Small Amounts, Big Impact - If You Actually Need It" />
+  <meta property="og:description" content="SELECT, the largest prostate cancer prevention trial ever run, was stopped early partly over a non-significant diabetes signal in the selenium arm. The explanation traces to baseline selenium status - participants already had high blood levels - and a real mechanism: excess selenium can overexpress an antioxidant enzyme that interferes with insulin signaling. Here is what that means for whether you should supplement." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://stackofy.com/articles/selenium-guide" />
   <meta property="og:image" content="https://stackofy.com/images/hero-selenium.jpg" />
@@ -17,414 +16,150 @@
 
   <style>
     :root {
-      --green-dark: #1B4332;
-      --green-mid: #2D6A4F;
-      --green-light: #95D5B2;
-      --gold: #D4A853;
-      --gold-light: #FDF3E0;
-      --bg: #FAF8F4;
-      --surface: #ffffff;
-      --text: #1A1A1A;
-      --text-muted: #666666;
-      --border: #E0DDD8;
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
       --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
-      --radius: 12px;
-      --radius-sm: 8px;
+      --radius: 12px; --radius-sm: 8px;
     }
-
-    [data-theme="dark"] {
-      --bg: #0F1A14;
-      --surface: #1A2B20;
-      --text: #F0EDE8;
-      --text-muted: #9DB8AA;
-      --border: #2A3D30;
-      --gold-light: #2A220D;
-    }
-
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .form-card h4 { color: var(--green-light) !important; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      transition: background 0.3s, color 0.3s;
-    }
-
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
     a { text-decoration: none; color: inherit; }
 
-    #progress-bar {
-      position: fixed;
-      top: 0; left: 0;
-      height: 3px;
-      background: var(--gold);
-      width: 0%;
-      z-index: 200;
-      transition: width 0.1s;
-    }
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
 
-    header {
-      background: var(--gradient);
-      padding: 0 2rem;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #2C1A0E, #5C3A1E, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
 
-    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
-    .logo-icon { display: flex; flex-direction: column; gap: 3px; }
-    .capsule { height: 7px; border-radius: 4px; }
-    .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
-    .capsule:nth-child(2) { width: 22px; background: var(--green-light); }
-    .capsule:nth-child(3) { width: 26px; margin-left: 2px; background: var(--gold); }
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
 
-    .header-right { display: flex; align-items: center; gap: 1.5rem; }
-    nav { display: flex; gap: 1.5rem; }
-    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
-    nav a:hover { color: #FAF8F4; }
-
-    .dark-toggle {
-      background: rgba(255,255,255,0.15);
-      border: 0.5px solid rgba(255,255,255,0.2);
-      border-radius: 20px;
-      padding: 5px 12px;
-      cursor: pointer;
-      color: #FAF8F4;
-      font-size: 13px;
-    }
-
-    .article-hero {
-      position: relative;
-      height: 380px;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-    }
-
-    .hero-img {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, #2C1A0E, #5C3A1E, #1B4332);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 100px;
-    }
-
-    .hero-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.7;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 2rem 3rem;
-      max-width: 860px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .article-tag {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      background: var(--gold);
-      color: #1A1A1A;
-      padding: 4px 10px;
-      border-radius: 4px;
-      display: inline-block;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-content h1 {
-      color: #FAF8F4;
-      font-size: 1.9rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.3px;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-meta {
-      color: var(--green-light);
-      font-size: 13px;
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-    }
-
-    .article-wrapper {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem;
-    }
-
-    .tldr-box {
-      background: var(--gold-light);
-      border-left: 4px solid var(--gold);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .tldr-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.5rem;
-    }
-
-    .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
-    .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
     .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
 
     .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
     .article-content p { margin-bottom: 1.4rem; }
-
-    .article-content h2 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--green-dark);
-      margin: 2.5rem 0 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--gold);
-      display: inline-block;
-    }
-
-    .article-content h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
     .article-content strong { color: var(--text); font-weight: 600; }
-    .article-content ul, .article-content ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
-    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
     .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
-    .article-content a:hover { border-color: var(--green-dark); }
 
     .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
-    .article-img img { width: 100%; height: auto; display: block; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
 
-    .forms-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.75rem;
-      margin: 1.5rem 0;
-    }
+    .mech-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .mech-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .mech-flow { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .mech-step { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.75rem 1rem; font-size: 13px; font-weight: 600; color: var(--text); flex: 1; min-width: 140px; text-align: center; }
+    .mech-arrow { font-size: 18px; color: var(--gold); flex-shrink: 0; }
+    .mech-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
 
-    .form-card {
-      background: var(--surface);
-      border-radius: var(--radius-sm);
-      border: 0.5px solid var(--border);
-      padding: 1rem;
-    }
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
 
-    .form-card.recommended { border-color: var(--green-dark); }
-    .form-card.avoid { border-color: #C0392B; opacity: 0.8; }
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
 
-    .form-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
 
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .forms-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .form-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.1rem; }
+    .form-card.recommended { border: 1.5px solid var(--green-dark); }
+    .form-card.avoid { border: 1.5px solid #C0392B; opacity: 0.85; }
+    .form-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
     .form-label.rec { color: var(--green-dark); }
     [data-theme="dark"] .form-label.rec { color: var(--green-light); }
     .form-label.bad { color: #C0392B; }
-    .form-label.ok { color: var(--text-muted); }
+    [data-theme="dark"] .form-label.bad { color: #FF8080; }
+    .form-card h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 4px; }
+    .form-card p { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
 
-    .form-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-    .form-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
 
-    .dosing-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.5rem 0;
-      font-size: 14px;
-    }
-
-    .dosing-table th {
-      background: var(--green-dark);
-      color: #FAF8F4;
-      padding: 10px 14px;
-      text-align: left;
-      font-weight: 600;
-    }
-
-    .dosing-table td {
-      padding: 10px 14px;
-      border-bottom: 0.5px solid var(--border);
-      color: var(--text);
-    }
-
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
     .dosing-table tr:nth-child(even) td { background: var(--bg); }
 
-    .warning-box {
-      background: #fff8f0;
-      border-left: 4px solid #E67E22;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      padding: 1.25rem 1.5rem;
-      margin: 2rem 0;
-    }
-
-    .warning-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: #E67E22;
-      margin-bottom: 0.5rem;
-    }
-
-    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
-
-    .synergy-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.75rem;
-      margin: 1.5rem 0;
-    }
-
-    .synergy-card {
-      background: var(--surface);
-      border: 0.5px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 0.875rem;
-      text-align: center;
-    }
-
-    .synergy-card .icon { font-size: 22px; margin-bottom: 6px; }
-    .synergy-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
-    [data-theme="dark"] .synergy-card h4 { color: var(--green-light); }
-    .synergy-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
-
-    .aaf-badge {
-      background: var(--gradient);
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-      margin: 2rem 0;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
     .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
     .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
     .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
 
-    .sources {
-      background: var(--surface);
-      border: 0.5px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      margin: 2.5rem 0;
-    }
-
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
     .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
     .sources ol { padding-left: 1.25rem; }
     .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
-    .sources a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
-    [data-theme="dark"] .sources a { color: var(--green-light); }
 
-    .cta-block {
-      background: var(--gradient);
-      border-radius: var(--radius);
-      padding: 2rem;
-      margin: 2.5rem 0;
-      text-align: center;
-    }
-
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
     .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
     .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
     .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
-    .btn-gold {
-      background: var(--gold);
-      color: #1A1A1A;
-      border: none;
-      border-radius: var(--radius-sm);
-      padding: 11px 22px;
-      font-size: 14px;
-      font-weight: 600;
-      display: inline-block;
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: #FAF8F4;
-      border: 1px solid rgba(255,255,255,0.4);
-      border-radius: var(--radius-sm);
-      padding: 11px 22px;
-      font-size: 14px;
-      font-weight: 600;
-      display: inline-block;
-    }
-
-    .disclaimer {
-      background: var(--gold-light);
-      border-radius: var(--radius-sm);
-      border: 0.5px solid var(--gold);
-      padding: 1rem 1.25rem;
-      margin: 2rem 0;
-      font-size: 12px;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .disclaimer strong { color: var(--text); }
-
-    footer {
-      background: var(--gradient);
-      color: var(--green-light);
-      text-align: center;
-      padding: 2rem;
-      font-size: 13px;
-      line-height: 2;
-    }
-
-    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 0.5rem; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
-    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; gap: 0; }
-    .mobile-menu.open { display: flex !important; }
-    .mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
-    .mobile-menu a:last-child { border-bottom: none; }
-    @media (max-width: 600px) { header { padding: 0 1rem !important; } nav { display: none !important; } .hamburger { display: flex !important; } .hero-content { padding: 1.5rem 1.25rem !important; } .hero-content h1 { font-size: 1.4rem !important; } .article-wrapper { padding: 1.5rem 1rem !important; } }
-    .footer-links a { color: var(--green-light); font-size: 13px; }
-    .footer-links a:hover { color: #FAF8F4; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
 
     .related-section { margin: 2.5rem 0; }
     .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
     .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; cursor: pointer; transition: border-color 0.2s, transform 0.2s; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
     .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
-    .related-img { height: 110px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .related-img { height: 110px; overflow: hidden; }
     .related-img img { width: 100%; height: 100%; object-fit: cover; }
     .related-body { padding: 0.875rem; }
     .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
     .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
-    @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr !important; } }
-    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
-    .c-omega { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
-    .c-vitd { background: linear-gradient(135deg, #7A5C10, #D4A853); }
-    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
     .c-zinc { background: linear-gradient(135deg, #1a3a2a, #2D6A4F); }
-    .c-sel { background: linear-gradient(135deg, #2C1A0E, #5C3A1E); }
+    .c-omega { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
     .c-coq { background: linear-gradient(135deg, #1a0a00, #5C3A00); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .forms-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
   </style>
   <script src="/header.js"></script>
 </head>
@@ -434,16 +169,16 @@
 
   <div class="article-hero">
     <div class="hero-img">
-      <img src="/images/selenium-mitochondria.jpg" alt="Selenium and mitochondrial energy production" onerror="this.style.display='none'" />
+      <img src="/images/hero-selenium.jpg" alt="Brazil nuts, a natural source of selenium" onerror="this.style.display='none'" />
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <span class="article-tag">Selenium</span>
-      <h1>Selenium: The Tiny Mineral with Giant Anti-Aging Powers</h1>
+      <h1>Small Amounts, Big Impact - If You Actually Need It</h1>
       <div class="hero-meta">
         <span>Alethia Research Institute</span>
         <span>·</span>
-        <span>8 min read</span>
+        <span>14 min read</span>
         <span>·</span>
         <span>June 2026</span>
       </div>
@@ -454,53 +189,87 @@
 
     <div class="tldr-box">
       <div class="tldr-label">TL;DR</div>
-      <p>Selenium is a trace mineral with outsized impact. You need very little - but getting it right matters enormously:</p>
       <ul>
-        <li>Choose L-selenomethionine - the most bioavailable and well-studied form</li>
-        <li>Adults need 100-200 mcg daily - the upper limit is 400 mcg, do not exceed it</li>
-        <li>Brazil nuts are unreliable - selenium content varies wildly depending on soil</li>
-        <li>Take with a protein-rich meal, morning or midday</li>
-        <li>Check your multivitamin - you may already be getting selenium without knowing it</li>
+        <li>You only need trace amounts of selenium, but without enough, your master antioxidant enzyme system falters, your thyroid stalls, and immune balance weakens</li>
+        <li>SELECT, a $114 million, 35,533-man prostate cancer prevention trial, was stopped early partly over a small, statistically non-significant signal linking selenium supplementation to higher diabetes risk - this gets cited often, but rarely with the context that actually explains it</li>
+        <li>The key missing context: SELECT participants already had high baseline blood selenium (136 µg/L) - this wasn't a deficient population being pushed into harm, it was an already-sufficient population getting more on top</li>
+        <li>There is a real, mechanistically demonstrated explanation for why excess selenium specifically (not adequate selenium) could interfere with insulin signaling - overexpression of the selenium-dependent enzyme GPx1 disrupts a hydrogen peroxide signal that insulin pathways actually need to function normally, confirmed directly in mouse models</li>
+        <li>A separate, lower-baseline UK trial found no diabetes effect at all, and researchers note typical dietary and supplement amounts of selenium probably aren't sufficient to cause this in people who aren't already selenium-replete</li>
+        <li>The practical takeaway: this isn't a reason to fear selenium, it's a reason to actually know your status before supplementing long-term at meaningful doses, rather than assuming more is automatically better</li>
       </ul>
     </div>
 
     <div class="article-content">
 
-      <p>Selenium is the kind of mineral that does not say much, but always gets invited to the important meetings. You only need trace amounts - micrograms, not milligrams - but without it, your body's antioxidant system falters, your thyroid stalls, your immune system gets sluggish, and your risk of chronic disease quietly ticks upward.</p>
+      <p>Selenium doesn't get the headlines that vitamin D or omega-3 gets, but it plays a genuinely central role in how you age. It's involved in selenoproteins that support your master antioxidant enzyme system, thyroid hormone activation, immune balance, and DNA repair. The amounts your body needs are tiny - this is a trace mineral measured in micrograms, not milligrams - but the consequences of getting it wrong, in either direction, are real.</p>
 
-      <p>In the world of longevity, selenium plays a deceptively large role. It is an essential cofactor in glutathione peroxidase - your body's master antioxidant enzyme - and it is involved in thyroid hormone production, DNA repair, fertility, immune modulation, and even cancer prevention. <strong>When selenium is low, things break down in slow motion. When it is optimized, your cellular housekeeping runs like clockwork.</strong></p>
-
-      <div class="article-img">
-        <img src="/images/thumb-selenium.jpg" alt="Brazil nuts - the richest natural source of selenium" onerror="this.style.display='none'" />
-      </div>
-
-      <h2>Why Selenium Matters for Longevity</h2>
-
-      <p>Start with your mitochondria. Every time they produce energy, they also create free radicals - tiny sparks of oxidative chaos. Selenium helps neutralize those sparks before they damage your cellular machinery. It is like an internal firefighter for your most vital systems.</p>
-
-      <p>Then there is the thyroid. Selenium is critical for converting T4 - the storage form of thyroid hormone - into T3, the active form. Without enough selenium, even a perfectly healthy thyroid can underperform. The result: sluggishness, cold intolerance, and brain fog that does not lift despite normal TSH levels on a standard blood panel.</p>
+      <p>That "either direction" part matters more than most coverage of selenium admits. The largest, most expensive prostate cancer prevention trial ever conducted found a small, much-discussed signal connecting selenium supplementation to increased diabetes risk - and the full story behind that signal, including a plausible biological mechanism and an important caveat about who was actually tested, is worth understanding rather than skipping past.</p>
 
       <div class="article-img">
-        <img src="/images/selenium-thyroid-energy.jpg" alt="Energy and vitality - selenium supports thyroid function" onerror="this.style.display='none'" />
+        <img src="/images/selenium-antioxidant-shield.jpg" alt="A protective membrane representing selenium's antioxidant role" onerror="this.style.display='none'" />
       </div>
 
-      <p>Selenium also supports immune function in two directions simultaneously: it helps mount a strong defense against viruses, and it prevents your immune system from overreacting and attacking your own tissues. That balancing act is rare and valuable - and becomes increasingly important as you age.</p>
+      <h2>Why Selenium Matters</h2>
 
-      <p>Finally, selenium is one of the few nutrients with genuinely promising data on cancer prevention - particularly prostate, lung, and colorectal cancers. The mechanisms involve selenium's role in DNA repair, apoptosis (programmed cell death), and antioxidant defense. The evidence is not conclusive, but it is consistent enough to take seriously.</p>
+      <p>Selenium supports immune function in two directions simultaneously: it helps mount a strong defense against viruses, and it prevents your immune system from overreacting and attacking your own tissues. That balancing act is rare and valuable, and becomes increasingly important as you age. It's also one of the few nutrients with genuinely promising, consistent data on cancer-related mechanisms - particularly involving DNA repair, apoptosis (programmed cell death), and antioxidant defense, though as you'll see below, the clinical trial picture for cancer prevention specifically is more complicated than the mechanism alone suggests.</p>
+
+      <h2>The SELECT Trial - What Actually Happened</h2>
+
+      <p>SELECT (the Selenium and Vitamin E Cancer Prevention Trial) enrolled 35,533 men across more than 400 research centers, cost roughly $114 million, and was designed to test whether selenium, vitamin E, or both could prevent prostate cancer. It found no benefit for either supplement, and was stopped early - partly because vitamin E showed a non-significant trend toward increased prostate cancer risk, and partly because selenium showed a non-significant trend toward increased type 2 diabetes risk (hazard ratio 1.07, p=0.16).</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">The Detail Most Coverage Leaves Out: Baseline Status</div>
+        <div class="rct-row">
+          <div class="rct-n">136 µg/L<span>SELECT</span></div>
+          <div class="rct-desc">Mean baseline blood selenium in SELECT participants was already high - this was a well-nourished American population, not a selenium-deficient one. Researchers specifically flag this as a likely explanation for both the lack of cancer-prevention benefit and the diabetes signal.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">No Effect<span>UK PRECISE</span></div>
+          <div class="rct-desc">A separate randomized, placebo-controlled trial in 501 elderly adults with relatively low selenium status found supplementation had no effect on a validated diabetes risk biomarker (adiponectin) after six months - "reassuring" findings, in the researchers' own words, for a population that actually needed selenium.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">Long-Term<span>Follow-Up</span></div>
+          <div class="rct-desc">In SELECT's extended follow-up after participants stopped taking the supplements, the diabetes hazard ratio moved closer to 1 (HR=1.04, p=0.34) - the signal weakened further over time, consistent with a borderline, non-definitive finding rather than a confirmed causal effect.</div>
+        </div>
+        <div class="rct-highlight">The pattern across these studies points toward baseline status as the key variable: in a population already selenium-replete, additional supplementation showed no benefit and a weak, inconsistent safety signal. In a population with lower baseline selenium, supplementation showed no such signal at all. This is a meaningfully different and more precise story than "selenium causes diabetes."</div>
+      </div>
+
+      <h2>The Mechanism - Why This Is Biologically Plausible, Not Just Statistical Noise</h2>
+
+      <p>A fair, skeptical question is whether this kind of population-level signal reflects a real biological effect or just statistical noise from a large trial testing many outcomes. In this case, there's a genuinely interesting, mechanistically demonstrated explanation - not just a correlation.</p>
+
+      <div class="mech-visual">
+        <div class="mech-title">How Excess Selenium Could Interfere With Insulin Signaling</div>
+        <div class="mech-flow">
+          <div class="mech-step">Excess selenium overexpresses GPx1 (an antioxidant enzyme)</div>
+          <div class="mech-arrow">→</div>
+          <div class="mech-step">GPx1 clears hydrogen peroxide too efficiently</div>
+          <div class="mech-arrow">→</div>
+          <div class="mech-step">Insulin signaling, which actually needs some H₂O₂ to function, gets disrupted</div>
+        </div>
+        <div class="mech-highlight">This isn't theoretical: mice genetically engineered to overexpress GPx1 develop hyperglycemia, hyperinsulinemia, insulin resistance, and obesity - and restricting their selenium intake partially reverses these effects. The underlying principle - that some "good" antioxidant activity can become counterproductive in excess by disrupting a cell signal that actually depends on a small, regulated amount of oxidative activity - is a recognized pattern in redox biology, not unique or implausible for selenium specifically.</div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Why This Doesn't Mean Selenium Is Dangerous</div>
+        <p>Researchers studying this mechanism are explicit that "selenium concentrations in the habitual diet and in dietary supplements are probably not sufficient to induce overt diabetes in healthy individuals." The mouse models demonstrating this effect typically involve sustained, substantial selenium oversupply - not the kind of moderate, time-limited supplementation most people would actually take. The mechanism is real and worth knowing; the practical risk at typical supplement doses, especially for anyone who isn't already selenium-replete, appears to be low. The signal also seems to be sex-specific (limited to males in available data), adding another layer of uncertainty about how broadly it applies.</p>
+      </div>
 
       <h2>The Goldilocks Problem</h2>
 
-      <p>Selenium is a classic Goldilocks nutrient. Too little and your antioxidant defenses collapse. Too much and you start experiencing fatigue, hair loss, metallic taste in the mouth, brittle nails, and irritability - the classic signs of selenosis.</p>
+      <p>Selenium is a classic Goldilocks nutrient. Too little and your antioxidant defenses collapse, alongside thyroid and immune dysfunction. Too much and you start experiencing fatigue, hair loss, a metallic taste in the mouth, brittle nails, and irritability - the classic signs of selenosis, which begin appearing around 800 mcg/day.</p>
 
-      <p>The therapeutic window is narrow. That is why supplementation needs to be strategic, not casual. The good news is that the amounts needed to get benefits are genuinely small - and at those amounts, selenium is safe and well tolerated long-term.</p>
+      <p>The therapeutic window is narrow, which is exactly why supplementation should be informed by your actual status rather than taken casually as a default "more is better" addition.</p>
+
+      <div class="article-img">
+        <img src="/images/selenium-soil-variation.jpg" alt="Rich soil representing the geographic variability of selenium content in food" onerror="this.style.display='none'" />
+      </div>
 
       <h2>The Brazil Nut Problem</h2>
 
-      <p>Brazil nuts are famous as a selenium source. Here is the problem: the selenium content varies wildly depending on the soil where the nuts were grown. One nut might contain 20 mcg, another 200 mcg. That is a tenfold difference - and a serious issue when the optimal daily range for most adults is 100-200 mcg and the upper limit is 400 mcg.</p>
+      <p>Brazil nuts are famous as a selenium source, but here's the issue: their selenium content varies wildly depending on the soil where they grew. One nut might contain 20 mcg, another 200 mcg - a tenfold difference, which is a real problem when the optimal daily range for most adults is 100-200 mcg and the upper limit is 400 mcg.</p>
 
-      <p>Eating two or three Brazil nuts daily sounds simple. But you genuinely cannot know how much selenium you are getting. Supplementing with a standardized form is far more reliable.</p>
-
-      <p>Other dietary sources - fish, meat, eggs, mushrooms - also depend heavily on soil selenium levels. If you live in a region with selenium-depleted soil (much of Europe falls into this category), diet alone is unlikely to optimize your levels.</p>
+      <p>Eating two or three Brazil nuts daily sounds simple, but you genuinely can't know how much selenium you're getting. A standardized supplement form is far more reliable if you actually need to correct a deficiency. Other dietary sources - fish, meat, eggs, mushrooms - also depend heavily on soil selenium levels. If you live in a region with selenium-depleted soil (much of Europe falls into this category), diet alone may not be enough to optimize your levels - which is precisely the population where supplementation evidence looks most favorable.</p>
 
       <h2>Best Forms</h2>
 
@@ -508,17 +277,17 @@
         <div class="form-card recommended">
           <div class="form-label rec">✓ Best Choice</div>
           <h4>L-Selenomethionine</h4>
-          <p>Naturally occurring amino acid-bound form. Best absorbed and stored in tissues. Ideal for long-term supplementation.</p>
+          <p>Naturally occurring amino acid-bound form. Best absorbed and stored in tissues - ideal for correcting an actual deficiency.</p>
         </div>
         <div class="form-card recommended">
           <div class="form-label rec">✓ Recommended</div>
           <h4>Selenium-Enriched Yeast</h4>
-          <p>Natural food-based complex, mostly selenomethionine. High quality and well studied. Good alternative to pure selenomethionine.</p>
+          <p>Natural food-based complex, mostly selenomethionine. Used in several of the major clinical trials discussed above, including the reassuring UK PRECISE study.</p>
         </div>
         <div class="form-card avoid">
           <div class="form-label bad">✗ Less Ideal</div>
           <h4>Sodium Selenite / Selenate</h4>
-          <p>Synthetic inorganic forms. Cheaper and less bioavailable. Still used in some clinical settings but not ideal for daily supplementation.</p>
+          <p>Synthetic inorganic forms. Cheaper and less bioavailable - still used in some clinical settings but not ideal for daily supplementation.</p>
         </div>
       </div>
 
@@ -533,7 +302,7 @@
         <tr>
           <td>Adults (general)</td>
           <td>100 - 200 mcg</td>
-          <td>Consistent daily use</td>
+          <td>Consistent daily use; check baseline status if supplementing long-term</td>
         </tr>
         <tr>
           <td>Teenagers</td>
@@ -552,53 +321,53 @@
         </tr>
       </table>
 
-      <p>Take with food, preferably a protein-rich meal. Morning or midday works well. No need to split the dose - once daily is fine at these amounts.</p>
+      <p>Take with food, preferably a protein-rich meal. Morning or midday works well - no need to split the dose at these amounts.</p>
 
       <div class="warning-box">
-        <div class="warning-label">⚠️ Important</div>
-        <p>Check your multivitamin or other supplements before adding selenium. Many multivitamins already contain 50-200 mcg. Adding a full selenium supplement on top could push you toward the upper limit. More is not better here - this is one of the few nutrients where excess creates real problems.</p>
+        <div class="warning-label">Worth Checking Before Long-Term Supplementation</div>
+        <p>Check your multivitamin or other supplements before adding selenium - many already contain 50-200 mcg, and adding a full selenium supplement on top could push you toward the upper limit. If you're already eating a varied diet rich in seafood, meat, and eggs, or live somewhere with selenium-rich soil, a blood test before committing to long-term high-dose supplementation is a reasonable, low-effort way to know whether you're in the population where the evidence is favorable, or the population where it's neutral-to-uncertain.</p>
       </div>
 
       <h2>What It Stacks Well With</h2>
 
-      <div class="synergy-grid">
-        <div class="synergy-card">
-          <div class="icon">🌿</div>
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🌿</div>
           <h4>Glutathione + NAC</h4>
-          <p>The antioxidant triad. Selenium, glutathione and NAC work together to neutralize oxidative stress at the cellular level.</p>
+          <p>The antioxidant triad - selenium, glutathione, and NAC work together to support cellular oxidative stress defense.</p>
         </div>
-        <div class="synergy-card">
-          <div class="icon">☀️</div>
+        <div class="combo-card">
+          <div class="combo-icon">☀️</div>
           <h4>Vitamin E</h4>
-          <p>Membrane protection. Selenium and Vitamin E are synergistic antioxidants that protect different parts of the cell.</p>
+          <p>Membrane protection - selenium and vitamin E are synergistic antioxidants that protect different parts of the cell.</p>
         </div>
-        <div class="synergy-card">
-          <div class="icon">🦪</div>
+        <div class="combo-card">
+          <div class="combo-icon">🦪</div>
           <h4>Zinc</h4>
-          <p>Immune and thyroid synergy. Both are essential trace minerals that work together in immune modulation.</p>
+          <p>Immune and thyroid synergy - both are essential trace minerals that work together in immune modulation.</p>
         </div>
-        <div class="synergy-card">
-          <div class="icon">🧂</div>
+        <div class="combo-card">
+          <div class="combo-icon">🧂</div>
           <h4>Iodine</h4>
-          <p>Thyroid hormone activation. Selenium and iodine are both essential for converting and activating thyroid hormones.</p>
+          <p>Thyroid hormone activation - selenium and iodine are both essential for converting and activating thyroid hormones.</p>
         </div>
-        <div class="synergy-card">
-          <div class="icon">🧬</div>
-          <h4>NMN + NAD+</h4>
-          <p>Both support DNA repair and cellular maintenance. Selenium strengthens the antioxidant environment that NAD+ pathways depend on.</p>
+        <div class="combo-card">
+          <div class="combo-icon">🔬</div>
+          <h4>CoQ10</h4>
+          <p>Selenium is involved in regenerating CoQ10 and supports related antioxidant pathways, a pairing increasingly noted in statin-related muscle symptom research.</p>
         </div>
-        <div class="synergy-card">
-          <div class="icon">🐟</div>
-          <h4>Omega-3</h4>
-          <p>Anti-inflammatory synergy. Both reduce oxidative stress and chronic inflammation through complementary pathways.</p>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Other Selenium Sources (Caution)</h4>
+          <p>Double-check total intake across multivitamins, Brazil nuts, and any standalone supplement - the additive total matters more than any single source.</p>
         </div>
       </div>
 
       <div class="aaf-badge">
-        <div class="aaf-score">8/10</div>
+        <div class="aaf-score">7.5/10</div>
         <div class="aaf-label">
           <strong>Anti-Aging Factor</strong>
-          Essential trace mineral with powerful antioxidant, thyroid, immune and DNA repair functions. Highly impactful at correcting deficiency - requires careful dosing due to narrow therapeutic window.
+          An essential trace mineral with genuinely important antioxidant, thyroid, immune, and DNA repair functions - highly impactful for correcting an actual deficiency. The score reflects a real, narrow therapeutic window rather than a dramatic safety concern: the SELECT trial's diabetes signal was statistically weak and traces most plausibly to an already-replete study population, with a separate trial in lower-baseline participants showing no such effect. The underlying mechanism for why excess selenium specifically could matter is genuinely demonstrated in animal models, which makes "know your status before supplementing long-term" a reasonable, evidence-based precaution rather than fear-based caution. For anyone with confirmed or likely deficiency - common in parts of Europe and with selenium-depleted soil - this remains a well-evidenced, worthwhile addition.
         </div>
       </div>
 
@@ -607,10 +376,15 @@
     <div class="sources">
       <div class="sources-label">Sources & Further Reading</div>
       <ol>
+        <li>Lippman, S.M. et al. (2009). Effect of Selenium and Vitamin E on Risk of Prostate Cancer and Other Cancers: The Selenium and Vitamin E Cancer Prevention Trial (SELECT). <em>JAMA</em>, 301(1), 39-51.</li>
+        <li>Selenium and Vitamin E Cancer Prevention Trial (SELECT): Questions and Answers. National Cancer Institute.</li>
+        <li>Selenium and Prostate Cancer Prevention: Insights from SELECT. PMC3705339.</li>
+        <li>Rayman, M.P. et al. A Randomized Trial of Selenium Supplementation and Risk of Type-2 Diabetes, as Assessed by Plasma Adiponectin (UK PRECISE pilot study). PMC3446875.</li>
+        <li>Role of selenium in type 2 diabetes, insulin resistance and insulin secretion. PMC10075028.</li>
+        <li>Wang, X.D. et al. (2008). Molecular mechanisms for hyperinsulinaemia induced by overproduction of selenium-dependent glutathione peroxidase-1 in mice. <em>Diabetologia</em>, 51, 1515-1524.</li>
+        <li>Steinbrenner, H. (2013). Interference of selenium and selenoproteins with the insulin-regulated carbohydrate and lipid metabolism. <em>Free Radical Biology and Medicine</em>.</li>
+        <li>Selenium and Metabolic Disorders: An Emphasis on Type 2 Diabetes Risk. PMC4772044.</li>
         <li>Rayman, M.P. (2012). Selenium and human health. <em>The Lancet</em>, 379(9822), 1256-1268.</li>
-        <li>Fairweather-Tait, S.J. et al. (2011). Selenium in human health and disease. <em>Antioxidants & Redox Signaling</em>, 14(7), 1337-1383.</li>
-        <li>Hatfield, D.L. et al. (2014). Selenium and selenocysteine: roles in cancer, health, and development. <em>Trends in Biochemical Sciences</em>, 39(3), 112-120.</li>
-        <li>Duntas, L.H. & Benvenga, S. (2015). Selenium: an element for life. <em>Endocrine</em>, 48(3), 756-775.</li>
       </ol>
     </div>
 
@@ -623,26 +397,16 @@
       </div>
     </div>
 
-
     <div class="related-section">
       <div class="related-title">More Articles</div>
       <div class="related-grid">
         <a href="/articles/zinc-guide.html" class="related-card">
           <div class="related-img c-zinc">
-            <img src="/images/oysters-lemon.jpg" alt="Zinc" onerror="this.style.display='none'" />
+            <img src="/images/hero-zinc.jpg" alt="Zinc" onerror="this.style.display='none'" />
           </div>
           <div class="related-body">
             <span class="related-tag">Zinc</span>
-            <h4>Zinc: The Quiet Mineral That Keeps Everything Running</h4>
-          </div>
-        </a>
-        <a href="/articles/omega-3-complete-guide.html" class="related-card">
-          <div class="related-img c-omega">
-            <img src="/images/omega-3-capsules-moss.jpg" alt="Omega-3" onerror="this.style.display='none'" />
-          </div>
-          <div class="related-body">
-            <span class="related-tag">Omega-3</span>
-            <h4>Omega-3: The One Supplement Almost Everyone Is Taking Wrong</h4>
+            <h4>Zinc: Why Getting the Dose Right Changes Everything</h4>
           </div>
         </a>
         <a href="/articles/coq10-guide.html" class="related-card">
@@ -651,7 +415,16 @@
           </div>
           <div class="related-body">
             <span class="related-tag">CoQ10</span>
-            <h4>CoQ10: The Spark Plug for Every Cell in Your Body</h4>
+            <h4>CoQ10: The Heart Evidence Is Strong, the Muscle Evidence Is Mixed</h4>
+          </div>
+        </a>
+        <a href="/articles/omega-3-complete-guide.html" class="related-card">
+          <div class="related-img c-omega">
+            <img src="/images/hero-omega3-controversy.jpg" alt="Omega-3" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Omega-3</span>
+            <h4>Omega-3: Two Landmark Trials, Two Opposite Results</h4>
           </div>
         </a>
       </div>
@@ -663,13 +436,9 @@
   </div>
 
   <script>
-    }
-
     if (localStorage.getItem('theme') === 'dark') {
       document.body.setAttribute('data-theme', 'dark');
-      document.querySelector('.dark-toggle').textContent = '☀️ Light';
     }
-
     window.addEventListener('scroll', () => {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrolled = (window.scrollY / docHeight) * 100;
