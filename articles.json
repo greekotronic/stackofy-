@@ -60,15 +60,16 @@
     "description": "Cofactor in your master antioxidant enzyme. Supports thyroid, immune function and DNA repair."
   },
   {
-    "title": "CoQ10: The Spark Plug for Every Cell in Your Body",
-    "tag": "CoQ10",
-    "url": "/articles/coq10-guide.html",
-    "image": "/images/hero-coq10.jpg",
-    "color": "c-coq",
-    "tags": "longevity energy performance",
-    "readTime": "8 min",
-    "description": "Mitochondrial energy declines after 40. Essential if you take statins. Ubiquinol is the active form."
-  },
+  "title": "CoQ10: The Heart Evidence Is Strong, the Muscle Evidence Is Mixed",
+  "tag": "CoQ10",
+  "url": "/articles/coq10-guide.html",
+  "image": "/images/hero-coq10.jpg",
+  "color": "c-coq",
+  "featured": false,
+  "tags": "longevity heart-health",
+  "readTime": "13 min",
+  "description": "Statins lower CoQ10 levels - that part is settled biochemistry. Whether supplementing reverses statin-related muscle pain is genuinely unsettled: a 2025 meta-analysis found 4 of 7 trials positive, 3 found nothing. The heart failure evidence is considerably stronger. Here is what actually holds up."
+},
   {
     "title": "Vitamin C: The Buffered Backbone of Antioxidant Defense",
     "tag": "Vitamin C",
