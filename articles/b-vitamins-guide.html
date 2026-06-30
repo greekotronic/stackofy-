@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B Vitamins: Understanding the Methylation Story Everyone Gets Half Right - Stackofy</title>
+  <meta name="description" content="The eight B vitamins work as an interdependent team, not eight separate nutrients - and the methylation cycle is the thread connecting most of them. MTHFR testing has become a popular explanation for everything from fatigue to anxiety, but major medical reviews say routine testing isn't even clinically justified. Here is the real, family-wide picture." />
+
+  <meta property="og:title" content="B Vitamins: Understanding the Methylation Story Everyone Gets Half Right" />
+  <meta property="og:description" content="B vitamins function as an interconnected family, with B6, B9 (folate), and B12 forming the core of the methylation cycle. Multiple independent medical reviews conclude routine MTHFR genetic testing isn't clinically justified for most people, and the one rigorous head-to-head trial of methylfolate vs. folic acid found no difference on the clinical outcome that actually mattered. Here is the honest, family-wide picture before we go ingredient by ingredient." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/b-vitamins-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-b-vitamins.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #3D2E00, #7A5C10, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .family-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 13px; }
+    .family-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 12px; text-align: left; font-weight: 600; }
+    .family-table td { padding: 10px 12px; border-bottom: 0.5px solid var(--border); color: var(--text); vertical-align: top; }
+    .family-table tr:nth-child(even) td { background: var(--bg); }
+    .family-table .methyl-tag { background: var(--gold-light); color: #7A5C10; font-size: 9px; font-weight: 700; padding: 2px 6px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .family-table .methyl-tag { background: #3D2E00; color: var(--gold); }
+
+    .mech-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .mech-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .mech-flow { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    .mech-step { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 0.75rem 1rem; font-size: 13px; font-weight: 600; color: var(--text); flex: 1; min-width: 140px; text-align: center; }
+    .mech-arrow { font-size: 18px; color: var(--gold); flex-shrink: 0; }
+    .mech-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-glycine { background: linear-gradient(135deg, #2D5016, #6B8E23); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .family-table { font-size: 11px !important; }
+      .mech-flow { flex-direction: column; }
+      .mech-arrow { transform: rotate(90deg); }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-b-vitamins.jpg" alt="Golden B vitamin capsules" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">B Vitamins</span>
+      <h1>Understanding the Methylation Story Everyone Gets Half Right</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>16 min read</span>
+        <span>·</span>
+        <span>June 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>The eight B vitamins aren't eight unrelated nutrients - they function as an interdependent metabolic team, and three of them (B6, B9/folate, B12) form the core of the methylation cycle, the process that recycles homocysteine and produces methyl groups your DNA, neurotransmitters, and detox pathways all depend on</li>
+        <li>MTHFR has become the most talked-about gene in wellness circles, blamed for everything from fatigue to anxiety to miscarriage - but multiple independent medical reviews conclude routine MTHFR testing isn't clinically justified for the general population, and a hematology study quantified $27,000 in unnecessary testing costs at a single institution over three years</li>
+        <li>The one rigorous, clinically-relevant head-to-head RCT (220 women, recurrent miscarriage) found methylfolate raised blood folate levels higher than folic acid - but found no significant difference in the actual outcome that mattered, ongoing pregnancy rate</li>
+        <li>Even a company that sells MTHFR genetic tests has publicly stated that "many marketing claims about MTHFR testing and supplement regimens exaggerate its significance"</li>
+        <li>Folic acid fortification has strong, well-established population-level evidence for preventing neural tube defects - this part of the B-vitamin story is not contested</li>
+        <li>This article is the hub for our full B-vitamin series - each individual vitamin (B12, B9/folate, B6, B1, B2, B3, B5, B7) gets its own dedicated deep-dive, linked below as each is published</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>B vitamins get treated like a single, interchangeable category - "take a B-complex" - when they're actually eight chemically distinct compounds with different jobs, different deficiency patterns, and different evidence bases. What does connect them, genuinely, is that several B vitamins work together in shared metabolic pathways rather than functioning in isolation. The most important of these shared pathways is methylation, and it's also the part of the B-vitamin story that's become the most distorted by genetic-testing marketing in the last decade.</p>
+
+      <p>This article is the foundation for a full series on each individual B vitamin. Before getting into B12, folate, B6, and the rest one at a time, it's worth understanding the family structure they sit inside - and specifically, getting an honest picture of the MTHFR and methylation conversation that shows up in nearly every B-vitamin product description you'll encounter.</p>
+
+      <div class="article-img">
+        <img src="/images/b-vitamins-methylation-cycle.jpg" alt="Interconnected rings of light representing the methylation cycle" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Eight B Vitamins at a Glance</h2>
+
+      <table class="family-table">
+        <tr>
+          <th>Vitamin</th>
+          <th>Also Known As</th>
+          <th>Core Role</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td><strong>B1</strong></td>
+          <td>Thiamine</td>
+          <td>Carbohydrate metabolism, nerve function</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>B2</strong></td>
+          <td>Riboflavin</td>
+          <td>Energy production, antioxidant recycling</td>
+          <td><span class="methyl-tag">Methylation cofactor</span></td>
+        </tr>
+        <tr>
+          <td><strong>B3</strong></td>
+          <td>Niacin</td>
+          <td>NAD+ precursor, energy metabolism</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>B5</strong></td>
+          <td>Pantothenic acid</td>
+          <td>Coenzyme A synthesis, fat metabolism</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>B6</strong></td>
+          <td>Pyridoxine (active form: P5P)</td>
+          <td>Neurotransmitter synthesis, homocysteine clearance</td>
+          <td><span class="methyl-tag">Methylation cycle</span></td>
+        </tr>
+        <tr>
+          <td><strong>B7</strong></td>
+          <td>Biotin</td>
+          <td>Fat and carbohydrate metabolism, hair/skin/nails</td>
+          <td></td>
+        </tr>
+        <tr>
+          <td><strong>B9</strong></td>
+          <td>Folate (synthetic: folic acid; active: 5-MTHF)</td>
+          <td>DNA synthesis, methyl donor</td>
+          <td><span class="methyl-tag">Methylation cycle</span></td>
+        </tr>
+        <tr>
+          <td><strong>B12</strong></td>
+          <td>Cobalamin (active forms: methylcobalamin, adenosylcobalamin)</td>
+          <td>Nerve function, red blood cells, methyl donor</td>
+          <td><span class="methyl-tag">Methylation cycle</span></td>
+        </tr>
+      </table>
+
+      <h2>What Methylation Actually Is, In Plain Terms</h2>
+
+      <p>Methylation is a quiet, constant cellular process: the transfer of a methyl group (one carbon, three hydrogens) from one molecule to another. It sounds small, but it's involved in turning genes on and off, recycling homocysteine, building neurotransmitters like serotonin and dopamine, and supporting DNA repair and liver detoxification pathways.</p>
+
+      <div class="mech-visual">
+        <div class="mech-title">The Core Methylation Cycle</div>
+        <div class="mech-flow">
+          <div class="mech-step">Folate (B9) provides a methyl group</div>
+          <div class="mech-arrow">→</div>
+          <div class="mech-step">B12 transfers it to recycle homocysteine into methionine</div>
+          <div class="mech-arrow">→</div>
+          <div class="mech-step">B6 and B2 support related steps in the same cycle</div>
+        </div>
+        <div class="mech-highlight">This is why B vitamins are discussed as a family rather than as isolated nutrients: a shortfall in any one of these can bottleneck the entire cycle, regardless of how much you supplement the others. Homocysteine itself is the most commonly used clinical marker of how well this cycle is functioning - elevated homocysteine generally signals one or more of these B vitamins is running short.</div>
+      </div>
+
+      <h2>The MTHFR Story - Where Marketing Outran the Evidence</h2>
+
+      <p>MTHFR (methylenetetrahydrofolate reductase) is the enzyme responsible for converting folate into its active, usable form. Genetic variants in the MTHFR gene - most commonly the C677T and A1298C polymorphisms - can reduce this enzyme's efficiency, which is the real, legitimate biochemical starting point for the entire conversation. Over the past decade, MTHFR testing exploded in popularity through direct-to-consumer genetic testing and alternative medicine circles, and the gene has been blamed, often loosely, for everything from fatigue and anxiety to autism, miscarriage, and cardiovascular disease.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">What the Independent Medical Literature Actually Says</div>
+        <p>Multiple independent reviews - published in venues with no commercial stake in selling methylated supplements - reach a consistent, more cautious conclusion. A widely cited review in Australian Family Physician concluded there are "very limited clinical indications" for testing the two common MTHFR polymorphisms, and that testing is not indicated as a general screening tool in asymptomatic people. A genetic test reference database states plainly that "the utility of MTHFR variant testing is uncertain and is not recommended," noting that recent studies don't support the originally suspected link between MTHFR variants and cardiovascular disease risk. A 2024 hematology study quantified the real-world cost of this: $27,000 spent on clinically unnecessary MTHFR testing at a single institution over three years.</p>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Even a Genetic Testing Company Says So</div>
+        <p>Perhaps the most telling detail: GeneSight, a company that itself offers genetic testing services, published a blog post stating plainly that "many marketing claims about MTHFR testing and supplement regimens exaggerate its significance, promoting unnecessary treatments not backed by rigorous evidence." When a company with a direct commercial interest in genetic testing says the marketing around a specific gene has gotten ahead of the science, that's a meaningful signal worth taking seriously.</p>
+      </div>
+
+      <h2>Methylfolate vs. Folic Acid - What the One Real Clinical Trial Found</h2>
+
+      <p>Most of what's written online about methylated B vitamins being superior to standard forms comes from companies selling methylated supplements - a pattern this site has flagged before in other categories. The actual human clinical trial evidence is much thinner than the confidence of that marketing suggests.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">The One Rigorous Head-to-Head Trial That Exists</div>
+        <div class="rct-row">
+          <div class="rct-n">220<span>Women</span></div>
+          <div class="rct-desc">A randomized, double-blind, placebo-controlled trial in women with recurrent miscarriage compared 1mg/day 5-MTHF (methylfolate) against 1mg/day folic acid, from preconception through 20 weeks of pregnancy, specifically examining outcomes by MTHFR genotype.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">Higher<span>Blood Folate</span></div>
+          <div class="rct-desc">Serum folate increased significantly more in the methylfolate group than the folic acid group - this part of the "methylfolate works better" claim is genuinely supported by this trial.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">No Difference<span>What Mattered Clinically</span></div>
+          <div class="rct-desc">Despite the folate-level difference, there was no significant difference between groups in ongoing pregnancy rate at 20 weeks - the actual outcome the trial was designed to measure - and homocysteine reduction was also not significantly different between the two forms.</div>
+        </div>
+        <div class="rct-highlight">This is a genuinely important, underreported nuance: methylfolate did raise a blood biomarker more than folic acid did, exactly as the marketing claims. But on the clinical endpoint that actually mattered to the women in this trial - a successful, ongoing pregnancy - the two forms performed the same. A higher number on a lab test is not automatically the same thing as a better real-world outcome, and this is the only trial of its kind testing a hard clinical endpoint head-to-head rather than just a biomarker.</div>
+      </div>
+
+      <div class="skip-box">
+        <div class="skip-label">Where the Methylfolate Argument Is Genuinely Stronger</div>
+        <p>None of this means methylfolate is pointless. People with confirmed, severe MTHFR enzyme deficiency, certain malabsorption conditions, or documented folate deficiency that doesn't respond to folic acid are legitimate cases where methylfolate's bypass of the conversion step has real logic behind it. The caution here is specifically about routine, population-wide MTHFR testing and the broad claim that everyone with a common, usually mild MTHFR variant needs to switch to expensive methylated supplements - that specific, sweeping claim is where the evidence runs thinnest.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/b-vitamins-genetic-testing.jpg" alt="A blood sample in a lab rack, representing MTHFR genetic testing" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What's Actually Well-Established</h2>
+
+      <p>None of the skepticism above should overshadow what's genuinely solid in this category. Folic acid fortification of food supplies has strong, population-level evidence for reducing neural tube defects - this is one of the more successful public health nutrition interventions of the past several decades, and it's not in dispute. Homocysteine itself remains a legitimate, well-validated marker of B-vitamin status and methylation cycle function, useful regardless of which specific form of B9 or B12 you take. And genuine B-vitamin deficiencies - particularly B12 deficiency in older adults, vegetarians, and vegans, and folate deficiency in pregnancy - have strong, uncontested evidence for the importance of correcting them.</p>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🧂</div>
+          <h4>Magnesium</h4>
+          <p>A required cofactor for many of the same enzymatic reactions B vitamins participate in - commonly deficient alongside B vitamins for similar dietary reasons.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🧬</div>
+          <h4>TMG (Trimethylglycine)</h4>
+          <p>Provides an alternate methylation pathway alongside the B-vitamin-dependent route, often paired specifically with NMN/NR to manage the homocysteine byproduct of NAD+ synthesis.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🩸</div>
+          <h4>Homocysteine Testing</h4>
+          <p>The most practical, actionable lab marker for assessing whether your B-vitamin and methylation status actually needs attention - more clinically useful than MTHFR genotyping for most people.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Routine MTHFR Genetic Testing (Reconsider)</h4>
+          <p>Multiple independent medical reviews suggest this is not clinically justified as a general screening test - a homocysteine blood test is often a more useful, more affordable starting point.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">💊</div>
+          <h4>Levodopa (Caution)</h4>
+          <p>High-dose B6 can reduce the effectiveness of levodopa (used for Parkinson's disease) when taken without carbidopa - a real, specific interaction worth knowing if relevant.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🍷</div>
+          <h4>Alcohol (Caution)</h4>
+          <p>Chronic alcohol use depletes multiple B vitamins simultaneously, particularly B1 (thiamine) - a well-established interaction relevant to anyone with regular, heavy alcohol intake.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Hekmatdoost, A. et al. (2015). Methyltetrahydrofolate vs Folic Acid Supplementation in Idiopathic Recurrent Miscarriage with Respect to MTHFR C677T and A1298C Polymorphisms: A Randomized Controlled Trial. <em>PLOS ONE</em>, 10(12), e0143569.</li>
+        <li>Pitkin, R.M. et al. MTHFR genetic testing: Controversy and clinical implications. <em>Australian Family Physician</em>, 45(4), 237-240 (2016).</li>
+        <li>The Financial Burden of Unnecessary MTHFR Gene Testing. <em>Blood</em>, American Society of Hematology (2024).</li>
+        <li>MTHFR Gene: Testing, Science, and Health Implications. GeneSight (2026).</li>
+        <li>Methylenetetrahydrofolate Reductase (MTHFR), DNA Mutation Analysis - Clinical Genetic Test. NCBI Genetic Testing Registry.</li>
+        <li>De Wals, P. et al. (2007). Reduction in neural-tube defects after folic acid fortification in Canada. <em>New England Journal of Medicine</em>, 357, 135-142.</li>
+        <li>Pietrzik, K. et al. (2010). Folic acid and L-5-methyltetrahydrofolate: comparison of clinical pharmacokinetics and pharmacodynamics. <em>Clinical Pharmacokinetics</em>.</li>
+        <li>Jakubowski, H. & Witucki, Ł. (2025). Homocysteine Metabolites, Endothelial Dysfunction, and Cardiovascular Disease. <em>International Journal of Molecular Sciences</em>.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>The Full B Vitamin Series Is Coming</h3>
+      <p>Each B vitamin gets its own dedicated, deep-dive article - B12, folate, B6, and more, each with the same evidence-based approach.</p>
+      <div class="cta-buttons">
+        <a href="/articles/glycine-guide.html" class="btn-gold">Read the Glycine Guide →</a>
+        <a href="https://alethiaresearch.gumroad.com/l/NMNChecklist" class="btn-outline">Free NMN Checklist →</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">Related Articles</div>
+      <div class="related-grid">
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+        <a href="/articles/magnesium-guide.html" class="related-card">
+          <div class="related-img c-mag">
+            <img src="/images/hero-magnesium.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Magnesium</span>
+            <h4>Magnesium: The Master Mineral That Everyone's Missing</h4>
+          </div>
+        </a>
+        <a href="/articles/glycine-guide.html" class="related-card">
+          <div class="related-img c-glycine">
+            <img src="/images/hero-glycine.jpg" alt="Glycine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Glycine</span>
+            <h4>Glycine: The Sweet Amino Acid That Calms, Repairs, and Rebuilds</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol or genetic testing, especially if you are pregnant, have a diagnosed MTHFR-related condition, or are taking medication. Alethia Research Institute is not affiliated with any supplement manufacturer or genetic testing company.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

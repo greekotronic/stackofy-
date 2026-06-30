@@ -695,5 +695,18 @@
   "tags": "immune longevity",
   "readTime": "13 min",
   "description": "Zinc and the common cold have a confusing research history - some trials show real benefit, others show nothing. The actual explanation is dose: below 75mg/day, zinc lozenges uniformly fail. Above it, the effect is consistent and significant. Here is the full picture, including real copper deficiency cases worth knowing about."
+},
+{
+  "title": "B Vitamins: Understanding the Methylation Story Everyone Gets Half Right",
+  "tag": "B Vitamins",
+  "url": "/articles/b-vitamins-guide.html",
+  "image": "/images/hero-b-vitamins.jpg",
+  "color": "c-bvitamins",
+  "featured": false,
+  "type": "protocol",
+  "badgeType": "featured",
+  "tags": "metabolism longevity",
+  "readTime": "16 min",
+  "description": "The eight B vitamins work as an interdependent team, not eight separate nutrients - and the methylation cycle is the thread connecting most of them. MTHFR testing has become a popular explanation for everything from fatigue to anxiety, but major medical reviews say routine testing isn't even clinically justified. Here is the real, family-wide picture."
 }
 ]

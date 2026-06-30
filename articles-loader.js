@@ -60,6 +60,7 @@ const COLORS = {
 'c-hangover': 'background:linear-gradient(135deg,#1a1a1a,#2D6A4F)',
 'c-methyleneblue': 'background:linear-gradient(135deg,#0a1a2a,#185FA5)',
 'c-inositol': 'background:linear-gradient(135deg,#1a1a2a,#7B2FBE)',
+'c-bvitamins': 'background:linear-gradient(135deg,#3D2E00,#7A5C10)',
 };
 
 function makeCard(article, size) {
