@@ -98,15 +98,19 @@
     .article-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
     .article-card.hidden { display: none; }
 
-    /* COMING SOON */
-    .coming-soon-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 2.5rem; }
-    .coming-card { background: var(--surface); border-radius: var(--radius); border: 0.5px dashed var(--border); padding: 1.25rem; opacity: 0.7; }
-    .coming-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
-    .coming-card h4 { font-size: 13px; font-weight: 600; color: var(--text-muted); }
+    /* RECENTLY ADDED */
+    .recent-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.75rem; margin-bottom: 2.5rem; }
+    .recent-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .recent-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .recent-img { height: 90px; overflow: hidden; }
+    .recent-img img { width: 100%; height: 100%; object-fit: cover; }
+    .recent-body { padding: 0.875rem; }
+    .recent-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
+    .recent-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
 
     @media (max-width: 900px) {
       .articles-grid { grid-template-columns: 1fr 1fr !important; }
-      .coming-soon-grid { grid-template-columns: 1fr 1fr !important; }
+      .recent-grid { grid-template-columns: 1fr 1fr !important; }
       .protocol-grid-page { grid-template-columns: 1fr !important; }
     }
     @media (max-width: 600px) {
@@ -117,7 +121,7 @@
       .main { padding: 1.25rem 1rem !important; }
       .filter-bar { flex-direction: column !important; align-items: flex-start !important; }
       .articles-grid { grid-template-columns: 1fr !important; }
-      .coming-soon-grid { grid-template-columns: 1fr 1fr !important; }
+      .recent-grid { grid-template-columns: 1fr 1fr !important; }
       .protocol-card-page { flex-direction: column !important; }
       .protocol-card-img { width: 100% !important; height: 160px !important; }
     }
@@ -211,14 +215,9 @@
     </div>
 
     <div style="margin-bottom: 1rem;">
-      <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem;">Coming Soon</div>
+      <div style="font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem;">Recently Added</div>
     </div>
-    <div class="coming-soon-grid">
-      <div class="coming-card"><div class="coming-label">Longevity</div><h4>Fisetin</h4></div>
-      <div class="coming-card"><div class="coming-label">Brain</div><h4>Lion's Mane Mushroom</h4></div>
-      <div class="coming-card"><div class="coming-label">Sleep</div><h4>Ashwagandha + L-Theanine</h4></div>
-      <div class="coming-card"><div class="coming-label">Metabolism</div><h4>Berberine</h4></div>
-    </div>
+    <div class="recent-grid" id="recently-added-grid"></div>
 
   </div>
 

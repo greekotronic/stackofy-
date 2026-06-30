@@ -315,6 +315,23 @@ async function loadArticles() {
       articlesEditorialEl.innerHTML = editorial.map(makeProtocolPageCard).join('');
     }
 
+    // RECENTLY ADDED (articles page) - last 4 entries across all types, newest first
+    const recentlyAddedEl = document.getElementById('recently-added-grid');
+    if (recentlyAddedEl) {
+      const recent = articles.slice(-4).reverse();
+      recentlyAddedEl.innerHTML = recent.map(a => `
+        <a href="${a.url}" class="recent-card">
+          <div class="recent-img" style="${COLORS[a.color] || ''}">
+            <img src="${a.image}" alt="${a.tag}" onerror="this.style.display='none'" />
+          </div>
+          <div class="recent-body">
+            <div class="recent-label">${a.tag}</div>
+            <h4>${a.title}</h4>
+          </div>
+        </a>
+      `).join('');
+    }
+
     // ARTICLES PAGE - books section
     const articlesBooksEl = document.getElementById('articles-books');
     if (articlesBooksEl) {
