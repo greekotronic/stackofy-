@@ -3,432 +3,177 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zinc: The Quiet Mineral That Keeps Everything Running - Stackofy</title>
-  <meta name="description" content="Zinc is involved in over 300 enzymatic reactions and many people are subtly deficient. Here is why it matters for aging, which forms actually work, and how to take it correctly." />
+  <title>Zinc: Why Getting the Dose Right Changes Everything - Stackofy</title>
+  <meta name="description" content="Zinc and the common cold have a confusing research history - some trials show real benefit, others show nothing. The actual explanation is dose: below 75mg/day, zinc lozenges uniformly fail. Above it, the effect is consistent and significant. Here is the full picture, including real copper deficiency cases worth knowing about." />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Zinc: The Quiet Mineral That Keeps Everything Running" />
-  <meta property="og:description" content="Involved in over 300 enzymatic reactions. Subtle deficiency quietly erodes immunity, testosterone, and cognitive function. Here is what you need to know." />
+  <meta property="og:title" content="Zinc: Why Getting the Dose Right Changes Everything" />
+  <meta property="og:description" content="A pooled analysis of seven trials found zinc acetate lozenges above 75mg/day shortened colds by 33-42%. Trials under that threshold uniformly found nothing. That single number resolves decades of seemingly contradictory research. Here is the full picture, plus real documented cases of zinc-induced copper deficiency worth understanding before you dose long-term." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://stackofy.com/articles/zinc-guide" />
-  <meta property="og:image" content="https://stackofy.com/images/oysters-lemon.jpg" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-zinc.jpg" />
 
   <link rel="icon" type="image/png" href="/favicon.svg" />
 
   <style>
     :root {
-      --green-dark: #1B4332;
-      --green-mid: #2D6A4F;
-      --green-light: #95D5B2;
-      --gold: #D4A853;
-      --gold-light: #FDF3E0;
-      --bg: #FAF8F4;
-      --surface: #ffffff;
-      --text: #1A1A1A;
-      --text-muted: #666666;
-      --border: #E0DDD8;
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
       --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
-      --radius: 12px;
-      --radius-sm: 8px;
+      --radius: 12px; --radius-sm: 8px;
     }
-
-    [data-theme="dark"] {
-      --bg: #0F1A14;
-      --surface: #1A2B20;
-      --text: #F0EDE8;
-      --text-muted: #9DB8AA;
-      --border: #2A3D30;
-      --gold-light: #2A220D;
-    }
-
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .form-card h4 { color: var(--green-light) !important; }
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      transition: background 0.3s, color 0.3s;
-    }
-
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
     a { text-decoration: none; color: inherit; }
 
-    #progress-bar {
-      position: fixed;
-      top: 0; left: 0;
-      height: 3px;
-      background: var(--gold);
-      width: 0%;
-      z-index: 200;
-      transition: width 0.1s;
-    }
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
 
-    header {
-      background: var(--gradient);
-      padding: 0 2rem;
-      height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a3a2a, #2D6A4F, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
 
-    .logo { display: flex; align-items: center; gap: 10px; color: #FAF8F4; font-size: 19px; font-weight: 600; }
-    .logo-icon { display: flex; flex-direction: column; gap: 3px; }
-    .capsule { height: 7px; border-radius: 4px; }
-    .capsule:nth-child(1) { width: 28px; margin-left: 4px; background: var(--gold); }
-    .capsule:nth-child(2) { width: 22px; background: var(--green-light); }
-    .capsule:nth-child(3) { width: 26px; margin-left: 2px; background: var(--gold); }
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
 
-    .header-right { display: flex; align-items: center; gap: 1.5rem; }
-    nav { display: flex; gap: 1.5rem; }
-    nav a { color: var(--green-light); font-size: 14px; transition: color 0.2s; }
-    nav a:hover { color: #FAF8F4; }
-
-    .dark-toggle {
-      background: rgba(255,255,255,0.15);
-      border: 0.5px solid rgba(255,255,255,0.2);
-      border-radius: 20px;
-      padding: 5px 12px;
-      cursor: pointer;
-      color: #FAF8F4;
-      font-size: 13px;
-    }
-
-    .article-hero {
-      position: relative;
-      height: 380px;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-    }
-
-    .hero-img {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, #1a3a2a, #2D6A4F, #1B4332);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 100px;
-    }
-
-    .hero-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0.65;
-    }
-
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      padding: 2rem 3rem;
-      max-width: 860px;
-      width: 100%;
-      margin: 0 auto;
-    }
-
-    .article-tag {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      background: var(--gold);
-      color: #1A1A1A;
-      padding: 4px 10px;
-      border-radius: 4px;
-      display: inline-block;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-content h1 {
-      color: #FAF8F4;
-      font-size: 1.9rem;
-      font-weight: 700;
-      line-height: 1.3;
-      letter-spacing: -0.3px;
-      margin-bottom: 0.75rem;
-    }
-
-    .hero-meta {
-      color: var(--green-light);
-      font-size: 13px;
-      display: flex;
-      gap: 1.5rem;
-      align-items: center;
-    }
-
-    .article-wrapper {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem;
-    }
-
-    .tldr-box {
-      background: var(--gold-light);
-      border-left: 4px solid var(--gold);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      padding: 1.25rem 1.5rem;
-      margin-bottom: 2.5rem;
-    }
-
-    .tldr-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 0.5rem;
-    }
-
-    .tldr-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
-    .tldr-box ul { margin-top: 0.5rem; padding-left: 1.25rem; }
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
     .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
 
     .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
     .article-content p { margin-bottom: 1.4rem; }
-
-    .article-content h2 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      color: var(--green-dark);
-      margin: 2.5rem 0 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--gold);
-      display: inline-block;
-    }
-
-    .article-content h3 { font-size: 1.1rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
     .article-content strong { color: var(--text); font-weight: 600; }
-    .article-content ul, .article-content ol { padding-left: 1.5rem; margin-bottom: 1.4rem; }
-    .article-content li { margin-bottom: 0.5rem; line-height: 1.7; }
     .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
-    [data-theme="dark"] .article-content a { color: var(--green-light); }
-    .article-content a:hover { border-color: var(--green-dark); }
 
     .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
-    .article-img img { width: 100%; height: auto; display: block; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
 
-    .forms-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.75rem;
-      margin: 1.5rem 0;
-    }
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
 
-    .form-card {
-      background: var(--surface);
-      border-radius: var(--radius-sm);
-      border: 0.5px solid var(--border);
-      padding: 1rem;
-    }
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
 
-    .form-card.recommended { border-color: var(--green-dark); }
-    .form-card.avoid { border-color: #C0392B; opacity: 0.8; }
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
 
-    .form-label {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      margin-bottom: 4px;
-    }
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
 
+    .case-box { background: var(--surface); border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.5rem; margin: 1.5rem 0; }
+    .case-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 1rem; }
+    [data-theme="dark"] .case-title { color: #FF8080; }
+    .case-item { display: flex; gap: 0.75rem; margin-bottom: 0.9rem; font-size: 13px; color: var(--text); line-height: 1.5; }
+    .case-item:last-child { margin-bottom: 0; }
+    .case-icon { flex-shrink: 0; }
+
+    .forms-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .form-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.1rem; }
+    .form-card.recommended { border: 1.5px solid var(--green-dark); }
+    .form-card.avoid { border: 1.5px solid #C0392B; opacity: 0.85; }
+    .form-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
     .form-label.rec { color: var(--green-dark); }
     [data-theme="dark"] .form-label.rec { color: var(--green-light); }
+    .form-label.ok { color: #7A5C10; }
     .form-label.bad { color: #C0392B; }
-    [data-theme="dark"] .form-label.rec { color: var(--green-light); }
-    .form-label.ok { color: var(--text-muted); }
+    [data-theme="dark"] .form-label.bad { color: #FF8080; }
+    .form-card h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 4px; }
+    .form-card p { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
 
-    .form-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
-    .form-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
 
-    .dosing-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.5rem 0;
-      font-size: 14px;
-    }
-
-    .dosing-table th {
-      background: var(--green-dark);
-      color: #FAF8F4;
-      padding: 10px 14px;
-      text-align: left;
-      font-weight: 600;
-    }
-
-    .dosing-table td {
-      padding: 10px 14px;
-      border-bottom: 0.5px solid var(--border);
-      color: var(--text);
-    }
-
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
     .dosing-table tr:nth-child(even) td { background: var(--bg); }
 
-    .warning-box {
-      background: #fff8f0;
-      border-left: 4px solid #E67E22;
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      padding: 1.25rem 1.5rem;
-      margin: 2rem 0;
-    }
-
-    .warning-label {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      color: #E67E22;
-      margin-bottom: 0.5rem;
-    }
-
-    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; }
-
-    .synergy-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.75rem;
-      margin: 1.5rem 0;
-    }
-
-    .synergy-card {
-      background: var(--surface);
-      border: 0.5px solid var(--border);
-      border-radius: var(--radius-sm);
-      padding: 0.875rem;
-      text-align: center;
-    }
-
-    .synergy-card .icon { font-size: 22px; margin-bottom: 6px; }
-    .synergy-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
-    [data-theme="dark"] .synergy-card h4 { color: var(--green-light); }
-    [data-theme="dark"] .synergy-card h4 { color: var(--green-light); }
-    .synergy-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
-
-    .aaf-badge {
-      background: var(--gradient);
-      border-radius: var(--radius);
-      padding: 1.25rem 1.5rem;
-      margin: 2rem 0;
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
     .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
     .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
     .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
 
-    .sources {
-      background: var(--surface);
-      border: 0.5px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      margin: 2.5rem 0;
-    }
-
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
     .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
     .sources ol { padding-left: 1.25rem; }
     .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
-    .sources a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
-    [data-theme="dark"] .sources a { color: var(--green-light); }
-    [data-theme="dark"] .sources a { color: var(--green-light); }
 
-    .cta-block {
-      background: var(--gradient);
-      border-radius: var(--radius);
-      padding: 2rem;
-      margin: 2.5rem 0;
-      text-align: center;
-    }
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
 
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
     .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
     .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
     .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-
-    .btn-gold {
-      background: var(--gold);
-      color: #1A1A1A;
-      border: none;
-      border-radius: var(--radius-sm);
-      padding: 11px 22px;
-      font-size: 14px;
-      font-weight: 600;
-      display: inline-block;
-    }
-
-    .btn-outline {
-      background: transparent;
-      color: #FAF8F4;
-      border: 1px solid rgba(255,255,255,0.4);
-      border-radius: var(--radius-sm);
-      padding: 11px 22px;
-      font-size: 14px;
-      font-weight: 600;
-      display: inline-block;
-    }
-
-    .disclaimer {
-      background: var(--gold-light);
-      border-radius: var(--radius-sm);
-      border: 0.5px solid var(--gold);
-      padding: 1rem 1.25rem;
-      margin: 2rem 0;
-      font-size: 12px;
-      color: var(--text-muted);
-      line-height: 1.6;
-    }
-
-    .disclaimer strong { color: var(--text); }
-
-    footer {
-      background: var(--gradient);
-      color: var(--green-light);
-      text-align: center;
-      padding: 2rem;
-      font-size: 13px;
-      line-height: 2;
-    }
-
-    .footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 0.5rem; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; background: none; border: none; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: #FAF8F4; border-radius: 2px; }
-    .mobile-menu { display: none; position: fixed; top: 64px; left: 0; right: 0; background: #1B4332; z-index: 99; flex-direction: column; padding: 1rem; gap: 0; }
-    .mobile-menu.open { display: flex !important; }
-    .mobile-menu a { color: #FAF8F4; font-size: 15px; padding: 0.875rem 1rem; border-bottom: 0.5px solid rgba(255,255,255,0.1); }
-    .mobile-menu a:last-child { border-bottom: none; }
-    @media (max-width: 600px) { header { padding: 0 1rem !important; } nav { display: none !important; } .hamburger { display: flex !important; } .hero-content { padding: 1.5rem 1.25rem !important; } .hero-content h1 { font-size: 1.4rem !important; } .article-wrapper { padding: 1.5rem 1rem !important; } }
-    .footer-links a { color: var(--green-light); font-size: 13px; }
-    .footer-links a:hover { color: #FAF8F4; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
 
     .related-section { margin: 2.5rem 0; }
     .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
     .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; cursor: pointer; transition: border-color 0.2s, transform 0.2s; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
     .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
-    .related-img { height: 110px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .related-img { height: 110px; overflow: hidden; }
     .related-img img { width: 100%; height: 100%; object-fit: cover; }
     .related-body { padding: 0.875rem; }
     .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
     .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
-    @media (max-width: 600px) { .related-grid { grid-template-columns: 1fr !important; } }
-    .c-nmn { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
-    .c-omega { background: linear-gradient(135deg, #0a3d6b, #185FA5); }
-    .c-vitd { background: linear-gradient(135deg, #7A5C10, #D4A853); }
-    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
-    .c-zinc { background: linear-gradient(135deg, #1a3a2a, #2D6A4F); }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
     .c-sel { background: linear-gradient(135deg, #2C1A0E, #5C3A1E); }
-    .c-coq { background: linear-gradient(135deg, #1a0a00, #5C3A00); }
+    .c-mag { background: linear-gradient(135deg, #3d1b6b, #7B2FBE); }
+    .c-quer { background: linear-gradient(135deg, #3d4a10, #6B7A2A); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .forms-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
   </style>
   <script src="/header.js"></script>
 </head>
@@ -438,17 +183,16 @@
 
   <div class="article-hero">
     <div class="hero-img">
-      <img src="/images/oysters-lemon.jpg" alt="Fresh oysters with lemon - richest natural source of zinc" onerror="this.style.display='none'" />
-      🦪
+      <img src="/images/hero-zinc.jpg" alt="Fresh oysters with lemon, the richest natural source of zinc" onerror="this.style.display='none'" />
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
       <span class="article-tag">Zinc</span>
-      <h1>Zinc: The Quiet Mineral That Keeps Everything Running</h1>
+      <h1>Why Getting the Dose Right Changes Everything</h1>
       <div class="hero-meta">
         <span>Alethia Research Institute</span>
         <span>·</span>
-        <span>8 min read</span>
+        <span>13 min read</span>
         <span>·</span>
         <span>June 2026</span>
       </div>
@@ -459,49 +203,113 @@
 
     <div class="tldr-box">
       <div class="tldr-label">TL;DR</div>
-      <p>Zinc is involved in over 300 enzymatic reactions and subtle deficiency is more common than most people realize. Key points:</p>
       <ul>
-        <li>Choose picolinate or bisglycinate - avoid zinc oxide which absorbs poorly</li>
-        <li>Adults need 15-30mg daily - more is not better and can cause copper deficiency</li>
-        <li>Take on an empty stomach if tolerated, or with a light meal - not with calcium, iron or magnesium</li>
-        <li>If supplementing over 30mg long-term, add 2-3mg copper to maintain balance</li>
-        <li>Stack with quercetin - it acts as a zinc ionophore, helping zinc enter cells</li>
+        <li>Zinc is involved in over 300 enzymatic reactions, and subtle deficiency - not severe enough to flag on a standard panel - is more common than most people realize, especially in older adults, vegetarians, and anyone with high stress or alcohol intake</li>
+        <li>Decades of "does zinc help with colds" research looked contradictory until researchers pinpointed the actual explanation: trials using less than 75mg/day of zinc lozenges uniformly found no effect, while trials above that threshold found a consistent, statistically significant 33-42% reduction in cold duration</li>
+        <li>A 2024 Cochrane review reached a more cautious conclusion than this dose-stratified research, and the authors who identified the threshold have specifically critiqued the Cochrane analysis for not separating low-dose and high-dose trials - a live, ongoing methodological disagreement worth knowing about</li>
+        <li>Zinc and copper compete for absorption in the gut, and real, documented case reports - including a woman who developed irreversible neurological damage from a denture adhesive containing zinc - show this isn't theoretical</li>
+        <li>Choose zinc picolinate or bisglycinate for daily use; avoid zinc oxide, which absorbs poorly orally</li>
+        <li>If supplementing above 30mg/day long-term, pair with 2-3mg copper to maintain mineral balance - this single addition prevents the most well-documented long-term risk of zinc supplementation</li>
       </ul>
     </div>
 
     <div class="article-content">
 
-      <p>Zinc does not get the headlines that vitamin D or omega-3 gets. It is not the subject of bestselling longevity books. Nobody is building a brand around it. And yet this trace mineral plays a surprisingly central role in how you age.</p>
+      <p>Zinc doesn't get the headlines that vitamin D or omega-3 gets. Nobody is building a wellness brand around it. And yet this trace mineral plays a surprisingly central role in how your body functions day to day - involved in over 300 enzymatic reactions spanning immunity, cellular repair, DNA replication, antioxidant defense, and hormone regulation. If your body were a factory, zinc would be the person keeping the machines oiled and quality control running.</p>
 
-      <p>It is involved in over 300 enzymatic reactions, many of which deal with immunity, cellular repair, DNA replication, antioxidant defense, and hormone regulation. If your body were a factory, zinc would be the person who keeps the machines oiled, the blueprints clean, and quality control running smoothly.</p>
-
-      <p>And yet many people are walking around subtly deficient. Not enough to trigger an emergency, but just enough to quietly wear down immunity, testosterone levels, wound healing, skin integrity, and mental sharpness. <strong>Over time, that kind of slow erosion adds up.</strong></p>
+      <p>Many people walk around subtly deficient without realizing it - not enough to trigger an emergency, but enough to quietly erode immunity, taste, wound healing, and mental sharpness over time. And the most commonly cited use case for zinc - shortening a cold - has a research history that looks confusing on the surface but actually resolves cleanly once you understand the one variable most coverage leaves out: dose.</p>
 
       <div class="article-img">
-        <img src="/images/oysters-lemon.jpg" alt="Oysters - the richest natural source of zinc" onerror="this.style.display='none'" />
+        <img src="/images/zinc-immune-cells.jpg" alt="Cellular structures representing zinc's role in immune function" onerror="this.style.display='none'" />
       </div>
 
-      <h2>Why Zinc Matters for Aging</h2>
+      <h2>Why Zinc Matters Day to Day</h2>
 
-      <p>Zinc is a major player in controlling oxidative stress. It supports the function of superoxide dismutase (SOD), one of the body's key antioxidant enzymes. It also helps stabilize the structure of DNA and RNA and is essential for proper cell division and growth.</p>
+      <p>Zinc is a major player in controlling oxidative stress, supporting the function of superoxide dismutase (SOD), one of the body's key antioxidant enzymes. It also helps stabilize DNA and RNA structure and is essential for proper cell division and growth.</p>
 
-      <p>Your immune system depends on it heavily. Zinc supports T-cell development, enhances natural killer cell activity, and helps your body mount quick, effective responses to pathogens - without tipping into chronic inflammation mode. That balance matters enormously as you age.</p>
+      <p>Your immune system depends on it heavily - zinc supports T-cell development, enhances natural killer cell activity, and helps your body mount quick, effective responses to pathogens without tipping into chronic inflammation. For men specifically, zinc levels correlate with testosterone production; low zinc is associated with lower libido, energy, and slower recovery. Zinc also maintains skin, eye, taste, and smell function, and subtle deficiency often shows up first as frequent colds, slow wound healing, or persistent brain fog - symptoms easy to attribute to everything else before considering zinc.</p>
 
-      <p>For men specifically: zinc levels correlate strongly with testosterone. Low zinc often means low libido, lower energy, and slower recovery. It is a co-factor in the production of sex hormones and its deficiency in this area tends to be underappreciated.</p>
+      <h2>The Cold Remedy Question - Why It Looked Contradictory for Decades</h2>
 
-      <p>Zinc is also vital for maintaining the health of your skin, your eyes, your sense of taste and smell, and cognition. Subtle deficiencies often show up first as frequent colds, poor wound healing, loss of appetite, or brain fog that does not lift - symptoms that are easy to attribute to everything else before considering zinc.</p>
+      <p>Zinc lozenges for the common cold have one of the more genuinely confusing research histories in supplement science. Some trials show real, meaningful benefit. Others show nothing at all. A widely cited 1987 Australian trial found zinc lozenges had no effect on cold course whatsoever. Meanwhile, other randomized, placebo-controlled trials report colds ending days sooner. For years, this looked like classic supplement-research noise - until researchers traced the actual variable driving the split.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">The Dose Threshold That Explains the Whole Pattern</div>
+        <div class="rct-row">
+          <div class="rct-n">&lt;75mg<span>Daily Dose</span></div>
+          <div class="rct-desc">A systematic review found that trials using less than 75mg/day of elemental zinc in lozenge form <strong>uniformly found no effect</strong> on cold duration - this is the source of most of the "zinc doesn't work" headlines and null results circulating online.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">&gt;75mg<span>Daily Dose</span></div>
+          <div class="rct-desc">Seven randomized trials with 575 participants using more than 75mg/day of zinc acetate or gluconate found a pooled <strong>33% reduction</strong> in cold duration (95% CI: 21%-45%, p=10⁻⁷). Zinc acetate specifically showed a 40% reduction; zinc gluconate showed 28% - not a statistically significant difference between the two salts.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">3.1x<span>Recovery Rate</span></div>
+          <div class="rct-desc">An individual patient data meta-analysis of zinc acetate lozenge trials found the rate ratio for cold recovery was 3.1 (95% CI: 2.1-4.7) compared to placebo - and the effect held consistently regardless of age, gender, allergy status, smoking, or how severe the cold was at baseline.</div>
+        </div>
+        <div class="rct-highlight">This single dose-threshold finding resolves what looks like decades of contradictory research. The "zinc doesn't help colds" trials and the "zinc clearly helps colds" trials were often testing fundamentally different doses, not testing the same thing with different results.</div>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">A Live Disagreement Worth Knowing About</div>
+        <p>A May 2024 Cochrane review on zinc for the common cold reached a more cautious overall conclusion - that zinc "may reduce the duration of ongoing colds" but with "wide variation" across studies. The researchers who identified the dose threshold (Hemilä and Chalker) published a direct critique later that year, arguing the Cochrane review pooled low-dose and high-dose trials together rather than separating them, which they say obscures the real, dose-dependent effect. This is an active, ongoing methodological disagreement between credible researchers - worth knowing rather than treating either side as the final word.</p>
+      </div>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Strong Evidence</span>
+          <h4>Cold Duration (at &gt;75mg/day, lozenge form)</h4>
+          <p>Consistent across multiple independent meta-analyses and individual patient data pooling - the most rigorously dose-stratified evidence available in this category.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>Taste Disorders</h4>
+          <p>A 2023 meta-analysis of 12 RCTs (938 subjects) found zinc supplementation effective for treating taste disorders, particularly in cases linked to confirmed zinc deficiency.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Moderate Evidence</span>
+          <h4>General Immune Resilience (Elderly)</h4>
+          <p>A year-long RCT in elderly subjects found zinc deficiency associated with increased infection susceptibility, with supplementation preventing this increased risk - relevant given how common subclinical deficiency is in this population.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Not Well Supported</span>
+          <h4>Cold Prevention (vs. Treatment)</h4>
+          <p>The same dose-response logic does not clearly extend to prevention - taking zinc before getting sick has weaker, less consistent evidence than taking it within 24 hours of symptom onset.</p>
+        </div>
+      </div>
+
+      <h2>The Copper Trade-Off - Real Cases, Not Just Theory</h2>
+
+      <p>Zinc and copper are absorbed through the same intestinal pathway, and they compete for it. Excess zinc intake upregulates metallothionein, a protein in the gut that binds copper preferentially, leading the body to excrete copper rather than absorb it. This isn't a rare, exotic interaction - it's well-documented enough that it became a genuine clinical concern during the COVID-19 pandemic, when zinc supplementation surged.</p>
 
       <div class="article-img">
-        <img src="/images/double-helix-glowing-blue-gold.jpg" alt="DNA double helix - zinc supports DNA repair and replication" onerror="this.style.display='none'" />
+        <img src="/images/zinc-dosage-balance.jpg" alt="A precision scale representing the importance of correct zinc dosing" onerror="this.style.display='none'" />
       </div>
 
-      <h2>Why Deficiency Is More Common Than You Think</h2>
+      <div class="case-box">
+        <div class="case-title">Documented Cases Worth Knowing</div>
+        <div class="case-item">
+          <span class="case-icon">⚠️</span>
+          <span><strong>Irreversible neurological damage:</strong> A 76-year-old woman developed severe anemia, gait disturbance, and neurological deficits from chronic zinc over-supplementation. Her blood counts recovered after stopping zinc and starting copper, but her neurological symptoms did not fully resolve.</span>
+        </div>
+        <div class="case-item">
+          <span class="case-icon">⚠️</span>
+          <span><strong>An overlooked source - denture adhesive:</strong> A separate case report identified zinc-containing denture adhesive, applied in excess over time, as the source of progressive copper deficiency and myeloneuropathy - a source most people would never think to count as "zinc supplementation."</span>
+        </div>
+        <div class="case-item">
+          <span class="case-icon">⚠️</span>
+          <span><strong>A relatively modest dose was enough:</strong> One reported case involved a multivitamin containing just 80mg of zinc, taken for macular degeneration support, leading to pancytopenia and neutropenia from zinc-induced hypocupremia - resolved after stopping zinc and adding oral copper.</span>
+        </div>
+        <div class="case-item">
+          <span class="case-icon">⚠️</span>
+          <span><strong>Even therapeutic, medically necessary doses carry risk:</strong> In Wilson's disease treatment, where high-dose zinc (100-150mg/day) is the standard therapy to block copper absorption, a patient developed irreversible neurological complications after 12 years of treatment - a reminder that this isn't only a risk from careless self-supplementation.</span>
+        </div>
+      </div>
 
-      <p>Despite being found in meat, shellfish, nuts, seeds, and legumes, many people do not get enough absorbable zinc from diet. The key word is absorbable.</p>
-
-      <p>Phytates - compounds found in whole grains and legumes - bind to zinc and block its absorption significantly. So does heavy alcohol intake, chronic stress, certain medications including diuretics and PPIs, and aging itself which reduces absorption efficiency.</p>
-
-      <p>Vegetarians and vegans are particularly at risk unless they are supplementing carefully. A diet built around grains and legumes can paradoxically provide zinc while blocking its absorption at the same time.</p>
+      <div class="highlight-box">
+        <div class="highlight-label">The Practical Takeaway</div>
+        <p>None of this means high-dose zinc lozenges for a cold are dangerous when used short-term (a few days, as studied in the cold trials above). The real risk is chronic, ongoing supplementation above roughly 30-40mg/day without copper, sustained over months or years - exactly the pattern that shows up in the documented case reports. Short-term, dose-appropriate use for an active cold is a different risk profile than daily long-term supplementation.</p>
+      </div>
 
       <h2>Choosing the Right Form</h2>
 
@@ -509,27 +317,27 @@
         <div class="form-card recommended">
           <div class="form-label rec">✓ Best Choice</div>
           <h4>Zinc Picolinate</h4>
-          <p>Highly bioavailable and well tolerated. One of the most studied and reliably absorbed forms.</p>
+          <p>Highly bioavailable and well tolerated - one of the most studied and reliably absorbed forms for daily supplementation.</p>
         </div>
         <div class="form-card recommended">
           <div class="form-label rec">✓ Best Choice</div>
           <h4>Zinc Bisglycinate</h4>
-          <p>Chelated form with excellent absorption and gentle on the stomach. Good option for sensitive individuals.</p>
+          <p>Chelated form with excellent absorption and gentle on the stomach - a good option for sensitive individuals.</p>
         </div>
         <div class="form-card">
           <div class="form-label ok">✓ Acceptable</div>
           <h4>Zinc Citrate</h4>
-          <p>Decent absorption, mild on the stomach, and widely available. A solid budget option.</p>
+          <p>Decent absorption, mild on the stomach, and widely available - a solid budget option for daily use.</p>
         </div>
         <div class="form-card">
-          <div class="form-label ok">Short-term only</div>
-          <h4>Zinc Gluconate</h4>
-          <p>Common in cold lozenges. Okay for short-term immune support. Not ideal for daily supplementation.</p>
+          <div class="form-label ok">For Colds Specifically</div>
+          <h4>Zinc Acetate (Lozenge)</h4>
+          <p>The specific form used in the strongest cold-duration trials above 75mg/day - slightly outperformed zinc gluconate, though the difference wasn't statistically significant.</p>
         </div>
         <div class="form-card avoid">
           <div class="form-label bad">✗ Avoid</div>
           <h4>Zinc Oxide</h4>
-          <p>Poorly absorbed. Unless it is in sunscreen, there is no good reason to take this form orally.</p>
+          <p>Poorly absorbed orally. Unless it's in sunscreen, there's no good reason to take this form by mouth.</p>
         </div>
       </div>
 
@@ -537,24 +345,24 @@
 
       <table class="dosing-table">
         <tr>
-          <th>Group</th>
+          <th>Purpose</th>
           <th>Daily Dose</th>
           <th>Notes</th>
         </tr>
         <tr>
-          <td>Adults (maintenance)</td>
+          <td>General maintenance</td>
           <td>15 - 30mg</td>
-          <td>Daily, long-term safe</td>
+          <td>Daily, long-term safe range for most adults</td>
         </tr>
         <tr>
-          <td>Higher needs (stress, infection)</td>
-          <td>Up to 40mg</td>
-          <td>Short-term only, 1-2 months</td>
+          <td>Active cold (as studied)</td>
+          <td>&gt;75mg, lozenge form</td>
+          <td>Start within 24 hours of symptom onset; short-term use only, a few days to a week</td>
         </tr>
         <tr>
-          <td>Long-term over 30mg</td>
-          <td>30mg zinc + 2-3mg copper</td>
-          <td>Copper balance essential</td>
+          <td>Long-term use above 30mg</td>
+          <td>30mg+ zinc + 2-3mg copper</td>
+          <td>Copper pairing essential to prevent the deficiency pattern described above</td>
         </tr>
         <tr>
           <td>Teenagers</td>
@@ -568,47 +376,45 @@
         </tr>
       </table>
 
-      <p>Zinc is best taken on an empty stomach - but that is also when it is most likely to cause nausea. Most people do well taking it with a small light snack that does not contain dairy, calcium, or whole grains which can interfere with absorption.</p>
-
-      <p>Morning or lunchtime works well. <strong>Avoid combining zinc with magnesium, iron, or calcium at the same time</strong> - they compete for absorption. Space them by at least an hour or two.</p>
+      <p>Zinc is best taken on an empty stomach, but that's also when it's most likely to cause nausea. Most people do well taking it with a small, light snack that doesn't contain dairy, calcium, or whole grains, which interfere with absorption. <strong>Avoid combining zinc with magnesium, iron, or calcium at the same time</strong> - they compete for absorption. Space them by at least an hour or two.</p>
 
       <div class="warning-box">
-        <div class="warning-label">⚠️ Important</div>
-        <p>Too much zinc can cause nausea, metallic taste, headaches, and copper deficiency. Chronically overdosing can suppress immune function - ironically the very thing people often take zinc to support. If supplementing over 30mg daily long-term, include 2-3mg copper to maintain the correct mineral balance.</p>
+        <div class="warning-label">Who Should Be Cautious</div>
+        <p>Anyone supplementing above 30mg/day for more than a few weeks should pair it with 2-3mg of copper, given the well-documented competitive absorption pathway. Watch for unexplained fatigue, anemia, or neurological symptoms (tingling, gait changes) if on long-term high-dose zinc, and check copper/ceruloplasmin levels if these appear. Be aware that zinc-containing denture adhesives can be an overlooked, ongoing source of excess intake. People with Wilson's disease on therapeutic zinc require regular monitoring given the documented long-term neurological risk even at medically necessary doses.</p>
       </div>
 
       <h2>What It Stacks Well With</h2>
 
-      <div class="synergy-grid">
-        <div class="synergy-card">
-          <div class="icon">🍊</div>
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🍊</div>
           <h4>Vitamin C</h4>
-          <p>Classic immune stack. Complementary mechanisms, strong combined effect.</p>
+          <p>Classic immune-support pairing with complementary mechanisms, commonly combined for general immune resilience.</p>
         </div>
-        <div class="synergy-card">
-          <div class="icon">🌿</div>
+        <div class="combo-card">
+          <div class="combo-icon">🌿</div>
           <h4>Quercetin</h4>
-          <p>Acts as a zinc ionophore - helps zinc enter cells where it actually does its work.</p>
+          <p>Acts as a zinc ionophore, helping zinc enter cells more effectively where it actually does its work.</p>
         </div>
-        <div class="synergy-card">
-          <div class="icon">🔬</div>
+        <div class="combo-card">
+          <div class="combo-icon">🔬</div>
           <h4>Selenium</h4>
-          <p>Thyroid support and antioxidant protection. Strong synergy for immune resilience.</p>
+          <p>Thyroid support and antioxidant protection - a strong, commonly studied pairing for immune resilience.</p>
         </div>
-        <div class="synergy-card">
-          <div class="icon">⚖️</div>
+        <div class="combo-card">
+          <div class="combo-icon">⚖️</div>
           <h4>Copper</h4>
-          <p>Essential for long-term mineral balance when supplementing zinc above 30mg.</p>
+          <p>Essential for long-term mineral balance when supplementing zinc above 30mg - see the documented cases above for why this isn't optional.</p>
         </div>
-        <div class="synergy-card">
-          <div class="icon">💪</div>
+        <div class="combo-card">
+          <div class="combo-icon">💪</div>
           <h4>Magnesium + Boron</h4>
-          <p>For men: supports hormone levels naturally. The ZMB stack has solid research behind it.</p>
+          <p>For men, this combination supports natural hormone levels - the "ZMB" stack has reasonable research behind it, though take at a different time than zinc alone given the absorption competition.</p>
         </div>
-        <div class="synergy-card">
-          <div class="icon">🧬</div>
-          <h4>NMN + D3</h4>
-          <p>Zinc supports the immune and cellular repair functions that NAD+ and D3 also enhance.</p>
+        <div class="combo-card">
+          <div class="combo-icon">🧬</div>
+          <h4>Vitamin D3</h4>
+          <p>Both support broad immune function through different, complementary mechanisms - a common pairing in general immune-support stacks.</p>
         </div>
       </div>
 
@@ -616,19 +422,37 @@
         <div class="aaf-score">7.5/10</div>
         <div class="aaf-label">
           <strong>Anti-Aging Factor</strong>
-          Essential trace mineral with broad systemic effects on immunity, hormone balance, DNA repair and oxidative stress. Highly impactful at correcting deficiency - less dramatic when already sufficient.
+          An essential trace mineral with broad, well-documented systemic effects on immunity, hormone balance, DNA repair, and oxidative stress, and a cold-duration benefit that holds up well once dose is properly accounted for. The score reflects genuinely strong evidence at the right dose, balanced against a real, well-documented long-term risk - zinc-induced copper deficiency - that's easy to avoid with a simple copper pairing but easy to overlook if you don't know to ask about it. Most impactful when correcting an actual deficiency; less dramatic when levels are already sufficient.
         </div>
       </div>
 
     </div>
 
+    <a href="/articles/supplement-interactions-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-supplement-interactions.jpg" alt="Supplement Interactions" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ Before You Take This Long-Term</div>
+        <h4>Zinc's copper-depleting effect is one of the better-documented mineral interactions</h4>
+        <p>See the full mechanism and which combinations need real attention in our broader interactions guide.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
     <div class="sources">
       <div class="sources-label">Sources & Further Reading</div>
       <ol>
-        <li>Prasad, A.S. (2014). Zinc is an Antioxidant and Anti-Inflammatory Agent. <em>Frontiers in Nutrition</em>, 1, 14.</li>
-        <li>Rink, L. & Haase, H. (2007). Zinc homeostasis and immunity. <em>Trends in Immunology</em>, 28(1), 1-4.</li>
-        <li>Fallah, A. et al. (2018). Zinc is an Essential Element for Male Fertility. <em>Journal of Reproduction & Infertility</em>, 19(2), 69-81.</li>
-        <li>Roohani, N. et al. (2013). Zinc and its importance for human health. <em>Journal of Research in Medical Sciences</em>, 18(2), 144-157.</li>
+        <li>Hemilä, H. (2017). Zinc lozenges and the common cold: a meta-analysis comparing zinc acetate and zinc gluconate, and the role of zinc dosage. <em>JRSM Open</em>, 8(5).</li>
+        <li>Hemilä, H. & Chalker, E. (2024). Shortcomings in the Cochrane review on zinc for the common cold (2024). <em>Frontiers in Medicine</em>, 11, 1470004.</li>
+        <li>Hemilä, H. (2017). Zinc acetate lozenges may improve the recovery rate of common cold patients: an individual patient data meta-analysis. <em>Open Forum Infectious Diseases</em>, 4(2), ofx059.</li>
+        <li>Nault, D. et al. (2024). Zinc for prevention and treatment of the common cold. <em>Cochrane Database of Systematic Reviews</em>, Issue 5.</li>
+        <li>Douglas, R.M. et al. (1987). Failure of effervescent zinc acetate lozenges to alter the course of upper respiratory tract infections. <em>Antimicrobial Agents and Chemotherapy</em>, 31(8), 1263-1265.</li>
+        <li>Mozaffar, B. et al. (2023). The Effectiveness of Zinc Supplementation in Taste Disorder Treatment: A Systematic Review and Meta-Analysis. <em>International Journal of Otolaryngology</em>.</li>
+        <li>Gupta, N. & Carmichael, M.F. (2023). Zinc-Induced Copper Deficiency as a Rare Cause of Neurological Deficit and Anemia. <em>Cureus</em>, 15(8), e43856.</li>
+        <li>Osadchyi, V. et al. (2025). Zinc-Induced Copper Deficiency Myeloneuropathy Masquerading as Paraneoplastic Syndrome: A Case Report. <em>Cureus</em>, 17(4), e82995.</li>
+        <li>Zinc-induced hypocupremia and pancytopenia, from zinc supplementation to its toxicity, a case report. PMC8604455.</li>
+        <li>The COVID-19 Pandemic and Zinc-Induced Copper Deficiency: An Important Link. <em>The American Journal of Medicine</em> (2022).</li>
       </ol>
     </div>
 
@@ -640,7 +464,6 @@
         <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
       </div>
     </div>
-
 
     <div class="related-section">
       <div class="related-title">More Articles</div>
@@ -656,20 +479,20 @@
         </a>
         <a href="/articles/magnesium-guide.html" class="related-card">
           <div class="related-img c-mag">
-            <img src="/images/white-powder-capsules-on-moss.jpg" alt="Magnesium" onerror="this.style.display='none'" />
+            <img src="/images/hero-magnesium.jpg" alt="Magnesium" onerror="this.style.display='none'" />
           </div>
           <div class="related-body">
             <span class="related-tag">Magnesium</span>
             <h4>Magnesium: The Master Mineral That Everyone's Missing</h4>
           </div>
         </a>
-        <a href="/articles/vitamin-d3-k2-guide.html" class="related-card">
-          <div class="related-img c-vitd">
-            <img src="/images/old-hand-young-hand.jpg" alt="Vitamin D3" onerror="this.style.display='none'" />
+        <a href="/articles/quercetin-guide.html" class="related-card">
+          <div class="related-img c-quer">
+            <img src="/images/hero-quercetin.jpg" alt="Quercetin" onerror="this.style.display='none'" />
           </div>
           <div class="related-body">
-            <span class="related-tag">Vitamin D3</span>
-            <h4>Vitamin D3 + K2: The Cheapest Longevity Insurance</h4>
+            <span class="related-tag">Quercetin</span>
+            <h4>Quercetin: The Swiss Army Knife of Flavonoids</h4>
           </div>
         </a>
       </div>
@@ -681,13 +504,9 @@
   </div>
 
   <script>
-    }
-
     if (localStorage.getItem('theme') === 'dark') {
       document.body.setAttribute('data-theme', 'dark');
-      document.querySelector('.dark-toggle').textContent = '☀️ Light';
     }
-
     window.addEventListener('scroll', () => {
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrolled = (window.scrollY / docHeight) * 100;
