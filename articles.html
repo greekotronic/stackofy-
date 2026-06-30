@@ -56,6 +56,21 @@
     .protocol-card-body p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
     .protocol-card-meta { font-size: 11px; color: var(--gold); font-weight: 600; margin-top: 0.6rem; }
 
+    /* CONTENT TYPE TABS */
+    .type-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 0; }
+    .type-tab { padding: 10px 18px; font-size: 14px; font-weight: 600; color: var(--text-muted); cursor: pointer; border: none; background: none; border-bottom: 2.5px solid transparent; transition: color 0.2s, border-color 0.2s; margin-bottom: -1px; }
+    .type-tab:hover { color: var(--text); }
+    .type-tab.active { color: var(--green-dark); border-bottom-color: var(--gold); }
+    [data-theme="dark"] .type-tab.active { color: var(--green-light); }
+    .type-tab .tab-count { font-size: 11px; color: var(--text-muted); margin-left: 4px; }
+
+    /* SORT TOGGLE */
+    .sort-toggle { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text-muted); }
+    .sort-toggle select { font-size: 13px; color: var(--text); background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 5px 10px; cursor: pointer; }
+    .sort-toggle select:focus { outline: none; border-color: var(--green-dark); }
+
+    .section-hidden-by-tab { display: none !important; }
+
     /* FILTER BAR */
     .filter-bar { display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem; flex-wrap: wrap; gap: 1rem; }
     .filter-pills { display: flex; gap: 0.5rem; flex-wrap: wrap; }
@@ -127,6 +142,15 @@
 
   <div class="main">
 
+    <!-- CONTENT TYPE TABS -->
+    <div class="type-tabs" id="type-tabs">
+      <button class="type-tab active" data-type="all" onclick="filterByType('all', this)">All Content</button>
+      <button class="type-tab" data-type="supplements" onclick="filterByType('supplements', this)">Supplement Guides</button>
+      <button class="type-tab" data-type="editorial" onclick="filterByType('editorial', this)">Editorial</button>
+      <button class="type-tab" data-type="protocols" onclick="filterByType('protocols', this)">Protocols</button>
+      <button class="type-tab" data-type="books" onclick="filterByType('books', this)">Books</button>
+    </div>
+
     <!-- SUPPLEMENT GUIDES SECTION -->
     <div class="section-label-row">
       <div class="label">All Guides</div>
@@ -143,7 +167,16 @@
         <span class="pill" onclick="filterBy('performance', this)">Performance</span>
         <span class="pill" onclick="filterBy('energy', this)">Energy</span>
       </div>
-      <div class="articles-count"><span id="article-count">0</span> Articles</div>
+      <div style="display: flex; align-items: center; gap: 1rem;">
+        <div class="sort-toggle">
+          <label for="sort-select">Sort:</label>
+          <select id="sort-select" onchange="applySortOrder()">
+            <option value="newest">Newest</option>
+            <option value="az">A-Z</option>
+          </select>
+        </div>
+        <div class="articles-count"><span id="article-count">0</span> Articles</div>
+      </div>
     </div>
 
     <div id="articles-grid" class="articles-grid"></div>
@@ -190,6 +223,61 @@
   </div>
 
   <script>
+    function filterByType(type, el) {
+      document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+
+      const supplementSection = document.querySelector('.section-label-row').closest('.main') ? null : null;
+      const allGuidesLabelRow = document.querySelectorAll('.section-label-row')[0];
+      const filterBarEl = document.querySelector('.filter-bar');
+      const gridEl = document.getElementById('articles-grid');
+      const protocolEl = document.getElementById('protocol-section');
+      const editorialEl = document.getElementById('editorial-section');
+      const booksEl = document.getElementById('books-section');
+
+      const showSupplements = (type === 'all' || type === 'supplements');
+      const showProtocols = (type === 'all' || type === 'protocols');
+      const showEditorial = (type === 'all' || type === 'editorial');
+      const showBooks = (type === 'all' || type === 'books');
+
+      [allGuidesLabelRow, filterBarEl, gridEl].forEach(el => {
+        if (el) el.classList.toggle('section-hidden-by-tab', !showSupplements);
+      });
+      if (protocolEl) protocolEl.classList.toggle('section-hidden-by-tab', !showProtocols);
+      if (editorialEl) editorialEl.classList.toggle('section-hidden-by-tab', !showEditorial);
+      if (booksEl) booksEl.classList.toggle('section-hidden-by-tab', !showBooks);
+
+      // Reflect in URL without reloading, so the view is shareable/bookmarkable
+      const url = new URL(window.location);
+      if (type === 'all') url.searchParams.delete('type');
+      else url.searchParams.set('type', type);
+      window.history.replaceState({}, '', url);
+    }
+
+    function applySortOrder() {
+      const sortValue = document.getElementById('sort-select').value;
+      const grid = document.getElementById('articles-grid');
+      if (!grid) return;
+
+      if (!grid.dataset.originalOrderCaptured) {
+        grid.__originalOrder = Array.from(grid.querySelectorAll('.article-card'));
+        grid.dataset.originalOrderCaptured = 'true';
+      }
+      const cards = grid.__originalOrder || Array.from(grid.querySelectorAll('.article-card'));
+
+      if (sortValue === 'az') {
+        const sorted = [...cards].sort((a, b) => {
+          const titleA = (a.getAttribute('data-title') || '').toLowerCase();
+          const titleB = (b.getAttribute('data-title') || '').toLowerCase();
+          return titleA.localeCompare(titleB);
+        });
+        sorted.forEach(c => grid.appendChild(c));
+      } else {
+        // Newest: restore original (chronological) document order
+        cards.forEach(c => grid.appendChild(c));
+      }
+    }
+
     function filterBy(tag, el) {
       // Clear search when filter pill clicked
       document.getElementById('search-input').value = '';
@@ -286,6 +374,15 @@
     if (q) {
       document.getElementById('search-input').value = q;
       setTimeout(() => filterArticles(), 300);
+    }
+
+    // Pre-select content type tab from URL (e.g. articles.html?type=editorial)
+    const typeParam = urlParams.get('type');
+    if (typeParam) {
+      const matchingTab = document.querySelector('.type-tab[data-type="' + typeParam + '"]');
+      if (matchingTab) {
+        setTimeout(() => filterByType(typeParam, matchingTab), 50);
+      }
     }
   </script>
 
