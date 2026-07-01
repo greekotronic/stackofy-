@@ -825,5 +825,18 @@
     "tags": "AI Longevity Editorial Retro Biosciences Insilico",
     "readTime": "16 min",
     "description": "OpenAI and Retro Biosciences achieved a real 50x jump in cell reprogramming efficiency. AI-discovered drugs succeed in Phase I at 80-90% - but show no advantage yet in Phase II, and zero have reached approval."
+  },
+  {
+    "title": "Vegan Supplements in 2026: One Myth Debunked Twice, One Real Win",
+    "tag": "Editorial",
+    "url": "/articles/vegan-supplements-guide.html",
+    "image": "/images/hero-vegan-supplements.jpg",
+    "color": "c-vegan",
+    "featured": true,
+    "type": "editorial",
+    "badgeType": "featured",
+    "tags": "Vegan Supplements Editorial B12 Creatine Omega-3",
+    "readTime": "17 min",
+    "description": "Spirulina's B12 is mostly inactive pseudo-cobalamin that can worsen your B12 status. The 'vegans get more from creatine' claim didn't replicate. Algae-derived DHA and EPA genuinely work."
   }
 ]

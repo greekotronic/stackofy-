@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vegan Supplements in 2026: One Myth Debunked Twice, One Real Win - Stackofy</title>
+  <meta name="description" content="Spirulina still doesn't give you usable B12 - and can actively interfere with the real thing. The claim that vegans get a bigger cognitive boost from creatine didn't survive its own best study. But algae-based omega-3 is a genuine, well-evidenced win. Here is the honest 2026 state of vegan supplementation." />
+
+  <meta property="og:title" content="Vegan Supplements in 2026: One Myth Debunked Twice, One Real Win" />
+  <meta property="og:description" content="Spirulina's B12 is mostly inactive pseudo-cobalamin that can worsen your B12 status. The 'vegans get more from creatine' claim failed to replicate in the largest trial to date. Algae-derived DHA and EPA, meanwhile, genuinely work. Here is what the 2026 evidence actually supports." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/vegan-supplements-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-vegan-supplements.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #2D5A1B, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-b12 { background: linear-gradient(135deg, #7A1F2B, #B33951); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+    .c-ai { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-vegan-supplements.jpg" alt="Fresh plant-based whole foods arranged in a circle, representing vegan nutrition" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Editorial</span>
+      <h1>Vegan Supplements in 2026: One Myth Debunked Twice, One Real Win</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>17 min read</span>
+        <span>·</span>
+        <span>July 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Spirulina still does not provide usable vitamin B12 for humans - it's predominantly "pseudo-B12," inactive cobalamin analogues that can actively worsen B12 status by competing with real B12 for absorption</li>
+        <li>Chlorella is genuinely different from spirulina: independent lab analysis of 57 commercial algae products found chlorella contained mostly physiologically active B12, while spirulina products contained mostly the inactive pseudo-form - but batch variation is large enough that neither should be your sole B12 source</li>
+        <li>The popular claim that vegetarians and vegans get a bigger cognitive boost from creatine supplementation, due to lower baseline muscle creatine stores, traces back to small early studies - the largest, best-designed replication to date (preregistered, double-blind, crossover RCT, n=123) found no such advantage</li>
+        <li>Algae-derived DHA and EPA omega-3 supplements are a genuine, well-evidenced win for vegans - they deliver the same preformed long-chain omega-3s found in fish oil, bypassing the notoriously inefficient ALA-to-DHA/EPA conversion pathway (under 10% for EPA, 5% or less for DHA in most people)</li>
+        <li>Vitamin D3 (not just D2) is now available from a genuinely vegan source - lichen-derived D3 - closing a real gap that used to force vegans to choose the less-effective D2 form or rely on animal-derived D3</li>
+        <li>None of this changes the fundamental, unglamorous basics: B12 supplementation is non-negotiable for vegans, and iodine, zinc, iron, and long-chain omega-3s deserve ongoing attention regardless of which trendy supplement claim is circulating this year</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Vegan nutrition has one of the most persistent myth ecosystems in all of supplement science, mostly because a handful of confident claims from decades-old advocacy books got a head start on the actual research and never fully lost their grip. Two of the most common - "algae gives you B12" and "vegans get more out of creatine" - are worth a fresh, evidence-first look in 2026, alongside one genuine, well-supported win that deserves more attention than the myths get.</p>
+
+      <div class="article-img">
+        <img src="/images/vegan-algae-texture.jpg" alt="Macro photograph of swirling green algae texture in water" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Myth One: Spirulina as a B12 Source</h2>
+
+      <p>This is one of the oldest and most thoroughly investigated claims in vegan nutrition, and it has not aged well. Early measurements of B12 in spirulina used outdated analytical methods that couldn't distinguish true, biologically active cobalamin from closely related but inactive "pseudo-B12" compounds - corrinoid analogues that look similar enough to register on older assays but don't function as vitamin B12 in the human body.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">Worse Than Useless: Active Interference</div>
+        <p>This isn't just a case of spirulina doing nothing for your B12 status - it's genuinely counterproductive. Pseudo-B12 analogues compete with real vitamin B12 for the same binding proteins and receptors involved in absorption, without providing any actual cobalamin function once bound. A controlled study found that taking spirulina significantly worsened B12 status in participants, and it's specifically not recommended to take spirulina alongside a real B12 supplement, since the analogues can interfere with absorption of the vitamin you're actually trying to get.</p>
+      </div>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Predominantly Inactive</span>
+          <h4>Spirulina</h4>
+          <p>Lab analysis of commercial spirulina products found pseudo-vitamin B12 (the inactive analogue) as the prevailing form, with true active cobalamin representing roughly 30% or less of total measured B12 in earlier assessments.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Mostly Active, But Variable</span>
+          <h4>Chlorella</h4>
+          <p>The same type of analysis found chlorella products contained predominantly physiologically active cobalamin - genuinely different from spirulina - though total B12 content varied enormously between batches, from non-detectable to substantial.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">No B12 At All</span>
+          <h4>Seaweed / Nori (Dried)</h4>
+          <p>Direct studies of vegans relying on dried nori and other seaweeds as a B12 source found them inadequate to prevent or correct deficiency - some seaweed contains no B12 whatsoever, contrary to occasional claims.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Only Reliable Sources</span>
+          <h4>Fortified Foods and Supplements</h4>
+          <p>In over 60 years of vegan dietary practice, only B12-fortified foods and direct B12 supplements (methylcobalamin, hydroxocobalamin, or cyanocobalamin) have consistently proven capable of preventing and correcting deficiency.</p>
+        </div>
+      </div>
+
+      <div class="skip-box">
+        <div class="skip-label">The Practical Takeaway</div>
+        <p>If you're vegan, take a real B12 supplement or rely on consistently fortified foods - there is no reliable algae-based or fermented-food shortcut, and chasing one risks leaving a genuine, serious deficiency untreated while feeling falsely reassured by a "natural" label. This isn't a matter of opinion; it's the conclusion of decades of direct testing.</p>
+      </div>
+
+      <h2>Myth Two: "Vegans Get More From Creatine" - A Claim That Didn't Survive Replication</h2>
+
+      <p>This one is more recent and more nuanced - a real scientific hypothesis, with a plausible mechanism, that simply hasn't held up to the field's best attempt at confirming it.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">A Plausible Idea That the Best Available Test Didn't Confirm</div>
+        <div class="rct-row">
+          <div class="rct-n">Original<span>Small Studies</span></div>
+          <div class="rct-desc">Vegetarians and vegans have measurably lower creatine content in muscle tissue than omnivores, since dietary creatine comes almost exclusively from meat and fish. Early studies (Benton & Donohoe, 2010; Rae et al.) found creatine supplementation produced a notably larger memory and cognitive improvement in vegetarians than in meat-eaters - a genuinely reasonable hypothesis, since lower baseline stores should leave more room for a supplementation effect.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">123<span>Best Replication</span></div>
+          <div class="rct-desc">The largest and most rigorously designed study to directly test this - preregistered, double-blind, placebo-controlled, crossover, with roughly half of its 123 participants vegetarian - found only a small overall cognitive benefit from creatine, and explicitly reported that vegetarians did not benefit more than omnivores.</div>
+        </div>
+        <div class="rct-highlight">This is a genuinely instructive case, not a "vegans were wrong about everything" story: creatine supplementation still shows a modest overall cognitive benefit in the wider literature, and vegetarians do have measurably lower baseline creatine - both of those facts remain true. What didn't survive the better-designed test was the specific, commonly repeated marketing claim that vegans and vegetarians see a proportionally bigger cognitive payoff. Total brain creatine content, unlike muscle creatine, appears to be fairly similar between vegetarians and omnivores in more careful measurements - which may explain why the expected extra cognitive benefit didn't show up.</div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/vegan-food-sources.jpg" alt="Whole plant-based food sources including tofu, chickpeas, nutritional yeast and walnuts" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Real Win: Algae-Derived DHA and EPA</h2>
+
+      <p>After two debunkings, it's worth giving equal weight to where the vegan supplement world is genuinely ahead of where the myths would have you expect - because unlike the B12 and creatine stories above, this one holds up.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">A Direct, Bioavailable Source - Not a Workaround</div>
+        <p>The long-chain omega-3s DHA and EPA are found in meaningful amounts almost exclusively in fish and marine sources - but fish don't produce them either; they get them from eating microalgae. Algae-oil supplements simply source DHA and EPA directly from the same algae fish rely on, skipping the animal middleman entirely. This isn't an inferior substitute requiring a leap of faith: it's the same molecules, from the original source, and studies confirm algal oil reliably raises omega-3 index levels, including in people starting from a low baseline. Plant-only ALA sources (flaxseed, chia, walnuts), by contrast, convert to usable DHA and EPA at a genuinely poor rate - typically under 10% for EPA and 5% or less for DHA - which is the real reason algae oil, not flaxseed oil, is the vegan omega-3 option worth prioritizing.</p>
+      </div>
+
+      <h2>A Practical Checklist for Vegan Supplementation in 2026</h2>
+
+      <div class="checklist-box">
+        <h4>What Actually Deserves Your Attention</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Take a real B12 supplement, consistently</strong> - this remains the single most non-negotiable item on any vegan supplementation list, with no reliable algae-based substitute.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Consider algae-oil DHA/EPA over flaxseed or chia oil</strong> if long-chain omega-3 status matters to you - the conversion math genuinely favors the direct algae source.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Look for lichen-derived vitamin D3 specifically</strong> rather than D2 if you want the more effective D form in a genuinely vegan product - this option has become more widely available.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't rely on spirulina, chlorella, or seaweed as your B12 source</strong> - at best inconsistent, at worst actively counterproductive if combined with real B12 supplementation.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't expect a bigger cognitive boost from creatine specifically because you're vegan</strong> - the best available evidence doesn't support that specific claim, even though creatine itself remains a reasonable, well-studied supplement for vegans given lower baseline dietary intake.</span>
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/b12-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-b12.jpg" alt="Vitamin B12" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ The Full B12 Picture: Forms, Absorption, and the Cyanocobalamin Myth</div>
+        <h4>What actually matters when choosing and dosing a B12 supplement</h4>
+        <p>See our complete breakdown of B12 forms, absorption mechanics, and which safety claims about it are actually true.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Watanabe, F. et al. (2002). Characterization and Bioavailability of Vitamin B12-Compounds from Edible Algae. <em>Journal of Nutritional Science and Vitaminology</em>, 48(5), 325-331.</li>
+        <li>Dagnelie, P.C. et al. (1991). Vitamin B-12 from algae appears not to be bioavailable. <em>American Journal of Clinical Nutrition</em>.</li>
+        <li>Analysis of 57 commercially available Chlorella and Spirulina supplements distinguishing physiologically active cobalamin from pseudo-vitamin B12 (2022).</li>
+        <li>The Vegan Society. What Every Vegan Should Know About Vitamin B12.</li>
+        <li>Benton, D. & Donohoe, R. (2011). The influence of creatine supplementation on the cognitive functioning of vegetarians and omnivores. <em>British Journal of Nutrition</em>, 105, 1100-1105.</li>
+        <li>Preregistered, double-blind, placebo-controlled crossover RCT on creatine supplementation and cognitive performance in vegetarians vs. omnivores (n=123). <em>BMC Medicine</em> (2023).</li>
+        <li>EFSA (2024). Creatine and improvement in cognitive function: Evaluation of a health claim.</li>
+        <li>Bioavailability and conversion of plant-based sources of omega-3 fatty acids - a scoping review for vegetarians and vegans.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>Whatever your diet, get the full evidence-backed protocol - NMN, D3, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/b12-guide.html" class="related-card">
+          <div class="related-img c-b12">
+            <img src="/images/hero-b12.jpg" alt="Vitamin B12" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin B12</span>
+            <h4>B12: What It Actually Fixes (And What It Doesn't)</h4>
+          </div>
+        </a>
+        <a href="/articles/ai-longevity-guide.html" class="related-card">
+          <div class="related-img c-ai">
+            <img src="/images/hero-ai-longevity.jpg" alt="AI and Longevity" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Editorial</span>
+            <h4>AI and Longevity in 2026: What's Actually Real, and What's Still Phase I</h4>
+          </div>
+        </a>
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially regarding B12 status monitoring on a vegan diet. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
