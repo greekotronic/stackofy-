@@ -721,5 +721,18 @@
     "tags": ["B12", "Vitamins", "Energy", "Nervous System"],
     "readTime": "16 min",
     "description": "Cyanocobalamin isn't dangerous, methylcobalamin isn't automatically 'used directly' by your cells, and if you're not actually deficient, B12 probably won't do much for your energy or mood."
+  },
+  {
+    "title": "Why Half the Folate Trials Never Had a Chance",
+    "tag": "Folate (B9)",
+    "url": "/articles/folate-guide.html",
+    "image": "/images/hero-folate.jpg",
+    "color": "c-folate",
+    "featured": false,
+    "type": "guide",
+    "badgeType": "featured",
+    "tags": ["Folate", "B9", "Vitamins", "Pregnancy", "Depression"],
+    "readTime": "17 min",
+    "description": "One of the most-cited depression trials tested two doses of folate in the exact same design - the low dose failed, the high dose worked. Here is the honest, dose-aware picture."
   }
 ]
