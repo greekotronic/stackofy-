@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B1: Why the Expensive Form May Not Beat the Cheap One - Stackofy</title>
+  <meta name="description" content="For decades, textbooks taught that oral thiamine absorption caps out around 5-8mg per dose, justifying pricier derivatives like benfotiamine. A randomized pharmacokinetic trial says otherwise. Meanwhile, a separate old dogma about thiamine and glucose may have done more harm than good." />
+
+  <meta property="og:title" content="B1: Why the Expensive Form May Not Beat the Cheap One" />
+  <meta property="og:description" content="Cheap thiamine hydrochloride, at a high enough oral dose, reaches blood levels approaching IV administration - undercutting a big chunk of the case for premium derivatives. Meanwhile, a life-threatening deficiency is still badly underdiagnosed. Here is the honest picture." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/b1-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-b1.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #2D5A1B, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .forms-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 13px; }
+    .forms-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 12px; text-align: left; font-weight: 600; }
+    .forms-table td { padding: 10px 12px; border-bottom: 0.5px solid var(--border); color: var(--text); vertical-align: top; }
+    .forms-table tr:nth-child(even) td { background: var(--bg); }
+    .badge-strong { background: #EAF5F0; color: var(--green-dark); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-strong { background: #1A3D2A; color: var(--green-light); }
+    .badge-weak { background: #F5F5F5; color: var(--text-muted); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-weak { background: #2A2A2A; color: #B0B0B0; }
+    .badge-none { background: #FFF0F0; color: #C0392B; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-none { background: #2A1010; color: #FF8080; }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-b12 { background: linear-gradient(135deg, #7A1F2B, #B33951); }
+    .c-folate { background: linear-gradient(135deg, #1a2a10, #7A5C10); }
+    .c-b6 { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .forms-table { font-size: 11px !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-b1.jpg" alt="Golden wheat grains representing vitamin B1, thiamine" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Vitamin B1 (Thiamine)</span>
+      <h1>B1: Why the Expensive Form May Not Beat the Cheap One</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>17 min read</span>
+        <span>·</span>
+        <span>July 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>For decades, textbooks taught that oral thiamine absorption saturates at roughly 5-8mg per single dose via a limited active transport mechanism - the entire justification for premium, more expensive derivatives like benfotiamine</li>
+        <li>A randomized, double-blind pharmacokinetic trial testing 100mg, 500mg, and 1,500mg doses of plain thiamine hydrochloride found blood levels kept rising well past the old "saturation" point, via an additional non-saturable passive absorption route - undercutting a large part of the case for pricier alternatives</li>
+        <li>Thiamine (vitamin B1) has no established tolerable upper intake level in official reviews, due to a genuine lack of toxicity data at any oral dose tested - unlike B6, this is one of the least controversial vitamins on the "is it dangerous" front</li>
+        <li>Wernicke's encephalopathy, the acute, life-threatening deficiency syndrome, is badly underdiagnosed - autopsy studies find it in 1-3% of cases, but only around 20% are recognized clinically before death, and just 16% in non-alcoholic patients</li>
+        <li>A decades-old teaching that a single dose of glucose could trigger or worsen Wernicke's encephalopathy in a thiamine-deficient person has never been documented in an actual case - current emergency guidelines now explicitly say glucose should not be delayed for thiamine in a hypoglycemic emergency</li>
+        <li>Thiamine should still be given promptly alongside glucose in at-risk patients as routine good practice - the correction is narrower than it sounds: don't withhold urgent glucose out of fear, not "thiamine timing doesn't matter"</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Thiamine was the first vitamin ever isolated, in 1926 - which is where the "B1" numbering comes from. It's a cofactor central to carbohydrate metabolism, the Krebs cycle, and the pentose phosphate pathway, meaning it sits directly in the pathway your cells use to turn food into usable energy. Deficiency causes beriberi (affecting the cardiovascular and nervous systems) and, in its most acute and dangerous form, Wernicke's encephalopathy.</p>
+
+      <p>Two separate controversies sit on top of this otherwise straightforward biology. One is commercial: whether the premium, pricier forms of B1 actually deliver meaningfully more vitamin to your body than the cheap standard form, at a high enough dose. The other is clinical and considerably more serious: whether a decades-old piece of medical teaching about thiamine and glucose has been quietly wrong, and whether that error may have cost lives by delaying urgent treatment.</p>
+
+      <div class="article-img">
+        <img src="/images/b1-energy-pathway.jpg" alt="Abstract illustration representing thiamine's role in cellular energy conversion" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Absorption Ceiling That May Not Actually Exist</h2>
+
+      <p>Free thiamine is taken up in the small intestine primarily through an active, carrier-mediated transport system involving two specific transporter proteins. For decades, the accepted understanding was that this system saturates quickly - older studies estimated a hard ceiling of somewhere between 2.5mg and 8.3mg absorbed per single oral dose, no matter how much thiamine you swallowed. This became the entire commercial rationale for lipid-soluble derivatives like benfotiamine and fursultiamine, marketed as bypassing the saturation problem entirely.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">A Randomized Trial Tests the Old Ceiling Directly</div>
+        <div class="rct-row">
+          <div class="rct-n">100/500/<br>1500mg<span>4-way crossover</span></div>
+          <div class="rct-desc">A randomized, double-blind, single-dose, four-way crossover pharmacokinetic study measured blood thiamine levels after oral doses of 100mg, 500mg, and 1,500mg of plain thiamine hydrochloride in healthy subjects. Blood concentration and total absorption (AUC) continued to rise across the entire dose range, rather than flattening out at the old saturation point.</div>
+        </div>
+        <div class="rct-highlight">The authors concluded that thiamine is absorbed through both the known active, saturable transport system and an additional, non-saturable passive process - meaning oral thiamine hydrochloride at a high enough dose can reach blood levels approaching those seen with intramuscular or intravenous administration, over about a week of dosing. Bioavailability at any given dose is still low in percentage terms (roughly 3.7-5.3%), but the absolute amount absorbed keeps climbing with dose, which is the part that actually matters for whether megadosing works.</div>
+      </div>
+
+      <p>This doesn't prove premium derivatives are useless - benfotiamine has its own decent trial record, particularly for diabetic neuropathy, and tissue-level uptake may still differ meaningfully by form and tissue type in ways blood levels alone don't capture. What it does undercut is the specific, simple marketing claim that "regular thiamine can't get past 5-8mg, so you need the expensive version to get a real dose" - the pharmacokinetic ceiling that claim depends on doesn't hold up against direct measurement.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">The Blood-Brain Barrier Claim Also Doesn't Clearly Favor the Premium Form</div>
+        <p>Benfotiamine is often marketed as superior specifically because it's fat-soluble and should cross the blood-brain barrier more easily. At least one comparative source states the opposite - that standard thiamine may actually cross the blood-brain barrier more effectively than benfotiamine, while benfotiamine has the better-studied case specifically for diabetic peripheral neuropathy, a different tissue target entirely. The honest picture is form-dependent and tissue-dependent, not a simple "premium form wins everywhere" story.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/b1-food-sources.jpg" alt="Whole food sources of vitamin B1 including brown rice, seeds, pork and peas" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What the Forms Actually Are</h2>
+
+      <table class="forms-table">
+        <tr>
+          <th>Form</th>
+          <th>What It Is</th>
+          <th>Absorption Route</th>
+          <th>Best-Evidenced Use</th>
+        </tr>
+        <tr>
+          <td><strong>Thiamine Hydrochloride</strong></td>
+          <td>Standard water-soluble form, cheapest and most widely available</td>
+          <td><span class="badge-strong">Active + passive at high dose</span></td>
+          <td>General supplementation, deficiency correction, IV/IM in emergencies</td>
+        </tr>
+        <tr>
+          <td><strong>Benfotiamine</strong></td>
+          <td>Synthetic, lipid-soluble derivative, absorbed differently than free thiamine</td>
+          <td><span class="badge-strong">Passive, higher tissue levels in some studies</span></td>
+          <td>Diabetic peripheral neuropathy - genuinely decent RCT record here specifically</td>
+        </tr>
+        <tr>
+          <td><strong>Sulbutiamine / Fursultiamine</strong></td>
+          <td>Other lipid-soluble synthetic derivatives, less independently studied</td>
+          <td><span class="badge-weak">Passive, claimed but thinly verified</span></td>
+          <td>Fatigue, cognition - mostly marketing claims, weak independent human data</td>
+        </tr>
+      </table>
+
+      <h2>No Established Upper Limit - A Rare Point of Consensus</h2>
+
+      <p>Unlike B6, thiamine has essentially no documented toxicity from oral intake at any dose tested, including the 1,500mg single doses used in the pharmacokinetic trial above. Regulatory reviews, including a Nordic Nutrition Recommendations scoping review, explicitly state that a safe upper intake level could not be set due to a lack of adverse effect data - not because the vitamin is definitely unlimited-safe, but because nobody has found a ceiling worth setting. Clinical doses up to 500mg/day, and short courses of IV thiamine at 1,500mg/day for suspected Wernicke's, are used routinely without a meaningful toxicity signal.</p>
+
+      <h2>The More Serious Story: An Underdiagnosed, Sometimes-Fatal Deficiency</h2>
+
+      <p>Wernicke's encephalopathy is an acute neurological emergency caused by thiamine deficiency, classically presenting with confusion, eye movement abnormalities, and difficulty walking. It's most associated with alcohol use disorder, but genuinely occurs in any severely malnourished state - hyperemesis gravidarum, bariatric surgery, cancer, prolonged intestinal failure, and refeeding after starvation all carry real risk.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">The Diagnosis Gets Missed Far More Than It Gets Caught</div>
+        <p>Autopsy studies consistently find evidence of Wernicke's encephalopathy in 1-3% of all cases examined - but only about 20% of those cases were actually diagnosed and treated before death. In non-alcoholic patients, that figure drops to just 16%; in children, 58% of cases were missed entirely. The classic textbook triad of confusion, eye movement problems, and gait disturbance is present together in only a minority of real cases, which is a major reason it's so often overlooked outside of obvious, severe alcoholism.</p>
+      </div>
+
+      <h2>The Glucose Myth That May Have Made Things Worse</h2>
+
+      <p>Generations of medical training have taught a specific rule: never give a thiamine-deficient patient glucose before thiamine, because the sudden glucose load could trigger or worsen Wernicke's encephalopathy by consuming the little remaining thiamine even faster. This is a real physiological mechanism - thiamine is a required cofactor in glucose metabolism - but the practical claim built on top of it turns out to be shakier than the confidence with which it's taught.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">No Documented Case</span>
+          <h4>Single Glucose Bolus Causing Wernicke's</h4>
+          <p>A literature review examining this specific claim found no actual documented case of a single glucose administration precipitating or worsening Wernicke's encephalopathy in a human patient - the fear is theoretically grounded but not demonstrated in practice.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Current Guidance</span>
+          <h4>Emergency Hypoglycemia Management</h4>
+          <p>Current emergency medicine guidance explicitly states that glucose administration should not be delayed for thiamine in a genuine hypoglycemic emergency - the risk of untreated severe hypoglycemia is immediate and certain, while the glucose-triggered Wernicke's risk is theoretical.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Standard Practice</span>
+          <h4>Concurrent Administration</h4>
+          <p>The practical resolution most guidelines have settled on: give thiamine at the same time as, or immediately before, glucose in at-risk patients whenever possible - not "delay glucose no matter what," but "don't forget the thiamine while you're treating the emergency in front of you."</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Real Risk, Different Trigger</span>
+          <h4>Refeeding Syndrome Specifically</h4>
+          <p>Repeated, higher-volume refeeding in a chronically malnourished patient over days does meaningfully increase thiamine demand and is a genuine, well-documented trigger for Wernicke's - this is a different exposure pattern than a single emergency glucose bolus, and the caution here remains fully warranted.</p>
+        </div>
+      </div>
+
+      <div class="skip-box">
+        <div class="skip-label">What This Means Practically</div>
+        <p>The corrected version of the rule is narrower, not opposite: don't withhold urgent, life-saving glucose out of fear of a complication that's never actually been documented from a single dose - but do give thiamine promptly and routinely alongside it in anyone with real risk factors, and take the ongoing, higher-volume refeeding scenario seriously as its own distinct risk. The old absolute version of the rule may have occasionally caused real harm by delaying emergency glucose treatment unnecessarily.</p>
+      </div>
+
+      <h2>A Practical Quality Checklist</h2>
+
+      <div class="checklist-box">
+        <h4>Before You Buy Any B1 Supplement</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Plain thiamine hydrochloride at a reasonably high oral dose is a defensible, evidence-supported default</strong> for general supplementation - you're not obviously leaving absorption on the table by choosing the cheap form.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Consider benfotiamine specifically for diabetic neuropathy</strong> - this is the one use case with a genuinely decent, form-specific RCT record behind it.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Know the real risk factors for deficiency</strong> - alcohol use disorder, bariatric surgery, hyperemesis gravidarum, prolonged malnutrition, and refeeding after starvation - and don't assume it can't happen outside classic alcoholism.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't assume "fat-soluble" automatically means "better brain penetration"</strong> for B1 derivatives - the comparative evidence on this specific claim is thinner and more mixed than the marketing suggests.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't let outdated glucose-timing dogma delay emergency treatment</strong> if you're a caregiver or clinician - treat the immediate emergency and give thiamine alongside it, not instead of it.</span>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Typical Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>General maintenance / RDA</td>
+          <td>1.1 - 1.2mg/day</td>
+          <td>Easily met through diet for most healthy adults; requirement scales with carbohydrate/energy intake</td>
+        </tr>
+        <tr>
+          <td>General supplementation, oral</td>
+          <td>100 - 500mg/day</td>
+          <td>Reflects the doses shown to raise blood levels meaningfully in pharmacokinetic studies</td>
+        </tr>
+        <tr>
+          <td>Diabetic neuropathy (as studied)</td>
+          <td>300 - 600mg/day, benfotiamine</td>
+          <td>Reflects the dose used in the better-designed RCTs for this specific indication</td>
+        </tr>
+        <tr>
+          <td>Suspected Wernicke's / severe deficiency</td>
+          <td>500mg IV, 3x daily for 3-5 days (medical setting)</td>
+          <td>Medical emergency - requires IV/IM administration and immediate clinical evaluation, not self-treatment</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Safety Notes</div>
+        <p>Thiamine has an excellent safety record with no established upper intake level and no significant toxicity documented even at gram-level oral or IV doses in clinical settings. If you or someone you know has risk factors for deficiency - especially alcohol use disorder, recent bariatric surgery, prolonged vomiting, or reintroducing food after prolonged starvation - thiamine deficiency is a genuine medical emergency requiring prompt evaluation, not a wait-and-see supplement decision.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🔬</div>
+          <h4>B-Complex (Riboflavin, Niacin)</h4>
+          <p>Thiamine works alongside the other B-vitamins in overlapping energy-metabolism pathways - commonly combined in comprehensive B-complex formulas.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🍬</div>
+          <h4>Carbohydrate-Heavy Diets</h4>
+          <p>Thiamine requirement scales with carbohydrate and overall energy intake - higher-carb diets genuinely increase the need for adequate B1.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">💧</div>
+          <h4>Glucose (Clinical Setting)</h4>
+          <p>Give concurrently in at-risk patients as routine good practice - not a reason to delay urgent glucose treatment in a genuine emergency.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Alcohol (Caution)</h4>
+          <p>Chronic alcohol use both reduces thiamine absorption and increases requirements - the single largest real-world risk factor for deficiency.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Refeeding After Starvation (Caution)</h4>
+          <p>Reintroducing nutrition too quickly after prolonged malnutrition genuinely increases thiamine demand and is a documented trigger for Wernicke's - this risk is real and distinct from the single-glucose-dose myth above.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Unverified "Superform" Marketing (Caution)</h4>
+          <p>Be skeptical of derivatives claiming dramatic bioavailability advantages without independent, form-specific human trial data beyond diabetic neuropathy.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">8/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Foundational, genuinely essential, and remarkably safe even at high doses - one of the cleanest safety profiles of any vitamin covered on this site. The score reflects that strength, tempered only by two honest caveats: the case for expensive derivatives over high-dose standard thiamine is weaker than commonly marketed outside of diabetic neuropathy specifically, and the real-world clinical picture - a genuinely dangerous, badly underdiagnosed deficiency syndrome - deserves more attention than the relatively low-stakes form debate usually receives.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ When Textbook Dogma Outlives the Evidence Behind It</div>
+        <h4>How a decades-old teaching about thiamine and glucose may have delayed emergency care</h4>
+        <p>See our framework for questioning "everyone knows this" clinical rules that were never actually tested the way they're taught.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Smithline, H.A. et al. (2012). Pharmacokinetics of high-dose oral thiamine hydrochloride in healthy subjects. <em>BMC Clinical Pharmacology</em>, 12, 4.</li>
+        <li>Thomson, A.D. & Leevy, C.M. Historical studies on the saturable active transport limits of oral thiamine absorption.</li>
+        <li>Strandler, H.S. & Strand, T.A. (2023). Thiamin (Vitamin B1) - A scoping review for Nordic Nutrition Recommendations 2023.</li>
+        <li>Sechi, G. & Serra, A. Glucose before Thiamine for Wernicke Encephalopathy: A Literature Review. <em>General Hospital Psychiatry</em>.</li>
+        <li>NCBI StatPearls (2026). Wernicke Encephalopathy - diagnosis, autopsy prevalence, and underdiagnosis rates.</li>
+        <li>Namboodiri, S. & Rao, S. (2024). A Case of Prolonged Wernicke's Encephalopathy After Treatment With IV Thiamine Due to the Subsequent Development of Refeeding Syndrome. <em>Cureus</em>, 16(7), e65178.</li>
+        <li>BAPEN (2024). Guidance on Thiamine Replacement in Refeeding Syndrome.</li>
+        <li>Stracke, H. et al. (2008). Benfotiamine in diabetic polyneuropathy (BENDIP): results of a randomised, double-blind, placebo-controlled clinical study. <em>Experimental and Clinical Endocrinology & Diabetes</em>.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>B1 is one piece of the puzzle. Get the full protocol - NMN, D3, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/b6-guide.html" class="related-card">
+          <div class="related-img c-b6">
+            <img src="/images/hero-b6.jpg" alt="Vitamin B6" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin B6</span>
+            <h4>B6: Why Two Health Authorities Disagree by a Factor of Eight</h4>
+          </div>
+        </a>
+        <a href="/articles/b12-guide.html" class="related-card">
+          <div class="related-img c-b12">
+            <img src="/images/hero-b12.jpg" alt="Vitamin B12" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin B12</span>
+            <h4>B12: What It Actually Fixes (And What It Doesn't)</h4>
+          </div>
+        </a>
+        <a href="/articles/folate-guide.html" class="related-card">
+          <div class="related-img c-folate">
+            <img src="/images/hero-folate.jpg" alt="Folate" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Folate (B9)</span>
+            <h4>Why Half the Folate Trials Never Had a Chance</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Suspected Wernicke's encephalopathy or severe thiamine deficiency is a medical emergency requiring immediate professional evaluation, not self-treatment. Always consult a qualified healthcare professional before starting any supplement protocol. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
