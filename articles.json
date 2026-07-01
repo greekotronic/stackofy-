@@ -786,5 +786,18 @@
     "tags": "B5 Pantothenic Acid Vitamins Acne Pantethine",
     "readTime": "16 min",
     "description": "A 1995 uncontrolled case series launched the pantothenic acid acne theory. One small RCT since found a real effect - but pantothenic acid itself does nothing for cholesterol; its cousin pantethine is the one with real data."
+  },
+  {
+    "title": "B7: Why a $50 Biotin Supplement Probably Won't Beat a $5 One",
+    "tag": "Vitamin B7 (Biotin)",
+    "url": "/articles/b7-guide.html",
+    "image": "/images/hero-b7.jpg",
+    "color": "c-b7",
+    "featured": false,
+    "type": "guide",
+    "badgeType": "featured",
+    "tags": "B7 Biotin Vitamins Hair Nails",
+    "readTime": "15 min",
+    "description": "Biotin deficiency is genuinely rare in healthy people. The evidence for hair, skin, and nail claims is thin and mostly uncontrolled - and the one time high-dose biotin faced a real placebo-controlled trial, it failed."
   }
 ]
