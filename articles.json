@@ -838,5 +838,18 @@
     "tags": "Vegan Supplements Editorial B12 Creatine Omega-3",
     "readTime": "17 min",
     "description": "Spirulina's B12 is mostly inactive pseudo-cobalamin that can worsen your B12 status. The 'vegans get more from creatine' claim didn't replicate. Algae-derived DHA and EPA genuinely work."
+  },
+  {
+    "title": "Colostrum: Why an Anti-Doping Agency and the Actual Data Disagree",
+    "tag": "Colostrum",
+    "url": "/articles/colostrum-guide.html",
+    "image": "/images/hero-colostrum.jpg",
+    "color": "c-colostrum",
+    "featured": false,
+    "type": "guide",
+    "badgeType": "featured",
+    "tags": "Colostrum Gut Health IGF-1 WADA",
+    "readTime": "19 min",
+    "description": "WADA has warned athletes off colostrum since 2013 over IGF-1 concerns, based on two flawed studies. The broader controlled evidence finds no IGF-1 increase at standard doses - and colostrum's real strength is gut health, not immune hype."
   }
 ]

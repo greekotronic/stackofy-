@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colostrum: Why an Anti-Doping Agency and the Actual Data Disagree - Stackofy</title>
+  <meta name="description" content="Since 2013, the World Anti-Doping Agency has warned athletes away from colostrum over IGF-1 concerns, based on two studies with real methodological problems. Meanwhile, the balance of properly controlled evidence says oral colostrum doesn't raise circulating IGF-1 at all. Here is the honest, current picture of a supplement whose real evidence is quieter than its marketing." />
+
+  <meta property="og:title" content="Colostrum: Why an Anti-Doping Agency and the Actual Data Disagree" />
+  <meta property="og:description" content="WADA has told athletes to avoid colostrum since 2013, citing two studies with real design flaws. The broader body of placebo-controlled evidence finds no IGF-1 increase at standard doses. Meanwhile, colostrum's most solid evidence - gut health, not immune superpowers - barely gets mentioned in the marketing. Here is the full picture." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/colostrum-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-colostrum.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #2D5A1B, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .forms-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 13px; }
+    .forms-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 12px; text-align: left; font-weight: 600; }
+    .forms-table td { padding: 10px 12px; border-bottom: 0.5px solid var(--border); color: var(--text); vertical-align: top; }
+    .forms-table tr:nth-child(even) td { background: var(--bg); }
+    .badge-strong { background: #EAF5F0; color: var(--green-dark); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-strong { background: #1A3D2A; color: var(--green-light); }
+    .badge-weak { background: #F5F5F5; color: var(--text-muted); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-weak { background: #2A2A2A; color: #B0B0B0; }
+    .badge-none { background: #FFF0F0; color: #C0392B; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-none { background: #2A1010; color: #FF8080; }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-b6 { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+    .c-creatine { background: linear-gradient(135deg, #3D2E00, #B8860B); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .forms-table { font-size: 11px !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-colostrum.jpg" alt="Golden liquid droplet suspended against a dark green background, representing colostrum" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Colostrum</span>
+      <h1>Colostrum: Why an Anti-Doping Agency and the Actual Data Disagree</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>19 min read</span>
+        <span>·</span>
+        <span>July 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>The World Anti-Doping Agency has advised athletes against colostrum since 2013, warning it may raise circulating IGF-1 - but this position rests on just two studies with real, documented methodological problems, not on the broader body of evidence</li>
+        <li>Multiple properly controlled, placebo-matched, double-blind trials - including protocols running out to 12 weeks - have found that oral colostrum at standard doses does not measurably raise circulating IGF-1 in healthy adults, directly contradicting the specific mechanism WADA's warning depends on</li>
+        <li>Colostrum's actual best-supported use case is almost boringly practical: a systematic review of 22 clinical trials in 1,427 patients found real benefit for reducing diarrhea frequency and supporting gut barrier integrity, particularly in athletes and people with gastrointestinal stress - not the "immune superpower" framing that dominates the marketing</li>
+        <li>Evidence for athletic performance enhancement specifically is genuinely mixed - some studies show improved body composition or performance markers, others don't, and the studies that do exist are small and methodologically uneven</li>
+        <li>There is a theoretical concern worth naming honestly: elevated IGF-1 has been associated with increased risk of certain hormone-sensitive cancers in some research, which would matter if colostrum reliably raised IGF-1 - but since the better-controlled trials find it doesn't at standard doses, the practical relevance of this concern is limited for most healthy adults</li>
+        <li>Colostrum supplements are not FDA-regulated as drugs, and antibody and bioactive-compound content varies significantly between commercial products - the real quality risk here is inconsistency, not acute danger</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Colostrum occupies an unusual place in the current supplement landscape. It's one of the fastest-growing search and social-media categories in wellness right now, riding the same wave of interest that's carried shilajit, sea moss, and tongkat ali into mainstream visibility over the past couple of years. And yet unlike some of those trending ingredients, colostrum isn't a case of hype racing ahead of zero evidence. It has a real, if unglamorous, research base behind it - the kind of research that rarely makes it into a fifteen-second video, because it's about diarrhea and intestinal permeability rather than dramatic transformation. What makes colostrum a genuinely interesting subject for a critical look isn't an absence of science. It's a case where the actual data and an official regulatory position have quietly diverged from each other, and almost nobody selling the product seems interested in mentioning it.</p>
+
+      <p>To understand why, you have to start with what colostrum actually is. It's the thick, nutrient-dense fluid mammals produce in the first day or two after giving birth, before regular milk production begins - packed with antibodies, growth factors, and immune compounds meant to give a newborn's immune system a head start before its own defenses are functional. The supplement industry's version is almost always bovine colostrum, harvested from dairy cows in the same window, dried into a powder, and sold to humans on the premise that some of those immune and growth-signaling benefits transfer across species. That cross-species premise isn't as far-fetched as it might sound - the relevant proteins are structurally quite similar between cows and humans - but "not far-fetched" and "well-proven" are different standards, and colostrum's marketing tends to blur the line between them.</p>
+
+      <div class="article-img">
+        <img src="/images/colostrum-immune-network.jpg" alt="Abstract glowing antibody structures representing colostrum's immune compounds" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The WADA Warning, and Why It's More Fragile Than It Sounds</h2>
+
+      <p>If you've encountered any serious discussion of colostrum outside of a sales page, you've probably come across a mention that it's flagged by anti-doping authorities. That's true, and it's worth taking seriously as a starting point - regulatory bodies don't typically issue warnings for no reason. But it's also worth actually tracing where this specific warning came from, because the story underneath it is more instructive than the warning itself.</p>
+
+      <p>In 2013, the World Anti-Doping Agency published a statement advising athletes against consuming bovine colostrum, on the grounds that it contains meaningful levels of insulin-like growth factor 1 (IGF-1) and other growth factors, and that supplementation might raise an athlete's circulating IGF-1 to levels that could complicate or confound doping test interpretation. Colostrum itself was not placed on the prohibited list - it remains legal to use - but the "advised against" framing has followed the ingredient into general wellness discourse ever since, often cited secondhand as evidence that colostrum is somehow risky or growth-hormone-adjacent in a way that should concern the average non-athlete too.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">What WADA's Warning Was Actually Based On, and What Came After</div>
+        <div class="rct-row">
+          <div class="rct-n">2<span>Original Studies</span></div>
+          <div class="rct-desc">The WADA position traces back to two studies reporting an apparent increase in IGF-1 following colostrum supplementation. A closer look at both studies, conducted by independent researchers reviewing the broader evidence base, identified real problems: one had statistical comparisons that weren't appropriately matched, and the other used a placebo whose composition may not have been an adequate comparator. Neither issue is a minor technicality - both go directly to whether the reported effect was real or an artifact of how the studies were designed.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">Multiple<span>Controlled Trials Since</span></div>
+          <div class="rct-desc">A larger set of double-blind, placebo-controlled trials - including protocols running a single 4.5-hour exercise session, a 4-week course, and a full 12-week course, at doses of 20-40g/day - measured plasma IGF-1 directly before and after colostrum supplementation in healthy adults. None found a statistically significant increase in circulating IGF-1 compared to placebo, at any of the three durations tested.</div>
+        </div>
+        <div class="rct-highlight">A review examining this specific question concluded plainly that the balance of available evidence, across a range of doses and both short- and long-term periods, does not support the idea that oral colostrum supplementation raises systemic IGF-1 - meaning WADA's advisory rests on a minority position within its own evidence base, not the majority one. This doesn't necessarily mean the warning should be scrapped outright; regulatory bodies often deliberately err conservative when doping-test integrity is at stake, and "we're not fully confident this couldn't be an issue" is a defensible reason to advise caution even without proof of harm. But it does mean the popular framing of "colostrum raises growth hormone markers, full stop" oversells the certainty of a genuinely contested finding.</div>
+      </div>
+
+      <p>This pattern - an official body landing on the more cautious side of a genuinely split evidence base, and that caution then getting flattened into a much more confident-sounding claim as it spreads - is one we've flagged before in other contexts on this site, and it's worth recognizing as a general shape rather than treating each instance as an isolated curiosity. It happened with B6 safety thresholds. It's happening here with colostrum and IGF-1. The lesson isn't "ignore official warnings" - it's "read past the headline version of the warning to see what it was actually built on, because the confidence of the framing and the confidence of the underlying data don't always match."</p>
+
+      <h2>The Theoretical Cancer Question, Handled Honestly</h2>
+
+      <p>Because colostrum contains IGF-1, and because elevated IGF-1 has shown associations with increased risk of certain hormone-sensitive cancers - breast, prostate, and colorectal cancer among them - in some observational research, this concern gets raised periodically in more careful discussions of colostrum safety. It deserves a straight answer rather than either dismissal or alarm.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Why the Mechanism Doesn't Fully Connect</div>
+        <p>The cancer-risk concern depends on colostrum actually raising a person's circulating IGF-1 to a meaningfully higher level. Since the better-controlled trials described above found no such increase at standard oral doses, the causal chain the concern relies on doesn't have a confirmed first link to stand on, for most healthy adults taking typical amounts. This is a case where a theoretically plausible worry, built on real biology, hasn't been demonstrated to apply to the actual product being sold - not because the underlying cancer-IGF-1 association is fake, but because the specific exposure (oral colostrum at standard doses) doesn't appear to produce the elevated blood levels the concern assumes. If you have a personal or strong family history of hormone-sensitive cancers, it's still entirely reasonable to mention colostrum use to your physician before starting it, simply because the research base, while reassuring, isn't infinite or definitive. But this isn't a reason for the average healthy adult to treat colostrum as carrying a meaningful, demonstrated cancer risk.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/colostrum-gut-lining.jpg" alt="Abstract illustration of a protective membrane layer representing colostrum's effect on gut barrier integrity" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Evidence That Actually Holds Up - And Doesn't Get Talked About</h2>
+
+      <p>Here's the part of the colostrum story that gets buried under all the immune-superpower marketing copy, and it's a little ironic, because it's also the part with the most solid research behind it. Colostrum's best-supported human evidence isn't about supercharging your immune system in some general, dramatic sense. It's about something much more specific and much less exciting to put on a product label: keeping your gut lining intact and reducing how often you get diarrhea, particularly under physical stress.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Solid, Sizeable Evidence Base</span>
+          <h4>Diarrhea and GI Symptoms</h4>
+          <p>A systematic review of 22 clinical trials across 1,427 patients found colostrum supplementation reduced diarrhea frequency and supported measures of gut barrier integrity - one of the larger, more consistent evidence bases for any single colostrum use case.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Positive, With Caveats</span>
+          <h4>Exercise-Induced Gut Permeability</h4>
+          <p>A randomized trial in athletes found colostrum helped reduce gastrointestinal issues and maintain gut barrier function during and after intense training - a genuinely relevant use case for endurance athletes who commonly experience exercise-induced gut leakiness.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Some Support, Heterogeneous</span>
+          <h4>Upper Respiratory Tract Infection</h4>
+          <p>A systematic review of 10 studies found some support for colostrum reducing URTI frequency, but statistical significance only held up in pooled self-reported data, and the studies varied widely in population, dosage, formulation, and methodology - a real but qualified signal.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Genuinely Inconsistent</span>
+          <h4>Athletic Performance and Body Composition</h4>
+          <p>Studies specifically testing colostrum for athletic enhancement, conducted by a limited pool of researchers in both elite and recreational athletes, show inconsistent results - some report improved performance or body composition, others find no effect.</p>
+        </div>
+      </div>
+
+      <p>What's notable about this cluster of findings is how unglamorous it is compared to how colostrum gets marketed. "Reduces diarrhea and supports gut barrier integrity during heavy training" is a genuinely useful, evidence-backed claim for a specific population - endurance athletes, people with GI sensitivity, anyone dealing with intestinal permeability issues. It's just not a claim that sells nearly as well as "supercharge your immune system" or "the ancient superfood your ancestors used," which is presumably why it rarely shows up front and center on a product page even though it's the part of the research that's actually held up best.</p>
+
+      <h2>The Quality Problem Nobody's Warning Label Mentions</h2>
+
+      <p>Separate from the IGF-1 question and the efficacy question, there's a more mundane issue that applies to essentially every colostrum product on the market: colostrum supplements are not regulated by the FDA as drugs, and standardization across commercial products is genuinely difficult. Antibody content, in particular, varies widely between batches and manufacturers, which means two products labeled identically can deliver meaningfully different amounts of the bioactive compounds actually responsible for any benefit. This is a familiar problem across the supplement industry broadly, but it's worth flagging specifically here because colostrum's active compounds are complex biological molecules (antibodies, growth factors, oligosaccharides) rather than simple, easily verified chemical compounds like a vitamin - which makes third-party testing and label accuracy both more important and less common than they should be.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">What This Means for Choosing a Product</div>
+        <p>Because dose-response research on colostrum is complicated by this same variability - a study using one manufacturer's product may not tell you much about a different manufacturer's product at the "same" labeled dose - look specifically for products that disclose IgG (immunoglobulin G) content per serving, since that's the most commonly measured and reported bioactive marker, and favor brands that publish third-party testing results rather than relying on label claims alone.</p>
+      </div>
+
+      <h2>A Practical Quality Checklist</h2>
+
+      <div class="checklist-box">
+        <h4>Before You Buy a Colostrum Supplement</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>If your goal is gut health or reducing GI symptoms during heavy training</strong>, colostrum has genuinely solid, reasonably sizeable trial evidence behind it - this is its best-supported use case.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Look for a product that discloses IgG content per serving</strong> and ideally publishes third-party testing, given how much antibody content varies between manufacturers.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Competitive athletes should be aware of the WADA advisory</strong>, even though it's not a banned-substance issue - understanding the actual, contested evidence behind it lets you make an informed choice rather than reacting to the headline version.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't expect a general, dramatic immune boost</strong> from colostrum just because of how it's marketed - the strongest evidence is specific to gut barrier function and GI symptoms, not a broad immune superpower effect.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't assume standard oral doses meaningfully raise your IGF-1</strong> - the better-controlled trials consistently found no such increase, which also limits the practical relevance of the theoretical cancer-risk concern for most healthy adults.</span>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Typical Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Gut health / GI symptom support</td>
+          <td>10 - 20g/day</td>
+          <td>Reflects doses used in several of the positive gut-health trials; effects generally require consistent, ongoing use</td>
+        </tr>
+        <tr>
+          <td>Athletic performance (as studied)</td>
+          <td>20 - 60g/day, up to 12 weeks</td>
+          <td>Reflects the higher end of doses used in clinical trials evaluating athletic enhancement; results at this use case remain inconsistent</td>
+        </tr>
+        <tr>
+          <td>General immune / wellness use</td>
+          <td>500mg - 2g/day (typical retail dose)</td>
+          <td>Common commercial dosing - notably lower than most doses actually used in the clinical trials described above, worth checking against label claims</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Safety Notes</div>
+        <p>Bovine colostrum is generally well tolerated, with mild bloating or nausea as the most commonly reported side effects at standard doses. It's derived from dairy, so anyone with a milk protein allergy (distinct from lactose intolerance) should avoid it. Competitive athletes subject to anti-doping testing should be aware of the WADA advisory discussed above, even though colostrum itself is not a prohibited substance. As with any supplement containing biologically active growth factors, anyone with a personal or strong family history of hormone-sensitive cancers may want to discuss use with a physician first, even though the practical risk at standard doses appears limited based on current evidence.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🦠</div>
+          <h4>Probiotics</h4>
+          <p>Colostrum's prebiotic oligosaccharides and gut-barrier support may complement probiotic supplementation, though direct combination trials are limited.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🏃</div>
+          <h4>Endurance Training Protocols</h4>
+          <p>The strongest, most specific use case - taken alongside heavy training blocks to help offset exercise-induced gut permeability.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🔬</div>
+          <h4>Creatine</h4>
+          <p>Both are commonly stacked in athletic supplementation contexts, though they act through entirely independent mechanisms - see our <a href="/articles/creatine-guide.html">creatine guide</a> for the well-evidenced side of that combination.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Anti-Doping Testing (Caution)</h4>
+          <p>Not a banned substance, but competitive athletes should factor in the WADA advisory and its underlying (contested) rationale before use.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Milk Protein Allergy (Caution)</h4>
+          <p>Colostrum is a dairy-derived product - avoid if you have a true milk protein allergy, as distinct from lactose intolerance.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Family History of Hormone-Sensitive Cancer (Caution)</h4>
+          <p>Worth a conversation with a physician first, even though standard-dose research doesn't show a raised IGF-1 signal - the evidence base, while reassuring, isn't unlimited.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">6.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          A genuinely evidence-backed supplement for a narrower purpose than its marketing suggests - solid support for gut barrier integrity and GI symptom reduction, particularly under physical training stress, with a real quality-control problem across commercial products and a doping-agency caution that rests on thinner evidence than its confident framing implies. The score reflects real, if modest, benefit for a specific population, tempered by inconsistent athletic-performance data and a marketing gap between what colostrum is actually proven to do and what it's sold as doing.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ When an Official Warning Rests on Thinner Evidence Than It Sounds</div>
+        <h4>How a cautious regulatory position can get flattened into false certainty as it spreads</h4>
+        <p>See our framework for tracing a headline warning back to its actual evidentiary basis before treating it as settled fact.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Playfair, J. et al. The Use of Bovine Colostrum in Sport and Exercise. <em>Nutrients</em>, 13(6), 1789 (2021).</li>
+        <li>World Anti-Doping Agency (2013). Statement on Bovine Colostrum and IGF-1.</li>
+        <li>Kelly, G.S. (2003) and Shing, C. et al. (2013). Studies on bovine colostrum, athletic performance, and body composition - cited in bovine colostrum clinical review, Drugs.com (2025).</li>
+        <li>Jones, A.W. et al. (2017). Circulating IGF-1 and antidoping test relevance following bovine colostrum supplementation.</li>
+        <li>Buckley, J.D. et al. Oral bovine colostrum supplementation does not increase circulating insulin-like growth factor-1 concentration in healthy adults. <em>European Journal of Nutrition</em> (2019).</li>
+        <li>Hajihashemi, S. et al. (2024). Therapeutic effects of bovine colostrum applications on gastrointestinal diseases: a systematic review. Includes 22 clinical trials, 1,427 patients.</li>
+        <li>Dziewiecka, H. et al. (2022). Randomized trial of bovine colostrum for gastrointestinal integrity in athletes.</li>
+        <li>Karakülah, Y.S. et al. (2025). Clinical Applications of Bovine Colostrum in Gastrointestinal Disorders: Mechanisms, Evidence, and Therapeutic Potential. <em>International Journal of Molecular Sciences</em>, 26(21), 10673.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>Colostrum is one piece of the puzzle. Get the full evidence-backed protocol - NMN, D3, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/creatine-guide.html" class="related-card">
+          <div class="related-img c-creatine">
+            <img src="/images/hero-creatine.jpg" alt="Creatine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Creatine</span>
+            <h4>Creatine: The Muscle Molecule That's Actually a Brain Booster in Disguise</h4>
+          </div>
+        </a>
+        <a href="/articles/b6-guide.html" class="related-card">
+          <div class="related-img c-b6">
+            <img src="/images/hero-b6.jpg" alt="Vitamin B6" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin B6</span>
+            <h4>B6: Why Two Health Authorities Disagree by a Factor of Eight</h4>
+          </div>
+        </a>
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Competitive athletes should independently verify current anti-doping guidance with their sport's governing body before use. Always consult a qualified healthcare professional before starting any supplement protocol, especially with a personal or family history of hormone-sensitive cancer. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
