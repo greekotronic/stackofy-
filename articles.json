@@ -864,5 +864,18 @@
     "tags": "Tongkat Ali Testosterone SHBG Adulteration",
     "readTime": "19 min",
     "description": "A meta-analysis shows real testosterone effects but flags major publication bias and heterogeneity. A peer-reviewed DNA barcoding study found only 37% of commercial products were genuinely authentic."
+  },
+  {
+    "title": "Fadogia Agrestis: When the Same Study That Found the Benefit Found the Harm",
+    "tag": "Fadogia Agrestis",
+    "url": "/articles/fadogia-agrestis-guide.html",
+    "image": "/images/hero-fadogia.jpg",
+    "color": "c-fadogia",
+    "featured": false,
+    "type": "guide",
+    "badgeType": "featured",
+    "tags": "Fadogia Agrestis Testosterone Safety Animal Studies",
+    "readTime": "18 min",
+    "description": "Zero published human trials exist for Fadogia agrestis. The same research group that found a testosterone increase in rats also found testicular toxicity - and Momentous quietly pulled its product in 2023."
   }
 ]

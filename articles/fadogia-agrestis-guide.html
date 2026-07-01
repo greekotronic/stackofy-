@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fadogia Agrestis: When the Same Study That Found the Benefit Found the Harm - Stackofy</title>
+  <meta name="description" content="Fadogia agrestis has zero published human trials. Its entire testosterone reputation rests on rat studies - and a follow-up study from the same research group found testicular toxicity in the same animals, at doses close to what's commonly sold. Here is the honest evidence gap behind one of the most popular testosterone supplements online." />
+
+  <meta property="og:title" content="Fadogia Agrestis: When the Same Study That Found the Benefit Found the Harm" />
+  <meta property="og:description" content="No human clinical trials exist for fadogia agrestis. The rat research that launched its testosterone reputation was followed by a study from the same group finding testicular toxicity in the same model, and liver/kidney toxicity at a human-equivalent dose close to what's commonly sold at 600mg. One major retailer quietly pulled its product in 2023. Here is what the evidence actually shows." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/fadogia-agrestis-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-fadogia.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #2D5A1B, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .forms-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 13px; }
+    .forms-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 12px; text-align: left; font-weight: 600; }
+    .forms-table td { padding: 10px 12px; border-bottom: 0.5px solid var(--border); color: var(--text); vertical-align: top; }
+    .forms-table tr:nth-child(even) td { background: var(--bg); }
+    .badge-strong { background: #EAF5F0; color: var(--green-dark); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-strong { background: #1A3D2A; color: var(--green-light); }
+    .badge-weak { background: #F5F5F5; color: var(--text-muted); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-weak { background: #2A2A2A; color: #B0B0B0; }
+    .badge-none { background: #FFF0F0; color: #C0392B; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-none { background: #2A1010; color: #FF8080; }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-tongkat { background: linear-gradient(135deg, #3D2E00, #7A5C10); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+    .c-zinc { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .forms-table { font-size: 11px !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-fadogia.jpg" alt="Dried plant stem representing Fadogia agrestis" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Fadogia Agrestis</span>
+      <h1>Fadogia Agrestis: When the Same Study That Found the Benefit Found the Harm</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>18 min read</span>
+        <span>·</span>
+        <span>July 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>There are zero published human clinical trials on fadogia agrestis for testosterone, libido, athletic performance, or any other outcome - every claim about its effects in people is an extrapolation from animal research, not a finding about people themselves</li>
+        <li>Its entire testosterone-boosting reputation traces back to rat studies from a single research group, which found a genuine, dose-dependent testosterone increase in male rats given the aqueous stem extract</li>
+        <li>A follow-up study from that same research group, using the same extract and the same animal model, found signs of adverse effects on testicular function - dose-dependent testicular toxicity in the exact organ system the supplement is marketed to enhance</li>
+        <li>A separate toxicity study found liver and kidney effects at a human-equivalent dose of approximately 607mg - close enough to the 600mg daily dose that many commercial supplement brands actually sell that the margin of safety is uncomfortably thin, based entirely on animal extrapolation</li>
+        <li>Momentous, a well-regarded supplement brand that had been closely associated with the Huberman Lab podcast's testosterone protocol recommendations, quietly discontinued its fadogia agrestis product in 2023, citing insufficient safety data</li>
+        <li>There is no meta-analysis or systematic review of fadogia agrestis in humans, because there isn't enough human data to review - the evidence base is too sparse, too preclinical, and too inconsistent to support any confident claim about either its benefits or its risks in people</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Of every trending testosterone botanical currently circulating through men's health corners of the internet, fadogia agrestis presents the cleanest, starkest evidence problem of the bunch - which is exactly what makes it worth examining closely rather than lumping it in with better-supported options. This isn't a case of "the evidence is mixed" or "the meta-analysis has some caveats," the kind of nuanced, partially-supported story that applies to something like tongkat ali. Fadogia agrestis's situation is more basic than that: as of this writing, no human being has ever been studied taking it in a properly designed clinical trial, for any outcome at all. Everything you'll read about its effects on testosterone, libido, or athletic performance in humans is an inference drawn from rat experiments, not a finding about people.</p>
+
+      <p>That alone would be worth flagging. What makes the story genuinely more concerning is what happened after the initial promising rat data came out - a follow-up study, conducted by the same research group using the same extract in the same animal model, found evidence of harm in precisely the tissue the supplement is marketed to benefit. Understanding both halves of that story, in the right order, is the point of this article.</p>
+
+      <div class="article-img">
+        <img src="/images/fadogia-research-gap.jpg" alt="Abstract illustration of an unfinished geometric pattern representing the research gap in Fadogia agrestis evidence" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What Fadogia Agrestis Is, and How It Became Popular</h2>
+
+      <p>Fadogia agrestis is a flowering shrub native to West Africa, where its stem has a long history of traditional use in parts of Nigeria as a folk aphrodisiac and general reproductive-health remedy. Like many traditional botanicals, it contains a complex mix of bioactive compounds - alkaloids and saponins prominent among them - that plausibly interact with the endocrine system, giving the traditional use at least a theoretical biochemical basis worth investigating scientifically.</p>
+
+      <p>Its jump from a little-known traditional remedy to a mainstream men's-health supplement happened quickly and had an identifiable trigger: mentions on major health and fitness podcasts, most notably Andrew Huberman's, which discussed it as part of a broader testosterone-optimization protocol alongside better-established interventions like resistance training, morning sunlight, and tongkat ali. Supplement brands moved fast once the demand appeared, and fadogia agrestis products - often stacked directly with tongkat ali on the same label - became widely available within a short span of time, well ahead of any human research catching up to validate the claims being made about them.</p>
+
+      <h2>The Rat Study That Started It All</h2>
+
+      <p>The foundational research behind fadogia agrestis's testosterone reputation is a study examining the effects of an aqueous stem extract on male rats, which found a genuine, dose-dependent increase in serum testosterone. This is a real finding, published in a peer-reviewed setting, and it's not being dismissed here - animal research is a legitimate and often necessary early step in understanding a compound's biological activity, and this particular result gave the traditional aphrodisiac use a plausible scientific hook. The proposed mechanism involves the plant's saponins and alkaloids potentially stimulating luteinizing hormone production, which in turn could increase testosterone synthesis by the testes - a coherent, biologically sensible pathway.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">The Same Research Line, Read to Its Conclusion</div>
+        <div class="rct-row">
+          <div class="rct-n">Study 1<span>Testosterone ↑</span></div>
+          <div class="rct-desc">The original research found aqueous and ethanolic extracts of fadogia agrestis stem significantly increased sexual activity and serum testosterone in male rats, with effects measured by mount frequency, intromission frequency, and ejaculatory latency alongside hormone levels.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">Study 2<span>Same Group, Same Model</span></div>
+          <div class="rct-desc">A follow-up study, published by the same research group (Yakubu et al.) using the same aqueous stem extract in the same rat model, examined testicular function directly. The researchers concluded that the extract produced alterations indicating adverse effects on male rat testicular function, potentially affecting the functional capacities of the testes - a dose-dependent effect, with better recovery observed at lower doses than higher ones.</div>
+        </div>
+        <div class="rct-highlight">This is the detail that gets lost almost entirely in how fadogia agrestis is marketed: the testosterone-increase finding and the testicular-toxicity finding come from the same extract, the same dosing approach, and the same laboratory group, examined in sequence. It is not a case of one credible study finding benefit and an unrelated, lower-quality study finding harm that critics are cherry-picking - it's the same research line following its own findings to a less flattering conclusion, which arguably makes it more credible as a safety signal, not less.</div>
+      </div>
+
+      <p>A separate line of toxicity research adds a second concerning data point: a study examining broader organ effects found liver and kidney toxicity at doses corresponding to a human-equivalent dosage of approximately 607mg - a number that lands uncomfortably close to the 600mg daily dose that a considerable number of commercial fadogia agrestis products are actually sold at. Human-equivalent dose calculations from animal studies are inherently approximate and shouldn't be treated as precise thresholds, but the margin here is thin enough that it's worth taking seriously rather than dismissing as a rounding difference.</p>
+
+      <div class="article-img">
+        <img src="/images/fadogia-dose-threshold.jpg" alt="Abstract illustration of a gradient bar rising into a warning tone, representing dose-dependent risk" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What "Zero Human Trials" Actually Means in Practice</h2>
+
+      <p>It's worth being precise about what this evidence gap does and doesn't tell you, because "no human studies" gets thrown around loosely in supplement discourse and doesn't always mean the same thing. In this case, it means something quite specific and quite significant: nobody knows what dose is effective in humans, because no dose-response relationship has ever been established in people. Nobody knows what dose is safe in humans, for the same reason. Nobody knows how fadogia agrestis interacts with human liver metabolism, other medications, or existing health conditions, because it has never been tested in that context. Every dosing recommendation you'll see on a product label or in a supplement guide - typically somewhere between 300mg and 600mg daily - is essentially a guess extrapolated from animal data and market convention, not a figure validated by any clinical research.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Animal-Only</span>
+          <h4>Testosterone Effect</h4>
+          <p>Genuine, dose-dependent increase demonstrated in male rats. No published human trial has replicated, or even attempted to test, this finding in people.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Animal-Only, Same Model</span>
+          <h4>Testicular Toxicity</h4>
+          <p>Dose-dependent adverse effects on testicular function demonstrated in the same rat model used for the testosterone research, by the same research group.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Animal-Only</span>
+          <h4>Liver / Kidney Toxicity</h4>
+          <p>Documented at a human-equivalent dose (~607mg) close to commonly sold commercial doses (~600mg) - a thin, animal-derived safety margin that hasn't been validated or refuted in humans.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">No Meta-Analysis Possible</span>
+          <h4>Overall Evidence Quality</h4>
+          <p>Independent evidence reviews confirm there are no meta-analyses or systematic reviews aggregating human clinical trials of fadogia agrestis for any outcome, because the human trial base needed to conduct one simply doesn't exist.</p>
+        </div>
+      </div>
+
+      <h2>The Retail Signal Worth Paying Attention To</h2>
+
+      <p>Beyond the published research itself, there's a real-world data point that's worth weighing on its own merits: Momentous, a supplement brand widely regarded within the fitness and performance community for its evidence-based positioning and its close association with the Huberman Lab podcast's supplement recommendations, quietly discontinued its fadogia agrestis product in 2023. The stated reason was insufficient safety data - notable, coming from a brand whose commercial success in this exact category depended significantly on the same podcast ecosystem that helped popularize fadogia agrestis in the first place. A company walking away from a profitable product line over safety concerns, rather than doubling down on marketing it further, is the kind of signal worth taking seriously alongside the underlying research itself.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">A Reported Severe Adverse Event</div>
+        <p>Independent evidence reviews note at least one reported severe adverse event in a human associated with fadogia agrestis use, though it occurred in the context of multi-supplement use, which makes isolating fadogia agrestis as the specific cause difficult. This isn't presented as proof that fadogia agrestis alone caused serious harm - the confounding from simultaneous supplement use genuinely limits what can be concluded from a single case. But it's a real, documented event worth knowing about rather than a hypothetical one, and it underscores the broader point: without systematic human safety monitoring, isolated adverse events are essentially the only signal available, and they're an inherently incomplete one.</p>
+      </div>
+
+      <h2>A Practical Quality Checklist</h2>
+
+      <div class="checklist-box">
+        <h4>Before You Buy Fadogia Agrestis</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Understand that you would be the experiment</strong> - with zero human trials, taking fadogia agrestis means relying entirely on animal data and anecdotal reports, not established clinical evidence, for both efficacy and safety.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>If testosterone support is your actual goal, consider better-evidenced options first</strong> - see our <a href="/articles/tongkat-ali-guide.html">Tongkat Ali guide</a> and <a href="/articles/zinc-guide.html">zinc guide</a> for options with genuine, if imperfect, human trial data behind them.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't assume "traditional use" or "natural" implies a validated safety profile</strong> - the animal toxicity signals here are specific, dose-dependent, and come from the same research line that established the supposed benefit.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't stack fadogia agrestis with other testosterone-adjacent supplements without recognizing the compounded uncertainty</strong> - the one documented severe adverse event involved multi-supplement use, which limits interpretation but doesn't rule out combined risk.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't take doses at or above 600mg/day assuming a wide margin of safety</strong> - the human-equivalent toxicity threshold from animal data sits uncomfortably close to that figure.</span>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Commonly Sold Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>General use (as commercially marketed)</td>
+          <td>300 - 600mg/day</td>
+          <td>No human dose-response data exists; this range reflects market convention and animal-derived extrapolation, not clinical validation</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Safety Notes</div>
+        <p>No established safe dosing range exists in humans, because no human clinical trials have been conducted. Animal research indicates dose-dependent testicular toxicity and dose-dependent liver and kidney toxicity, with the latter observed at a human-equivalent dose close to commonly sold commercial amounts. A reported severe adverse event exists in the context of multi-supplement use, though causal attribution to fadogia agrestis specifically is confounded. Given the complete absence of human safety data, anyone considering use should treat it with the same caution as an unstudied compound - because that is, functionally, exactly what it is.</p>
+      </div>
+
+      <h2>What It's Commonly Stacked With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🌿</div>
+          <h4>Tongkat Ali</h4>
+          <p>The most common commercial pairing - but the two have very different evidence bases; see our <a href="/articles/tongkat-ali-guide.html">Tongkat Ali guide</a> for the meaningfully more human-evidenced option.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚡</div>
+          <h4>Zinc</h4>
+          <p>Commonly included in the same testosterone-support stacks, with a considerably stronger and longer-established human evidence base.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🏋️</div>
+          <h4>Resistance Training</h4>
+          <p>Has a far larger, well-established effect on testosterone and body composition than any botanical in this category, with none of the uncertainty.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Other Testosterone Botanicals (Caution)</h4>
+          <p>Stacking multiple unproven or thinly-proven compounds compounds uncertainty rather than reducing it - the one documented severe adverse event involved multi-supplement use.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>High, Sustained Doses (Caution)</h4>
+          <p>The animal-derived liver/kidney toxicity threshold sits close to commonly marketed doses - there is no established wide margin of safety to rely on.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Pre-Existing Liver, Kidney, or Reproductive Conditions (Caution)</h4>
+          <p>Given the organ-specific toxicity signals in animal research, this is a population where the evidence gap matters most and caution is especially warranted.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">2.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          A supplement whose entire commercial popularity has outpaced its evidence base by a wide margin. The score reflects a genuine, documented safety signal - not a hypothetical one - sitting directly underneath an efficacy claim that has never been tested in a single human being. Until human clinical trials exist establishing both a safe dose and a real effect in people, the honest position is that fadogia agrestis remains an unvalidated compound being sold with the confidence of a proven one - and the one company most closely tied to its rise chose to stop selling it rather than continue without better safety data.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ When Animal Research Gets Marketed Like Human Evidence</div>
+        <h4>How a rat study becomes a confident human supplement claim without anyone noticing the gap</h4>
+        <p>See our framework for spotting when a supplement's marketing has outrun the species its evidence actually comes from.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Yakubu, M.T. et al. (2008). Aphrodisiac potentials and toxicological evaluation of aqueous extract of Fadogia agrestis stem in male rats.</li>
+        <li>Yakubu, M.T. et al. Alterations in serum steroid hormones and testicular function indices of male rats following administration of aqueous extract of Fadogia agrestis stem - follow-up study on testicular toxicity.</li>
+        <li>Fadogia agrestis liver and kidney toxicity study, human-equivalent dosage calculation (~607mg), as discussed in independent safety and evidence reviews (2025-2026).</li>
+        <li>Consensus.app. Fadogia Agrestis Safety and Toxicity - evidence synthesis noting absence of meta-analyses or human RCTs.</li>
+        <li>Examine.com / independent supplement evidence reviews. Fadogia Agrestis - Benefits, Dosage, and Safety Assessment (2025-2026).</li>
+        <li>The Andrew Huberman Testosterone Protocol: A 2026 Evidence-Based Analysis - including Momentous's 2023 product discontinuation.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>Skip the unproven trends. Get the full evidence-backed protocol - NMN, D3, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/tongkat-ali-guide.html" class="related-card">
+          <div class="related-img c-tongkat">
+            <img src="/images/hero-tongkat-ali.jpg" alt="Tongkat Ali" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Tongkat Ali</span>
+            <h4>Tongkat Ali: The Testosterone Herb With a 63% Fake Product Problem</h4>
+          </div>
+        </a>
+        <a href="/articles/zinc-guide.html" class="related-card">
+          <div class="related-img c-zinc">
+            <img src="/images/hero-zinc.jpg" alt="Zinc" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Zinc</span>
+            <h4>Zinc: Why Getting the Dose Right Changes Everything</h4>
+          </div>
+        </a>
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Fadogia agrestis has not been evaluated in human clinical trials for safety or efficacy. Always consult a qualified healthcare professional before starting any supplement protocol, particularly one lacking human safety data. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
