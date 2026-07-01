@@ -877,5 +877,18 @@
     "tags": "Fadogia Agrestis Testosterone Safety Animal Studies",
     "readTime": "18 min",
     "description": "Zero published human trials exist for Fadogia agrestis. The same research group that found a testosterone increase in rats also found testicular toxicity - and Momentous quietly pulled its product in 2023."
+  },
+  {
+    "title": "Sea Moss: The 92-Minerals Claim Nobody Can Actually Source",
+    "tag": "Sea Moss",
+    "url": "/articles/sea-moss-guide.html",
+    "image": "/images/hero-sea-moss.jpg",
+    "color": "c-seamoss",
+    "featured": false,
+    "type": "guide",
+    "badgeType": "featured",
+    "tags": "Sea Moss Iodine Heavy Metals Thyroid",
+    "readTime": "18 min",
+    "description": "The '92 minerals' claim doesn't trace to any real sea moss analysis. Its measured iodine content varies 60-fold between products, and independent testing has found arsenic, lead, and cadmium exceeding safety limits."
   }
 ]
