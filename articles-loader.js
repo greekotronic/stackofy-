@@ -61,7 +61,7 @@ const COLORS = {
 'c-methyleneblue': 'background:linear-gradient(135deg,#0a1a2a,#185FA5)',
 'c-inositol': 'background:linear-gradient(135deg,#1a1a2a,#7B2FBE)',
 'c-bvitamins': 'background:linear-gradient(135deg,#3D2E00,#7A5C10)',
-'c-b12': 'background:linear-gradient(135deg,#7A1F2B,#B33951)',};
+'c-b12': 'background:linear-gradient(135deg,#7A1F2B,#B33951)',
 'c-folate': 'background:linear-gradient(135deg,#1a2a10,#7A5C10)',
 'c-b6': 'background:linear-gradient(135deg,#7A5C10,#D4A853)',
 
