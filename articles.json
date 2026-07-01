@@ -799,5 +799,18 @@
     "tags": "B7 Biotin Vitamins Hair Nails",
     "readTime": "15 min",
     "description": "Biotin deficiency is genuinely rare in healthy people. The evidence for hair, skin, and nail claims is thin and mostly uncontrolled - and the one time high-dose biotin faced a real placebo-controlled trial, it failed."
+  },
+  {
+    "title": "B2: One Vitamin, One Gene Test, Two Completely Different Answers",
+    "tag": "Vitamin B2 (Riboflavin)",
+    "url": "/articles/b2-guide.html",
+    "image": "/images/hero-b2.jpg",
+    "color": "c-b2",
+    "featured": false,
+    "type": "guide",
+    "badgeType": "featured",
+    "tags": "B2 Riboflavin Vitamins Migraine MTHFR Blood Pressure",
+    "readTime": "16 min",
+    "description": "Riboflavin has real Class II evidence for adult migraine prevention. A specific MTHFR gene variant determines whether it lowers blood pressure by 6-13 mmHg or does nothing at all."
   }
 ]

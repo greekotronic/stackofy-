@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B2: One Vitamin, One Gene Test, Two Completely Different Answers - Stackofy</title>
+  <meta name="description" content="Riboflavin has genuinely solid evidence for migraine prevention in adults - but not in children, despite the marketing. And a common gene variant determines whether it lowers your blood pressure by up to 13 mmHg or does nothing at all. Here is the honest, genotype-aware picture." />
+
+  <meta property="og:title" content="B2: One Vitamin, One Gene Test, Two Completely Different Answers" />
+  <meta property="og:description" content="Riboflavin has Class II evidence for adult migraine prevention - the pediatric extrapolation is much weaker than it's marketed. And a specific MTHFR gene variant determines whether riboflavin lowers blood pressure by 6-13 mmHg or does essentially nothing. Here is what the evidence actually supports, genotype by genotype." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/b2-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-b2.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #2D5A1B, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .forms-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 13px; }
+    .forms-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 12px; text-align: left; font-weight: 600; }
+    .forms-table td { padding: 10px 12px; border-bottom: 0.5px solid var(--border); color: var(--text); vertical-align: top; }
+    .forms-table tr:nth-child(even) td { background: var(--bg); }
+    .badge-strong { background: #EAF5F0; color: var(--green-dark); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-strong { background: #1A3D2A; color: var(--green-light); }
+    .badge-weak { background: #F5F5F5; color: var(--text-muted); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-weak { background: #2A2A2A; color: #B0B0B0; }
+    .badge-none { background: #FFF0F0; color: #C0392B; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-none { background: #2A1010; color: #FF8080; }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-folate { background: linear-gradient(135deg, #1a2a10, #7A5C10); }
+    .c-b1 { background: linear-gradient(135deg, #3D2E00, #B8860B); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .forms-table { font-size: 11px !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-b2.jpg" alt="Glowing golden yellow droplets representing riboflavin's natural pigment" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Vitamin B2 (Riboflavin)</span>
+      <h1>B2: One Vitamin, One Gene Test, Two Completely Different Answers</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>16 min read</span>
+        <span>·</span>
+        <span>July 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Riboflavin gets its name and its bright yellow color from the Latin "flavus" - it's a cofactor for enzymes central to cellular energy production, and genuine deficiency is rare in well-nourished populations</li>
+        <li>Riboflavin has real, respected evidence for adult migraine prevention - the American Academy of Neurology rates it Class II evidence at 100-400mg/day over 3 months, one of the better-supported non-drug migraine options available</li>
+        <li>That evidence does not transfer cleanly to children - a 2025 systematic review found the pediatric migraine data promising in direction but not methodologically robust, despite riboflavin being widely marketed to parents on the strength of the adult research</li>
+        <li>A specific, common gene variant - MTHFR 677TT - determines whether riboflavin meaningfully lowers blood pressure at all: multiple randomized trials found a 6-13 mmHg systolic reduction specifically in people with this genotype, with no comparable effect in non-carriers</li>
+        <li>This is a genuinely rare example of a supplement effect that a population-wide trial would likely miss entirely, because the benefit is concentrated in one identifiable genetic subgroup rather than spread thinly across everyone</li>
+        <li>Riboflavin is considered extremely safe with no established upper intake level, though it's notably light-sensitive and can cause harmless bright yellow urine at supplemental doses</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Riboflavin takes its name from the Latin <em>flavus</em>, meaning yellow - a nod to its naturally bright yellow-orange pigment, the same compound responsible for the harmless neon-yellow urine that shows up shortly after taking a B-complex supplement. As vitamin B2, it's a cofactor for flavin-dependent enzymes central to the electron transport chain and cellular energy production, and it also plays a supporting role in the folate and homocysteine metabolism pathway alongside B6, B9, and B12.</p>
+
+      <p>Most of riboflavin's story is unremarkable in the way essential nutrients often are - genuine deficiency is uncommon in people eating a varied diet, and standard multivitamin doses cover the RDA easily. What's genuinely interesting sits in two specific, well-studied use cases: one where the evidence is real but has been stretched further than it should be, and one where a simple gene test determines whether the vitamin does anything measurable at all.</p>
+
+      <div class="article-img">
+        <img src="/images/b2-calm-waves.jpg" alt="Abstract soft golden light waves representing riboflavin's calming effect on migraine" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Migraine Prevention: Real Evidence in Adults, Weaker Ground in Children</h2>
+
+      <p>Riboflavin's role in migraine prevention is one of the better-supported non-pharmaceutical interventions in headache medicine, and it's worth being specific about how solid that evidence actually is - and where it stops.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">Two Populations, Two Very Different Evidence Grades</div>
+        <div class="rct-row">
+          <div class="rct-n">Class II<span>Adults</span></div>
+          <div class="rct-desc">The American Academy of Neurology rates riboflavin as Class II evidence (moderate risk of bias, but real, positive controlled trial data) for migraine prevention in adults, typically at 100-400mg/day over roughly 3 months. A 2024 nutraceuticals review for headache specifically states riboflavin "can be recommended" for adult migraine prevention, with minimal adverse events.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">Unproven<span>Children</span></div>
+          <div class="rct-desc">A 2025 systematic review following Joanna Briggs Institute methodology examined riboflavin for pediatric migraine specifically. It found a promising direction of effect across several comparisons, but concluded the evidence base is "not yet robust" and stated plainly that pediatric use is not proven, despite riboflavin being marketed to parents largely on the back of the adult research.</div>
+        </div>
+        <div class="rct-highlight">This is a clean example of an evidence-extrapolation gap: a real, respected finding in one population gets marketed toward a related but distinct population where the actual trial data hasn't caught up yet. Riboflavin for adult migraine prevention deserves its reputation. Riboflavin for pediatric migraine prevention is a reasonable hypothesis worth further study, not an established recommendation.</div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/b2-food-sources.jpg" alt="Whole food sources of riboflavin including milk, almonds, mushrooms and leafy greens" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Gene Test That Decides Whether Riboflavin Touches Your Blood Pressure</h2>
+
+      <p>This is the most genuinely novel finding in this entire article series so far: a specific, common genetic variant determines whether riboflavin has any measurable effect on blood pressure at all - and it's been confirmed across multiple independently conducted randomized trials, not just one.</p>
+
+      <p>The MTHFR 677C→T polymorphism - the same gene variant that shows up in folate metabolism discussions - increases hypertension risk by an estimated 24-87% in carriers, with substantial geographic variation suggesting a gene-environment interaction. Research led by groups at Ulster University identified riboflavin, the essential cofactor for the MTHFR enzyme, as the relevant environmental factor.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Confirmed, Multiple Trials</span>
+          <h4>MTHFR 677TT Homozygotes</h4>
+          <p>Randomized, targeted trials in hypertensive patients pre-screened for the 677TT genotype found riboflavin supplementation lowered systolic blood pressure by 6-13 mmHg, independent of existing antihypertensive medication - a clinically meaningful effect by any standard.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">No Comparable Effect</span>
+          <h4>Non-Carriers (CC / CT Genotypes)</h4>
+          <p>The same trials found no equivalent blood pressure response in age-matched individuals without the TT genotype - this is a genotype-specific effect, not a general riboflavin-lowers-blood-pressure finding that happened to be tested in a subgroup.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Durable Effect</span>
+          <h4>4-Year Follow-Up</h4>
+          <p>A follow-up study found the blood-pressure-lowering effect persisted at 4 years in the TT genotype group, suggesting this isn't a short-term or placebo-driven finding.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Common Enough to Matter</span>
+          <h4>Population Prevalence</h4>
+          <p>The 677TT genotype is common enough worldwide - with substantial variation by region - that this isn't an obscure edge case; it's a real, identifiable subgroup for whom standard blood pressure advice may be systematically incomplete.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Why This Finding Almost Never Gets Made</div>
+        <p>If you ran a single large trial giving riboflavin to an unscreened general hypertensive population, the real 6-13 mmHg effect in the roughly 10-15% of people (varying by region) who carry the TT genotype would likely get diluted into statistical noise by the much larger group who show no response at all - producing a disappointing, "riboflavin doesn't lower blood pressure" headline. This is exactly the kind of subgroup-dependent effect that a genotype-blind trial design is structurally likely to miss, and it's a good argument for why "no effect in the general population" and "no effect for you specifically" are not always the same statement.</p>
+      </div>
+
+      <h2>A Practical Quality Checklist</h2>
+
+      <div class="checklist-box">
+        <h4>Before You Buy Riboflavin for Migraine or Blood Pressure</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>For adult migraine prevention, 100-400mg/day for at least 3 months is a genuinely evidence-backed option</strong> to discuss with a neurologist, with a good safety profile.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>If you know you carry the MTHFR 677TT genotype</strong> (from prior genetic testing) and have hypertension, riboflavin supplementation is worth discussing specifically with your physician - the effect size in trials is comparable to some antihypertensive interventions.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't expect riboflavin to lower your blood pressure if you haven't been genotyped</strong> - without knowing your MTHFR status, you can't predict whether you're in the group that responds or the group that won't.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't assume the adult migraine evidence transfers directly to children</strong> - discuss pediatric migraine prevention with a pediatric neurologist rather than self-treating based on adult trial data.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Store riboflavin supplements away from direct light</strong> - the vitamin degrades meaningfully when exposed to UV and visible light over time.</span>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Typical Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>General maintenance / RDA</td>
+          <td>1.1 - 1.3mg/day</td>
+          <td>Easily met through diet alone for most adults</td>
+        </tr>
+        <tr>
+          <td>Adult migraine prevention (as studied)</td>
+          <td>100 - 400mg/day for ≥3 months</td>
+          <td>Reflects the AAN Class II evidence trial doses; effects typically build gradually over weeks</td>
+        </tr>
+        <tr>
+          <td>MTHFR 677TT + hypertension (as studied)</td>
+          <td>1.6mg/day</td>
+          <td>Reflects the targeted RCT doses in genotype-screened hypertensive patients - a notably modest dose for a meaningful effect</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Safety Notes</div>
+        <p>Riboflavin has no established tolerable upper intake level and is considered one of the safest vitamins at any studied dose - it's water-soluble with limited absorption capacity per dose, and excess is excreted in urine, producing the well-known harmless bright yellow color. It is notably light-sensitive and degrades when exposed to UV or visible light, which is why IV nutrition bags and infant phototherapy settings require specific handling considerations. No significant drug interactions are documented at typical supplemental doses.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🔬</div>
+          <h4>B-Complex (B6, B9, B12)</h4>
+          <p>Riboflavin is the MTHFR cofactor in the same homocysteine-metabolism pathway involving folate, B6, and B12 - commonly combined in comprehensive B-complex formulas.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🧠</div>
+          <h4>Magnesium / CoQ10 (Migraine Stack)</h4>
+          <p>Riboflavin is commonly combined with magnesium and CoQ10 in evidence-informed migraine prevention protocols, each with independent supporting data.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🧬</div>
+          <h4>MTHFR Genotype Testing</h4>
+          <p>Knowing your MTHFR 677 status is the single most useful piece of information for predicting whether riboflavin will meaningfully affect your blood pressure.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Light Exposure (Caution)</h4>
+          <p>Store riboflavin-containing supplements and IV formulations away from direct light - meaningful degradation occurs with prolonged UV or visible light exposure.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Pediatric Extrapolation (Caution)</h4>
+          <p>Don't assume adult-migraine-dose riboflavin protocols apply directly to children without pediatric-specific medical guidance - the evidence base is genuinely different.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Untested Blood Pressure Expectations (Caution)</h4>
+          <p>Don't expect a blood-pressure benefit from riboflavin without knowing your MTHFR genotype - the population-wide effect outside the TT subgroup is essentially null.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">7.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Essential, remarkably safe, and backed by two genuinely well-evidenced use cases that both deserve more attention than they get: solid Class II evidence for adult migraine prevention, and a rare, replicated, genotype-specific blood pressure effect in MTHFR 677TT carriers. The score reflects that real strength, tempered by the gap between the adult migraine evidence and its unproven extension to children, and by the fact that the blood pressure benefit is invisible to anyone who hasn't been genotyped.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ Why a Real Subgroup Effect Can Look Like "No Effect" in Population Data</div>
+        <h4>How genotype-specific benefits get diluted into statistical noise in unscreened trials</h4>
+        <p>See our framework for spotting when "the average result was null" hides a real effect in a specific, identifiable group.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Nutraceuticals and Headache 2024: Riboflavin, Coenzyme Q10, Feverfew, Magnesium, Melatonin, and Butterbur. <em>Current Pain and Headache Reports</em> (2025).</li>
+        <li>Martello, E. et al. (2025). Systematic Review Suggests Nutraceuticals Containing Vitamin B2 Could Provide an Alternative Treatment for Paediatric Migraines. <em>Acta Paediatrica</em>, 114(10), 2443-2457.</li>
+        <li>Horigan, G. et al. (2010). Riboflavin lowers blood pressure in cardiovascular disease patients homozygous for the 677C>T polymorphism in MTHFR. <em>Journal of Hypertension</em>, 28, 478-486.</li>
+        <li>Wilson, C.P. et al. (2013). Blood pressure in treated hypertensive individuals with the MTHFR 677TT genotype is responsive to intervention with riboflavin: findings of a targeted randomized trial. <em>Hypertension</em>, 61, 1302-1308.</li>
+        <li>Wilson, C.P. et al. (2012). Riboflavin offers a targeted strategy for managing hypertension in patients with the MTHFR 677TT genotype: a 4-year follow-up. <em>American Journal of Clinical Nutrition</em>, 95(3), 766-772.</li>
+        <li>McNulty, H. et al. (2017). Riboflavin, MTHFR genotype and blood pressure: A personalized approach to prevention and treatment of hypertension. <em>Molecular Aspects of Medicine</em>.</li>
+        <li>American Academy of Neurology. Evidence-based guideline update: NSAIDs and other complementary treatments for episodic migraine prevention in adults.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>B2 is one piece of the puzzle. Get the full protocol - NMN, D3, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/folate-guide.html" class="related-card">
+          <div class="related-img c-folate">
+            <img src="/images/hero-folate.jpg" alt="Folate" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Folate (B9)</span>
+            <h4>Why Half the Folate Trials Never Had a Chance</h4>
+          </div>
+        </a>
+        <a href="/articles/b1-guide.html" class="related-card">
+          <div class="related-img c-b1">
+            <img src="/images/hero-b1.jpg" alt="Vitamin B1" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin B1</span>
+            <h4>B1: Why the Expensive Form May Not Beat the Cheap One</h4>
+          </div>
+        </a>
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially for migraine prevention in children or blood pressure management. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
