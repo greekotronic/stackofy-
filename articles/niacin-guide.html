@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niacin: The Cholesterol Drug That Stopped Working in 2011 - Stackofy</title>
+  <meta name="description" content="High-dose niacin raised HDL for decades before two major trials showed it didn't prevent a single heart attack - and came with real risks. A 2024 study now links niacin's own breakdown products to cardiovascular inflammation. Here is the honest, three-act history of vitamin B3." />
+
+  <meta property="og:title" content="Niacin: The Cholesterol Drug That Stopped Working in 2011" />
+  <meta property="og:description" content="AIM-HIGH and HPS2-THRIVE ended niacin's run as a cholesterol drug. A 2024 Cleveland Clinic study now suggests its own breakdown products may promote vascular inflammation. And the 'no-flush' version most people buy instead may not even be absorbed. Here is the full picture." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/niacin-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-b3.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #2D5A1B, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .forms-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 13px; }
+    .forms-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 12px; text-align: left; font-weight: 600; }
+    .forms-table td { padding: 10px 12px; border-bottom: 0.5px solid var(--border); color: var(--text); vertical-align: top; }
+    .forms-table tr:nth-child(even) td { background: var(--bg); }
+    .badge-strong { background: #EAF5F0; color: var(--green-dark); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-strong { background: #1A3D2A; color: var(--green-light); }
+    .badge-weak { background: #F5F5F5; color: var(--text-muted); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-weak { background: #2A2A2A; color: #B0B0B0; }
+    .badge-none { background: #FFF0F0; color: #C0392B; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-none { background: #2A1010; color: #FF8080; }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-b1 { background: linear-gradient(135deg, #3D2E00, #B8860B); }
+    .c-b6 { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .forms-table { font-size: 11px !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-b3.jpg" alt="Golden radiating warmth representing niacin's flush effect" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Vitamin B3 (Niacin)</span>
+      <h1>Niacin: The Cholesterol Drug That Stopped Working in 2011</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>17 min read</span>
+        <span>·</span>
+        <span>July 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>High-dose niacin reliably raises HDL and lowers LDL and triglycerides on a lab report - but two major randomized trials, AIM-HIGH (2011) and HPS2-THRIVE (2014), found it prevented zero additional heart attacks or strokes when added to statin therapy</li>
+        <li>HPS2-THRIVE went further and found real harm: increased rates of new-onset diabetes, bleeding, and serious infections - enough that the National Lipid Association recommended curtailing routine niacin use in statin-treated patients</li>
+        <li>A 2024 Cleveland Clinic study published in Nature Medicine found that two breakdown products of excess niacin (2PY and 4PY) were associated with roughly double the cardiovascular event risk in the highest quartile, via a vascular inflammation pathway - a genuinely new and still-debated finding</li>
+        <li>That 2024 study is itself contested - it's observational data from already-diagnosed cardiac patients, and the journal published critical commentaries and an author correction months after publication, so treat it as a serious open question, not settled fact</li>
+        <li>"No-flush" niacin (inositol hexanicotinate) - the product most people reach for specifically to avoid the flush - shows no detectable bioavailability of active nicotinic acid in the most rigorous placebo-controlled comparison, and performs no better than placebo on cholesterol</li>
+        <li>None of this affects niacin's role as an essential vitamin at ordinary dietary and RDA-level doses - the entire controversy exists at the much higher, drug-level doses (500mg+) once used specifically to treat cholesterol</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Niacin, or vitamin B3, is essential for turning food into energy and DNA repair, and is required by law to be added to enriched flour and cereal in the US since the 1930s - a fortification program credited with essentially eliminating pellagra, the once-common deficiency disease. At ordinary dietary intake, none of what follows applies to you. This article is about what happened when niacin, at doses 100 to 300 times the RDA, spent decades as a mainstream cholesterol treatment.</p>
+
+      <p>That story has three acts: a long run as a trusted lipid drug, a decisive rejection by two major clinical trials, and - as of 2024 - a genuinely new and unresolved question about whether niacin's own breakdown products might quietly work against the cardiovascular system they were meant to protect.</p>
+
+      <div class="article-img">
+        <img src="/images/b3-blood-vessels.jpg" alt="Abstract illustration of blood vessels representing niacin's cardiovascular effects" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Act One: A Trusted Lipid Drug for Decades</h2>
+
+      <p>Niacin's cholesterol effects are real and were never in dispute: high doses reliably raise HDL ("good" cholesterol) more effectively than almost any other agent, while lowering LDL, triglycerides, and lipoprotein(a). Given HDL's well-established inverse relationship with cardiovascular disease in observational data, adding niacin to statin therapy seemed like an obvious way to close the "residual risk" gap left over after statins alone.</p>
+
+      <h2>Act Two: Two Trials That Ended the Practice</h2>
+
+      <div class="rct-visual">
+        <div class="rct-title">The Trials That Changed Clinical Guidelines</div>
+        <div class="rct-row">
+          <div class="rct-n">3,414<span>AIM-HIGH, 2011</span></div>
+          <div class="rct-desc">Patients with stable atherosclerotic disease, low HDL, and high triglycerides were randomized to extended-release niacin plus statin or statin alone, over a mean 36-month follow-up. Despite the expected HDL increase, there was no incremental clinical benefit - and niacin was associated with significantly increased rates of certain serious adverse events, alongside the known side effects of flushing, GI symptoms, and elevated blood glucose.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">25,673<span>HPS2-THRIVE, 2014</span></div>
+          <div class="rct-desc">A much larger trial testing extended-release niacin plus laropiprant (an anti-flushing agent) against placebo, on top of intensive statin therapy, over a median 3.9 years. No benefit on cardiovascular outcomes was found. The trial additionally uncovered previously unrecognized serious adverse effects: excess new-onset diabetes, a 1.4% higher risk of infection, and a 0.7% higher risk of bleeding, including hemorrhagic stroke.</div>
+        </div>
+        <div class="rct-highlight">Following these results, the National Lipid Association issued a formal recommendation that "the use of all niacin products used to treat lipids should now be reconsidered" in patients already optimally managed on statins. This effectively ended niacin's mainstream role as an add-on cholesterol drug - a genuine example of a widely-used treatment losing its clinical rationale once it was actually tested against hard outcomes rather than lab values.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/b3-food-sources.jpg" alt="Whole food sources of niacin including chicken, tuna, peanuts and mushrooms" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Act Three: A New, Unresolved 2024 Question</h2>
+
+      <p>In February 2024, a Cleveland Clinic-led team published a metabolomics study in Nature Medicine identifying two terminal breakdown products of niacin metabolism - called 2PY and 4PY - that were associated with increased cardiovascular event risk in two separate patient cohorts.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Association, Not Proven Causation</span>
+          <h4>The Core Finding</h4>
+          <p>Patients in the top quartile of 2PY or 4PY blood levels had roughly double the three-year risk of major adverse cardiovascular events compared to the bottom quartile, after adjusting for traditional risk factors, across US and European validation cohorts.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Mechanistic Support</span>
+          <h4>A Plausible Biological Pathway</h4>
+          <p>Follow-up genetic and mouse studies suggested 4PY specifically increases the pro-inflammatory vascular protein VCAM-1 in endothelial cells - giving the association a real, testable mechanism rather than just a statistical correlation.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Observational Limitation</span>
+          <h4>Who Was Actually Studied</h4>
+          <p>Both cohorts were patients already being evaluated for cardiac disease, roughly 60% of whom were on statins - a population where confounding by underlying disease severity is a genuine concern that observational metabolomics can't fully rule out.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Contested on Arrival</span>
+          <h4>Critical Commentary and a Correction</h4>
+          <p>Nature Medicine published critical commentaries and an author response in September 2024, and issued an editorial correction to a claim about prior niacin research that had been stated too broadly in the original piece - a sign the finding is being actively debated, not quietly accepted.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Where This Actually Leaves Things</div>
+        <p>This is a genuinely important, mechanistically plausible finding that deserves to be taken seriously and followed up in larger, ideally prospective studies - not dismissed. But it is not yet the kind of settled, randomized-trial-grade evidence that would justify a confident public health recommendation to reduce niacin fortification, and treating it that way overstates what one observational study, however well-designed, can establish. The honest position in mid-2026 is "actively being investigated," not "niacin is now known to be harmful."</p>
+      </div>
+
+      <h2>The "No-Flush" Product Most People Reach for Instead</h2>
+
+      <p>Given niacin's well-known flushing side effect - a harmless but uncomfortable warmth, redness, and itching caused by prostaglandin release - many people specifically seek out "no-flush" niacin, almost always sold as inositol hexanicotinate (IHN). This is where a separate, older controversy comes in.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">"No Flush" May Simply Mean "No Niacin"</div>
+        <p>The most rigorous head-to-head comparison available - a blinded, placebo-controlled trial comparing wax-matrix extended-release niacin, IHN, and placebo - found that IHN showed no evidence of bioavailability whatsoever in pharmacokinetic testing, and produced no significant improvement in cholesterol compared to placebo. The extended-release niacin group, by contrast, showed the expected significant lipid improvements. The reason IHN doesn't cause a flush may simply be that it isn't releasing meaningful amounts of active nicotinic acid into the bloodstream at all - not that it's delivering the same effect through a gentler route.</p>
+      </div>
+
+      <h2>A Practical Quality Checklist</h2>
+
+      <div class="checklist-box">
+        <h4>Before You Take Niacin for Any Purpose Beyond Basic Nutrition</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Ordinary dietary niacin and RDA-level supplementation (14-16mg/day) is not part of this controversy at all</strong> - the concerns above apply specifically to drug-level doses (500mg+) used historically for cholesterol management.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>If you're currently on high-dose niacin specifically added to statin therapy for cholesterol</strong>, this is worth an active conversation with your prescriber given the AIM-HIGH and HPS2-THRIVE results - not something to stop abruptly on your own.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't buy "no-flush" niacin (inositol hexanicotinate) expecting cholesterol benefits</strong> - the best available pharmacokinetic data suggests it isn't meaningfully absorbed as active niacin at all.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't treat the 2024 metabolite findings as proven, settled harm</strong> - it's a serious, mechanistically plausible signal from observational data in a specific population, actively being debated, not a confirmed causal verdict.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't self-medicate with high-dose immediate-release niacin</strong> for lipid management without medical supervision - liver function monitoring and glucose monitoring are standard practice for good reason.</span>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Typical Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>General maintenance / RDA</td>
+          <td>14-16mg/day (NE)</td>
+          <td>Easily met through diet for most adults; deficiency (pellagra) is now rare in fortified-food countries</td>
+        </tr>
+        <tr>
+          <td>Historical lipid management dose</td>
+          <td>500 - 2,000mg/day, immediate or extended-release</td>
+          <td>The dose range tested in AIM-HIGH and HPS2-THRIVE - now a much harder case to justify given trial results</td>
+        </tr>
+        <tr>
+          <td>"No-flush" (inositol hexanicotinate)</td>
+          <td>Commonly 500 - 1,500mg/day</td>
+          <td>No demonstrated bioavailability as active niacin in the best available comparison trial</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Safety Notes</div>
+        <p>Immediate-release niacin at drug-level doses commonly causes flushing, itching, and GI upset, and can worsen glycemic control, unmask diabetes, trigger gout, and cause elevated liver enzymes - extended-release and sustained-release formulations shift this risk profile toward more liver concern and less flushing. Any use above roughly 500mg/day for a therapeutic purpose should include medical supervision and periodic liver function and glucose monitoring. Niacin at ordinary dietary and standard multivitamin doses carries none of these concerns.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🔬</div>
+          <h4>B-Complex (B1, B2, B6)</h4>
+          <p>Niacin works alongside the other B-vitamins in overlapping energy-metabolism pathways at ordinary dietary and multivitamin doses.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🧬</div>
+          <h4>Niacinamide (as NAD+ Precursor)</h4>
+          <p>The non-flushing amide form is the more relevant one for the current NAD+/longevity conversation, separate from the cholesterol-dose controversy entirely.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">💊</div>
+          <h4>Statins (Clinical Context)</h4>
+          <p>The specific combination tested in AIM-HIGH and HPS2-THRIVE - now a much weaker case given both trials' results, worth revisiting with a prescriber if currently combined.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Statins + Myopathy Risk (Caution)</h4>
+          <p>Combined niacin and statin use showed elevated rates of muscle-related adverse effects in trial data - a reason for monitoring, not automatic avoidance.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Diabetes Medications (Caution)</h4>
+          <p>High-dose niacin can worsen glycemic control and interact with diabetes management - both AIM-HIGH and HPS2-THRIVE found excess new-onset diabetes.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Anticoagulants (Caution)</h4>
+          <p>HPS2-THRIVE found an increased bleeding risk signal with high-dose niacin-laropiprant - relevant for anyone already on blood thinners.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Essential and uncontroversial at ordinary dietary doses - the score reflects the drug-level cholesterol-management use case specifically, which has moved from mainstream practice to genuinely questionable territory. Two major RCTs found no cardiovascular benefit despite real lipid improvements, real serious adverse events were documented, and a still-unresolved 2024 finding raises the possibility that niacin's own breakdown products may work against the system it was meant to protect. None of this is a reason to avoid dietary niacin - it's a reason to be skeptical of high-dose niacin as a cholesterol strategy specifically.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ When a Lab Value Improves But the Outcome Doesn't</div>
+        <h4>Why niacin's HDL effect never translated into fewer heart attacks</h4>
+        <p>See our framework for telling the difference between a surrogate marker improving and a treatment actually working.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>The AIM-HIGH Investigators (2011). Niacin in Patients with Low HDL Cholesterol Levels Receiving Intensive Statin Therapy. <em>New England Journal of Medicine</em>, 365, 2255-2267.</li>
+        <li>HPS2-THRIVE Collaborative Group (2014). Effects of Extended-Release Niacin with Laropiprant in High-Risk Patients. <em>New England Journal of Medicine</em>, 371, 203-212.</li>
+        <li>Haynes, R. et al. (2019). Serious Adverse Effects of Extended-release Niacin/Laropiprant: Results From the HPS2-THRIVE Trial. <em>Journal of the American College of Cardiology</em>.</li>
+        <li>Ferrell, M. et al. (2024). A terminal metabolite of niacin promotes vascular inflammation and contributes to cardiovascular disease risk. <em>Nature Medicine</em>, 30(2), 424-434. Includes subsequent commentaries and author response (Sept. 2024).</li>
+        <li>Sodi, R. (2024). Niacin and Risk of Cardiovascular Events: Deciphering the Paradox. <em>Clinical Chemistry</em>, 70(11), 1305-1307.</li>
+        <li>Keenan, J.M. et al. Wax-matrix extended-release niacin vs inositol hexanicotinate: a comparison in persons with mild to moderate dyslipidemia. <em>Journal of Clinical Lipidology</em>.</li>
+        <li>National Lipid Association (2014). Final Results of HPS2-THRIVE: Clinical Practice Recommendation.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>B3 is one piece of the puzzle. Get the full protocol - NMN, D3, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/b1-guide.html" class="related-card">
+          <div class="related-img c-b1">
+            <img src="/images/hero-b1.jpg" alt="Vitamin B1" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin B1</span>
+            <h4>B1: Why the Expensive Form May Not Beat the Cheap One</h4>
+          </div>
+        </a>
+        <a href="/articles/b6-guide.html" class="related-card">
+          <div class="related-img c-b6">
+            <img src="/images/hero-b6.jpg" alt="Vitamin B6" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin B6</span>
+            <h4>B6: Why Two Health Authorities Disagree by a Factor of Eight</h4>
+          </div>
+        </a>
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Never adjust cholesterol medication or high-dose niacin therapy without consulting the prescribing physician. Always consult a qualified healthcare professional before starting any supplement protocol. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

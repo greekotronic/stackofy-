@@ -65,6 +65,7 @@ const COLORS = {
 'c-folate': 'background:linear-gradient(135deg,#1a2a10,#7A5C10)',
 'c-b6': 'background:linear-gradient(135deg,#7A5C10,#D4A853)',
 'c-b1': 'background:linear-gradient(135deg,#3D2E00,#B8860B)',
+'c-b3': 'background:linear-gradient(135deg,#7A5C10,#B8860B)',
 };
 
 function makeCard(article, size) {

@@ -760,5 +760,18 @@
     "tags": "B1 Thiamine Vitamins Wernicke",
     "readTime": "17 min",
     "description": "Cheap thiamine hydrochloride, at a high enough oral dose, reaches blood levels approaching IV administration - undercutting a big chunk of the case for premium derivatives. Meanwhile, a life-threatening deficiency is still badly underdiagnosed."
+  },
+  {
+    "title": "Niacin: The Cholesterol Drug That Stopped Working in 2011",
+    "tag": "Vitamin B3 (Niacin)",
+    "url": "/articles/niacin-guide.html",
+    "image": "/images/hero-b3.jpg",
+    "color": "c-b3",
+    "featured": false,
+    "type": "guide",
+    "badgeType": "featured",
+    "tags": "B3 Niacin Vitamins Cholesterol Cardiovascular",
+    "readTime": "17 min",
+    "description": "AIM-HIGH and HPS2-THRIVE ended niacin's run as a cholesterol drug. A 2024 Cleveland Clinic study now suggests its own breakdown products may promote vascular inflammation."
   }
 ]
