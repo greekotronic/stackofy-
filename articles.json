@@ -851,5 +851,18 @@
     "tags": "Colostrum Gut Health IGF-1 WADA",
     "readTime": "19 min",
     "description": "WADA has warned athletes off colostrum since 2013 over IGF-1 concerns, based on two flawed studies. The broader controlled evidence finds no IGF-1 increase at standard doses - and colostrum's real strength is gut health, not immune hype."
+  },
+  {
+    "title": "Tongkat Ali: The Testosterone Herb With a 63% Fake Product Problem",
+    "tag": "Tongkat Ali",
+    "url": "/articles/tongkat-ali-guide.html",
+    "image": "/images/hero-tongkat-ali.jpg",
+    "color": "c-tongkat",
+    "featured": false,
+    "type": "guide",
+    "badgeType": "featured",
+    "tags": "Tongkat Ali Testosterone SHBG Adulteration",
+    "readTime": "19 min",
+    "description": "A meta-analysis shows real testosterone effects but flags major publication bias and heterogeneity. A peer-reviewed DNA barcoding study found only 37% of commercial products were genuinely authentic."
   }
 ]

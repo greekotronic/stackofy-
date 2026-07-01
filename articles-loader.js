@@ -72,6 +72,7 @@ const COLORS = {
 'c-ai': 'background:linear-gradient(135deg,#1A1A1A,#D4A853)',
 'c-vegan': 'background:linear-gradient(135deg,#1B4332,#2D6A4F)',
 'c-colostrum': 'background:linear-gradient(135deg,#3D2E00,#D4A853)',
+'c-tongkat': 'background:linear-gradient(135deg,#3D2E00,#7A5C10)',
 };
 
 function makeCard(article, size) {
