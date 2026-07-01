@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B5: The Acne Cure Built on a Hypothesis Nobody Tested Twice - Stackofy</title>
+  <meta name="description" content="The pantothenic acid acne theory started as an uncontrolled case series in a hypothesis journal - not evidence. But one small, real randomized trial found a genuine effect at megadose. Meanwhile, most people confuse B5 with its far more evidence-backed cousin, pantethine." />
+
+  <meta property="og:title" content="B5: The Acne Cure Built on a Hypothesis Nobody Tested Twice" />
+  <meta property="og:description" content="A 1995 uncontrolled case series in a hypothesis journal launched the pantothenic acid acne theory. One small RCT since found a real 68% lesion reduction at 2.2g/day - genuinely promising, never independently replicated. And pantothenic acid itself does nothing for cholesterol; its derivative pantethine is the one with real trial data." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/b5-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-b5.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #2D5A1B, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .forms-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 13px; }
+    .forms-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 12px; text-align: left; font-weight: 600; }
+    .forms-table td { padding: 10px 12px; border-bottom: 0.5px solid var(--border); color: var(--text); vertical-align: top; }
+    .forms-table tr:nth-child(even) td { background: var(--bg); }
+    .badge-strong { background: #EAF5F0; color: var(--green-dark); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-strong { background: #1A3D2A; color: var(--green-light); }
+    .badge-weak { background: #F5F5F5; color: var(--text-muted); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-weak { background: #2A2A2A; color: #B0B0B0; }
+    .badge-none { background: #FFF0F0; color: #C0392B; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-none { background: #2A1010; color: #FF8080; }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-b1 { background: linear-gradient(135deg, #3D2E00, #B8860B); }
+    .c-b3 { background: linear-gradient(135deg, #7A5C10, #B8860B); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .forms-table { font-size: 11px !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-b5.jpg" alt="Whole foods scattered widely, representing pantothenic acid's presence in nearly all foods" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Vitamin B5 (Pantothenic Acid)</span>
+      <h1>B5: The Acne Cure Built on a Hypothesis Nobody Tested Twice</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>16 min read</span>
+        <span>·</span>
+        <span>July 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Pantothenic acid takes its name from the Greek "pantos" (everywhere) because it's genuinely present in nearly all foods - true dietary deficiency is essentially unheard of outside severe malnutrition</li>
+        <li>The megadose acne theory traces back to a single 1995 case series published in a hypothesis journal (not a results journal), proposing that coenzyme A gets diverted to hormone production instead of fatty acid metabolism during puberty - a mechanism that has never been independently confirmed</li>
+        <li>Despite that shaky origin, one real randomized, double-blind, placebo-controlled trial (n=41-48, 2.2g/day for 12 weeks) found a genuine 68% greater reduction in facial lesions versus placebo - promising, but small and never independently replicated since 2014</li>
+        <li>The effective acne dose sits at roughly 2.2-10g/day - 200,000%+ of the standard daily value - which has nothing to do with the 5-10mg found in ordinary multivitamins</li>
+        <li>Pantothenic acid itself has no meaningful effect on cholesterol - the compound with real cholesterol-lowering RCT data is pantethine, a related but distinct derivative that's commonly confused with plain B5 on supplement labels</li>
+        <li>Pantothenic acid is considered one of the safest vitamins at any studied dose, with no established upper intake level and only mild, dose-dependent GI upset reported even at multi-gram doses</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Pantothenic acid takes its name from the Greek <em>pantos</em>, meaning "everywhere" - a fitting description, since it's found in nearly every food category: meat, eggs, whole grains, legumes, avocados, mushrooms, and more. It's the precursor to coenzyme A, a molecule involved in literally hundreds of metabolic reactions, most centrally the conversion of carbohydrates, fats, and proteins into usable energy. Genuine dietary deficiency is essentially unheard of outside of severe, prolonged malnutrition.</p>
+
+      <p>That should make B5 one of the most boring vitamins on this site - and at ordinary doses, it mostly is. What makes it worth a full article is what happens at doses hundreds of times higher, where a decades-old, mechanistically shaky hypothesis about acne became a genuine (if small) clinical finding, and where a related but chemically distinct compound gets routinely confused with plain pantothenic acid on supplement labels.</p>
+
+      <div class="article-img">
+        <img src="/images/b5-coa-network.jpg" alt="Abstract illustration representing coenzyme A's role in metabolic pathways" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Where the Acne Theory Actually Comes From</h2>
+
+      <p>In 1995, a Hong Kong physician named Dr. Lit-Hung Leung published a hypothesis in the journal <em>Medical Hypotheses</em> - a publication explicitly dedicated to speculative theoretical proposals, not original clinical results. Leung proposed that during puberty, rising hormone production causes the body to preferentially direct coenzyme A toward androgen synthesis rather than fatty acid metabolism, leading to a buildup of fatty acids that get excreted through sebaceous glands as excess sebum - the proposed root cause of acne. His proposed fix: megadoses of pantothenic acid (10-20g/day) to supply enough coenzyme A for both processes simultaneously.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">The Mechanism Has Never Actually Been Confirmed</div>
+        <p>This is worth stating plainly: there is no published evidence documenting that coenzyme A actually gets preferentially diverted to androgen production over fatty acid metabolism during puberty, or that this diversion is what drives acne. The entire theoretical foundation of the megadose B5 acne approach rests on an uncontrolled case series and a plausible-sounding but unverified biochemical story - not confirmed physiology.</p>
+      </div>
+
+      <h2>But One Real Trial Found a Genuine Effect</h2>
+
+      <p>Here's the twist that makes this more than a debunking story: a properly designed randomized, double-blind, placebo-controlled trial was eventually run, and it found something real - even though the underlying mechanism proposed to explain it remains unverified.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">The One Trial With Real Design Behind It</div>
+        <div class="rct-row">
+          <div class="rct-n">41-48<span>Yang et al., 2014</span></div>
+          <div class="rct-desc">A 12-week, randomized, double-blind, placebo-controlled trial gave participants with facial acne a pantothenic acid-based supplement at 2.2g/day. The pantothenic acid group showed a 68.2% greater reduction in total facial lesions compared to placebo (P=0.02), along with meaningfully better Dermatology Life Quality Index scores (1.93 vs 5.3 at week 12, P=0.02).</div>
+        </div>
+        <div class="rct-highlight">A separate systematic review of nutraceuticals for acne rated this evidence as "fair quality" - genuinely promising for a small trial, but the sample size was modest (41-48 participants), and to date this result has not been independently replicated by another research group. That combination - one real positive signal, no replication, a dose far outside normal supplementation - is exactly the situation where cautious optimism, not confident endorsement, is the right response.</div>
+      </div>
+
+      <p>The honest summary: the mechanism marketed alongside this treatment is unproven speculation from 1995, but the actual clinical trial data, while thin, is real and was properly controlled. Those are two separate claims, and it's worth evaluating them separately rather than dismissing the whole approach because its origin story is weak, or trusting it fully because one trial worked.</p>
+
+      <div class="article-img">
+        <img src="/images/b5-food-sources.jpg" alt="Whole food sources of pantothenic acid including avocado, mushrooms, eggs and sunflower seeds" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Compound Everyone Confuses With B5: Pantethine</h2>
+
+      <p>A second, unrelated controversy sits under the B5 umbrella, and it's largely a labeling and terminology confusion rather than a scientific dispute. Pantothenic acid and pantethine are not the same compound - pantethine is a more direct precursor to coenzyme A, synthesized from two molecules of pantothenic acid joined together, and it behaves quite differently in the body.</p>
+
+      <table class="forms-table">
+        <tr>
+          <th>Compound</th>
+          <th>What It Is</th>
+          <th>Cholesterol Evidence</th>
+          <th>Regulatory Status</th>
+        </tr>
+        <tr>
+          <td><strong>Pantothenic Acid (B5)</strong></td>
+          <td>The vitamin itself, found in nearly all foods</td>
+          <td><span class="badge-none">No meaningful effect documented</span></td>
+          <td>Vitamin, sold everywhere as B5</td>
+        </tr>
+        <tr>
+          <td><strong>Pantethine</strong></td>
+          <td>A direct precursor to coenzyme A, derived from two pantothenic acid units</td>
+          <td><span class="badge-strong">Modest, real RCT-backed reductions</span></td>
+          <td>Supplement in the US; prescription drug for hyperlipidemia in Japan</td>
+        </tr>
+      </table>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Modest but Real</span>
+          <h4>Pantethine, RCT (n=32)</h4>
+          <p>A triple-blinded, placebo- and diet-controlled trial at 600-900mg/day over 16 weeks found significant reductions in total cholesterol and LDL-C in a low-to-moderate cardiovascular risk population eligible for statin therapy.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Coenzyme A May Beat It</span>
+          <h4>Head-to-Head vs. Direct CoA</h4>
+          <p>A comparative trial found direct coenzyme A supplementation produced significantly greater reductions in triglycerides (33.3% vs 16.5%) and total cholesterol than pantethine - though LDL and HDL didn't differ significantly between the two.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Small Effect Sizes</span>
+          <h4>Overall Evidence Quality</h4>
+          <p>Independent reviews (including Examine.com's analysis) describe the pantethine evidence as promising but small and inconsistent, with much of the surrounding literature being non-placebo-controlled and higher risk of bias.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">No Evidence At All</span>
+          <h4>Plain Pantothenic Acid Alone</h4>
+          <p>There is no research suggesting pantothenic acid itself affects cholesterol levels - any cholesterol-related benefit attributed to "B5" in casual conversation is almost certainly conflating it with pantethine.</p>
+        </div>
+      </div>
+
+      <div class="skip-box">
+        <div class="skip-label">What This Means Practically</div>
+        <p>If you're shopping for a cholesterol-support supplement, check the label carefully - "pantothenic acid" and "pantethine" are not interchangeable, despite both being B5-related and often shelved next to each other. Only pantethine has real (if modest) trial support for lipids; plain pantothenic acid does not.</p>
+      </div>
+
+      <h2>A Practical Quality Checklist</h2>
+
+      <div class="checklist-box">
+        <h4>Before You Buy Any B5-Related Supplement</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>For general nutrition, ordinary dietary intake or a standard multivitamin dose (5-10mg) is genuinely sufficient</strong> - deficiency from diet alone essentially doesn't happen.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>If considering high-dose pantothenic acid for acne, know the real dose used in the actual trial was 2.2g/day</strong> - far above multivitamin levels, and should involve medical supervision given the lack of independent replication.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Check the label carefully for cholesterol products</strong> - look specifically for "pantethine," not "pantothenic acid," if lipid support is the goal.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't expect standard multivitamin-dose B5 (5-10mg) to do anything for acne or cholesterol</strong> - both effects, where they exist at all, require doses hundreds of times higher.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't treat the megadose acne mechanism as scientifically confirmed</strong> just because the trial results were positive - the biochemical story behind it remains unverified speculation from 1995.</span>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Typical Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>General maintenance / adequate intake</td>
+          <td>5mg/day</td>
+          <td>Easily met through diet alone for virtually all adults</td>
+        </tr>
+        <tr>
+          <td>Acne (as studied)</td>
+          <td>2.2 - 10g/day, pantothenic acid</td>
+          <td>Reflects the one properly controlled RCT and the earlier uncontrolled case series - not independently replicated</td>
+        </tr>
+        <tr>
+          <td>Cholesterol support (as studied)</td>
+          <td>600 - 900mg/day, pantethine specifically</td>
+          <td>Not plain pantothenic acid - check the label</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Safety Notes</div>
+        <p>Pantothenic acid is considered one of the safest vitamins at any tested dose, with no established tolerable upper intake level. At very high doses (10g/day and above), the most commonly reported side effect is mild gastrointestinal upset or diarrhea, along with harmlessly bright yellow urine reflecting excess water-soluble vitamin excretion. Pantethine at standard studied doses (600-900mg/day) has a similarly favorable safety profile, though anyone already on cholesterol medication should coordinate with their prescriber before adding it.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🔬</div>
+          <h4>B-Complex (B1, B2, B6, B12)</h4>
+          <p>Pantothenic acid works alongside the other B-vitamins in overlapping energy-metabolism pathways via coenzyme A at ordinary dietary doses.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🩺</div>
+          <h4>Biotin (B7)</h4>
+          <p>Both are water-soluble B-vitamins commonly paired in hair and skin-focused formulations, though independent evidence for either on hair growth specifically is limited.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">💊</div>
+          <h4>Statins (as Adjunct, Pantethine Specifically)</h4>
+          <p>Some practitioners use pantethine alongside a lower statin dose to reduce myopathy risk while maintaining lipid control - an off-label combination worth discussing with a prescriber.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Megadose Without Supervision (Caution)</h4>
+          <p>The 2.2-10g/day acne dose range is far outside normal supplementation - reasonable to try under medical guidance, not as an unsupervised long-term regimen.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Label Confusion (Caution)</h4>
+          <p>Double-check whether a product actually contains pantethine or plain pantothenic acid before expecting any cholesterol effect - the two are frequently conflated in marketing.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Cholesterol Medication (Caution)</h4>
+          <p>Combining pantethine with prescription lipid-lowering drugs should be coordinated with a physician, even though the safety profile is generally favorable.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Essential and effectively risk-free at ordinary dietary intake, with genuine deficiency being close to non-existent outside severe malnutrition. The score reflects that ordinary supplementation offers little beyond what food already provides, balanced against a genuinely interesting but thin megadose acne signal and a real, if modest, cholesterol effect - that belongs to pantethine specifically, not plain pantothenic acid, a distinction the supplement market doesn't always make clear.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ When One Real Trial Follows an Unproven Hypothesis</div>
+        <h4>How to weigh a genuinely positive result that still rests on a shaky theoretical origin</h4>
+        <p>See our framework for separating "the mechanism is unproven" from "the actual trial data is bad" - they're not the same claim.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Leung, L.H. (1995). Pantothenic acid deficiency as the pathogenesis of acne vulgaris. <em>Medical Hypotheses</em>, 44(6), 490-492.</li>
+        <li>Yang, M. et al. (2014). A Randomized, Double-Blind, Placebo-Controlled Study of a Novel Pantothenic Acid-Based Dietary Supplement in Subjects with Mild to Moderate Facial Acne. <em>Dermatology and Therapy</em>.</li>
+        <li>Systematic Review of Oral Nutraceuticals for Treating Acne, including quality assessment of the pantothenic acid trial evidence.</li>
+        <li>Evans, M. et al. (2014). Pantethine, a derivative of vitamin B5, favorably alters total, LDL and non-HDL cholesterol in low to moderate cardiovascular risk subjects. <em>Vascular Health and Risk Management</em>, 10, 89-100.</li>
+        <li>Chen, Y.Q. et al. (2015). Efficacy and tolerability of coenzyme A vs pantethine for the treatment of patients with hyperlipidemia. <em>Journal of Clinical Lipidology</em>, 9(5), 692-697.</li>
+        <li>Examine.com. Does pantothenic acid affect cholesterol levels? - independent evidence summary.</li>
+        <li>NCBI StatPearls. Vitamin B5 (Pantothenic Acid) - deficiency, safety, and upper limit review.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>B5 is one piece of the puzzle. Get the full protocol - NMN, D3, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/niacin-guide.html" class="related-card">
+          <div class="related-img c-b3">
+            <img src="/images/hero-b3.jpg" alt="Vitamin B3" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin B3</span>
+            <h4>Niacin: The Cholesterol Drug That Stopped Working in 2011</h4>
+          </div>
+        </a>
+        <a href="/articles/b1-guide.html" class="related-card">
+          <div class="related-img c-b1">
+            <img src="/images/hero-b1.jpg" alt="Vitamin B1" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin B1</span>
+            <h4>B1: Why the Expensive Form May Not Beat the Cheap One</h4>
+          </div>
+        </a>
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially at megadose levels or alongside cholesterol medication. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

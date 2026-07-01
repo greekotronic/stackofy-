@@ -773,5 +773,18 @@
     "tags": "B3 Niacin Vitamins Cholesterol Cardiovascular",
     "readTime": "17 min",
     "description": "AIM-HIGH and HPS2-THRIVE ended niacin's run as a cholesterol drug. A 2024 Cleveland Clinic study now suggests its own breakdown products may promote vascular inflammation."
+  },
+  {
+    "title": "B5: The Acne Cure Built on a Hypothesis Nobody Tested Twice",
+    "tag": "Vitamin B5 (Pantothenic Acid)",
+    "url": "/articles/b5-guide.html",
+    "image": "/images/hero-b5.jpg",
+    "color": "c-b5",
+    "featured": false,
+    "type": "guide",
+    "badgeType": "featured",
+    "tags": "B5 Pantothenic Acid Vitamins Acne Pantethine",
+    "readTime": "16 min",
+    "description": "A 1995 uncontrolled case series launched the pantothenic acid acne theory. One small RCT since found a real effect - but pantothenic acid itself does nothing for cholesterol; its cousin pantethine is the one with real data."
   }
 ]
