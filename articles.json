@@ -708,5 +708,18 @@
   "tags": "metabolism longevity",
   "readTime": "16 min",
   "description": "The eight B vitamins work as an interdependent team, not eight separate nutrients - and the methylation cycle is the thread connecting most of them. MTHFR testing has become a popular explanation for everything from fatigue to anxiety, but major medical reviews say routine testing isn't even clinically justified. Here is the real, family-wide picture."
-}
+},
+  {
+    "title": "B12: What It Actually Fixes (And What It Doesn't)",
+    "tag": "Vitamin B12",
+    "url": "/articles/b12-guide.html",
+    "image": "/images/hero-b12.jpg",
+    "color": "red",
+    "featured": false,
+    "type": "guide",
+    "badgeType": "featured",
+    "tags": ["B12", "Vitamins", "Energy", "Nervous System"],
+    "readTime": "16 min",
+    "description": "Cyanocobalamin isn't dangerous, methylcobalamin isn't automatically 'used directly' by your cells, and if you're not actually deficient, B12 probably won't do much for your energy or mood."
+  }
 ]

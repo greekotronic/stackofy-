@@ -349,5 +349,9 @@
   <loc>https://stackofy.com/articles/b-vitamins-guide.html</loc>
   <changefreq>monthly</changefreq>
   <priority>0.85</priority>
-</url>
+</url><url>
+    <loc>https://stackofy.com/articles/b12-guide.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
