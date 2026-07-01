@@ -812,5 +812,18 @@
     "tags": "B2 Riboflavin Vitamins Migraine MTHFR Blood Pressure",
     "readTime": "16 min",
     "description": "Riboflavin has real Class II evidence for adult migraine prevention. A specific MTHFR gene variant determines whether it lowers blood pressure by 6-13 mmHg or does nothing at all."
+  },
+  {
+    "title": "AI and Longevity in 2026: What's Actually Real, and What's Still Phase I",
+    "tag": "Editorial",
+    "url": "/articles/ai-longevity-guide.html",
+    "image": "/images/hero-ai-longevity.jpg",
+    "color": "c-ai",
+    "featured": true,
+    "type": "editorial",
+    "badgeType": "featured",
+    "tags": "AI Longevity Editorial Retro Biosciences Insilico",
+    "readTime": "16 min",
+    "description": "OpenAI and Retro Biosciences achieved a real 50x jump in cell reprogramming efficiency. AI-discovered drugs succeed in Phase I at 80-90% - but show no advantage yet in Phase II, and zero have reached approval."
   }
 ]

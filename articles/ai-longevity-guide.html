@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI and Longevity in 2026: What's Actually Real, and What's Still Phase I - Stackofy</title>
+  <meta name="description" content="OpenAI and Retro Biosciences used a custom AI model to redesign the Nobel Prize-winning Yamanaka factors, achieving a 50x jump in cell reprogramming efficiency. It's a real result - and it's also still a lab dish, not a therapy. Here is the honest state of AI and longevity in 2026." />
+
+  <meta property="og:title" content="AI and Longevity in 2026: What's Actually Real, and What's Still Phase I" />
+  <meta property="og:description" content="AI-discovered drugs succeed in Phase I at nearly double the historical rate. In Phase II - where most drugs actually fail - AI shows no demonstrated advantage yet, and as of early 2026 zero AI-discovered drugs have reached approval. Here is the real state of the field, not the press release version." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/ai-longevity-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-ai-longevity.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #2D5A1B, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .forms-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 13px; }
+    .forms-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 12px; text-align: left; font-weight: 600; }
+    .forms-table td { padding: 10px 12px; border-bottom: 0.5px solid var(--border); color: var(--text); vertical-align: top; }
+    .forms-table tr:nth-child(even) td { background: var(--bg); }
+    .badge-strong { background: #EAF5F0; color: var(--green-dark); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-strong { background: #1A3D2A; color: var(--green-light); }
+    .badge-weak { background: #F5F5F5; color: var(--text-muted); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-weak { background: #2A2A2A; color: #B0B0B0; }
+    .badge-none { background: #FFF0F0; color: #C0392B; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-none { background: #2A1010; color: #FF8080; }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+    .c-b2 { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .c-b1 { background: linear-gradient(135deg, #3D2E00, #B8860B); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .forms-table { font-size: 11px !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-ai-longevity.jpg" alt="Glowing neural network transforming into a DNA strand, representing AI and longevity research" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Editorial</span>
+      <h1>AI and Longevity in 2026: What's Actually Real, and What's Still Phase I</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>16 min read</span>
+        <span>·</span>
+        <span>July 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>In August 2025, OpenAI and Retro Biosciences used a custom biology-specialized AI model to redesign the Nobel Prize-winning Yamanaka factors, achieving a 50x increase in cell reprogramming efficiency and faster stem cell generation - a genuine, published result</li>
+        <li>That result is still confined to a lab dish: the redesigned proteins have been validated in human fibroblasts across multiple donors, not in animals or people, and there is no timeline yet for any therapy built on this work</li>
+        <li>Insilico Medicine's Rentosertib, the first drug entirely generated by AI, is a real milestone - it completed a randomized, published Phase 2a trial for a lung fibrosis condition, though this is a fibrosis drug, not an anti-aging treatment specifically</li>
+        <li>Across the broader field, AI-discovered drugs succeed in Phase I trials at roughly 80-90%, well above the historical 40-65% - but in Phase II, the stage where most drugs actually fail, AI shows no demonstrated advantage in the current data</li>
+        <li>As of early 2026, zero AI-discovered drugs have received regulatory approval, and at least one high-profile AI-discovered candidate (Recursion's REC-994) was discontinued in 2025 after long-term data failed to confirm its earlier promising results</li>
+        <li>The honest 2026 summary: AI is genuinely accelerating the early, cheap, fast parts of biological discovery - it has not yet been proven to solve the expensive, slow part (whether a drug actually works in humans over time), which is exactly where most therapies have always failed</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>If you've seen headlines this year claiming an AI "solved" a decades-old anti-aging puzzle, you're probably thinking of one specific, real story - and it's worth separating what actually happened from how it got summarized. In August 2025, OpenAI and the longevity biotech Retro Biosciences (backed heavily by OpenAI CEO Sam Altman personally) published results from a specialized AI model called GPT-4b micro - not the consumer ChatGPT product, but a smaller version of GPT-4o retrained specifically on protein sequences and 3D structural data.</p>
+
+      <p>The team pointed this model at the Yamanaka factors: four proteins - OCT4, SOX2, KLF4, and MYC - discovered by Shinya Yamanaka in 2006, whose ability to "reprogram" mature adult cells back into stem-cell-like states earned him the 2012 Nobel Prize. The problem with the original factors is that they're inefficient (fewer than 1 in 1,000 cells successfully reprogram) and slow (roughly three weeks), and c-MYC in particular carries real cancer risk.</p>
+
+      <div class="article-img">
+        <img src="/images/ai-cell-reprogramming.jpg" alt="Abstract illustration representing AI-designed cell reprogramming" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>What Actually Happened in the Lab</h2>
+
+      <div class="rct-visual">
+        <div class="rct-title">The Real Result, Stated Precisely</div>
+        <div class="rct-row">
+          <div class="rct-n">50x<span>Reprogramming efficiency</span></div>
+          <div class="rct-desc">GPT-4b micro generated redesigned variants of SOX2 and KLF4 - named RetroSOX and RetroKLF - by suggesting modifications to up to one-third of their amino acids, far beyond what conventional protein engineering typically attempts. Over 30% of the AI-generated SOX2 variants outperformed the natural protein in initial screens, and roughly half of the KLF4 variants exceeded manually engineered versions. Combined, the redesigned factors produced pluripotency markers days earlier than standard timelines, with roughly a 50-fold increase in marker expression compared to wild-type proteins.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">7 days<span>vs. 3 weeks</span></div>
+          <div class="rct-desc">The engineered variants also showed improved DNA damage repair capability during reprogramming - directly relevant to cellular aging, since accumulated DNA damage is one of the recognized hallmarks of aging. Results were validated across multiple donors and cell types.</div>
+        </div>
+        <div class="rct-highlight">Here's the part that matters most for calibrating expectations: this is in vitro work, in human fibroblast cell cultures, not in animals and not in people. There is no published timeline for moving this into preclinical or clinical testing. It's a genuinely significant advance in protein engineering methodology - and a long way from a therapy.</div>
+      </div>
+
+      <h2>The Other Real Milestone: An AI-Designed Drug in an Actual Trial</h2>
+
+      <p>The Retro Bio story gets most of the longevity-specific attention, but the more clinically advanced AI milestone belongs to a different company. Insilico Medicine's Rentosertib (also called ISM001-055) is described as the first drug whose molecular structure was entirely generated by AI, designed to treat idiopathic pulmonary fibrosis - a fatal lung disease with limited treatment options, and a condition closely tied to the same fibrotic aging processes that show up across multiple organ systems as we get older.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">A Genuine Clinical Result, With an Important Caveat</div>
+        <p>Rentosertib's randomized, controlled Phase 2a trial results were published in Nature Medicine in 2025 - a real peer-reviewed clinical outcome, not a press release. This is a legitimate milestone: an AI-designed molecule that made it through early human testing with positive results. The caveat: it's a fibrosis drug for one specific lung condition, not a general anti-aging therapy, even though it's frequently cited in longevity coverage. Whether its mechanism generalizes to broader "aging" applications is a separate, unanswered question.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/ai-clinical-pipeline.jpg" alt="Abstract illustration of an ascending staircase fading into mist, representing the unfinished clinical trial pipeline for AI-discovered drugs" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Statistic Almost Nobody Puts Next to the Good News</h2>
+
+      <p>Both stories above are real. What's usually missing from the coverage is the broader clinical-stage picture across the entire AI drug discovery field - and this is where the honest 2026 assessment gets considerably more measured than the headlines suggest.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Genuinely Better</span>
+          <h4>Phase I Success Rate</h4>
+          <p>AI-discovered compounds show 80-90% Phase I success rates, compared to a historical average of 40-65% - a real, measurable, and repeatedly confirmed improvement in the earliest, safety-focused stage of human testing.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">No Advantage Yet</span>
+          <h4>Phase II Success Rate</h4>
+          <p>In Phase II - the stage that actually tests whether a drug works, and where most drugs in the history of medicine have failed - the current evidence base shows no demonstrated superiority for AI-discovered candidates over conventionally discovered ones.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Zero So Far</span>
+          <h4>Regulatory Approvals</h4>
+          <p>As of early 2026, no AI-discovered drug has received regulatory approval anywhere. Roughly 173 AI-discovered programs are in clinical development (94 in Phase I, 56 in Phase II, 15 in Phase III), with 15-20 expected to enter pivotal trials this year - the field is close to a real test, not past it.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">A Cautionary Data Point</span>
+          <h4>Recursion's REC-994</h4>
+          <p>Recursion Pharmaceuticals discontinued its lead AI-discovered candidate for a rare neurovascular disease in May 2025 after long-term data failed to confirm the efficacy trend seen earlier - a concrete example of the exact failure pattern AI was supposed to help avoid.</p>
+        </div>
+      </div>
+
+      <div class="skip-box">
+        <div class="skip-label">Why This Pattern Makes Sense, Not Just "AI Is Overhyped"</div>
+        <p>AI models are genuinely good at the parts of drug discovery that resemble pattern recognition and search: predicting protein structures, designing molecules, screening enormous chemical libraries faster than humans could manually. This is exactly why Phase I - largely a safety and pharmacokinetics question - shows real improvement. What AI hasn't yet demonstrated an advantage on is the much harder, biologically messier question Phase II asks: does this actually change a disease process in a living human body over time, accounting for everything a cell culture or a computational model can't capture. That's not a criticism unique to AI - it's the same wall that has made drug development slow and expensive for decades. The fair conclusion is "AI has moved the easy part faster," not "AI has solved drug discovery."</p>
+      </div>
+
+      <h2>A Practical Checklist for Reading AI-Longevity Headlines</h2>
+
+      <div class="checklist-box">
+        <h4>Before You Get Excited About the Next AI-Longevity Story</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Check what stage the result is at</strong> - "in vitro" (lab dish), "preclinical" (animal), or "clinical" (human trial) describes three very different levels of maturity that headlines routinely blur together.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Check which phase of human trials, if any, are involved</strong> - a Phase I result is a safety signal, not an efficacy result; only Phase II and beyond speak to whether something actually works.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Notice whether "AI" refers to a general chatbot or a specialized, purpose-built biological model</strong> - "ChatGPT solved X" is almost always shorthand for a custom-trained system like GPT-4b micro, not the consumer product.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't assume a fibrosis drug, a cardiovascular drug, or a cancer drug automatically counts as an "anti-aging breakthrough"</strong> just because it was AI-designed and shares mechanisms with aging biology - check what the trial actually tested.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't extrapolate a Phase I safety win into a "this drug works" conclusion</strong> - the historical failure point for most drugs is Phase II, and AI hasn't yet shown it changes that.</span>
+        </div>
+      </div>
+
+      <h2>Where This Actually Leaves Longevity in Mid-2026</h2>
+
+      <p>The genuinely fair summary is neither "AI has cracked aging" nor "it's all hype." Both the Retro Bio/OpenAI reprogramming result and Insilico's Rentosertib trial represent real, published, methodologically legitimate advances - the kind of work that would have been newsworthy on its own merits even without the AI framing. At the same time, the field-wide data on AI drug discovery shows a specific, honest pattern: faster and safer early-stage work, with the harder question of durable human efficacy still unresolved, and zero approved AI-discovered drugs to date anywhere in medicine, let alone specifically for aging.</p>
+
+      <p>If you're tracking this space because you're interested in what might actually extend healthy years, the more useful question than "did AI solve anti-aging" is "which specific AI-assisted program is furthest along in human trials, and what did that trial actually measure" - a question with a much smaller, much more honest set of current answers than the headlines imply.</p>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ Why a Great Phase I Result Isn't the Same as "It Works"</div>
+        <h4>The clinical trial stage that decides whether a headline is a breakthrough or a beginning</h4>
+        <p>See our framework for reading trial-phase language accurately before getting excited about the next big result.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>OpenAI (2025). Accelerating life sciences research: OpenAI and Retro Biosciences achieve 50x increase in stem cell reprogramming marker expression.</li>
+        <li>McCarty, N. (2025). Coverage and technical breakdown of GPT-4b micro and the RetroSOX/RetroKLF Yamanaka factor variants.</li>
+        <li>Xu, Z. et al. (2025). A generative AI-discovered TNIK inhibitor for idiopathic pulmonary fibrosis: a randomized phase 2a trial. <em>Nature Medicine</em>, 31, 2602-2610.</li>
+        <li>Jayatunga, M.K.P. et al. (2024). How successful are AI-discovered drugs in clinical trials? A first analysis and emerging lessons. <em>Drug Discovery Today</em>, 29, 104009.</li>
+        <li>Dharmasivam, M. et al. (2026). Leading artificial intelligence-driven drug discovery platforms: 2025 landscape and global outlook. <em>Pharmacological Reviews</em>, 78(1).</li>
+        <li>Drug Target Review (2026). AI in drug discovery: predictions for 2026, and 2025 in review.</li>
+        <li>CodeBlue / Galen Centre (2025). Is AI Hype In Drug Development About To Turn Into Reality? - including Recursion Pharmaceuticals' REC-994 discontinuation.</li>
+        <li>MedCity News (2026). AI Drug Discovery Is Reshaping Longevity Medicine - Eli Lilly / Insilico Medicine partnership details.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>AI-driven drug discovery is still years from your daily routine. Get the full evidence-backed protocol you can actually use today - NMN, D3, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+        <a href="/articles/b2-guide.html" class="related-card">
+          <div class="related-img c-b2">
+            <img src="/images/hero-b2.jpg" alt="Vitamin B2" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin B2</span>
+            <h4>B2: One Vitamin, One Gene Test, Two Completely Different Answers</h4>
+          </div>
+        </a>
+        <a href="/articles/b1-guide.html" class="related-card">
+          <div class="related-img c-b1">
+            <img src="/images/hero-b1.jpg" alt="Vitamin B1" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin B1</span>
+            <h4>B1: Why the Expensive Form May Not Beat the Cheap One</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. It reflects the publicly available state of research as of mid-2026, a fast-moving field where new results may supersede specific figures cited here. Alethia Research Institute is not affiliated with OpenAI, Retro Biosciences, Insilico Medicine, or any other company mentioned.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

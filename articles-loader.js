@@ -69,6 +69,7 @@ const COLORS = {
 'c-b5': 'background:linear-gradient(135deg,#3D2E00,#7A5C10)',
 'c-b7': 'background:linear-gradient(135deg,#2A1A00,#8B6914)',
 'c-b2': 'background:linear-gradient(135deg,#7A5C10,#D4A853)',
+'c-ai': 'background:linear-gradient(135deg,#1A1A1A,#D4A853)',
 };
 
 function makeCard(article, size) {
