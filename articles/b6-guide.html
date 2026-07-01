@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B6: Why Two Health Authorities Disagree by a Factor of Eight - Stackofy</title>
+  <meta name="description" content="In 2023, Europe cut its official safe upper limit for B6 from 25mg to 12mg a day. The US and WHO still say 100mg is fine. Neither number rests on solid RCT dose-response data - here is what's actually behind an eightfold disagreement between two respected health authorities." />
+
+  <meta property="og:title" content="B6: Why Two Health Authorities Disagree by a Factor of Eight" />
+  <meta property="og:description" content="EFSA says the safe upper limit for B6 is 12mg/day. The US and WHO say 100mg is fine - eight times higher. Both numbers are built on thinner evidence than the confidence of either side suggests. Here is the honest picture." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/b6-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-b6.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #2D5A1B, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .forms-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 13px; }
+    .forms-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 12px; text-align: left; font-weight: 600; }
+    .forms-table td { padding: 10px 12px; border-bottom: 0.5px solid var(--border); color: var(--text); vertical-align: top; }
+    .forms-table tr:nth-child(even) td { background: var(--bg); }
+    .badge-strong { background: #EAF5F0; color: var(--green-dark); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-strong { background: #1A3D2A; color: var(--green-light); }
+    .badge-weak { background: #F5F5F5; color: var(--text-muted); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-weak { background: #2A2A2A; color: #B0B0B0; }
+    .badge-none { background: #FFF0F0; color: #C0392B; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-none { background: #2A1010; color: #FF8080; }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-b12 { background: linear-gradient(135deg, #7A1F2B, #B33951); }
+    .c-folate { background: linear-gradient(135deg, #1a2a10, #7A5C10); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .forms-table { font-size: 11px !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-b6.jpg" alt="Golden balance scale representing the disagreement between health authorities on B6 safety limits" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Vitamin B6</span>
+      <h1>B6: Why Two Health Authorities Disagree by a Factor of Eight</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>16 min read</span>
+        <span>·</span>
+        <span>July 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>In 2023, the European Food Safety Authority (EFSA) cut its official safe upper limit for B6 from 25mg/day to 12mg/day. The US and WHO still list 100mg/day as safe - eight times higher than the new European figure, for the exact same vitamin</li>
+        <li>B6 is unusual among B-vitamins because it has a well-documented toxicity syndrome - peripheral neuropathy - that mimics the symptoms of deficiency, which is a genuine, decades-old clinical finding, not a fringe claim</li>
+        <li>EFSA itself states it could not establish a lowest-observed-adverse-effect-level from human data - meaning neither the old 25mg limit nor the new 12mg limit rests on a solid randomized dose-response trial, only on case reports and a small number of older studies</li>
+        <li>Critics of the EFSA reduction (including supplement-industry-aligned groups with a direct financial stake in the outcome) argue the opinion leans too heavily on old evidence - but EFSA's actual published opinion cites a broader systematic review, not a single study, so that specific criticism oversimplifies the record</li>
+        <li>Toxicity from food sources of B6 has never been documented - every reported case involves supplements, and the vast majority involve doses far above even the stricter 12mg limit for months or years</li>
+        <li>The honest position: neither 12mg nor 100mg is a number backed by strong RCT evidence. Both are cautious extrapolations from imperfect data, and reasonable regulators have reached very different conclusions from the same underlying evidence</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Vitamin B6, or pyridoxine, is a cofactor in over 100 enzyme reactions, most involved in amino acid metabolism, neurotransmitter synthesis, and hemoglobin production. Deficiency is well characterized and includes anemia, dermatitis, glossitis, mood changes, and peripheral neuropathy. So far, this reads like any other B-vitamin covered on this site.</p>
+
+      <p>What makes B6 genuinely different is what happens at the other end of the dose range. Unlike B12 or most other B-vitamins, which are considered essentially non-toxic at any oral dose, B6 has a real, well-documented toxicity syndrome - and two respected international health authorities currently disagree by a factor of eight about where the safe ceiling actually sits.</p>
+
+      <div class="article-img">
+        <img src="/images/b6-nerve-signal.jpg" alt="Glowing nerve fiber representing B6's paradoxical role in both deficiency and excess neuropathy" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Number That Split Two Continents</h2>
+
+      <p>In 2000, the EU's Scientific Committee on Food set a tolerable upper intake level (UL) for B6 at 25mg/day for adults, based on evidence of neurotoxicity from animal and human studies. That number stood for over two decades. In 2023, following a request from the European Commission to re-review several vitamin and mineral limits, EFSA's Panel on Nutrition, Novel Foods and Food Allergens revised it down to 12mg/day - less than half the previous figure.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">Same Vitamin, Same Underlying Evidence Pool, Very Different Conclusions</div>
+        <div class="rct-row">
+          <div class="rct-n">12mg<span>EFSA, 2023</span></div>
+          <div class="rct-desc">EFSA's revised opinion, based on a systematic review conducted by university researchers in Copenhagen, Oslo, and at the Karolinska Institute, concluded that peripheral neuropathy was the critical effect to guard against, and set the new UL using an uncertainty-adjusted extrapolation - critically, the panel explicitly states it could not establish a lowest-observed-adverse-effect-level from human data.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">100mg<span>US / WHO</span></div>
+          <div class="rct-desc">The US Institute of Medicine and the World Health Organization have set the tolerable upper limit at 100mg/day for adults - eight times EFSA's figure - based on their own, separately conducted reviews of a broadly similar (though not identical, and less recently updated) evidence base.</div>
+        </div>
+        <div class="rct-highlight">Neither of these numbers comes from a large, randomized, dose-ranging human trial specifically designed to find the exact threshold where toxicity begins. Both are extrapolations - one more conservative, one less so - from a mix of case reports, small studies, and animal data. An eightfold disagreement between two credible bodies working from an overlapping evidence base is itself informative: it tells you the underlying data is genuinely too thin to pin down a precise number with confidence, regardless of which side you find more persuasive.</p>
+      </div>
+
+      <h2>Why B6 Specifically Causes This Problem</h2>
+
+      <p>Most B-vitamins are cleared efficiently by the kidneys once your tissues are saturated, with no real toxicity ceiling under normal use. B6 behaves differently: at high, sustained intakes, it appears to interfere with its own function in a dose-dependent way - a phenomenon sometimes called "the vitamin B6 paradox," where excess pyridoxine supplementation can paradoxically impair normal B6-dependent enzyme activity, producing nerve damage that looks similar to the neuropathy caused by a genuine deficiency.</p>
+
+      <table class="forms-table">
+        <tr>
+          <th>Exposure Pattern</th>
+          <th>What's Actually Documented</th>
+          <th>Evidence Quality</th>
+        </tr>
+        <tr>
+          <td><strong>Food sources only</strong></td>
+          <td>No documented case of toxicity from diet alone, at any level of food intake</td>
+          <td><span class="badge-strong">Very high confidence - none observed</span></td>
+        </tr>
+        <tr>
+          <td><strong>Very high-dose supplements (&gt;300mg/day)</strong></td>
+          <td>Consistently associated with peripheral neuropathy in multiple case series with prolonged use</td>
+          <td><span class="badge-strong">Well established</span></td>
+        </tr>
+        <tr>
+          <td><strong>Moderate supplement doses (50-300mg/day)</strong></td>
+          <td>Neuropathy reported in multiple case reports, generally with use over months to years</td>
+          <td><span class="badge-weak">Moderate - case reports, not RCTs</span></td>
+        </tr>
+        <tr>
+          <td><strong>Low doses from multivitamins (single-digit mg/day)</strong></td>
+          <td>Rare individual case reports exist, but causality is harder to confirm and individual susceptibility (kidney function, age, other medications) may play a large role</td>
+          <td><span class="badge-none">Weak - isolated cases, unclear mechanism</span></td>
+        </tr>
+      </table>
+
+      <div class="article-img">
+        <img src="/images/b6-food-sources.jpg" alt="Whole food sources of vitamin B6 including chicken, potatoes, bananas and chickpeas" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Weighing the Critics on Both Sides</h2>
+
+      <p>The EFSA reduction was immediately criticized by industry-aligned groups, including at least one organization that has publicly described the change as a "slippery slope for free choice and self-care" - language that signals advocacy rather than neutral scientific critique. A common version of the criticism claims EFSA leaned almost entirely on one old 1987 case study.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">Checking the Criticism Against EFSA's Actual Opinion</div>
+        <p>This specific claim doesn't hold up well against EFSA's published 110-page opinion, which describes systematic reviews of the literature conducted by an academic contractor, drawing on both human case data and animal studies (including a 1978 beagle study), not a single 1987 paper. The 1987 study is real and is cited as one relevant human data point among several - but characterizing the entire re-evaluation as resting on it is a simplification that favors the critics' argument more than the actual document supports. This doesn't mean EFSA's number is correct - only that this particular line of attack against it is weaker than it's usually presented.</p>
+      </div>
+
+      <p>At the same time, EFSA's own opinion is honest about its limitations in a way that's worth taking seriously: it explicitly states that a lowest-observed-adverse-effect-level could not be established from human data. That's a genuine admission that the underlying evidence doesn't support a precisely calculated number - it supports a cautious range, and EFSA chose to sit near the conservative end of that range. The US and WHO, working from an overlapping but not identical evidence base, chose to sit further toward the permissive end. Both choices are defensible interpretations of thin data; neither is a settled scientific fact.</p>
+
+      <h2>The Paradox That Makes This Confusing to Diagnose</h2>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Same Symptom, Opposite Cause</div>
+        <p>Both B6 deficiency and B6 excess can present with strikingly similar symptoms, including peripheral neuropathy, numbness, and tingling. This creates a genuinely awkward clinical situation: someone experiencing nerve symptoms while taking a B6 supplement could, in principle, be either under-treating a real deficiency or causing a toxicity - and the fix for one is the opposite of the fix for the other. This is precisely why checking an actual serum B6 or PLP (pyridoxal-5-phosphate) level matters more here than guessing based on symptoms alone, unlike some other B-vitamins where deficiency and excess look nothing alike.</p>
+      </div>
+
+      <h2>A Practical Quality Checklist</h2>
+
+      <div class="checklist-box">
+        <h4>Before You Buy Any B6 Supplement</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Check your total B6 intake across all supplements</strong> - B-complex formulas, multivitamins, and standalone B6 products can stack up without you noticing, especially if you're in Europe where the new 12mg ceiling is far easier to exceed than the old 25mg one.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Get a serum B6 or PLP level checked</strong> if you experience nerve symptoms while supplementing - don't assume it's deficiency or excess without testing, since both look similar.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Food-based B6 intake requires no caution at all</strong> - there is no documented toxicity from diet alone, regardless of how much B6-rich food you eat.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't assume "under 25mg" is automatically safe</strong> just because that was the older EU standard, or that "under 100mg" is automatically safe just because that's the US figure - both numbers reflect genuine scientific uncertainty, not a firmly proven threshold.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't take high-dose B6 (&gt;50mg/day) long-term without a clear reason</strong> - the case-report evidence for neuropathy at sustained moderate-to-high doses is real, even if it isn't RCT-grade.</span>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Typical Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>General maintenance / RDA</td>
+          <td>1.3 - 2.0mg/day</td>
+          <td>Easily met through diet alone for most adults; deficiency from food alone is rare</td>
+        </tr>
+        <tr>
+          <td>Standard multivitamin/B-complex</td>
+          <td>2 - 25mg/day</td>
+          <td>Most products fall within this range - check the label if you're near the stricter EFSA ceiling</td>
+        </tr>
+        <tr>
+          <td>Nausea in pregnancy (as studied)</td>
+          <td>10 - 25mg/day, short-term, under medical guidance</td>
+          <td>One of the better-evidenced therapeutic uses of B6 specifically, via RCT data for pregnancy-related nausea</td>
+        </tr>
+        <tr>
+          <td>Homocysteine / cardiovascular support</td>
+          <td>Typically combined with B12 and folate, standard doses</td>
+          <td>Usually part of a broader B-vitamin protocol rather than high-dose B6 alone</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Safety Notes</div>
+        <p>Peripheral neuropathy is the primary documented risk of B6 excess, and it is generally, though not always, reversible after stopping supplementation - recovery can take months. Symptoms include numbness, tingling, and burning sensations, typically starting in the extremities. Anyone taking levodopa, phenytoin, or other medications that interact with B6 metabolism should not adjust B6 intake without medical guidance. If you experience new nerve symptoms while supplementing at any dose, stop and get evaluated rather than assuming it will resolve on its own.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🔴</div>
+          <h4>Vitamin B12</h4>
+          <p>Works alongside B6 in the same homocysteine-metabolism pathway - commonly combined at standard doses for cardiovascular and cognitive support.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🌿</div>
+          <h4>Folate (B9)</h4>
+          <p>Completes the same one-carbon metabolism pathway alongside B6 and B12 - the classic three-vitamin homocysteine-lowering combination.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🤰</div>
+          <h4>Doxylamine (as studied)</h4>
+          <p>The combination of B6 and doxylamine is a well-evidenced, medically supervised approach to nausea in pregnancy.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Levodopa (Caution)</h4>
+          <p>B6 can reduce the effectiveness of levodopa in Parkinson's treatment by accelerating its breakdown - never adjust without medical guidance.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Multiple B-Complex Sources (Caution)</h4>
+          <p>Stacking a standalone B6 supplement on top of a multivitamin and a B-complex is the most common, easily overlooked way people exceed even the more permissive 100mg ceiling.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Long-Term High Dose Alone (Caution)</h4>
+          <p>Sustained moderate-to-high doses without a specific medical reason is the pattern most consistently tied to the case reports of neuropathy above.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">6.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          Genuinely essential and well-evidenced for its core deficiency-related roles, with solid RCT support for specific uses like pregnancy nausea. The score is pulled down by real, unresolved uncertainty at the safety ceiling: two respected health authorities disagree by a factor of eight on the upper limit, both working from case reports and older studies rather than dedicated dose-ranging human trials. Until better RCT-grade dose-response data exists, the most defensible position is modest, standard-range supplementation rather than confident high-dose use in either direction.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ When Two Health Authorities Disagree, Neither Side Is Automatically Right</div>
+        <h4>How to weigh a regulatory disagreement without picking a side out of convenience</h4>
+        <p>See our framework for evaluating conflicting official guidance when the underlying evidence itself is thin on both sides.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>EFSA Panel on Nutrition, Novel Foods and Food Allergens (NDA) (2023). Scientific opinion on the tolerable upper intake level for vitamin B6. <em>EFSA Journal</em>, 21(5), e8006.</li>
+        <li>Scientific Committee on Food (2000). Opinion on the Tolerable Upper Intake Level of Vitamin B6.</li>
+        <li>Institute of Medicine (US), Food and Nutrition Board. Dietary Reference Intakes for Vitamin B6.</li>
+        <li>Vrolijk, M.F. et al. (2017). The vitamin B6 paradox: Supplementation with high concentrations of pyridoxine leads to decreased vitamin B6 function. <em>Toxicology in Vitro</em>, 44, 206-212.</li>
+        <li>Paluszny, A. & Qiu, S. (2023). Vitamin B6 Toxicity Secondary to Daily Multivitamin Use: A Case Report. <em>Cureus</em>, 15(11), e48792.</li>
+        <li>Systematic review on the role of vitamin B6 in peripheral neuropathy, covering both deficiency and excess presentations (2023).</li>
+        <li>Sahakian, V. et al. (1991). Vitamin B6 is effective therapy for nausea and vomiting of pregnancy: A randomized, double-blind placebo-controlled study. <em>Obstetrics & Gynecology</em>, 78(1), 33-36.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>B6 is one piece of the puzzle. Get the full protocol - NMN, D3, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/b12-guide.html" class="related-card">
+          <div class="related-img c-b12">
+            <img src="/images/hero-b12.jpg" alt="Vitamin B12" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin B12</span>
+            <h4>B12: What It Actually Fixes (And What It Doesn't)</h4>
+          </div>
+        </a>
+        <a href="/articles/folate-guide.html" class="related-card">
+          <div class="related-img c-folate">
+            <img src="/images/hero-folate.jpg" alt="Folate" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Folate (B9)</span>
+            <h4>Why Half the Folate Trials Never Had a Chance</h4>
+          </div>
+        </a>
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you are taking levodopa or other interacting medications, are pregnant, or have a pre-existing condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>

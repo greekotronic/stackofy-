@@ -734,5 +734,18 @@
     "tags": ["Folate", "B9", "Vitamins", "Pregnancy", "Depression"],
     "readTime": "17 min",
     "description": "One of the most-cited depression trials tested two doses of folate in the exact same design - the low dose failed, the high dose worked. Here is the honest, dose-aware picture."
+  },
+  {
+    "title": "B6: Why Two Health Authorities Disagree by a Factor of Eight",
+    "tag": "Vitamin B6",
+    "url": "/articles/b6-guide.html",
+    "image": "/images/hero-b6.jpg",
+    "color": "c-b6",
+    "featured": false,
+    "type": "guide",
+    "badgeType": "featured",
+    "tags": ["B6", "Pyridoxine", "Vitamins", "Neuropathy"],
+    "readTime": "16 min",
+    "description": "EFSA says the safe upper limit for B6 is 12mg/day. The US and WHO say 100mg is fine - eight times higher. Neither number rests on solid RCT dose-response data."
   }
 ]
