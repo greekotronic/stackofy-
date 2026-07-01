@@ -64,6 +64,7 @@ const COLORS = {
 'c-b12': 'background:linear-gradient(135deg,#7A1F2B,#B33951)',
 'c-folate': 'background:linear-gradient(135deg,#1a2a10,#7A5C10)',
 'c-b6': 'background:linear-gradient(135deg,#7A5C10,#D4A853)',
+};
 
 function makeCard(article, size) {
   const bg = COLORS[article.color] || 'background:#1B4332';
