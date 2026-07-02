@@ -890,5 +890,18 @@
     "tags": "Sea Moss Iodine Heavy Metals Thyroid",
     "readTime": "18 min",
     "description": "The '92 minerals' claim doesn't trace to any real sea moss analysis. Its measured iodine content varies 60-fold between products, and independent testing has found arsenic, lead, and cadmium exceeding safety limits."
+  },
+  {
+    "title": "Boron: Three Health Authorities, Three Different Safety Limits",
+    "tag": "Boron",
+    "url": "/articles/boron-guide.html",
+    "image": "/images/hero-boron.jpg",
+    "color": "c-boron",
+    "featured": false,
+    "type": "guide",
+    "badgeType": "featured",
+    "tags": "Boron Testosterone Regulatory Limits SHBG",
+    "readTime": "18 min",
+    "description": "EFSA sets boron's safe limit at 10mg/day, the US says 20mg, the UK says 6mg - all from animal data. The famous testosterone claim comes from a study of just 8 men over one week."
   }
 ]

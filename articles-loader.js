@@ -75,6 +75,7 @@ const COLORS = {
 'c-tongkat': 'background:linear-gradient(135deg,#3D2E00,#7A5C10)',
 'c-fadogia': 'background:linear-gradient(135deg,#2A1A00,#7A5C10)',
 'c-seamoss': 'background:linear-gradient(135deg,#1B4332,#2D6A4F)',
+'c-boron': 'background:linear-gradient(135deg,#1B4332,#7A5C10)',
 };
 
 function makeCard(article, size) {
