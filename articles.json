@@ -903,5 +903,18 @@
     "tags": "Boron Testosterone Regulatory Limits SHBG",
     "readTime": "18 min",
     "description": "EFSA sets boron's safe limit at 10mg/day, the US says 20mg, the UK says 6mg - all from animal data. The famous testosterone claim comes from a study of just 8 men over one week."
+  },
+  {
+    "title": "Probiotics: Strain-Specific Science Meets a Label-Accuracy Crisis",
+    "tag": "Editorial",
+    "url": "/articles/probiotics-guide.html",
+    "image": "/images/hero-probiotics.jpg",
+    "color": "c-probiotics",
+    "featured": true,
+    "type": "editorial",
+    "badgeType": "featured",
+    "tags": "Probiotics Editorial Strain Specificity Gut Health CFU",
+    "readTime": "21 min",
+    "description": "The strain matters more than the species name. A 2020 meta-analysis found multi-strain formulas aren't more effective than single-strain ones. Only 27% of tested products meet their labeled CFU claim, and a 2025 study confirms some strains delay gut recovery after antibiotics."
   }
 ]
