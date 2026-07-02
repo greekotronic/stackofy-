@@ -357,10 +357,10 @@ async function loadArticles() {
       articlesBooksEl.innerHTML = books.map(makeProtocolPageCard).join('');
     }
 
-    // ARTICLES PAGE - supplement guides only (no protocols)
+    // ARTICLES PAGE - supplement guides only (no protocols, no editorials)
     const articlesGridEl = document.getElementById('articles-grid');
     if (articlesGridEl) {
-      const guides = articles.filter(a => a.type !== 'protocol');
+      const guides = articles.filter(a => a.type !== 'protocol' && a.type !== 'editorial');
       articlesGridEl.innerHTML = guides.map(a => makeCard(a, 'articles-page')).join('');
       const countEl = document.getElementById('article-count');
       if (countEl) countEl.textContent = guides.length;
