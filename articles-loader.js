@@ -229,6 +229,14 @@ async function loadArticles() {
       editorialMoreEl.innerHTML = remaining.slice(0, 4).map(a => makeCard(a, 'small')).join('');
     }
 
+    // MORE EDITORIAL ARTICLES THIRD BATCH (homepage) - oldest 4 editorials
+    const editorialMore2El = document.getElementById('editorial-articles-more2');
+    if (editorialMore2El) {
+      const editorial = articles.filter(a => a.badgeType === 'featured');
+      const remaining = editorial.slice(0, -8).reverse();
+      editorialMore2El.innerHTML = remaining.map(a => makeCard(a, 'small')).join('');
+    }
+
     // BOOKS (homepage) - book badgeType
     const booksEl = document.getElementById('books-articles');
     if (booksEl) {
