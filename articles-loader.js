@@ -78,7 +78,6 @@ const COLORS = {
 'c-boron': 'background:linear-gradient(135deg,#1B4332,#7A5C10)',
 'c-probiotics': 'background:linear-gradient(135deg,#1B4332,#2D6A4F)',
 'c-electrolytes': 'background:linear-gradient(135deg,#1B4332,#D4A853)',
-'c-acv': 'background:linear-gradient(135deg,#7A1F2B,#B8860B)',
 };
 
 function makeCard(article, size) {
@@ -217,14 +216,14 @@ async function loadArticles() {
     // EDITORIAL ARTICLES (homepage) - true editorials only, limited to 4 newest
     const editorialEl = document.getElementById('editorial-articles');
     if (editorialEl) {
-      const editorial = articles.filter(a => a.type === 'editorial');
+      const editorial = articles.filter(a => a.badgeType === 'featured');
       editorialEl.innerHTML = editorial.slice(-4).reverse().map(a => makeCard(a, 'small')).join('');
     }
 
     // MORE EDITORIAL ARTICLES (homepage) - next 4 editorials, shown after "More Articles"
     const editorialMoreEl = document.getElementById('editorial-articles-more');
     if (editorialMoreEl) {
-      const editorial = articles.filter(a => a.type === 'editorial');
+      const editorial = articles.filter(a => a.badgeType === 'featured');
       const remaining = editorial.slice(0, -4).reverse();
       editorialMoreEl.innerHTML = remaining.slice(0, 4).map(a => makeCard(a, 'small')).join('');
     }
@@ -338,7 +337,7 @@ async function loadArticles() {
     // ARTICLES PAGE - editorial section
     const articlesEditorialEl = document.getElementById('articles-editorial');
     if (articlesEditorialEl) {
-      const editorial = articles.filter(a => a.type === 'editorial');
+      const editorial = articles.filter(a => a.badgeType === 'featured');
       articlesEditorialEl.innerHTML = editorial.map(makeProtocolPageCard).join('');
     }
 
