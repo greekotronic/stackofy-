@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lithium Orotate: A Reasonable Microdose Approach, With One Important Exception - Stackofy</title>
+  <meta name="description" content="A 2025 Harvard-led Nature study found lithium orotate protected mouse brains from amyloid and tau pathology. That's real, exciting mouse science - and it hasn't been tested in humans yet. Here is how to think about microdose lithium orotate sensibly, and the one situation where it should never replace prescribed treatment." />
+
+  <meta property="og:title" content="Lithium Orotate: A Reasonable Microdose Approach, With One Important Exception" />
+  <meta property="og:description" content="Lithium orotate's mechanism is genuinely interesting - a 2025 Nature mouse study showed real neuroprotective effects. No human trial has tested the orotate form specifically, and the one human low-dose lithium trial (using carbonate) missed its primary outcomes. Here is a sensible, evidence-grounded way to think about microdosing it - and why anyone on prescribed lithium for bipolar disorder should never substitute it." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/lithium-orotate-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-lithium-orotate.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #2D5A1B, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .forms-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 13px; }
+    .forms-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 12px; text-align: left; font-weight: 600; }
+    .forms-table td { padding: 10px 12px; border-bottom: 0.5px solid var(--border); color: var(--text); vertical-align: top; }
+    .forms-table tr:nth-child(even) td { background: var(--bg); }
+    .badge-strong { background: #EAF5F0; color: var(--green-dark); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-strong { background: #1A3D2A; color: var(--green-light); }
+    .badge-weak { background: #F5F5F5; color: var(--text-muted); font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-weak { background: #2A2A2A; color: #B0B0B0; }
+    .badge-none { background: #FFF0F0; color: #C0392B; font-size: 10px; font-weight: 700; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+    [data-theme="dark"] .badge-none { background: #2A1010; color: #FF8080; }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+    .c-ai { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+    .c-b6 { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .forms-table { font-size: 11px !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-lithium-orotate.jpg" alt="Pale mineral crystal clusters representing lithium orotate" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Lithium Orotate</span>
+      <h1>Lithium Orotate: A Reasonable Microdose Approach, With One Important Exception</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>17 min read</span>
+        <span>·</span>
+        <span>July 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>A 2025 Harvard-led study in Nature found that restoring lithium specifically in the orotate form prevented amyloid and tau pathology and reversed memory loss in Alzheimer's mouse models - a genuinely exciting, well-published finding that's driving most of the current interest in this supplement</li>
+        <li>That result is mouse data. The only human randomized trial of low-dose lithium (published 2026, JAMA Neurology, 80 adults, two years) used lithium carbonate, not orotate, and did not meet its primary outcomes - there is currently no human trial data on lithium orotate specifically, for cognition or anything else</li>
+        <li>There's a live, genuinely unresolved scientific debate about whether orotate behaves any differently from carbonate once swallowed - some researchers argue on chemistry grounds that it simply dissociates into ordinary lithium ions in the stomach, while the mouse researchers themselves chose orotate specifically because of its distinct amyloid-binding behavior</li>
+        <li>At the low, nutrient-range doses typically used (5-20mg elemental lithium daily), lithium orotate has a reasonable practical safety record, and this is meaningfully different from - and much lower than - the therapeutic doses used for bipolar disorder (170-225mg elemental lithium daily), which require blood monitoring</li>
+        <li>The one situation where lithium orotate should never be used is as a substitute for prescribed, monitored lithium in bipolar disorder or another diagnosed condition - unlike lithium carbonate, orotate has no established therapeutic blood range and no validated way to monitor for toxicity, which is precisely the wrong combination for someone managing a serious psychiatric condition</li>
+        <li>For everyone else considering a cautious, low-dose approach for general brain-health interest, starting low, going slow, and getting periodic kidney and thyroid function checked is a sensible, practical way to use the current evidence responsibly while the human research catches up</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Lithium has one of the more unusual reputations of any element in medicine. In its prescription forms - lithium carbonate and lithium citrate - it's one of the most effective and well-studied mood stabilizers available, a genuine cornerstone treatment for bipolar disorder with decades of outcome data behind it. At the same time, it has a narrow therapeutic window and requires regular blood monitoring, which has made it feel, to many people, like a heavy-duty psychiatric drug rather than something you'd casually add to a supplement stack. Lithium orotate - lithium bound to orotic acid instead of carbonate, sold over the counter at a fraction of the prescription dose - has emerged as a way to access what some believe is lithium's broader neuroprotective potential without that clinical weight. Whether that promise is well-founded is a genuinely interesting, currently unsettled scientific question, and it's worth working through carefully rather than either dismissing it outright or accepting the marketing at face value.</p>
+
+      <div class="article-img">
+        <img src="/images/lithium-neuroprotection.jpg" alt="Abstract golden protective shield around a neural structure, representing lithium's neuroprotective mechanism" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Study Behind the Current Interest</h2>
+
+      <p>The renewed excitement around lithium orotate traces to a specific, well-published piece of research: a 2025 study led by researchers at Harvard, published in Nature, examining lithium's role in Alzheimer's disease pathology. The researchers found that lithium depletion appeared to be an early feature of Alzheimer's progression in both human brain tissue and mouse models, and that restoring lithium - specifically using the orotate form - prevented amyloid and tau pathology and reversed memory loss in aged and Alzheimer's-model mice.</p>
+
+      <p>The choice of orotate in this study wasn't incidental. The researchers selected it specifically because it showed reduced binding to amyloid plaques compared to other lithium salts in their experiments, meaning more of the administered lithium remained available to reach and act on brain tissue rather than getting sequestered by the very pathology it was meant to address. This is a genuinely interesting, mechanistically specific finding, and it's the legitimate scientific basis for why orotate, rather than carbonate, has become the form of interest in this particular research thread.</p>
+
+      <h2>The Honest Gap: This Hasn't Been Tested in Humans</h2>
+
+      <p>Here's the distinction that matters most for anyone deciding whether to act on this research: everything described above is mouse data. It's excellent, rigorously conducted, peer-reviewed mouse data in a top-tier journal - but translating a finding from an animal model to a human recommendation is a step that hasn't happened yet, and it's worth being clear-eyed about where the evidence currently stands rather than skipping ahead to the conclusion the mouse study seems to be pointing toward.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">What Human Data Actually Exists Right Now</div>
+        <div class="rct-row">
+          <div class="rct-n">80<span>Adults, 2 Years</span></div>
+          <div class="rct-desc">The only randomized controlled trial of low-dose lithium in humans for cognitive outcomes (Gildengers et al., 2026, JAMA Neurology) tested lithium carbonate - not orotate - in 80 adults over two years, and did not meet its primary outcomes.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">Zero<span>Orotate RCTs</span></div>
+          <div class="rct-desc">No randomized controlled trial has ever tested lithium orotate specifically against placebo or against lithium carbonate, for cognitive outcomes, mood, or any other purpose, in humans.</div>
+        </div>
+        <div class="rct-highlight">This isn't necessarily a contradiction of the mouse findings - under the leading hypothesis from the Nature study's own authors, carbonate may be more susceptible to amyloid sequestration than orotate in the human Alzheimer's brain, which means the negative carbonate trial doesn't directly test, or rule out, whether orotate specifically would behave differently. But it does mean the honest current answer to "does lithium orotate protect human cognition" is that nobody has tested it yet, in either direction - not that it's been proven to work, and not that it's been debunked.</div>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/lithium-diverging-path.jpg" alt="Abstract golden light path splitting into two directions, representing the scientific debate about lithium orotate's mechanism" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>Does Orotate Actually Behave Differently in the Body? A Live Debate</h2>
+
+      <p>There's a second, more technical question worth understanding, because it's genuinely unresolved among researchers right now, not settled in either direction: does binding lithium to orotic acid actually change how it behaves once it enters the body, or is that mostly a marketing distinction?</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">The Case For a Real Difference</span>
+          <h4>Reduced Amyloid Binding, Animal Data</h4>
+          <p>The Nature study's authors specifically selected orotate because it showed measurably reduced binding to amyloid plaques compared to other lithium salts in their models - a concrete, tested biochemical difference, not a theoretical claim.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">The Case For Skepticism</span>
+          <h4>Acid-Base Chemistry Argument</h4>
+          <p>A 2026 British Journal of Psychiatry piece (Hajek et al.) argues that orotate is largely protonated and dissociated in the acidic stomach environment, meaning it's likely absorbed as ordinary lithium ions with pharmacokinetics comparable to carbonate - and notes that no study has yet demonstrated a stable lithium-orotate complex persisting in physiological fluids.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Some Preclinical Support</span>
+          <h4>2023 Mouse Potency Comparison</h4>
+          <p>A separate mouse study found lithium orotate produced a complete behavioral effect (blocking amphetamine-induced hyperlocomotion) at 1.5mg/kg, versus 15-20mg/kg needed for carbonate to produce the same effect - suggesting a real potency difference in that specific model, without the polydipsia, elevated creatinine, or thyroid changes seen with carbonate after 14 days.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Genuinely Open Question</span>
+          <h4>The Honest Summary</h4>
+          <p>Both positions have real scientific backing and real researchers behind them. This is an active, legitimate scientific disagreement rather than a settled matter with an obvious right answer, and it's likely to remain that way until dedicated human pharmacokinetic studies directly compare the two forms.</p>
+        </div>
+      </div>
+
+      <h2>What a Sensible, Low-Dose Approach Looks Like</h2>
+
+      <p>Given everything above, the most useful framing isn't "does this work" in a yes-or-no sense - it's "given genuine mechanistic promise and a genuine absence of human trial data, what's a sensible way to approach this at low doses if you're interested." A few things are worth anchoring on.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">The Dose Distinction That Matters Most</div>
+        <p>Nutrient-range lithium orotate supplementation (typically 5-20mg of elemental lithium daily, roughly 120-480mg of lithium orotate) is a completely different exposure than therapeutic psychiatric lithium dosing (900-1,200mg of lithium carbonate daily, delivering 170-225mg of elemental lithium). This roughly 10-to-40-fold difference in elemental lithium dose is the single most important number in this entire topic - it's the reason the supplement-range use and the psychiatric-treatment use aren't really comparable in terms of risk, even though they involve the same element.</p>
+      </div>
+
+      <p>A 2025 survey of 211 people using low-dose lithium supplements found the most common reasons for starting were interest in mood and anxiety support, with cognition (clearer thinking, focus) frequently reported as the first noticeable change, and mood cited most often as the single biggest perceived benefit - typically described as a moderate effect rather than a dramatic one. This is self-reported, uncontrolled survey data, which has real limitations (no placebo comparison, no blinding, recall and expectation effects are entirely possible), but it's a reasonable real-world signal of how people who try this at low doses tend to describe their experience, and it's consistent with a modest, exploratory supplement rather than a wonder compound.</p>
+
+      <h2>The One Situation Where This Requires Real Caution</h2>
+
+      <p>Everything discussed so far applies to someone considering a cautious, low-dose, exploratory approach without an existing psychiatric diagnosis requiring lithium treatment. There is one specific, well-defined scenario that deserves separate, explicit attention, because the stakes are meaningfully higher.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">Never a Substitute for Prescribed, Monitored Lithium</div>
+        <p>A clinical vignette circulated in psychiatric prescriber literature describes exactly this scenario: a patient with bipolar I disorder, stable on prescribed lithium, who learns about lithium orotate online and wants to switch to what's been described as a "nontoxic" alternative. The clinical assessment of this scenario is unambiguous: lithium orotate has no established therapeutic blood range, unlike carbonate's well-defined 0.6-1.2 mEq/L window, and no validated protocol for monitoring toxicity. For someone whose mood stability depends on consistent, monitored lithium levels, switching to an unmonitored supplement removes the safety infrastructure that makes lithium treatment work reliably - not because orotate is necessarily more dangerous milligram-for-milligram, but because nobody has established how to keep it in a safe, effective range the way carbonate's decades of monitoring protocols do. If you are currently on prescribed lithium for bipolar disorder or any other diagnosed condition, this is a conversation to have with your prescribing psychiatrist, not a supplement swap to make independently.</p>
+      </div>
+
+      <p>It's also worth knowing that lithium orotate isn't automatically risk-free just because it's sold over the counter at low doses. A documented case involved an 18-year-old who ingested 2.16 grams of an online-purchased lithium orotate product and was hospitalized with mild signs of lithium toxicity, recovering with supportive care - her blood lithium level stayed below the classic carbonate toxicity threshold, which is a reassuring detail about the margin at that specific overdose amount, but the case still demonstrates that misuse or accidental overconsumption can produce real toxicity symptoms, not just theoretical risk.</p>
+
+      <h2>A Practical Approach</h2>
+
+      <div class="checklist-box">
+        <h4>If You're Considering Low-Dose Lithium Orotate</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Start at the low end (5mg elemental lithium/day) and go slowly</strong> - this is standard, sensible practice given the absence of dedicated human dosing trials for this specific form.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Get baseline and periodic kidney and thyroid function checked</strong> - lithium in any form is cleared renally and can affect thyroid function over time; this is a reasonable, low-burden precaution regardless of dose.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Tell any prescribing physician you're taking it</strong>, especially if you're on other medications - lithium has real, well-documented interactions (with NSAIDs, diuretics, and ACE inhibitors, among others) that apply regardless of which lithium salt is involved.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>If you are currently prescribed lithium carbonate or citrate for bipolar disorder or another diagnosed condition, don't substitute lithium orotate on your own</strong> - discuss any change with your psychiatrist first, given the lack of an established therapeutic range or monitoring protocol for orotate.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't treat the 2025 mouse Alzheimer's findings as proven human protection</strong> - it's genuinely exciting, well-published early science, and a fair reason for interest and continued research, not yet a basis for confident human claims.</span>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Typical Range</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>General low-dose / exploratory use</td>
+          <td>5 - 20mg elemental lithium/day (≈120-480mg lithium orotate)</td>
+          <td>Often divided into two daily doses; start at the low end and adjust based on response and tolerance</td>
+        </tr>
+        <tr>
+          <td>Prescription lithium (for comparison)</td>
+          <td>170 - 225mg elemental lithium/day (900-1,200mg lithium carbonate)</td>
+          <td>Requires blood monitoring within an established 0.6-1.2 mEq/L therapeutic range - not comparable to supplement-range dosing</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Safety Notes</div>
+        <p>Avoid use if you have significant renal disease, and avoid use during pregnancy or lactation given a lack of safety data in the orotate form specifically. Watch for signs of excess (tremor, confusion, gastrointestinal upset, muscle weakness) even at supplemental doses, and stop and seek medical attention if these occur. Lithium can interact with NSAIDs, diuretics, and ACE inhibitors by affecting how the kidneys clear it, potentially raising blood levels - disclose lithium orotate use to any prescribing physician regardless of the dose. Product quality and labeled elemental lithium content can vary between manufacturers, since supplement regulation in this category is limited; choosing a brand that discloses elemental lithium content clearly, not just total orotate weight, makes dosing meaningfully easier to track.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🧠</div>
+          <h4>Omega-3 (DHA/EPA)</h4>
+          <p>Both are independently associated with neuroprotective and mood-related mechanisms - a reasonable, low-risk pairing for general brain-health interest.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🩺</div>
+          <h4>Periodic Kidney/Thyroid Panels</h4>
+          <p>The single most useful "addition" to any lithium supplementation approach, low-dose or otherwise, given lithium's known effects on both systems over time.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">💧</div>
+          <h4>Adequate Hydration</h4>
+          <p>Lithium clearance is sensitive to hydration and sodium status - maintaining consistent fluid and salt intake helps keep lithium levels more stable and predictable.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Prescribed Lithium (Never Substitute)</h4>
+          <p>If you're on monitored prescription lithium for a diagnosed condition, orotate should never replace it without your prescriber's direct involvement.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>NSAIDs / Diuretics (Caution)</h4>
+          <p>These can reduce lithium clearance and raise blood levels regardless of which lithium salt is used - a real interaction to flag with any physician.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Pregnancy / Renal Disease (Avoid)</h4>
+          <p>Insufficient safety data exists for lithium orotate specifically in either context - avoid until better evidence exists.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">6/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          A genuinely interesting compound sitting at an early, honest research stage: a well-published 2025 mouse study gives real mechanistic reason for interest in lithium's neuroprotective potential, specifically via the orotate form, and low-dose use has a reasonable practical safety record distinct from psychiatric dosing. The score reflects that real promise balanced against the current absence of human trial data for orotate specifically - a gap worth watching closely as research continues, approached sensibly with low doses and periodic monitoring rather than either dismissed or oversold.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ When a Great Mouse Study Gets Read as a Human Guarantee</div>
+        <h4>Why translating animal findings to human recommendations takes more than an exciting headline</h4>
+        <p>See our framework for weighing genuinely promising preclinical research without overstating what it currently proves.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Aron, L. et al. (2025). Lithium deficiency and the onset of Alzheimer's disease. <em>Nature</em>.</li>
+        <li>Gildengers, A. et al. (2026). Low-dose lithium carbonate for mild cognitive impairment: a randomized controlled trial. <em>JAMA Neurology</em>.</li>
+        <li>Hajek, T. et al. (2026). On the pharmacokinetics of lithium orotate versus lithium carbonate. <em>British Journal of Psychiatry</em>.</li>
+        <li>Carlat Report (2025). Lithium Orotate - prescriber clinical guidance.</li>
+        <li>2023 mouse study comparing behavioral potency and renal/thyroid effects of lithium orotate versus lithium carbonate.</li>
+        <li>2025 cross-sectional survey of 211 low-dose lithium supplement users - reasons for use and self-reported benefits.</li>
+        <li>Case report: acute lithium orotate overdose (2.16g) in an 18-year-old, presenting with mild toxicity and full recovery.</li>
+        <li>Drugs.com (2025). Lithium Orotate - clinical monograph, uses, dosage, and safety information.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>Lithium orotate is one piece of the puzzle. Get the full evidence-backed protocol - NMN, D3, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/ai-longevity-guide.html" class="related-card">
+          <div class="related-img c-ai">
+            <img src="/images/hero-ai-longevity.jpg" alt="AI and Longevity" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Editorial</span>
+            <h4>AI and Longevity in 2026: What's Actually Real, and What's Still Phase I</h4>
+          </div>
+        </a>
+        <a href="/articles/b6-guide.html" class="related-card">
+          <div class="related-img c-b6">
+            <img src="/images/hero-b6.jpg" alt="Vitamin B6" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Vitamin B6</span>
+            <h4>B6: Why Two Health Authorities Disagree by a Factor of Eight</h4>
+          </div>
+        </a>
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. If you are currently prescribed lithium for bipolar disorder or any other diagnosed condition, do not change or substitute your treatment without consulting your prescribing physician. Always consult a qualified healthcare professional before starting any supplement protocol. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
