@@ -916,5 +916,17 @@
     "tags": "Electrolytes Editorial Sodium Hyponatremia Hydration",
     "readTime": "20 min",
     "description": "Sodium during exercise has minimal evidence for improving performance, and magnesium hasn't reliably prevented cramps. But exercise-associated hyponatremia from overdrinking plain water is a real, occasionally fatal risk that gets far less attention."
+  },
+  {
+    "title": "Apple Cider Vinegar Gummies: A Retracted Study and an Undissolved Tablet Problem",
+    "tag": "Apple Cider Vinegar Gummies",
+    "url": "/articles/acv-gummies-guide.html",
+    "image": "/images/hero-acv-gummies.jpg",
+    "color": "c-acv",
+    "featured": false,
+    "type": "guide",
+    "tags": "Apple Cider Vinegar Gummies Retraction Weight Loss",
+    "readTime": "18 min",
+    "description": "The headline-grabbing ACV weight loss study was retracted in September 2025. A 2026 lawsuit alleges a popular gummy brand delivers acetic acid below the legal vinegar threshold. Whole vinegar tablets also failed to match liquid vinegar's effects."
   }
 ]

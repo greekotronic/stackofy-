@@ -78,6 +78,7 @@ const COLORS = {
 'c-boron': 'background:linear-gradient(135deg,#1B4332,#7A5C10)',
 'c-probiotics': 'background:linear-gradient(135deg,#1B4332,#2D6A4F)',
 'c-electrolytes': 'background:linear-gradient(135deg,#1B4332,#D4A853)',
+'c-acv': 'background:linear-gradient(135deg,#7A1F2B,#B8860B)',
 };
 
 function makeCard(article, size) {
