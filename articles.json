@@ -717,7 +717,6 @@
     "color": "red",
     "featured": false,
     "type": "guide",
-    "badgeType": "featured",
     "tags": "B12 Vitamins Energy Nervous System",
     "readTime": "16 min",
     "description": "Cyanocobalamin isn't dangerous, methylcobalamin isn't automatically 'used directly' by your cells, and if you're not actually deficient, B12 probably won't do much for your energy or mood."
@@ -730,7 +729,6 @@
     "color": "c-folate",
     "featured": false,
     "type": "guide",
-    "badgeType": "featured",
     "tags": "Folate B9 Vitamins Pregnancy Depression",
     "readTime": "17 min",
     "description": "One of the most-cited depression trials tested two doses of folate in the exact same design - the low dose failed, the high dose worked. Here is the honest, dose-aware picture."
@@ -743,7 +741,6 @@
     "color": "c-b6",
     "featured": false,
     "type": "guide",
-    "badgeType": "featured",
     "tags": "B6 Pyridoxine Vitamins Neuropathy",
     "readTime": "16 min",
     "description": "EFSA says the safe upper limit for B6 is 12mg/day. The US and WHO say 100mg is fine - eight times higher. Neither number rests on solid RCT dose-response data."
@@ -756,7 +753,6 @@
     "color": "c-b1",
     "featured": false,
     "type": "guide",
-    "badgeType": "featured",
     "tags": "B1 Thiamine Vitamins Wernicke",
     "readTime": "17 min",
     "description": "Cheap thiamine hydrochloride, at a high enough oral dose, reaches blood levels approaching IV administration - undercutting a big chunk of the case for premium derivatives. Meanwhile, a life-threatening deficiency is still badly underdiagnosed."
@@ -769,7 +765,6 @@
     "color": "c-b3",
     "featured": false,
     "type": "guide",
-    "badgeType": "featured",
     "tags": "B3 Niacin Vitamins Cholesterol Cardiovascular",
     "readTime": "17 min",
     "description": "AIM-HIGH and HPS2-THRIVE ended niacin's run as a cholesterol drug. A 2024 Cleveland Clinic study now suggests its own breakdown products may promote vascular inflammation."
@@ -782,7 +777,6 @@
     "color": "c-b5",
     "featured": false,
     "type": "guide",
-    "badgeType": "featured",
     "tags": "B5 Pantothenic Acid Vitamins Acne Pantethine",
     "readTime": "16 min",
     "description": "A 1995 uncontrolled case series launched the pantothenic acid acne theory. One small RCT since found a real effect - but pantothenic acid itself does nothing for cholesterol; its cousin pantethine is the one with real data."
@@ -795,7 +789,6 @@
     "color": "c-b7",
     "featured": false,
     "type": "guide",
-    "badgeType": "featured",
     "tags": "B7 Biotin Vitamins Hair Nails",
     "readTime": "15 min",
     "description": "Biotin deficiency is genuinely rare in healthy people. The evidence for hair, skin, and nail claims is thin and mostly uncontrolled - and the one time high-dose biotin faced a real placebo-controlled trial, it failed."
@@ -808,7 +801,6 @@
     "color": "c-b2",
     "featured": false,
     "type": "guide",
-    "badgeType": "featured",
     "tags": "B2 Riboflavin Vitamins Migraine MTHFR Blood Pressure",
     "readTime": "16 min",
     "description": "Riboflavin has real Class II evidence for adult migraine prevention. A specific MTHFR gene variant determines whether it lowers blood pressure by 6-13 mmHg or does nothing at all."
@@ -847,7 +839,6 @@
     "color": "c-colostrum",
     "featured": false,
     "type": "guide",
-    "badgeType": "featured",
     "tags": "Colostrum Gut Health IGF-1 WADA",
     "readTime": "19 min",
     "description": "WADA has warned athletes off colostrum since 2013 over IGF-1 concerns, based on two flawed studies. The broader controlled evidence finds no IGF-1 increase at standard doses - and colostrum's real strength is gut health, not immune hype."
@@ -860,7 +851,6 @@
     "color": "c-tongkat",
     "featured": false,
     "type": "guide",
-    "badgeType": "featured",
     "tags": "Tongkat Ali Testosterone SHBG Adulteration",
     "readTime": "19 min",
     "description": "A meta-analysis shows real testosterone effects but flags major publication bias and heterogeneity. A peer-reviewed DNA barcoding study found only 37% of commercial products were genuinely authentic."
@@ -873,7 +863,6 @@
     "color": "c-fadogia",
     "featured": false,
     "type": "guide",
-    "badgeType": "featured",
     "tags": "Fadogia Agrestis Testosterone Safety Animal Studies",
     "readTime": "18 min",
     "description": "Zero published human trials exist for Fadogia agrestis. The same research group that found a testosterone increase in rats also found testicular toxicity - and Momentous quietly pulled its product in 2023."
@@ -886,7 +875,6 @@
     "color": "c-seamoss",
     "featured": false,
     "type": "guide",
-    "badgeType": "featured",
     "tags": "Sea Moss Iodine Heavy Metals Thyroid",
     "readTime": "18 min",
     "description": "The '92 minerals' claim doesn't trace to any real sea moss analysis. Its measured iodine content varies 60-fold between products, and independent testing has found arsenic, lead, and cadmium exceeding safety limits."
@@ -899,7 +887,6 @@
     "color": "c-boron",
     "featured": false,
     "type": "guide",
-    "badgeType": "featured",
     "tags": "Boron Testosterone Regulatory Limits SHBG",
     "readTime": "18 min",
     "description": "EFSA sets boron's safe limit at 10mg/day, the US says 20mg, the UK says 6mg - all from animal data. The famous testosterone claim comes from a study of just 8 men over one week."

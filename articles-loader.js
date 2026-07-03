@@ -213,11 +213,19 @@ async function loadArticles() {
       protocolMoreEl.innerHTML = remaining.map(a => makeCard(a, 'small')).join('');
     }
 
-    // EDITORIAL ARTICLES (homepage) - featured/editorial badgeType
+    // EDITORIAL ARTICLES (homepage) - true editorials only, limited to 4 newest
     const editorialEl = document.getElementById('editorial-articles');
     if (editorialEl) {
-      const editorial = articles.filter(a => a.badgeType === 'featured');
-      editorialEl.innerHTML = editorial.reverse().map(a => makeCard(a, 'small')).join('');
+      const editorial = articles.filter(a => a.type === 'editorial');
+      editorialEl.innerHTML = editorial.slice(-4).reverse().map(a => makeCard(a, 'small')).join('');
+    }
+
+    // MORE EDITORIAL ARTICLES (homepage) - next 4 editorials, shown after "More Articles"
+    const editorialMoreEl = document.getElementById('editorial-articles-more');
+    if (editorialMoreEl) {
+      const editorial = articles.filter(a => a.type === 'editorial');
+      const remaining = editorial.slice(0, -4).reverse();
+      editorialMoreEl.innerHTML = remaining.slice(0, 4).map(a => makeCard(a, 'small')).join('');
     }
 
     // BOOKS (homepage) - book badgeType
@@ -329,7 +337,7 @@ async function loadArticles() {
     // ARTICLES PAGE - editorial section
     const articlesEditorialEl = document.getElementById('articles-editorial');
     if (articlesEditorialEl) {
-      const editorial = articles.filter(a => a.badgeType === 'featured');
+      const editorial = articles.filter(a => a.type === 'editorial');
       articlesEditorialEl.innerHTML = editorial.map(makeProtocolPageCard).join('');
     }
 
