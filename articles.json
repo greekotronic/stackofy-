@@ -988,5 +988,18 @@
     "tags": "Rhodiola Adaptogen Fatigue Quality Testing",
     "readTime": "17 min",
     "description": "Three independent RCTs found real, objectively measured fatigue and cognitive benefits using the SHR-5 extract. Independent lab testing found up to 80% of commercial products contain far less of the active compounds than labeled."
+  },
+  {
+    "title": "Perimenopause Protocol: One Stack Per Symptom, Evidence-Ranked",
+    "tag": "Protocol",
+    "url": "/articles/perimenopause-protocol-guide.html",
+    "image": "/images/hero-perimenopause.jpg",
+    "color": "c-perimenopause",
+    "featured": false,
+    "type": "protocol",
+    "badgeType": "protocol",
+    "tags": "Perimenopause Protocol Vitamin D Creatine Black Cohosh",
+    "readTime": "18 min",
+    "description": "Vitamin D and creatine have solid RCT support. Black cohosh and soy isoflavones for hot flashes sit in genuine scientific disagreement. Omega-3 and ashwagandha don't specifically help hot flashes despite marketing claims."
   }
 ]
