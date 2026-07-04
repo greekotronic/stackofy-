@@ -940,5 +940,17 @@
     "tags": "Lithium Orotate Brain Health Alzheimer's Bipolar",
     "readTime": "17 min",
     "description": "A 2025 Nature mouse study found real neuroprotective effects from lithium orotate. No human trial has tested the orotate form yet. Here is a sensible, low-dose approach - and why anyone on prescribed lithium should never substitute it."
+  },
+  {
+    "title": "Vaginal Probiotics: The Strain-Specific Evidence That Actually Holds Up",
+    "tag": "Vaginal Probiotics",
+    "url": "/articles/vaginal-probiotics-guide.html",
+    "image": "/images/hero-vaginal-probiotics.jpg",
+    "color": "c-vagprobio",
+    "featured": false,
+    "type": "guide",
+    "tags": "Vaginal Probiotics BV Women's Health Strain Specificity",
+    "readTime": "17 min",
+    "description": "Specific strains, added to standard antibiotics, roughly tripled bacterial vaginosis cure rates in randomized trials. Yeast infection evidence is promising but smaller-scale. UTI prevention evidence is genuinely thinner."
   }
 ]
