@@ -964,5 +964,17 @@
     "tags": "Creatine Women Menopause Menstrual Cycle",
     "readTime": "17 min",
     "description": "A 2025 RCT found 5g/day of creatine plus resistance training improved strength, sleep, and cognition in perimenopausal and postmenopausal women. Here is what's proven and what's still emerging, stage by stage."
+  },
+  {
+    "title": "Melatonin: Why Less Is More, and Why Kids Need Extra Caution",
+    "tag": "Melatonin",
+    "url": "/articles/melatonin-guide.html",
+    "image": "/images/hero-melatonin.jpg",
+    "color": "c-melatonin",
+    "featured": false,
+    "type": "guide",
+    "tags": "Melatonin Sleep Dosing Child Safety",
+    "readTime": "17 min",
+    "description": "A dose-response meta-analysis found melatonin's benefit peaks at 3-5mg, not the 10mg pills on most shelves. Meanwhile, melatonin gummies are now the leading cause of unsupervised pediatric medication ingestion in US ERs."
   }
 ]

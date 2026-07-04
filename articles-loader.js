@@ -82,6 +82,7 @@ const COLORS = {
 'c-lithium': 'background:linear-gradient(135deg,#2D6A4F,#95D5B2)',
 'c-vagprobio': 'background:linear-gradient(135deg,#1B4332,#7A5C10)',
 'c-creatinewomen': 'background:linear-gradient(135deg,#3D2E00,#7A5C10)',
+'c-melatonin': 'background:linear-gradient(135deg,#1B4332,#95D5B2)',
 };
 
 function makeCard(article, size) {

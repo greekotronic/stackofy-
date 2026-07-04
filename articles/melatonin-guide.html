@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Melatonin: Why Less Is More, and Why Kids Need Extra Caution - Stackofy</title>
+  <meta name="description" content="A peer-reviewed dose-response meta-analysis found melatonin's sleep-onset benefit peaks around 3-5mg, not the 10mg pills that dominate store shelves - and doses above 5mg add side effects without added benefit. Meanwhile, melatonin gummies are now the leading cause of unsupervised medication ingestion in young children treated in US emergency rooms. Here is the honest picture." />
+  <meta property="og:title" content="Melatonin: Why Less Is More, and Why Kids Need Extra Caution" />
+  <meta property="og:description" content="A 2023 JAMA study found 88% of tested melatonin gummies were mislabeled, some containing 347% of their stated dose. A rigorous dose-response meta-analysis found 3-5mg is the effective range, not 10mg. And melatonin gummies are now the leading cause of unsupervised pediatric medication ingestion in US emergency rooms. Here is what actually holds up, and how to use it well." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/melatonin-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-melatonin.jpg" />
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #2D5A1B, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+    .c-b6 { background: linear-gradient(135deg, #7A5C10, #D4A853); }
+    .c-lithium { background: linear-gradient(135deg, #2D6A4F, #95D5B2); }
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+  <div id="progress-bar"></div>
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-melatonin.jpg" alt="A glass of water and a small supplement bottle on a nightstand, moonlight through a window" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Melatonin</span>
+      <h1>Melatonin: Why Less Is More, and Why Kids Need Extra Caution</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>17 min read</span>
+        <span>·</span>
+        <span>July 2026</span>
+      </div>
+    </div>
+  </div>
+  <div class="article-wrapper">
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>A rigorous dose-response meta-analysis of 26 randomized trials found melatonin's sleep-onset benefit peaks in the 3-5mg range, with roughly 4mg showing the strongest effect - not the 10mg pills that dominate many store shelves, and a separate Cochrane-cited analysis found doses above 5mg don't outperform lower ones</li>
+        <li>A 2023 JAMA study testing 25 commercial melatonin gummies found 88% were inaccurately labeled, with actual content ranging from 74% to 347% of the stated dose - one of the worst label-accuracy records of any supplement category we've reviewed</li>
+        <li>Melatonin gummies have become the leading cause of unsupervised medication ingestion for young children treated in US emergency rooms, with CDC data showing roughly 11,000 ED visits from 2019-2022 for children age 5 and under, driven heavily by flavored, candy-like products</li>
+        <li>A January 2026 systematic review found solid evidence for melatonin's effectiveness in children with neurologic conditions like autism spectrum disorder, but explicitly no efficacy data exists for typically developing young children - a meaningful gap between the well-studied use case and how the product is often used at home</li>
+        <li>For healthy adults, melatonin has a good short-term safety profile and is not considered addictive - the practical opportunity is simply using a smaller, better-targeted dose than what's commonly sold, which the evidence suggests works as well or better with fewer next-day side effects</li>
+        <li>Some circulating claims about an even lower "physiological" dose (0.3mg) outperforming standard doses trace back to sources that are difficult to verify against a real, findable peer-reviewed publication - worth treating with the same caution as any other unsourced claim, even when it sounds plausible</li>
+      </ul>
+    </div>
+    <div class="article-content">
+      <p>Melatonin is one of the most widely used sleep aids in the world, and it has a genuinely reassuring overall safety profile - it's a hormone your own pineal gland already produces every night, it doesn't appear to be addictive, and short-term use in healthy adults is well tolerated. That reassuring baseline is exactly why it's worth looking closely at the two places where the actual evidence and the actual market have drifted apart: the dose most people are taking, and the products increasingly ending up in young children's hands.</p>
+      <div class="article-img">
+        <img src="/images/melatonin-label-accuracy.jpg" alt="A hand holding a magnifying glass over a supplement bottle label" onerror="this.style.display='none'" />
+      </div>
+      <h2>The Dose Question: What the Best Available Evidence Actually Shows</h2>
+      <p>Walk into any pharmacy and the melatonin shelf tells a consistent story: 5mg, 10mg, sometimes higher, marketed with the implicit logic that more milligrams means a stronger effect. The actual dose-response research doesn't support that logic particularly well.</p>
+      <div class="rct-visual">
+        <div class="rct-title">A Genuine Dose-Response Meta-Analysis, Not a Blog Estimate</div>
+        <div class="rct-row">
+          <div class="rct-n">26 RCTs<br>1,689<span>Pooled Trials</span></div>
+          <div class="rct-desc">A systematic review and dose-response meta-analysis published in the Journal of Pineal Research pooled 26 double-blind, randomized controlled trials spanning 1987-2020, covering 1,689 observations in both insomnia patients and healthy volunteers.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">3-5mg<span>Peak Efficacy</span></div>
+          <div class="rct-desc">The dose-response curve showed melatonin's effect on sleep onset latency peaking at approximately 4mg/day, with 3mg and 4mg both significantly outperforming the commonly recommended 2mg dose, and no meaningful additional benefit found beyond this range.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">&gt;5mg<span>No Added Benefit</span></div>
+          <div class="rct-desc">A separately cited Cochrane-referenced analysis found doses exceeding 5mg did not outperform lower doses in adult insomnia trials - reinforcing that the widely available 10mg products offer little over a well-timed, more moderate dose, while carrying a higher chance of next-day grogginess and vivid dreams.</div>
+        </div>
+        <div class="rct-highlight">This is a genuinely useful, actionable finding: the peer-reviewed dose-response data points toward 3-5mg, taken a few hours before bedtime, as the range with the strongest supporting evidence - meaningfully lower than the 10mg products that are often the easiest to find, and without the tradeoff of increased side effects that comes with going higher.</div>
+      </div>
+      <div class="skip-box">
+        <div class="skip-label">A Claim Worth Treating Skeptically</div>
+        <p>Several wellness sources describe an even lower "physiological" dose of around 0.3mg (roughly matching the amount your body produces naturally at night) as outperforming standard doses, sometimes citing an unnamed "landmark" study from prestigious institutions without a clear, checkable citation. This is precisely the kind of claim worth pausing on: it may turn out to have real support, but as currently circulated, it isn't traceable to a specific, findable peer-reviewed paper the way the 3-5mg dose-response meta-analysis above is. The honest position is that 0.3mg is a physiologically interesting reference point, not yet a confirmed, better-performing dose than the 3-5mg range with actual trial data behind it.</p>
+      </div>
+      <h2>The Label Accuracy Problem</h2>
+      <p>Even a well-chosen dose only matters if the product actually delivers it, and melatonin has a genuinely poor track record here compared to most other supplement categories covered on this site.</p>
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">88% Mislabeled</span>
+          <h4>2023 JAMA Study, Gummies</h4>
+          <p>Testing of 25 commercial melatonin gummy products found 22 (88%) were inaccurately labeled, with actual content ranging from 74% to 347% of what the label stated - meaning some products delivered less than a third of the intended dose, others more than triple.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">No Regulatory Pre-Approval</span>
+          <h4>Why This Happens</h4>
+          <p>Melatonin is regulated as a dietary supplement in the US, not a drug, meaning products don't require FDA approval or standardized manufacturing verification before reaching shelves - a structural reason accuracy varies so widely.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag strong">A Practical Fix</span>
+          <h4>Choosing More Reliable Products</h4>
+          <p>Products carrying third-party verification (such as USP or NSF certification) have their labeled content independently checked against actual composition - a meaningfully more reliable signal than label claims alone.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Compounding Risk</span>
+          <h4>Why This Matters More for Melatonin Specifically</h4>
+          <p>Because the effective dose range is already lower than most products' labeled strength, inaccurate labeling compounds the dosing problem - someone trying to take a sensible 3mg dose could unknowingly be taking anywhere from about 2mg to over 10mg from the same labeled product.</p>
+        </div>
+      </div>
+      <div class="article-img">
+        <img src="/images/melatonin-safe-storage.jpg" alt="A high bathroom cabinet shelf with a visible child safety lock" onerror="this.style.display='none'" />
+      </div>
+      <h2>A Real, Growing Safety Issue: Young Children and Melatonin Gummies</h2>
+      <p>This is the part of the melatonin conversation that deserves considerably more attention than it typically gets, because it's not a theoretical risk - it's an active, measured, worsening public health pattern.</p>
+      <div class="warning-box">
+        <div class="warning-label">The Scale of the Problem</div>
+        <p>CDC surveillance data found approximately 11,000 emergency department visits for unsupervised melatonin ingestion by children age 5 and under between 2019 and 2022 alone. Poison control center calls involving pediatric melatonin exposure rose 530% between 2012 and 2021, and melatonin is now the leading cause of unsupervised medication ingestion treated in US emergency rooms for young children specifically. Flavored gummy formulations - cherry, grape, and similar candy-like products - are heavily overrepresented in these cases, precisely because they're designed to be palatable and don't register to a young child as anything other than a treat.</p>
+      </div>
+      <p>It's worth being precise about what the research does and doesn't establish here. A January 2026 systematic review specifically examining melatonin use in children under 5 found genuine effectiveness evidence, but only in a specific population: children with neurologic conditions like autism spectrum disorder, studied in trials averaging around 13 weeks. For typically developing young children without a neurologic or sleep-disorder diagnosis, the review found no efficacy data exists at all - meaning the product is being given to many children in a context the research hasn't actually tested.</p>
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag strong">Real Trial Evidence</span>
+          <h4>Children With Neurodevelopmental Conditions</h4>
+          <p>A prescription prolonged-release melatonin formulation showed genuine, statistically significant improvements in sleep onset, duration, and nighttime awakenings over 52 weeks in children with autism spectrum disorder and related conditions - a legitimate, well-evidenced clinical use case.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">No Data</span>
+          <h4>Typically Developing Young Children</h4>
+          <p>The January 2026 review found no efficacy data for melatonin in typically developing children under 5 - a genuine, acknowledged evidence gap, not a settled "it doesn't work" finding, but also not a basis for confident use.</p>
+        </div>
+      </div>
+      <h2>A Practical Approach</h2>
+      <div class="checklist-box">
+        <h4>Using Melatonin Sensibly</h4>
+        <div class="checklist-item"><span class="check-yes">✓</span><span><strong>For adults, start in the 3-5mg range, taken a few hours before your target bedtime</strong> - this is the range with the strongest dose-response evidence behind it, not the 10mg products that are often the easiest to find.</span></div>
+        <div class="checklist-item"><span class="check-yes">✓</span><span><strong>Look for third-party verification (USP, NSF) on the label</strong> given the well-documented accuracy problems in this specific category - it's a meaningfully more reliable signal than the stated dose alone.</span></div>
+        <div class="checklist-item"><span class="check-yes">✓</span><span><strong>Store melatonin - especially gummies - exactly like a medication, out of sight and reach of children</strong>, given how strongly flavored gummy products are implicated in pediatric emergency room visits.</span></div>
+        <div class="checklist-item"><span class="check-yes">✓</span><span><strong>If your child has a diagnosed neurodevelopmental condition and sleep difficulties, talk to their pediatrician</strong> - this is the population with genuine, positive clinical trial evidence behind melatonin use.</span></div>
+        <div class="checklist-item"><span class="check-no">✗</span><span><strong>Don't give melatonin to a typically developing young child without medical guidance</strong> - the current evidence base simply doesn't cover this use, regardless of how common it may be.</span></div>
+        <div class="checklist-item"><span class="check-no">✗</span><span><strong>Don't assume a higher dose will work better if a lower one isn't helping</strong> - the evidence suggests the opposite pattern; consider whether sleep hygiene, timing, or an underlying sleep issue deserves attention instead.</span></div>
+      </div>
+      <h2>Dosing</h2>
+      <table class="dosing-table">
+        <tr><th>Purpose</th><th>Evidence-Supported Range</th><th>Notes</th></tr>
+        <tr><td>General sleep onset support, adults</td><td>3 - 5mg, taken ~1-3 hours before bedtime</td><td>Reflects the peak of the dose-response curve from the largest available meta-analysis</td></tr>
+        <tr><td>Jet lag</td><td>0.5 - 5mg, timed to destination bedtime</td><td>Timing relative to the target sleep window matters more than the specific dose within this range</td></tr>
+        <tr><td>Shift work sleep support</td><td>1 - 3mg, before daytime sleep periods</td><td>Used to help maintain sleep quality when sleeping outside normal nighttime hours</td></tr>
+        <tr><td>Children with neurodevelopmental conditions</td><td>Per pediatrician guidance</td><td>Should be medically supervised; not a self-directed dosing decision</td></tr>
+      </table>
+      <div class="warning-box">
+        <div class="warning-label">Safety Notes</div>
+        <p>Short-term melatonin use in healthy adults is generally well tolerated, with morning grogginess, vivid dreams, and mild headache as the most common side effects, particularly at higher doses. Adults with autoimmune conditions, depression, or seizure disorders should discuss use with a physician first. Pregnant and breastfeeding individuals should avoid melatonin unless specifically directed by a doctor. Given the well-documented pediatric overdose pattern, store all melatonin products - especially flavored gummies - with the same caution as any medication, out of children's sight and reach. If you have a child with a diagnosed sleep or neurodevelopmental condition, discuss appropriate use directly with their pediatrician rather than self-dosing.</p>
+      </div>
+      <h2>What It Stacks Well With</h2>
+      <div class="combo-grid">
+        <div class="combo-card"><div class="combo-icon">🌙</div><h4>Consistent Sleep Timing</h4><p>Melatonin works best as a timing signal alongside a consistent bedtime and wake time, not as a substitute for basic sleep hygiene.</p></div>
+        <div class="combo-card"><div class="combo-icon">💡</div><h4>Reduced Evening Light Exposure</h4><p>Bright light in the evening suppresses your own natural melatonin production - pairing supplementation with dimmer evening lighting supports the same underlying process.</p></div>
+        <div class="combo-card"><div class="combo-icon">🧪</div><h4>Third-Party Verified Products</h4><p>Given the well-documented label accuracy problems in this category, verification matters more here than for most other supplements on this site.</p></div>
+        <div class="combo-card"><div class="combo-icon">⚠️</div><h4>Sedatives / Sleep Medications (Caution)</h4><p>Combining melatonin with other sedating substances can compound drowsiness - discuss with a physician if you're taking a prescribed sleep medication.</p></div>
+        <div class="combo-card"><div class="combo-icon">⚠️</div><h4>Blood Thinners / Blood Pressure Medication (Caution)</h4><p>Melatonin has documented interactions with some anticoagulants and blood pressure medications - flag use with your prescriber.</p></div>
+        <div class="combo-card"><div class="combo-icon">⚠️</div><h4>Unsupervised Access by Children (Caution)</h4><p>The single most important practical precaution in this entire category - store like medication, always.</p></div>
+      </div>
+      <div class="aaf-badge">
+        <div class="aaf-score">7/10</div>
+        <div class="aaf-label"><strong>Anti-Aging Factor</strong>A genuinely well-tolerated, non-addictive sleep aid with real dose-response evidence pointing toward a clear, practical recommendation: 3-5mg outperforms the 10mg products that dominate store shelves, with fewer next-day side effects. The score reflects that solid foundation, tempered by a genuinely poor label-accuracy record across the category and a real, well-documented pediatric safety issue that deserves more attention from parents and caregivers than it typically receives, not because the compound itself is unusually dangerous, but because gummy formulations specifically have become a measurable source of preventable harm.</div>
+      </div>
+    </div>
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img"><img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" /></div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">⚠ When an Unsourced Claim Sounds More Convincing Than the Real Data</div>
+        <h4>Why an unnamed "landmark study" deserves more scrutiny than a citable meta-analysis</h4>
+        <p>See our framework for checking whether a widely repeated dosing claim traces back to a real, findable publication.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Cohen, P.A. et al. (2023). Quantity of Melatonin and CBD in Melatonin Gummies Sold in the US. <em>JAMA</em>, 329(16), 1401-1402.</li>
+        <li>Grigg-Damberger, M.M. & Ianakieva, D. Optimizing the Time and Dose of Melatonin as a Sleep-Promoting Drug: A Systematic Review of Randomized Controlled Trials and Dose-Response Meta-Analysis. <em>Journal of Pineal Research</em>.</li>
+        <li>Kracht, C. et al. (2026). Melatonin Use in Young Children: A Systematic Review. <em>JAMA Network Open</em>, 9(1), e2551958.</li>
+        <li>Centers for Disease Control and Prevention (2024). Notes from the Field: Emergency Department Visits for Unsupervised Pediatric Melatonin Ingestion - United States, 2019-2022. <em>MMWR</em>, 73(9), 215-217.</li>
+        <li>National Center for Complementary and Integrative Health (NCCIH). Melatonin: What You Need To Know.</li>
+        <li>Gringras, P. et al. Long-Term Efficacy and Safety of Pediatric Prolonged-Release Melatonin for Insomnia in Children with Autism Spectrum Disorder.</li>
+        <li>UC Davis Health (2025). Melatonin and your sleep: Is it safe, what are the side effects and how does it work?</li>
+      </ol>
+    </div>
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>Melatonin is one piece of the puzzle. Get the full evidence-backed protocol - NMN, D3, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/lithium-orotate-guide.html" class="related-card">
+          <div class="related-img c-lithium"><img src="/images/hero-lithium-orotate.jpg" alt="Lithium Orotate" onerror="this.style.display='none'" /></div>
+          <div class="related-body"><span class="related-tag">Lithium Orotate</span><h4>Lithium Orotate: A Reasonable Microdose Approach, With One Important Exception</h4></div>
+        </a>
+        <a href="/articles/b6-guide.html" class="related-card">
+          <div class="related-img c-b6"><img src="/images/hero-b6.jpg" alt="Vitamin B6" onerror="this.style.display='none'" /></div>
+          <div class="related-body"><span class="related-tag">Vitamin B6</span><h4>B6: Why Two Health Authorities Disagree by a Factor of Eight</h4></div>
+        </a>
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research"><img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" /></div>
+          <div class="related-body"><span class="related-tag">Critical Thinking</span><h4>Why Most Published Research Findings Are False</h4></div>
+        </a>
+      </div>
+    </div>
+    <div class="disclaimer"><strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Never give melatonin to a child without pediatrician guidance, and always store melatonin products, especially gummies, safely out of children's reach. Always consult a qualified healthcare professional before starting any supplement protocol. Alethia Research Institute is not affiliated with any supplement manufacturer.</div>
+  </div>
+  <script>
+    if (localStorage.getItem('theme') === 'dark') { document.body.setAttribute('data-theme', 'dark'); }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+</body>
+</html>
