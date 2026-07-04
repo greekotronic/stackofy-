@@ -976,5 +976,17 @@
     "tags": "Melatonin Sleep Dosing Child Safety",
     "readTime": "17 min",
     "description": "A dose-response meta-analysis found melatonin's benefit peaks at 3-5mg, not the 10mg pills on most shelves. Meanwhile, melatonin gummies are now the leading cause of unsupervised pediatric medication ingestion in US ERs."
+  },
+  {
+    "title": "Rhodiola Rosea: The Adaptogen With Real Evidence - If You Get the Right Extract",
+    "tag": "Rhodiola Rosea",
+    "url": "/articles/rhodiola-rosea-guide.html",
+    "image": "/images/hero-rhodiola.jpg",
+    "color": "c-rhodiola",
+    "featured": false,
+    "type": "guide",
+    "tags": "Rhodiola Adaptogen Fatigue Quality Testing",
+    "readTime": "17 min",
+    "description": "Three independent RCTs found real, objectively measured fatigue and cognitive benefits using the SHR-5 extract. Independent lab testing found up to 80% of commercial products contain far less of the active compounds than labeled."
   }
 ]
