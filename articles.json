@@ -1027,5 +1027,17 @@
     "tags": "Saw Palmetto BPH Prostate NEJM Trial",
     "readTime": "18 min",
     "description": "Early meta-analyses found real BPH symptom improvement. A landmark year-long NEJM trial and a triple-dose follow-up found no benefit at all. A 2023 review of 27 studies confirms the pattern - here is the full story."
+  },
+  {
+    "title": "Manganese Supplements: Low Risk, Low Reason to Bother",
+    "tag": "Manganese",
+    "url": "/articles/manganese-guide.html",
+    "image": "/images/hero-manganese.jpg",
+    "color": "c-manganese",
+    "featured": false,
+    "type": "guide",
+    "tags": "Manganese Trace Mineral Deficiency Liver",
+    "readTime": "15 min",
+    "description": "Manganese deficiency is essentially theoretical in real populations. A 2024 review found zero supplementation trials for rheumatic disease. The real safety concern is occupational exposure and liver disease, not dietary supplements."
   }
 ]
