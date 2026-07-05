@@ -1003,5 +1003,17 @@
     "tags": "Perimenopause Protocol Vitamin D Creatine Black Cohosh",
     "readTime": "18 min",
     "description": "Vitamin D and creatine have solid RCT support. Black cohosh and soy isoflavones for hot flashes sit in genuine scientific disagreement. Omega-3 and ashwagandha don't specifically help hot flashes despite marketing claims."
+  },
+  {
+    "title": "Pine Bark Extract: Why the Breadth of Its Claims Is the First Red Flag",
+    "tag": "Pine Bark Extract",
+    "url": "/articles/pine-bark-extract-guide.html",
+    "image": "/images/hero-pine-bark.jpg",
+    "color": "c-pinebark",
+    "featured": false,
+    "type": "guide",
+    "tags": "Pine Bark Pycnogenol Endothelial Function Cochrane",
+    "readTime": "16 min",
+    "description": "A Cochrane review found insufficient evidence across seven conditions. One small trial found a real, strong endothelial function signal. The breadth of claims made for this extract is itself worth reading as a warning sign."
   }
 ]
