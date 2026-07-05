@@ -175,14 +175,16 @@
     "description": "3g before bed improves sleep from night one. Combined with NAC, it reversed 7 of 9 aging hallmarks in a clinical trial. One of the best-value longevity supplements available."
   },
   {
-    "title": "Acetyl-L-Carnitine (ALCAR): The Brain-Boosting Fat Transporter",
-    "tag": "ALCAR",
+    "title": "Acetyl-L-Carnitine: Strong for Depression and Nerve Pain, Genuinely Unsettled for Dementia",
+    "tag": "Acetyl-L-Carnitine",
     "url": "/articles/alcar-guide.html",
     "image": "/images/hero-alcar.jpg",
     "color": "c-alcar",
-    "tags": "longevity brain energy",
-    "readTime": "10 min",
-    "description": "ALCAR crosses the blood-brain barrier and matched antidepressants in a 12-RCT meta-analysis. Strong evidence for neuropathic pain, MCI and fatigue - here is what actually works."
+    "featured": false,
+    "type": "guide",
+    "tags": "ALCAR Carnitine Depression Neuropathy Cognition",
+    "readTime": "17 min",
+    "description": "ALCAR has solid 2025 evidence for depression and established support for peripheral neuropathy. For dementia, Cochrane says evidence doesn't justify routine use, while other meta-analyses find modest benefit - a genuine, unresolved disagreement."
   },
   {
     "title": "Creatine: The Muscle Molecule That's Actually a Brain Booster in Disguise",
