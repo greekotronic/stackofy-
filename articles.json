@@ -1015,5 +1015,17 @@
     "tags": "Pine Bark Pycnogenol Endothelial Function Cochrane",
     "readTime": "16 min",
     "description": "A Cochrane review found insufficient evidence across seven conditions. One small trial found a real, strong endothelial function signal. The breadth of claims made for this extract is itself worth reading as a warning sign."
+  },
+  {
+    "title": "Saw Palmetto: Popular for Prostate Health, But Does It Work?",
+    "tag": "Saw Palmetto",
+    "url": "/articles/saw-palmetto-guide.html",
+    "image": "/images/hero-saw-palmetto.jpg",
+    "color": "c-sawpalmetto",
+    "featured": false,
+    "type": "guide",
+    "tags": "Saw Palmetto BPH Prostate NEJM Trial",
+    "readTime": "18 min",
+    "description": "Early meta-analyses found real BPH symptom improvement. A landmark year-long NEJM trial and a triple-dose follow-up found no benefit at all. A 2023 review of 27 studies confirms the pattern - here is the full story."
   }
 ]
