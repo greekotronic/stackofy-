@@ -1039,5 +1039,17 @@
     "tags": "Manganese Trace Mineral Deficiency Liver",
     "readTime": "15 min",
     "description": "Manganese deficiency is essentially theoretical in real populations. A 2024 review found zero supplementation trials for rheumatic disease. The real safety concern is occupational exposure and liver disease, not dietary supplements."
+  },
+  {
+    "title": "OPC (Grape Seed Extract): Why the Studies Used 10x More Than Your Bottle",
+    "tag": "OPC / Grape Seed Extract",
+    "url": "/articles/opc-grape-seed-guide.html",
+    "image": "/images/hero-opc.jpg",
+    "color": "c-opc",
+    "featured": false,
+    "type": "guide",
+    "tags": "OPC Grape Seed Extract Proanthocyanidins Pine Bark Comparison",
+    "readTime": "17 min",
+    "description": "Clinical trials used 150-2,000mg/day of grape seed extract; most commercial products contain 50-100mg. NCCIH says evidence is insufficient for any indication. A direct comparison to Pine Bark Extract, with a verdict on which is the better bet."
   }
 ]

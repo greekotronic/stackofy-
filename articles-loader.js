@@ -88,6 +88,7 @@ const COLORS = {
 'c-pinebark': 'background:linear-gradient(135deg,#3D2E00,#7A5C10)',
 'c-sawpalmetto': 'background:linear-gradient(135deg,#1B4332,#7A5C10)',
 'c-manganese': 'background:linear-gradient(135deg,#3D2E00,#8B6914)',
+'c-opc': 'background:linear-gradient(135deg,#7A1F2B,#B33951)',
 };
 
 function makeCard(article, size) {
