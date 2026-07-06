@@ -1063,5 +1063,17 @@
     "tags": "Iodine Thyroid Pregnancy Hashimoto's",
     "readTime": "16 min",
     "description": "A documented case shows a standard prenatal dose triggering thyroid dysfunction. A 2026 meta-analysis of 54,621 people calls the iodine-excess-thyroid-nodule link an unresolved debate. Here is who actually needs individualized dosing."
+  },
+  {
+    "title": "Glucosamine + Chondroitin vs. Green-Lipped Mussel: The Actual Evidence Comparison",
+    "tag": "Joint Health",
+    "url": "/articles/glucosamine-vs-green-lipped-mussel-guide.html",
+    "image": "/images/hero-glm-glucosamine.jpg",
+    "color": "c-jointhealth",
+    "featured": false,
+    "type": "guide",
+    "tags": "Glucosamine Chondroitin Green-Lipped Mussel Osteoarthritis",
+    "readTime": "18 min",
+    "description": "Two 2018 meta-analyses reached opposite conclusions on glucosamine and chondroitin. The GAIT trial found no benefit over placebo. A 2025 review of 20 supplements found green-lipped mussel cleared a higher evidence bar for medium-term relief."
   }
 ]
