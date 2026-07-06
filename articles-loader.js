@@ -89,6 +89,7 @@ const COLORS = {
 'c-sawpalmetto': 'background:linear-gradient(135deg,#1B4332,#7A5C10)',
 'c-manganese': 'background:linear-gradient(135deg,#3D2E00,#8B6914)',
 'c-opc': 'background:linear-gradient(135deg,#7A1F2B,#B33951)',
+'c-iodine': 'background:linear-gradient(135deg,#1B4332,#95D5B2)',
 };
 
 function makeCard(article, size) {
