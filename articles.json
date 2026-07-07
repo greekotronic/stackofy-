@@ -1099,5 +1099,18 @@
     "tags": "MSM Methylsulfonylmethane Osteoarthritis Joint Pain",
     "readTime": "15 min",
     "description": "A widely cited meta-analysis found MSM ineffective - but it pooled MSM with the different compound DMSO. Individual MSM-only trials found real, significant improvements. No dose-ranging study has ever been done."
+  },
+  {
+    "title": "The Senior Health Protocol: Movement First, Supplements Second, By Risk Area",
+    "tag": "Protocol",
+    "url": "/articles/senior-health-protocol-guide.html",
+    "image": "/images/hero-senior-health.jpg",
+    "color": "c-seniorhealth",
+    "featured": false,
+    "type": "protocol",
+    "badgeType": "protocol",
+    "tags": "Senior Health Protocol Sarcopenia Falls Polypharmacy",
+    "readTime": "22 min",
+    "description": "Resistance training plus protein plus vitamin D outperforms any supplement alone for preserving muscle. Vitamin D only reduces falls in the actually deficient. Polypharmacy itself is a top predictor of falls and hospitalization."
   }
 ]

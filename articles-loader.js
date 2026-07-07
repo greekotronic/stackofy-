@@ -93,6 +93,7 @@ const COLORS = {
 'c-jointhealth': 'background:linear-gradient(135deg,#1B4332,#2D6A4F)',
 'c-arginine': 'background:linear-gradient(135deg,#1B4332,#7A1F2B)',
 'c-msm': 'background:linear-gradient(135deg,#7A5C10,#D4A853)',
+'c-seniorhealth': 'background:linear-gradient(135deg,#1B4332,#D4A853)',
 };
 
 function makeCard(article, size) {
