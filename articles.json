@@ -1087,5 +1087,17 @@
     "tags": "L-Arginine Blood Pressure Heart Attack Contraindication",
     "readTime": "16 min",
     "description": "Two independent meta-analyses confirm real blood pressure reduction from L-arginine. But the VINTAGE MI trial found it increased mortality in recent heart attack patients - a serious, specific contraindication still shaping clinical guidance today."
+  },
+  {
+    "title": "MSM: A Popular Joint Supplement, Weighed Against the Evidence",
+    "tag": "MSM",
+    "url": "/articles/msm-guide.html",
+    "image": "/images/hero-msm.jpg",
+    "color": "c-msm",
+    "featured": false,
+    "type": "guide",
+    "tags": "MSM Methylsulfonylmethane Osteoarthritis Joint Pain",
+    "readTime": "15 min",
+    "description": "A widely cited meta-analysis found MSM ineffective - but it pooled MSM with the different compound DMSO. Individual MSM-only trials found real, significant improvements. No dose-ranging study has ever been done."
   }
 ]
