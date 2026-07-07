@@ -1075,5 +1075,17 @@
     "tags": "Glucosamine Chondroitin Green-Lipped Mussel Osteoarthritis",
     "readTime": "18 min",
     "description": "Two 2018 meta-analyses reached opposite conclusions on glucosamine and chondroitin. The GAIT trial found no benefit over placebo. A 2025 review of 20 supplements found green-lipped mussel cleared a higher evidence bar for medium-term relief."
+  },
+  {
+    "title": "L-Arginine and Blood Pressure: What Works, and Who Should Never Take It",
+    "tag": "L-Arginine",
+    "url": "/articles/l-arginine-guide.html",
+    "image": "/images/hero-l-arginine.jpg",
+    "color": "c-arginine",
+    "featured": false,
+    "type": "guide",
+    "tags": "L-Arginine Blood Pressure Heart Attack Contraindication",
+    "readTime": "16 min",
+    "description": "Two independent meta-analyses confirm real blood pressure reduction from L-arginine. But the VINTAGE MI trial found it increased mortality in recent heart attack patients - a serious, specific contraindication still shaping clinical guidance today."
   }
 ]

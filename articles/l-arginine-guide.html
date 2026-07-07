@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L-Arginine and Blood Pressure: What Works, and Who Should Never Take It - Stackofy</title>
+  <meta name="description" content="Two independent meta-analyses find L-arginine genuinely lowers blood pressure, with stronger effects in people who start with higher readings. But a landmark 2006 trial found L-arginine given after a heart attack was associated with higher mortality than placebo - a specific, serious contraindication that still shapes clinical guidance today. Here is the honest, complete picture." />
+
+  <meta property="og:title" content="L-Arginine and Blood Pressure: What Works, and Who Should Never Take It" />
+  <meta property="og:description" content="Two independent meta-analyses, in 2011 and 2022, both found L-arginine meaningfully lowers systolic and diastolic blood pressure, with the strongest effects in people who start with elevated readings. But the VINTAGE MI trial found L-arginine given to recent heart attack patients was associated with higher mortality than placebo - which is why Mayo Clinic explicitly advises against using it in that specific population. Here is what actually holds up, and the one group that should stay away entirely." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/l-arginine-guide" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-l-arginine.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #2D5A1B, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-lithium { background: linear-gradient(135deg, #2D6A4F, #95D5B2); }
+    .c-jointhealth { background: linear-gradient(135deg, #1B4332, #2D6A4F); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-l-arginine.jpg" alt="A blood pressure cuff and monitor on a small table in a bright clinical room" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">L-Arginine</span>
+      <h1>L-Arginine and Blood Pressure: What Works, and Who Should Never Take It</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>16 min read</span>
+        <span>·</span>
+        <span>July 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Two independent meta-analyses, published in 2011 and 2022, both found oral L-arginine meaningfully lowers systolic and diastolic blood pressure - a genuinely consistent finding across separate research teams, unlike some of the more contested supplements covered on this site</li>
+        <li>The blood pressure effect appears dose-dependent on baseline: people who start with elevated readings see a stronger response, while people with already-normal blood pressure see comparatively modest effects</li>
+        <li>Despite this, GRADE-based quality assessment rates the overall certainty of this evidence as low, due to real inconsistency between individual trials - a genuine, if real, effect that hasn't yet been confirmed with the largest, most rigorous long-term studies</li>
+        <li>A landmark 2006 randomized trial (VINTAGE MI) found L-arginine given to patients recovering from a recent heart attack was associated with higher mortality than placebo - a serious, specific finding that has directly shaped clinical guidance, even though it hasn't been replicated in other populations</li>
+        <li>L-arginine can reactivate herpes simplex virus, meaning anyone with a history of cold sores or genital herpes should be cautious with high-dose supplementation, and it carries a documented risk of dangerous electrolyte disturbances and irregular heart rhythms in people with kidney disease or kidney failure</li>
+        <li>A more recent study found L-arginine had no effect on cardiovascular or autonomic recovery following exercise, despite a plausible nitric-oxide-based mechanism - a useful reminder that a real effect in one context (blood pressure at rest) doesn't automatically extend to every context the underlying mechanism might suggest</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>L-arginine occupies a genuinely interesting position among the supplements covered on this site, because it manages to combine two things that don't usually appear together: reasonably consistent, cross-replicated evidence for one specific, common use, and a serious, well-documented safety signal in one specific, identifiable population. Most of the contested evidence stories on this site involve either "the studies disagree with each other" or "the evidence just hasn't been generated yet." L-arginine's story is different - the blood pressure evidence is unusually consistent for a supplement, and the safety concern isn't vague or theoretical, it's tied to an actual, named clinical trial with a specific, serious finding.</p>
+
+      <p>L-arginine is a naturally occurring amino acid that your body produces on its own and also obtains from protein-rich foods - fish, red meat, poultry, soy, whole grains, beans, and dairy all contain meaningful amounts, which is part of why true dietary deficiency is genuinely rare. Its relevance to cardiovascular health comes from its role as the direct physiological precursor to nitric oxide, a molecule that signals blood vessels to relax and widen. This single mechanism is the thread connecting nearly everything in this article, both the genuine benefits and the genuine risks.</p>
+
+      <div class="article-img">
+        <img src="/images/arginine-blood-flow.jpg" alt="Abstract golden light flowing through a widening translucent vessel-like tube" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Blood Pressure Evidence: Genuinely Consistent Across Independent Reviews</h2>
+
+      <p>Unlike some of the joint-health and adaptogen supplements covered elsewhere on this site, where competing meta-analyses have reached opposite conclusions from overlapping data, L-arginine's blood pressure research shows a more reassuring pattern: separate research teams, working years apart, have arrived at broadly similar conclusions.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">Two Independent Meta-Analyses, Consistent Direction</div>
+        <div class="rct-row">
+          <div class="rct-n">2011<br>11 RCTs<span>American Heart Journal</span></div>
+          <div class="rct-desc">A meta-analysis pooling 11 randomized, double-blind, placebo-controlled trials found oral L-arginine significantly reduced systolic blood pressure by an average of 5.39 mmHg and diastolic blood pressure by 2.66 mmHg compared to placebo.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">2022<br>22 Studies<span>Advances in Nutrition</span></div>
+          <div class="rct-desc">A more recent, larger dose-response meta-analysis found a comparable magnitude of effect - a weighted mean reduction of 6.40 mmHg systolic and 2.64 mmHg diastolic - with the effect appearing consistently across different baseline blood pressure categories, BMI groups, and health statuses.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">Dose-<br>Dependent<span>On Baseline BP</span></div>
+          <div class="rct-desc">A 2012 randomized trial specifically in hypertensive patients using 10 grams of L-arginine daily for 10 weeks found systolic reductions averaging 11 mmHg - clinically significant by most standards, and notably larger than the average effect seen across mixed populations, consistent with the general pattern that higher baseline blood pressure predicts a stronger response.</div>
+        </div>
+        <div class="rct-highlight">Despite this consistency across independent research teams, GRADE-based quality assessment of the overall evidence base rates it as low certainty, specifically because of real inconsistency and indirectness between the individual trials feeding into these pooled analyses. This is worth holding as two true things at once: the direction of the effect is genuinely well-replicated, and the confidence in the precise size of that effect is still limited by trial-to-trial variation. Both the 2011 and 2022 reviews explicitly call for larger, longer-term trials, particularly in hypertensive populations specifically, before this effect can be considered fully settled.</div>
+      </div>
+
+      <p>Beyond blood pressure specifically, Mayo Clinic's clinical summary identifies a few other areas with genuine, if more preliminary, supporting research: L-arginine may decrease symptoms and improve quality of life in people with angina, and it may improve walking distance in people with intermittent claudication - the leg pain and weakness caused by reduced blood flow during walking. Both of these plausible extensions of the same nitric-oxide mechanism, though with a smaller evidence base than the blood pressure research described above.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">Where the Mechanism Doesn't Automatically Transfer</div>
+        <p>It's worth noting a specific area where L-arginine's plausible mechanism didn't produce the expected result: a triple-blind, randomized, placebo-controlled crossover trial specifically testing whether L-arginine improved cardiovascular and autonomic recovery following exercise found no effect, despite citing the same nitric-oxide-mediated vasodilation mechanism that underlies the blood pressure findings. This is a useful, honest reminder that a real, replicated effect in one physiological context (resting blood pressure) doesn't automatically generalize to every context a plausible mechanism might suggest (post-exercise recovery) - each specific claim deserves its own evidence check rather than borrowing confidence from a related, but distinct, finding.</p>
+      </div>
+
+      <div class="article-img">
+        <img src="/images/arginine-post-mi-caution.jpg" alt="A supplement bottle next to a printed medication warning label on a kitchen counter" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Serious Exception: A Specific, Well-Documented Contraindication</h2>
+
+      <p>This is the part of L-arginine's story that deserves the clearest, most direct treatment in this entire article, because it isn't a vague caution or a theoretical risk extrapolated from animal data - it's a specific, named clinical trial with a serious, real-world finding that continues to shape medical guidance today.</p>
+
+      <div class="warning-box">
+        <div class="warning-label">The VINTAGE MI Trial</div>
+        <p>A 2006 randomized controlled trial known as VINTAGE MI examined L-arginine supplementation in patients recovering from a recent myocardial infarction (heart attack), given alongside standard post-heart-attack medical treatment. The trial found that L-arginine was associated with higher mortality compared to placebo in this specific population - not simply "no benefit," but a signal pointing toward genuine harm. This finding has not been replicated in other populations, and the likely explanation involves arginine's effects specifically in acutely damaged cardiac tissue rather than a general property of the compound itself. But the finding was serious enough that Mayo Clinic's current clinical guidance states directly: L-arginine isn't recommended for people who have had a recent heart attack, due to concerns that the supplement might increase the risk of death.</p>
+      </div>
+
+      <p>This is worth being unambiguous about: if you have had a recent heart attack, L-arginine supplementation is not a reasonable choice to make on your own, regardless of how genuinely encouraging the blood pressure evidence described above might otherwise seem. The population and context matter enormously here - this isn't a reason to be broadly afraid of L-arginine's blood pressure benefits in a healthy or stable cardiovascular population, but it is a hard, specific line that shouldn't be crossed without direct medical guidance in the specific post-heart-attack context.</p>
+
+      <h2>Two Further Safety Considerations Worth Knowing</h2>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Documented Interaction</span>
+          <h4>Herpes Simplex Virus</h4>
+          <p>L-arginine can stimulate herpes simplex virus replication. Anyone with a history of cold sores or genital herpes should be cautious with high-dose supplementation, since it may increase outbreak frequency. Some practitioners address this by co-supplementing with L-lysine, an amino acid that competes with arginine for cellular transport, though this specific mitigation strategy has less formal trial support than the underlying caution itself.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Serious in Kidney Disease</span>
+          <h4>Kidney Function and Electrolytes</h4>
+          <p>L-arginine may disturb the body's electrolyte balance in people with kidney disease, and its use has caused deadly irregular heart rhythms in some people with kidney function problems or kidney failure. This is a distinct population-specific concern from the post-heart-attack contraindication above, and equally worth taking seriously.</p>
+        </div>
+      </div>
+
+      <p>Two more practical notes worth flagging: L-arginine can worsen allergies or asthma in some people, and if you have any surgery scheduled, disclose L-arginine use to your care team, since standard guidance is to stop the supplement at least two weeks before a procedure given its effects on blood clotting and vessel tone.</p>
+
+      <h2>A Practical Approach</h2>
+
+      <div class="checklist-box">
+        <h4>Using L-Arginine Sensibly</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>If you have elevated blood pressure and no contraindications, the evidence for L-arginine is genuinely more consistent than for many supplements in this category</strong> - two independent meta-analyses point in the same direction, with a plausible, well-understood mechanism.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Set realistic expectations based on your own baseline</strong> - the evidence suggests stronger effects for people who start with elevated blood pressure, and more modest effects for those with already-normal readings.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Disclose L-arginine use to your surgical team and stop at least two weeks before any planned procedure</strong>, per standard clinical guidance.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>If you have had a recent heart attack, do not take L-arginine without direct medical guidance</strong> - this is a specific, serious, well-documented contraindication, not a general caution.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>If you have kidney disease or a history of herpes simplex, discuss L-arginine with a physician before starting</strong> - both carry specific, documented risks worth individual medical input.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't expect L-arginine's blood pressure benefit to extend automatically to other plausible-sounding uses</strong>, such as post-exercise recovery - the specific outcome you care about deserves its own evidence check.</span>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Typical Studied Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Blood pressure (general population)</td>
+          <td>4 - 6g/day</td>
+          <td>Reflects doses commonly used across the pooled blood pressure trials</td>
+        </tr>
+        <tr>
+          <td>Blood pressure (hypertensive population, as studied)</td>
+          <td>Up to 10g/day, 10 weeks</td>
+          <td>Reflects the higher-dose trial specifically in hypertensive patients showing larger reductions</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Safety Notes</div>
+        <p>Never take L-arginine without medical guidance if you have had a recent heart attack, given the documented association with increased mortality in this specific population. Avoid or use with caution if you have kidney disease, given the risk of electrolyte disturbances and dangerous heart rhythm irregularities. Use with caution if you have a history of cold sores or genital herpes, given the documented potential for viral reactivation. L-arginine can worsen allergies and asthma in some people. Discuss use with a physician if you take blood-thinning medication, given arginine's effects on platelet aggregation and vessel tone. Disclose use to your surgical team and discontinue at least two weeks before any planned procedure.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🩺</div>
+          <h4>Blood Pressure Monitoring</h4>
+          <p>Tracking your own response over time is a practical, low-cost way to confirm whether the general trial finding applies meaningfully to you specifically.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🥗</div>
+          <h4>Standard Cardiovascular Care</h4>
+          <p>Best positioned as a discussed complement to, not a replacement for, established blood pressure management.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🧬</div>
+          <h4>L-Lysine (If Herpes History)</h4>
+          <p>Some practitioners pair these two competing amino acids specifically to offset arginine's herpes-reactivation potential, though formal trial support for this specific combination is limited.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Recent Heart Attack (Contraindicated)</h4>
+          <p>A specific, serious, well-documented contraindication - do not use without direct medical guidance in this context.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Kidney Disease (Caution)</h4>
+          <p>Documented risk of electrolyte disturbance and dangerous arrhythmias in this population - discuss with a physician first.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Blood Thinners / Upcoming Surgery (Caution)</h4>
+          <p>Disclose use to your care team and stop at least two weeks before any planned procedure.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">6.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          A genuinely well-replicated blood pressure effect, confirmed across two independent meta-analyses with a plausible, well-understood mechanism - stronger, more consistent evidence than many supplements covered on this site. The score is held back specifically by a serious, documented contraindication in one identifiable population (recent heart attack patients), along with real, specific risks for people with kidney disease or a herpes simplex history. This is a supplement where the general population evidence is genuinely solid, but where a small number of individual circumstances carry outsized importance for the safety decision.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/lithium-orotate-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-lithium-orotate.jpg" alt="Lithium Orotate" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">→ A Related Pattern: Good General Evidence, One Hard Exception</div>
+        <h4>How another supplement pairs solid population-level evidence with a specific, serious contraindication</h4>
+        <p>See how the same "generally sound, but not for this one specific group" structure plays out with lithium orotate.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>Dong, J.Y. et al. (2011). Effect of oral L-arginine supplementation on blood pressure: a meta-analysis of randomized, double-blind, placebo-controlled trials. <em>American Heart Journal</em>, 162(6), 959-965.</li>
+        <li>Shiraseb, F. et al. (2022). Effect of L-Arginine supplementation on blood pressure in adults: a systematic review and dose-response meta-analysis of randomized clinical trials. <em>Advances in Nutrition</em>.</li>
+        <li>Schulman, S.P. et al. (2006). L-arginine therapy in acute myocardial infarction: the Vascular Interaction With Age in Myocardial Infarction (VINTAGE MI) randomized clinical trial. <em>JAMA</em>, 295(1), 58-64.</li>
+        <li>Mayo Clinic (2026). L-arginine - Drugs and Supplements.</li>
+        <li>Mayo Clinic (2024). L-arginine: Does it lower blood pressure? Expert Answers.</li>
+        <li>Hadi, M. et al. (2019). The effect of l-arginine supplementation on lipid profile: a systematic review and meta-analysis of randomised controlled trials. <em>British Journal of Nutrition</em>.</li>
+        <li>L-Arginine Supplementation Did Not Impact the Rapid Recovery of Cardiovascular and Autonomic Function Following Exercise (2025). Triple-blind randomised placebo-controlled crossover trial.</li>
+        <li>Tehran Lipid and Glucose Study. Dietary L-arginine intake and the incidence of coronary heart disease.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>L-arginine is one piece of the puzzle. Get the full evidence-backed protocol - NMN, D3, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/lithium-orotate-guide.html" class="related-card">
+          <div class="related-img c-lithium">
+            <img src="/images/hero-lithium-orotate.jpg" alt="Lithium Orotate" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Lithium Orotate</span>
+            <h4>Lithium Orotate: A Reasonable Microdose Approach, With One Important Exception</h4>
+          </div>
+        </a>
+        <a href="/articles/glucosamine-vs-green-lipped-mussel-guide.html" class="related-card">
+          <div class="related-img c-jointhealth">
+            <img src="/images/hero-glm-glucosamine.jpg" alt="Joint Health" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Joint Health</span>
+            <h4>Glucosamine + Chondroitin vs. Green-Lipped Mussel: The Actual Evidence Comparison</h4>
+          </div>
+        </a>
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. Do not take L-arginine after a recent heart attack without direct medical guidance. Always consult a qualified healthcare professional before starting any supplement protocol, especially if you have kidney disease, a history of herpes simplex, or take blood-thinning medication. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
