@@ -94,6 +94,7 @@ const COLORS = {
 'c-arginine': 'background:linear-gradient(135deg,#1B4332,#7A1F2B)',
 'c-msm': 'background:linear-gradient(135deg,#7A5C10,#D4A853)',
 'c-seniorhealth': 'background:linear-gradient(135deg,#1B4332,#D4A853)',
+'c-grayhair': 'background:linear-gradient(135deg,#3D3D3D,#95D5B2)',
 };
 
 function makeCard(article, size) {
