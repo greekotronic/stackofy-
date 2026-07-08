@@ -1120,7 +1120,8 @@
     "image": "/images/hero-gray-hair.jpg",
     "color": "c-grayhair",
     "featured": false,
-    "type": "guide",
+    "type": "editorial",
+    "badgeType": "featured",
     "tags": "Gray Hair Melanocyte Stem Cells FTC Catalase",
     "readTime": "17 min",
     "description": "A Columbia study found gray hair reversal is genuinely possible if stem cells aren't depleted. The FTC sued three companies over catalase supplement claims, winning a $391,335 judgment. Here is the real science and the real fraud case."
