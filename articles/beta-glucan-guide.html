@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Beta-Glucan Fiber: Same Name, Two Completely Different Supplements - Stackofy</title>
+  <meta name="description" content="Two independent meta-analyses, one covering 58 trials and nearly 4,000 people, confirm that oat and barley beta-glucan genuinely lowers LDL cholesterol - solid enough that both the FDA and EFSA approved formal heart-health claims for it. But 'beta-glucan' on a label can mean a structurally different molecule sold for a completely different reason. Here is the honest, complete picture." />
+
+  <meta property="og:title" content="Beta-Glucan Fiber: Same Name, Two Completely Different Supplements" />
+  <meta property="og:description" content="Oat and barley beta-glucan has one of the best-substantiated health claims of any supplement on this site - both the FDA and EFSA agree at least 3g/day lowers LDL cholesterol. But yeast- and mushroom-derived beta-glucan is a structurally different molecule studied almost entirely for immune effects, and EFSA has rejected both the satiety claim and a manufacturer's specific blood-sugar claim. Here is what actually holds up, ingredient by ingredient." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://stackofy.com/articles/beta-glucan-guide.html" />
+  <meta property="og:image" content="https://stackofy.com/images/hero-beta-glucan.jpg" />
+
+  <link rel="icon" type="image/png" href="/favicon.svg" />
+
+  <style>
+    :root {
+      --green-dark: #1B4332; --green-mid: #2D6A4F; --green-light: #95D5B2;
+      --gold: #D4A853; --gold-light: #FDF3E0; --bg: #FAF8F4; --surface: #ffffff;
+      --text: #1A1A1A; --text-muted: #666666; --border: #E0DDD8;
+      --gradient: linear-gradient(135deg, #1B4332 0%, #2D6A4F 55%, #7A5C10 100%);
+      --radius: 12px; --radius-sm: 8px;
+    }
+    [data-theme="dark"] { --bg: #0F1A14; --surface: #1A2B20; --text: #F0EDE8; --text-muted: #9DB8AA; --border: #2A3D30; --gold-light: #2A220D; }
+    [data-theme="dark"] .highlight-box { background: #1A2B20; }
+    [data-theme="dark"] .warning-box { background: #2A1010 !important; }
+    [data-theme="dark"] .combo-card h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .checklist-box h4 { color: var(--green-light) !important; }
+    [data-theme="dark"] .check-yes { color: var(--green-light) !important; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; transition: background 0.3s, color 0.3s; }
+    a { text-decoration: none; color: inherit; }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s; }
+
+    .article-hero { position: relative; height: 380px; overflow: hidden; display: flex; align-items: flex-end; }
+    .hero-img { position: absolute; inset: 0; background: linear-gradient(135deg, #1a2a10, #2D5A1B, #1B4332); }
+    .hero-img img { width: 100%; height: 100%; object-fit: cover; opacity: 0.75; }
+    .hero-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(27,67,50,0.95) 0%, rgba(27,67,50,0.35) 60%, transparent 100%); }
+    .hero-content { position: relative; z-index: 2; padding: 2rem 3rem; max-width: 900px; width: 100%; margin: 0 auto; }
+    .article-tag { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; background: var(--gold); color: #1A1A1A; padding: 4px 10px; border-radius: 4px; display: inline-block; margin-bottom: 0.75rem; }
+    .hero-content h1 { color: #FAF8F4; font-size: 1.9rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.3px; margin-bottom: 0.75rem; }
+    .hero-meta { color: var(--green-light); font-size: 13px; display: flex; gap: 1.5rem; align-items: center; }
+
+    .article-wrapper { max-width: 900px; margin: 0 auto; padding: 2.5rem 2rem; }
+
+    .tldr-box { background: var(--gold-light); border-left: 4px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin-bottom: 2.5rem; }
+    .tldr-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .tldr-box ul { padding-left: 1.25rem; }
+    .tldr-box ul li { font-size: 14px; color: var(--text); margin-bottom: 4px; line-height: 1.5; }
+
+    .article-content { font-size: 16px; line-height: 1.8; color: var(--text); }
+    .article-content p { margin-bottom: 1.4rem; }
+    .article-content h2 { font-size: 1.4rem; font-weight: 700; color: var(--green-dark); margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--gold); display: inline-block; }
+    .article-content h3 { font-size: 1.05rem; font-weight: 600; color: var(--text); margin: 1.75rem 0 0.75rem; }
+    .article-content strong { color: var(--text); font-weight: 600; }
+    .article-content a { color: var(--green-dark); border-bottom: 1px solid var(--green-light); }
+
+    .article-img { width: 100%; border-radius: var(--radius); margin: 1.5rem 0; overflow: hidden; }
+    .article-img img { width: 100%; height: auto; display: block; max-height: 420px; object-fit: cover; }
+
+    .rct-visual { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); padding: 1.75rem; margin: 1.5rem 0; }
+    .rct-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1.25rem; }
+    .rct-row { display: flex; gap: 1rem; align-items: flex-start; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 0.5px solid var(--border); }
+    .rct-row:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .rct-n { font-size: 16px; font-weight: 700; color: var(--gold); width: 90px; flex-shrink: 0; text-align: center; }
+    .rct-n span { display: block; font-size: 9px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; color: var(--text-muted); margin-top: 2px; }
+    .rct-desc { font-size: 13px; color: var(--text); line-height: 1.5; }
+    .rct-highlight { background: var(--gold-light); border-radius: var(--radius-sm); padding: 0.5rem 0.75rem; margin-top: 0.75rem; font-size: 12px; color: var(--text); }
+
+    .evidence-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .evidence-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1.25rem; }
+    .evidence-tag { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; display: inline-block; padding: 2px 8px; border-radius: 4px; }
+    .evidence-tag.strong { background: #EAF5F0; color: var(--green-dark); }
+    .evidence-tag.moderate { background: var(--gold-light); color: #7A5C10; }
+    .evidence-tag.mixed { background: #F5F5F5; color: var(--text-muted); }
+    [data-theme="dark"] .evidence-tag.mixed { background: #2A2A2A; color: #B0B0B0; }
+    .evidence-card h4 { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .evidence-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+
+    .highlight-box { background: #F0F7F4; border-left: 4px solid var(--green-dark); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .highlight-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--green-dark); margin-bottom: 0.5rem; }
+    .highlight-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .warning-box { background: #FFF0F0; border-left: 4px solid #C0392B; border-radius: 0 var(--radius-sm) var(--radius-sm) 0; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .warning-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #C0392B; margin-bottom: 0.5rem; }
+    .warning-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .skip-box { background: var(--gold-light); border: 1px solid var(--gold); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .skip-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; }
+    .skip-box p { font-size: 14px; color: var(--text); line-height: 1.6; margin: 0; }
+
+    .checklist-box { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2rem 0; }
+    .checklist-box h4 { font-size: 14px; font-weight: 700; color: var(--green-dark); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 0.5px; }
+    .checklist-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 0.75rem; font-size: 14px; color: var(--text); }
+    .check-yes { color: var(--green-dark); font-weight: 700; flex-shrink: 0; }
+    .check-no { color: #C0392B; font-weight: 700; flex-shrink: 0; }
+
+    .combo-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+    .combo-card { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 1rem; text-align: center; }
+    .combo-icon { font-size: 24px; margin-bottom: 6px; }
+    .combo-card h4 { font-size: 13px; font-weight: 700; color: var(--green-dark); margin-bottom: 3px; }
+    .combo-card p { font-size: 11px; color: var(--text-muted); line-height: 1.4; }
+
+    .dosing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 14px; }
+    .dosing-table th { background: var(--green-dark); color: #FAF8F4; padding: 10px 14px; text-align: left; font-weight: 600; }
+    .dosing-table td { padding: 10px 14px; border-bottom: 0.5px solid var(--border); color: var(--text); }
+    .dosing-table tr:nth-child(even) td { background: var(--bg); }
+
+    .aaf-badge { background: var(--gradient); border-radius: var(--radius); padding: 1.25rem 1.5rem; margin: 2rem 0; display: flex; align-items: center; gap: 1rem; }
+    .aaf-score { font-size: 2.5rem; font-weight: 700; color: var(--gold); flex-shrink: 0; }
+    .aaf-label { color: #FAF8F4; font-size: 14px; line-height: 1.5; }
+    .aaf-label strong { display: block; font-size: 16px; margin-bottom: 2px; }
+
+    .sources { background: var(--surface); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 1.5rem; margin: 2.5rem 0; }
+    .sources-label { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 1rem; }
+    .sources ol { padding-left: 1.25rem; }
+    .sources li { font-size: 12px; color: var(--text-muted); margin-bottom: 0.5rem; line-height: 1.5; }
+
+    .safety-callout { display: flex; align-items: center; gap: 1.25rem; background: #FFF0F0; border: 1.5px solid #C0392B; border-radius: var(--radius); padding: 1.25rem; margin: 2.5rem 0; text-decoration: none; transition: transform 0.2s; }
+    .safety-callout:hover { transform: translateY(-2px); }
+    [data-theme="dark"] .safety-callout { background: #2A1010; }
+    .safety-callout-img { width: 90px; height: 90px; border-radius: var(--radius-sm); overflow: hidden; flex-shrink: 0; }
+    .safety-callout-img img { width: 100%; height: 100%; object-fit: cover; }
+    .safety-callout-body { flex: 1; }
+    .safety-callout-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: #C0392B; margin-bottom: 4px; }
+    [data-theme="dark"] .safety-callout-label { color: #FF8080; }
+    .safety-callout-body h4 { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.4; }
+    .safety-callout-body p { font-size: 12px; color: var(--text-muted); line-height: 1.4; margin: 0; }
+    .safety-callout-arrow { font-size: 20px; color: #C0392B; flex-shrink: 0; }
+    [data-theme="dark"] .safety-callout-arrow { color: #FF8080; }
+
+    .cta-block { background: var(--gradient); border-radius: var(--radius); padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-block h3 { color: #FAF8F4; font-size: 18px; font-weight: 700; margin-bottom: 0.5rem; }
+    .cta-block p { color: var(--green-light); font-size: 14px; margin-bottom: 1.5rem; }
+    .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .btn-gold { background: var(--gold); color: #1A1A1A; border: none; border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; font-weight: 600; display: inline-block; }
+    .btn-outline { background: transparent; color: #FAF8F4; border: 1px solid rgba(255,255,255,0.4); border-radius: var(--radius-sm); padding: 11px 22px; font-size: 14px; display: inline-block; }
+
+    .related-section { margin: 2.5rem 0; }
+    .related-title { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.75rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: var(--surface); border-radius: var(--radius); border: 0.5px solid var(--border); overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .related-card:hover { border-color: var(--green-dark); transform: translateY(-2px); }
+    .related-img { height: 110px; overflow: hidden; }
+    .related-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-body { padding: 0.875rem; }
+    .related-tag { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; background: #EAF5F0; color: var(--green-dark); padding: 2px 7px; border-radius: 4px; display: inline-block; margin-bottom: 0.4rem; }
+    .related-card h4 { font-size: 13px; font-weight: 600; color: var(--text); line-height: 1.4; }
+
+    .disclaimer { background: var(--gold-light); border-radius: var(--radius-sm); border: 0.5px solid var(--gold); padding: 1rem 1.25rem; margin: 2rem 0; font-size: 12px; color: var(--text-muted); line-height: 1.6; }
+    .disclaimer strong { color: var(--text); }
+
+    .c-arginine { background: linear-gradient(135deg, #2D6A4F, #D4A853); }
+    .c-research { background: linear-gradient(135deg, #1A1A1A, #D4A853); }
+    .c-seniorhealth { background: linear-gradient(135deg, #1B4332, #D4A853); }
+
+    @media (max-width: 600px) {
+      .hero-content { padding: 1.5rem 1.25rem !important; }
+      .hero-content h1 { font-size: 1.4rem !important; }
+      .article-wrapper { padding: 1.5rem 1rem !important; }
+      .evidence-grid { grid-template-columns: 1fr !important; }
+      .combo-grid { grid-template-columns: 1fr 1fr !important; }
+      .related-grid { grid-template-columns: 1fr !important; }
+    }
+  </style>
+  <script src="/header.js"></script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <div class="article-hero">
+    <div class="hero-img">
+      <img src="/images/hero-beta-glucan.jpg" alt="Hands cupping a wooden bowl of rolled oats and barley grains" onerror="this.style.display='none'" />
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="article-tag">Beta-Glucan</span>
+      <h1>Beta-Glucan Fiber: Same Name, Two Completely Different Supplements</h1>
+      <div class="hero-meta">
+        <span>Alethia Research Institute</span>
+        <span>·</span>
+        <span>19 min read</span>
+        <span>·</span>
+        <span>July 2026</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+
+    <div class="tldr-box">
+      <div class="tldr-label">TL;DR</div>
+      <ul>
+        <li>Two independent meta-analyses - one covering 28 randomized trials, a later one covering 58 trials and nearly 4,000 people - confirm that at least 3g/day of oat or barley beta-glucan meaningfully lowers LDL cholesterol, evidence solid enough that both the FDA and EFSA have approved formal heart-health claims for it, a genuine rarity among supplements covered on this site</li>
+        <li>"Beta-glucan" on a label doesn't always mean the same molecule: cereal beta-glucan from oats and barley has a (1,3)/(1,4) structure that lowers cholesterol, while yeast- and mushroom-derived beta-glucan has a structurally different (1,3)/(1,6) backbone studied almost entirely for immune effects - two different supplements sharing one name</li>
+        <li>EFSA has also approved a narrower blood-sugar claim requiring at least 3g of oat beta-glucan per 30g of available carbohydrate within the same meal - but rejected Nestlé's attempt to extend this claim to a specific processed breakfast cereal, twice, citing insufficient comparative evidence</li>
+        <li>The popular claim that beta-glucan increases fullness and reduces calorie intake has not survived regulatory scrutiny - EFSA rejected the beta-glucan-specific satiety claim, part of a broader pattern where the agency rejected 55 of 61 appetite-related claims reviewed across all ingredients from 2010 to 2020</li>
+        <li>A placebo-controlled trial of yeast-derived (1,3)/(1,6) beta-glucan found a 25% reduction in symptomatic common colds over 16 weeks, and a separate trial in older adults found improved innate immune markers - genuine evidence, but for a structurally different product than the cholesterol-lowering cereal fiber</li>
+        <li>Cereal beta-glucan has an unusually clean safety profile - unlike psyllium, it isn't associated with esophageal obstruction risk - but anyone on immunosuppressant medication or with a history of organ transplant should avoid the immune-focused yeast/mushroom type without medical guidance</li>
+      </ul>
+    </div>
+
+    <div class="article-content">
+
+      <p>Beta-glucan occupies a strange position among the supplements covered on this site. It might be the closest thing to a genuinely regulator-approved supplement claim that exists anywhere in this category - both the FDA and EFSA have independently reviewed the evidence and agreed a specific dose does a specific thing. And yet the same word, "beta-glucan," is also used to sell a structurally different molecule for a completely different reason, with a completely different, much thinner body of evidence behind it. Most of the confusion and disappointment around this ingredient traces back to that one fact, so it's worth starting there rather than with the cholesterol numbers.</p>
+
+      <h2>Two Molecules Wearing One Name</h2>
+
+      <p>Beta-glucans are a broad family of polysaccharides - chains of glucose molecules - found in the cell walls of oats, barley, certain yeasts, mushrooms, algae, and bacteria. What matters isn't that they're all "beta-glucan," it's how the individual glucose units are linked together, because that structural detail determines what the molecule actually does in your body.</p>
+
+      <p>Cereal beta-glucan, from oats and barley, has a mixed (1,3)/(1,4) linkage pattern. This structure makes it highly viscous and soluble - it forms a thick gel in your digestive tract, which is the physical property behind essentially everything in the cholesterol and blood-sugar sections below. Yeast- and mushroom-derived beta-glucan, by contrast, typically has a (1,3)/(1,6) linkage pattern. This structure isn't particularly viscous; instead, it's recognized by pattern-recognition receptors on immune cells (dectin-1, in particular), which is why this version is studied almost entirely for immune effects rather than cholesterol or blood sugar. A supplement bottle simply listing "beta-glucan" without specifying the source is, functionally, not telling you which of these two things you're actually buying.</p>
+
+      <div class="article-img">
+        <img src="/images/beta-glucan-food-sources.jpg" alt="Whole oats, barley grains, and sliced shiitake and maitake mushrooms on a dark slate surface" onerror="this.style.display='none'" />
+      </div>
+
+      <h2>The Cholesterol Evidence: About as Solid as Supplement Science Gets</h2>
+
+      <p>This is the part of beta-glucan's story with the strongest, most consistently replicated evidence base on this entire site. Unlike many supplements where one meta-analysis finds an effect and a later one can't confirm it, oat and barley beta-glucan has been reviewed repeatedly, by different teams, over more than a decade, and the direction and rough size of the effect keeps holding up.</p>
+
+      <div class="rct-visual">
+        <div class="rct-title">Three Independent Reviews, One Consistent Effect</div>
+        <div class="rct-row">
+          <div class="rct-n">2014<br>28 RCTs<span>Minimum 3g/Day</span></div>
+          <div class="rct-desc">A meta-analysis of 28 randomized controlled trials found that at least 3g of oat beta-glucan per day reduced LDL cholesterol by 0.25 mmol/L - roughly a 6% decrease compared to control groups.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">2016<br>58 RCTs<span>3,974 Participants</span></div>
+          <div class="rct-desc">A larger, more comprehensive meta-analysis pooling 58 randomized trials and 3,974 participants, using a daily dose of 3.5g of oat beta-glucan, found significant reductions in LDL cholesterol (4.2%), non-HDL cholesterol (4.8%), and Apolipoprotein B (2.3%) - three related but distinct markers all moving in the same direction.</div>
+        </div>
+        <div class="rct-row">
+          <div class="rct-n">2023<br>17 RCTs<span>Systematic Review</span></div>
+          <div class="rct-desc">A more recent systematic review of 17 randomized trials affirmed the earlier findings at roughly the same 3g/day threshold, and additionally noted a triglyceride-lowering effect that was especially pronounced in participants who were overweight, had diabetes, or had metabolic syndrome.</div>
+        </div>
+        <div class="rct-highlight">The proposed mechanism is mechanical rather than exotic: the viscous gel beta-glucan forms in the gut interferes with bile acid reabsorption, meaning more bile acids are excreted rather than recycled. Since the liver manufactures new bile acids using cholesterol as a raw material, this pulls LDL cholesterol out of the bloodstream to replace what was lost. This evidence base is strong enough that the FDA approved the wording "may reduce the risk of heart disease" for 3g/day of oat or barley beta-glucan as part of a low-saturated-fat diet, and EFSA separately approved the claim "oat beta-glucan has been shown to lower/reduce blood cholesterol" - formal regulatory sign-off that very few supplements on this site have earned.</div>
+      </div>
+
+      <h2>Blood Sugar: A Real, But Much Narrower, Claim</h2>
+
+      <p>Beta-glucan's viscous gel also slows gastric emptying and glucose absorption, which is the basis for a second, separate EFSA-approved claim: consuming at least 3g of oat or barley beta-glucan alongside 30g of available carbohydrate, within the same meal, reduces the post-meal (postprandial) rise in blood glucose. This is a genuinely established effect - but the "within the same meal, at this specific ratio" qualifier matters more than it might seem, and a recent regulatory case study makes that point clearly.</p>
+
+      <div class="article-img">
+        <img src="/images/beta-glucan-artery-binding.jpg" alt="Abstract cross-section of a blood vessel with golden particles representing cholesterol being carried away by fiber" onerror="this.style.display='none'" />
+      </div>
+
+      <div class="skip-box">
+        <div class="skip-label">When a Real Effect Isn't Automatically Proof for a Specific Product</div>
+        <p>In 2021, Nestlé submitted a health claim to EFSA for a specific ready-to-eat breakfast cereal fortified with oat and barley beta-glucan, manufactured via pressure cooking, at a lower dose than the standard claim (1.3g beta-glucan per 25g available carbohydrate rather than the established 3g per 30g). EFSA's panel rejected the application, not because the underlying beta-glucan-and-blood-glucose mechanism is wrong - the panel explicitly reaffirmed that the general effect "is well established" - but because Nestlé hadn't shown that this specific processed product, at this specific lower dose, actually delivered a comparable effect to unprocessed food sources. Nestlé appealed and resubmitted; EFSA reviewed the comments and upheld its rejection in 2022, again citing insufficient comparative evidence. This is a useful, concrete example of a distinction that matters throughout supplement research: a real, well-established mechanism in one context doesn't automatically transfer to every branded product that name-drops it.</p>
+      </div>
+
+      <h2>Satiety and Weight Loss: The Claim That Didn't Hold Up</h2>
+
+      <p>Beta-glucan is frequently marketed as an appetite suppressant - the same viscous gel that slows glucose absorption is proposed to also increase feelings of fullness and reduce total calorie intake. This is a plausible-sounding extension of a real physical property, but it's specifically the part of the beta-glucan story that regulators have not accepted.</p>
+
+      <div class="highlight-box">
+        <div class="highlight-label">A Claim EFSA Reviewed and Rejected</div>
+        <p>EFSA has specifically evaluated and rejected a proposed health claim linking beta-glucans from oats and barley to "increase in satiety leading to a reduction in energy intake," finding the submitted evidence insufficient to establish a cause-and-effect relationship. This isn't an isolated case: a review of EFSA's appetite-related health claim decisions between 2010 and 2020 found that 55 of 61 applications covering hunger, fullness, energy intake, satiation, and satiety across all ingredients were rejected, with only three weight-management and three blood-glucose claims ultimately authorized. That base rate is worth keeping in mind any time a fiber supplement's marketing leans on "keeps you fuller for longer" - it's the single hardest category of health claim to substantiate, for any ingredient, not just this one.</p>
+      </div>
+
+      <h2>The Immune Story Is a Completely Separate Supplement</h2>
+
+      <p>Everything above concerns the viscous, cholesterol-lowering (1,3)/(1,4) beta-glucan from oats and barley. Yeast- and mushroom-derived (1,3)/(1,6) beta-glucan, usually sourced from <em>Saccharomyces cerevisiae</em> cell walls or specific mushroom extracts, has its own separate research base focused on immune function rather than lipids or blood sugar - and it deserves to be evaluated entirely on its own terms.</p>
+
+      <div class="evidence-grid">
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Placebo-Controlled RCT</span>
+          <h4>Common Cold Frequency</h4>
+          <p>A double-blind, randomized, placebo-controlled trial gave 162 healthy adults with recurring infections either 900mg/day of insoluble yeast (1,3)/(1,6)-beta-glucan or placebo for 16 weeks. The beta-glucan group had 25% fewer symptomatic common cold episodes than placebo, with milder progression during the colds that did occur.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag moderate">Older Adults, 90 Days</span>
+          <h4>Innate Immune Markers</h4>
+          <p>A separate double-blind, placebo-controlled trial in community-dwelling adults aged 50-70 tested 250mg/day of yeast-derived beta-glucan over 90 winter days, finding it well tolerated and associated with changes in innate immune parameters measured in blood and saliva samples.</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Mechanistically Distinct</span>
+          <h4>How It's Thought to Work</h4>
+          <p>Unlike cereal beta-glucan's physical, gel-forming mechanism, yeast and mushroom beta-glucan is recognized directly by dectin-1 and other pattern-recognition receptors on macrophages and natural killer cells - researchers describe it as immunomodulatory (capable of both activating and calming immune responses) rather than a simple "immune booster."</p>
+        </div>
+        <div class="evidence-card">
+          <span class="evidence-tag mixed">Real, But Underexplored</span>
+          <h4>Autoimmune Conditions</h4>
+          <p>Because this form of beta-glucan interacts directly with immune receptors, there's a reasonable theoretical question about its effect in autoimmune disease - but the clinical trials establishing its safety and immune effects were conducted in healthy adults, not people with autoimmune conditions, so this specific population remains a genuine evidence gap rather than a settled question either way.</p>
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <div class="warning-label">Who Should Be Cautious With This Specific Type</div>
+        <p>Because yeast- and mushroom-derived beta-glucan actively engages the immune system, it carries real, distinct cautions that don't apply to cereal beta-glucan. It's not recommended for people taking immunosuppressant medication or with a history of organ transplant, since it could theoretically interfere with how those drugs work - guidance echoed by transplant health organizations urging caution with any immune-active supplement in that population. People with mold or fungal allergies have also reported rare allergic reactions to yeast-derived preparations specifically. None of this applies to the oat and barley beta-glucan discussed in the cholesterol and blood-sugar sections above - it's a distinct caution tied to the structurally different, immune-active version of the ingredient.</p>
+      </div>
+
+      <h2>A Practical Approach</h2>
+
+      <div class="checklist-box">
+        <h4>Using Beta-Glucan Sensibly</h4>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>If cholesterol management is your goal, oat or barley beta-glucan at 3g/day or more has one of the best-substantiated evidence bases of any supplement on this site</strong> - confirmed across three independent reviews and formally recognized by both the FDA and EFSA.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>Whole food sources work just as well as concentrated extracts for the cholesterol effect</strong> - roughly 75g of whole oats, 55g of oat bran, or 45g of barley delivers the studied 3g/day threshold, alongside other genuinely useful nutrients.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-yes">✓</span>
+          <span><strong>If a specific meal's blood sugar spike is your target, make sure the 3g beta-glucan per 30g carbohydrate ratio is actually inside that meal</strong>, not taken separately at another time of day - the claim is specifically about what's eaten together.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't assume "beta-glucan" on a label automatically means the cholesterol-lowering type</strong> - check whether the source is oat/barley (cereal, cholesterol/blood sugar) or yeast/mushroom (immune-focused) before deciding what you're actually buying it for.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>Don't buy beta-glucan expecting a meaningful appetite-suppression or weight-loss effect</strong> - EFSA specifically reviewed and rejected this claim, and it sits within a category where the large majority of similar appetite claims have failed scrutiny.</span>
+        </div>
+        <div class="checklist-item">
+          <span class="check-no">✗</span>
+          <span><strong>If you take immunosuppressant medication or have had an organ transplant, avoid yeast- or mushroom-derived immune beta-glucan without direct medical guidance</strong> - this caution doesn't apply to oat or barley beta-glucan used for cholesterol.</span>
+        </div>
+      </div>
+
+      <h2>Dosing</h2>
+
+      <table class="dosing-table">
+        <tr>
+          <th>Purpose</th>
+          <th>Typical Studied Dose</th>
+          <th>Notes</th>
+        </tr>
+        <tr>
+          <td>Cholesterol (oat or barley beta-glucan)</td>
+          <td>3 - 3.5g/day</td>
+          <td>The FDA/EFSA-recognized threshold; consistent daily intake matters more than timing</td>
+        </tr>
+        <tr>
+          <td>Post-meal blood sugar (oat beta-glucan)</td>
+          <td>3g per 30g available carbohydrate</td>
+          <td>Must be consumed within the same meal as the carbohydrate to match the studied claim</td>
+        </tr>
+        <tr>
+          <td>Immune support (yeast beta-glucan, separate product)</td>
+          <td>250 - 900mg/day</td>
+          <td>Studied primarily for common cold frequency and innate immune markers, not cholesterol</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <div class="warning-label">Safety Notes</div>
+        <p>Oat and barley beta-glucan has an unusually clean safety profile among viscous fibers - unlike psyllium husk, it isn't associated with esophageal obstruction risk, which is part of why regulators describe it as gentle on the digestive system. Still, mix concentrated powder products with the amount of fluid stated on the label, and introduce high doses gradually - sudden large amounts of any viscous fiber can cause temporary bloating, gas, or mild diarrhea while gut bacteria adjust. Yeast- and mushroom-derived immune beta-glucan should be avoided without medical guidance by anyone on immunosuppressant medication or with a history of organ transplant, and used cautiously by anyone with a known mold or fungal allergy. Safety in pregnancy and breastfeeding hasn't been well established for either type. As with any fiber supplement, check with a physician before combining high-dose beta-glucan with other medications, since fiber can affect the absorption timing of some drugs.</p>
+      </div>
+
+      <h2>What It Stacks Well With</h2>
+
+      <div class="combo-grid">
+        <div class="combo-card">
+          <div class="combo-icon">🌾</div>
+          <h4>Whole Oats & Barley</h4>
+          <p>The cheapest, best-studied way to hit the 3g/day cholesterol threshold, with the added benefit of other nutrients whole grains provide.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🌱</div>
+          <h4>Plant Sterols / Stanols</h4>
+          <p>A separately evidence-backed cholesterol-lowering mechanism, sometimes co-formulated with beta-glucan for a combined effect.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">💧</div>
+          <h4>Adequate Water Intake</h4>
+          <p>Concentrated beta-glucan powders should be mixed with enough fluid, per label instructions, to work as intended and stay comfortable.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">🥣</div>
+          <h4>Meals Containing Carbohydrate</h4>
+          <p>The blood-sugar claim specifically requires beta-glucan to be eaten alongside the carbohydrate it's meant to blunt, not on its own.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Immunosuppressant Therapy (Caution)</h4>
+          <p>Applies specifically to yeast/mushroom immune beta-glucan - avoid without direct medical guidance if on immunosuppressants or post-transplant.</p>
+        </div>
+        <div class="combo-card">
+          <div class="combo-icon">⚠️</div>
+          <h4>Autoimmune Disease (Caution)</h4>
+          <p>A genuine evidence gap for immune-active beta-glucan specifically - the trials establishing its effects were run in healthy adults.</p>
+        </div>
+      </div>
+
+      <div class="aaf-badge">
+        <div class="aaf-score">7.5/10</div>
+        <div class="aaf-label">
+          <strong>Anti-Aging Factor</strong>
+          One of the higher scores on this site, reflecting genuinely rare regulatory substantiation: three independent reviews and two separate agencies (FDA and EFSA) agree that oat and barley beta-glucan lowers LDL cholesterol at a specific, well-defined dose. The score is held back by two things - the fact that "beta-glucan" is sold as a single ingredient when it's really two structurally different molecules with two different evidence bases, and EFSA's explicit rejection of the satiety claim and a manufacturer-specific blood-sugar claim, both of which still show up regularly in marketing.
+        </div>
+      </div>
+
+    </div>
+
+    <a href="/articles/research-flaws-guide.html" class="safety-callout">
+      <div class="safety-callout-img">
+        <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+      </div>
+      <div class="safety-callout-body">
+        <div class="safety-callout-label">→ A Related Pattern: A Real Effect, But Not Automatic Proof for One Product</div>
+        <h4>How Nestlé's rejected beta-glucan cereal claim illustrates a mistake worth watching for everywhere</h4>
+        <p>See our framework for telling the difference between an established mechanism and evidence for the specific product in front of you.</p>
+      </div>
+      <div class="safety-callout-arrow">→</div>
+    </a>
+
+    <div class="sources">
+      <div class="sources-label">Sources & Further Reading</div>
+      <ol>
+        <li>AbuMweis, S.S. et al. (2010). Beta-glucan from barley and its lipid-lowering capacity: a meta-analysis of randomized, controlled trials. <em>European Journal of Clinical Nutrition</em>.</li>
+        <li>Whitehead, A. et al. (2014). Cholesterol-lowering effects of oat β-glucan: a meta-analysis of randomized controlled trials. <em>American Journal of Clinical Nutrition</em>, 100(6), 1413-1421.</li>
+        <li>Ho, H.V.T. et al. (2016). The effect of oat β-glucan on LDL-cholesterol, non-HDL-cholesterol and apoB for CVD risk reduction: a systematic review and meta-analysis of randomised-controlled trials. <em>British Journal of Nutrition</em>.</li>
+        <li>HEART UK (2024-2025). Oats and Barley - cholesterol-lowering evidence summary.</li>
+        <li>EFSA NDA Panel (2010, 2011). Scientific Opinions on oat and barley beta-glucan and lowering of blood LDL-cholesterol, pursuant to Article 14 of Regulation (EC) No 1924/2006.</li>
+        <li>EFSA NDA Panel (2011). Scientific Opinion on beta-glucans from oats and barley and satiety/energy intake, post-prandial glycaemic responses, and digestive function, pursuant to Article 13(1).</li>
+        <li>NutritionInsight (2021) and FoodNavigator (2022). EFSA rejection and upheld rejection of Nestlé's beta-glucan breakfast cereal blood-glucose health claim.</li>
+        <li>Auinger, A. et al. (2013). Yeast (1,3)-(1,6)-beta-glucan helps to maintain the body's defence against pathogens: a double-blind, randomized, placebo-controlled, multicentric study in healthy subjects. <em>European Journal of Nutrition</em>, 52(8), 1913-1918.</li>
+        <li>Talbott, S.M. et al. Yeast-derived β-1,3/1,6 glucan, upper respiratory tract infection and innate immunity in older adults. <em>PubMed</em>.</li>
+        <li>A content analysis of EFSA's scientific opinions on authorised and rejected appetite-related health claims (2010-2020). <em>ScienceDirect</em>.</li>
+        <li>Examine.com and WebMD. Beta-Glucans: Uses, Dosage, Side Effects, Precautions, and Interactions - safety and structure-source overview.</li>
+      </ol>
+    </div>
+
+    <div class="cta-block">
+      <h3>Want the Complete Longevity Stack?</h3>
+      <p>Beta-glucan is one piece of the puzzle. Get the full evidence-backed protocol - NMN, D3, Omega-3, dosing, stacking and a 30-day starter plan.</p>
+      <div class="cta-buttons">
+        <a href="https://alethiaresearch.gumroad.com/l/nmn-buyers-guide" class="btn-gold">Get the NMN Buyer's Protocol - $47</a>
+        <a href="https://www.amazon.com/dp/B0FVL882KJ" class="btn-outline">The $1,000 Longevity Plan on Amazon</a>
+      </div>
+    </div>
+
+    <div class="related-section">
+      <div class="related-title">More Articles</div>
+      <div class="related-grid">
+        <a href="/articles/l-arginine-guide.html" class="related-card">
+          <div class="related-img c-arginine">
+            <img src="/images/hero-l-arginine.jpg" alt="L-Arginine" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">L-Arginine</span>
+            <h4>L-Arginine and Blood Pressure: What Works, and Who Should Never Take It</h4>
+          </div>
+        </a>
+        <a href="/articles/senior-health-protocol-guide.html" class="related-card">
+          <div class="related-img c-seniorhealth">
+            <img src="/images/hero-senior-health.jpg" alt="Senior Health Protocol" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Protocol</span>
+            <h4>The Senior Health Protocol: Movement First, Supplements Second, By Risk Area</h4>
+          </div>
+        </a>
+        <a href="/articles/research-flaws-guide.html" class="related-card">
+          <div class="related-img c-research">
+            <img src="/images/hero-research-flaws.jpg" alt="Research Flaws" onerror="this.style.display='none'" />
+          </div>
+          <div class="related-body">
+            <span class="related-tag">Critical Thinking</span>
+            <h4>Why Most Published Research Findings Are False</h4>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This article is for informational purposes only and does not constitute medical advice. If you take immunosuppressant medication or have a history of organ transplant, avoid yeast- or mushroom-derived immune beta-glucan without direct medical guidance. Always consult a qualified healthcare professional before starting any supplement protocol, particularly if you take other medications or have an underlying health condition. Alethia Research Institute is not affiliated with any supplement manufacturer.
+    </div>
+
+  </div>
+
+  <script>
+    if (localStorage.getItem('theme') === 'dark') {
+      document.body.setAttribute('data-theme', 'dark');
+    }
+    window.addEventListener('scroll', () => {
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / docHeight) * 100;
+      document.getElementById('progress-bar').style.width = scrolled + '%';
+    });
+  </script>
+
+</body>
+</html>
