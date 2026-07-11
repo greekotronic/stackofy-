@@ -95,6 +95,10 @@ const COLORS = {
 'c-msm': 'background:linear-gradient(135deg,#7A5C10,#D4A853)',
 'c-seniorhealth': 'background:linear-gradient(135deg,#1B4332,#D4A853)',
 'c-grayhair': 'background:linear-gradient(135deg,#3D3D3D,#95D5B2)',
+'c-betaglucan': 'background:linear-gradient(135deg,#7A5C10,#95D5B2)',
+'c-blackseedoil': 'background:linear-gradient(135deg,#7A5C10,#1B4332)',
+'c-moringa': 'background:linear-gradient(135deg,#2D6A4F,#D4A853)',
+'c-seabuckthorn': 'background:linear-gradient(135deg,#D4A853,#1B4332)',
 };
 
 function makeCard(article, size) {
