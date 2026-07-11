@@ -99,6 +99,7 @@ const COLORS = {
 'c-blackseedoil': 'background:linear-gradient(135deg,#7A5C10,#1B4332)',
 'c-moringa': 'background:linear-gradient(135deg,#2D6A4F,#D4A853)',
 'c-seabuckthorn': 'background:linear-gradient(135deg,#D4A853,#1B4332)',
+'c-vitamina': 'background:linear-gradient(135deg,#D4A853,#2D6A4F)',
 };
 
 function makeCard(article, size) {

@@ -1112,7 +1112,8 @@
     "tags": "Senior Health Protocol Sarcopenia Falls Polypharmacy",
     "readTime": "22 min",
     "description": "Resistance training plus protein plus vitamin D outperforms any supplement alone for preserving muscle. Vitamin D only reduces falls in the actually deficient. Polypharmacy itself is a top predictor of falls and hospitalization."
-  }{
+  },
+  {
     "title": "Can You Reverse Gray Hair? What Actually Works",
     "tag": "Gray Hair",
     "url": "/articles/gray-hair-reversal-guide.html",
@@ -1124,7 +1125,8 @@
     "tags": "Gray Hair Melanocyte Stem Cells FTC Catalase",
     "readTime": "26 min",
     "description": "A Columbia study found gray hair reversal is genuinely possible if stem cells aren't depleted. The FTC sued three companies over catalase supplement claims, winning a $391,335 judgment. Here is the real science and the real fraud case."
-  },{
+  },
+  {
     "title": "Beta-Glucan Fiber: Same Name, Two Completely Different Supplements",
     "tag": "Beta-Glucan",
     "url": "/articles/beta-glucan-guide.html",
@@ -1135,7 +1137,8 @@
     "tags": "Beta-Glucan Fiber Cholesterol Oat Barley Immune System",
     "readTime": "26 min",
     "description": "Oat and barley beta-glucan has an FDA- and EFSA-approved cholesterol claim - but yeast- and mushroom-derived beta-glucan is a structurally different molecule sold for a completely different reason."
-  },{
+  },
+  {
     "title": "Black Seed Oil: The Supplement Marketed as a \"Cure for Everything\"",
     "tag": "Black Seed Oil",
     "url": "/articles/black-seed-oil-guide.html",
@@ -1146,7 +1149,8 @@
     "tags": "Black Seed Oil Nigella Sativa Blood Sugar Cholesterol Thymoquinone Diabetes",
     "readTime": "19 min",
     "description": "A 16-trial meta-analysis confirms real reductions in blood glucose, HbA1c, and LDL cholesterol. But the widely marketed cancer-cure claim rests on cell-culture studies, not human trials."
-  },{
+  },
+  {
     "title": "Moringa: Real Nutrient Density, Overstated Blood Sugar Claims",
     "tag": "Moringa",
     "url": "/articles/moringa-guide.html",
@@ -1157,7 +1161,8 @@
     "tags": "Moringa Nutrient Density Blood Sugar Blood Pressure Plant Protein",
     "readTime": "18 min",
     "description": "Moringa's nutrient-density comparisons check out - but the widely marketed blood sugar claim doesn't hold up under the best human-only evidence, while a newer meta-analysis finds a real blood pressure effect."
-  },{
+  },
+  {
     "title": "Does Sea Buckthorn Oil Work for Dry Eyes and Skin? What the Research Shows",
     "tag": "Sea Buckthorn Oil",
     "url": "/articles/sea-buckthorn-oil-guide.html",
@@ -1168,5 +1173,17 @@
     "tags": "Sea Buckthorn Oil Dry Eyes Omega-7 Skin Health Cholesterol Menopause",
     "readTime": "26 min",
     "description": "A well-conducted RCT confirms real dry eye relief - but seed oil and pulp oil are chemically different products, and the newest cholesterol meta-analysis walks back earlier positive findings."
+  },
+  {
+    "title": "Vitamin A: Real Deficiency Risk, Real Overdose Risk, Narrow Safe Range",
+    "tag": "Vitamin A",
+    "url": "/articles/vitamin-a-guide.html",
+    "image": "/images/hero-vitamin-a.jpg",
+    "color": "c-vitamina",
+    "featured": false,
+    "type": "guide",
+    "tags": "Vitamin A Retinol Beta-Carotene Pregnancy Deficiency Teratogenic",
+    "readTime": "20 min",
+    "description": "A 1995 NEJM study found a 1-in-57 birth defect risk above 10,000 IU/day in early pregnancy, and two major trials found beta-carotene raised lung cancer risk in smokers. Real deficiency, real overdose risk, narrow safe range."
   }
 ]
