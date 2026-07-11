@@ -1125,43 +1125,37 @@
     "tags": "Gray Hair Melanocyte Stem Cells FTC Catalase",
     "readTime": "17 min",
     "description": "A Columbia study found gray hair reversal is genuinely possible if stem cells aren't depleted. The FTC sued three companies over catalase supplement claims, winning a $391,335 judgment. Here is the real science and the real fraud case."
-  },
-  {
+  },{
     "title": "Beta-Glucan Fiber: Same Name, Two Completely Different Supplements",
     "tag": "Beta-Glucan",
     "url": "/articles/beta-glucan-guide.html",
     "image": "/images/hero-beta-glucan.jpg",
-    "color": "#B8934A",
+    "color": "c-betaglucan",
     "featured": false,
-    "type": "protocol",
-    "badgeType": "protocol",
-    "tags": ["fiber", "cholesterol", "heart health", "oat", "barley", "immune system"],
-    "readTime": "19 min",
+    "type": "guide",
+    "tags": "Beta-Glucan Fiber Cholesterol Oat Barley Immune System",
+    "readTime": "26 min",
     "description": "Oat and barley beta-glucan has an FDA- and EFSA-approved cholesterol claim - but yeast- and mushroom-derived beta-glucan is a structurally different molecule sold for a completely different reason."
-  },
-  {
+  },{
     "title": "Black Seed Oil: The Supplement Marketed as a \"Cure for Everything\"",
     "tag": "Black Seed Oil",
     "url": "/articles/black-seed-oil-guide.html",
     "image": "/images/hero-black-seed-oil.jpg",
-    "color": "#7A5C10",
+    "color": "c-blackseedoil",
     "featured": false,
-    "type": "protocol",
-    "badgeType": "protocol",
-    "tags": ["blood sugar", "cholesterol", "asthma", "thymoquinone", "traditional medicine", "diabetes"],
+    "type": "guide",
+    "tags": "Black Seed Oil Nigella Sativa Blood Sugar Cholesterol Thymoquinone Diabetes",
     "readTime": "19 min",
     "description": "A 16-trial meta-analysis confirms real reductions in blood glucose, HbA1c, and LDL cholesterol. But the widely marketed cancer-cure claim rests on cell-culture studies, not human trials."
-  },
-  {
+  },{
     "title": "Moringa: Real Nutrient Density, Overstated Blood Sugar Claims",
     "tag": "Moringa",
     "url": "/articles/moringa-guide.html",
     "image": "/images/hero-moringa.jpg",
-    "color": "#2D6A4F",
+    "color": "c-moringa",
     "featured": false,
-    "type": "protocol",
-    "badgeType": "protocol",
-    "tags": ["nutrient density", "blood sugar", "blood pressure", "pregnancy safety", "plant protein"],
+    "type": "guide",
+    "tags": "Moringa Nutrient Density Blood Sugar Blood Pressure Plant Protein",
     "readTime": "18 min",
     "description": "Moringa's nutrient-density comparisons check out - but the widely marketed blood sugar claim doesn't hold up under the best human-only evidence, while a newer meta-analysis finds a real blood pressure effect."
   },{
@@ -1169,12 +1163,11 @@
     "tag": "Sea Buckthorn Oil",
     "url": "/articles/sea-buckthorn-oil-guide.html",
     "image": "/images/hero-sea-buckthorn-oil.jpg",
-    "color": "#D4A853",
+    "color": "c-seabuckthorn",
     "featured": false,
-    "type": "protocol",
-    "badgeType": "protocol",
-    "tags": ["dry eyes", "omega-7", "skin health", "cholesterol", "menopause"],
-    "readTime": "18 min",
+    "type": "guide",
+    "tags": "Sea Buckthorn Oil Dry Eyes Omega-7 Skin Health Cholesterol Menopause",
+    "readTime": "26 min",
     "description": "A well-conducted RCT confirms real dry eye relief - but seed oil and pulp oil are chemically different products, and the newest cholesterol meta-analysis walks back earlier positive findings."
   }
 ]
