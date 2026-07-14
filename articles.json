@@ -1231,5 +1231,17 @@
     "tags": "Perimenopause Creatine Magnesium Omega-3 Menopause Hormones",
     "readTime": "22 min",
     "description": "There is no single blood test for perimenopause. Creatine's first dedicated trial shows real promise, magnesium's hot-flash evidence shrank over time, and the largest omega-3 trial found no effect at all."
+  },{
+    "title": "The Vegan Child Nutrition Guide: Real Risks, Real Fixes",
+    "tag": "Protocol",
+    "url": "/articles/vegan-child-nutrition-guide.html",
+    "image": "/images/hero-vegan-child-nutrition.jpg",
+    "color": "c-veganchild",
+    "featured": false,
+    "type": "editorial",
+    "badgeType": "featured",
+    "tags": "Vegan Children B12 Deficiency Pediatric Nutrition Iodine DHA",
+    "readTime": "23 min",
+    "description": "Real, documented B12 deficiency cases in vegan infants have caused severe, sometimes permanent neurological harm. Major pediatric bodies genuinely disagree on the overall verdict. Here is what's actually risky, and what usually isn't."
   }
 ]
