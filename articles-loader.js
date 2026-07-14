@@ -103,6 +103,7 @@ const COLORS = {
 'c-silicon': 'background:linear-gradient(135deg,#95D5B2,#7A5C10)',
 'c-bacopa': 'background:linear-gradient(135deg,#2D6A4F,#D4A853)',
 'c-animalhuman': 'background:linear-gradient(135deg,#1B4332,#7A5C10)',
+'c-perimenopause': 'background:linear-gradient(135deg,#1B4332,#D4A853)',
 };
 
 function makeCard(article, size) {

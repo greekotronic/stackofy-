@@ -1219,5 +1219,17 @@
     "tags": "Animal Studies Thalidomide Insulin Clinical Trials Research Methodology",
     "readTime": "21 min",
     "description": "Insulin's discovery is one of medicine's cleanest animal-to-human translations. Thalidomide passed every animal test of its era and still caused 10,000 birth defects. Here is what actually determines the difference."
+  },{
+    "title": "Is It Perimenopause? Recognizing the Signs, and What Actually Helps",
+    "tag": "Protocol",
+    "url": "/articles/perimenopause-signs-guide.html",
+    "image": "/images/hero-perimenopause-protocol.jpg",
+    "color": "c-perimenopause",
+    "featured": false,
+    "type": "editorial",
+    "badgeType": "featured",
+    "tags": "Perimenopause Creatine Magnesium Omega-3 Menopause Hormones",
+    "readTime": "22 min",
+    "description": "There is no single blood test for perimenopause. Creatine's first dedicated trial shows real promise, magnesium's hot-flash evidence shrank over time, and the largest omega-3 trial found no effect at all."
   }
 ]
