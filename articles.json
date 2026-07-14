@@ -1196,5 +1196,16 @@
     "tags": "Silicon ch-OSA BioSil Bone Density Hair Skin Collagen",
     "readTime": "19 min",
     "description": "Silicon's essentiality for bone is well established in animal studies - but nearly all human hair, skin, and bone trials trace back to one patented ingredient and one research group with manufacturer ties."
+  },{
+    "title": "Bacopa Monnieri: Real Memory Evidence, a 12-Week Catch",
+    "tag": "Bacopa Monnieri",
+    "url": "/articles/bacopa-monnieri-guide.html",
+    "image": "/images/hero-bacopa.jpg",
+    "color": "c-bacopa",
+    "featured": false,
+    "type": "guide",
+    "tags": "Bacopa Monnieri Memory Cognition Nootropic Thyroid Brahmi",
+    "readTime": "19 min",
+    "description": "A meta-analysis of 9 chronic trials found real memory and attention improvements - but only after 12+ weeks of use. A single acute dose produced no effect at all."
   }
 ]

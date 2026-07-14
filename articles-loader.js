@@ -101,6 +101,7 @@ const COLORS = {
 'c-seabuckthorn': 'background:linear-gradient(135deg,#D4A853,#1B4332)',
 'c-vitamina': 'background:linear-gradient(135deg,#D4A853,#2D6A4F)',
 'c-silicon': 'background:linear-gradient(135deg,#95D5B2,#7A5C10)',
+'c-bacopa': 'background:linear-gradient(135deg,#2D6A4F,#D4A853)',
 };
 
 function makeCard(article, size) {
