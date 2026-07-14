@@ -1185,5 +1185,16 @@
     "tags": "Vitamin A Retinol Beta-Carotene Pregnancy Deficiency Teratogenic",
     "readTime": "20 min",
     "description": "A 1995 NEJM study found a 1-in-57 birth defect risk above 10,000 IU/day in early pregnancy, and two major trials found beta-carotene raised lung cancer risk in smokers. Real deficiency, real overdose risk, narrow safe range."
+  },{
+    "title": "Does Silicon Supplementation Really Strengthen Hair, Skin, and Bones?",
+    "tag": "Silicon",
+    "url": "/articles/silicon-guide.html",
+    "image": "/images/hero-silicon.jpg",
+    "color": "c-silicon",
+    "featured": false,
+    "type": "guide",
+    "tags": "Silicon ch-OSA BioSil Bone Density Hair Skin Collagen",
+    "readTime": "19 min",
+    "description": "Silicon's essentiality for bone is well established in animal studies - but nearly all human hair, skin, and bone trials trace back to one patented ingredient and one research group with manufacturer ties."
   }
 ]
