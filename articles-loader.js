@@ -106,6 +106,7 @@ const COLORS = {
 'c-perimenopause': 'background:linear-gradient(135deg,#1B4332,#D4A853)',
 'c-veganchild': 'background:linear-gradient(135deg,#2D6A4F,#D4A853)',
 'c-recoverystack': 'background:linear-gradient(135deg,#1B4332,#D4A853)',
+'c-seedoil': 'background:linear-gradient(135deg,#7A5C10,#D4A853)',
 };
 
 function makeCard(article, size) {
