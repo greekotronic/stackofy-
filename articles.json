@@ -1267,5 +1267,17 @@
     "tags": "Seed Oil Polyphenols Omega-6 Inflammation Quercetin EGCG Antioxidants",
     "readTime": "20 min",
     "description": "The seed oil panic ignores polyphenol balance. Yes, high omega-6 matters. But so does what you're eating it with. Here is what the full metabolic picture actually shows—and how to supplement for it."
+  },{
+    "title": "The Supplement-Drug Interaction Database That Doesn't Exist",
+    "tag": "Healthcare System",
+    "url": "/articles/supplement-drug-interactions-guide.html",
+    "image": "/images/hero-drug-interaction-pills.jpg",
+    "color": "c-druginteraction",
+    "featured": false,
+    "type": "editorial",
+    "badgeType": "featured",
+    "tags": "Drug Interactions Statins Warfarin SSRI CoQ10 Omega-3 5-HTP Safety",
+    "readTime": "21 min",
+    "description": "Why doctors don't ask about supplements. Why the FDA doesn't track interactions. Why you're on your own. Case studies in statins + CoQ10, blood thinners + omega-3, SSRIs + 5-HTP—and what you actually need to do."
   }
 ]
