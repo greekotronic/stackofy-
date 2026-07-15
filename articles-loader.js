@@ -293,29 +293,8 @@ async function loadArticles() {
       const remaining = latest.slice(0, -8).reverse();
       latestMore3El.innerHTML = remaining.slice(16, 24).map(a => makeCard(a, 'small')).join('');
     }
-    // LATEST PROTOCOL SPOTLIGHT (homepage) - fixed to the skeptic article
-    const spotlightEl = document.getElementById('latest-protocol-spotlight');
-    if (spotlightEl) {
-      const newest = articles.find(a => a.url === '/articles/do-supplements-work-guide.html');
-      if (newest) {
-        const bg = COLORS[newest.color] || 'background:#1B4332';
-        spotlightEl.href = newest.url;
-        spotlightEl.innerHTML = `
-          <div class="h-article-img" style="${bg}">
-            <img src="${newest.image}" alt="${newest.tag}" onerror="this.style.display='none'" />
-          </div>
-          <div class="h-article-body">
-            <span class="article-tag">${newest.tag}</span>
-            <h3>${newest.title}</h3>
-            <p>${newest.description}</p>
-            <span class="read-time">${newest.readTime}</span>
-          </div>
-        `;
-        spotlightEl.className = 'h-article mb3';
-        spotlightEl.style.display = 'flex';
-      }
-    }
-
+    
+  
     // LONGEVITY SECTION (homepage)
     const longevityEl = document.getElementById('longevity-articles');
     if (longevityEl) {
