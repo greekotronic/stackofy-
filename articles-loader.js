@@ -372,7 +372,7 @@ async function loadArticles() {
     // ARTICLES PAGE - editorial section
     const articlesEditorialEl = document.getElementById('articles-editorial');
     if (articlesEditorialEl) {
-      const editorial = articles.filter(a => a.badgeType === 'featured');
+      const editorial = articles.filter(a => a.type === 'editorial');
       articlesEditorialEl.innerHTML = editorial.map(makeProtocolPageCard).join('');
     }
 
