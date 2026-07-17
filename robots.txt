@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /articles.html?*
 
 Sitemap: https://stackofy.com/sitemap.xml
