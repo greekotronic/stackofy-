@@ -1279,5 +1279,17 @@
     "tags": "Drug Interactions Statins Warfarin SSRI CoQ10 Omega-3 5-HTP Safety",
     "readTime": "21 min",
     "description": "Why doctors don't ask about supplements. Why the FDA doesn't track interactions. Why you're on your own. Case studies in statins + CoQ10, blood thinners + omega-3, SSRIs + 5-HTP—and what you actually need to do."
+  },{
+    "title": "What Doctors Don't Tell You About Pregnancy Supplements—And Why the Research Is 30 Years Old",
+    "tag": "Women's Health",
+    "url": "/articles/pregnancy-supplements-guide.html",
+    "image": "/images/hero-pregnancy-supplements-hands.jpg",
+    "color": "c-pregnancy",
+    "featured": false,
+    "type": "editorial",
+    "badgeType": "featured",
+    "tags": "Pregnancy Folic Acid Methylfolate Choline Prenatal Fetal Brain Development MTHFR",
+    "readTime": "22 min",
+    "description": "Your OB recommends folic acid because that's what they learned in 1995. Methylfolate exists. Choline is neurotoxic if you DON'T take enough. Here's what the updated evidence actually shows."
   }
 ]
